@@ -1,4 +1,4 @@
-let bypass = function()
+document.addEventListener("DOMContentLoaded", function()
 {
 	var btns = document.querySelectorAll(".btn.btn-primary.btn-block.btn-md, .btn.btn-info.btn-block.btn-md");
 	if(btns.length > 0)
@@ -20,12 +20,4 @@ let bypass = function()
 			location.reload();
 		}
 	}
-};
-if(document.readyState === "complete")
-{
-	bypass();
-}
-else
-{
-	document.addEventListener("DOMContentLoaded", bypass);
-}
+});

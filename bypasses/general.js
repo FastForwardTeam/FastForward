@@ -105,6 +105,17 @@ document.addEventListener("DOMContentLoaded", function()
 				}
 			}, 100);
 		}
+		else if(document.querySelectorAll(".skip-ad").length > 0)
+		{
+			let link_timer = window.setInterval(function()
+			{
+				if(document.querySelectorAll(".skip-ad .btn").length > 0)
+				{
+					window.clearInterval(link_timer);
+					location.href = document.querySelectorAll(".skip-ad .btn")[0].href;
+				}
+			}, 100);
+		}
 		return;
 	}
 	// Shorte.st
