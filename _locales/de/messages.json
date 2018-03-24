@@ -1,0 +1,17 @@
+{
+	"appName": {
+		"message": "Universal Bypass (Universelle Umgehung)"
+	},
+	"appDesc": {
+		"message": "Verschwende deine Zeit nicht mit Unterwerfung. Universal Bypass überspringt automatisch nervige Linkkürzer."
+	},
+	"injectionAttr": {
+		"message": "injektor"
+	},
+	"injectionInline": {
+		"message": "Injiziert durch Universal Bypass (Universelle Umgehung)"
+	},
+	"injectionGeneral": {
+		"message": "Das Skript (script) vor diesem Kommentar wurde druch Universal Bypass (Universelle Umgehung) injiziert, um alles zu fangen."
+	}
+}

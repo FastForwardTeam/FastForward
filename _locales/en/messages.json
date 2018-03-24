@@ -1,0 +1,17 @@
+{
+	"appName": {
+		"message": "Universal Bypass"
+	},
+	"appDesc": {
+		"message": "Don't waste your time with compliance. Universal Bypass automatically skips annoying link shorteners."
+	},
+	"injectionAttr": {
+		"message": "injector"
+	},
+	"injectionInline": {
+		"message": "Injected by Universal Bypass"
+	},
+	"injectionGeneral": {
+		"message": "The script before this comment has been injected by Universal Bypass in order to catch everything."
+	}
+}
