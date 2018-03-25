@@ -5,6 +5,30 @@
 	"appDesc": {
 		"message": "Don't waste your time with compliance. Universal Bypass automatically skips annoying link shorteners."
 	},
+	"firstrunTitle": {
+		"message": "Thank you for installing Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "You're amazing!"
+	},
+	"firstrunWhatnow": {
+		"message": "What you can do now:"
+	},
+	"firstrunTwitter": {
+		"message": "Follow Universal Bypass on Twitter to always be in the loop about Universal Bypass."
+	},
+	"homepage": {
+		"message": "Visit universal-bypass.org."
+	},
+	"popupTwitter": {
+		"message": "Follow Universal Bypass on Twitter."
+	},
+	"examples": {
+		"message": "Verify the bypasses work with our example links."
+	},
+	"supportMe": {
+		"message": "Support me and my projects."
+	},
 	"injectionAttr": {
 		"message": "injector"
 	},

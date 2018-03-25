@@ -9,7 +9,7 @@
 	"name": "__MSG_appName__",
 	"description": "__MSG_appDesc__",
 	"homepage_url": "https://universal-bypass.org/",
-	"version": "1.7.2",
+	"version": "1.8",
 	"author": "timmyRS",
 	"minimum_chrome_version": "41",
 	"browser_action": {
@@ -18,16 +18,16 @@
 			"256": "icon/icon_256.png",
 			"512": "icon/icon_512.png"
 		},
-		"default_popup": "popup/index.html"
+		"default_popup": "html/popup.html"
 	},
 	"background": {
-		"scripts": ["background.js"],
+		"scripts": ["src/background.js"],
 		"persistent": false
 	},
 	"content_scripts": [
 		{
 			"matches": ["*://*/*"],
-			"js": ["content_script.js"],
+			"js": ["src/content_script.js"],
 			"run_at": "document_start"
 		}
 	],

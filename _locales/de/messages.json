@@ -1,17 +1,41 @@
 {
 	"appName": {
-		"message": "Universal Bypass (Universelle Umgehung)"
+		"message": "Universal Bypass"
 	},
 	"appDesc": {
 		"message": "Verschwende deine Zeit nicht mit Unterwerfung. Universal Bypass überspringt automatisch nervige Linkkürzer."
+	},
+	"firstrunTitle": {
+		"message": "Danke, dass du Universal Bypass installiert hast!"
+	},
+	"firstrunSubtitle": {
+		"message": "Du bist der Beste!"
+	},
+	"firstrunWhatnow": {
+		"message": "Was du nun tun kannst:"
+	},
+	"firstrunTwitter": {
+		"message": "Folge Universal Bypass auf Twitter um immer auf dem neusten Stand zu sein."
+	},
+	"homepage": {
+		"message": "Besuche universal-bypass.org."
+	},
+	"popupTwitter": {
+		"message": "Folge Universal Bypass auf Twitter."
+	},
+	"examples": {
+		"message": "Verifiziere, dass die Umgehungen gehen, mit unseren Beispiel-Links."
+	},
+	"supportMe": {
+		"message": "Unterstütze mich und meine Projekte."
 	},
 	"injectionAttr": {
 		"message": "injektor"
 	},
 	"injectionInline": {
-		"message": "Injiziert durch Universal Bypass (Universelle Umgehung)"
+		"message": "Injiziert durch Universal Bypass"
 	},
 	"injectionGeneral": {
-		"message": "Das Skript (script) vor diesem Kommentar wurde druch Universal Bypass (Universelle Umgehung) injiziert, um alles zu fangen."
+		"message": "Das Skript (script) vor diesem Kommentar wurde druch Universal Bypass injiziert, um alles zu fangen."
 	}
 }

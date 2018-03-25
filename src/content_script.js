@@ -1,7 +1,7 @@
 if(document instanceof HTMLDocument)
 {
 	let site = "general", scripts = {
-		"general": "general.js",
+		"general": "_general.js",
 		"adfoc.us": "adfocus.js",
 		"linkshrink.net": "linkshrink.js",
 		"cshort.org": "cshort.js",
