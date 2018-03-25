@@ -9,7 +9,7 @@
 	"name": "__MSG_appName__",
 	"description": "__MSG_appDesc__",
 	"homepage_url": "https://universal-bypass.org/",
-	"version": "1.8",
+	"version": "1.8.1",
 	"author": "timmyRS",
 	"minimum_chrome_version": "41",
 	"browser_action": {

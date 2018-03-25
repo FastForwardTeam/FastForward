@@ -12,7 +12,8 @@ if(document instanceof HTMLDocument)
 		"admy.link": "admylink.js",
 		"viid.su": "viidsu.js",
 		"sub2unlock.com": "sub2unlockcom.js",
-		"fame4.me": "fame4me.js"
+		"fame4.me": "fame4me.js",
+		"fshare.vn": "fshare.js"
 	};
 	for(let domain in scripts)
 	{
