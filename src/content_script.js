@@ -48,18 +48,21 @@ if(document instanceof HTMLDocument)
 	injectScript(scripts[site]);
 	chrome.storage.local.get(["custom_bypasses"], function(result)
 	{
-		let customBypasses = JSON.parse(result.custom_bypasses);
-		for(let name in customBypasses)
+		if(result.custom_bypasses)
 		{
-			let bypass = customBypasses[name], domains = bypass.domains.split(",");
-			for(let i in domains)
+			let customBypasses = JSON.parse(result.custom_bypasses);
+			for(let name in customBypasses)
 			{
-				let domain = domains[i];
-				if(window.location.host == domain || window.location.host.substr(window.location.host.length - (domain.length + 1)) == "." + domain)
+				let bypass = customBypasses[name], domains = bypass.domains.split(",");
+				for(let i in domains)
 				{
-					site = "userscript";
-					injectScript(bypass.content);
-					return;
+					let domain = domains[i];
+					if(window.location.host == domain || window.location.host.substr(window.location.host.length - (domain.length + 1)) == "." + domain)
+					{
+						site = "userscript";
+						injectScript(bypass.content);
+						return;
+					}
 				}
 			}
 		}
