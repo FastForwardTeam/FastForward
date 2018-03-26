@@ -1,20 +1,43 @@
 if(document instanceof HTMLDocument)
 {
-	let site = "general", scripts = {
-		"general": "_general.js",
-		"adfoc.us": "adfocus.js",
-		"linkshrink.net": "linkshrink.js",
-		"cshort.org": "cshort.js",
-		"croco.site": "croco.js",
-		"srt.am": "shortam.js",
-		"direkt-wissen.com": "linkvertise.js",
-		"cpmlink.net": "cpmlink.js",
-		"admy.link": "admylink.js",
-		"viid.su": "viidsu.js",
-		"sub2unlock.com": "sub2unlockcom.js",
-		"fame4.me": "fame4me.js",
-		"fshare.vn": "fshare.js"
-	};
+	let script, comment, injectScript = function(src)
+	{
+		let isInline = (src.substr(src.length - 3) != ".js"),
+		script_ = document.createElement("script");
+		if(isInline)
+		{
+			script_.textContent = "/* " + chrome.i18n.getMessage("injectionInline") + " */\n\n" + src;
+		}
+		else
+		{
+			if(site != "general")
+			{
+				script_.setAttribute("data-" + chrome.i18n.getMessage("injectionAttr"), chrome.i18n.getMessage("appName"));
+			}
+			script_.src = chrome.extension.getURL("/bypasses/" + src);
+		}
+		if(script !== undefined)
+		{
+			script.parentNode.removeChild(script);
+		}
+		script = document.documentElement.appendChild(script_);
+		if(comment !== undefined)
+		{
+			comment.parentNode.removeChild(comment);
+		}
+		if(site == "general")
+		{
+			let comment_ = document.createComment(chrome.i18n.getMessage("injectionGeneral"));
+			if(script.nextSibling)
+			{
+				comment = script.parentNode.insertBefore(comment_, script.nextSibling);
+			}
+			else
+			{
+				comment = script.parentNode.appendChild(comment_);
+			}
+		}
+	}, site = "general";
 	for(let domain in scripts)
 	{
 		if(domain != "general" && (window.location.host == domain || window.location.host.substr(window.location.host.length - (domain.length + 1)) == "." + domain))
@@ -22,32 +45,23 @@ if(document instanceof HTMLDocument)
 			site = domain;
 		}
 	}
-	let script_ = scripts[site],
-	isInline = (script_.substr(script_.length - 3) != ".js"),
-	script = document.createElement("script");
-	if(isInline)
+	injectScript(scripts[site]);
+	chrome.storage.local.get(["custom_bypasses"], function(result)
 	{
-		script.textContent = "/* " + chrome.i18n.getMessage("injectionInline") + " */\n\n" + script_;
-	}
-	else
-	{
-		script.src = chrome.extension.getURL("/bypasses/" + script_);
-	}
-	if(site != "general")
-	{
-		script.setAttribute("data-" + chrome.i18n.getMessage("injectionAttr"), chrome.i18n.getMessage("appName"));
-	}
-	script = document.documentElement.appendChild(script);
-	if(site == "general")
-	{
-		let comment = document.createComment(chrome.i18n.getMessage("injectionGeneral"));
-		if(script.nextSibling)
+		let customBypasses = JSON.parse(result.custom_bypasses);
+		for(let name in customBypasses)
 		{
-			comment = script.parentNode.insertBefore(comment, script.nextSibling);
+			let bypass = customBypasses[name], domains = bypass.domains.split(",");
+			for(let i in domains)
+			{
+				let domain = domains[i];
+				if(window.location.host == domain || window.location.host.substr(window.location.host.length - (domain.length + 1)) == "." + domain)
+				{
+					site = "userscript";
+					injectScript(bypass.content);
+					return;
+				}
+			}
 		}
-		else
-		{
-			comment = script.parentNode.appendChild(comment);
-		}
-	}
+	});
 }

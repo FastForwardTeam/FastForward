@@ -117,10 +117,10 @@ document.addEventListener("DOMContentLoaded", function()
 		{
 			let link_timer = window.setInterval(function()
 			{
-				if(document.querySelectorAll(".skip-ad .btn").length > 0)
+				if(document.querySelectorAll(".skip-ad .btn[href]").length > 0 && document.querySelectorAll(".skip-ad .btn[href]")[0].href != location.href)
 				{
 					window.clearInterval(link_timer);
-					location.href = document.querySelectorAll(".skip-ad .btn")[0].href;
+					location.href = document.querySelectorAll(".skip-ad .btn[href]")[0].href;
 				}
 			}, 100);
 		}

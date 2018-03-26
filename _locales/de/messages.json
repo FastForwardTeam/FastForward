@@ -20,6 +20,9 @@
 	"homepage": {
 		"message": "Besuche universal-bypass.org."
 	},
+	"popupOptions": {
+		"message": "Ändere die Universal Bypass Optionen."
+	},
 	"popupTwitter": {
 		"message": "Folge Universal Bypass auf Twitter."
 	},
@@ -28,6 +31,21 @@
 	},
 	"supportMe": {
 		"message": "Unterstütze mich und meine Projekte."
+	},
+	"options": {
+		"message": "Universal Bypass Optionen"
+	},
+	"optionsUserscripts": {
+		"message": "Eigene Umgehungen"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "Es wäre nett, wenn du funktionierende Umgehungen auf GitHub einreichen wüdest, damit Andere auch davon profitieren können: "
+	},
+	"save": {
+		"message": "Speichern"
+	},
+	"optionsUserscriptsDelete": {
+		"message": "Umgehung löschen"
 	},
 	"injectionAttr": {
 		"message": "injektor"
