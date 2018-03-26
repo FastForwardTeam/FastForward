@@ -10,6 +10,7 @@ let scripts = {
 	"direkt-wissen.com": "linkvertise.js",
 	"cpmlink.net": "cpmlink.js",
 	"admy.link": "admylink.js",
+	"ysear.ch": "ysearch.js",
 	"viid.su": "viidsu.js",
 	"sub2unlock.com": "sub2unlockcom.js",
 	"fame4.me": "fame4me.js",
