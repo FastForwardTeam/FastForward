@@ -8,5 +8,5 @@ document.addEventListener("DOMContentLoaded", function()
 		{
 			btn.click();
 		}
-	}, 100);
+	}, 1000);
 });

@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function()
 	// Shorte.st
 	if(typeof app !== "undefined" && "options" in app && "intermediate" in app.options)
 	{
-		app.options.intermediate.timeToWait=1;
+		app.options.intermediate.timeToWait = 2;
 		let btn = document.getElementById(app.options.intermediate.skipButtonId),
 		link_timer = window.setInterval(function()
 		{
