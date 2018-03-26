@@ -1,11 +1,12 @@
 window.open = function(){};
-window.close = function(){};
-
 document.addEventListener("DOMContentLoaded", function()
 {
-	let btn = document.getElementById("btd");
-	if(btn != null)
+	window.setTimeout(function()
 	{
-		btn.click();
-	}
+		let btn = document.getElementById("btd");
+		if(btn != null)
+		{
+			btn.click();
+		}
+	}, 100);
 });

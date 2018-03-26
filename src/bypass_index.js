@@ -5,6 +5,8 @@ let scripts = {
 	"cshort.org": "cshort.js",
 	"croco.site": "croco.js",
 	"srt.am": "shortam.js",
+	"ur.ly": "urly.js",
+	"urly.mobi": "urly.js",
 	"direkt-wissen.com": "linkvertise.js",
 	"cpmlink.net": "cpmlink.js",
 	"admy.link": "admylink.js",
