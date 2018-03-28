@@ -1,12 +1,13 @@
-window.open = function(){};
 document.addEventListener("DOMContentLoaded", function()
 {
-	window.setTimeout(function()
+	let pauseDiv = document.getElementById("pause");
+	if(pauseDiv != null)
 	{
-		let btn = document.getElementById("btd");
-		if(btn != null)
-		{
-			btn.click();
-		}
-	}, 1000);
+		pauseDiv.style.display = "none";
+	}
+	let skipDiv = document.getElementById("skip");
+	if(skipDiv != null)
+	{
+		skipDiv.style.display = "block";
+	}
 });
