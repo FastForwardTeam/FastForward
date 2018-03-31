@@ -150,4 +150,13 @@ document.addEventListener("DOMContentLoaded", function()
 			elm.parentNode.removeChild(elm);
 		}
 	}, 500);
+	// Linkvertise.net
+	if(document.querySelectorAll(".logo > a[href='http://linkvertise.net'] > img[src='/assets/img/linkvertise.png']").length > 0)
+	{
+		let btn = document.querySelectorAll("[data-download]");
+		if(btn.length > 0)
+		{
+			location.href = btn[0].getAttribute("data-download");
+		}
+	}
 });

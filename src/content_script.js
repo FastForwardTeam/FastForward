@@ -1,6 +1,22 @@
 if(document instanceof HTMLDocument)
 {
-	let script, comment, injectScript = function(src)
+	let scripts = {
+		"general": "_general.js",
+		"adfoc.us": "adfocus.js",
+		"linkshrink.net": "linkshrink.js",
+		"cshort.org": "cshort.js",
+		"croco.site": "croco.js",
+		"srt.am": "shortam.js",
+		"ur.ly": "urly.js",
+		"urly.mobi": "urly.js",
+		"cpmlink.net": "cpmlink.js",
+		"admy.link": "admylink.js",
+		"ysear.ch": "ysearch.js",
+		"viid.su": "viidsu.js",
+		"sub2unlock.com": "sub2unlockcom.js",
+		"fame4.me": "fame4me.js",
+		"fshare.vn": "fshare.js"
+	}, script, comment, injectScript = function(src)
 	{
 		let isInline = (src.substr(src.length - 3) != ".js"),
 		script_ = document.createElement("script");
