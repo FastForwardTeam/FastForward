@@ -1,5 +1,6 @@
 if(document instanceof HTMLDocument)
 {
+	// Find and inject proper script
 	let scripts = {
 		"general": "_general.js",
 		"adfoc.us": "adfocus.js",
@@ -61,6 +62,21 @@ if(document instanceof HTMLDocument)
 			site = domain;
 		}
 	}
+	let ublock_script;
+	if(site == "general")
+	{
+		// uBlock Origin sets app_vars, so we prevent it.
+		ublock_script = document.createElement("script");
+		ublock_script.textContent = `Object.nativeDefineProperty = Object.defineProperty;
+		Object.defineProperty = function(obj, prop, args)
+		{
+			if(obj !== window || (prop != "ysmm" && prop != "app_vars"))
+			{
+				Object.nativeDefineProperty(obj, prop, args);
+			}
+		};`;
+		ublock_script = document.documentElement.appendChild(ublock_script);
+	}
 	injectScript(scripts[site]);
 	chrome.storage.local.get(["custom_bypasses"], function(result)
 	{
@@ -81,6 +97,10 @@ if(document instanceof HTMLDocument)
 					}
 				}
 			}
+		}
+		if(ublock_script !== undefined)
+		{
+			ublock_script.parentNode.removeChild(ublock_script);
 		}
 	});
 }
