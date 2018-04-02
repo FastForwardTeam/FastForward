@@ -57,7 +57,7 @@ Object.defineProperty(window, "ysmm",
 
 // AdLinkFly
 let actual_app_vars = forced_app_vars = {
-	"counter_value": "0",
+	"counter_value": "1",
 	"force_disable_adblock": "0"
 }, isAdLinkFly = false;
 Object.defineProperty(window, "app_vars",

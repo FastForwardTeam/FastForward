@@ -2,22 +2,22 @@ if(document instanceof HTMLDocument)
 {
 	// Find and inject proper script
 	let scripts = {
-		"general": "_general.js",
-		"adfoc.us": "adfocus.js",
-		"linkshrink.net": "linkshrink.js",
-		"cshort.org": "cshort.js",
-		"croco.site": "croco.js",
-		"srt.am": "shortam.js",
-		"ur.ly": "urly.js",
-		"urly.mobi": "urly.js",
-		"cpmlink.net": "cpmlink.js",
-		"admy.link": "admylink.js",
-		"ysear.ch": "ysearch.js",
-		"link.tl": "linktl.js",
-		"viid.su": "viidsu.js",
-		"sub2unlock.com": "sub2unlockcom.js",
-		"fame4.me": "fame4me.js",
-		"fshare.vn": "fshare.js"
+		"general": "general.js",
+		"adfoc.us": "link/adfocus.js",
+		"linkshrink.net": "link/linkshrink.js",
+		"cshort.org": "link/cshort.js",
+		"croco.site": "link/croco.js",
+		"srt.am": "link/shortam.js",
+		"ur.ly": "link/urly.js",
+		"urly.mobi": "link/urly.js",
+		"cpmlink.net": "link/cpmlink.js",
+		"admy.link": "link/admylink.js",
+		"ysear.ch": "link/ysearch.js",
+		"link.tl": "link/linktl.js",
+		"viid.su": "stu/viidsu.js",
+		"sub2unlock.com": "stu/sub2unlockcom.js",
+		"fame4.me": "stu/fame4me.js",
+		"fshare.vn": "file/fshare.js"
 	}, script, comment, injectScript = function(src)
 	{
 		let isInline = (src.substr(src.length - 3) != ".js"),
