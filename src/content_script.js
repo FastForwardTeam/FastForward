@@ -13,6 +13,7 @@ if(document instanceof HTMLDocument)
 		"cpmlink.net": "cpmlink.js",
 		"admy.link": "admylink.js",
 		"ysear.ch": "ysearch.js",
+		"link.tl": "linktl.js",
 		"viid.su": "viidsu.js",
 		"sub2unlock.com": "sub2unlockcom.js",
 		"fame4.me": "fame4me.js",
