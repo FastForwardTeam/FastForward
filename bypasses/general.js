@@ -1,6 +1,9 @@
 /* Universal Bypass > _general.js > This file contains general bypasses and bypasses for websites without a single dedicated domain, like adf.ly. */
 
-Object.defineProperty = Object.nativeDefineProperty;
+if(typeof Object.nativeDefineProperty != "undefined")
+{
+	Object.defineProperty = Object.nativeDefineProperty;
+}
 
 // Adf.ly
 Object.defineProperty(window, "ysmm",
