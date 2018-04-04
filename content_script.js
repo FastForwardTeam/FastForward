@@ -5,18 +5,18 @@ if(document instanceof HTMLDocument)
 		"general": "general.js",
 		"adfoc.us": "link/adfocus.js",
 		"linkshrink.net": "link/linkshrink.js",
+		"l.ly": "link/l.ly.js",
+		"ur.ly": "link/urly.js",
+		"urly.mobi": "link/urly.js",
 		"cshort.org": "link/cshort.js",
 		"croco.site": "link/croco.js",
 		"srt.am": "link/shortam.js",
-		"ur.ly": "link/urly.js",
-		"urly.mobi": "link/urly.js",
 		"cpmlink.net": "link/cpmlink.js",
 		"admy.link": "link/admylink.js",
 		"ysear.ch": "link/ysearch.js",
 		"link.tl": "link/linktl.js",
 		"viid.su": "stu/viidsu.js",
 		"sub2unlock.com": "stu/sub2unlockcom.js",
-		"fame4.me": "stu/fame4me.js",
 		"fshare.vn": "file/fshare.js"
 	}, script, comment, injectScript = function(src)
 	{
