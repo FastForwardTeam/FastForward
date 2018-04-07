@@ -155,6 +155,15 @@ document.addEventListener("DOMContentLoaded", function()
 			elm.parentNode.removeChild(elm);
 		}
 	}, 500);
+	// GetsURL.com
+	if(document.querySelectorAll(".img-responsive[alt='Gets URL']").length > 0)
+	{
+		let btn = document.getElementById("link");
+		if(btn != null)
+		{
+			location.href = btn.href + "&ab" + x;
+		}
+	}
 	// Linkvertise.net
 	if(document.querySelectorAll(".logo > a[href='http://linkvertise.net'] > img[src='/assets/img/linkvertise.png']").length > 0)
 	{
