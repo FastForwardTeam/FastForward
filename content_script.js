@@ -15,7 +15,6 @@ if(document instanceof HTMLDocument)
 		"admy.link": "link/admylink.js",
 		"ysear.ch": "link/ysearch.js",
 		"link.tl": "link/linktl.js",
-		"viid.su": "stu/viidsu.js",
 		"sub2unlock.com": "stu/sub2unlockcom.js",
 		"fshare.vn": "file/fshare.js"
 	}, script, comment, injectScript = function(src)

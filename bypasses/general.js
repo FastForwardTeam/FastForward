@@ -1,4 +1,4 @@
-/* Universal Bypass > _general.js > This file contains general bypasses and bypasses for websites without a single dedicated domain, like adf.ly. */
+/* Universal Bypass > general.js > This file contains general bypasses and bypasses for websites without a single dedicated domain, like adf.ly. */
 
 if(typeof Object.nativeDefineProperty != "undefined")
 {
@@ -171,6 +171,22 @@ document.addEventListener("DOMContentLoaded", function()
 		if(btn.length > 0)
 		{
 			location.href = btn[0].getAttribute("data-download");
+		}
+	}
+	let titles = document.getElementsByTagName("title");
+	if(titles.length == 1)
+	{
+		// Viid.su
+		if(titles[0].textContent.trim() == "Viid.su")
+		{
+			let btn = document.getElementById("link-success-button");
+			if(btn != null)
+			{
+				if(btn.getAttribute("data-url") != null)
+				{
+					location.href = btn.getAttribute("data-url");
+				}
+			}
 		}
 	}
 });
