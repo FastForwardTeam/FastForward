@@ -189,4 +189,9 @@ document.addEventListener("DOMContentLoaded", function()
 			}
 		}
 	}
+	// OpenLoad
+	if(document.querySelectorAll("img[src='/assets/img/logo.png'][alt='Openload']").length > 0)
+	{
+		secondsdl = 0;
+	}
 });
