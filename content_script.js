@@ -16,6 +16,7 @@ if(document instanceof HTMLDocument)
 		"ysear.ch": "link/ysearch.js",
 		"link.tl": "link/linktl.js",
 		"sub2unlock.com": "stu/sub2unlockcom.js",
+		"lucariomods.club": "stu/lucariomodsclub.js",
 		"fshare.vn": "file/fshare.js"
 	}, script, comment, injectScript = function(src)
 	{
