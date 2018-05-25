@@ -58,140 +58,168 @@ Object.defineProperty(window, "ysmm",
 	}
 });
 
-// AdLinkFly
-let actual_app_vars = forced_app_vars = {
-	"counter_value": "1",
-	"force_disable_adblock": "0"
-}, isAdLinkFly = false;
-Object.defineProperty(window, "app_vars",
+(function()
 {
-	set: function(val)
+	// AdLinkFly
+	let actual_app_vars = forced_app_vars = {
+		"counter_start": "load",
+		"force_disable_adblock": "0"
+	}, isAdLinkFly = false;
+	Object.defineProperty(window, "app_vars",
 	{
-		isAdLinkFly = true;
-	},
-	get: function()
-	{
-		return actual_app_vars;
-	}
-});
-for(let key in forced_app_vars)
-{
-	Object.defineProperty(window.app_vars, key,
-	{
-		value: forced_app_vars[key],
-		writable: false
+		set: function(val)
+		{
+			isAdLinkFly = true;
+		},
+		get: function()
+		{
+			return actual_app_vars;
+		}
 	});
-}
-document.addEventListener("DOMContentLoaded", function()
-{
-	if(isAdLinkFly)
+	for(let key in forced_app_vars)
 	{
-		let btn1 = document.getElementById("invisibleCaptchaShortlink");
-		if(btn1 != null)
+		Object.defineProperty(window.app_vars, key,
 		{
-			let captcha_timer = window.setInterval(function()
-			{
-				if(invisibleCaptchaShortlink !== undefined)
-				{
-					window.clearInterval(captcha_timer);
-					btn1.click();
-				}
-			}, 100);
-		}
-		let btn2 = document.querySelectorAll(".get-link");
-		if(btn2.length > 0)
-		{
-			btn2 = btn2[0];
-			let link_timer = window.setInterval(function()
-			{
-				if(document.querySelectorAll(".get-link.disabled").length == 0)
-				{
-					window.clearInterval(link_timer);
-					if(btn2.hasAttribute("href"))
-					{
-						location.href = btn2.href;
-					}
-					else
-					{
-						btn2.click();
-					}
-				}
-			}, 100);
-		}
-		else if(document.querySelectorAll(".skip-ad").length > 0)
-		{
-			let link_timer = window.setInterval(function()
-			{
-				if(document.querySelectorAll(".skip-ad .btn[href]").length > 0 && document.querySelectorAll(".skip-ad .btn[href]")[0].href != location.href)
-				{
-					window.clearInterval(link_timer);
-					location.href = document.querySelectorAll(".skip-ad .btn[href]")[0].href;
-				}
-			}, 100);
-		}
-		return;
+			writeable: false,
+			value: forced_app_vars[key]
+		});
 	}
-	// Shorte.st
-	if(typeof app !== "undefined" && "options" in app && "intermediate" in app.options)
+	document.addEventListener("DOMContentLoaded", function()
 	{
-		app.options.intermediate.timeToWait = 2;
-		let btn = document.getElementById(app.options.intermediate.skipButtonId),
-		link_timer = window.setInterval(function()
+		if(isAdLinkFly)
 		{
-			if(btn.className.indexOf("show") > -1)
+			let btn1 = document.getElementById("invisibleCaptchaShortlink");
+			if(btn1 != null)
 			{
-				window.clearInterval(link_timer);
-				location.href=app.options.intermediate.destinationUrl;
+				let captcha_timer = window.setInterval(function()
+				{
+					if(invisibleCaptchaShortlink !== undefined)
+					{
+						window.clearInterval(captcha_timer);
+						btn1.click();
+					}
+				}, 100);
 			}
-		}, 100);
-		return;
-	}
-	let general_timer = window.setInterval(function()
-	{
-		// Shorte.st Embed
-		if(document.querySelectorAll(".lay-sh.active-sh").length > 0)
-		{
-			let elm = document.querySelectorAll(".lay-sh.active-sh")[0];
-			elm.parentNode.removeChild(elm);
+			else if("$" in window && $("#go-link").length > 0)
+			{
+				window.setInterval(function()
+				{
+					let e = $("#go-link"), ad_type = $("body").hasClass("banner-page") ? "banner" : ($("body").hasClass("interstitial-page") ? "interstitial" : "");
+					$.ajax({
+						dataType: "json",
+						type: "POST",
+						url: e.attr("action"),
+						data: e.serialize(),
+						success: function(t, e, n)
+						{
+							if(t.url)
+							{
+								location.href = t.url;
+							}
+						},
+						error: function(t, e, n)
+						{
+							console.log("An error occured: " + t.status + " " + t.statusText)
+						}
+					});
+				}, 1500);
+				$(".banner").html("").hide();
+			}
+			let btn2 = document.querySelectorAll(".get-link");
+			if(btn2.length > 0)
+			{
+				btn2 = btn2[0];
+				let link_timer = window.setInterval(function()
+				{
+					if(document.querySelectorAll(".get-link.disabled").length == 0)
+					{
+						window.clearInterval(link_timer);
+						if(btn2.hasAttribute("href"))
+						{
+							location.href = btn2.href;
+						}
+						else
+						{
+							btn2.click();
+						}
+					}
+				}, 100);
+			}
+			else if(document.querySelectorAll(".skip-ad").length > 0)
+			{
+				let link_timer = window.setInterval(function()
+				{
+					if(document.querySelectorAll(".skip-ad .btn[href]").length > 0 && document.querySelectorAll(".skip-ad .btn[href]")[0].href != location.href)
+					{
+						window.clearInterval(link_timer);
+						location.href = document.querySelectorAll(".skip-ad .btn[href]")[0].href;
+					}
+				}, 100);
+			}
+			return;
 		}
-	}, 500);
-	// GetsURL.com
-	if(document.querySelectorAll(".img-responsive[alt='Gets URL']").length > 0)
-	{
-		let btn = document.getElementById("link");
-		if(btn != null)
+		// Shorte.st
+		if(typeof app !== "undefined" && "options" in app && "intermediate" in app.options)
 		{
-			location.href = btn.href + "&ab" + x;
+			app.options.intermediate.timeToWait = 2;
+			let btn = document.getElementById(app.options.intermediate.skipButtonId),
+			link_timer = window.setInterval(function()
+			{
+				if(btn.className.indexOf("show") > -1)
+				{
+					window.clearInterval(link_timer);
+					location.href=app.options.intermediate.destinationUrl;
+				}
+			}, 100);
+			return;
 		}
-	}
-	// Linkvertise.net
-	if(document.querySelectorAll(".logo > a[href='http://linkvertise.net'] > img[src='/assets/img/linkvertise.png']").length > 0)
-	{
-		let btn = document.querySelectorAll("[data-download]");
-		if(btn.length > 0)
+		let general_timer = window.setInterval(function()
 		{
-			location.href = btn[0].getAttribute("data-download");
-		}
-	}
-	let titles = document.getElementsByTagName("title");
-	if(titles.length == 1)
-	{
-		// Viid.su
-		if(titles[0].textContent.trim() == "Viid.su")
+			// Shorte.st Embed
+			if(document.querySelectorAll(".lay-sh.active-sh").length > 0)
+			{
+				let elm = document.querySelectorAll(".lay-sh.active-sh")[0];
+				elm.parentNode.removeChild(elm);
+			}
+		}, 500);
+		// GetsURL.com
+		if(document.querySelectorAll(".img-responsive[alt='Gets URL']").length > 0)
 		{
-			let btn = document.getElementById("link-success-button");
+			let btn = document.getElementById("link");
 			if(btn != null)
 			{
-				if(btn.getAttribute("data-url") != null)
+				location.href = btn.href + "&ab" + x;
+			}
+		}
+		// Linkvertise.net
+		if(document.querySelectorAll(".logo > a[href='http://linkvertise.net'] > img[src='/assets/img/linkvertise.png']").length > 0)
+		{
+			let btn = document.querySelectorAll("[data-download]");
+			if(btn.length > 0)
+			{
+				location.href = btn[0].getAttribute("data-download");
+			}
+		}
+		let titles = document.getElementsByTagName("title");
+		if(titles.length == 1)
+		{
+			// Viid.su
+			if(titles[0].textContent.trim() == "Viid.su")
+			{
+				let btn = document.getElementById("link-success-button");
+				if(btn != null)
 				{
-					location.href = btn.getAttribute("data-url");
+					if(btn.getAttribute("data-url") != null)
+					{
+						location.href = btn.getAttribute("data-url");
+					}
 				}
 			}
 		}
-	}
-	// OpenLoad
-	if(document.querySelectorAll("img[src='/assets/img/logo.png'][alt='Openload']").length > 0)
-	{
-		secondsdl = 0;
-	}
-});
+		// OpenLoad
+		if(document.querySelectorAll("img[src='/assets/img/logo.png'][alt='Openload']").length > 0)
+		{
+			secondsdl = 0;
+		}
+	});
+})();
