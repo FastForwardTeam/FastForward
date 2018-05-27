@@ -158,8 +158,44 @@ Object.defineProperty(window, "ysmm",
 			}
 			return;
 		}
+		// GemPixel Premium URL Shortener
+		if(typeof appurl != "undefined" && typeof token != "undefined")
+		{
+			let scripts = document.getElementsByTagName("script");
+			for(let i in scripts)
+			{
+				let script = scripts[i];
+				if(script instanceof HTMLScriptElement)
+				{
+					let scriptCont = script.textContent;
+					if(scriptCont.indexOf('clearInterval(countdown);') > -1)
+					{
+						if(typeof countdown != "undefined")
+						{
+							clearInterval(countdown);
+						}
+						if(document.querySelectorAll("a.redirect").length == 0)
+						{
+							let a = document.createElement("a");
+							a.href = "#";
+							a.className = "redirect";
+							document.body.appendChild(a);
+						}
+						scriptCont = scriptCont.substr(scriptCont.split(";")[0].length + 1);
+						window._setInterval = window.setInterval;
+						window.setInterval = function(func)
+						{
+							func();
+						}
+						eval("var count=0;" + scriptCont);
+						window.setInterval = window._setInterval;
+						document.querySelectorAll("a.redirect")[0].click();
+					}
+				}
+			}
+		}
 		// Shorte.st
-		if(typeof app !== "undefined" && "options" in app && "intermediate" in app.options)
+		if(typeof app != "undefined" && "options" in app && "intermediate" in app.options)
 		{
 			app.options.intermediate.timeToWait = 2;
 			let btn = document.getElementById(app.options.intermediate.skipButtonId),
