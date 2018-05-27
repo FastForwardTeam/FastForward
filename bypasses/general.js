@@ -186,7 +186,7 @@ Object.defineProperty(window, "ysmm",
 						window.setInterval = function(func)
 						{
 							func();
-						}
+						};
 						eval("var count=0;" + scriptCont);
 						window.setInterval = window._setInterval;
 						document.querySelectorAll("a.redirect")[0].click();
