@@ -14,23 +14,20 @@
 	"firstrunWhatnow": {
 		"message": "Was du nun tun kannst:"
 	},
+	"firstrunOptions": {
+		"message": "Ändere die Universal Bypass Optionen."
+	},
 	"firstrunTwitter": {
 		"message": "Folge Universal Bypass auf Twitter um immer auf dem neusten Stand zu sein."
 	},
 	"homepage": {
-		"message": "Besuche universal-bypass.org."
+		"message": "Homepage"
 	},
 	"popupOptions": {
-		"message": "Ändere die Universal Bypass Optionen."
+		"message": "Optionen"
 	},
 	"popupTwitter": {
-		"message": "Folge Universal Bypass auf Twitter."
-	},
-	"examples": {
-		"message": "Verifiziere, dass die Umgehungen gehen, mit unseren Beispiel-Links."
-	},
-	"supportMe": {
-		"message": "Unterstütze mich und meine Projekte."
+		"message": "Twitter"
 	},
 	"options": {
 		"message": "Universal Bypass Optionen"
@@ -46,14 +43,5 @@
 	},
 	"optionsUserscriptsDelete": {
 		"message": "Umgehung löschen"
-	},
-	"injectionAttr": {
-		"message": "injektor"
-	},
-	"injectionInline": {
-		"message": "Injiziert durch Universal Bypass"
-	},
-	"injectionGeneral": {
-		"message": "Das Skript (script) vor diesem Kommentar wurde durch Universal Bypass injiziert, um alles zu fangen."
 	}
 }
