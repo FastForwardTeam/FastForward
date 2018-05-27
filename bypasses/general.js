@@ -194,6 +194,19 @@ Object.defineProperty(window, "ysmm",
 				}
 			}
 		}
+		// Soralink WordPress Plugin
+		if(document.getElementsByClassName("sorasubmit").length == 1)
+		{
+			document.getElementsByClassName("sorasubmit")[0].click();
+		}
+		else if(document.querySelectorAll("img#pleasewait").length == 1 && document.getElementsByClassName("wait").length == 1 && typeof changeLink == "function")
+		{
+			window.open = function(url)
+			{
+				location.href = url;
+			};
+			changeLink();
+		}
 		// Shorte.st
 		if(typeof app != "undefined" && "options" in app && "intermediate" in app.options)
 		{
@@ -256,6 +269,11 @@ Object.defineProperty(window, "ysmm",
 		if(document.querySelectorAll("img[src='/assets/img/logo.png'][alt='Openload']").length > 0)
 		{
 			secondsdl = 0;
+		}
+		// KuroSafe
+		if(document.querySelectorAll("a#mybutton.btn.btn-md.btn-primary[href^='https://www.kurosafe.online/']").length == 1 || document.querySelectorAll("a#mybutton.btn.btn-md.btn-primary[href^='https://kurosafe.online/']").length == 1)
+		{
+			location.href = document.getElementById("mybutton").href;
 		}
 	});
 })();

@@ -17,6 +17,7 @@ if(document instanceof HTMLDocument)
 		"link.tl": "link/linktl.js",
 		"sub2unlock.com": "stu/sub2unlockcom.js",
 		"lucariomods.club": "stu/lucariomodsclub.js",
+		"elsfile.org": "file/elsfile.js",
 		"fshare.vn": "file/fshare.js",
 		"dl.ccbluex.net": "file/dl.ccbluex.net.js"
 	}, script, comment, injectScript = function(src)
