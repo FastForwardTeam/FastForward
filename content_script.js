@@ -2,9 +2,9 @@ let d=document;
 if(d instanceof HTMLDocument)
 {
 	let c=()=>{
-		let ODP=Object.defineProperty,n=(t)=>{if(t!=location.href){document.write("<!--");stop();onbeforeunload=null;location.href=t}},
-		bp=!1,db=(d,b)=>{if(!bp&&(location.host==d||location.host.substr(location.host.length-(d.length+1))=="."+d)){b();bp=!0}},hb=(h,b)=>{if(!bp&&h.test(location.href)){b();bp=!0}};
-		Object.defineProperty=(o,p,a)=>{if(o!==window||(p!="ysmm"&&p!="app_vars"))ODP(o,p,a)}//uBo fix
+		let ODP=Object.defineProperty,n=(t)=>{if(t&&t!=location.href){window.onbeforeunload=null;location.href=t}},
+		bp=!1,db=(d,b)=>{if(!bp&&(location.hostname==d||location.hostname.substr(location.hostname.length-(d.length+1))=="."+d)){b();bp=!0}},hb=(h,b)=>{if(!bp&&h.test(location.href)){b();bp=!0}};
+		Object.defineProperty=(o,p,a)=>{if(o!==window||(p!="ysmm"&&p!="app_vars"))ODP(o,p,a)}//uBo unbreaker
 		ODP(this,"ysmm",//Adf.ly
 		{
 			set:(r)=>{
@@ -19,9 +19,10 @@ if(d instanceof HTMLDocument)
 				r=atob(r)
 				r=r.substring(r.length-(r.length-16))
 				r=r.substring(0,r.length-16)
-				if(r&&(r.indexOf("http://")==0||r.indexOf("https://")==0))n(r)
+				if(r&&(r.indexOf("http://")==0||r.indexOf("https://")==0))
+					n(r)
 			}
-	})
+		})
 		//AdLinkFly
 		let actual_app_vars=forced_app_vars={counter_start:"load",force_disable_adblock:"0"},isALF=!1
 		ODP(this,"app_vars",
@@ -145,8 +146,7 @@ if(d instanceof HTMLDocument)
 					n(b.href)
 			})
 			db("sub2unlock.com",()=>{
-				$(document).ready(function()
-				{
+				$(document).ready(()=>{
 					let steps=document.querySelectorAll(".uk.unlock-step-link.check")
 					if(steps.length)
 					{
@@ -221,7 +221,7 @@ if(d instanceof HTMLDocument)
 							},
 							error:(t)=>{console.log("An error occured: "+t.status+" "+t.statusText)}
 						})
-					},1e3)
+					},1000)
 					$(".banner").html("").hide()
 				}
 				let b2=document.querySelector(".get-link")
@@ -231,10 +231,10 @@ if(d instanceof HTMLDocument)
 						if(!document.querySelectorAll(".get-link.disabled").length)
 						{
 							clearInterval(lT)
-							if(bt.hasAttribute("href"))
+							if(b2.hasAttribute("href"))
 								n(b2.href)
 							else
-								bt.click()
+								b2.click()
 						}
 					},100)
 				}
@@ -271,15 +271,29 @@ if(d instanceof HTMLDocument)
 								a.className="redirect"
 								document.body.appendChild(a)
 							}
-							cont=cont.substr(cont.split(";")[0].length+1)
+							if(cont.indexOf("var count = ")>-1)
+							{
+								cont = cont.split(/var count = [0-9]*;/).join("let count=0;")
+							}
+							else
+							{
+								cont = "let count=0;" + cont
+							}
+							cont = cont.split("$(window).on('load', ").join("let r=(f)=>f();r(");
 							let sI=setInterval
 							this.setInterval=(f)=>f()
-							eval("let count=0;"+cont)
+							eval(cont)
 							this.setInterval=sI
-							document.querySelectorAll("a.redirect")[0].click()
+							n(document.querySelector("a.redirect").href)
 							return
 						}
 					}
+				}
+				//Ally Captcha
+				if(document.getElementById("messa")&&document.getElementById("html_element"))
+				{
+					document.getElementById("messa").className+=" hidden"
+					document.getElementById("html_element").className=document.getElementById("html_element").className.split("hidden").join("").trim();
 				}
 			}
 			//Soralink Plugin
@@ -406,7 +420,7 @@ if(d instanceof HTMLDocument)
 						for(let i in ds)
 						{
 							let d=ds[i];
-							if(location.host==d||location.host.substr(location.host.length-(d.length+1))=="."+d)i(cs)
+							if(location.hostname==d||location.hostname.substr(location.hostname.length-(d.length+1))=="."+d)i(cs)
 						}
 				}
 			}
