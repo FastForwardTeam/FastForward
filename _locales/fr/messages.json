@@ -1,0 +1,47 @@
+{
+	"appName": {
+		"message": "Universal Bypass"
+	},
+	"appDesc": {
+		"message": "Ne perdez pas votre temps avec la conformité. Le contournement universel saute automatiquement les raccourcisseurs de liens ennuyeux."
+	},
+	"firstrunTitle": {
+		"message": "Merci d\'avoir installer Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "Vou-êtes incroyable!"
+	},
+	"firstrunWhatnow": {
+		"message": "Voici ce que vous pouvez faire maintenant:"
+	},
+	"firstrunOptions": {
+		"message": "Changer les options de Universal Bypass."
+	},
+	"firstrunTwitter": {
+		"message": "Suivre Universal Bypass sur Twitter pour être toujours tenu au courrant de Universal Bypass."
+	},
+	"homepage": {
+		"message": "Page d\'accueil"
+	},
+	"popupOptions": {
+		"message": "Options"
+	},
+	"popupTwitter": {
+		"message": "Twitter"
+	},
+	"options": {
+		"message": "Options d\'Universal Bypass"
+	},
+	"optionsUserscripts": {
+		"message": "Bypass sur mesure"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "Ce serait bien si vous pouviez soumettre des dérivations de travail à GitHub, afin que d'autres puissent en bénéficier: "
+	},
+	"save": {
+		"message": "Enregistrer"
+	},
+	"optionsUserscriptsDelete": {
+		"message": "Supprimer Bypass"
+	}
+}
