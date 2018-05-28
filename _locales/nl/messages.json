@@ -1,0 +1,50 @@
+{
+	"appDesc": {
+		"message": "Verspil geen tijd met gezijk. Universal Bypass slaat irritante link verkorters automatisch over."
+	},
+	"firstrunTitle": {
+		"message": "Bedankt voor het installeren van Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "Je bent geweldig!"
+	},
+	"firstrunWhatnow": {
+		"message": "Wat je nu kunt doen:"
+	},
+	"firstrunOptions": {
+		"message": "Wijzig de Universal Bypass opties."
+	},
+	"firstrunTwitter": {
+		"message": "Volg Universal Bypass op Twitter om altijd op de hoogte te blijven van Universal Bypass."
+	},
+	"homepage": {
+		"message": "Startpagina"
+	},
+	"popupOptions": {
+		"message": "Opties"
+	},
+	"popupTwitter": {
+		"message": "Twitter"
+	},
+	"options": {
+		"message": "Universal Bypass Opties"
+	},
+	"save": {
+		"message": "Opslaan"
+	},
+	"optionsUserscripts": {
+		"message": "Aangepaste bypasses"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "Het zou leuk zijn als je werkpassages naar GitHub zou kunnen aanbieden, zodat anderen er profijt van kunnen hebben: "
+	},
+	"optionsUserscriptsName": {
+		"message": "Naam. Met een lege naam wordt deze bypass verwijderd."
+	},
+	"optionsUserscriptsDomains": {
+		"message": "Domeinen. Gebruik * om deze bypass overal effectief te maken."
+	},
+	"optionsUserscriptsDelete": {
+		"message": "Verwijder Bypass"
+	}
+}
