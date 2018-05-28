@@ -29,14 +29,20 @@
 	"options": {
 		"message": "Universal Bypass Optionen"
 	},
+	"save": {
+		"message": "Speichern"
+	},
 	"optionsUserscripts": {
 		"message": "Eigene Umgehungen"
 	},
 	"optionsUserscriptsSubtitle": {
 		"message": "Es wäre nett, wenn du funktionierende Umgehungen auf GitHub einreichen wüdest, damit Andere auch davon profitieren können: "
 	},
-	"save": {
-		"message": "Speichern"
+	"optionsUserscriptsName": {
+		"message": "Name. Mit einem leeren Namen, wird diese Umgehung gelöscht."
+	},
+	"optionsUserscriptsDomains": {
+		"message": "Domains. Nutze * damit diese Umgehung überall in effekt tritt."
 	},
 	"optionsUserscriptsDelete": {
 		"message": "Umgehung löschen"

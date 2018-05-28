@@ -3,7 +3,7 @@ if(d instanceof HTMLDocument)
 {
 	let c=()=>{
 		let ODP=Object.defineProperty,n=(t)=>{if(t&&t!=location.href){window.onbeforeunload=null;location.href=t}},
-		bp=!1,db=(d,b)=>{if(!bp&&(location.hostname==d||location.hostname.substr(location.hostname.length-(d.length+1))=="."+d)){b();bp=!0}},hb=(h,b)=>{if(!bp&&h.test(location.href)){b();bp=!0}};
+		bp=!1,db=(d,b)=>{if(!bp&&(location.hostname==d||location.hostname.substr(location.hostname.length-(d.length+1))=="."+d)){b();bp=!0}},hb=(h,b)=>{if(!bp&&h.test(location.href)){b();bp=!0}}
 		ODP(this,"ysmm",//Adf.ly
 		{
 			set:(r)=>{
@@ -404,23 +404,31 @@ if(d instanceof HTMLDocument)
 	i("("+c+")()")
 	chrome.storage.local.get(["custom_bypasses"],(result)=>
 	{
-		if(result.custom_bypasses)
-		{
-			let cB=JSON.parse(result.custom_bypasses)
-			for(let n in cB)
+		let evalResult=(result)=>{
+			if(result.custom_bypasses)
 			{
-				let b=cB[n],cs=b.content
-				if(b.domains=="*")i(cs)
+				let cB=JSON.parse(result.custom_bypasses)
+				for(let n in cB)
+				{
+					let b=cB[n],cs=b.content
+					if(b.domains=="*")
+						i(cs)
 					else
 					{
 						let ds=b.domains.split(",")
-						for(let i in ds)
+						for(let di in ds)
 						{
-							let d=ds[i];
-							if(location.hostname==d||location.hostname.substr(location.hostname.length-(d.length+1))=="."+d)i(cs)
+							let d=ds[di];
+							if(location.hostname==d||location.hostname.substr(location.hostname.length-(d.length+1))=="."+d)
+								i(cs)
 						}
+					}
 				}
 			}
 		}
-	});
+		if(["interactive","complete"].indexOf(document.readyState)>-1)
+			evalResult(result)
+		else
+			document.addEventListener("DOMContentLoaded",()=>evalResult(result))
+	})
 }

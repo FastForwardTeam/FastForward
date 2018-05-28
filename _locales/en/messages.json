@@ -29,14 +29,20 @@
 	"options": {
 		"message": "Universal Bypass Options"
 	},
+	"save": {
+		"message": "Save"
+	},
 	"optionsUserscripts": {
 		"message": "Custom Bypasses"
 	},
 	"optionsUserscriptsSubtitle": {
 		"message": "It would be nice if you could submit working bypasses to GitHub, so others can benefit from it: "
 	},
-	"save": {
-		"message": "Save"
+	"optionsUserscriptsName": {
+		"message": "Name. With an empty name, this bypass will be deleted."
+	},
+	"optionsUserscriptsDomains": {
+		"message": "Domains. Use * for this bypass to be effective everywhere."
 	},
 	"optionsUserscriptsDelete": {
 		"message": "Delete Bypass"
