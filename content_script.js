@@ -4,7 +4,6 @@ if(d instanceof HTMLDocument)
 	let c=()=>{
 		let ODP=Object.defineProperty,n=(t)=>{if(t&&t!=location.href){window.onbeforeunload=null;location.href=t}},
 		bp=!1,db=(d,b)=>{if(!bp&&(location.hostname==d||location.hostname.substr(location.hostname.length-(d.length+1))=="."+d)){b();bp=!0}},hb=(h,b)=>{if(!bp&&h.test(location.href)){b();bp=!0}};
-		Object.defineProperty=(o,p,a)=>{if(o!==window||(p!="ysmm"&&p!="app_vars"))ODP(o,p,a)}//uBo unbreaker
 		ODP(this,"ysmm",//Adf.ly
 		{
 			set:(r)=>{
@@ -99,157 +98,155 @@ if(d instanceof HTMLDocument)
 			if(s.substr(0,7)=="target=")
 				n("http://dl.ccbluex.net/download/index.php?file="+s.substr(7))
 		})
-		document.addEventListener("DOMContentLoaded",()=>{
-			Object.defineProperty=ODP
-			if(bp)
-				return
-			db("adfoc.us",()=>{
-				let b=document.querySelector(".skip")
-				if(b&&b.href)
-					n(b.href)
-			})
-			db("linkshrink.net",()=>{
-				let p=document.getElementById("pause"),s=document.getElementById("skip")
-				if(p)
-					p.style.display="none"
-				if(s)
-					s.style.display="block"
-			})
-			hb(/croco\.site\/ok\//,()=>{
-				let b=document.getElementById("btn-main")
-				if(b)
-					b.click()
-			})
-			db("srt.am",()=>{
-				if(document.querySelector(".skip-container"))
-				{
-					let f=document.createElement("form")
-					f.method="POST"
-					f.innerHTML='<input type="hidden" name="_image" value="Continue">'
-					f=document.body.appendChild(f)
-					f.submit()
-				}
-			})
-			db("cpmlink.net",()=>{
-				let b=document.getElementById("btn-main")
-				if(b&&b.href)
-					n(b.href)
-			})
-			db("admy.link",()=>{
-				let f=document.querySelector(".edit_link")
-				if(f)
-					f.submit()
-			})
-			db("ysear.ch",()=>{
-				let b=document.getElementById("NextVideo")
-				if(b&&b.href)
-					n(b.href)
-			})
-			db("sub2unlock.com",()=>{
-				$(document).ready(()=>{
-					let steps=document.querySelectorAll(".uk.unlock-step-link.check")
-					if(steps.length)
+		if(!bp)
+			document.addEventListener("DOMContentLoaded",()=>{
+				db("adfoc.us",()=>{
+					let b=document.querySelector(".skip")
+					if(b&&b.href)
+						n(b.href)
+				})
+				db("linkshrink.net",()=>{
+					let p=document.getElementById("pause"),s=document.getElementById("skip")
+					if(p)
+						p.style.display="none"
+					if(s)
+						s.style.display="block"
+				})
+				hb(/croco\.site\/ok\//,()=>{
+					let b=document.getElementById("btn-main")
+					if(b)
+						b.click()
+				})
+				db("srt.am",()=>{
+					if(document.querySelector(".skip-container"))
 					{
-						for(let i in steps)
-							if(i!=0&&steps[i] instanceof HTMLElement&&steps[i].className.substr(0,3)=="uk ")
-								steps[i].className = steps[i].className.substr(3)
-							steps[0].removeAttribute("target")
-							steps[0].setAttribute("href","#")
-							steps[0].click()
-							document.getElementById("link").click()
-						}
-					})
-			})
-			db("elsfile.org",()=>{
-				if(document.getElementById("pay_modes"))
-				{
-					let form = document.createElement("form");
-					form.method = "POST";
-					form.innerHTML = '<input type="hidden" name="op" value="download1"><input type="hidden" name="usr_login" value="C"><input type="hidden" name="id" value="'+location.pathname.toString().substr(1)+'"><input type="hidden" name="fname" value="'+document.querySelectorAll("div#container > div > div > table > tbody > tr > td")[2].textContent+'"><input type="hidden" name="referer" value="q"><input type="hidden" name="method_free" value="Free Download">';
-					form = document.body.appendChild(form);
-					form.submit();
-				}
-				else if(document.getElementById("btn_download"))
-				{
-					document.getElementById("btn_download").click();
-				}
-			})
-			db("fshare.vn",()=>{
-				let f=$("#form-download");
-				if(f.length)
-				{
-					$.ajax({
-						"url":f.attr("action"),
-						"type":"POST",
-						"data":f.serialize()
-					}).done(function(data)
-					{
-						n(data.url)
-					})
-				}
-			})
-			if(bp)
-				return
-			if(isALF)
-			{
-				let b1=document.getElementById("invisibleCaptchaShortlink")
-				if(b1)
-				{
-					let cT=setInterval(()=>{
-						if(invisibleCaptchaShortlink!==undefined)
+						let f=document.createElement("form")
+						f.method="POST"
+						f.innerHTML='<input type="hidden" name="_image" value="Continue">'
+						f=document.body.appendChild(f)
+						f.submit()
+					}
+				})
+				db("cpmlink.net",()=>{
+					let b=document.getElementById("btn-main")
+					if(b&&b.href)
+						n(b.href)
+				})
+				db("admy.link",()=>{
+					let f=document.querySelector(".edit_link")
+					if(f)
+						f.submit()
+				})
+				db("ysear.ch",()=>{
+					let b=document.getElementById("NextVideo")
+					if(b&&b.href)
+						n(b.href)
+				})
+				db("sub2unlock.com",()=>{
+					$(document).ready(()=>{
+						let steps=document.querySelectorAll(".uk.unlock-step-link.check")
+						if(steps.length)
 						{
-							clearInterval(cT)
-							b1.click()
-						}
-					},100);
-				}
-				if("$" in this&&$("#go-link").length)
-				{
-					let bT=setInterval(()=>{
-						let f=$("#go-link")
-						$.ajax({
-							dataType:"json",
-							type:"POST",
-							url:f.attr("action"),
-							data:f.serialize(),
-							success:(t)=>{
-								if(t.url)
-								{
-									clearInterval(bT)
-									n(t.url)
-								}
-							},
-							error:(t)=>{console.log("An error occured: "+t.status+" "+t.statusText)}
+							for(let i in steps)
+								if(i!=0&&steps[i] instanceof HTMLElement&&steps[i].className.substr(0,3)=="uk ")
+									steps[i].className = steps[i].className.substr(3)
+								steps[0].removeAttribute("target")
+								steps[0].setAttribute("href","#")
+								steps[0].click()
+								document.getElementById("link").click()
+							}
 						})
-					},1000)
-					$(".banner").html("").hide()
-				}
-				let b2=document.querySelector(".get-link")
-				if(b2)
-				{
-					let lT=setInterval(()=>{
-						if(!document.querySelectorAll(".get-link.disabled").length)
+				})
+				db("elsfile.org",()=>{
+					if(document.getElementById("pay_modes"))
+					{
+						let form = document.createElement("form");
+						form.method = "POST";
+						form.innerHTML = '<input type="hidden" name="op" value="download1"><input type="hidden" name="usr_login" value="C"><input type="hidden" name="id" value="'+location.pathname.toString().substr(1)+'"><input type="hidden" name="fname" value="'+document.querySelectorAll("div#container > div > div > table > tbody > tr > td")[2].textContent+'"><input type="hidden" name="referer" value="q"><input type="hidden" name="method_free" value="Free Download">';
+						form = document.body.appendChild(form);
+						form.submit();
+					}
+					else if(document.getElementById("btn_download"))
+					{
+						document.getElementById("btn_download").click();
+					}
+				})
+				db("fshare.vn",()=>{
+					let f=$("#form-download");
+					if(f.length)
+					{
+						$.ajax({
+							"url":f.attr("action"),
+							"type":"POST",
+							"data":f.serialize()
+						}).done(function(data)
 						{
-							clearInterval(lT)
-							if(b2.hasAttribute("href"))
-								n(b2.href)
-							else
-								b2.click()
-						}
-					},100)
-				}
-				if(document.querySelectorAll(".skip-ad").length)
+							n(data.url)
+						})
+					}
+				})
+				if(bp)
+					return
+				if(isALF)
 				{
-					let lT=setInterval(()=>{
-						if(document.querySelectorAll(".skip-ad .btn[href]").length)
-						{
-							clearInterval(lT)
-							n(document.querySelectorAll(".skip-ad .btn[href]")[0].href)
-						}
-					},100)
+					let b1=document.getElementById("invisibleCaptchaShortlink")
+					if(b1)
+					{
+						let cT=setInterval(()=>{
+							if(invisibleCaptchaShortlink!==undefined)
+							{
+								clearInterval(cT)
+								b1.click()
+							}
+						},100);
+					}
+					if("$" in this&&$("#go-link").length)
+					{
+						let bT=setInterval(()=>{
+							let f=$("#go-link")
+							$.ajax({
+								dataType:"json",
+								type:"POST",
+								url:f.attr("action"),
+								data:f.serialize(),
+								success:(t)=>{
+									if(t.url)
+									{
+										clearInterval(bT)
+										n(t.url)
+									}
+								},
+								error:(t)=>{console.log("An error occured: "+t.status+" "+t.statusText)}
+							})
+						},1000)
+						$(".banner").html("").hide()
+					}
+					let b2=document.querySelector(".get-link")
+					if(b2)
+					{
+						let lT=setInterval(()=>{
+							if(!document.querySelectorAll(".get-link.disabled").length)
+							{
+								clearInterval(lT)
+								if(b2.hasAttribute("href"))
+									n(b2.href)
+								else
+									b2.click()
+							}
+						},100)
+					}
+					if(document.querySelectorAll(".skip-ad").length)
+					{
+						let lT=setInterval(()=>{
+							if(document.querySelectorAll(".skip-ad .btn[href]").length)
+							{
+								clearInterval(lT)
+								n(document.querySelectorAll(".skip-ad .btn[href]")[0].href)
+							}
+						},100)
+					}
+					return
 				}
-				return
-			}
 			//GemPixel Premium URL Shortener
 			if(typeof appurl!="undefined"&&typeof token!="undefined")
 			{
