@@ -29,14 +29,20 @@
 	"options": {
 		"message": "Options d'Universal Bypass"
 	},
+	"save": {
+		"message": "Sauvegarder"
+	},
 	"optionsUserscripts": {
 		"message": "Bypass sur mesure"
 	},
 	"optionsUserscriptsSubtitle": {
 		"message": "Ce serait bien si vous pouviez soumettre des dérivations de travail à GitHub, afin que d'autres puissent en bénéficier: "
 	},
-	"save": {
-		"message": "Enregistrer"
+	"optionsUserscriptsName": {
+		"message": "Nom. Avec un nom vide, ce contournements sera supprimé."
+	},
+	"optionsUserscriptsDomains": {
+		"message": "Domaines. Utiliser * pour ce contournement pour qu'il soit éffectif partout."
 	},
 	"optionsUserscriptsDelete": {
 		"message": "Supprimer Bypass"
