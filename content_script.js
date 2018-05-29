@@ -33,7 +33,7 @@ if(d instanceof HTMLDocument)
 		{
 			ODP(app_vars,key,
 			{
-				writeable:!1,
+				writable:!1,
 				value:forced_app_vars[key]
 			})
 		}
@@ -98,6 +98,18 @@ if(d instanceof HTMLDocument)
 			if(s.substr(0,7)=="target=")
 				n("http://dl.ccbluex.net/download/index.php?file="+s.substr(7))
 		})
+		db("onepiece-ex.com.br",()=>{
+			ODP(this,"seconds",{
+				value:1,
+				writable:!1
+			})
+			let lT=setInterval(()=>{
+				if(document.getElementById("continuar"))
+				{
+					n(document.getElementById("continuar").href)
+				}
+			},100)
+		})
 		if(!bp)
 			document.addEventListener("DOMContentLoaded",()=>{
 				db("adfoc.us",()=>{
@@ -111,6 +123,21 @@ if(d instanceof HTMLDocument)
 						p.style.display="none"
 					if(s)
 						s.style.display="block"
+				})
+				db("sub2unlock.com",()=>{
+					$(document).ready(()=>{
+						let steps=document.querySelectorAll(".uk.unlock-step-link.check")
+						if(steps.length)
+						{
+							for(let i in steps)
+								if(i!=0&&steps[i] instanceof HTMLElement&&steps[i].className.substr(0,3)=="uk ")
+									steps[i].className = steps[i].className.substr(3)
+								steps[0].removeAttribute("target")
+								steps[0].setAttribute("href","#")
+								steps[0].click()
+								document.getElementById("link").click()
+							}
+						})
 				})
 				hb(/croco\.site\/ok\//,()=>{
 					let b=document.getElementById("btn-main")
@@ -142,22 +169,47 @@ if(d instanceof HTMLDocument)
 					if(b&&b.href)
 						n(b.href)
 				})
-				db("sub2unlock.com",()=>{
-					$(document).ready(()=>{
-						let steps=document.querySelectorAll(".uk.unlock-step-link.check")
-						if(steps.length)
+				db("v1.94lauin.com",()=>{
+					jQuery.prototype._attr=jQuery.prototype.attr
+					jQuery.prototype.attr=function(a,v)
+					{
+						if(!v&&this.selector==".count-timer"&&a=="data-timer")
+							return 1
+						return this._attr(a,v)
+					}
+					let lT=setInterval(()=>
+					{
+						if(document.querySelector(".link-content > a")&&document.querySelector(".link-content > a").getAttribute("href")!="#")
 						{
-							for(let i in steps)
-								if(i!=0&&steps[i] instanceof HTMLElement&&steps[i].className.substr(0,3)=="uk ")
-									steps[i].className = steps[i].className.substr(3)
-								steps[0].removeAttribute("target")
-								steps[0].setAttribute("href","#")
-								steps[0].click()
-								document.getElementById("link").click()
-							}
-						})
+							clearInterval(lT)
+							n(document.querySelector(".link-content > a").href)
+						}
+					},100)
 				})
-				db("elsfile.org",()=>{
+				db("losstor.com",()=>{
+					let b=document.getElementById("re_link")
+					if(b)
+					{
+						window.open=n
+						b.click()
+					}
+				})
+				db("bagisoft.net",()=>{
+					let b=document.getElementById("makingdifferenttimer")
+					if(b)
+					{
+						window.open=n
+						b.click()
+					}
+					else
+						jQuery.prototype.animateProgress=(p,f,i)=>f()
+				})
+				db("skinnycat.net",()=>{
+					let b=document.getElementById("dl")
+					if(b&&b.href)
+						n(b.href)
+				})
+				hb(/elsfile\.org|elsfile\.net/,()=>{
 					if(document.getElementById("pay_modes"))
 					{
 						let form = document.createElement("form");
@@ -179,10 +231,7 @@ if(d instanceof HTMLDocument)
 							"url":f.attr("action"),
 							"type":"POST",
 							"data":f.serialize()
-						}).done(function(data)
-						{
-							n(data.url)
-						})
+						}).done((data)=>n(data.url))
 					}
 				})
 				if(bp)
@@ -299,17 +348,33 @@ if(d instanceof HTMLDocument)
 				document.querySelector(".sorasubmit").click()
 				return
 			}
-			if(((document.querySelectorAll("img#pleasewait").length&&document.querySelector(".wait"))||document.getElementById("showlink")||document.getElementById("download"))&&typeof changeLink=="function")
+			let rCL=()=>((document.querySelectorAll("img#pleasewait").length&&document.querySelector(".wait"))||document.getElementById("showlink")||document.getElementById("download")||document.getElementsByTagName("style='margin-top:").length)
+			if(typeof changeLink=="function")
 			{
-				this.open=n
-				changeLink()
-				return
+				if(rCL)
+				{
+					this.open=n
+					changeLink()
+					return
+				}
+				let cLT=setInterval(()=>{
+					if(rCL())
+					{
+						clearInterval(cLT);
+						this.open=n
+						changeLink()
+					}
+				},100)
 			}
 			if(document.querySelector("#lanjut > #goes"))
 			{
 				let b=document.querySelector("#lanjut > #goes");
 				if(b&&b.href)
 					n(b.href)
+			}
+			if(document.getElementById("waktu")&&document.getElementById("goto"))
+			{
+				n(document.getElementById("goto").href)
 			}
 			//Shorte.st
 			if(typeof app!="undefined"&&"options"in app&&"intermediate"in app.options)
