@@ -26,9 +26,21 @@ if(d instanceof HTMLDocument)
 		let actual_app_vars=forced_app_vars={counter_start:"load",force_disable_adblock:"0"},isALF=!1
 		ODP(this,"app_vars",
 		{
-			set:(_)=>{isALF=!0},
+			set:(_)=>{
+				ODP(window,"blurred",{
+					value:!1,
+					writable:!1
+				})
+				isALF=!0
+				for(let k in _)
+				{
+					let v=_[k]
+					if(forced_app_vars[k]===undefined)
+						actual_app_vars[k]=v
+				}
+			},
 			get:()=>actual_app_vars
-		});
+		})
 		for(let key in forced_app_vars)
 		{
 			ODP(app_vars,key,
@@ -67,14 +79,11 @@ if(d instanceof HTMLDocument)
 				value:0,
 				writable:!1
 			})
-			ODP(this,"rr",{
-				set:(f)=>{
-					f();
-					if(document.querySelector(".skip > .btn"))
-						document.querySelector(".skip > .btn").click()
-				},
-				get:()=>()=>{}
-			})
+			let lT=setInterval(()=>
+			{
+				if(document.querySelector(".skip > .btn"))
+					document.querySelector(".skip > .btn").click()
+			},100);
 		})
 		db("lucariomods.club",()=>{
 			let m=document.createElement("meta")
@@ -106,9 +115,26 @@ if(d instanceof HTMLDocument)
 			let lT=setInterval(()=>{
 				if(document.getElementById("continuar"))
 				{
+					clearInterval(lT)
 					n(document.getElementById("continuar").href)
 				}
 			},100)
+		})
+		db("akoam.net",()=>{
+			ODP(this,"timer",{
+				value:0,
+				writable:!1
+			})
+			let lT=setInterval(()=>{
+				if(document.querySelector(".download_button"))
+				{
+					clearInterval(lT)
+					n(document.querySelector(".download_button").href)
+				}
+			},100)
+		})
+		hb(/1v\.to\/t\/.*/,()=>{
+			location.pathname=location.pathname.split("/t/").join("/saliendo/")
 		})
 		if(!bp)
 			document.addEventListener("DOMContentLoaded",()=>{
@@ -224,31 +250,51 @@ if(d instanceof HTMLDocument)
 					}
 				})
 				db("fshare.vn",()=>{
-					let f=$("#form-download");
-					if(f.length)
+					if("$" in window)
 					{
-						$.ajax({
-							"url":f.attr("action"),
-							"type":"POST",
-							"data":f.serialize()
-						}).done((data)=>n(data.url))
+						let f=$("#form-download")
+						if(f.length)
+						{
+							$.ajax({
+								"url":f.attr("action"),
+								"type":"POST",
+								"data":f.serialize()
+							}).done((data)=>n(data.url))
+						}
 					}
+				})
+				db("extmatrix.com",()=>{
+					let b=document.getElementById("dlbutton")
+					if(b&&b.hasAttribute("disabled"))
+					{
+						b.removeAttribute("disabled")
+						b.click()
+					}
+				})
+				db("dwindly.io",()=>{
+					let b=document.getElementById("btd1")
+					if(b)
+					{
+						window.open=()=>{}
+						b.click()
+					}
+					else
+					{
+						b=document.getElementById("btd")
+						if(b)
+						{
+							window.open=n
+							eval("("+b.onclick.toString().split(";")[0]+"})()")
+						}
+					}
+				})
+				db("vpsat.net",()=>{
+					n(url)
 				})
 				if(bp)
 					return
 				if(isALF)
 				{
-					let b1=document.getElementById("invisibleCaptchaShortlink")
-					if(b1)
-					{
-						let cT=setInterval(()=>{
-							if(invisibleCaptchaShortlink!==undefined)
-							{
-								clearInterval(cT)
-								b1.click()
-							}
-						},100);
-					}
 					if("$" in this&&$("#go-link").length)
 					{
 						let bT=setInterval(()=>{
@@ -265,22 +311,21 @@ if(d instanceof HTMLDocument)
 										n(t.url)
 									}
 								},
-								error:(t)=>{console.log("An error occured: "+t.status+" "+t.statusText)}
+								error:(t)=>console.warn(t.status,t.responseText)
 							})
 						},1000)
-						$(".banner").html("").hide()
 					}
-					let b2=document.querySelector(".get-link")
-					if(b2)
+					let b=document.querySelector(".get-link")
+					if(b)
 					{
 						let lT=setInterval(()=>{
 							if(!document.querySelectorAll(".get-link.disabled").length)
 							{
 								clearInterval(lT)
-								if(b2.hasAttribute("href"))
-									n(b2.href)
+								if(b.hasAttribute("href"))
+									n(b.href)
 								else
-									b2.click()
+									b.click()
 							}
 						},100)
 					}
