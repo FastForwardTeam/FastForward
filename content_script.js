@@ -49,6 +49,32 @@ if(d instanceof HTMLDocument)
 				value:forced_app_vars[key]
 			})
 		}
+		//Safelink
+		let actual_safelink=forced_safelink={counter:0}
+		ODP(this,"safelink",
+		{
+			set:(_)=>{
+				ODP(window,"blurred",{
+					value:!1,
+					writable:!1
+				})
+				for(let k in _)
+				{
+					let v=_[k]
+					if(forced_safelink[k]===undefined)
+						actual_safelink[k]=v
+				}
+			},
+			get:()=>actual_safelink
+		})
+		for(let key in forced_safelink)
+		{
+			ODP(safelink,key,
+			{
+				writable:!1,
+				value:forced_safelink[key]
+			})
+		}
 		hb(/ur\.ly|urly\.mobi/,()=>{
 			if(location.pathname.length>2&&location.pathname.substr(0,6)!="/goii/")
 				n("/goii/"+location.pathname.substr(2)+"?ref="+location.hostname+location.pathname)
@@ -135,6 +161,12 @@ if(d instanceof HTMLDocument)
 		})
 		hb(/1v\.to\/t\/.*/,()=>{
 			location.pathname=location.pathname.split("/t/").join("/saliendo/")
+		})
+		db("share-online.biz",()=>{
+			ODP(this,"wait",{
+				value:2,
+				writable:!1
+			})
 		})
 		if(!bp)
 			document.addEventListener("DOMContentLoaded",()=>{
@@ -291,6 +323,9 @@ if(d instanceof HTMLDocument)
 				db("vpsat.net",()=>{
 					n(url)
 				})
+				db("filebebo.com",()=>{
+					document.querySelector(".seconds").textContent="0"
+				})
 				if(bp)
 					return
 				if(isALF)
@@ -341,169 +376,169 @@ if(d instanceof HTMLDocument)
 					}
 					return
 				}
-			//GemPixel Premium URL Shortener
-			if(typeof appurl!="undefined"&&typeof token!="undefined")
-			{
-				let scripts=document.getElementsByTagName("script")
-				for(let i in scripts)
+				//GemPixel Premium URL Shortener
+				if(typeof appurl!="undefined"&&typeof token!="undefined")
 				{
-					let script=scripts[i];
-					if(script instanceof HTMLScriptElement)
+					let scripts=document.getElementsByTagName("script")
+					for(let i in scripts)
 					{
-						let cont=script.textContent
-						if(cont.indexOf('clearInterval(countdown);')>-1)
+						let script=scripts[i];
+						if(script instanceof HTMLScriptElement)
 						{
-							if(typeof countdown!="undefined")
-								clearInterval(countdown)
-							if(!document.querySelector("a.redirect"))
+							let cont=script.textContent
+							if(cont.indexOf('clearInterval(countdown);')>-1)
 							{
-								let a=document.createElement("a")
-								a.href="#"
-								a.className="redirect"
-								document.body.appendChild(a)
+								if(typeof countdown!="undefined")
+									clearInterval(countdown)
+								if(!document.querySelector("a.redirect"))
+								{
+									let a=document.createElement("a")
+									a.href="#"
+									a.className="redirect"
+									document.body.appendChild(a)
+								}
+								if(cont.indexOf("var count = ")>-1)
+								{
+									cont = cont.split(/var count = [0-9]*;/).join("let count=0;")
+								}
+								else
+								{
+									cont = "let count=0;" + cont
+								}
+								cont = cont.split("$(window).on('load', ").join("let r=(f)=>f();r(");
+								let sI=setInterval
+								this.setInterval=(f)=>f()
+								eval(cont)
+								this.setInterval=sI
+								n(document.querySelector("a.redirect").href)
+								return
 							}
-							if(cont.indexOf("var count = ")>-1)
-							{
-								cont = cont.split(/var count = [0-9]*;/).join("let count=0;")
-							}
-							else
-							{
-								cont = "let count=0;" + cont
-							}
-							cont = cont.split("$(window).on('load', ").join("let r=(f)=>f();r(");
-							let sI=setInterval
-							this.setInterval=(f)=>f()
-							eval(cont)
-							this.setInterval=sI
-							n(document.querySelector("a.redirect").href)
+						}
+					}
+					//Ally Captcha
+					if(document.getElementById("messa")&&document.getElementById("html_element"))
+					{
+						document.getElementById("messa").className+=" hidden"
+						document.getElementById("html_element").className=document.getElementById("html_element").className.split("hidden").join("").trim();
+					}
+				}
+				//Soralink Plugin
+				if(document.querySelector(".sorasubmit"))
+				{
+					document.querySelector(".sorasubmit").click()
+					return
+				}
+				let rCL=()=>((document.querySelectorAll("img#pleasewait").length&&document.querySelector(".wait"))||document.getElementById("showlink")||document.getElementById("download")||document.getElementsByTagName("style='margin-top:").length)
+				if(typeof changeLink=="function")
+				{
+					if(rCL)
+					{
+						this.open=n
+						changeLink()
+						return
+					}
+					let cLT=setInterval(()=>{
+						if(rCL())
+						{
+							clearInterval(cLT);
+							this.open=n
+							changeLink()
+						}
+					},100)
+				}
+				if(document.querySelector("#lanjut > #goes"))
+				{
+					let b=document.querySelector("#lanjut > #goes");
+					if(b&&b.href)
+						n(b.href)
+				}
+				if(document.getElementById("waktu")&&document.getElementById("goto"))
+				{
+					n(document.getElementById("goto").href)
+				}
+				//Shorte.st
+				if(typeof app!="undefined"&&"options"in app&&"intermediate"in app.options)
+				{
+					app.options.intermediate.timeToWait=3
+					let b=document.getElementById(app.options.intermediate.skipButtonId),
+					lT=setInterval(()=>
+					{
+						if(b.className.indexOf("show")>-1)
+						{
+							clearInterval(lT)
+							n(app.options.intermediate.destinationUrl)
+						}
+					},100)
+					return
+				}
+				//GetsURL.com
+				if(document.querySelector(".img-responsive[alt='Gets URL']")&&typeof x!="undefined")
+				{
+					let b=document.getElementById("link")
+					if(b)
+					{
+						n(b.href+"&ab"+x)
+						return
+					}
+				}
+				//Linkvertise.net
+				if(document.querySelector(".logo > a[href='http://linkvertise.net'] > img[src='/assets/img/linkvertise.png']"))
+				{
+					let b=document.querySelector("[data-download]")
+					if(b)
+					{
+						n(b.getAttribute("data-download"))
+						return
+					}
+				}
+				//OpenLoad
+				if(document.querySelectorAll("img[src='/assets/img/logo.png'][alt='Openload']").length)
+				{
+					secondsdl=0
+					return
+				}
+				//KuroSafe
+				if(document.querySelector("a#mybutton.btn.btn-md.btn-primary[href^='https://www.kurosafe.online/']")||document.querySelector("a#mybutton.btn.btn-md.btn-primary[href^='https://kurosafe.online/']"))
+				{
+					n(document.getElementById("mybutton").href)
+					return
+				}
+				//SafeLinkReview.com
+				if(document.querySelector(".navbar-brand")&&document.querySelector(".navbar-brand").textContent.trim()=="Safe Link Review"&&document.querySelector(".button.green"))
+				{
+					this.open=n
+					document.querySelector(".button.green").click()
+					return
+				}
+				if(location.hostname=="decrypt2.safelinkconverter.com"&&document.querySelector(".redirect_url a"))
+				{
+					this.open=n
+					document.querySelector(".redirect_url a").click();
+					return
+				}
+				let t=document.querySelector("title")
+				if(t)
+				{
+					//Viid.su
+					if(t.textContent.trim()=="Viid.su")
+					{
+						let b=document.getElementById("link-success-button")
+						if(b&&b.getAttribute("data-url"))
+						{
+							n(b.getAttribute("data-url"))
 							return
 						}
 					}
 				}
-				//Ally Captcha
-				if(document.getElementById("messa")&&document.getElementById("html_element"))
-				{
-					document.getElementById("messa").className+=" hidden"
-					document.getElementById("html_element").className=document.getElementById("html_element").className.split("hidden").join("").trim();
-				}
-			}
-			//Soralink Plugin
-			if(document.querySelector(".sorasubmit"))
-			{
-				document.querySelector(".sorasubmit").click()
-				return
-			}
-			let rCL=()=>((document.querySelectorAll("img#pleasewait").length&&document.querySelector(".wait"))||document.getElementById("showlink")||document.getElementById("download")||document.getElementsByTagName("style='margin-top:").length)
-			if(typeof changeLink=="function")
-			{
-				if(rCL)
-				{
-					this.open=n
-					changeLink()
-					return
-				}
-				let cLT=setInterval(()=>{
-					if(rCL())
+				setInterval(()=>{
+					//Shorte.st Embed
+					if(document.querySelectorAll(".lay-sh.active-sh").length)
 					{
-						clearInterval(cLT);
-						this.open=n
-						changeLink()
+						let elm=document.querySelectorAll(".lay-sh.active-sh")[0]
+						elm.parentNode.removeChild(elm)
 					}
-				},100)
-			}
-			if(document.querySelector("#lanjut > #goes"))
-			{
-				let b=document.querySelector("#lanjut > #goes");
-				if(b&&b.href)
-					n(b.href)
-			}
-			if(document.getElementById("waktu")&&document.getElementById("goto"))
-			{
-				n(document.getElementById("goto").href)
-			}
-			//Shorte.st
-			if(typeof app!="undefined"&&"options"in app&&"intermediate"in app.options)
-			{
-				app.options.intermediate.timeToWait=3
-				let b=document.getElementById(app.options.intermediate.skipButtonId),
-				lT=setInterval(()=>
-				{
-					if(b.className.indexOf("show")>-1)
-					{
-						clearInterval(lT)
-						n(app.options.intermediate.destinationUrl)
-					}
-				},100)
-				return
-			}
-			//GetsURL.com
-			if(document.querySelector(".img-responsive[alt='Gets URL']")&&typeof x!="undefined")
-			{
-				let b=document.getElementById("link")
-				if(b)
-				{
-					n(b.href+"&ab"+x)
-					return
-				}
-			}
-			//Linkvertise.net
-			if(document.querySelector(".logo > a[href='http://linkvertise.net'] > img[src='/assets/img/linkvertise.png']"))
-			{
-				let b=document.querySelector("[data-download]")
-				if(b)
-				{
-					n(b.getAttribute("data-download"))
-					return
-				}
-			}
-			//OpenLoad
-			if(document.querySelectorAll("img[src='/assets/img/logo.png'][alt='Openload']").length)
-			{
-				secondsdl=0
-				return
-			}
-			//KuroSafe
-			if(document.querySelector("a#mybutton.btn.btn-md.btn-primary[href^='https://www.kurosafe.online/']")||document.querySelector("a#mybutton.btn.btn-md.btn-primary[href^='https://kurosafe.online/']"))
-			{
-				n(document.getElementById("mybutton").href)
-				return
-			}
-			//SafeLinkReview.com
-			if(document.querySelector(".navbar-brand")&&document.querySelector(".navbar-brand").textContent.trim()=="Safe Link Review"&&document.querySelector(".button.green"))
-			{
-				this.open=n
-				document.querySelector(".button.green").click()
-				return
-			}
-			if(location.hostname=="decrypt2.safelinkconverter.com"&&document.querySelector(".redirect_url a"))
-			{
-				this.open=n
-				document.querySelector(".redirect_url a").click();
-				return
-			}
-			let t=document.querySelector("title")
-			if(t)
-			{
-				//Viid.su
-				if(t.textContent.trim()=="Viid.su")
-				{
-					let b=document.getElementById("link-success-button")
-					if(b&&b.getAttribute("data-url"))
-					{
-						n(b.getAttribute("data-url"))
-						return
-					}
-				}
-			}
-			setInterval(()=>{
-				//Shorte.st Embed
-				if(document.querySelectorAll(".lay-sh.active-sh").length)
-				{
-					let elm=document.querySelectorAll(".lay-sh.active-sh")[0]
-					elm.parentNode.removeChild(elm)
-				}
-			},500);
-		})
+				},500);
+			})
 	},//
 	i=(t)=>{
 		s=d.createElement("script")
