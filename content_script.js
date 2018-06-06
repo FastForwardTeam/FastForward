@@ -49,6 +49,17 @@ if(d instanceof HTMLDocument)
 				value:forced_app_vars[key]
 			})
 		}
+		//LinkBucks
+		var actualInitLbjs;
+		ODP(this,"initLbjs",{
+			set:(_)=>actualInitLbjs=_,
+			get:()=>(a,p)=>{
+				p.AdPopUrl=""
+				p.AdUrl=""
+				p.Countdown=1
+				actualInitLbjs(a,p)
+			}
+		})
 		//Safelink
 		let actual_safelink=forced_safelink={counter:0}
 		ODP(this,"safelink",
@@ -168,6 +179,21 @@ if(d instanceof HTMLDocument)
 				writable:!1
 			})
 		})
+		db("sfile.mobi",()=>{
+			ODP(this,"downloadButton",{
+				set:function(b)
+				{
+					if(b&&b.href)
+						n(b.href)
+				}
+			})
+		})
+		db("mylink.zone",()=>{
+			ODP(this,"seconde",{
+				value:-1,
+				writable:!1
+			})
+		})
 		if(!bp)
 			document.addEventListener("DOMContentLoaded",()=>{
 				db("adfoc.us",()=>{
@@ -197,11 +223,6 @@ if(d instanceof HTMLDocument)
 							}
 						})
 				})
-				hb(/croco\.site\/ok\//,()=>{
-					let b=document.getElementById("btn-main")
-					if(b)
-						b.click()
-				})
 				db("srt.am",()=>{
 					if(document.querySelector(".skip-container"))
 					{
@@ -226,6 +247,10 @@ if(d instanceof HTMLDocument)
 					let b=document.getElementById("NextVideo")
 					if(b&&b.href)
 						n(b.href)
+				})
+				db("1ink.cc",()=>{
+					if(typeof SkipAd=="function")
+						SkipAd()
 				})
 				db("v1.94lauin.com",()=>{
 					jQuery.prototype._attr=jQuery.prototype.attr
@@ -325,6 +350,13 @@ if(d instanceof HTMLDocument)
 				})
 				db("filebebo.com",()=>{
 					document.querySelector(".seconds").textContent="0"
+				})
+				db("bluemediafiles.com",()=>{
+					if(typeof FinishMessage=="string"&&FinishMessage.indexOf("<a href=")>-1)
+					{
+						document.write(FinishMessage)
+						document.querySelector("a").click()
+					}
 				})
 				if(bp)
 					return
@@ -456,6 +488,9 @@ if(d instanceof HTMLDocument)
 				{
 					n(document.getElementById("goto").href)
 				}
+				//Other Templates
+				if(document.querySelector("form#skip")&&document.getElementById("btn-main")&&!document.querySelector(".g-recaptcha"))
+					document.querySelector("form#skip").submit()
 				//Shorte.st
 				if(typeof app!="undefined"&&"options"in app&&"intermediate"in app.options)
 				{
