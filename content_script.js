@@ -285,7 +285,7 @@ if(d instanceof HTMLDocument)
 						b.click()
 					}
 					else
-						jQuery.prototype.animateProgress=(p,f,i)=>f()
+						jQuery.prototype.animateProgress=(p,f)=>f()
 				})
 				db("skinnycat.net",()=>{
 					let b=document.getElementById("dl")
@@ -348,15 +348,31 @@ if(d instanceof HTMLDocument)
 				db("vpsat.net",()=>{
 					n(url)
 				})
-				db("filebebo.com",()=>{
-					document.querySelector(".seconds").textContent="0"
-				})
 				db("bluemediafiles.com",()=>{
 					if(typeof FinishMessage=="string"&&FinishMessage.indexOf("<a href=")>-1)
 					{
 						document.write(FinishMessage)
 						document.querySelector("a").click()
 					}
+				})
+				db("complete2unlock.com",()=>{
+					let jT=setInterval(()=>{
+						if(typeof $=="function")
+						{
+							clearInterval(jT)
+							$(document).ready(()=>setTimeout(()=>{
+								window.open=(h)=>{return{location:{href:h}}}
+								window.setTimeout=(f)=>f()
+								let bs=document.querySelectorAll("[data-main-url]")
+								for(let i in bs)
+								{
+									let b=bs[i]
+									if(b instanceof HTMLElement)
+										b.click()
+								}
+							},100))
+						}
+					},100)
 				})
 				if(bp)
 					return
@@ -491,6 +507,8 @@ if(d instanceof HTMLDocument)
 				//Other Templates
 				if(document.querySelector("form#skip")&&document.getElementById("btn-main")&&!document.querySelector(".g-recaptcha"))
 					document.querySelector("form#skip").submit()
+				if(document.getElementById("countdown")&&document.querySelector(".seconds"))
+					document.querySelector(".seconds").textContent="0"
 				//Shorte.st
 				if(typeof app!="undefined"&&"options"in app&&"intermediate"in app.options)
 				{
