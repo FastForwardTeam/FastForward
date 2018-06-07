@@ -22,41 +22,12 @@ if(d instanceof HTMLDocument)
 					n(r)
 			}
 		})
-		//AdLinkFly
-		let actual_app_vars=forced_app_vars={counter_start:"load",force_disable_adblock:"0"},isALF=!1
-		ODP(this,"app_vars",
-		{
-			set:(_)=>{
-				ODP(window,"blurred",{
-					value:!1,
-					writable:!1
-				})
-				isALF=!0
-				for(let k in _)
-				{
-					let v=_[k]
-					if(forced_app_vars[k]===undefined)
-						actual_app_vars[k]=v
-				}
-			},
-			get:()=>actual_app_vars
-		})
-		for(let key in forced_app_vars)
-		{
-			ODP(app_vars,key,
-			{
-				writable:!1,
-				value:forced_app_vars[key]
-			})
-		}
 		//LinkBucks
 		var actualInitLbjs;
 		ODP(this,"initLbjs",{
 			set:(_)=>actualInitLbjs=_,
 			get:()=>(a,p)=>{
-				p.AdPopUrl=""
-				p.AdUrl=""
-				p.Countdown=1
+				p.Countdown--
 				actualInitLbjs(a,p)
 			}
 		})
@@ -376,54 +347,6 @@ if(d instanceof HTMLDocument)
 				})
 				if(bp)
 					return
-				if(isALF)
-				{
-					if("$" in this&&$("#go-link").length)
-					{
-						let bT=setInterval(()=>{
-							let f=$("#go-link")
-							$.ajax({
-								dataType:"json",
-								type:"POST",
-								url:f.attr("action"),
-								data:f.serialize(),
-								success:(t)=>{
-									if(t.url)
-									{
-										clearInterval(bT)
-										n(t.url)
-									}
-								},
-								error:(t)=>console.warn(t.status,t.responseText)
-							})
-						},1000)
-					}
-					let b=document.querySelector(".get-link")
-					if(b)
-					{
-						let lT=setInterval(()=>{
-							if(!document.querySelectorAll(".get-link.disabled").length)
-							{
-								clearInterval(lT)
-								if(b.hasAttribute("href"))
-									n(b.href)
-								else
-									b.click()
-							}
-						},100)
-					}
-					if(document.querySelectorAll(".skip-ad").length)
-					{
-						let lT=setInterval(()=>{
-							if(document.querySelectorAll(".skip-ad .btn[href]").length)
-							{
-								clearInterval(lT)
-								n(document.querySelectorAll(".skip-ad .btn[href]")[0].href)
-							}
-						},100)
-					}
-					return
-				}
 				//GemPixel Premium URL Shortener
 				if(typeof appurl!="undefined"&&typeof token!="undefined")
 				{
