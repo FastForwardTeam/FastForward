@@ -345,6 +345,10 @@ if(d instanceof HTMLDocument)
 						}
 					},100)
 				})
+				db("hidelink.club",()=>{
+					if(hash)
+						n(decodeURIComponent(atob(hash)).replace("%23", "#"))
+				})
 				if(bp)
 					return
 				//GemPixel Premium URL Shortener
@@ -402,7 +406,7 @@ if(d instanceof HTMLDocument)
 				let rCL=()=>((document.querySelectorAll("img#pleasewait").length&&document.querySelector(".wait"))||document.getElementById("showlink")||document.getElementById("download")||document.getElementsByTagName("style='margin-top:").length)
 				if(typeof changeLink=="function")
 				{
-					if(rCL)
+					if(rCL())
 					{
 						this.open=n
 						changeLink()
