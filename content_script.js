@@ -165,6 +165,30 @@ if(d instanceof HTMLDocument)
 				writable:!1
 			})
 		})
+		db("sourceforge.net",()=>{
+			var b=document.createElement("button"),d=false
+			b.className="direct-download"
+			b.style.display="none"
+			document.documentElement.appendChild(b)
+			ODP(this,"log",{
+				value:(m)=>{
+					console.log(m)
+					if(m=="triggering downloader:start")
+						d=true
+				},
+				writable:!1
+			})
+			document.addEventListener("DOMContentLoaded",()=>{
+				let bT=setInterval(()=>{
+					if(d)
+					{
+						clearInterval(bT)
+						location.href="about:blank"
+					}
+					else b.click()
+				},100)
+			})
+		})
 		if(!bp)
 			document.addEventListener("DOMContentLoaded",()=>{
 				db("adfoc.us",()=>{
