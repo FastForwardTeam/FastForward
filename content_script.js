@@ -110,11 +110,6 @@ if(d instanceof HTMLDocument)
 				jQuery.prototype.click=(f)=>f({"preventDefault":()=>{}})
 			})
 		})
-		db("dl.ccbluex.net",()=>{
-			var s=location.search.replace("?","")
-			if(s.substr(0,7)=="target=")
-				n("http://dl.ccbluex.net/download/index.php?file="+s.substr(7))
-		})
 		db("onepiece-ex.com.br",()=>{
 			ODP(this,"seconds",{
 				value:1,
