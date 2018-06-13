@@ -450,16 +450,32 @@ if(d instanceof HTMLDocument)
 					let b=document.querySelector("#lanjut > #goes");
 					if(b&&b.href)
 						n(b.href)
+					return
 				}
 				if(document.getElementById("waktu")&&document.getElementById("goto"))
 				{
 					n(document.getElementById("goto").href)
+					return
 				}
-				//Other Templates
+				//Other Templates 1
 				if(document.querySelector("form#skip")&&document.getElementById("btn-main")&&!document.querySelector(".g-recaptcha"))
+				{
 					document.querySelector("form#skip").submit()
+					return
+				}
+				//Other Templates 2
 				if(document.getElementById("countdown")&&document.querySelector(".seconds"))
+				{
 					document.querySelector(".seconds").textContent="0"
+					return
+				}
+				//Other Templates 3
+				if(typeof file_download=="function")
+				{
+					let _sI=setInterval
+					setInterval=(f)=>_sI(f,10)
+					return
+				}
 				//Shorte.st
 				if(typeof app!="undefined"&&"options"in app&&"intermediate"in app.options)
 				{
