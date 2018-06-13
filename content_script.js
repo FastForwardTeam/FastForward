@@ -501,6 +501,25 @@ if(d instanceof HTMLDocument)
 					secondsdl=0
 					return
 				}
+				//SafelinkU
+				if(document.querySelector("b[style='color: #3e66b3']")&&document.querySelector("b[style='color: #3e66b3']").textContent=="SafelinkU")
+				{
+					let _sI=setInterval
+					setInterval=(f)=>_sI(f,10)
+					let lT=_sI(()=>{
+						if(document.querySelector("a.btn.btn-primary.btn-lg.get-link[href]")&&document.querySelector("a.btn.btn-primary.btn-lg.get-link[href]").getAttribute("href").substr(0,11)!="javascript:")
+						{
+							clearInterval(lT)
+							n(document.querySelector("a.btn.btn-primary.btn-lg.get-link[href]").href)
+						}
+					},100)
+					return
+				}
+				else if(document.querySelector("b[style='color : #3e66b3']")&&document.querySelector("b[style='color: #3e66b3']").textContent=="Shortener url?")
+				{
+					document.querySelector("button.btn.btn-success[type='submit']").click()
+					return
+				}
 				//KuroSafe
 				if(document.querySelector("a#mybutton.btn.btn-md.btn-primary[href^='https://www.kurosafe.online/']")||document.querySelector("a#mybutton.btn.btn-md.btn-primary[href^='https://kurosafe.online/']"))
 				{
