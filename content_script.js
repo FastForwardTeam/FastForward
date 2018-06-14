@@ -368,6 +368,15 @@ if(d instanceof HTMLDocument)
 					if(hash)
 						n(decodeURIComponent(atob(hash)).replace("%23", "#"))
 				})
+				db("won.pe",()=>
+				{
+					if(document.querySelector(".captcha_loader .progress-bar"))
+						document.querySelector(".captcha_loader .progress-bar").setAttribute("aria-valuenow","100")
+				})
+				db("stealive.club",()=>{
+					if(document.getElementById("counter"))
+						document.getElementById("counter").innerHTML="0"
+				})
 				if(bp)
 					return
 				//GemPixel Premium URL Shortener
