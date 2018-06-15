@@ -57,6 +57,18 @@ if(d instanceof HTMLDocument)
 				value:forced_safelink[key]
 			})
 		}
+		//YetiShare Template
+		let actual_web_root
+		ODP(this,"WEB_ROOT",{
+			set:(v)=>{
+				ODP(this,"seconds",{
+					value:0,
+					writable:!1
+				})
+				actual_web_root=v
+			},
+			get:()=>actual_web_root
+		})
 		hb(/ur\.ly|urly\.mobi/,()=>{
 			if(location.pathname.length>2&&location.pathname.substr(0,6)!="/goii/")
 				n("/goii/"+location.pathname.substr(2)+"?ref="+location.hostname+location.pathname)
@@ -182,12 +194,6 @@ if(d instanceof HTMLDocument)
 					}
 					else b.click()
 				},100)
-			})
-		})
-		db("dropupload.com",()=>{
-			ODP(this,"seconds",{
-				value:0,
-				writable:!1
 			})
 		})
 		if(!bp)
