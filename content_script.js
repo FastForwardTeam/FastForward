@@ -184,6 +184,12 @@ if(d instanceof HTMLDocument)
 				},100)
 			})
 		})
+		db("dropupload.com",()=>{
+			ODP(this,"seconds",{
+				value:0,
+				writable:!1
+			})
+		})
 		if(!bp)
 			document.addEventListener("DOMContentLoaded",()=>{
 				db("adfoc.us",()=>{
