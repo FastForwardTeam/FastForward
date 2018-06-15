@@ -29,6 +29,9 @@
 	"save": {
 		"message": "Save"
 	},
+	"optionsNotifications": {
+		"message": "Show status notifications on websites Universal Bypass knows."
+	},
 	"optionsUserscripts": {
 		"message": "Custom Bypasses"
 	},
@@ -43,5 +46,14 @@
 	},
 	"optionsUserscriptsDelete": {
 		"message": "Delete Bypass"
+	},
+	"notificationTimerSkip": {
+		"message": "Universal Bypass just skipped that timer for you."
+	},
+	"notificationTimerLeap": {
+		"message": "Universal Bypass just removed %secs% second(s) from that timer."
+	},
+	"notificationBackend": {
+		"message": "Universal Bypass can't bypass this site because they have a server-side check."
 	}
 }

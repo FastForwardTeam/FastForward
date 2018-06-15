@@ -1,5 +1,5 @@
-chrome.storage.local.get(["disabled_bypasses","custom_bypasses"],(result)=>{
-	let customBypasses=result.custom_bypasses?JSON.parse(result.custom_bypasses):{},
+chrome.storage.local.get(["custom_bypasses"],(result)=>{
+	let customBypasses=(result&&result.custom_bypasses)?JSON.parse(result.custom_bypasses):{},
 	customBypassesList=document.getElementById("custom-bypasses-list"),
 	customBypassName=document.getElementById("custom-bypass-name"),
 	customBypassDomains=document.getElementById("custom-bypass-domains"),
@@ -78,4 +78,19 @@ chrome.storage.local.get(["disabled_bypasses","custom_bypasses"],(result)=>{
 		customBypassName.value=""
 		saveCustomBypass()
 	}
-});
+})
+chrome.storage.sync.get(["no_notifications"],(result)=>{
+	let notificationsCheckbox=document.getElementById("option-notifications")
+	if(!result||!result.no_notifications||result.no_notifications!=="true")
+	{
+		notificationsCheckbox.setAttribute("checked","checked")
+	}
+	notificationsCheckbox.onchange=()=>{
+		notificationsCheckbox.setAttribute("disabled","disabled")
+		chrome.storage.sync.set({
+			no_notifications:(!notificationsCheckbox.checked).toString()
+		},()=>{
+			notificationsCheckbox.removeAttribute("disabled")
+		})
+	}
+})

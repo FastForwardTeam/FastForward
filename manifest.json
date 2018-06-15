@@ -9,10 +9,13 @@
 	"name": "Universal Bypass",
 	"description": "__MSG_appDesc__",
 	"homepage_url": "https://universal-bypass.org/",
-	"version": "3.9.1",
+	"version": "4.0",
 	"author": "timmyRS",
 	"minimum_chrome_version": "41",
-	"options_page": "html/options.html",
+	"options_ui": {
+		"page": "html/options.html",
+		"open_in_tab": true
+	},
 	"permissions": [
 		"storage"
 	],
