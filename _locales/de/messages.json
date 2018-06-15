@@ -29,6 +29,9 @@
 	"save": {
 		"message": "Speichern"
 	},
+	"optionsNotifications": {
+		"message": "Status-Meldungen auf Webseiten, die Universal Bypass kennt, anzeigen."
+	},
 	"optionsUserscripts": {
 		"message": "Eigene Umgehungen"
 	},
@@ -43,5 +46,14 @@
 	},
 	"optionsUserscriptsDelete": {
 		"message": "Umgehung löschen"
+	},
+	"notificationTimerSkip": {
+		"message": "Universal Bypass hat gerade den Timer übersprungen."
+	},
+	"notificationTimerLeap": {
+		"message": "Universal Bypass hat gerade %secs% Sekunde(n) von dem Timer entfernt."
+	},
+	"notificationBackend": {
+		"message": "Universal Bypass kann diese Seite nicht umgehen, da diese einen Server-seitigen Check hat."
 	}
 }

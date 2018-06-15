@@ -4,9 +4,7 @@ if(d instanceof HTMLDocument)
 	let c=()=>{
 		let ms={},ODP=Object.defineProperty,ev=window.eval,sT=window.setTimeout,sI=window.setInterval,n=(t)=>{if(t&&t!=location.href){window.onbeforeunload=null;location.href=t}},
 		bp=!1,db=(d,b)=>{if(!bp&&(location.hostname==d||location.hostname.substr(location.hostname.length-(d.length+1))=="."+d)){b();bp=!0}},hb=(h,b)=>{if(!bp&&h.test(location.href)){b();bp=!0}},
-		ad=(f)=>{
-			if(["interactive","complete"].indexOf(document.readyState)>-1)f();else document.addEventListener("DOMContentLoaded",()=>sT(f,1))
-		},
+		ad=(f)=>{if(["interactive","complete"].indexOf(document.readyState)>-1)f();else document.addEventListener("DOMContentLoaded",()=>sT(f,1))},
 		ui=(m)=>ad(()=>{
 			if(document.getElementById("UNIVERSAL_BYPASS_NO_NOTIFICATIONS"))
 				return
@@ -110,7 +108,7 @@ if(d instanceof HTMLDocument)
 				value:0,
 				writable:!1
 			})
-			document.addEventListener("DOMContentLoaded",()=>
+			ad(()=>
 			{
 				let lT=sI(()=>
 				{
@@ -136,24 +134,6 @@ if(d instanceof HTMLDocument)
 					document.querySelector(".skip > .btn").click()
 				}
 			},100);
-		})
-		db("lucariomods.club",()=>{
-			let m=document.createElement("meta")
-			m.setAttribute("http-equiv","Content-Security-Policy")
-			m.setAttribute("content","upgrade-insecure-requests")
-			let hT=sI(function()
-			{
-				if(document.head)
-				{
-					clearInterval(hT)
-					document.head.appendChild(m)
-				}
-			},10)
-			document.addEventListener("DOMContentLoaded",()=>{
-				window.open=n
-				ui(ms.tS)
-				jQuery.prototype.click=(f)=>f({"preventDefault":()=>{}})
-			})
 		})
 		db("onepiece-ex.com.br",()=>{
 			ODP(this,"seconds",{
@@ -232,7 +212,7 @@ if(d instanceof HTMLDocument)
 				},
 				writable:!1
 			})
-			document.addEventListener("DOMContentLoaded",()=>{
+			ad(()=>{
 				let bT=sI(()=>{
 					if(d)
 					{
@@ -250,11 +230,14 @@ if(d instanceof HTMLDocument)
 			}
 		})
 		if(!bp)
-			document.addEventListener("DOMContentLoaded",()=>{
+			ad(()=>{
 				db("adfoc.us",()=>{
 					let b=document.querySelector(".skip")
 					if(b&&b.href)
+					{
+						ui(ms.tS)
 						n(b.href)
+					}
 				})
 				db("linkshrink.net",()=>{
 					let p=document.getElementById("pause"),s=document.getElementById("skip")
