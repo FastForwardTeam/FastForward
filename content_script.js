@@ -1,4 +1,4 @@
-let d=document;
+let d=document
 if(d instanceof HTMLDocument)
 {
 	let c=()=>{
@@ -28,7 +28,7 @@ if(d instanceof HTMLDocument)
 		ODP(this,"ysmm",//Adf.ly
 		{
 			set:(r)=>{
-				let I=X="";
+				let I=X=""
 				for(let m=0;m<r.length;m++)
 					if(m%2==0)I+=r.charAt(m);else X=r.charAt(m)+X
 				r=I+X
@@ -47,7 +47,7 @@ if(d instanceof HTMLDocument)
 			}
 		})
 		//LinkBucks
-		var actualInitLbjs;
+		var actualInitLbjs
 		ODP(this,"initLbjs",{
 			set:(_)=>actualInitLbjs=_,
 			get:()=>(a,p)=>{
@@ -133,7 +133,7 @@ if(d instanceof HTMLDocument)
 					ui(ms.tS)
 					document.querySelector(".skip > .btn").click()
 				}
-			},100);
+			},100)
 		})
 		db("onepiece-ex.com.br",()=>{
 			ODP(this,"seconds",{
@@ -433,6 +433,7 @@ if(d instanceof HTMLDocument)
 						ui(ms.tS)
 					}
 				})
+				hb(/ouo\.(io|press)/,()=>ui(ms.b))
 				if(bp)
 					return
 				//GemPixel Premium URL Shortener
@@ -441,7 +442,7 @@ if(d instanceof HTMLDocument)
 					let scripts=document.getElementsByTagName("script")
 					for(let i in scripts)
 					{
-						let script=scripts[i];
+						let script=scripts[i]
 						if(script instanceof HTMLScriptElement)
 						{
 							let cont=script.textContent
@@ -458,13 +459,13 @@ if(d instanceof HTMLDocument)
 								}
 								if(cont.indexOf("var count = ")>-1)
 								{
-									cont = cont.split(/var count = [0-9]*;/).join("let count=0;")
+									cont=cont.split(/var count = [0-9]*;/).join("let count=0;")
 								}
 								else
 								{
-									cont = "let count=0;" + cont
+									cont="let count=0;"+cont
 								}
-								cont = cont.split("$(window).on('load', ").join("let r=(f)=>f();r(");
+								cont=cont.split("$(window).on('load', ").join("let r=(f)=>f();r(")
 								window.setInterval=(f)=>f()
 								ev(cont)
 								window.setInterval=sI
@@ -477,7 +478,7 @@ if(d instanceof HTMLDocument)
 					if(document.getElementById("messa")&&document.getElementById("html_element"))
 					{
 						document.getElementById("messa").className+=" hidden"
-						document.getElementById("html_element").className=document.getElementById("html_element").className.split("hidden").join("").trim();
+						document.getElementById("html_element").className=document.getElementById("html_element").className.split("hidden").join("").trim()
 					}
 				}
 				//Soralink Plugin
@@ -492,45 +493,53 @@ if(d instanceof HTMLDocument)
 					if(rCL())
 					{
 						window.open=n
+						ui(ms.tS)
 						changeLink()
 						return
 					}
 					let cLT=sI(()=>{
 						if(rCL())
 						{
-							clearInterval(cLT);
+							clearInterval(cLT)
 							window.open=n
+							ui(ms.tS)
 							changeLink()
 						}
 					},100)
 				}
 				if(document.querySelector("#lanjut > #goes"))
 				{
-					let b=document.querySelector("#lanjut > #goes");
+					let b=document.querySelector("#lanjut > #goes")
 					if(b&&b.href)
+					{
+						ui(ms.tS)
 						n(b.href)
+					}
 					return
 				}
 				if(document.getElementById("waktu")&&document.getElementById("goto"))
 				{
+					ui(ms.tS)
 					n(document.getElementById("goto").href)
 					return
 				}
 				//Other Templates
 				if(document.querySelector("form#skip")&&document.getElementById("btn-main")&&!document.querySelector(".g-recaptcha"))
 				{
+					ui(ms.tS)
 					document.querySelector("form#skip").submit()
 					return
 				}
 				if(document.querySelector("a#btn-main")&&typeof Countdown=="function")
 				{
+					ui(ms.tS)
 					n(document.querySelector("a#btn-main").href)
 					return
 				}
 				if(document.getElementById("countdown")&&document.querySelector(".seconds"))
 				{
-					document.querySelector(".seconds").textContent="0"
 					ui(ms.tS)
+					document.querySelector(".seconds").textContent="0"
 					return
 				}
 				if(typeof file_download=="function")
@@ -544,17 +553,17 @@ if(d instanceof HTMLDocument)
 				if(document.querySelector("input[type=\"submit\"][name=\"method_free\"]"))
 				{
 					ui(ms.tS)
-					document.querySelector("input[type=\"submit\"][name=\"method_free\"]").click();
+					document.querySelector("input[type=\"submit\"][name=\"method_free\"]").click()
 					return
 				}
 				if(document.getElementById("frmdlcenter")&&document.getElementById("pay_modes"))//elsfile.org Timer
 				{
-					let form = document.createElement("form");
-					form.method = "POST";
-					form.innerHTML = '<input type="hidden" name="op" value="download1"><input type="hidden" name="usr_login" value="C"><input type="hidden" name="id" value="'+location.pathname.toString().substr(1)+'"><input type="hidden" name="fname" value="'+document.querySelectorAll("div#container > div > div > table > tbody > tr > td")[2].textContent+'"><input type="hidden" name="referer" value="q"><input type="hidden" name="method_free" value="Free Download">';
-					form = document.body.appendChild(form);
+					let form=document.createElement("form")
+					form.method="POST"
+					form.innerHTML='<input type="hidden" name="op" value="download1"><input type="hidden" name="usr_login" value="C"><input type="hidden" name="id" value="'+location.pathname.toString().substr(1)+'"><input type="hidden" name="fname" value="'+document.querySelectorAll("div#container > div > div > table > tbody > tr > td")[2].textContent+'"><input type="hidden" name="referer" value="q"><input type="hidden" name="method_free" value="Free Download">'
+					form=document.body.appendChild(form)
 					ui(ms.tS)
-					form.submit();
+					form.submit()
 					return
 				}
 				//Shorte.st
@@ -563,8 +572,7 @@ if(d instanceof HTMLDocument)
 					app.options.intermediate.timeToWait=3
 					ui(ms.tL.replace("%secs%","2"))
 					let b=document.getElementById(app.options.intermediate.skipButtonId),
-					lT=sI(()=>
-					{
+					lT=sI(()=>{
 						if(b.className.indexOf("show")>-1)
 						{
 							clearInterval(lT)
@@ -647,7 +655,7 @@ if(d instanceof HTMLDocument)
 				{
 					window.open=n
 					ui(ms.tS)
-					document.querySelector(".redirect_url a").click();
+					document.querySelector(".redirect_url a").click()
 					return
 				}
 				let t=document.querySelector("title")
@@ -672,7 +680,7 @@ if(d instanceof HTMLDocument)
 						let elm=document.querySelectorAll(".lay-sh.active-sh")[0]
 						elm.parentNode.removeChild(elm)
 					}
-				},500);
+				},500)
 			})
 	},//
 	i=(t)=>{
@@ -710,7 +718,7 @@ if(d instanceof HTMLDocument)
 						let ds=b.domains.split(",")
 						for(let di in ds)
 						{
-							let d=ds[di];
+							let d=ds[di]
 							if(location.hostname==d||location.hostname.substr(location.hostname.length-(d.length+1))=="."+d)
 								i(cs)
 						}

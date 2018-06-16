@@ -1,6 +1,6 @@
 {
 	"appDesc": {
-		"message": "Verspil geen tijd met gezeik. Universal Bypass slaat irritante link verkorters automatisch over."
+		"message": "Verspil geen tijd met moeilijkheid. Universal Bypass slaat irritante link-verkorters automatisch over."
 	},
 	"firstrunTitle": {
 		"message": "Bedankt voor het installeren van Universal Bypass!"
@@ -9,10 +9,10 @@
 		"message": "Je bent geweldig!"
 	},
 	"firstrunWhatnow": {
-		"message": "Wat je nu kunt doen:"
+		"message": "Wat je nu kan doen:"
 	},
 	"firstrunOptions": {
-		"message": "Wijzig de Universal Bypass opties."
+		"message": "Wijzig de Universal Bypass-opties."
 	},
 	"firstrunTwitter": {
 		"message": "Volg Universal Bypass op Twitter om altijd op de hoogte te blijven van Universal Bypass."
@@ -29,11 +29,14 @@
 	"save": {
 		"message": "Opslaan"
 	},
+	"optionsNotifications": {
+		"message": "Toon statusmeldingen op websites die Universal Bypass kent."
+	},
 	"optionsUserscripts": {
 		"message": "Aangepaste bypasses"
 	},
 	"optionsUserscriptsSubtitle": {
-		"message": "Het zou leuk zijn als je werkpassages naar GitHub zou kunnen aanbieden, zodat anderen er profijt van kunnen hebben: "
+		"message": "Het zou leuk zijn als je je eigen toevoegingen naar GitHub zou kunnen aanbieden, zodat anderen er profijt van kunnen hebben: "
 	},
 	"optionsUserscriptsName": {
 		"message": "Naam. Met een lege naam wordt deze bypass verwijderd."
@@ -43,5 +46,14 @@
 	},
 	"optionsUserscriptsDelete": {
 		"message": "Verwijder Bypass"
+	},
+	"notificationTimerSkip": {
+		"message": "Universal Bypass heeft die timer voor u overgeslagen."
+	},
+	"notificationTimerLeap": {
+		"message": "Universal Bypass heeft zojuist %sec% seconde(n) uit die timer verwijderd."
+	},
+	"notificationBackend": {
+		"message": "Universal Bypass kan deze site niet omzeilen omdat ze een controle aan de serverzijde hebben."
 	}
 }
