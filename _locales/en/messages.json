@@ -1,7 +1,4 @@
 {
-	"appName": {
-		"message": "Universal Bypass"
-	},
 	"appDesc": {
 		"message": "Don't waste your time with compliance. Universal Bypass automatically skips annoying link shorteners."
 	},
@@ -26,11 +23,14 @@
 	"popupOptions": {
 		"message": "Options"
 	},
-	"popupTwitter": {
-		"message": "Twitter"
-	},
 	"options": {
 		"message": "Universal Bypass Options"
+	},
+	"save": {
+		"message": "Save"
+	},
+	"optionsNotifications": {
+		"message": "Show status notifications on websites Universal Bypass knows."
 	},
 	"optionsUserscripts": {
 		"message": "Custom Bypasses"
@@ -38,10 +38,22 @@
 	"optionsUserscriptsSubtitle": {
 		"message": "It would be nice if you could submit working bypasses to GitHub, so others can benefit from it: "
 	},
-	"save": {
-		"message": "Save"
+	"optionsUserscriptsName": {
+		"message": "Name. With an empty name, this bypass will be deleted."
+	},
+	"optionsUserscriptsDomains": {
+		"message": "Domains. Use * for this bypass to be effective everywhere."
 	},
 	"optionsUserscriptsDelete": {
 		"message": "Delete Bypass"
+	},
+	"notificationTimerSkip": {
+		"message": "Universal Bypass just skipped that timer for you."
+	},
+	"notificationTimerLeap": {
+		"message": "Universal Bypass just removed %secs% second(s) from that timer."
+	},
+	"notificationBackend": {
+		"message": "Universal Bypass can't bypass this site because they have a server-side check."
 	}
 }

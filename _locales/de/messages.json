@@ -1,7 +1,4 @@
 {
-	"appName": {
-		"message": "Universal Bypass"
-	},
 	"appDesc": {
 		"message": "Verschwende deine Zeit nicht mit Unterwerfung. Universal Bypass überspringt automatisch nervige Linkkürzer."
 	},
@@ -26,11 +23,14 @@
 	"popupOptions": {
 		"message": "Optionen"
 	},
-	"popupTwitter": {
-		"message": "Twitter"
-	},
 	"options": {
 		"message": "Universal Bypass Optionen"
+	},
+	"save": {
+		"message": "Speichern"
+	},
+	"optionsNotifications": {
+		"message": "Status-Meldungen auf Webseiten, die Universal Bypass kennt, anzeigen."
 	},
 	"optionsUserscripts": {
 		"message": "Eigene Umgehungen"
@@ -38,10 +38,22 @@
 	"optionsUserscriptsSubtitle": {
 		"message": "Es wäre nett, wenn du funktionierende Umgehungen auf GitHub einreichen wüdest, damit Andere auch davon profitieren können: "
 	},
-	"save": {
-		"message": "Speichern"
+	"optionsUserscriptsName": {
+		"message": "Name. Mit einem leeren Namen, wird diese Umgehung gelöscht."
+	},
+	"optionsUserscriptsDomains": {
+		"message": "Domains. Nutze * damit diese Umgehung überall in effekt tritt."
 	},
 	"optionsUserscriptsDelete": {
 		"message": "Umgehung löschen"
+	},
+	"notificationTimerSkip": {
+		"message": "Universal Bypass hat gerade den Timer übersprungen."
+	},
+	"notificationTimerLeap": {
+		"message": "Universal Bypass hat gerade %secs% Sekunde(n) von dem Timer entfernt."
+	},
+	"notificationBackend": {
+		"message": "Universal Bypass kann diese Seite nicht umgehen, da diese einen Server-seitigen Check hat."
 	}
 }

@@ -2,13 +2,15 @@
 <html>
 <head>
 	<title data-message="options"></title>
+	<meta charset="UTF-8">
 	<link rel="stylesheet" href="basic.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<style>body{padding:20px}#custom-bypass-editor{font-family:"DejaVu Sans Mono",monospace;min-height:500px;min-height:calc(100vh - 370px)}</style>
 </head>
 <body>
 	<h1 data-message="options"></h1>
-	<hr>
+	<br>
+	<p><input type="checkbox" id="option-notifications"> <label for="option-notifications" data-message="optionsNotifications"></label></li></p>
 	<h2 data-message="optionsUserscripts"></h2>
 	<a name="userscripts"></a>
 	<p><span data-message="optionsUserscriptsSubtitle"></span> <a href="https://github.com/hellshltd/Universal-Bypass" target="_blank">https://github.com/hellshltd/Universal-Bypass</a></p>
@@ -18,8 +20,8 @@
 		</div>
 		<div class="col-lg-9">
 			<div id="custom-bypass-edit-container">
-				<p><input type="text" id="custom-bypass-name" placeholder="Warning: With an empty name, this bypass will be deleted." class="form-control"></p>
-				<p><input type="text" id="custom-bypass-domains" class="form-control"></p>
+				<p><input type="text" id="custom-bypass-name" class="form-control" data-placeholder="optionsUserscriptsName"></p>
+				<p><input type="text" id="custom-bypass-domains" class="form-control" data-placeholder="optionsUserscriptsDomains"></p>
 				<p><textarea id="custom-bypass-editor" class="form-control"></textarea></p>
 				<p>
 					<a href="#userscripts" id="save-custom-bypass" class="btn btn-primary" data-message="save"></a>
@@ -31,7 +33,6 @@
 	<hr>
 	<p>Copyright (c) 2018, <a href="https://hellsh.com" target="_blank">Hellsh Ltd.</a></p>
 	<script src="translations.js"></script>
-	<script src="../src/bypass_index.js"></script>
 	<script src="options.js"></script>
 </body>
 </html>

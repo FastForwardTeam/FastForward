@@ -1,0 +1,47 @@
+{
+	"appDesc": {
+		"message": "No pierdas el tiempo para acceder. Universal Bypass omite automáticamente los molestos acortadores de enlaces."
+	},
+	"firstrunTitle": {
+		"message": "Gracias por instalar Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "¡Eres increíble!"
+	},
+	"firstrunWhatnow": {
+		"message": "Lo que puedes hacer ahora:"
+	},
+	"firstrunOptions": {
+		"message": "Configura Universal Bypass' opción."
+	},
+	"firstrunTwitter": {
+		"message": "Siga a Universal Bypass en Twitter para estar informado sobre Universal Bypass."
+	},
+	"homepage": {
+		"message": "Inicio"
+	},
+	"popupOptions": {
+		"message": "Opciones"
+	},
+	"options": {
+		"message": "Universal Bypass Opciones"
+	},
+	"save": {
+		"message": "Guardar"
+	},
+	"optionsUserscripts": {
+		"message": "Personalizar Bypasses"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "Sería bueno que pudieras enviarle a GitHub las bifurcaciones (fork) que funcionan, para que otros puedan beneficiarse de ello: "
+	},
+	"optionsUserscriptsName": {
+		"message": "Nombre. Con un nombre vacío, este bypass será borrado."
+	},
+	"optionsUserscriptsDomains": {
+		"message": "Dominios. Utilice * para que este bypass sea efectivo en todas partes."
+	},
+	"optionsUserscriptsDelete": {
+		"message": "Eliminar Bypass"
+	}
+}
