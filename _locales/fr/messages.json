@@ -1,7 +1,4 @@
 {
-	"appName": {
-		"message": "Universal Bypass"
-	},
 	"appDesc": {
 		"message": "Ne perdez pas votre temps avec la conformité. Le contournement universel saute automatiquement les raccourcisseurs de liens ennuyeux."
 	},
@@ -26,11 +23,14 @@
 	"popupOptions": {
 		"message": "Options"
 	},
-	"popupTwitter": {
-		"message": "Twitter"
-	},
 	"options": {
 		"message": "Options d\'Universal Bypass"
+	},
+	"save": {
+		"message": "Sauvegarder"
+	},
+	"optionsNotifications": {
+		"message": "Afficher notifications de statut sur les sites webs que Universal Bypass connaît."
 	},
 	"optionsUserscripts": {
 		"message": "Bypass sur mesure"
@@ -38,10 +38,21 @@
 	"optionsUserscriptsSubtitle": {
 		"message": "Ce serait bien si vous pouviez soumettre des dérivations de travail à GitHub, afin que d'autres puissent en bénéficier: "
 	},
-	"save": {
-		"message": "Enregistrer"
+	"optionsUserscriptsName": {
+		"message": "Nom. Avc un nom vide, ce contournement sera supprimé.Name."
+	},
+	"optionsUserscriptsDomains": {
+		"message": "Domaines. Utiliser * pour ce contournement pour qu\'il soit éffectif partout."
 	},
 	"optionsUserscriptsDelete": {
 		"message": "Supprimer Bypass"
-	}
+	},
+	"notificationTimerSkip": {
+		"message": "Universal Bypass zappe juste ce compteur pour vous."
+	},
+	"notificationTimerLeap": {
+		"message": "Universal Bypass supprime juste les %secs% seconde(s) fr votre compteur."
+	},
+	"notificationBackend": {
+		"message": "Universal Bypass ne peut pas contourner ce site parce qu\'ils ont une vérification côté serveur."
 }
