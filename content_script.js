@@ -231,6 +231,8 @@ if(d instanceof HTMLDocument)
 		})
 		if(!bp)
 			ad(()=>{
+				hb(/ouo\.(io|press)/,()=>ui(ms.b))
+				db("rom.io",()=>ui(ms.b))
 				db("adfoc.us",()=>{
 					let b=document.querySelector(".skip")
 					if(b&&b.href)
@@ -433,7 +435,6 @@ if(d instanceof HTMLDocument)
 						ui(ms.tS)
 					}
 				})
-				hb(/ouo\.(io|press)/,()=>ui(ms.b))
 				if(bp)
 					return
 				//GemPixel Premium URL Shortener
