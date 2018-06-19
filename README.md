@@ -6,12 +6,12 @@ Don't waste your time with compliance. Universal Bypass automatically skips anno
 
 ## Understanding the Content Script
 
-In an effort to save some bytes, I've given functions and variables some rather amgious names, so here's a list of them:
+In an effort to save some bytes, I've given functions and variables some rather ambiguous names, so here's a list of them:
 
-- `ms` is a list of messages for internalization.
-	- `ms.tS`: Timer Skip
-	- `ms.tL`: Timer Leap (Removed some seconds)
-	- `ms.b`: Unbypassable due to backend checks
+- `ms` is a list of messages for internalization:
+  - `ms.tS`: Timer Skip
+  - `ms.tL`: Timer Leap (Removed some seconds)
+  - `ms.b`: Unbypassable due to backend checks
 - `ODP` is `Object.defineProperty`
 - `ev` is `eval` (I copy eval because uBlockOrigin replaces it)
 - `sT` is `setTimeout`
