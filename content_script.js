@@ -423,7 +423,7 @@ if(d instanceof HTMLDocument)
 						{
 							clearInterval(jT)
 							$(document).ready(()=>sT(()=>{
-								window.open=(h)=>{return{location:{href:h}}}
+								window.open=(h)=>({location:{href:h}})
 								window.setTimeout=(f)=>f()
 								let bs=document.querySelectorAll("[data-main-url]")
 								for(let i in bs)
