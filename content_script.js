@@ -197,7 +197,7 @@ if(d instanceof HTMLDocument)
 			})
 		})
 		db("sourceforge.net",()=>{
-			var b=document.createElement("button"),d=false
+			var b=document.createElement("button"),d=!1
 			b.className="direct-download"
 			b.style.display="none"
 			document.documentElement.appendChild(b)
@@ -207,7 +207,7 @@ if(d instanceof HTMLDocument)
 					if(m=="triggering downloader:start")
 					{
 						ui(ms.tS)
-						d=true
+						d=!0
 					}
 				},
 				writable:!1
@@ -227,6 +227,29 @@ if(d instanceof HTMLDocument)
 			window.setInterval=(f)=>{
 				ui(ms.tL.replace("%secs%","1"))
 				return sI(f,800)
+			}
+		})
+		db("shortly.xyz",()=>{
+			if(location.pathname.substr(0,3)=="/r/")
+				document.getElementById=()=>({submit:()=>{
+					let f=document.querySelector("form")
+					f.action="/link#"+document.querySelector("input[name='id']").value
+					f.submit()
+				}})
+			else if(location.pathname=="/link")
+			{
+				let xhr=new XMLHttpRequest()
+				xhr.onreadystatechange=()=>{
+					if(xhr.readyState==4&&xhr.status==200)
+					{
+						ui(ms.tS)
+						n(xhr.responseText)
+					}
+				}
+				xhr.open("POST","https://www.shortly.xyz/getlink.php",!0)
+				xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded")
+				xhr.setRequestHeader("X-Requested-With","XMLHttpRequest")
+				xhr.send("id="+location.hash.replace("#",""))
 			}
 		})
 		if(!bp)
