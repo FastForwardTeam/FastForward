@@ -29,6 +29,9 @@
 	"save": {
 		"message": "Guardar"
 	},
+	"optionsNotifications": {
+		"message": "Mostrar notificaciones de estado en sitios web que Universal Bypass conoce."
+	},
 	"optionsUserscripts": {
 		"message": "Personalizar Bypasses"
 	},
@@ -43,5 +46,14 @@
 	},
 	"optionsUserscriptsDelete": {
 		"message": "Eliminar Bypass"
+	},
+	"notificationTimerSkip": {
+		"message": "Universal Bypass se ha saltado el temporizador."
+	},
+	"notificationTimerLeap": {
+		"message": "Bypass Universal ha quitado %secs% segundo(s) de ese temporizador."
+	},
+	"notificationBackend": {
+		"message": "Universal Bypass no puede pasar por alto este sitio porque tiene una verificación del lado del servidor."
 	}
 }
