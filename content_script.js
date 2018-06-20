@@ -556,6 +556,13 @@ if(d instanceof HTMLDocument)
 					document.querySelector(".seconds").textContent="0"
 					return
 				}
+				if(document.querySelector("#ddl #download_link .btn"))
+				{
+					ui(ms.tS)
+					window.open=n
+					document.querySelector("#ddl #download_link > .btn").click();
+					return
+				}
 				if(typeof file_download=="function")
 				{
 					window.setInterval=(f)=>{
