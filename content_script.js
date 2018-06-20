@@ -215,10 +215,7 @@ if(d instanceof HTMLDocument)
 			ad(()=>{
 				let bT=sI(()=>{
 					if(d)
-					{
 						clearInterval(bT)
-						location.href="about:blank"
-					}
 					else b.click()
 				},100)
 			})
@@ -322,25 +319,6 @@ if(d instanceof HTMLDocument)
 						ui(ms.tS)
 						SkipAd()
 					}
-				})
-				db("v1.94lauin.com",()=>{
-					jQuery.prototype._attr=jQuery.prototype.attr
-					jQuery.prototype.attr=function(a,v)
-					{
-						if(!v&&window.selector==".count-timer"&&a=="data-timer")
-						{
-							ui(ms.tS)
-							return 1
-						}
-						return window._attr(a,v)
-					}
-					let lT=sI(()=>{
-						if(document.querySelector(".link-content > a")&&document.querySelector(".link-content > a").getAttribute("href")!="#")
-						{
-							clearInterval(lT)
-							n(document.querySelector(".link-content > a").href)
-						}
-					},100)
 				})
 				db("losstor.com",()=>{
 					let b=document.getElementById("re_link")
@@ -458,6 +436,12 @@ if(d instanceof HTMLDocument)
 						ui(ms.tS)
 					}
 				})
+				//KuroSafe
+				hb(/(binerfile|pafpaf)\.info/,()=>{
+					ui(ms.tS)
+					n(document.getElementById("mybutton").href)
+					return
+				})
 				if(bp)
 					return
 				//GemPixel Premium URL Shortener
@@ -493,8 +477,14 @@ if(d instanceof HTMLDocument)
 								window.setInterval=(f)=>f()
 								ev(cont)
 								window.setInterval=sI
+								ui(ms.tS)
 								n(document.querySelector("a.redirect").href)
 								return
+							}
+							else if(cont.trim().substr(0,69)=='!function(a){a(document).ready(function(){var b,c=a(".link-content"),')
+							{
+								ui(ms.tS)
+								n(cont.trim().substr(104).split('",e=0,f=a(".count-timer"),g=f.attr("data-timer"),h=setInterval(')[0])
 							}
 						}
 					}
@@ -658,13 +648,6 @@ if(d instanceof HTMLDocument)
 				{
 					ui(ms.tS)
 					document.querySelector("button.btn.btn-success[type='submit']").click()
-					return
-				}
-				//KuroSafe
-				if(document.querySelector("a#mybutton.btn.btn-md.btn-primary[href^='https://www.kurosafe.online/']")||document.querySelector("a#mybutton.btn.btn-md.btn-primary[href^='https://kurosafe.online/']"))
-				{
-					ui(ms.tS)
-					n(document.getElementById("mybutton").href)
 					return
 				}
 				//SafeLinkReview.com
