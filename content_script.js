@@ -1,8 +1,10 @@
 let d=document
 if(d instanceof HTMLDocument)
 {
+	//Hello there, developer. This is the Universal Bypass code.
+	//This might help you understand it: https://github.com/hellshltd/Universal-Bypass/blob/master/README.md#understanding-the-content-script
 	let c=()=>{
-		let ms={},ODP=Object.defineProperty,ev=window.eval,sT=window.setTimeout,sI=window.setInterval,n=(t)=>{if(t&&t!=location.href){window.onbeforeunload=null;location.href=t}},
+		let ms={},ODP=Object.defineProperty,ev=window.eval,sT=window.setTimeout,sI=window.setInterval,n=(t)=>{if(t&&t!=location.href){debugger;window.onbeforeunload=null;location.href=t}},
 		bp=!1,db=(d,b)=>{if(!bp&&(location.hostname==d||location.hostname.substr(location.hostname.length-(d.length+1))=="."+d)){b();bp=!0}},hb=(h,b)=>{if(!bp&&h.test(location.href)){b();bp=!0}},
 		ad=(f)=>{if(["interactive","complete"].indexOf(document.readyState)>-1)f();else document.addEventListener("DOMContentLoaded",()=>sT(f,1))},
 		ui=(m)=>ad(()=>{
@@ -436,16 +438,17 @@ if(d instanceof HTMLDocument)
 						ui(ms.tS)
 					}
 				})
-				//KuroSafe
-				hb(/(binerfile|pafpaf)\.info/,()=>{
+				hb(/(binerfile|pafpaf)\.info/,()=>{//KuroSafe
 					ui(ms.tS)
 					n(document.getElementById("mybutton").href)
-					return
+				})
+				db("gotoo.loncat.in",()=>{
+					n(document.querySelector("a[href^='http://gotoo.loncat.in/go.php?open=']").href)
+					ui(ms.tS)
 				})
 				if(bp)
 					return
-				//GemPixel Premium URL Shortener
-				if(typeof appurl!="undefined"&&typeof token!="undefined")
+				if(typeof appurl!="undefined"&&typeof token!="undefined")//GemPixel Premium URL Shortener
 				{
 					let scripts=document.getElementsByTagName("script")
 					for(let i in scripts)
@@ -488,8 +491,7 @@ if(d instanceof HTMLDocument)
 							}
 						}
 					}
-					//Ally Captcha
-					if(document.getElementById("messa")&&document.getElementById("html_element"))
+					if(document.getElementById("messa")&&document.getElementById("html_element"))//Ally Captcha
 					{
 						document.getElementById("messa").className+=" hidden"
 						document.getElementById("html_element").className=document.getElementById("html_element").className.split("hidden").join("").trim()
@@ -509,6 +511,10 @@ if(d instanceof HTMLDocument)
 						window.open=n
 						ui(ms.tS)
 						changeLink()
+						if(document.getElementById("link-download"))//hightech.web.id
+						{
+							n(document.getElementById("link-download").href)
+						}
 						return
 					}
 					let cLT=sI(()=>{
@@ -538,16 +544,16 @@ if(d instanceof HTMLDocument)
 					return
 				}
 				//Other Templates
+				if(document.querySelector("a#btn-main.disabled")&&typeof Countdown=="function")//Croco,CPMLink
+				{
+					ui(ms.tS)
+					n(document.querySelector("a#btn-main.disabled").href)
+					return
+				}
 				if(document.querySelector("form#skip")&&document.getElementById("btn-main")&&!document.querySelector(".g-recaptcha"))
 				{
 					ui(ms.tS)
 					document.querySelector("form#skip").submit()
-					return
-				}
-				if(document.querySelector("a#btn-main")&&typeof Countdown=="function")
-				{
-					ui(ms.tS)
-					n(document.querySelector("a#btn-main").href)
 					return
 				}
 				if(document.getElementById("countdown")&&document.querySelector(".seconds"))
@@ -560,7 +566,7 @@ if(d instanceof HTMLDocument)
 				{
 					ui(ms.tS)
 					window.open=n
-					document.querySelector("#ddl #download_link > .btn").click();
+					document.querySelector("#ddl #download_link > .btn").click()
 					return
 				}
 				if(typeof file_download=="function")
@@ -587,8 +593,7 @@ if(d instanceof HTMLDocument)
 					form.submit()
 					return
 				}
-				//Shorte.st
-				if(typeof app!="undefined"&&"options"in app&&"intermediate"in app.options)
+				if(typeof app!="undefined"&&"options"in app&&"intermediate"in app.options)//Shorte.st
 				{
 					app.options.intermediate.timeToWait=3
 					ui(ms.tL.replace("%secs%","2"))
@@ -602,8 +607,7 @@ if(d instanceof HTMLDocument)
 					},100)
 					return
 				}
-				//GetsURL.com
-				if(document.querySelector(".img-responsive[alt='Gets URL']")&&typeof x!="undefined")
+				if(document.querySelector(".img-responsive[alt='Gets URL']")&&typeof x!="undefined")//GetsURL.com
 				{
 					let b=document.getElementById("link")
 					if(b)
@@ -613,8 +617,7 @@ if(d instanceof HTMLDocument)
 						return
 					}
 				}
-				//Linkvertise.net
-				if(document.querySelector(".logo > a[href='http://linkvertise.net'] > img[src='/assets/img/linkvertise.png']"))
+				if(document.querySelector(".logo > a[href='http://linkvertise.net'] > img[src='/assets/img/linkvertise.png']"))//Linkvertise.net
 				{
 					let b=document.querySelector("[data-download]")
 					if(b)
@@ -624,8 +627,7 @@ if(d instanceof HTMLDocument)
 						return
 					}
 				}
-				//OpenLoad
-				if(document.querySelectorAll("img[src='/assets/img/logo.png'][alt='Openload']").length)
+				if(document.querySelectorAll("img[src='/assets/img/logo.png'][alt='Openload']").length)//OpenLoad
 				{
 					if(typeof secondsdl!=="undefined")
 					{
@@ -634,8 +636,7 @@ if(d instanceof HTMLDocument)
 					}
 					return
 				}
-				//SafelinkU
-				if(document.querySelector("b[style='color: #3e66b3']")&&document.querySelector("b[style='color: #3e66b3']").textContent=="SafelinkU")
+				if(document.querySelector("b[style='color: #3e66b3']")&&document.querySelector("b[style='color: #3e66b3']").textContent=="SafelinkU")//SafelinkU
 				{
 					window.setInterval=(f)=>{
 						ui(ms.tS)
@@ -675,8 +676,7 @@ if(d instanceof HTMLDocument)
 				let t=document.querySelector("title")
 				if(t)
 				{
-					//Viid.su
-					if(t.textContent.trim()=="Viid.su")
+					if(t.textContent.trim()=="Viid.su")//Viid.su
 					{
 						let b=document.getElementById("link-success-button")
 						if(b&&b.getAttribute("data-url"))
@@ -688,8 +688,7 @@ if(d instanceof HTMLDocument)
 					}
 				}
 				sI(()=>{
-					//Shorte.st Embed
-					if(document.querySelectorAll(".lay-sh.active-sh").length)
+					if(document.querySelectorAll(".lay-sh.active-sh").length)//Shorte.st Embed
 					{
 						let elm=document.querySelectorAll(".lay-sh.active-sh")[0]
 						elm.parentNode.removeChild(elm)
