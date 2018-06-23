@@ -251,7 +251,7 @@ if(d instanceof HTMLDocument)
 				xhr.send("id="+location.hash.replace("#",""))
 			}
 		})
-		if(!bp)
+		if(!bp)//1bp
 			ad(()=>{
 				hb(/ouo\.(io|press)/,()=>ui(ms.b))
 				db("rom.io",()=>ui(ms.b))
@@ -446,7 +446,19 @@ if(d instanceof HTMLDocument)
 					n(document.querySelector("a[href^='http://gotoo.loncat.in/go.php?open=']").href)
 					ui(ms.tS)
 				})
-				if(bp)
+				db("id-share19.com",()=>{
+					let not=!1
+					this.setTimeout=(f)=>{
+						if(!not)
+						{
+							ui(ms.tS)
+							not=!0
+						}
+						return sT(f,1)
+					}
+					return
+				})
+				if(bp)//2bp
 					return
 				if(typeof appurl!="undefined"&&typeof token!="undefined")//GemPixel Premium URL Shortener
 				{
@@ -500,30 +512,28 @@ if(d instanceof HTMLDocument)
 				//Soralink Plugin
 				if(document.querySelector(".sorasubmit"))
 				{
+					ui(ms.tS)
 					document.querySelector(".sorasubmit").click()
 					return
 				}
-				let rCL=()=>((document.querySelectorAll("img#pleasewait").length&&document.querySelector(".wait"))||document.getElementById("showlink")||document.getElementById("download")||document.getElementsByTagName("style='margin-top:").length)
-				if(typeof changeLink=="function")
+				if(typeof changeLink=="function"
+					|| typeof bukalink=="function"//gosavelink.com
+					)
 				{
-					if(rCL())
-					{
-						window.open=n
-						ui(ms.tS)
-						changeLink()
-						if(document.getElementById("link-download"))//hightech.web.id
-						{
-							n(document.getElementById("link-download").href)
-						}
-						return
-					}
 					let cLT=sI(()=>{
-						if(rCL())
+						if((document.querySelectorAll("img#pleasewait").length&&document.querySelector(".wait"))||document.getElementById("showlink")||document.getElementById("download")||document.getElementsByTagName("style='margin-top:").length)
 						{
 							clearInterval(cLT)
 							window.open=n
 							ui(ms.tS)
-							changeLink()
+							if(typeof changeLink=="function")
+								changeLink()
+							else if(typeof bukalink=="function")
+								bukalink()
+							if(document.getElementById("link-download"))//hightech.web.id
+							{
+								n(document.getElementById("link-download").href)
+							}
 						}
 					},100)
 				}
