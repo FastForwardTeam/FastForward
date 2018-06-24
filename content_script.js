@@ -4,7 +4,7 @@ if(d instanceof HTMLDocument)
 	//Hello there, developer. This is the Universal Bypass code.
 	//This might help you understand it: https://github.com/hellshltd/Universal-Bypass/blob/master/README.md#understanding-the-content-script
 	let c=()=>{
-		let ms={},ODP=Object.defineProperty,ev=window.eval,sT=window.setTimeout,sI=window.setInterval,n=(t)=>{if(t&&t!=location.href){debugger;window.onbeforeunload=null;location.href=t}},
+		let ms={},ODP=Object.defineProperty,ev=window.eval,sT=window.setTimeout,sI=window.setInterval,nd=!1,n=(t)=>{if(!nd&&t&&t!=location.href){nd=!0;debugger;window.onbeforeunload=null;location.href=t}},
 		bp=!1,db=(d,b)=>{if(!bp&&(location.hostname==d||location.hostname.substr(location.hostname.length-(d.length+1))=="."+d)){b();bp=!0}},hb=(h,b)=>{if(!bp&&h.test(location.href)){b();bp=!0}},
 		ad=(f)=>{if(["interactive","complete"].indexOf(document.readyState)>-1)f();else document.addEventListener("DOMContentLoaded",()=>sT(f,1))},
 		ui=(m)=>ad(()=>{
@@ -517,11 +517,16 @@ if(d instanceof HTMLDocument)
 					return
 				}
 				if(typeof changeLink=="function"
-					|| typeof bukalink=="function"//gosavelink.com
+					||typeof bukalink=="function"//gosavelink.com
 					)
 				{
 					let cLT=sI(()=>{
-						if((document.querySelectorAll("img#pleasewait").length&&document.querySelector(".wait"))||document.getElementById("showlink")||document.getElementById("download")||document.getElementsByTagName("style='margin-top:").length)
+						if((document.querySelectorAll("img#pleasewait").length&&document.querySelector(".wait"))
+							||document.getElementById("showlink")
+							||document.getElementById("download")
+							||document.querySelector(".Visit_Link")//yametesenpai.xyz
+							||document.getElementsByTagName("style='margin-top:").length
+							)
 						{
 							clearInterval(cLT)
 							window.open=n

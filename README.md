@@ -16,6 +16,7 @@ In an effort to save some bytes, I've given functions and variables some rather 
 - `ev` is `eval` (I copy eval because uBlockOrigin replaces it)
 - `sT` is `setTimeout`
 - `sI` is `setInterval`
+- `nd` is set to true when `n` has been called so only the first call counts
 - `n(target)` tries to redirect to the target URL savely
 - `bp` is set to true when a bypass has been found and executed so the content script can end gracefully
 - `db(domain, bypass_function)` executes the bypass function if the user is on the domain itself or on a subdomain of it
