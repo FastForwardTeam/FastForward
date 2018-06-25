@@ -458,6 +458,14 @@ if(d instanceof HTMLDocument)
 					}
 					return
 				})
+				db("idnation.net",()=>{
+					let b=document.getElementById("linko")
+					if(b&&b.href)
+					{
+						ui(ms.tS)
+						n(b.href)
+					}
+				})
 				if(bp)//2bp
 					return
 				if(typeof appurl!="undefined"&&typeof token!="undefined")//GemPixel Premium URL Shortener
