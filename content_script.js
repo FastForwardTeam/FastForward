@@ -19,10 +19,11 @@ if(d instanceof HTMLDocument)
 			},5000)
 		})
 		//AdLinkFly
-		let actual_app_vars
+		let actual_app_vars,isALF=!1
 		ODP(this,"app_vars",{
 			set:(v)=>{
 				actual_app_vars=v
+				isALF=!0
 				ui(ms.b)
 			},
 			get:()=>actual_app_vars
@@ -659,27 +660,31 @@ if(d instanceof HTMLDocument)
 					}
 					return
 				}
-				if(document.querySelector("b[style='color: #3e66b3']")&&document.querySelector("b[style='color: #3e66b3']").textContent=="SafelinkU")//SafelinkU
+				//SafelinkU
+				if(!isALF)
 				{
-					window.setInterval=(f)=>{
-						ui(ms.tS)
-						return sI(f,10)
-					}
-					let lT=sI(()=>{
-						if(document.querySelector("a.btn.btn-primary.btn-lg.get-link[href]")&&document.querySelector("a.btn.btn-primary.btn-lg.get-link[href]").getAttribute("href").substr(0,11)!="javascript:")
-						{
-							clearInterval(lT)
+					if(document.querySelector("b[style='color: #3e66b3']")&&document.querySelector("b[style='color: #3e66b3']").textContent=="SafelinkU")
+					{
+						window.setInterval=(f)=>{
 							ui(ms.tS)
-							n(document.querySelector("a.btn.btn-primary.btn-lg.get-link[href]").href)
+							return sI(f,10)
 						}
-					},100)
-					return
-				}
-				else if(document.querySelector("b[style='color : #3e66b3']")&&document.querySelector("b[style='color: #3e66b3']").textContent=="Shortener url?")
-				{
-					ui(ms.tS)
-					document.querySelector("button.btn.btn-success[type='submit']").click()
-					return
+						let lT=sI(()=>{
+							if(document.querySelector("a.btn.btn-primary.btn-lg.get-link[href]")&&document.querySelector("a.btn.btn-primary.btn-lg.get-link[href]").getAttribute("href").substr(0,11)!="javascript:")
+							{
+								clearInterval(lT)
+								ui(ms.tS)
+								n(document.querySelector("a.btn.btn-primary.btn-lg.get-link[href]").href)
+							}
+						},100)
+						return
+					}
+					else if(document.querySelector("b[style='color : #3e66b3']")&&document.querySelector("b[style='color: #3e66b3']").textContent=="Shortener url?")
+					{
+						ui(ms.tS)
+						document.querySelector("button.btn.btn-success[type='submit']").click()
+						return
+					}
 				}
 				//SafeLinkReview.com
 				if(document.querySelector(".navbar-brand")&&document.querySelector(".navbar-brand").textContent.trim()=="Safe Link Review"&&document.querySelector(".button.green"))

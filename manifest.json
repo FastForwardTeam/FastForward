@@ -9,7 +9,7 @@
 	"name": "Universal Bypass",
 	"description": "__MSG_appDesc__",
 	"homepage_url": "https://universal-bypass.org/",
-	"version": "4.5",
+	"version": "4.5.1",
 	"author": "timmyRS",
 	"minimum_chrome_version": "41",
 	"options_ui": {
