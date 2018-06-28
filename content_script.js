@@ -181,7 +181,7 @@ if(d instanceof HTMLDocument)
 				}
 			})
 		})
-		db("sfile.mobi",()=>{
+		hb(/sfile\.(mobi|xyz)/,()=>{
 			ODP(this,"downloadButton",{
 				set:function(b)
 				{
