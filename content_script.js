@@ -1,8 +1,10 @@
 let d=document
 if(d instanceof HTMLDocument)
 {
-	//Hello there, developer. This is the Universal Bypass code.
-	//This might help you understand it: https://github.com/hellshltd/Universal-Bypass/blob/master/README.md#understanding-the-content-script
+	//Dear Addon Reviewer,
+	//I *need* to copy eval to prevent uBlock Origin breaking anything and I *need* to execute functions as text for this addon to work.
+	//The code is readable, I'm just a human minifying it to keep it smaller.
+	//This can help you understand the code: https://github.com/hellshltd/Universal-Bypass/blob/master/README.md#understanding-the-content-script
 	let c=()=>{
 		let ms={},ODP=Object.defineProperty,ev=window.eval,sT=window.setTimeout,sI=window.setInterval,nd=!1,n=(t)=>{if(!nd&&t&&t!=location.href){nd=!0;debugger;window.onbeforeunload=null;location.href=t}},
 		bp=!1,db=(d,b)=>{if(!bp&&(location.hostname==d||location.hostname.substr(location.hostname.length-(d.length+1))=="."+d)){b();bp=!0}},hb=(h,b)=>{if(!bp&&h.test(location.href)){b();bp=!0}},
