@@ -1,10 +1,8 @@
 let d=document
 if(d instanceof HTMLDocument)
 {
-	//Dear Addon Reviewer,
-	//I *need* to copy eval to prevent uBlock Origin breaking anything and I *need* to execute functions as text for this addon to work.
-	//The code is readable, I'm just a human minifying it to keep it smaller.
-	//This can help you understand the code: https://github.com/hellshltd/Universal-Bypass/blob/master/README.md#understanding-the-content-script
+	//Please note that this code has been humanly minified in order to save bytes and I have to copy & use eval the way I do it for this to work.
+	//For help with understanding the code please check out https://github.com/hellshltd/Universal-Bypass/blob/master/README.md#understanding-the-content-script
 	let c=()=>{
 		let ms={},ODP=Object.defineProperty,ev=window.eval,sT=window.setTimeout,sI=window.setInterval,nd=!1,n=(t)=>{if(!nd&&t&&t!=location.href){nd=!0;debugger;window.onbeforeunload=null;location.href=t}},
 		bp=!1,db=(d,b)=>{if(!bp&&(location.hostname==d||location.hostname.substr(location.hostname.length-(d.length+1))=="."+d)){b();bp=!0}},hb=(h,b)=>{if(!bp&&h.test(location.href)){b();bp=!0}},
@@ -20,16 +18,36 @@ if(d instanceof HTMLDocument)
 				document.body.removeChild(d)
 			},5000)
 		})
-		//AdLinkFly
 		let actual_app_vars
 		ODP(this,"app_vars",{
 			set:(v)=>{
 				actual_app_vars=v
-				ui(ms.b)
 				ODP(this,"blurred",{
 					value:!1,
 					writable:!1
 				})
+				//SafelinkU
+				if(document.querySelector("b[style='color: #3e66b3']")&&document.querySelector("b[style='color: #3e66b3']").textContent=="SafelinkU")
+				{
+					bp=!0
+					window.setInterval=(f)=>{
+						ui(ms.tS)
+						return sI(f,10)
+					}
+					let lT=sI(()=>{
+						if(document.querySelector("a.btn.btn-primary.btn-lg.get-link[href]")&&document.querySelector("a.btn.btn-primary.btn-lg.get-link[href]").getAttribute("href").substr(0,11)!="javascript:")
+						{
+							clearInterval(lT)
+							ui(ms.tS)
+							n(document.querySelector("a.btn.btn-primary.btn-lg.get-link[href]").href)
+						}
+					},100)
+				}
+				else if(!document.querySelector("b[style='color : #3e66b3']")||document.querySelector("b[style='color: #3e66b3']").textContent!="Shortener url?")
+				{
+					//AdLinkFly
+					ui(ms.b)
+				}
 			},
 			get:()=>actual_app_vars
 		})
@@ -91,7 +109,7 @@ if(d instanceof HTMLDocument)
 				value:forced_safelink[key]
 			})
 		}
-		//YetiShare Template
+		//YetiShare
 		let actual_web_root
 		ODP(this,"WEB_ROOT",{
 			set:(v)=>{
