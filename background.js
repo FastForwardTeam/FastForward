@@ -5,7 +5,8 @@ chrome.runtime.onInstalled.addListener((details)=>{
 chrome.runtime.setUninstallURL("https://goo.gl/forms/H8FswYQ2a37LSxc13")
 
 chrome.webRequest.onBeforeRequest.addListener((details)=>{
-	if(details.type!="main_frame")return
+	if(details.type!="main_frame")
+		return
 	let destination
 	if(/goo\.gl\/.+/.test(details.url))
 	{

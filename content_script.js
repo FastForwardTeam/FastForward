@@ -634,8 +634,15 @@ if(document instanceof HTMLDocument)
 				}
 				if(document.getElementById("countdown")&&document.querySelector(".seconds"))
 				{
-					showNotification(msgs.timerSkip)
-					document.querySelector(".seconds").textContent="0"
+					if(document.querySelector(".err")&&document.querySelector(".err").textContent=="Skipped countdown")//Mexashare.com
+					{
+						showNotification(msgs.backend)
+					}
+					else
+					{
+						showNotification(msgs.timerSkip)
+						document.querySelector(".seconds").textContent="0"
+					}
 					return
 				}
 				if(document.querySelector("#ddl #download_link .btn"))
