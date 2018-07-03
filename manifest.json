@@ -9,7 +9,7 @@
 	"name": "Universal Bypass",
 	"description": "__MSG_appDesc__",
 	"homepage_url": "https://universal-bypass.org/",
-	"version": "4.6.1",
+	"version": "5.0",
 	"author": "timmyRS",
 	"minimum_chrome_version": "41",
 	"options_ui": {
@@ -17,7 +17,11 @@
 		"open_in_tab": true
 	},
 	"permissions": [
-		"storage"
+		"storage",
+		"webRequest",
+		"webRequestBlocking",
+		"*://goo.gl/*",
+		"*://bit.ly/*"
 	],
 	"browser_action": {
 		"default_icon": {
@@ -29,7 +33,7 @@
 	},
 	"background": {
 		"scripts": ["background.js"],
-		"persistent": false
+		"persistent": true
 	},
 	"content_scripts": [
 		{
