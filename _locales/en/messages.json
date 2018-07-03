@@ -32,6 +32,12 @@
 	"optionsNotifications": {
 		"message": "Show status notifications on websites Universal Bypass knows."
 	},
+	"optionsTrackerBypass": {
+		"message": "Bypass trackers using api.hell.sh."
+	},
+	"privacyPolicy": {
+		"message": "Privacy Policy"
+	},
 	"optionsUserscripts": {
 		"message": "Custom Bypasses"
 	},

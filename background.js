@@ -4,45 +4,177 @@ chrome.runtime.onInstalled.addListener((details)=>{
 })
 chrome.runtime.setUninstallURL("https://goo.gl/forms/H8FswYQ2a37LSxc13")
 
+var trackerBypassEnabled=true,customBypasses={};
+chrome.storage.sync.get(["no_tracker_bypass"],(result)=>{
+	if(result&&result.no_tracker_bypass&&result.no_tracker_bypass==="true")
+	{
+		trackerBypassEnabled=false
+	}
+})
+chrome.storage.local.get(["custom_bypasses"],(result)=>
+{
+	if(result&&result.custom_bypasses)
+	{
+		customBypasses=JSON.parse(result.custom_bypasses)
+	}
+})
+chrome.storage.onChanged.addListener((changes)=>{
+	if(changes.custom_bypasses)
+	{
+		customBypasses=JSON.parse(changes.custom_bypasses.newValue)
+	}
+	if(changes.no_tracker_bypass)
+	{
+		trackerBypassEnabled=(changes.no_tracker_bypass.newValue!=="true");
+	}
+})
+
 chrome.webRequest.onBeforeRequest.addListener((details)=>{
-	if(details.type!="main_frame")
+	if(!trackerBypassEnabled||details.method!="GET"||details.type!="main_frame")
 		return
 	let destination
-	if(/goo\.gl\/.+/.test(details.url))
-	{
-		let xhr=new XMLHttpRequest()
-		xhr.onreadystatechange=()=>{
-			if(xhr.readyState==4&&xhr.status==200)
-			{
-				let json=JSON.parse(xhr.responseText)
-				if(json&&json.longUrl)
-					destination=json.longUrl
-			}
+	if(new URL(details.url).pathname=="/")
+		return
+	let xhr=new XMLHttpRequest()
+	xhr.onreadystatechange=()=>{
+		if(xhr.readyState==4&&xhr.status==200)
+		{
+			let json=JSON.parse(xhr.responseText)
+			if(json&&json.destination)
+				destination=json.destination
 		}
-		xhr.open("GET","https://www.googleapis.com/urlshortener/v1/url?shortUrl="+details.url+"&key=AIzaSyCw_sp3-x3gMjrYYJL7x_leh0QSQ0WYjng",false)
-		xhr.send()
 	}
-	else if(/bit\.ly\/.+/.test(details.url))
-	{
-		let xhr=new XMLHttpRequest()
-		xhr.onreadystatechange=()=>{
-			if(xhr.readyState==4&&xhr.status==200)
-			{
-				let json=JSON.parse(xhr.responseText)
-				if(json&&json.long_url)
-					destination=json.long_url
-			}
-		}
-		xhr.open("POST","https://api-ssl.bitly.com/v4/expand",false)
-		//I just created a Bitly account for Universal Bypass. I hope this will work well.
-		xhr.setRequestHeader("Authorization","Bearer e5a30234524046fcffc4ddc741836bd8b9bbdaf9")
-		xhr.setRequestHeader("Content-Type","application/json")
-		xhr.send(JSON.stringify({"bitlink_id":details.url.split("://")[1]}))
-	}
+	xhr.open("GET","https://api.hell.sh/redirect/"+encodeURIComponent(details.url),false)
+	xhr.send()
 	if(destination)
 	{
-		console.log(details.url+" -> "+destination)
-		return{redirectUrl:destination}
+		if(destination!=details.url)
+			return{redirectUrl:destination}
 	}
-	else console.error("Failed to get destination for "+details.url)
-},{urls:["*://goo.gl/*","*://bit.ly/*"]},["blocking"])
+	else if(!/bit\.ly|goo\.gl/.test(new URL(details.url).hostname))//Denying connections to IP loggers if we couldn't expand URL
+		return{cancel:true}
+},{urls:getTrackerPatterns()},["blocking"])
+
+function getTrackerPatterns()
+{
+	let trackerPatterns=[
+	"*://*.bit.ly/*",
+	"*://*.goo.gl/*"
+	],
+	//https://github.com/timmyrs/Evil-Domains/blob/master/lists/IP%20Loggers.txt
+	ipLoggers=`viral.over-blog.com
+	gyazo.in
+	ps3cfw.com
+	urlz.fr
+	webpanel.space
+	steamcommumity.com
+	i.imgur.com.de
+	www.fuglekos.com
+
+	# Grabify
+
+	grabify.link
+	bmwforum.co
+	leancoding.co
+	quickmessage.io
+	spottyfly.com
+	spötify.com
+	stopify.co
+	yoütu.be
+	yoütübe.co
+	yoütübe.com
+	xda-developers.io
+	starbucksiswrong.com
+	starbucksisbadforyou.com
+	bucks.as
+	discörd.com
+	minecräft.com
+	cyberh1.xyz
+	discördapp.com
+	freegiftcards.co
+	disçordapp.com
+	rëddït.com
+
+	# SkypeGrab
+
+	skypegrab.net
+	sĸype.com
+	en.sĸype.com
+	web.sĸype.com
+	www.sĸype.com
+	csgopot.zone
+	hackfȯrums.net
+	hackfȯrums.com
+	imgúr.com
+	battlė.net
+	us.battlė.net
+	eu.battlė.net
+	r1p.pw
+	webprofile.me
+	anonymousforum.pw
+	freeanonymous.host
+	ts3free.top
+	viphackforum.xyz
+	bbcnews.today
+	privatexmpp.me
+	topstreaming.us
+	topcdn.biz
+	hackernews.online
+	ampnode.host
+	spoofing.host
+	cubeupload.xyz
+	exploit-db.xyz
+	gyazoo.xyz
+	ipddoser.xyz
+	skypecracker.xyz
+	postimage.co
+
+	# Yip
+
+	yip.su
+	iplogger.com
+	iplogger.org
+	iplogger.ru
+	2no.co
+	02ip.ru
+	iplis.ru
+	iplo.ru
+	ezstat.ru
+
+	# What's their IP
+
+	www.whatstheirip.com
+	www.hondachat.com
+	www.bvog.com
+	www.youramonkey.com
+
+	# Pronosparadise
+
+	pronosparadise.com
+	freebooter.pro
+
+	# Blasze
+
+	blasze.com
+	blasze.tk
+
+	# IPGrab
+
+	ipgrab.org
+	i.gyazos.com`,
+	lines=ipLoggers.split("\n")
+	for(let i in lines)
+	{
+		let line=lines[i].trim();
+		if(line&&line.substr(0,1)!="#")
+		{
+			if(line.substr(0,4)=="www.")
+				line=line.substr(4)
+			else if(line.substr(0,1)=="i.")
+				line=line.substr(1)
+			if(trackerPatterns.indexOf(line)==-1)
+				trackerPatterns.push("*://*."+line+"/*")
+		}
+	}
+	return trackerPatterns
+}

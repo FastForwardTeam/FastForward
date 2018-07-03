@@ -29,7 +29,7 @@ chrome.storage.local.get(["custom_bypasses"],(result)=>{
 				{
 					customBypasses[editingBypass="Untitled Bypass"]={
 						domains:"example.com,example.org",
-						content:'let b=document.getElementById("button")\nif(b&&b.href)\n    location.href=b.href'
+						content:'let b=document.getElementById("button")\nif(b&&b.href)\n\tlocation.href=b.href\n'
 					}
 				}
 				else
@@ -79,11 +79,16 @@ chrome.storage.local.get(["custom_bypasses"],(result)=>{
 		saveCustomBypass()
 	}
 })
-chrome.storage.sync.get(["no_notifications"],(result)=>{
-	let notificationsCheckbox=document.getElementById("option-notifications")
-	if(!result||!result.no_notifications||result.no_notifications!=="true")
+chrome.storage.sync.get(["no_notifications","no_tracker_bypass"],(result)=>{
+	let notificationsCheckbox=document.getElementById("option-notifications"),
+	trackerBypassCheckbox=document.getElementById("option-tracker-bypass")
+	if(!result.no_notifications||result.no_notifications!=="true")
 	{
 		notificationsCheckbox.setAttribute("checked","checked")
+	}
+	if(!result.no_tracker_bypass||result.no_tracker_bypass!=="true")
+	{
+		trackerBypassCheckbox.setAttribute("checked","checked")
 	}
 	notificationsCheckbox.onchange=()=>{
 		notificationsCheckbox.setAttribute("disabled","disabled")
@@ -91,6 +96,14 @@ chrome.storage.sync.get(["no_notifications"],(result)=>{
 			no_notifications:(!notificationsCheckbox.checked).toString()
 		},()=>{
 			notificationsCheckbox.removeAttribute("disabled")
+		})
+	}
+	trackerBypassCheckbox.onchange=()=>{
+		trackerBypassCheckbox.setAttribute("disabled","disabled")
+		chrome.storage.sync.set({
+			no_tracker_bypass:(!trackerBypassCheckbox.checked).toString()
+		},()=>{
+			trackerBypassCheckbox.removeAttribute("disabled")
 		})
 	}
 })

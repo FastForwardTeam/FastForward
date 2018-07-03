@@ -9,7 +9,7 @@
 	"name": "Universal Bypass",
 	"description": "__MSG_appDesc__",
 	"homepage_url": "https://universal-bypass.org/",
-	"version": "5.0.1",
+	"version": "5.1",
 	"author": "timmyRS",
 	"minimum_chrome_version": "41",
 	"options_ui": {
@@ -20,8 +20,7 @@
 		"storage",
 		"webRequest",
 		"webRequestBlocking",
-		"*://goo.gl/*",
-		"*://bit.ly/*"
+		"<all_urls>"
 	],
 	"browser_action": {
 		"default_icon": {
