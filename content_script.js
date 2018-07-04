@@ -518,6 +518,14 @@ if(document instanceof HTMLDocument)
 						safelyNavigate(b.href)
 					}
 				})
+				domainBypass("mazika2day.com",()=>{
+					let b=document.querySelector(".linkbtn")
+					if(b&&b.href)
+					{
+						showNotification(msgs.timerSkip)
+						safelyNavigate(b.href)
+					}
+				})
 				if(bypassed)
 					return
 				if(typeof appurl!="undefined"&&typeof token!="undefined")//GemPixel Premium URL Shortener
@@ -625,6 +633,17 @@ if(document instanceof HTMLDocument)
 					showNotification(msgs.timerSkip)
 					safelyNavigate(document.querySelector("a#btn-main.disabled").href)
 					return
+				}
+				if(document.querySelector("a.redirectBTN.disabled")&&document.querySelector(".timer"))//Arablionz.online
+				{
+					showNotification(msgs.timerSkip)
+					safelyNavigate(document.querySelector("a.redirectBTN.disabled").href)
+					return
+				}
+				if(document.querySelector(".shortened_link a[href][ng-href][target='_blank']"))//Go2to.com,Go2too.com,Golink.to
+				{
+					showNotification(msgs.timerSkip)
+					safelyNavigate(document.querySelector(".shortened_link a[href][ng-href][target='_blank']").href)
 				}
 				if(document.querySelector("form#skip")&&document.getElementById("btn-main")&&!document.querySelector(".g-recaptcha"))
 				{
