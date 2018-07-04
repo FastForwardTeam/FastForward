@@ -32,6 +32,12 @@
 	"optionsNotifications": {
 		"message": "Toon statusmeldingen op websites die Universal Bypass kent."
 	},
+	"optionsTrackerBypass": {
+		"message": "Omziel trackers met api.hell.sh."
+	},
+	"privacyPolicy": {
+		"message": "Privacy Verklaring"
+	},
 	"optionsUserscripts": {
 		"message": "Aangepaste bypasses"
 	},
