@@ -51,15 +51,14 @@ chrome.webRequest.onBeforeRequest.addListener((details)=>{
 		if(destination!=details.url)
 			return{redirectUrl:destination}
 	}
-	else if(!/bit\.ly|goo\.gl/.test(new URL(details.url).hostname))//Denying connections to IP loggers if we couldn't expand URL
-		return{cancel:true}
 },{urls:getTrackerPatterns()},["blocking"])
 
 function getTrackerPatterns()
 {
 	let trackerPatterns=[
 	"*://*.bit.ly/*",
-	"*://*.goo.gl/*"
+	"*://*.goo.gl/*",
+	"*://*.page.link/*"
 	],
 	//https://github.com/timmyrs/Evil-Domains/blob/master/lists/IP%20Loggers.txt
 	ipLoggers=`viral.over-blog.com
