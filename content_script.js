@@ -628,7 +628,7 @@ if(document instanceof HTMLDocument)
 					return
 				}
 				//Other Templates
-				if(document.querySelector("a#btn-main.disabled")&&typeof Countdown=="function")//Croco,CPMLink
+				if(document.querySelector("a#btn-main.disabled")&&typeof Countdown=="function")//Croco,CPMLink,Sloomp.space
 				{
 					showNotification(msgs.timerSkip)
 					safelyNavigate(document.querySelector("a#btn-main.disabled").href)
