@@ -7,6 +7,7 @@ if(document instanceof HTMLDocument)
 		safelyNavigate=(target)=>{
 			if(!navigated&&target&&target!=location.href)
 			{
+				bypassed=true
 				navigated=true
 				debugger//Don't want to navigate away just yet when dev tools are open
 				window.onbeforeunload=null
@@ -68,12 +69,35 @@ if(document instanceof HTMLDocument)
 							safelyNavigate(document.querySelector("a.btn.btn-primary.btn-lg.get-link[href]").href)
 						}
 					},100)
+					return
 				}
-				else if(!document.querySelector("b[style='color : #3e66b3']")||document.querySelector("b[style='color: #3e66b3']").textContent!="Shortener url?")
+				if(document.querySelector("b[style='color : #3e66b3']")&&document.querySelector("b[style='color: #3e66b3']").textContent=="Shortener url?")
 				{
-					//AdLinkFly
-					showNotification(msgs.backend)
+					return
 				}
+				//AdLinkFly
+				let xhr=new XMLHttpRequest()
+				xhr.onreadystatechange=()=>{
+					if(xhr.readyState==4)
+					{
+						if(xhr.status==200)
+						{
+							let match=/<img src="\/\/api\.miniature\.io\/[a-zA-Z0-9?=&%."]+\n?.+>/.exec(xhr.responseText)
+							if(match)
+							{
+								let url=new URL(new DOMParser().parseFromString("<!DOCTYPE html><html><body>"+match[0].split("\r").join("").split("\n").join(" ")+"</body></html>","text/html").querySelector("img").src)
+								console.log(url)
+								if(url.search&&url.search.indexOf("url="))
+								{
+									showNotification(msgs.timerSkip)
+									safelyNavigate(decodeURIComponent(url.search.split("url=")[1].split("&")[0]))
+								}
+							}
+						}
+					}
+				}
+				xhr.open("GET",(location.pathname+"/info").replace("//","/"),true)
+				xhr.send()
 			},
 			get:()=>actual_app_vars
 		})
