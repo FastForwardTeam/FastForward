@@ -10,6 +10,8 @@ if(document instanceof HTMLDocument)
 				bypassed=true
 				navigated=true
 				debugger//Don't want to navigate away just yet when dev tools are open
+				if(!new URL(target).hash)
+					target+=location.hash
 				window.onbeforeunload=null
 				location.href=target
 			}
@@ -552,7 +554,14 @@ if(document instanceof HTMLDocument)
 				})
 				if(bypassed)
 					return
-				if(typeof appurl!="undefined"&&typeof token!="undefined")//GemPixel Premium URL Shortener
+				//Adf.ly Pre-Redirect Nonsense
+				if(location.pathname.substr(0,13)=="/redirecting/"&&document.querySelector("p[style]").textContent=="For your safety, never enter your password unless you're on the real Adf.ly site."&&document.querySelector("a"))
+				{
+					safelyNavigate(document.querySelector("a").href)
+					return
+				}
+				//GemPixel Premium URL Shortener
+				if(typeof appurl!="undefined"&&typeof token!="undefined")
 				{
 					//For this bypass to work, we detect a certain inline script and we might have to modify and execute (eval) it. Please note that eval is needed for this to work.
 					let scripts=document.getElementsByTagName("script")
@@ -593,6 +602,7 @@ if(document instanceof HTMLDocument)
 							{
 								showNotification(msgs.timerSkip)
 								safelyNavigate(cont.trim().substr(104).split('",e=0,f=a(".count-timer"),g=f.attr("data-timer"),h=setInterval(')[0])
+								return
 							}
 						}
 					}
@@ -600,6 +610,7 @@ if(document instanceof HTMLDocument)
 					{
 						document.getElementById("messa").className+=" hidden"
 						document.getElementById("html_element").className=document.getElementById("html_element").className.split("hidden").join("").trim()
+						return
 					}
 				}
 				//Soralink Plugin
