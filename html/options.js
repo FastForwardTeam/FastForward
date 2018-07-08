@@ -1,4 +1,4 @@
-chrome.storage.local.get(["custom_bypasses"],(result)=>{
+chrome.storage.local.get(["custom_bypasses"],result=>{
 	let customBypasses=(result&&result.custom_bypasses)?JSON.parse(result.custom_bypasses):{},
 	customBypassesList=document.getElementById("custom-bypasses-list"),
 	customBypassName=document.getElementById("custom-bypass-name"),
@@ -79,7 +79,7 @@ chrome.storage.local.get(["custom_bypasses"],(result)=>{
 		saveCustomBypass()
 	}
 })
-chrome.storage.sync.get(["no_notifications","no_tracker_bypass"],(result)=>{
+chrome.storage.sync.get(["no_notifications","no_tracker_bypass"],result=>{
 	let notificationsCheckbox=document.getElementById("option-notifications"),
 	trackerBypassCheckbox=document.getElementById("option-tracker-bypass")
 	if(!result.no_notifications||result.no_notifications!=="true")

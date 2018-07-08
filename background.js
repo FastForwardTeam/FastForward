@@ -1,24 +1,24 @@
-chrome.runtime.onInstalled.addListener((details)=>{
+chrome.runtime.onInstalled.addListener(details=>{
 	if(details.reason=="install")
 		window.open(chrome.extension.getURL("/html/firstrun.html"))
 })
 chrome.runtime.setUninstallURL("https://goo.gl/forms/H8FswYQ2a37LSxc13")
 
 var trackerBypassEnabled=true,customBypasses={};
-chrome.storage.sync.get(["no_tracker_bypass"],(result)=>{
+chrome.storage.sync.get(["no_tracker_bypass"],result=>{
 	if(result&&result.no_tracker_bypass&&result.no_tracker_bypass==="true")
 	{
 		trackerBypassEnabled=false
 	}
 })
-chrome.storage.local.get(["custom_bypasses"],(result)=>
+chrome.storage.local.get(["custom_bypasses"],result=>
 {
 	if(result&&result.custom_bypasses)
 	{
 		customBypasses=JSON.parse(result.custom_bypasses)
 	}
 })
-chrome.storage.onChanged.addListener((changes)=>{
+chrome.storage.onChanged.addListener(changes=>{
 	if(changes.custom_bypasses)
 	{
 		customBypasses=JSON.parse(changes.custom_bypasses.newValue)
@@ -29,7 +29,7 @@ chrome.storage.onChanged.addListener((changes)=>{
 	}
 })
 
-chrome.webRequest.onBeforeRequest.addListener((details)=>{
+chrome.webRequest.onBeforeRequest.addListener(details=>{
 	if(!trackerBypassEnabled||details.method!="GET"||details.type!="main_frame")
 		return
 	let destination
@@ -53,8 +53,7 @@ chrome.webRequest.onBeforeRequest.addListener((details)=>{
 	}
 },{urls:getTrackerPatterns()},["blocking"])
 
-function getTrackerPatterns()
-{
+var getTrackerPatterns=()=>{
 	let trackerPatterns=[
 	"*://*.bit.ly/*",
 	"*://*.goo.gl/*",

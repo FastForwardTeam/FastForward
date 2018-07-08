@@ -80,20 +80,17 @@ if(document instanceof HTMLDocument)
 				//AdLinkFly
 				let xhr=new XMLHttpRequest()
 				xhr.onreadystatechange=()=>{
-					if(xhr.readyState==4)
+					if(xhr.readyState==4&&xhr.status==200)
 					{
-						if(xhr.status==200)
+						let match=/<img src="\/\/api\.miniature\.io\/[a-zA-Z0-9?=&%."]+\n?.+>/.exec(xhr.responseText)
+						if(match)
 						{
-							let match=/<img src="\/\/api\.miniature\.io\/[a-zA-Z0-9?=&%."]+\n?.+>/.exec(xhr.responseText)
-							if(match)
+							let url=new URL(new DOMParser().parseFromString("<!DOCTYPE html><html><body>"+match[0].split("\r").join("").split("\n").join(" ")+"</body></html>","text/html").querySelector("img").src)
+							console.log(url)
+							if(url.search&&url.search.indexOf("url="))
 							{
-								let url=new URL(new DOMParser().parseFromString("<!DOCTYPE html><html><body>"+match[0].split("\r").join("").split("\n").join(" ")+"</body></html>","text/html").querySelector("img").src)
-								console.log(url)
-								if(url.search&&url.search.indexOf("url="))
-								{
-									showNotification(msgs.timerSkip)
-									safelyNavigate(decodeURIComponent(url.search.split("url=")[1].split("&")[0]))
-								}
+								showNotification(msgs.timerSkip)
+								safelyNavigate(decodeURIComponent(url.search.split("url=")[1].split("&")[0]))
 							}
 						}
 					}
@@ -105,22 +102,37 @@ if(document instanceof HTMLDocument)
 		})
 		ODP(this,"ysmm",//Adf.ly
 		{
-			set:(r)=>{
+			set:r=>{
 				let I=X=""
 				for(let m=0;m<r.length;m++)
 					if(m%2==0)I+=r.charAt(m);else X=r.charAt(m)+X
 				r=I+X
 				let U=r.split("")
-				for(m=0;m<U.length;m++)if(!isNaN(U[m]))for(let R=m+1;R<U.length;R++)
-					if(!isNaN(U[R])){let S=U[m]^U[R];if(S<10)U[m]=S;m=R;R=U.length}
-				r=U.join("")
-				r=atob(r)
-				r=r.substring(r.length-(r.length-16))
-				r=r.substring(0,r.length-16)
-				if(r&&(r.indexOf("http://")==0||r.indexOf("https://")==0))
+				for(m=0;m<U.length;m++)
 				{
-					showNotification(msgs.timerSkip)
-					safelyNavigate(r)
+					if(!isNaN(U[m]))
+					{
+						for(let R=m+1;R<U.length;R++)
+						{
+							if(!isNaN(U[R]))
+							{
+								let S=U[m]^U[R];
+								if(S<10)
+									U[m]=S
+								m=R
+								R=U.length
+							}
+							r=U.join("")
+							r=atob(r)
+							r=r.substring(r.length-(r.length-16))
+							r=r.substring(0,r.length-16)
+							if(r&&(r.indexOf("http://")==0||r.indexOf("https://")==0))
+							{
+								showNotification(msgs.timerSkip)
+								safelyNavigate(r)
+							}
+						}
+					}
 				}
 			}
 		})
@@ -138,7 +150,7 @@ if(document instanceof HTMLDocument)
 		let actual_safelink=forced_safelink={counter:0}
 		ODP(this,"safelink",
 		{
-			set:(_)=>{
+			set:_=>{
 				ODP(window,"blurred",{
 					value:false,
 					writable:false
@@ -164,7 +176,7 @@ if(document instanceof HTMLDocument)
 		//YetiShare
 		let actual_web_root
 		ODP(this,"WEB_ROOT",{
-			set:(v)=>{
+			set:v=>{
 				ODP(this,"seconds",{
 					value:0,
 					writable:false
@@ -246,7 +258,7 @@ if(document instanceof HTMLDocument)
 		})
 		domainBypass("share-online.biz",()=>{
 			ODP(this,"wait",{
-				set:(_)=>{},
+				set:_=>{},
 				get:()=>{
 					showNotification(msgs.timerLeap.replace("%secs%","13"))
 					return 2
@@ -267,7 +279,7 @@ if(document instanceof HTMLDocument)
 		})
 		domainBypass("mylink.zone",()=>{
 			ODP(this,"seconde",{
-				set:(_)=>{},
+				set:_=>{},
 				get:()=>{
 					showNotification(msgs.timerSkip)
 					return -1
@@ -280,7 +292,7 @@ if(document instanceof HTMLDocument)
 			b.style.display="none"
 			document.documentElement.appendChild(b)
 			ODP(this,"log",{
-				value:(m)=>{
+				value:m=>{
 					console.log(m)
 					if(m=="triggering downloader:start")
 					{
@@ -299,7 +311,7 @@ if(document instanceof HTMLDocument)
 			})
 		})
 		domainBypass("bc.vc",()=>{
-			window.setInterval=(f)=>{
+			window.setInterval=f=>{
 				showNotification(msgs.timerLeap.replace("%secs%","1"))
 				return sI(f,800)
 			}
@@ -436,7 +448,7 @@ if(document instanceof HTMLDocument)
 								"url":f.attr("action"),
 								"type":"POST",
 								"data":f.serialize()
-							}).done((data)=>{
+							}).done(data=>{
 								showNotification(msgs.timerSkip)
 								safelyNavigate(data.url)
 							})
@@ -481,8 +493,8 @@ if(document instanceof HTMLDocument)
 						{
 							clearInterval(jT)
 							$(document).ready(()=>sT(()=>{
-								window.open=(h)=>({location:{href:h}})
-								window.setTimeout=(f)=>f()
+								window.open=h=>({location:{href:h}})
+								window.setTimeout=f=>f()
 								let bs=document.querySelectorAll("[data-main-url]")
 								for(let i in bs)
 								{
@@ -590,8 +602,8 @@ if(document instanceof HTMLDocument)
 								{
 									cont="let count=0;"+cont
 								}
-								cont=cont.split("$(window).on('load', ").join("let r=(f)=>f();r(")
-								window.setInterval=(f)=>f()
+								cont=cont.split("$(window).on('load', ").join("let r=f=>f();r(")
+								window.setInterval=f=>f()
 								ev(cont)
 								window.setInterval=sI
 								showNotification(msgs.timerSkip)
@@ -613,7 +625,7 @@ if(document instanceof HTMLDocument)
 						return
 					}
 				}
-				//Soralink Plugin
+				//Soralink Wordpress Plugin
 				if(document.querySelector(".sorasubmit"))
 				{
 					showNotification(msgs.timerSkip)
@@ -662,6 +674,22 @@ if(document instanceof HTMLDocument)
 					safelyNavigate(document.getElementById("goto").href)
 					return
 				}
+				//Safelink Wordpress Plugin
+				if(document.querySelector(".wp-safelink-button"))
+				{
+					window.setInterval=f=>{
+						showNotification(msgs.timerSkip)
+						return sI(f,1)
+					}
+					let lT=sI(()=>{
+						if(document.querySelector(".wp-safelink-button.wp-safelink-success-color"))
+						{
+							clearInterval(lT)
+							window.open=safelyNavigate
+							document.querySelector(".wp-safelink-button.wp-safelink-success-color").click()
+						}
+					},100)
+				}
 				//Other Templates
 				if(document.querySelector("a#btn-main.disabled")&&typeof Countdown=="function")//Croco,CPMLink,Sloomp.space
 				{
@@ -708,7 +736,7 @@ if(document instanceof HTMLDocument)
 				}
 				if(typeof file_download=="function")
 				{
-					window.setInterval=(f)=>{
+					window.setInterval=f=>{
 						showNotification(msgs.timerSkip)
 						return sI(f,1)
 					}
@@ -812,7 +840,7 @@ if(document instanceof HTMLDocument)
 			})
 	},//
 	//This method of injecting the script seems to be the fastest (faster than uBlockOrigin — which is crucial)
-	injectScript=(text)=>{
+	injectScript=text=>{
 		let script=document.createElement("script")
 		script.innerHTML=text
 		script=document.documentElement.appendChild(script)
@@ -823,7 +851,7 @@ if(document instanceof HTMLDocument)
 	}
 	//Inserting the translation strings into our injection code and injecting it into the website.
 	injectScript("("+injectionCode.toString().replace("let msgs={},","let msgs={timerSkip:\""+chrome.i18n.getMessage("notificationTimerSkip")+"\",timerLeap:\""+chrome.i18n.getMessage("notificationTimerLeap")+"\",backend:\""+chrome.i18n.getMessage("notificationBackend")+"\"},")+")()")
-	chrome.storage.sync.get(["no_notifications"],(result)=>{
+	chrome.storage.sync.get(["no_notifications"],result=>{
 		if(result&&result.no_notifications&&result.no_notifications==="true")
 		{
 			let evalResult=()=>{
@@ -836,9 +864,9 @@ if(document instanceof HTMLDocument)
 			if(["interactive","complete"].indexOf(document.readyState)>-1)evalResult();else document.addEventListener("DOMContentLoaded",evalResult)
 		}
 	})
-	chrome.storage.local.get(["custom_bypasses"],(result)=>
+	chrome.storage.local.get(["custom_bypasses"],result=>
 	{
-		let evalResult=(result)=>{
+		let evalResult=result=>{
 			if(result&&result.custom_bypasses)
 			{
 				let customBypasses=JSON.parse(result.custom_bypasses)
