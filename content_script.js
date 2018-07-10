@@ -126,7 +126,7 @@ if(document instanceof HTMLDocument)
 							r=atob(r)
 							r=r.substring(r.length-(r.length-16))
 							r=r.substring(0,r.length-16)
-							if(r&&(r.indexOf("http://")==0||r.indexOf("https://")==0))
+							if(r&&(r.indexOf("http://")==0||r.indexOf("https://")==0)&&encodeURI(r)==r)
 							{
 								showNotification(msgs.timerSkip)
 								safelyNavigate(r)
@@ -257,10 +257,11 @@ if(document instanceof HTMLDocument)
 			location.pathname=location.pathname.split("/t/").join("/saliendo/")
 		})
 		domainBypass("share-online.biz",()=>{
+			let actualWait
 			ODP(this,"wait",{
-				set:_=>{},
+				set:s=>actualWait=s,
 				get:()=>{
-					showNotification(msgs.timerLeap.replace("%secs%","13"))
+					showNotification(msgs.timerLeap.replace("%secs%",actualWait-2))
 					return 2
 				}
 			})

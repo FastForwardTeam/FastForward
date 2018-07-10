@@ -46,14 +46,15 @@ chrome.webRequest.onBeforeRequest.addListener(details=>{
 	}
 	xhr.open("GET","https://api.hell.sh/redirect/"+encodeURIComponent(details.url),false)
 	xhr.send()
-	if(destination)
+	if(destination&&destination!=details.url)
 	{
-		if(destination!=details.url)
-			return{redirectUrl:destination}
+		console.log(details.url+" -> "+destination)
+		return{redirectUrl:destination}
 	}
 },{urls:getTrackerPatterns()},["blocking"])
 
-var getTrackerPatterns=()=>{
+function getTrackerPatterns()
+{
 	let trackerPatterns=[
 	"*://*.bit.ly/*",
 	"*://*.goo.gl/*",
