@@ -345,8 +345,8 @@ if(document instanceof HTMLDocument)
 				hrefBypass(/ouo\.(io|press)/,()=>showNotification(msgs.backend))
 				domainBypass("rom.io",()=>showNotification(msgs.backend))
 				domainBypass("adfoc.us",()=>{
-					let b=document.querySelector(".skip")
-					if(b&&b.href)
+					let b=document.querySelector(".skip[href]")
+					if(b)
 					{
 						showNotification(msgs.timerSkip)
 						safelyNavigate(b.href)
@@ -397,8 +397,8 @@ if(document instanceof HTMLDocument)
 					}
 				})
 				domainBypass("ysear.ch",()=>{
-					let b=document.getElementById("NextVideo")
-					if(b&&b.href)
+					let b=document.querySelector("#NextVideo[href]")
+					if(b)
 					{
 						showNotification(msgs.timerSkip)
 						safelyNavigate(b.href)
@@ -432,8 +432,8 @@ if(document instanceof HTMLDocument)
 						jQuery.prototype.animateProgress=(p,f)=>f()
 				})
 				domainBypass("skinnycat.net",()=>{
-					let b=document.getElementById("dl")
-					if(b&&b.href)
+					let b=document.querySelector("#dl[href]")
+					if(b)
 					{
 						showNotification(msgs.timerSkip)
 						safelyNavigate(b.href)
@@ -550,20 +550,33 @@ if(document instanceof HTMLDocument)
 					return
 				})
 				domainBypass("idnation.net",()=>{
-					let b=document.getElementById("linko")
-					if(b&&b.href)
+					let b=document.querySelector("#linko[href]")
+					if(b)
 					{
 						showNotification(msgs.timerSkip)
 						safelyNavigate(b.href)
 					}
 				})
 				domainBypass("mazika2day.com",()=>{
-					let b=document.querySelector(".linkbtn")
-					if(b&&b.href)
+					let b=document.querySelector(".linkbtn[href]")
+					if(b)
 					{
 						showNotification(msgs.timerSkip)
 						safelyNavigate(b.href)
 					}
+				})
+				domainBypass("ux9.de",()=>{
+					let m=document.querySelector("meta[http-equiv='refresh'][content]")
+					if(m&&m.getAttribute("content").indexOf(";url=http")>-1)
+					{
+						showNotification(msgs.timerSkip)
+						safelyNavigate(m.getAttribute("content").split(";url=")[1])
+					}
+				})
+				domainBypass("ity.im",()=>{
+					let b=document.querySelector("a[onclick][href]")
+					if(b)//This is just an ad bypass
+						safelyNavigate(b.href)
 				})
 				if(bypassed)
 					return
@@ -659,14 +672,10 @@ if(document instanceof HTMLDocument)
 						}
 					},100)
 				}
-				if(document.querySelector("#lanjut > #goes"))
+				if(document.querySelector("#lanjut > #goes[href]"))
 				{
-					let b=document.querySelector("#lanjut > #goes")
-					if(b&&b.href)
-					{
-						showNotification(msgs.timerSkip)
-						safelyNavigate(b.href)
-					}
+					showNotification(msgs.timerSkip)
+					safelyNavigate(document.querySelector("#lanjut > #goes[href]").href)
 					return
 				}
 				if(document.getElementById("waktu")&&document.getElementById("goto"))

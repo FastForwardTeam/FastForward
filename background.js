@@ -56,9 +56,31 @@ chrome.webRequest.onBeforeRequest.addListener(details=>{
 function getTrackerPatterns()
 {
 	let trackerPatterns=[
+	"*://*.great.social/*",
+	"*://*.send.digital/*",
+	"*://*.snipli.com/*",
+	"*://*.shortcm.li/*",
+	"*://*.page.link/*",
+	"*://*.buff.ly/*",
+	"*://*.snip.li/*",
+	"*://*.hive.am/*",
+	"*://*.cutt.ly/*",
+	"*://*.tiny.ie/*",
 	"*://*.bit.ly/*",
 	"*://*.goo.gl/*",
-	"*://*.page.link/*"
+	"*://*.bit.do/*",
+	"*://*.t2m.io/*",
+	"*://*.dis.gd/*",
+	"*://*.zii.bz/*",
+	"*://*.plu.sh/*",
+	"*://*.b.link/*",
+	"*://*.po.st/*",
+	"*://*.ow.ly/*",
+	"*://*.is.gd/*",
+	"*://*.1b.yt/*",
+	"*://*.1w.tf/*",
+	"*://*.t.co/*",
+	"*://*.x.co/*",
 	],
 	//https://github.com/timmyrs/Evil-Domains/blob/master/lists/IP%20Loggers.txt
 	ipLoggers=`viral.over-blog.com
