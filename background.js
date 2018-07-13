@@ -61,6 +61,7 @@ function getTrackerPatterns()
 	"*://*.snipli.com/*",
 	"*://*.shortcm.li/*",
 	"*://*.page.link/*",
+	"*://*.go2l.ink/*",
 	"*://*.buff.ly/*",
 	"*://*.snip.li/*",
 	"*://*.hive.am/*",
