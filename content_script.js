@@ -700,6 +700,19 @@ if(document instanceof HTMLDocument)
 						}
 					},100)
 				}
+				if(document.getElementById("wpsafe-generate")&&typeof wpsafegenerate=="function")
+				{
+					let search=location.search.toString().replace("?", "")
+					if(search.substr(0,3)=="go=")
+					{
+						search=atob(search.substr(3))
+						if(search.substr(0,4)=="http")
+						{
+							showNotification(msgs.timerSkip)
+							safelyNavigate(search)
+						}
+					}
+				}
 				//Other Templates
 				if(document.querySelector("a#btn-main.disabled")&&typeof Countdown=="function")//Croco,CPMLink,Sloomp.space
 				{
