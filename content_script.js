@@ -10,7 +10,9 @@ if(document instanceof HTMLDocument)
 				bypassed=true
 				navigated=true
 				debugger//Don't want to navigate away just yet when dev tools are open
-				if(!new URL(target).hash)
+				let url
+				try{url=new URL(target)}catch(e){}
+				if(!url||!url.hash)
 					target+=location.hash
 				window.onbeforeunload=null
 				location.href=target
