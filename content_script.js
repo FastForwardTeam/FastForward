@@ -714,6 +714,15 @@ if(document instanceof HTMLDocument)
 							safelyNavigate(search)
 						}
 					}
+					else if(location.pathname.toString().substr(0,4)=="/go/")
+					{
+						search=atob(location.pathname.toString().substr(4))
+						if(search.substr(0,4)=="http")
+						{
+							showNotification(msgs.timerSkip)
+							safelyNavigate(search)
+						}
+					}
 				}
 				//Other Templates
 				if(document.querySelector("a#btn-main.disabled")&&typeof Countdown=="function")//Croco,CPMLink,Sloomp.space
