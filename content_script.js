@@ -648,32 +648,6 @@ if(document instanceof HTMLDocument)
 					document.querySelector(".sorasubmit").click()
 					return
 				}
-				if(typeof changeLink=="function"
-					||typeof bukalink=="function"//gosavelink.com
-					)
-				{
-					let cLT=sI(()=>{
-						if((document.querySelectorAll("img#pleasewait").length&&document.querySelector(".wait"))
-							||document.getElementById("showlink")
-							||document.getElementById("download")
-							||document.querySelector(".Visit_Link")//yametesenpai.xyz
-							||document.getElementsByTagName("style='margin-top:").length
-							)
-						{
-							clearInterval(cLT)
-							window.open=safelyNavigate
-							showNotification(msgs.timerSkip)
-							if(typeof changeLink=="function")
-								changeLink()
-							else if(typeof bukalink=="function")
-								bukalink()
-							if(document.getElementById("link-download"))//hightech.web.id
-							{
-								safelyNavigate(document.getElementById("link-download").href)
-							}
-						}
-					},100)
-				}
 				if(document.querySelector("#lanjut > #goes[href]"))
 				{
 					showNotification(msgs.timerSkip)
@@ -685,6 +659,34 @@ if(document instanceof HTMLDocument)
 					showNotification(msgs.timerSkip)
 					safelyNavigate(document.getElementById("goto").href)
 					return
+				}
+				if(typeof bukalink=="function"&&document.getElementById("bijil1")&&document.getElementById("bijil2"))//gosavelink.com
+				{
+					showNotification(msgs.timerSkip)
+					window.open=safelyNavigate
+					bukalink()
+					return
+				}
+				if(typeof changeLink=="function")
+				{
+					let cLT=sI(()=>{
+						if((document.querySelectorAll("img#pleasewait").length&&document.querySelector(".wait"))
+							||document.getElementById("showlink")
+							||document.getElementById("download")
+							||document.getElementsByTagName("style='margin-top:").length
+							||document.querySelector(".Visit_Link")//yametesenpai.xyz
+							||document.getElementById("daplong")//converthinks.xyz
+							)
+						{
+							clearInterval(cLT)
+							window.open=safelyNavigate
+							showNotification(msgs.timerSkip)
+							if(typeof changeLink=="function")
+								changeLink()
+							else if(document.getElementById("link-download"))//hightech.web.id
+								safelyNavigate(document.getElementById("link-download").href)
+						}
+					},100)
 				}
 				//Safelink Wordpress Plugin
 				if(document.querySelector(".wp-safelink-button"))
