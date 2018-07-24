@@ -38,7 +38,8 @@ if(document instanceof HTMLDocument)
 				func()
 			else document.addEventListener("DOMContentLoaded",()=>sT(func,1))
 		},
-		showNotification=(msg)=>ensureDomLoaded(()=>{//I think this is the only way to transfer data between the injection script and content script which is efficient enough to work with Universal Bypass.
+		showNotification=(msg)=>ensureDomLoaded(()=>{
+			//I think this is the only way to transfer data between the injection script and content script which is efficient enough to work with Universal Bypass.
 			if(document.getElementById("UNIVERSAL_BYPASS_NO_NOTIFICATIONS"))
 				return
 			let div=document.createElement("div")
@@ -96,6 +97,7 @@ if(document instanceof HTMLDocument)
 							}
 						}
 					}
+					else showNotification(msgs.backend)
 				}
 				xhr.open("GET",(location.pathname+"/info").replace("//","/"),true)
 				xhr.send()
