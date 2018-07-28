@@ -2,7 +2,16 @@ if(document instanceof HTMLDocument)
 {
 	let injectionCode=()=>{
 		let msgs={},//The translated messages will be loaded in this object for use with the notifications.
-		ODP=Object.defineProperty,ev=window.eval,sT=window.setTimeout,sI=window.setInterval,//We're cloning these functions to avoid problems with uBlockOrigin, etc.
+		ODP=(t,p,o)=>{//We're replacing/cloning some functions to avoid conflics with other extensions.
+			try
+			{
+				Object.defineProperty(t,p,o)
+			}
+			catch(e)
+			{
+				console.warn("Universal Bypass failed to set property",e)
+			}
+		},ev=window.eval,sT=window.setTimeout,sI=window.setInterval,
 		navigated=false,//We only want to navigate once, e.g. to avoid issues with window.open being called multiple times on some sites.
 		safelyNavigate=(target)=>{
 			if(!navigated&&target&&target!=location.href)
