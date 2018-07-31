@@ -586,11 +586,6 @@ if(document instanceof HTMLDocument)
 						safelyNavigate(m.getAttribute("content").split(";url=")[1])
 					}
 				})
-				domainBypass("ity.im",()=>{
-					let b=document.querySelector("a[onclick][href]")
-					if(b)//This is just an ad bypass
-						safelyNavigate(b.href)
-				})
 				if(bypassed)
 					return
 				//Adf.ly Pre-Redirect Nonsense
