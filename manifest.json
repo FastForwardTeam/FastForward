@@ -10,7 +10,7 @@
 	"name": "Universal Bypass",
 	"description": "__MSG_appDesc__",
 	"homepage_url": "https://universal-bypass.org/",
-	"version": "5.5.6",
+	"version": "5.5.7",
 	"author": "timmyRS",
 	"minimum_chrome_version": "41",
 	"options_ui": {
@@ -25,6 +25,7 @@
 	],
 	"browser_action": {
 		"default_icon": {
+			"64": "icon/icon_64.png",
 			"128": "icon/icon_128.png",
 			"256": "icon/icon_256.png",
 			"512": "icon/icon_512.png"
