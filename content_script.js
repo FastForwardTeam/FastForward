@@ -2,7 +2,7 @@ if(document instanceof HTMLDocument)
 {
 	let injectionCode=()=>{
 		let msgs={},//The translated messages will be loaded in this object for use with the notifications.
-		ODP=(t,p,o)=>{//We're replacing/cloning some functions to avoid conflics with other extensions.
+		ODP=(t,p,o)=>{//We're cloning/replacing some functions to avoid conflics with other extensions.
 			try
 			{
 				Object.defineProperty(t,p,o)
@@ -11,10 +11,11 @@ if(document instanceof HTMLDocument)
 			{
 				console.warn("Universal Bypass failed to set property",e)
 			}
-		},ev=window.eval,sT=window.setTimeout,sI=window.setInterval,
+		},sT=window.setTimeout,sI=window.setInterval,ev=window.eval,//Note that we *need* to use eval for some bypasses to work and it's no security risk because a) this script is executed on page-level and b) all evaluted scripts would have been executed by the site later — we're just doing it earlier.
 		navigated=false,//We only want to navigate once, e.g. to avoid issues with window.open being called multiple times on some sites.
 		safelyNavigate=(target)=>{
-			if(!navigated&&target&&target!=location.href)
+			//Universal Bypass can't always trick the website into skipping a timer, so we have to navigate ourselves and this is as good and safe as it gets.
+			if(!navigated&&target&&target!=location.href&&target.substr(0,11)!="javascript:")
 			{
 				bypassed=true
 				navigated=true
