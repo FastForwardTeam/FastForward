@@ -79,17 +79,16 @@ chrome.storage.local.get(["custom_bypasses"],result=>{
 		saveCustomBypass()
 	}
 })
-chrome.storage.sync.get(["no_notifications","no_tracker_bypass"],result=>{
+chrome.storage.sync.get(["no_notifications","no_tracker_bypass","allow_ip_loggers"],result=>{
 	let notificationsCheckbox=document.getElementById("option-notifications"),
-	trackerBypassCheckbox=document.getElementById("option-tracker-bypass")
+	trackerBypassCheckbox=document.getElementById("option-tracker-bypass"),
+	blockIPLoggersCheckbox=document.getElementById("option-block-ip-loggers")
 	if(!result.no_notifications||result.no_notifications!=="true")
-	{
 		notificationsCheckbox.setAttribute("checked","checked")
-	}
 	if(!result.no_tracker_bypass||result.no_tracker_bypass!=="true")
-	{
 		trackerBypassCheckbox.setAttribute("checked","checked")
-	}
+	if(!result.allow_ip_loggers||result.allow_ip_loggers!=="true")
+		blockIPLoggersCheckbox.setAttribute("checked","checked")
 	notificationsCheckbox.onchange=()=>{
 		notificationsCheckbox.setAttribute("disabled","disabled")
 		chrome.storage.sync.set({
@@ -104,6 +103,14 @@ chrome.storage.sync.get(["no_notifications","no_tracker_bypass"],result=>{
 			no_tracker_bypass:(!trackerBypassCheckbox.checked).toString()
 		},()=>{
 			trackerBypassCheckbox.removeAttribute("disabled")
+		})
+	}
+	blockIPLoggersCheckbox.onchange=()=>{
+		blockIPLoggersCheckbox.setAttribute("disabled","disabled")
+		chrome.storage.sync.set({
+			allow_ip_loggers:(!blockIPLoggersCheckbox.checked).toString()
+		},()=>{
+			blockIPLoggersCheckbox.removeAttribute("disabled")
 		})
 	}
 })

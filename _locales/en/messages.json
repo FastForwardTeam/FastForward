@@ -35,6 +35,9 @@
 	"optionsTrackerBypass": {
 		"message": "Bypass trackers using api.hell.sh."
 	},
+	"optionsBlockIPLoggers": {
+		"message": "Block IP loggers if they can't be bypassed."
+	},
 	"privacyPolicy": {
 		"message": "Privacy Policy"
 	},
@@ -61,5 +64,11 @@
 	},
 	"notificationBackend": {
 		"message": "Universal Bypass can't bypass this site because they have a server-side check."
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass prevented your IP from being logged."
+	},
+	"blockedSubtitle": {
+		"message": "If you don't want Universal Bypass to prevent bad actors from getting your IP, disable this in the options:"
 	}
 }

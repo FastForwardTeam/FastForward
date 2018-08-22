@@ -6,23 +6,8 @@ chrome.runtime.onInstalled.addListener(details=>{
 chrome.runtime.setUninstallURL("https://goo.gl/forms/H8FswYQ2a37LSxc13")
 
 //Disableable Tracker Bypass using api.hell.sh. Privacy Policy: https://hell.sh/privacy
-var trackerBypassEnabled=true;
-chrome.storage.sync.get(["no_tracker_bypass"],result=>{
-	if(result&&result.no_tracker_bypass&&result.no_tracker_bypass==="true")
-		trackerBypassEnabled=false
-})
-chrome.storage.onChanged.addListener(changes=>{
-	if(changes.no_tracker_bypass)
-		trackerBypassEnabled=(changes.no_tracker_bypass.newValue!=="true")
-})
-//This requires the <all_urls> permission. For more information on why Universal Bypass has access to all websites, read the section on https://universal-bypass.org/
-chrome.webRequest.onBeforeRequest.addListener(details=>{
-	if(!trackerBypassEnabled||details.method!="GET"||details.type!="main_frame")
-		return
-	let destination
-	if(new URL(details.url).pathname=="/")
-		return
-	let xhr=new XMLHttpRequest()
+var trackerBypassEnabled=true,blockIPLoggers=true,resolveDestination=url=>{
+	let xhr=new XMLHttpRequest(),destination
 	xhr.onreadystatechange=()=>{
 		if(xhr.readyState==4&&xhr.status==200)
 		{
@@ -31,17 +16,31 @@ chrome.webRequest.onBeforeRequest.addListener(details=>{
 				destination=json.destination
 		}
 	}
-	xhr.open("GET","https://api.hell.sh/redirect/"+encodeURIComponent(details.url),false)
+	xhr.open("GET","https://api.hell.sh/redirect/"+encodeURIComponent(url),false)
 	xhr.send()
+	console.log(url," -> ",destination)
+	return destination
+}
+chrome.storage.sync.get(["no_tracker_bypass","block_ip_loggers"],result=>{
+	if(result&&result.no_tracker_bypass&&result.no_tracker_bypass==="true")
+		trackerBypassEnabled=false
+	if(result&&result.allow_ip_loggers&&result.allow_ip_loggers==="true")
+		blockIPLoggers=false
+})
+chrome.storage.onChanged.addListener(changes=>{
+	if(changes.no_tracker_bypass)
+		trackerBypassEnabled=(changes.no_tracker_bypass.newValue!=="true")
+	if(changes.allow_ip_loggers)
+		blockIPLoggers=(changes.allow_ip_loggers.newValue!=="true")
+})
+chrome.webRequest.onBeforeRequest.addListener(details=>{
+	if(!trackerBypassEnabled||details.method!="GET"||details.type!="main_frame"||new URL(details.url).pathname=="/")
+		return
+	let destination=resolveDestination(details.url)
 	if(destination&&destination!=details.url)
-	{
-		console.log(details.url+" -> "+destination)
 		return{redirectUrl:destination}
-	}
-},{urls:getTrackerPatterns()},["blocking"])
-function getTrackerPatterns()
-{
-	let trackerPatterns=[
+},{
+	urls:[
 	"*://*.great.social/*",
 	"*://*.send.digital/*",
 	"*://*.snipli.com/*",
@@ -67,8 +66,24 @@ function getTrackerPatterns()
 	"*://*.1b.yt/*",
 	"*://*.1w.tf/*",
 	"*://*.t.co/*",
-	"*://*.x.co/*",
-	],
+	"*://*.x.co/*"
+	]
+},["blocking"])
+chrome.webRequest.onBeforeRequest.addListener(details=>{
+	if(details.method!="GET"||details.type!="main_frame"||new URL(details.url).pathname=="/")
+		return
+	if(trackerBypassEnabled)
+	{
+		let destination=resolveDestination(details.url)
+		if(destination&&destination!=details.url)
+			return{redirectUrl:destination}
+	}
+	if(blockIPLoggers)
+		return{redirectUrl:chrome.extension.getURL("/html/blocked.html")}
+},{urls:getIPLoggerPatterns()},["blocking"])
+function getIPLoggerPatterns()
+{
+	let patterns=[],
 	//https://github.com/timmyrs/Evil-Domains/blob/master/lists/IP%20Loggers.txt
 	ipLoggers=`viral.over-blog.com
 	gyazo.in
@@ -103,39 +118,22 @@ function getTrackerPatterns()
 	disçordapp.com
 	rëddït.com
 
-	# SkypeGrab
+	# Cyberhub (formerly SkypeGrab)
 
-	skypegrab.net
-	sĸype.com
-	en.sĸype.com
-	web.sĸype.com
-	www.sĸype.com
-	csgopot.zone
-	hackfȯrums.net
-	hackfȯrums.com
-	imgúr.com
-	battlė.net
-	us.battlė.net
-	eu.battlė.net
-	r1p.pw
-	webprofile.me
-	anonymousforum.pw
-	freeanonymous.host
-	ts3free.top
-	viphackforum.xyz
-	bbcnews.today
-	privatexmpp.me
-	topstreaming.us
-	topcdn.biz
-	hackernews.online
-	ampnode.host
-	spoofing.host
-	cubeupload.xyz
-	exploit-db.xyz
-	gyazoo.xyz
-	ipddoser.xyz
-	skypecracker.xyz
-	postimage.co
+	ġooģle.com
+	drive.ġooģle.com
+	maps.ġooģle.com
+	disċordapp.com
+	ìṃgur.com
+	transferfiles.cloud
+	tvshare.co
+	publicwiki.me
+	hbotv.co
+	gameskeys.shop
+	videoblog.tech
+	twitch-stats.stream
+	anonfiles.download
+	bbcbloggers.co.uk
 
 	# Yip
 
@@ -178,11 +176,15 @@ function getTrackerPatterns()
 		{
 			if(line.substr(0,4)=="www.")
 				line=line.substr(4)
-			else if(line.substr(0,1)=="i.")
-				line=line.substr(1)
-			if(trackerPatterns.indexOf(line)==-1)
-				trackerPatterns.push("*://*."+line+"/*")
+			else if(line.substr(0,2)=="i.")
+				line=line.substr(2)
+			else if(line.substr(0,6)=="drive.")
+				line=line.substr(6)
+			else if(line.substr(0,5)=="maps.")
+				line=line.substr(5)
+			if(patterns.indexOf(line)==-1)
+				patterns.push("*://*."+line+"/*")
 		}
 	}
-	return trackerPatterns
+	return patterns
 }
