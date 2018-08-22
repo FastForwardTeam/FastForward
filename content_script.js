@@ -463,7 +463,7 @@ if(document instanceof HTMLDocument)
 					}
 				})
 				domainBypass("dwindly.io",()=>{
-					//We trick the site into running window.open for the target site by eval'ing the right onclick handler. Please note that eval is needed for this to work.
+					//We trick the site into running window.open for the target site by executing an onclick handler.
 					let b=document.getElementById("btd1")
 					if(b)
 					{
@@ -590,7 +590,7 @@ if(document instanceof HTMLDocument)
 				//GemPixel Premium URL Shortener
 				if(typeof appurl!="undefined"&&typeof token!="undefined")
 				{
-					//For this bypass to work, we detect a certain inline script and we might have to modify and execute (eval) it. Please note that eval is needed for this to work and does not decrease security because the site would execute its scripts either way — Universal Bypass is just executing it without the timer.
+					//For this bypass to work, we detect a certain inline script, modify and execute it.
 					let scripts=document.getElementsByTagName("script")
 					for(let i in scripts)
 					{
