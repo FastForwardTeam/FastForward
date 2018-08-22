@@ -356,23 +356,15 @@ if(document instanceof HTMLDocument)
 		})
 		if(!bypassed)
 			ensureDomLoaded(()=>{
-				hrefBypass(/ouo\.(io|press)/,()=>showNotification(msgs.backend))
 				domainBypass("rom.io",()=>showNotification(msgs.backend))
+				hrefBypass(/ouo\.(io|press)/,()=>showNotification(msgs.backend))
+				hrefBypass(/bspin\.club\/faucet\//,()=>showNotification(msgs.backend))
 				domainBypass("adfoc.us",()=>{
 					let b=document.querySelector(".skip[href]")
 					if(b)
 					{
 						showNotification(msgs.timerSkip)
 						safelyNavigate(b.href)
-					}
-				})
-				domainBypass("linkshrink.net",()=>{
-					let p=document.getElementById("pause"),s=document.getElementById("skip")
-					if(p&&s)
-					{
-						p.style.display="none"
-						s.style.display="block"
-						showNotification(msgs.timerSkip)
 					}
 				})
 				domainBypass("sub2unlock.com",()=>{
@@ -598,7 +590,7 @@ if(document instanceof HTMLDocument)
 				//GemPixel Premium URL Shortener
 				if(typeof appurl!="undefined"&&typeof token!="undefined")
 				{
-					//For this bypass to work, we detect a certain inline script and we might have to modify and execute (eval) it. Please note that eval is needed for this to work.
+					//For this bypass to work, we detect a certain inline script and we might have to modify and execute (eval) it. Please note that eval is needed for this to work and does not decrease security because the site would execute its scripts either way — Universal Bypass is just executing it without the timer.
 					let scripts=document.getElementsByTagName("script")
 					for(let i in scripts)
 					{
@@ -800,6 +792,16 @@ if(document instanceof HTMLDocument)
 					showNotification(msgs.timerSkip)
 					form.submit()
 					return
+				}
+				if(document.querySelector("a[href^='https://linkshrink.net/homepage'] > img.lgo"))//LinkShrink.net
+				{
+					let p=document.getElementById("pause"),s=document.getElementById("skip")
+					if(p&&s)
+					{
+						p.style.display="none"
+						s.style.display="block"
+						showNotification(msgs.timerSkip)
+					}
 				}
 				if(typeof app!="undefined"&&"options"in app&&"intermediate"in app.options)//Shorte.st
 				{

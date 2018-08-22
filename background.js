@@ -1,34 +1,21 @@
+//Install & Uninstall Actions
 chrome.runtime.onInstalled.addListener(details=>{
 	if(details.reason=="install")
 		window.open(chrome.extension.getURL("/html/firstrun.html"))
 })
 chrome.runtime.setUninstallURL("https://goo.gl/forms/H8FswYQ2a37LSxc13")
 
-var trackerBypassEnabled=true,customBypasses={};
+//Disableable Tracker Bypass using api.hell.sh. Privacy Policy: https://hell.sh/privacy
+var trackerBypassEnabled=true;
 chrome.storage.sync.get(["no_tracker_bypass"],result=>{
 	if(result&&result.no_tracker_bypass&&result.no_tracker_bypass==="true")
-	{
 		trackerBypassEnabled=false
-	}
-})
-chrome.storage.local.get(["custom_bypasses"],result=>
-{
-	if(result&&result.custom_bypasses)
-	{
-		customBypasses=JSON.parse(result.custom_bypasses)
-	}
 })
 chrome.storage.onChanged.addListener(changes=>{
-	if(changes.custom_bypasses)
-	{
-		customBypasses=JSON.parse(changes.custom_bypasses.newValue)
-	}
 	if(changes.no_tracker_bypass)
-	{
-		trackerBypassEnabled=(changes.no_tracker_bypass.newValue!=="true");
-	}
+		trackerBypassEnabled=(changes.no_tracker_bypass.newValue!=="true")
 })
-
+//This requires the <all_urls> permission. For more information on why Universal Bypass has access to all websites, read the section on https://universal-bypass.org/
 chrome.webRequest.onBeforeRequest.addListener(details=>{
 	if(!trackerBypassEnabled||details.method!="GET"||details.type!="main_frame")
 		return
@@ -52,7 +39,6 @@ chrome.webRequest.onBeforeRequest.addListener(details=>{
 		return{redirectUrl:destination}
 	}
 },{urls:getTrackerPatterns()},["blocking"])
-
 function getTrackerPatterns()
 {
 	let trackerPatterns=[
