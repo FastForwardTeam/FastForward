@@ -35,6 +35,9 @@
 	"optionsTrackerBypass": {
 		"message": "Contourner les traqueurs en utilisant api.hell.sh."
 	},
+	"optionsBlockIPLoggers": {
+		"message": "Bloque les enregistreurs d’IP si ils ne peuvent être contournés."
+ 	},
 	"privacyPolicy": {
 		"message": "Politique Vie Privée"
 	},
@@ -61,5 +64,11 @@
 	},
 	"notificationBackend": {
 		"message": "Universal Bypass ne peut pas contourner ce site parce qu'ils ont une vérification côté serveur."
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass empêche l’enregistrement de votre IP."
+	},
+	"blockedSubtitle": {
+ 		"message": "Si vous ne voulez pas que Universal Bypass empêche les mauvais acteurs d'obtenir votre IP, désactivez ceci dans les options ::"
 	}
 }
