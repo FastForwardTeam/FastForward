@@ -1,0 +1,74 @@
+{
+	"appDesc": {
+		"message": "Zamanınızı karmaşa ile harcamayın. Universal Bypass, rahatsız edici bağlantı kısaltıcıları kendiliğinden geçer.
+	},
+	"firstrunTitle": {
+		"message": "Universal Bypass'i kurduğunuz için çok teşekkürler!"
+	},
+	"firstrunSubtitle": {
+		"message": "Harikasınız!"
+	},
+	"firstrunWhatnow": {
+		"message": "Yapabilecekleriniz:"
+	},
+	"firstrunOptions": {
+		"message": "Universal Bypass'ın seçeneklerini değiştir."
+	},
+	"firstrunTwitter": {
+		"message": "Universal Bypass hakkındaki bilgiler içinde olmak için Twitter'da takip edin."
+	},
+	"homepage": {
+		"message": "Anasayfa"
+	},
+	"popupOptions": {
+		"message": "Seçenekler"
+	},
+	"options": {
+		"message": "Universal Bypass Seçenekleri"
+	},
+	"save": {
+		"message": "Kaydet"
+	},
+	"optionsNotifications": {
+		"message": "Universal Bypass tarafından bilinen websayfalarında durum bildirimlerini göster."
+	},
+	"optionsTrackerBypass": {
+		"message": "api.hell.sh kullanan bypass izleyicileri."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Eğer bypass yapılamazsa, IP kayıtlarını engelle."
+	},
+	"privacyPolicy": {
+		"message": "Gizlilik Sözleşmesi"
+	},
+	"optionsUserscripts": {
+		"message": "Özel Bypasslar"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "Çalışan bypassları GitHub'a eklerseniz diğerlerinin de yararlanması adına iyi olur."
+	},
+	"optionsUserscriptsName": {
+		"message": "Ad. Boş bir isimle, bu bypass silinecek."
+	},
+	"optionsUserscriptsDomains": {
+		"message": "Domainler. Bu bypassin her yerde etkili olabilmesi için * kullanın."
+	},
+	"optionsUserscriptsDelete": {
+		"message": "Bypassi sil"
+	},
+	"notificationTimerSkip": {
+		"message": "Universal Bypass, bu geri sayımı sizin için geçti."
+	},
+	"notificationTimerLeap": {
+		"message": "Universal Bypass, bu geri sayımdan %secs% saniyeyi kaldırdı."
+	},
+	"notificationBackend": {
+		"message": "Universal Bypass, sunucu denetlemesinden dolayı bu sayfayı geçemiyor."
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass, IP adresinizin kayıtlara eklenmesini engelledi."
+	},
+	"blockedSubtitle": {
+		"message": "Universal Bypass'ın IP adresinizi kötü etkinliklerin elde etmesini engellemesini istemiyorsanız, bunu ayarlarda devre dışı bırakın:"
+	}
+}
