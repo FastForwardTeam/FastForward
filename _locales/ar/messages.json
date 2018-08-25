@@ -1,0 +1,74 @@
+{
+	"appDesc": {
+		"message": "لا تضيع وقتك بالتخطي. المتجاوز الشامل سيتخطي تلقائيا كل مواقع اختصار الروابط المزعجة."
+	},
+	"firstrunTitle": {
+		"message": "شكرا لتثبيتك للمتجاوز الشامل!"
+	},
+	"firstrunSubtitle": {
+		"message": "أنت رائع!"
+	},
+	"firstrunWhatnow": {
+		"message": "ما الذي يمكنك القيام به اﻵن:"
+	},
+	"firstrunOptions": {
+		"message": "تغيير إعدادات المتجاوز الشامل."
+	},
+	"firstrunTwitter": {
+		"message": "متابعة المتجاوز الشامل على تويتر حتي تكون دائما على اطلاع بجديد أخباره"
+	},
+	"homepage": {
+		"message": "الصفحة الرئيسية"
+	},
+	"popupOptions": {
+		"message": "الخيارات"
+	},
+	"options": {
+		"message": "خيارات المتجاوز الشامل"
+	},
+	"save": {
+		"message": "حفظ"
+	},
+	"optionsNotifications": {
+		"message": "إظهار اشعارات الحالة على المواقع التي يعرفها المتجاوز الشامل."
+	},
+	"optionsTrackerBypass": {
+		"message": "تجاوز المتتبعين باستخدام api.hell.sh."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "منع مسجلات ال IP إذا كان لا يمكن تجاوزهم."
+	},
+	"privacyPolicy": {
+		"message": "سياسة الخصوصية"
+	},
+	"optionsUserscripts": {
+		"message": "عمليات التجاوز المخصصة"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "سيكون من الرائع إذا كنت تستطيع تقديم 'متجاوزات' تعمل إلي GitHub، حتي يستطيع اﻵخرين اﻹستفادة منها: "
+	},
+	"optionsUserscriptsName": {
+		"message": "الاسم. إذا كان الاسم فارغ هذا المتجاوز سوف يتم مسحه."
+	},
+	"optionsUserscriptsDomains": {
+		"message": "النطاقات. استخدم * لهذا المتجاوز كي يكون فعالا فى كل مكان."
+	},
+	"optionsUserscriptsDelete": {
+		"message": "حذف التجاوز"
+	},
+	"notificationTimerSkip": {
+		"message": "المتجاوز الشامل قد تخطي هذا المؤقت من أجلك."
+	},
+	"notificationTimerLeap": {
+		"message": "المتجاوز الشامل قد أزال %secs% ثانية فقط من هذا المؤقت."
+	},
+	"notificationBackend": {
+		"message": "المتجاوز الشامل لا يستطيع تخطي هذا الموقع ﻷنه يحتوي على تحقق من جهة الخادم."
+	},
+	"blockedTitle": {
+		"message": "المتجاوز الشامل قد منع تسجيل عنوان الIP الخاص بك."
+	},
+	"blockedSubtitle": {
+		"message": "إذا كنت لا تريد أن يمنع المتجاوز الشامل الجهات السيئة من الحصول على عنوان IP الخاص بك، قم بتعطيل هذا من الخيارات:"
+	}
+}
