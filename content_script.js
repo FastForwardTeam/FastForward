@@ -726,6 +726,12 @@ if(document instanceof HTMLDocument)
 					}
 				}
 				//Other Templates
+				if(document.querySelector("#yangDihilangkan > a")&&document.querySelector("#downloadArea > .text-center"))//rathestation.bid
+				{
+					showNotification(msgs.timerSkip)
+					safelyNavigate(document.querySelector("#yangDihilangkan > a").href)
+					return
+				}
 				if(document.querySelector("a#btn-main.disabled")&&typeof Countdown=="function")//Croco,CPMLink,Sloomp.space
 				{
 					showNotification(msgs.timerSkip)
