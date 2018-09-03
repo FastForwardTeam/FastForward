@@ -757,15 +757,11 @@ if(document instanceof HTMLDocument)
 				}
 				if(document.getElementById("countdown")&&document.querySelector(".seconds"))
 				{
-					if(document.querySelector(".err")&&document.querySelector(".err").textContent.trim()=="Skipped countdown")//Mexashare.com
-					{
-						showNotification(msgs.backend)
-					}
-					else if(document.querySelector(".alert.alert-danger.text-center")&&document.querySelector(".alert.alert-danger.text-center").textContent.trim()=="Skipped countdown")//up-4.net
-					{
-						showNotification(msgs.backend)
-					}
-					else
+					let doBypass=!0
+					domainBypass("mexashare.com",()=>doBypass=!1)
+					domainBypass("up-4.net",()=>doBypass=!1)
+					domainBypass("file-upload.com",()=>doBypass=!1)
+					if(doBypass)
 					{
 						showNotification(msgs.timerSkip)
 						document.querySelector(".seconds").textContent="0"
