@@ -726,6 +726,16 @@ if(document instanceof HTMLDocument)
 					}
 				}
 				//Other Templates
+				if(document.querySelector("#tungguyabro")&&typeof WaktunyaBro=="number")//short.mangasave.me
+				{
+					showNotification(msgs.timerSkip)
+					WaktunyaBro=0
+					setInterval(()=>{
+						if(document.querySelector("#tungguyabro a[href]"))
+							safelyNavigate(document.querySelector("#tungguyabro a[href]").href)
+					},100)
+					return
+				}
 				if(document.querySelector("#yangDihilangkan > a")&&document.querySelector("#downloadArea > .text-center"))//rathestation.bid
 				{
 					showNotification(msgs.timerSkip)
