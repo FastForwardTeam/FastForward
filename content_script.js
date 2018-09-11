@@ -579,6 +579,23 @@ if(document instanceof HTMLDocument)
 						safelyNavigate(m.getAttribute("content").split(";url=")[1])
 					}
 				})
+				domainBypass("telolet.in",()=>{
+					let b=document.querySelector("a#skip[href]")
+					if(b)
+					{
+						showNotification(msgs.timerSkip)
+						safelyNavigate(b.href)
+					}
+					else
+					{
+						let a=document.querySelector(".redirect_url > a[href]")
+						if(a)
+						{
+							showNotification(msgs.timerSkip)
+							safelyNavigate(a.href)
+						}
+					}
+				})
 				if(bypassed)
 					return
 				//Adf.ly Pre-Redirect Nonsense
@@ -870,11 +887,11 @@ if(document instanceof HTMLDocument)
 					document.querySelector(".button.green").click()
 					return
 				}
-				if(location.hostname=="decrypt2.safelinkconverter.com"&&document.querySelector(".redirect_url a"))
+				if(location.hostname=="decrypt2.safelinkconverter.com"&&document.querySelector(".redirect_url > div[onclick]"))
 				{
 					window.open=safelyNavigate
 					showNotification(msgs.timerSkip)
-					document.querySelector(".redirect_url a").click()
+					document.querySelector(".redirect_url > div[onclick]").click()
 					return
 				}
 				let t=document.querySelector("title")
