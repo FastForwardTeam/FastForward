@@ -357,6 +357,7 @@ if(document instanceof HTMLDocument)
 		if(!bypassed)
 			ensureDomLoaded(()=>{
 				domainBypass("rom.io",()=>showNotification(msgs.backend))
+				domainBypass("spaste.com",()=>showNotification(msgs.backend))
 				hrefBypass(/ouo\.(io|press)/,()=>showNotification(msgs.backend))
 				hrefBypass(/bspin\.club\/faucet\//,()=>showNotification(msgs.backend))
 				domainBypass("adfoc.us",()=>{
@@ -594,6 +595,15 @@ if(document instanceof HTMLDocument)
 							showNotification(msgs.timerSkip)
 							safelyNavigate(a.href)
 						}
+					}
+				})
+				domainBypass("vipdirect.cc",()=>{
+					if(typeof ab=="number"&&typeof asdf=="function")
+					{
+						showNotification(msgs.timerSkip)
+						ab=5
+						window.open=safelyNavigate
+						asdf()
 					}
 				})
 				if(bypassed)
