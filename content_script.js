@@ -357,7 +357,6 @@ if(document instanceof HTMLDocument)
 		if(!bypassed)
 			ensureDomLoaded(()=>{
 				domainBypass("rom.io",()=>showNotification(msgs.backend))
-				domainBypass("spaste.com",()=>showNotification(msgs.backend))
 				hrefBypass(/ouo\.(io|press)/,()=>showNotification(msgs.backend))
 				hrefBypass(/bspin\.club\/faucet\//,()=>showNotification(msgs.backend))
 				domainBypass("adfoc.us",()=>{
@@ -604,6 +603,14 @@ if(document instanceof HTMLDocument)
 						ab=5
 						window.open=safelyNavigate
 						asdf()
+					}
+				})
+				domainBypass("rapidcrypt.net",()=>{
+					let b=document.querySelector(".push_button.blue[href]")
+					if(b)
+					{
+						showNotification(msgs.timerSkip)
+						safelyNavigate(b.href)
 					}
 				})
 				if(bypassed)
