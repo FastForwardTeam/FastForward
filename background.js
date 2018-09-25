@@ -82,7 +82,8 @@ chrome.webRequest.onBeforeRequest.addListener(details=>{
 		return{redirectUrl:chrome.extension.getURL("/html/blocked.html")}
 },{urls:getIPLoggerPatterns()},["blocking"])
 chrome.webRequest.onBeforeRequest.addListener(details=>{
-	return{redirectUrl:decodeURIComponent(details.url.split("?link=")[1])}
+	if(details.method=="GET"&&details.type=="main_frame")
+		return{redirectUrl:decodeURIComponent(details.url.split("?link=")[1])}
 },{urls:["*://*.spaste.com/r/*?link=*"]},["blocking"])
 function getIPLoggerPatterns()
 {

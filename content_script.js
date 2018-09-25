@@ -117,36 +117,35 @@ if(document instanceof HTMLDocument)
 		ODP(this,"ysmm",//Adf.ly
 		{
 			set:r=>{
-				let I=X=""
-				for(let m=0;m<r.length;m++)
+				let a,m,I="",X=""
+				for(m=0;m<r.length;m++)
 					if(m%2==0)I+=r.charAt(m);else X=r.charAt(m)+X
 				r=I+X
-				let U=r.split("")
-				for(m=0;m<U.length;m++)
+				a=r.split("")
+				for(m=0;m<a.length;m++)
 				{
-					if(!isNaN(U[m]))
+					if(!isNaN(a[m]))
 					{
-						for(let R=m+1;R<U.length;R++)
+						for(var R=m+1;R<a.length;R++)
 						{
-							if(!isNaN(U[R]))
+							if(!isNaN(a[R]))
 							{
-								let S=U[m]^U[R];
-								if(S<10)
-									U[m]=S
+								let S=a[m]^a[R]
+								if(S<10)a[m]=S
 								m=R
-								R=U.length
-							}
-							r=U.join("")
-							r=atob(r)
-							r=r.substring(r.length-(r.length-16))
-							r=r.substring(0,r.length-16)
-							if(r&&(r.indexOf("http://")==0||r.indexOf("https://")==0)&&encodeURI(r)==r)
-							{
-								showNotification(msgs.timerSkip)
-								safelyNavigate(r)
+								R=a.length
 							}
 						}
 					}
+				}
+				r=a.join('')
+				r=window.atob(r)
+				r=r.substring(r.length-(r.length-16))
+				r=r.substring(0,r.length-16)
+				if(r&&(r.indexOf("http://")===0||r.indexOf("https://")===0))
+				{
+					showNotification(msgs.timerSkip)
+					safelyNavigate(r)
 				}
 			}
 		})
