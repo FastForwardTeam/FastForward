@@ -3,14 +3,14 @@ if(document instanceof HTMLDocument)
 	let injectionCode=()=>{
 		let msgs={},//The translated messages will be loaded in this object for use with the notifications.
 		ODP=(t,p,o)=>{//We're cloning/replacing some functions to avoid conflics with other extensions.
-			try
-			{
-				Object.defineProperty(t,p,o)
-			}
-			catch(e)
-			{
-				console.warn("Universal Bypass failed to set property",e)
-			}
+		try
+		{
+			Object.defineProperty(t,p,o)
+		}
+		catch(e)
+		{
+			console.warn("Universal Bypass failed to set property",e)
+		}
 		},sT=window.setTimeout,sI=window.setInterval,ev=window.eval,//Note that we *need* to use eval for some bypasses to work and it's no security risk because a) this script is executed on page-level and b) all evaluted scripts would have been executed by the site later — we're just doing it earlier.
 		navigated=false,//We only want to navigate once, e.g. to avoid issues with window.open being called multiple times on some sites.
 		safelyNavigate=(target)=>{
@@ -48,7 +48,7 @@ if(document instanceof HTMLDocument)
 				func()
 			else document.addEventListener("DOMContentLoaded",()=>sT(func,1))
 		},
-		showNotification=(msg)=>ensureDomLoaded(()=>{
+	showNotification=(msg)=>ensureDomLoaded(()=>{
 			//I think this is the only way to transfer data between the injection script and content script which is efficient enough to work with Universal Bypass.
 			if(document.getElementById("UNIVERSAL_BYPASS_NO_NOTIFICATIONS"))
 				return
@@ -60,7 +60,7 @@ if(document instanceof HTMLDocument)
 				document.body.removeChild(div)
 			},5000)
 		})
-		let actual_app_vars
+	let actual_app_vars
 		ODP(this,"app_vars",{//
 			set:(v)=>{
 				actual_app_vars=v
@@ -109,11 +109,11 @@ if(document instanceof HTMLDocument)
 					}
 					else showNotification(msgs.backend)
 				}
-				xhr.open("GET",(location.pathname+"/info").replace("//","/"),true)
-				xhr.send()
-			},
-			get:()=>actual_app_vars
-		})
+			xhr.open("GET",(location.pathname+"/info").replace("//","/"),true)
+			xhr.send()
+		},
+		get:()=>actual_app_vars
+	})
 		ODP(this,"ysmm",//Adf.ly
 		{
 			set:r=>{
@@ -132,7 +132,7 @@ if(document instanceof HTMLDocument)
 							{
 								let S=a[m]^a[R]
 								if(S<10)a[m]=S
-								m=R
+									m=R
 								R=a.length
 							}
 						}
@@ -494,23 +494,8 @@ if(document instanceof HTMLDocument)
 					}
 				})
 				domainBypass("complete2unlock.com",()=>{
-					let jT=sI(()=>{
-						if(typeof $=="function")
-						{
-							clearInterval(jT)
-							$(document).ready(()=>sT(()=>{
-								window.open=h=>({location:{href:h}})
-								window.setTimeout=f=>f()
-								let bs=document.querySelectorAll("[data-main-url]")
-								for(let i in bs)
-								{
-									let b=bs[i]
-									if(b instanceof HTMLElement)
-										b.click()
-								}
-							},100))
-						}
-					},100)
+					showNotification(msgs.timerSkip)
+					location.href="/api/links/complete"+location.pathname
 				})
 				domainBypass("hidelink.club",()=>{
 					if(hash)
