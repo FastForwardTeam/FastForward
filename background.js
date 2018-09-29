@@ -83,8 +83,12 @@ chrome.webRequest.onBeforeRequest.addListener(details=>{
 },{urls:getIPLoggerPatterns()},["blocking"])
 chrome.webRequest.onBeforeRequest.addListener(details=>{
 	if(details.method=="GET"&&details.type=="main_frame")
-		return{redirectUrl:decodeURIComponent(details.url.split("?link=")[1])}
-},{urls:["*://*.spaste.com/r/*?link=*"]},["blocking"])
+		return{redirectUrl:decodeURIComponent(details.url.substr(details.url.indexOf("url=")+4))}
+},{urls:["*://*.ourl.io/*url=*"]},["blocking"])
+chrome.webRequest.onBeforeRequest.addListener(details=>{
+	if(details.method=="GET"&&details.type=="main_frame")
+		return{redirectUrl:decodeURIComponent(details.url.substr(details.url.indexOf("link=")+5))}
+},{urls:["*://*.spaste.com/r/*link=*"]},["blocking"])
 function getIPLoggerPatterns()
 {
 	let patterns=[],
