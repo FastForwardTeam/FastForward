@@ -45,11 +45,34 @@ if(document instanceof HTMLDocument)
 				func()
 			else document.addEventListener("DOMContentLoaded",()=>sT(func,1))
 		},
-		contributeAndSafelyNavigate=target=>{
+		crowdBypass=callback=>ensureDomLoaded(()=>{
+			if(location.href.substr(location.href.length-18)=="#ignoreCrowdBypass")
+			{
+				let fs=document.querySelectorAll("form[action]")
+				for(let i=0;i<fs.length;i++)
+					fs[i].action+="#ignoreCrowdBypass"
+				let ls=document.querySelectorAll("a[href]")
+				for(let i=0;i<ls.length;i++)
+					ls[i].href+="#ignoreCrowdBypass"
+				callback()
+				return
+			}
+			let xhr=new XMLHttpRequest()
+			xhr.onreadystatechange=()=>{
+				if(xhr.readyState==4&&xhr.status==200&&xhr.responseText!="")
+					location.href="https://universal-bypass.org/crowd/bypassed?target="+encodeURIComponent(xhr.responseText)+"&back="+encodeURIComponent(location.href)
+				else if(document.querySelector("body[data-crowd-bypass-opt-in]")||!document.querySelector("body[data-crowd-bypass-opt-out]"))
+					callback()
+			}
+			xhr.open("POST","https://universal-bypass.org/crowd/query_v1",true)
+			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+			xhr.send("domain="+encodeURIComponent(domain)+"&path="+encodeURIComponent(location.pathname.toString().substr(1)))
+		}),
+		contributeAndNavigate=target=>{
 			let xhr=new XMLHttpRequest()
 			xhr.onreadystatechange=()=>{
 				if(xhr.readyState==4)
-					safelyNavigate(target)
+					location.href=target
 			}
 			xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
 			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
@@ -493,11 +516,7 @@ if(document instanceof HTMLDocument)
 								if(url.search&&url.search.indexOf("url="))
 									safelyNavigate(decodeURIComponent(url.search.split("url=")[1].split("&")[0]))
 							}
-						}
-						else
-						{
-							if(document.querySelector("body[data-crowd-bypass-opt-in]")||!document.querySelector("body[data-crowd-bypass-opt-out]"))
-							{
+							else crowdBypass(()=>{
 								let tI=setInterval(()=>{
 									let a=document.querySelector("a.get-link[href]")
 									if(!a)
@@ -506,10 +525,10 @@ if(document instanceof HTMLDocument)
 									{
 										clearInterval(tI)
 										a.parentNode.removeChild(a)
-										contributeAndSafelyNavigate(a.href)
+										contributeAndNavigate(a.href)
 									}
 								},50)
-							}
+							})
 						}
 					}
 					xhr.open("GET",(location.pathname+"/info").replace("//","/"),true)
@@ -788,7 +807,7 @@ if(document instanceof HTMLDocument)
 				},500)
 			})
 	},//
-	//This method of injecting the script seems to be the fastest (faster than uBlockOrigin — which is crucial)
+	//This method of injecting the script is faster than any interfering extensions in most cases
 	injectScript=text=>{
 		let script=document.createElement("script")
 		script.innerHTML=text

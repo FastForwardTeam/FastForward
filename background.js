@@ -5,6 +5,22 @@ chrome.runtime.onInstalled.addListener(details=>{
 })
 chrome.runtime.setUninstallURL("https://goo.gl/forms/H8FswYQ2a37LSxc13")
 
+//Bypasses of sites specifying the destination in the query
+chrome.webRequest.onBeforeRequest.addListener(details=>{
+	if(details.method=="GET"&&details.type=="main_frame")
+		return{redirectUrl:decodeURIComponent(details.url.substr(details.url.indexOf("url=")+4))}
+},{urls:["*://*.ourl.io/*url=*"]},["blocking"])
+chrome.webRequest.onBeforeRequest.addListener(details=>{
+	if(details.method=="GET"&&details.type=="main_frame")
+		return{redirectUrl:decodeURIComponent(details.url.substr(details.url.indexOf("link=")+5))}
+},{urls:["*://*.spaste.com/r/*link=*"]},["blocking"])
+
+//Cheap trick
+chrome.webRequest.onBeforeRequest.addListener(details=>{
+	if(details.method=="GET"&&details.type=="main_frame")
+		return{redirectUrl:chrome.runtime.getURL("html/crowd-bypassed.html")+details.url.substr(43)}
+},{urls:["https://universal-bypass.org/crowd/bypassed?*"]},["blocking"])
+
 //Disableable Tracker Bypass using api.hell.sh. Privacy Policy: https://hell.sh/privacy
 var trackerBypassEnabled=true,blockIPLoggers=true,resolveDestination=url=>{
 	let xhr=new XMLHttpRequest(),destination
@@ -81,14 +97,6 @@ chrome.webRequest.onBeforeRequest.addListener(details=>{
 	if(blockIPLoggers)
 		return{redirectUrl:chrome.extension.getURL("/html/blocked.html")}
 },{urls:getIPLoggerPatterns()},["blocking"])
-chrome.webRequest.onBeforeRequest.addListener(details=>{
-	if(details.method=="GET"&&details.type=="main_frame")
-		return{redirectUrl:decodeURIComponent(details.url.substr(details.url.indexOf("url=")+4))}
-},{urls:["*://*.ourl.io/*url=*"]},["blocking"])
-chrome.webRequest.onBeforeRequest.addListener(details=>{
-	if(details.method=="GET"&&details.type=="main_frame")
-		return{redirectUrl:decodeURIComponent(details.url.substr(details.url.indexOf("link=")+5))}
-},{urls:["*://*.spaste.com/r/*link=*"]},["blocking"])
 function getIPLoggerPatterns()
 {
 	let patterns=[],

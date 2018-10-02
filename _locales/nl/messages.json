@@ -64,5 +64,14 @@
 	},
 	"blockedSubtitle": {
 		"message": "Als u uw ip niet wilt omzeilen, schakel dit dan uit in de opties:"
+	},
+	"crowdBypassed": {
+		"message": "U hoeft misschien niet te wachten!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Andere Universal Bypass-gebruikers hebben al aangegeven dat dit aan % ligt"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Klopt dit niet?"
 	}
 }

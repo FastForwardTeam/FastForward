@@ -64,5 +64,14 @@
 	},
 	"blockedSubtitle": {
 		"message": "If you don't want Universal Bypass to prevent bad actors from getting your IP, disable this in the options:"
+	},
+	"crowdBypassed": {
+		"message": "You might not have to wait!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Other Universal Bypass users have already waited for you and reported that this leads to %"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Was this not correct?"
 	}
 }
