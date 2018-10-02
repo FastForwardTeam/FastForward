@@ -29,14 +29,17 @@
 	"save": {
 		"message": "Opslaan"
 	},
-	"optionsNotifications": {
-		"message": "Toon statusmeldingen op websites die Universal Bypass kent."
-	},
 	"optionsTrackerBypass": {
 		"message": "Omziel trackers met api.hell.sh."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Blokkeer IP-loggers als ze niet kunnen worden omzeilt."
+	},
+	"optionsCrowdBypass": {
+		"message": "Meedoen aan Crowd Bypass."
+	},
+	"moreInfo": {
+		"message": "Meer info"
 	},
 	"privacyPolicy": {
 		"message": "Privacy Verklaring"
@@ -55,15 +58,6 @@
 	},
 	"optionsUserscriptsDelete": {
 		"message": "Verwijder Bypass"
-	},
-	"notificationTimerSkip": {
-		"message": "Universal Bypass heeft die timer voor u overgeslagen."
-	},
-	"notificationTimerLeap": {
-		"message": "Universal Bypass heeft zojuist %sec% seconde(n) uit die timer verwijderd."
-	},
-	"notificationBackend": {
-		"message": "Universal Bypass kan deze site niet omzeilen omdat ze een controle aan de serverzijde hebben."
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass voorkomt dat uw IP wordt geregistreerd."

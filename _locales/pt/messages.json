@@ -29,9 +29,6 @@
 	"save": {
 		"message": "Salvar"
 	},
-	"optionsNotifications": {
-		"message": "Mostra notifica\u00E7\u00F5es de status em sites conhecidos pelo Universal Bypass."
-	},
 	"optionsTrackerBypass": {
 		"message": "Rastreadores de bypass usando api.hell.sh."
 	},
@@ -55,15 +52,6 @@
 	},
 	"optionsUserscriptsDelete": {
 		"message": "Excluir Bypass"
-	},
-	"notificationTimerSkip": {
-		"message": "O Universal Bypass pulou esta contagem regressiva para voc\u00EA."
-	},
-	"notificationTimerLeap": {
-		"message": "O Universal Bypass removeu %secs% segundo(s) desta contagem regressiva."
-	},
-	"notificationBackend": {
-		"message": "O Universal Bypass n\u00E3o p\u00F4de pular este site, pois ele possui uma verifica\u00E7\u00E3o do lado do servidor."
 	},
 	"blockedTitle": {
 		"message": "O Universal Bypass preveniu que seu IP fosse registrado."

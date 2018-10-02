@@ -29,9 +29,6 @@
 	"save": {
 		"message": "Kaydet"
 	},
-	"optionsNotifications": {
-		"message": "Universal Bypass taraf\u0131ndan bilinen websayfalar\u0131nda durum bildirimlerini g\u00F6ster."
-	},
 	"optionsTrackerBypass": {
 		"message": "api.hell.sh kullanan bypass izleyicileri."
 	},
@@ -55,15 +52,6 @@
 	},
 	"optionsUserscriptsDelete": {
 		"message": "Bypassi sil"
-	},
-	"notificationTimerSkip": {
-		"message": "Universal Bypass, bu geri say\u0131m\u0131 sizin i\u00E7in ge\u00E7ti."
-	},
-	"notificationTimerLeap": {
-		"message": "Universal Bypass, bu geri say\u0131mdan %secs% saniyeyi kald\u0131rd\u0131."
-	},
-	"notificationBackend": {
-		"message": "Universal Bypass, sunucu denetlemesinden dolay\u0131 bu sayfay\u0131 ge\u00E7emiyor."
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass, IP adresinizin kay\u0131tlara eklenmesini engelledi."

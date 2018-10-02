@@ -7,7 +7,7 @@ chrome.storage.local.get(["custom_bypasses"],result=>{
 	editingBypass="",
 	reloadCustomBypassList=()=>{
 		customBypassesList.innerHTML=""
-		customBypasses["+ Add"]={}
+		customBypasses["+"]={}
 		if(editingBypass)
 			document.getElementById("custom-bypass-edit-container").style.display="block"
 		else
@@ -25,11 +25,11 @@ chrome.storage.local.get(["custom_bypasses"],result=>{
 				if(_active)
 					_active.className="list-group-item list-group-item-action"
 				editingBypass=this.id.substr(14)
-				if(editingBypass=="+ Add")
+				if(editingBypass=="+")
 				{
 					customBypasses[editingBypass="Untitled Bypass"]={
 						domains:"example.com,example.org",
-						content:'let b=document.getElementById("button")\nif(b&&b.href)\n\tlocation.href=b.href\n'
+						content:'let b=document.querySelector("#button[href]")\nif(b)\n\tlocation.href=b.href\n'
 					}
 				}
 				else
@@ -43,7 +43,7 @@ chrome.storage.local.get(["custom_bypasses"],result=>{
 			}
 			customBypassesList.appendChild(a)
 		}
-		delete customBypasses["+ Add"]
+		delete customBypasses["+"]
 	},
 	saveCustomBypass=()=>{
 		if(customBypassName.value!=editingBypass)
@@ -79,24 +79,16 @@ chrome.storage.local.get(["custom_bypasses"],result=>{
 		saveCustomBypass()
 	}
 })
-chrome.storage.sync.get(["no_notifications","no_tracker_bypass","allow_ip_loggers"],result=>{
-	let notificationsCheckbox=document.getElementById("option-notifications"),
-	trackerBypassCheckbox=document.getElementById("option-tracker-bypass"),
-	blockIPLoggersCheckbox=document.getElementById("option-block-ip-loggers")
-	if(!result.no_notifications||result.no_notifications!=="true")
-		notificationsCheckbox.setAttribute("checked","checked")
+chrome.storage.sync.get(["no_tracker_bypass","allow_ip_loggers","crowd_bypass_opt_out"],result=>{
+	let trackerBypassCheckbox=document.getElementById("option-tracker-bypass"),
+	blockIPLoggersCheckbox=document.getElementById("option-block-ip-loggers"),
+	crowdBypassCheckbox=document.getElementById("option-crowd-bypass")
 	if(!result.no_tracker_bypass||result.no_tracker_bypass!=="true")
 		trackerBypassCheckbox.setAttribute("checked","checked")
 	if(!result.allow_ip_loggers||result.allow_ip_loggers!=="true")
 		blockIPLoggersCheckbox.setAttribute("checked","checked")
-	notificationsCheckbox.onchange=()=>{
-		notificationsCheckbox.setAttribute("disabled","disabled")
-		chrome.storage.sync.set({
-			no_notifications:(!notificationsCheckbox.checked).toString()
-		},()=>{
-			notificationsCheckbox.removeAttribute("disabled")
-		})
-	}
+	if(!result.crowd_bypass_opt_out||result.crowd_bypass_opt_out!=="true")
+		crowdBypassCheckbox.setAttribute("checked","checked")
 	trackerBypassCheckbox.onchange=()=>{
 		trackerBypassCheckbox.setAttribute("disabled","disabled")
 		chrome.storage.sync.set({
@@ -111,6 +103,14 @@ chrome.storage.sync.get(["no_notifications","no_tracker_bypass","allow_ip_logger
 			allow_ip_loggers:(!blockIPLoggersCheckbox.checked).toString()
 		},()=>{
 			blockIPLoggersCheckbox.removeAttribute("disabled")
+		})
+	}
+	crowdBypassCheckbox.onchange=()=>{
+		crowdBypassCheckbox.setAttribute("disabled","disabled")
+		chrome.storage.sync.set({
+			crowd_bypass_opt_out:(!crowdBypassCheckbox.checked).toString()
+		},()=>{
+			crowdBypassCheckbox.removeAttribute("disabled")
 		})
 	}
 })

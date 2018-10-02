@@ -29,14 +29,17 @@
 	"save": {
 		"message": "Speichern"
 	},
-	"optionsNotifications": {
-		"message": "Status-Meldungen auf Webseiten, die Universal Bypass kennt, anzeigen."
-	},
 	"optionsTrackerBypass": {
 		"message": "Umgehe Tracker mit api.hell.sh."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Blockiere IP-Logger wenn sie nicht umgehen werden können."
+	},
+	"optionsCrowdBypass": {
+		"message": "Mach bei Crowd Bypass mit."
+	},
+	"moreInfo": {
+		"message": "Mehr Infos"
 	},
 	"privacyPolicy": {
 		"message": "Datenschutzerklärung"
@@ -55,15 +58,6 @@
 	},
 	"optionsUserscriptsDelete": {
 		"message": "Umgehung löschen"
-	},
-	"notificationTimerSkip": {
-		"message": "Universal Bypass hat gerade den Timer übersprungen."
-	},
-	"notificationTimerLeap": {
-		"message": "Universal Bypass hat gerade %secs% Sekunde(n) von dem Timer entfernt."
-	},
-	"notificationBackend": {
-		"message": "Universal Bypass kann diese Seite nicht umgehen, da diese einen Server-seitigen Check hat."
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass hat deine IP vor einem Logger geschützt."

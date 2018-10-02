@@ -29,9 +29,6 @@
 	"save": {
 		"message": "Sauvegarder"
 	},
-	"optionsNotifications": {
-		"message": "Afficher notifications de statut sur les sites webs que Universal Bypass connaît."
-	},
 	"optionsTrackerBypass": {
 		"message": "Contourner les traqueurs en utilisant api.hell.sh."
 	},
@@ -55,15 +52,6 @@
 	},
 	"optionsUserscriptsDelete": {
 		"message": "Supprimer Bypass"
-	},
-	"notificationTimerSkip": {
-		"message": "Universal Bypass zappe juste ce compteur pour vous."
-	},
-	"notificationTimerLeap": {
-		"message": "Universal Bypass supprime juste les %secs% seconde(s) fr votre compteur."
-	},
-	"notificationBackend": {
-		"message": "Universal Bypass ne peut pas contourner ce site parce qu'ils ont une vérification côté serveur."
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass empêche l’enregistrement de votre IP."
