@@ -55,75 +55,12 @@ if(document instanceof HTMLDocument)
 			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
 			xhr.send("domain="+encodeURIComponent(domain)+"&path="+encodeURIComponent(location.pathname.toString().substr(1))+"&target="+encodeURIComponent(target))
 		},
-		actual_app_vars,
 		domain=location.hostname
 		if(domain.substr(0,4)=="www.")
 			domain=domain.substr(4)
-		ODP(this,"app_vars",{//
-			set:(v)=>{
-				actual_app_vars=v
-				ODP(this,"blurred",{
-					value:false,
-					writable:false
-				})
-				//SafelinkU
-				if(document.querySelector("b[style='color: #3e66b3']")&&document.querySelector("b[style='color: #3e66b3']").textContent=="SafelinkU")
-				{
-					bypassed=true
-					window.setInterval=(f)=>{
-						return sI(f,10)
-					}
-					let lT=sI(()=>{
-						if(document.querySelector("a.btn.btn-primary.btn-lg.get-link[href]")&&document.querySelector("a.btn.btn-primary.btn-lg.get-link[href]").getAttribute("href").substr(0,11)!="javascript:")
-						{
-							clearInterval(lT)
-							safelyNavigate(document.querySelector("a.btn.btn-primary.btn-lg.get-link[href]").href)
-						}
-					},100)
-					return
-				}
-				if(document.querySelector("b[style='color : #3e66b3']")&&document.querySelector("b[style='color: #3e66b3']").textContent=="Shortener url?")
-				{
-					return
-				}
-				//AdLinkFly
-				let xhr=new XMLHttpRequest()
-				xhr.onreadystatechange=()=>{
-					if(xhr.readyState==4&&xhr.status==200)
-					{
-						let match=/<img src="\/\/api\.miniature\.io\/[a-zA-Z0-9?=&%."]+\n?.+>/.exec(xhr.responseText)
-						if(match)
-						{
-							let url=new URL(new DOMParser().parseFromString("<!DOCTYPE html><html><body>"+match[0].split("\r").join("").split("\n").join(" ")+"</body></html>","text/html").querySelector("img").src)
-							console.log(url)
-							if(url.search&&url.search.indexOf("url="))
-								safelyNavigate(decodeURIComponent(url.search.split("url=")[1].split("&")[0]))
-						}
-					}
-					else
-					{
-						ensureDomLoaded(()=>{
-							if(document.querySelector("body[data-crowd-bypass-opt-in]")||!document.querySelector("body[data-crowd-bypass-opt-out]"))
-							{
-								let tI=setInterval(()=>{
-									let a=document.querySelector("a.get-link[href]")
-									if(!a)
-										a=document.querySelector(".skip-ad a[href]")
-									if(a&&a.href!=location.href)
-									{
-										clearInterval(tI)
-										a.parentNode.removeChild(a)
-										contributeAndSafelyNavigate(a.href)
-									}
-								},50)
-							}
-						})
-					}
-				}
-				xhr.open("GET",(location.pathname+"/info").replace("//","/"),true)
-				xhr.send()
-			},
-			get:()=>actual_app_vars
+		ODP(this,"blurred",{
+			value:false,
+			writable:false
 		})
 		ODP(this,"ysmm",//Adf.ly
 		{
@@ -520,6 +457,63 @@ if(document instanceof HTMLDocument)
 					let a=document.querySelector("a[href]")
 					if(a)
 						safelyNavigate(a.href)
+					return
+				}
+				if(typeof app_vars=="object")
+				{
+					//SafelinkU
+					if(document.querySelector("b[style='color: #3e66b3']")&&document.querySelector("b[style='color: #3e66b3']").textContent=="SafelinkU")
+					{
+						window.setInterval=(f)=>{
+							return sI(f,10)
+						}
+						let lT=sI(()=>{
+							if(document.querySelector("a.btn.btn-primary.btn-lg.get-link[href]")&&document.querySelector("a.btn.btn-primary.btn-lg.get-link[href]").getAttribute("href").substr(0,11)!="javascript:")
+							{
+								clearInterval(lT)
+								safelyNavigate(document.querySelector("a.btn.btn-primary.btn-lg.get-link[href]").href)
+							}
+						},100)
+						return
+					}
+					if(document.querySelector("b[style='color : #3e66b3']")&&document.querySelector("b[style='color: #3e66b3']").textContent=="Shortener url?")
+					{
+						return
+					}
+					//AdLinkFly
+					let xhr=new XMLHttpRequest()
+					xhr.onreadystatechange=()=>{
+						if(xhr.readyState==4&&xhr.status==200)
+						{
+							let match=/<img src="\/\/api\.miniature\.io\/[a-zA-Z0-9?=&%."]+\n?.+>/.exec(xhr.responseText)
+							if(match)
+							{
+								let url=new URL(new DOMParser().parseFromString("<!DOCTYPE html><html><body>"+match[0].split("\r").join("").split("\n").join(" ")+"</body></html>","text/html").querySelector("img").src)
+								console.log(url)
+								if(url.search&&url.search.indexOf("url="))
+									safelyNavigate(decodeURIComponent(url.search.split("url=")[1].split("&")[0]))
+							}
+						}
+						else
+						{
+							if(document.querySelector("body[data-crowd-bypass-opt-in]")||!document.querySelector("body[data-crowd-bypass-opt-out]"))
+							{
+								let tI=setInterval(()=>{
+									let a=document.querySelector("a.get-link[href]")
+									if(!a)
+										a=document.querySelector(".skip-ad a[href]")
+									if(a&&a.href!=location.href&&a.href.substr(0,11)!="javascript:")
+									{
+										clearInterval(tI)
+										a.parentNode.removeChild(a)
+										contributeAndSafelyNavigate(a.href)
+									}
+								},50)
+							}
+						}
+					}
+					xhr.open("GET",(location.pathname+"/info").replace("//","/"),true)
+					xhr.send()
 					return
 				}
 				//GemPixel Premium URL Shortener
