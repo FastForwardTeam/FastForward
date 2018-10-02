@@ -29,11 +29,17 @@
 	"save": {
 		"message": "Guardar"
 	},
-	"optionsNotifications": {
-		"message": "Mostrar notificaciones de estado en sitios web que Universal Bypass conoce."
-	},
 	"optionsTrackerBypass": {
 		"message": "Bypass de rastreadores usando api.hell.sh."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Bloquee los registradores IP si no pueden ser desviados."
+	},
+	"optionsCrowdBypass": {
+		"message": "Participar en el Bypass de la comunidad."
+	},
+	"moreInfo": {
+		"message": "More info"
 	},
 	"privacyPolicy": {
 		"message": "Política de privacidad"
@@ -53,13 +59,19 @@
 	"optionsUserscriptsDelete": {
 		"message": "Eliminar Bypass"
 	},
-	"notificationTimerSkip": {
-		"message": "Universal Bypass se ha saltado el temporizador."
+	"blockedTitle": {
+		"message": "Bypass Universal evitó que su IP se registre."
 	},
-	"notificationTimerLeap": {
-		"message": "Bypass Universal ha quitado %secs% segundo(s) de ese temporizador."
+	"blockedSubtitle": {
+		"message": "Si no desea que Universal Bypass evite que los agentes maliciosos obtengan su IP, deshabilite esta opción en las opciones:"
 	},
-	"notificationBackend": {
-		"message": "Universal Bypass no puede pasar por alto este sitio porque tiene una verificación del lado del servidor."
+	"crowdBypassed": {
+		"message": "Puede que no tengas que esperar!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Otros usuarios de Universal Bypass ya han esperado por usted y han informado que esto lleva a un % de"
+	},
+	"crowdBypassedIgnore": {
+		"message": "¿No era eso correcto?"
 	}
 }
