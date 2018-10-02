@@ -11,8 +11,9 @@ if(document instanceof HTMLDocument)
 				console.warn("Universal Bypass failed to set property",e)
 			}
 		},sT=window.setTimeout,sI=window.setInterval,ev=window.eval,// Note that we *need* to use eval for some bypasses to work and it's no security risk because this script is executed at page level which can be seen at https://playground.timmyrs.de/universal-bypass-exploit
+		isGoodLink=link=>link&&link!=location.href&&link.substr(0,11)!="javascript:",
 		navigated=false,safelyNavigate=target=>{
-			if(!navigated&&target&&target!=location.href&&target.substr(0,11)!="javascript:")
+			if(!navigated&&isGoodLink(target))
 			{
 				bypassed=true
 				navigated=true
@@ -472,6 +473,17 @@ if(document instanceof HTMLDocument)
 					if(b)
 						safelyNavigate(b.href)
 				})
+				domainBypass("rom.io",()=>crowdBypass(()=>{
+					let cI=setInterval(()=>{
+						let a=document.querySelector("a.final-button[href]")
+						if(a&&isGoodLink(a.href))
+						{
+							clearInterval(cI)
+							a.parentNode.removeChild(a)
+							contributeAndNavigate(a.href)
+						}
+					},50)
+				}))
 				if(bypassed)
 					return
 				//Adf.ly Pre-Redirect Nonsense
@@ -491,10 +503,11 @@ if(document instanceof HTMLDocument)
 							return sI(f,10)
 						}
 						let lT=sI(()=>{
-							if(document.querySelector("a.btn.btn-primary.btn-lg.get-link[href]")&&document.querySelector("a.btn.btn-primary.btn-lg.get-link[href]").getAttribute("href").substr(0,11)!="javascript:")
+							let a=document.querySelector("a.btn.btn-primary.btn-lg.get-link[href]")
+							if(a&&isGoodLink(a.href))
 							{
 								clearInterval(lT)
-								safelyNavigate(document.querySelector("a.btn.btn-primary.btn-lg.get-link[href]").href)
+								safelyNavigate(a.href)
 							}
 						},100)
 						return
@@ -517,13 +530,13 @@ if(document instanceof HTMLDocument)
 									safelyNavigate(decodeURIComponent(url.search.split("url=")[1].split("&")[0]))
 							}
 							else crowdBypass(()=>{
-								let tI=setInterval(()=>{
+								let cI=setInterval(()=>{
 									let a=document.querySelector("a.get-link[href]")
 									if(!a)
 										a=document.querySelector(".skip-ad a[href]")
-									if(a&&a.href!=location.href&&a.href.substr(0,11)!="javascript:")
+									if(a&&isGoodLink(a.href))
 									{
-										clearInterval(tI)
+										clearInterval(cI)
 										a.parentNode.removeChild(a)
 										contributeAndNavigate(a.href)
 									}
