@@ -1,49 +1,121 @@
-let d=document
-if(d instanceof HTMLDocument)
+if(document instanceof HTMLDocument)
 {
-	let c=()=>{
-		let ms={},ODP=Object.defineProperty,ev=window.eval,sT=window.setTimeout,sI=window.setInterval,n=(t)=>{if(t&&t!=location.href){window.onbeforeunload=null;location.href=t}},
-		bp=!1,db=(d,b)=>{if(!bp&&(location.hostname==d||location.hostname.substr(location.hostname.length-(d.length+1))=="."+d)){b();bp=!0}},hb=(h,b)=>{if(!bp&&h.test(location.href)){b();bp=!0}},
-		ad=(f)=>{if(["interactive","complete"].indexOf(document.readyState)>-1)f();else document.addEventListener("DOMContentLoaded",()=>sT(f,1))},
-		ui=(m)=>ad(()=>{
-			if(document.getElementById("UNIVERSAL_BYPASS_NO_NOTIFICATIONS"))
+	let injectionCode=()=>{
+		let ODP=(t,p,o)=>{
+			try
+			{
+				Object.defineProperty(t,p,o)
+			}
+			catch(e)
+			{
+				console.warn("Universal Bypass failed to set property",e)
+			}
+		},sT=window.setTimeout,sI=window.setInterval,ev=window.eval,// Note that we *need* to use eval for some bypasses to work and it's no security risk because this script is executed at page level which can be seen at https://playground.timmyrs.de/universal-bypass-exploit
+		isGoodLink=link=>link&&link!=location.href&&link.substr(0,11)!="javascript:",
+		navigated=false,safelyNavigate=target=>{
+			if(!navigated&&isGoodLink(target))
+			{
+				bypassed=true
+				navigated=true
+				debugger//Don't want to navigate away just yet when dev tools are open
+				let url
+				try{url=new URL(target)}catch(e){}
+				if(!url||!url.hash)
+					target+=location.hash
+				window.onbeforeunload=null
+				location.href=target
+			}
+		},
+		bypassed=false,//We keep track if we have already executed a bypass to stop all checks
+		domainBypass=(domain,func)=>{
+			if(!bypassed&&(location.hostname==domain||location.hostname.substr(location.hostname.length-(domain.length+1))=="."+domain))
+			{
+				func()
+				bypassed=true
+			}
+		},
+		hrefBypass=(hrefregex,func)=>{
+			if(!bypassed&&hrefregex.test(location.href))
+			{
+				func()
+				bypassed=true
+			}
+		},
+		ensureDomLoaded=func=>{
+			if(["interactive","complete"].indexOf(document.readyState)>-1)
+				func()
+			else document.addEventListener("DOMContentLoaded",()=>sT(func,1))
+		},
+		crowdBypass=callback=>ensureDomLoaded(()=>{
+			if(location.href.substr(location.href.length-18)=="#ignoreCrowdBypass")
+			{
+				let fs=document.querySelectorAll("form[action]")
+				for(let i=0;i<fs.length;i++)
+					fs[i].action+="#ignoreCrowdBypass"
+				let ls=document.querySelectorAll("a[href]")
+				for(let i=0;i<ls.length;i++)
+					ls[i].href+="#ignoreCrowdBypass"
+				callback()
 				return
-			let d=document.createElement("div")
-			d.setAttribute("style","position:fixed;right:0;bottom:0;box-shadow:0 0 10px 0 rgba(0,0,0,0.75);color:#000;background:#fff;overflow:hidden;border-radius:3px;padding:10px;margin:20px;z-index:100000;line-height:16px;font-size:18px;font-family:sans-serif;direction:ltr")
-			d.innerHTML="<img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALDwAACw8BkvkDpQAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4yMfEgaZUAAAFnSURBVDhPY8AFdAJr1ugEVr/WD6gygwqRBnSCau63LD7wXz+k9qNOQK0lVJh4ADJg55WX/2duvwg0pO6TdlCtNVSKOAAz4NyLXxBDgms/6wVU20ClEUA3sCZEN6hmPwxrB9aagsSB/r81fet5sAFwQ0KwGKIXWC+mHVztAMNaofU8YHGgQgOgBpBGgobgAiCFIKcTNEQvsFJHN7C6RzewqhcZ6wXXmgNpC6Ahb+fuvgI3ZBbQEIOQus9a/lUGYAN0gyqUgAY0oGPtwBp9nYBKe5PIps/LD9+GGzB181lQoD7XCqlQARuACwAD2A+o+duKo3fgmieuP/Uf6LLnOkGVGmBFIFOAoZ+AjnUCqiuAmn8ja+5dc/y/XlANQjMI6AZVu+gE1s5Hx0AvfF6w9xpcc9fKo/+BBqNqxgeQE1LH8sOkaQYBmAEdy4CaA6tJ0wwCIAOKJm8iTzMIALPzNJ2g6hv4NTMwAAD+oRymmiME5wAAAABJRU5ErkJggg==\"> "+m
-			d=document.body.appendChild(d)
-			sT(()=>{
-				document.body.removeChild(d)
-			},5000)
-		})
-		//AdLinkFly
-		let actual_app_vars
-		ODP(this,"app_vars",{
-			set:(v)=>{
-				actual_app_vars=v
-				ui(ms.b)
-			},
-			get:()=>actual_app_vars
+			}
+			let xhr=new XMLHttpRequest()
+			xhr.onreadystatechange=()=>{
+				if(xhr.readyState==4&&xhr.status==200&&xhr.responseText!="")
+					location.href="https://universal-bypass.org/crowd/bypassed?target="+encodeURIComponent(xhr.responseText)+"&back="+encodeURIComponent(location.href)
+				else if(document.querySelector("body[data-crowd-bypass-opt-in]")||!document.querySelector("body[data-crowd-bypass-opt-out]"))
+					callback()
+			}
+			xhr.open("POST","https://universal-bypass.org/crowd/query_v1",true)
+			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+			xhr.send("domain="+encodeURIComponent(domain)+"&path="+encodeURIComponent(location.pathname.toString().substr(1)))
+		}),
+		contributeAndNavigate=target=>{
+			let xhr=new XMLHttpRequest()
+			xhr.onreadystatechange=()=>{
+				if(xhr.readyState==4)
+					location.href=target
+			}
+			xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
+			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+			xhr.send("domain="+encodeURIComponent(domain)+"&path="+encodeURIComponent(location.pathname.toString().substr(1))+"&target="+encodeURIComponent(target))
+		},
+		domain=location.hostname
+		if(domain.substr(0,4)=="www.")
+			domain=domain.substr(4)
+		ODP(this,"blurred",{
+			value:false,
+			writable:false
 		})
 		ODP(this,"ysmm",//Adf.ly
 		{
-			set:(r)=>{
-				let I=X=""
-				for(let m=0;m<r.length;m++)
+			set:r=>{
+				let a,m,I="",X=""
+				for(m=0;m<r.length;m++)
 					if(m%2==0)I+=r.charAt(m);else X=r.charAt(m)+X
 				r=I+X
-				let U=r.split("")
-				for(m=0;m<U.length;m++)if(!isNaN(U[m]))for(let R=m+1;R<U.length;R++)
-					if(!isNaN(U[R])){let S=U[m]^U[R];if(S<10)U[m]=S;m=R;R=U.length}
-				r=U.join("")
-				r=atob(r)
+				a=r.split("")
+				for(m=0;m<a.length;m++)
+				{
+					if(!isNaN(a[m]))
+					{
+						for(var R=m+1;R<a.length;R++)
+						{
+							if(!isNaN(a[R]))
+							{
+								let S=a[m]^a[R]
+								if(S<10)a[m]=S
+									m=R
+								R=a.length
+							}
+						}
+					}
+				}
+				r=a.join('')
+				r=window.atob(r)
 				r=r.substring(r.length-(r.length-16))
 				r=r.substring(0,r.length-16)
-				if(r&&(r.indexOf("http://")==0||r.indexOf("https://")==0))
-				{
-					ui(ms.tS)
-					n(r)
-				}
+				if(r&&(r.indexOf("http://")===0||r.indexOf("https://")===0))
+					safelyNavigate(r)
 			}
 		})
 		//LinkBucks
@@ -53,17 +125,16 @@ if(d instanceof HTMLDocument)
 			get:()=>(a,p)=>{
 				p.Countdown--
 				actualInitLbjs(a,p)
-				ui(ms.tL.replace("%secs%","1"))
 			}
 		})
 		//Safelink
 		let actual_safelink=forced_safelink={counter:0}
 		ODP(this,"safelink",
 		{
-			set:(_)=>{
+			set:_=>{
 				ODP(window,"blurred",{
-					value:!1,
-					writable:!1
+					value:false,
+					writable:false
 				})
 				for(let k in _)
 				{
@@ -71,7 +142,6 @@ if(d instanceof HTMLDocument)
 					if(forced_safelink[k]===undefined)
 						actual_safelink[k]=v
 				}
-				ui(ms.tS)
 			},
 			get:()=>actual_safelink
 		})
@@ -79,157 +149,139 @@ if(d instanceof HTMLDocument)
 		{
 			ODP(safelink,key,
 			{
-				writable:!1,
+				writable:false,
 				value:forced_safelink[key]
 			})
 		}
-		//YetiShare Template
+		//YetiShare
 		let actual_web_root
 		ODP(this,"WEB_ROOT",{
-			set:(v)=>{
+			set:v=>{
 				ODP(this,"seconds",{
 					value:0,
-					writable:!1
+					writable:false
 				})
 				actual_web_root=v
 			},
 			get:()=>actual_web_root
 		})
-		hb(/ur\.ly|urly\.mobi/,()=>{
+		hrefBypass(/ur\.ly|urly\.mobi/,()=>{
 			if(location.pathname.length>2&&location.pathname.substr(0,6)!="/goii/")
-				n("/goii/"+location.pathname.substr(2)+"?ref="+location.hostname+location.pathname)
+				safelyNavigate("/goii/"+location.pathname.substr(2)+"?ref="+location.hostname+location.pathname)
 		})
-		db("cshort.org",()=>{
+		domainBypass("cshort.org",()=>{
 			ODP(this,"adblock",{
-				value:!1,
-				writable:!1
+				value:false,
+				writable:false
 			})
 			ODP(this,"i",{
 				value:0,
-				writable:!1
+				writable:false
 			})
-			ad(()=>
+			ensureDomLoaded(()=>
 			{
 				let lT=sI(()=>
 				{
 					if(document.querySelector(".next[href]"))
 					{
 						clearInterval(lT)
-						ui(ms.tS)
-						n(atob(atob(document.querySelector(".next[href]").getAttribute("href"))))
+						safelyNavigate(atob(atob(document.querySelector(".next[href]").getAttribute("href"))))
 					}
 				},100)
 			})
 		})
-		db("link.tl",()=>{
+		domainBypass("link.tl",()=>{
 			ODP(this,"countdown",{
 				value:0,
-				writable:!1
+				writable:false
 			})
 			let lT=sI(()=>
 			{
 				if(document.querySelector(".skip > .btn"))
 				{
-					ui(ms.tS)
+					clearInterval(lT)
 					document.querySelector(".skip > .btn").click()
 				}
 			},100)
 		})
-		db("onepiece-ex.com.br",()=>{
+		domainBypass("onepiece-ex.com.br",()=>{
 			ODP(this,"seconds",{
 				value:1,
-				writable:!1
+				writable:false
 			})
 			let lT=sI(()=>{
 				if(document.getElementById("continuar"))
 				{
 					clearInterval(lT)
-					ui(ms.tS)
-					n(document.getElementById("continuar").href)
+					safelyNavigate(document.getElementById("continuar").href)
 				}
 			},100)
 		})
-		db("akoam.net",()=>{
+		domainBypass("akoam.net",()=>{
 			ODP(this,"timer",{
 				value:0,
-				writable:!1
+				writable:false
 			})
 			let lT=sI(()=>{
 				if(document.querySelector(".download_button"))
 				{
 					clearInterval(lT)
-					ui(ms.tS)
-					n(document.querySelector(".download_button").href)
+					safelyNavigate(document.querySelector(".download_button").href)
 				}
 			},100)
 		})
-		hb(/1v\.to\/t\/.*/,()=>{
+		hrefBypass(/1v\.to\/t\/.*/,()=>{
 			location.pathname=location.pathname.split("/t/").join("/saliendo/")
 		})
-		db("share-online.biz",()=>{
+		domainBypass("share-online.biz",()=>{
 			ODP(this,"wait",{
-				set:(_)=>{},
+				set:s=>0,
 				get:()=>{
-					ui(ms.tL.replace("%secs%","13"))
 					return 2
 				}
 			})
 		})
-		db("sfile.mobi",()=>{
+		hrefBypass(/sfile\.(mobi|xyz)/,()=>{
 			ODP(this,"downloadButton",{
-				set:function(b)
-				{
+				set:b=>{
 					if(b&&b.href)
-					{
-						ui(ms.tS)
-						n(b.href)
-					}
+						safelyNavigate(b.href)
 				}
 			})
 		})
-		db("mylink.zone",()=>{
+		domainBypass("mylink.zone",()=>{
 			ODP(this,"seconde",{
-				set:(_)=>{},
+				set:_=>{},
 				get:()=>{
-					ui(ms.tS)
 					return -1
 				}
 			})
 		})
-		db("sourceforge.net",()=>{
-			var b=document.createElement("button"),d=!1
+		domainBypass("sourceforge.net",()=>{
+			var b=document.createElement("button"),d=false
 			b.className="direct-download"
 			b.style.display="none"
 			document.documentElement.appendChild(b)
 			ODP(this,"log",{
-				value:(m)=>{
+				value:m=>{
 					console.log(m)
 					if(m=="triggering downloader:start")
-					{
-						ui(ms.tS)
-						d=!0
-					}
+						d=true
 				},
-				writable:!1
+				writable:false
 			})
-			ad(()=>{
+			ensureDomLoaded(()=>{
 				let bT=sI(()=>{
 					if(d)
-					{
 						clearInterval(bT)
-						location.href="about:blank"
-					}
 					else b.click()
 				},100)
 			})
 		})
-		db("bc.vc",()=>{
-			window.setInterval=(f)=>{
-				ui(ms.tL.replace("%secs%","1"))
-				return sI(f,800)
-			}
+		domainBypass("bc.vc",()=>{
+			window.setInterval=f=>sI(f,800)
 		})
-		db("shortly.xyz",()=>{
+		domainBypass("shortly.xyz",()=>{
 			if(location.pathname.substr(0,3)=="/r/")
 				document.getElementById=()=>({submit:()=>{
 					let f=document.querySelector("form")
@@ -241,39 +293,22 @@ if(d instanceof HTMLDocument)
 				let xhr=new XMLHttpRequest()
 				xhr.onreadystatechange=()=>{
 					if(xhr.readyState==4&&xhr.status==200)
-					{
-						ui(ms.tS)
-						n(xhr.responseText)
-					}
+						safelyNavigate(xhr.responseText)
 				}
-				xhr.open("POST","https://www.shortly.xyz/getlink.php",!0)
+				xhr.open("POST","https://www.shortly.xyz/getlink.php",true)
 				xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded")
 				xhr.setRequestHeader("X-Requested-With","XMLHttpRequest")
 				xhr.send("id="+location.hash.replace("#",""))
 			}
 		})
-		if(!bp)
-			ad(()=>{
-				hb(/ouo\.(io|press)/,()=>ui(ms.b))
-				db("rom.io",()=>ui(ms.b))
-				db("adfoc.us",()=>{
-					let b=document.querySelector(".skip")
-					if(b&&b.href)
-					{
-						ui(ms.tS)
-						n(b.href)
-					}
+		if(!bypassed)
+			ensureDomLoaded(()=>{
+				domainBypass("adfoc.us",()=>{
+					let b=document.querySelector(".skip[href]")
+					if(b)
+						safelyNavigate(b.href)
 				})
-				db("linkshrink.net",()=>{
-					let p=document.getElementById("pause"),s=document.getElementById("skip")
-					if(p&&s)
-					{
-						p.style.display="none"
-						s.style.display="block"
-						ui(ms.tS)
-					}
-				})
-				db("sub2unlock.com",()=>{
+				domainBypass("sub2unlock.com",()=>{
 					$(document).ready(()=>{
 						let steps=document.querySelectorAll(".uk.unlock-step-link.check")
 						if(steps.length)
@@ -284,93 +319,58 @@ if(d instanceof HTMLDocument)
 								steps[0].removeAttribute("target")
 								steps[0].setAttribute("href","#")
 								steps[0].click()
-								ui(ms.tS)
 								document.getElementById("link").click()
 							}
 						})
 				})
-				db("srt.am",()=>{
+				domainBypass("srt.am",()=>{
 					if(document.querySelector(".skip-container"))
 					{
 						let f=document.createElement("form")
 						f.method="POST"
 						f.innerHTML='<input type="hidden" name="_image" value="Continue">'
 						f=document.body.appendChild(f)
-						ui(ms.tS)
 						f.submit()
 					}
 				})
-				db("admy.link",()=>{
+				domainBypass("admy.link",()=>{
 					let f=document.querySelector(".edit_link")
 					if(f)
-					{
-						ui(ms.tS)
 						f.submit()
-					}
 				})
-				db("ysear.ch",()=>{
-					let b=document.getElementById("NextVideo")
-					if(b&&b.href)
-					{
-						ui(ms.tS)
-						n(b.href)
-					}
+				domainBypass("ysear.ch",()=>{
+					let b=document.querySelector("#NextVideo[href]")
+					if(b)
+						safelyNavigate(b.href)
 				})
-				db("1ink.cc",()=>{
+				domainBypass("1ink.cc",()=>{
 					if(typeof SkipAd=="function")
-					{
-						ui(ms.tS)
 						SkipAd()
-					}
 				})
-				db("v1.94lauin.com",()=>{
-					jQuery.prototype._attr=jQuery.prototype.attr
-					jQuery.prototype.attr=function(a,v)
-					{
-						if(!v&&window.selector==".count-timer"&&a=="data-timer")
-						{
-							ui(ms.tS)
-							return 1
-						}
-						return window._attr(a,v)
-					}
-					let lT=sI(()=>{
-						if(document.querySelector(".link-content > a")&&document.querySelector(".link-content > a").getAttribute("href")!="#")
-						{
-							clearInterval(lT)
-							n(document.querySelector(".link-content > a").href)
-						}
-					},100)
-				})
-				db("losstor.com",()=>{
+				domainBypass("losstor.com",()=>{
 					let b=document.getElementById("re_link")
 					if(b)
 					{
-						window.open=n
-						ui(ms.tS)
+						window.open=safelyNavigate
 						b.click()
 					}
 				})
-				db("bagisoft.net",()=>{
+				domainBypass("bagisoft.net",()=>{
 					let b=document.getElementById("makingdifferenttimer")
 					if(b)
 					{
-						window.open=n
-						ui(ms.tS)
+						window.open=safelyNavigate
 						b.click()
 					}
 					else
 						jQuery.prototype.animateProgress=(p,f)=>f()
 				})
-				db("skinnycat.net",()=>{
-					let b=document.getElementById("dl")
-					if(b&&b.href)
-					{
-						ui(ms.tS)
-						n(b.href)
-					}
+				domainBypass("skinnycat.net",()=>{
+					let b=document.querySelector("#dl[href]")
+					if(b)
+						safelyNavigate(b.href)
 				})
-				db("fshare.vn",()=>{
+				domainBypass("fshare.vn",()=>{
 					if("$" in window)
 					{
 						let f=$("#form-download")
@@ -380,14 +380,12 @@ if(d instanceof HTMLDocument)
 								"url":f.attr("action"),
 								"type":"POST",
 								"data":f.serialize()
-							}).done((data)=>{
-								ui(ms.tS)
-								n(data.url)
-							})
+							}).done(data=>safelyNavigate(data.url))
 						}
 					}
 				})
-				db("dwindly.io",()=>{
+				domainBypass("dwindly.io",()=>{
+					//We trick the site into running window.open for the target site by executing an onclick handler.
 					let b=document.getElementById("btd1")
 					if(b)
 					{
@@ -399,70 +397,161 @@ if(d instanceof HTMLDocument)
 						b=document.getElementById("btd")
 						if(b)
 						{
-							window.open=n
+							window.open=safelyNavigate
 							ev("("+b.onclick.toString().split(";")[0]+"})()")
 						}
 					}
-					ui(ms.tS)
 				})
-				db("vpsat.net",()=>{
-					ui(ms.tS)
-					n(url)
-				})
-				db("bluemediafiles.com",()=>{
+				domainBypass("bluemediafiles.com",()=>{
 					if(typeof FinishMessage=="string"&&FinishMessage.indexOf("<a href=")>-1)
 					{
-						ui(ms.tS)
+						//The FinishMessage string contains the HTML anchor element needed to get to the destination so we just replace the entire website with it because we don't need any of the other content anymore.
 						document.write(FinishMessage)
 						document.querySelector("a").click()
 					}
 				})
-				db("complete2unlock.com",()=>{
-					let jT=sI(()=>{
-						if(typeof $=="function")
-						{
-							clearInterval(jT)
-							$(document).ready(()=>sT(()=>{
-								window.open=(h)=>{return{location:{href:h}}}
-								window.setTimeout=(f)=>f()
-								let bs=document.querySelectorAll("[data-main-url]")
-								for(let i in bs)
-								{
-									let b=bs[i]
-									if(b instanceof HTMLElement)
-										b.click()
-								}
-							},100))
-						}
-					},100)
+				domainBypass("complete2unlock.com",()=>{
+					if(["/","/home","/create","/settings"].indexOf(location.pathname)==-1&&location.pathname.substr(0,5)!="/api/"&&location.pathname.substr(0,6)!="/edit/")
+						safelyNavigate("/api/links/complete"+location.pathname)
 				})
-				db("hidelink.club",()=>{
+				domainBypass("hidelink.club",()=>{
 					if(hash)
-					{
-						ui(ms.tS)
-						n(decodeURIComponent(atob(hash)).replace("%23", "#"))
-					}
+						safelyNavigate(decodeURIComponent(atob(hash)).replace("%23", "#"))
 				})
-				db("won.pe",()=>
+				domainBypass("won.pe",()=>
 				{
 					if(document.querySelector(".captcha_loader .progress-bar"))
-					{
 						document.querySelector(".captcha_loader .progress-bar").setAttribute("aria-valuenow","100")
-						ui(ms.tS)
-					}
 				})
-				db("stealive.club",()=>{
+				domainBypass("stealive.club",()=>{
 					if(document.getElementById("counter"))
-					{
 						document.getElementById("counter").innerHTML="0"
-						ui(ms.tS)
+				})
+				hrefBypass(/(binerfile|pafpaf)\.info/,()=>{//KuroSafe
+					let b=document.querySelector("#mybutton[href]")
+					if(b)
+						safelyNavigate(b.href)
+				})
+				domainBypass("gotoo.loncat.in",()=>{
+					let a=document.querySelector("a[href^='http://gotoo.loncat.in/go.php?open=']")
+					if(a)
+						safelyNavigate(a.href)
+				})
+				domainBypass("id-share19.com",()=>window.setTimeout=(f)=>sT(f,1))
+				domainBypass("idnation.net",()=>{
+					let b=document.querySelector("#linko[href]")
+					if(b)
+						safelyNavigate(b.href)
+				})
+				domainBypass("mazika2day.com",()=>{
+					let b=document.querySelector(".linkbtn[href]")
+					if(b)
+						safelyNavigate(b.href)
+				})
+				domainBypass("ux9.de",()=>{
+					let m=document.querySelector("meta[http-equiv='refresh'][content]")
+					if(m&&m.getAttribute("content").indexOf(";url=http")>-1)
+					safelyNavigate(m.getAttribute("content").split(";url=")[1])
+				})
+				domainBypass("telolet.in",()=>{
+					let b=document.querySelector("a#skip[href]")
+					if(!b)
+						b=document.querySelector(".redirect_url > a[href]")
+					if(b)
+						safelyNavigate(b.href)
+				})
+				domainBypass("vipdirect.cc",()=>{
+					if(typeof ab=="number"&&typeof asdf=="function")
+					{
+						ab=5
+						window.open=safelyNavigate
+						asdf()
 					}
 				})
-				if(bp)
+				domainBypass("rapidcrypt.net",()=>{
+					let b=document.querySelector(".push_button.blue[href]")
+					if(b)
+						safelyNavigate(b.href)
+				})
+				domainBypass("rom.io",()=>crowdBypass(()=>{
+					let cI=setInterval(()=>{
+						let a=document.querySelector("a.final-button[href]")
+						if(a&&isGoodLink(a.href))
+						{
+							clearInterval(cI)
+							a.parentNode.removeChild(a)
+							contributeAndNavigate(a.href)
+						}
+					},50)
+				}))
+				if(bypassed)
 					return
+				//Adf.ly Pre-Redirect Nonsense
+				if(location.pathname.substr(0,13)=="/redirecting/"&&document.querySelector("p[style]").textContent=="For your safety, never enter your password unless you're on the real Adf.ly site.")
+				{
+					let a=document.querySelector("a[href]")
+					if(a)
+						safelyNavigate(a.href)
+					return
+				}
+				if(typeof app_vars=="object")
+				{
+					//SafelinkU
+					if(document.querySelector("b[style='color: #3e66b3']")&&document.querySelector("b[style='color: #3e66b3']").textContent=="SafelinkU")
+					{
+						window.setInterval=(f)=>{
+							return sI(f,10)
+						}
+						let lT=sI(()=>{
+							let a=document.querySelector("a.btn.btn-primary.btn-lg.get-link[href]")
+							if(a&&isGoodLink(a.href))
+							{
+								clearInterval(lT)
+								safelyNavigate(a.href)
+							}
+						},100)
+						return
+					}
+					if(document.querySelector("b[style='color : #3e66b3']")&&document.querySelector("b[style='color: #3e66b3']").textContent=="Shortener url?")
+					{
+						return
+					}
+					//AdLinkFly
+					let xhr=new XMLHttpRequest()
+					xhr.onreadystatechange=()=>{
+						if(xhr.readyState==4&&xhr.status==200)
+						{
+							let match=/<img src="\/\/api\.miniature\.io\/[a-zA-Z0-9?=&%."]+\n?.+>/.exec(xhr.responseText)
+							if(match)
+							{
+								let url=new URL(new DOMParser().parseFromString("<!DOCTYPE html><html><body>"+match[0].split("\r").join("").split("\n").join(" ")+"</body></html>","text/html").querySelector("img").src)
+								console.log(url)
+								if(url.search&&url.search.indexOf("url="))
+									safelyNavigate(decodeURIComponent(url.search.split("url=")[1].split("&")[0]))
+							}
+							else crowdBypass(()=>{
+								let cI=setInterval(()=>{
+									let a=document.querySelector("a.get-link[href]")
+									if(!a)
+										a=document.querySelector(".skip-ad a[href]")
+									if(a&&isGoodLink(a.href))
+									{
+										clearInterval(cI)
+										a.parentNode.removeChild(a)
+										contributeAndNavigate(a.href)
+									}
+								},50)
+							})
+						}
+					}
+					xhr.open("GET",(location.pathname+"/info").replace("//","/"),true)
+					xhr.send()
+					return
+				}
 				//GemPixel Premium URL Shortener
 				if(typeof appurl!="undefined"&&typeof token!="undefined")
 				{
+					//For this bypass to work, we detect a certain inline script, modify and execute it.
 					let scripts=document.getElementsByTagName("script")
 					for(let i in scripts)
 					{
@@ -489,94 +578,155 @@ if(d instanceof HTMLDocument)
 								{
 									cont="let count=0;"+cont
 								}
-								cont=cont.split("$(window).on('load', ").join("let r=(f)=>f();r(")
-								window.setInterval=(f)=>f()
+								cont=cont.split("$(window).on('load', ").join("let r=f=>f();r(")
+								window.setInterval=f=>f()
 								ev(cont)
 								window.setInterval=sI
-								n(document.querySelector("a.redirect").href)
+								safelyNavigate(document.querySelector("a.redirect").href)
+								return
+							}
+							else if(cont.trim().substr(0,69)=='!function(a){a(document).ready(function(){var b,c=a(".link-content"),')
+							{
+								safelyNavigate(cont.trim().substr(104).split('",e=0,f=a(".count-timer"),g=f.attr("data-timer"),h=setInterval(')[0])
 								return
 							}
 						}
 					}
-					//Ally Captcha
-					if(document.getElementById("messa")&&document.getElementById("html_element"))
+					if(document.getElementById("messa")&&document.getElementById("html_element"))//Ally Captcha
 					{
 						document.getElementById("messa").className+=" hidden"
 						document.getElementById("html_element").className=document.getElementById("html_element").className.split("hidden").join("").trim()
+						return
 					}
 				}
-				//Soralink Plugin
+				//Soralink Wordpress Plugin
 				if(document.querySelector(".sorasubmit"))
 				{
 					document.querySelector(".sorasubmit").click()
 					return
 				}
-				let rCL=()=>((document.querySelectorAll("img#pleasewait").length&&document.querySelector(".wait"))||document.getElementById("showlink")||document.getElementById("download")||document.getElementsByTagName("style='margin-top:").length)
-				if(typeof changeLink=="function")
+				if(document.querySelector("#lanjut > #goes[href]"))
 				{
-					if(rCL())
-					{
-						window.open=n
-						ui(ms.tS)
-						changeLink()
-						return
-					}
-					let cLT=sI(()=>{
-						if(rCL())
-						{
-							clearInterval(cLT)
-							window.open=n
-							ui(ms.tS)
-							changeLink()
-						}
-					},100)
-				}
-				if(document.querySelector("#lanjut > #goes"))
-				{
-					let b=document.querySelector("#lanjut > #goes")
-					if(b&&b.href)
-					{
-						ui(ms.tS)
-						n(b.href)
-					}
+					safelyNavigate(document.querySelector("#lanjut > #goes[href]").href)
 					return
 				}
 				if(document.getElementById("waktu")&&document.getElementById("goto"))
 				{
-					ui(ms.tS)
-					n(document.getElementById("goto").href)
+					safelyNavigate(document.getElementById("goto").href)
 					return
+				}
+				if(typeof bukalink=="function"&&document.getElementById("bijil1")&&document.getElementById("bijil2"))//gosavelink.com
+				{
+					window.open=safelyNavigate
+					bukalink()
+					return
+				}
+				if(typeof changeLink=="function")
+				{
+					let cLT=sI(()=>{
+						if((document.querySelectorAll("img#pleasewait").length&&document.querySelector(".wait"))
+							||document.getElementById("showlink")
+							||document.getElementById("download")
+							||document.getElementsByTagName("style='margin-top:").length
+							||document.querySelector(".Visit_Link")//yametesenpai.xyz
+							||document.getElementById("daplong")//converthinks.xyz
+							)
+						{
+							clearInterval(cLT)
+							window.open=safelyNavigate
+							if(typeof changeLink=="function")
+								changeLink()
+							else if(document.getElementById("link-download"))//hightech.web.id
+								safelyNavigate(document.getElementById("link-download").href)
+						}
+					},100)
+				}
+				//Safelink Wordpress Plugin
+				if(document.querySelector(".wp-safelink-button"))
+				{
+					window.setInterval=f=>sI(f,1)
+					let lT=sI(()=>{
+						if(document.querySelector(".wp-safelink-button.wp-safelink-success-color"))
+						{
+							clearInterval(lT)
+							window.open=safelyNavigate
+							document.querySelector(".wp-safelink-button.wp-safelink-success-color").click()
+						}
+					},100)
+				}
+				if(document.getElementById("wpsafe-generate")&&typeof wpsafegenerate=="function")
+				{
+					let search=location.search.toString().replace("?", "")
+					if(search.substr(0,3)=="go=")
+					{
+						search=atob(search.substr(3))
+						if(search.substr(0,4)=="http")
+							safelyNavigate(search)
+					}
+					else if(location.pathname.toString().substr(0,4)=="/go/")
+					{
+						search=atob(location.pathname.toString().substr(4))
+						if(search.substr(0,4)=="http")
+							safelyNavigate(search)
+					}
 				}
 				//Other Templates
-				if(document.querySelector("form#skip")&&document.getElementById("btn-main")&&!document.querySelector(".g-recaptcha"))
+				if(document.querySelector("#tungguyabro")&&typeof WaktunyaBro=="number")//short.mangasave.me
 				{
-					ui(ms.tS)
-					document.querySelector("form#skip").submit()
+					WaktunyaBro=0
+					setInterval(()=>{
+						if(document.querySelector("#tungguyabro a[href]"))
+							safelyNavigate(document.querySelector("#tungguyabro a[href]").href)
+					},100)
 					return
 				}
-				if(document.querySelector("a#btn-main")&&typeof Countdown=="function")
+				if(document.querySelector("#yangDihilangkan > a")&&document.querySelector("#downloadArea > .text-center"))//rathestation.bid
 				{
-					ui(ms.tS)
-					n(document.querySelector("a#btn-main").href)
+					safelyNavigate(document.querySelector("#yangDihilangkan > a").href)
+					return
+				}
+				if(document.querySelector("a#btn-main.disabled")&&typeof Countdown=="function")//Croco,CPMLink,Sloomp.space
+				{
+					safelyNavigate(document.querySelector("a#btn-main.disabled").href)
+					return
+				}
+				if(document.querySelector("a.redirectBTN.disabled")&&document.querySelector(".timer"))//Arablionz.online
+				{
+					safelyNavigate(document.querySelector("a.redirectBTN.disabled").href)
+					return
+				}
+				if(document.querySelector(".shortened_link a[href][ng-href][target='_blank']"))//Go2to.com,Go2too.com,Golink.to
+				{
+					safelyNavigate(document.querySelector(".shortened_link a[href][ng-href][target='_blank']").href)
+				}
+				if(document.querySelector("form#skip")&&document.getElementById("btn-main")&&!document.querySelector(".g-recaptcha"))
+				{
+					document.querySelector("form#skip").submit()
 					return
 				}
 				if(document.getElementById("countdown")&&document.querySelector(".seconds"))
 				{
-					ui(ms.tS)
-					document.querySelector(".seconds").textContent="0"
+					let doBypass=!0
+					domainBypass("mexashare.com",()=>doBypass=!1)
+					domainBypass("up-4.net",()=>doBypass=!1)
+					domainBypass("file-upload.com",()=>doBypass=!1)
+					if(doBypass)
+						document.querySelector(".seconds").textContent="0"
+					return
+				}
+				if(document.querySelector("#ddl #download_link .btn"))
+				{
+					window.open=safelyNavigate
+					document.querySelector("#ddl #download_link > .btn").click()
 					return
 				}
 				if(typeof file_download=="function")
 				{
-					window.setInterval=(f)=>{
-						ui(ms.tS)
-						return sI(f,1)
-					}
+					window.setInterval=f=>sI(f,1)
 					return
 				}
 				if(document.querySelector("input[type=\"submit\"][name=\"method_free\"]"))
 				{
-					ui(ms.tS)
 					document.querySelector("input[type=\"submit\"][name=\"method_free\"]").click()
 					return
 				}
@@ -586,120 +736,83 @@ if(d instanceof HTMLDocument)
 					form.method="POST"
 					form.innerHTML='<input type="hidden" name="op" value="download1"><input type="hidden" name="usr_login" value="C"><input type="hidden" name="id" value="'+location.pathname.toString().substr(1)+'"><input type="hidden" name="fname" value="'+document.querySelectorAll("div#container > div > div > table > tbody > tr > td")[2].textContent+'"><input type="hidden" name="referer" value="q"><input type="hidden" name="method_free" value="Free Download">'
 					form=document.body.appendChild(form)
-					ui(ms.tS)
 					form.submit()
 					return
 				}
-				//Shorte.st
-				if(typeof app!="undefined"&&"options"in app&&"intermediate"in app.options)
+				if(document.querySelector("a[href^='https://linkshrink.net/homepage'] > img.lgo"))//LinkShrink.net
+				{
+					let p=document.getElementById("pause"),s=document.getElementById("skip")
+					if(p&&s)
+					{
+						p.style.display="none"
+						s.style.display="block"
+					}
+				}
+				if(typeof app!="undefined"&&"options"in app&&"intermediate"in app.options)//Shorte.st
 				{
 					app.options.intermediate.timeToWait=3
-					ui(ms.tL.replace("%secs%","2"))
 					let b=document.getElementById(app.options.intermediate.skipButtonId),
 					lT=sI(()=>{
 						if(b.className.indexOf("show")>-1)
 						{
 							clearInterval(lT)
-							n(app.options.intermediate.destinationUrl)
+							safelyNavigate(app.options.intermediate.destinationUrl)
 						}
 					},100)
 					return
 				}
-				//GetsURL.com
-				if(document.querySelector(".img-responsive[alt='Gets URL']")&&typeof x!="undefined")
+				if(document.querySelector(".img-responsive[alt='Gets URL']")&&typeof x!="undefined")//GetsURL.com
 				{
 					let b=document.getElementById("link")
 					if(b)
 					{
-						ui(ms.tS)
-						n(b.href+"&ab"+x)
+						safelyNavigate(b.href+"&ab"+x)
 						return
 					}
 				}
-				//Linkvertise.net
-				if(document.querySelector(".logo > a[href='http://linkvertise.net'] > img[src='/assets/img/linkvertise.png']"))
+				if(document.querySelector(".logo > a[href='http://linkvertise.net'] > img[src='/assets/img/linkvertise.png']"))//Linkvertise.net
 				{
 					let b=document.querySelector("[data-download]")
 					if(b)
 					{
-						ui(ms.tS)
-						n(b.getAttribute("data-download"))
+						safelyNavigate(b.getAttribute("data-download"))
 						return
 					}
 				}
-				//OpenLoad
-				if(document.querySelectorAll("img[src='/assets/img/logo.png'][alt='Openload']").length)
+				if(document.querySelectorAll("img[src='/assets/img/logo.png'][alt='Openload']").length)//OpenLoad
 				{
-					if(typeof secondsdl!=="undefined")
-					{
+					if(typeof secondsdl!="undefined")
 						secondsdl=0
-						ui(ms.tS)
-					}
-					return
-				}
-				//SafelinkU
-				if(document.querySelector("b[style='color: #3e66b3']")&&document.querySelector("b[style='color: #3e66b3']").textContent=="SafelinkU")
-				{
-					window.setInterval=(f)=>{
-						ui(ms.tS)
-						return sI(f,10)
-					}
-					let lT=sI(()=>{
-						if(document.querySelector("a.btn.btn-primary.btn-lg.get-link[href]")&&document.querySelector("a.btn.btn-primary.btn-lg.get-link[href]").getAttribute("href").substr(0,11)!="javascript:")
-						{
-							clearInterval(lT)
-							ui(ms.tS)
-							n(document.querySelector("a.btn.btn-primary.btn-lg.get-link[href]").href)
-						}
-					},100)
-					return
-				}
-				else if(document.querySelector("b[style='color : #3e66b3']")&&document.querySelector("b[style='color: #3e66b3']").textContent=="Shortener url?")
-				{
-					ui(ms.tS)
-					document.querySelector("button.btn.btn-success[type='submit']").click()
-					return
-				}
-				//KuroSafe
-				if(document.querySelector("a#mybutton.btn.btn-md.btn-primary[href^='https://www.kurosafe.online/']")||document.querySelector("a#mybutton.btn.btn-md.btn-primary[href^='https://kurosafe.online/']"))
-				{
-					ui(ms.tS)
-					n(document.getElementById("mybutton").href)
 					return
 				}
 				//SafeLinkReview.com
 				if(document.querySelector(".navbar-brand")&&document.querySelector(".navbar-brand").textContent.trim()=="Safe Link Review"&&document.querySelector(".button.green"))
 				{
-					window.open=n
-					ui(ms.tS)
+					window.open=safelyNavigate
 					document.querySelector(".button.green").click()
 					return
 				}
-				if(location.hostname=="decrypt2.safelinkconverter.com"&&document.querySelector(".redirect_url a"))
+				if(location.hostname=="decrypt2.safelinkconverter.com"&&document.querySelector(".redirect_url > div[onclick]"))
 				{
-					window.open=n
-					ui(ms.tS)
-					document.querySelector(".redirect_url a").click()
+					window.open=safelyNavigate
+					document.querySelector(".redirect_url > div[onclick]").click()
 					return
 				}
 				let t=document.querySelector("title")
 				if(t)
 				{
-					//Viid.su
-					if(t.textContent.trim()=="Viid.su")
+					if(t.textContent.trim()=="Viid.su")//Viid.su
 					{
 						let b=document.getElementById("link-success-button")
 						if(b&&b.getAttribute("data-url"))
 						{
-							ui(ms.tS)
-							n(b.getAttribute("data-url"))
+							safelyNavigate(b.getAttribute("data-url"))
 							return
 						}
 					}
 				}
 				sI(()=>{
-					//Shorte.st Embed
-					if(document.querySelectorAll(".lay-sh.active-sh").length)
+					if(document.querySelectorAll(".lay-sh.active-sh").length)//Shorte.st Embed
 					{
 						let elm=document.querySelectorAll(".lay-sh.active-sh")[0]
 						elm.parentNode.removeChild(elm)
@@ -707,44 +820,40 @@ if(d instanceof HTMLDocument)
 				},500)
 			})
 	},//
-	i=(t)=>{
-		s=d.createElement("script")
-		s.innerHTML=t
-		s=d.documentElement.appendChild(s)
-		setTimeout(()=>{d.documentElement.removeChild(s)},10)
+	//This method of injecting the script is faster than any interfering extensions in most cases
+	injectScript=text=>{
+		let script=document.createElement("script")
+		script.innerHTML=text
+		script=document.documentElement.appendChild(script)
+		setTimeout(()=>{//Removing the script again after it's been executed to keep the DOM clean
+			document.documentElement.removeChild(script)
+		},10)
 	}
-	i("("+c.toString().replace("let ms={},","let ms={tS:\""+chrome.i18n.getMessage("notificationTimerSkip")+"\",tL:\""+chrome.i18n.getMessage("notificationTimerLeap")+"\",b:\""+chrome.i18n.getMessage("notificationBackend")+"\"},")+")()")
-	chrome.storage.sync.get(["no_notifications"],(result)=>{
-		if(result&&result.no_notifications&&result.no_notifications==="true")
-		{
-			let f=()=>{
-				let d=document.createElement("div")
-				d.id="UNIVERSAL_BYPASS_NO_NOTIFICATIONS"
-				d.style.display="none"
-				document.body.appendChild(d)
-			}
-			if(["interactive","complete"].indexOf(document.readyState)>-1)f();else document.addEventListener("DOMContentLoaded",f)
-		}
+	//Inserting the translation strings into our injection code and injecting it into the website.
+	injectScript("("+injectionCode.toString()+")()")
+	chrome.storage.sync.get(["crowd_bypass_opt_out"],result=>{
+		let setCrowdBypassAttribute=()=>document.body.setAttribute("data-crowd-bypass-opt-"+(result&&result.crowd_bypass_opt_out&&result.crowd_bypass_opt_out==="true"?"out":"in"),"")
+		if(["interactive","complete"].indexOf(document.readyState)>-1)setCrowdBypassAttribute();else document.addEventListener("DOMContentLoaded",setCrowdBypassAttribute)
 	})
-	chrome.storage.local.get(["custom_bypasses"],(result)=>
+	chrome.storage.local.get(["custom_bypasses"],result=>
 	{
-		let evalResult=(result)=>{
+		let evalResult=result=>{
 			if(result&&result.custom_bypasses)
 			{
-				let cB=JSON.parse(result.custom_bypasses)
-				for(let n in cB)
+				let customBypasses=JSON.parse(result.custom_bypasses)
+				for(let name in customBypasses)
 				{
-					let b=cB[n],cs=b.content
-					if(b.domains=="*")
-						i(cs)
+					let customBypass=customBypasses[name]
+					if(customBypass.domains=="*")
+						injectScript(customBypass.content)
 					else
 					{
-						let ds=b.domains.split(",")
-						for(let di in ds)
+						let domains=customBypass.domains.split(",")
+						for(let i in domains)
 						{
-							let d=ds[di]
-							if(location.hostname==d||location.hostname.substr(location.hostname.length-(d.length+1))=="."+d)
-								i(cs)
+							let domain=domains[i]
+							if(location.hostname==domain||location.hostname.substr(location.hostname.length-(domain.length+1))=="."+domain)
+								injectScript(customBypass.content)
 						}
 					}
 				}

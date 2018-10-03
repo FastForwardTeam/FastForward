@@ -29,8 +29,20 @@
 	"save": {
 		"message": "Save"
 	},
-	"optionsNotifications": {
-		"message": "Show status notifications on websites Universal Bypass knows."
+	"optionsTrackerBypass": {
+		"message": "Bypass trackers using api.hell.sh."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Block IP loggers if they can't be bypassed."
+	},
+	"optionsCrowdBypass": {
+		"message": "Participate in Crowd Bypass."
+	},
+	"moreInfo": {
+		"message": "More info"
+	},
+	"privacyPolicy": {
+		"message": "Privacy Policy"
 	},
 	"optionsUserscripts": {
 		"message": "Custom Bypasses"
@@ -47,13 +59,19 @@
 	"optionsUserscriptsDelete": {
 		"message": "Delete Bypass"
 	},
-	"notificationTimerSkip": {
-		"message": "Universal Bypass just skipped that timer for you."
+	"blockedTitle": {
+		"message": "Universal Bypass prevented your IP from being logged."
 	},
-	"notificationTimerLeap": {
-		"message": "Universal Bypass just removed %secs% second(s) from that timer."
+	"blockedSubtitle": {
+		"message": "If you don't want Universal Bypass to prevent bad actors from getting your IP, disable this in the options:"
 	},
-	"notificationBackend": {
-		"message": "Universal Bypass can't bypass this site because they have a server-side check."
+	"crowdBypassed": {
+		"message": "You might not have to wait!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Other Universal Bypass users have already waited for you and reported that this leads to %"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Was this not correct?"
 	}
 }

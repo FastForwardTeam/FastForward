@@ -1,6 +1,7 @@
 {
 	"manifest_version": 2,
 	"icons": {
+		"64": "icon/icon_64.png",
 		"128": "icon/icon_128.png",
 		"256": "icon/icon_256.png",
 		"512": "icon/icon_512.png"
@@ -9,7 +10,7 @@
 	"name": "Universal Bypass",
 	"description": "__MSG_appDesc__",
 	"homepage_url": "https://universal-bypass.org/",
-	"version": "4.1",
+	"version": "6.1.1",
 	"author": "timmyRS",
 	"minimum_chrome_version": "41",
 	"options_ui": {
@@ -17,10 +18,14 @@
 		"open_in_tab": true
 	},
 	"permissions": [
-		"storage"
+		"storage",
+		"webRequest",
+		"webRequestBlocking",
+		"<all_urls>"
 	],
 	"browser_action": {
 		"default_icon": {
+			"64": "icon/icon_64.png",
 			"128": "icon/icon_128.png",
 			"256": "icon/icon_256.png",
 			"512": "icon/icon_512.png"
@@ -29,7 +34,7 @@
 	},
 	"background": {
 		"scripts": ["background.js"],
-		"persistent": false
+		"persistent": true
 	},
 	"content_scripts": [
 		{

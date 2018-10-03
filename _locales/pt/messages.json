@@ -29,8 +29,14 @@
 	"save": {
 		"message": "Salvar"
 	},
-	"optionsNotifications": {
-		"message": "Mostra notifica\u00E7\u00F5es de status em sites conhecidos pelo Universal Bypass."
+	"optionsTrackerBypass": {
+		"message": "Rastreadores de bypass usando api.hell.sh."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Bloqueie os registradores de IP se eles n\u00E3o puderem ser ignorados."
+	},
+	"privacyPolicy": {
+		"message": "Política de Privacidade"
 	},
 	"optionsUserscripts": {
 		"message": "Bypasses Personalizados"
@@ -47,13 +53,10 @@
 	"optionsUserscriptsDelete": {
 		"message": "Excluir Bypass"
 	},
-	"notificationTimerSkip": {
-		"message": "O Universal Bypass pulou esta contagem regressiva para voc\u00EA."
+	"blockedTitle": {
+		"message": "O Universal Bypass preveniu que seu IP fosse registrado."
 	},
-	"notificationTimerLeap": {
-		"message": "O Universal Bypass removeu %secs% segundo(s) desta contagem regressiva."
-	},
-	"notificationBackend": {
-		"message": "O Universal Bypass n\u00E3o p\u00F4de pular este site, pois ele possui uma verifica\u00E7\u00E3o do lado do servidor."
+	"blockedSubtitle": {
+		"message": "Se voc\u00EA n\u00E3o quer que o Universal Bypass evite que os maus atores obtenham seu IP, desabilite isso nas op\u00E7\u00F5es:"
 	}
 }

@@ -29,14 +29,26 @@
 	"save": {
 		"message": "Speichern"
 	},
-	"optionsNotifications": {
-		"message": "Status-Meldungen auf Webseiten, die Universal Bypass kennt, anzeigen."
+	"optionsTrackerBypass": {
+		"message": "Umgehe Tracker mit api.hell.sh."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Blockiere IP-Logger wenn sie nicht umgehen werden können."
+	},
+	"optionsCrowdBypass": {
+		"message": "Mach bei Crowd Bypass mit."
+	},
+	"moreInfo": {
+		"message": "Mehr Infos"
+	},
+	"privacyPolicy": {
+		"message": "Datenschutzerklärung"
 	},
 	"optionsUserscripts": {
 		"message": "Eigene Umgehungen"
 	},
 	"optionsUserscriptsSubtitle": {
-		"message": "Es wäre nett, wenn du funktionierende Umgehungen auf GitHub einreichen wüdest, damit Andere auch davon profitieren können: "
+		"message": "Es wäre nett, wenn du funktionierende Umgehungen auf GitHub einreichen würdest, damit Andere auch davon profitieren können: "
 	},
 	"optionsUserscriptsName": {
 		"message": "Name. Mit einem leeren Namen, wird diese Umgehung gelöscht."
@@ -47,13 +59,19 @@
 	"optionsUserscriptsDelete": {
 		"message": "Umgehung löschen"
 	},
-	"notificationTimerSkip": {
-		"message": "Universal Bypass hat gerade den Timer übersprungen."
+	"blockedTitle": {
+		"message": "Universal Bypass hat deine IP vor einem Logger geschützt."
 	},
-	"notificationTimerLeap": {
-		"message": "Universal Bypass hat gerade %secs% Sekunde(n) von dem Timer entfernt."
+	"blockedSubtitle": {
+		"message": "Falls du nicht möchtest, dass Universal Bypass deine IP vor bösen Leuten schützt, deaktivere das in den Optionen:"
 	},
-	"notificationBackend": {
-		"message": "Universal Bypass kann diese Seite nicht umgehen, da diese einen Server-seitigen Check hat."
+	"crowdBypassed": {
+		"message": "Du musst vielleicht nicht warten!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Andere Universal Bypass-Nutzer haben bereits für dich gewartet und gemeldet, dass das zu % führt."
+	},
+	"crowdBypassedIgnore": {
+		"message": "Was this not correct?"
 	}
 }
