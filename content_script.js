@@ -55,6 +55,7 @@ if(document instanceof HTMLDocument)
 				let ls=document.querySelectorAll("a[href]")
 				for(let i=0;i<ls.length;i++)
 					ls[i].href+="#ignoreCrowdBypass"
+				history.pushState({},document.querySelector("title").textContent,location.href.substr(0,location.href.length-18))
 				callback()
 				return
 			}
@@ -73,7 +74,10 @@ if(document instanceof HTMLDocument)
 			let xhr=new XMLHttpRequest()
 			xhr.onreadystatechange=()=>{
 				if(xhr.readyState==4)
+				{
+					debugger//Don't want to navigate away just yet when dev tools are open
 					location.href=target
+				}
 			}
 			xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
 			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
@@ -280,6 +284,25 @@ if(document instanceof HTMLDocument)
 		})
 		domainBypass("bc.vc",()=>{
 			window.setInterval=f=>sI(f,800)
+			crowdBypass(()=>{
+				window.eval=c=>{
+					let j=ev(c)
+					if(j.message&&j.message.url)
+					{
+						contributeAndNavigate(j.message.url)
+						return {}
+					}
+					return j
+				}
+			})
+			let sT=setInterval(()=>{
+				let a=document.querySelector(".skip_btt > #skip_btt")
+				if(a)
+				{
+					clearInterval(sT)
+					a.click()
+				}
+			},50)
 		})
 		domainBypass("shortly.xyz",()=>{
 			if(location.pathname.substr(0,3)=="/r/")
@@ -474,11 +497,11 @@ if(document instanceof HTMLDocument)
 						safelyNavigate(b.href)
 				})
 				domainBypass("rom.io",()=>crowdBypass(()=>{
-					let cI=setInterval(()=>{
+					let cT=setInterval(()=>{
 						let a=document.querySelector("a.final-button[href]")
 						if(a&&isGoodLink(a.href))
 						{
-							clearInterval(cI)
+							clearInterval(cT)
 							a.parentNode.removeChild(a)
 							contributeAndNavigate(a.href)
 						}
@@ -530,13 +553,13 @@ if(document instanceof HTMLDocument)
 									safelyNavigate(decodeURIComponent(url.search.split("url=")[1].split("&")[0]))
 							}
 							else crowdBypass(()=>{
-								let cI=setInterval(()=>{
+								let cT=setInterval(()=>{
 									let a=document.querySelector("a.get-link[href]")
 									if(!a)
 										a=document.querySelector(".skip-ad a[href]")
 									if(a&&isGoodLink(a.href))
 									{
-										clearInterval(cI)
+										clearInterval(cT)
 										a.parentNode.removeChild(a)
 										contributeAndNavigate(a.href)
 									}
@@ -748,17 +771,20 @@ if(document instanceof HTMLDocument)
 						s.style.display="block"
 					}
 				}
-				if(typeof app!="undefined"&&"options"in app&&"intermediate"in app.options)//Shorte.st
+				if(typeof app!="undefined"&&app.options&&app.options.intermediate&&app.options.intermediate.skipButtonId)//Shorte.st
 				{
 					app.options.intermediate.timeToWait=3
-					let b=document.getElementById(app.options.intermediate.skipButtonId),
+					let b=document.getElementById(app.options.intermediate.skipButtonId),c=false,
 					lT=sI(()=>{
 						if(b.className.indexOf("show")>-1)
 						{
 							clearInterval(lT)
-							safelyNavigate(app.options.intermediate.destinationUrl)
+							let u=app.options.intermediate.destinationUrl
+							if(c)contributeAndNavigate(u)
+							else safelyNavigate(u)
 						}
 					},100)
+					crowdBypass(()=>c=true)
 					return
 				}
 				if(document.querySelector(".img-responsive[alt='Gets URL']")&&typeof x!="undefined")//GetsURL.com
