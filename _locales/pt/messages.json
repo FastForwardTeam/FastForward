@@ -35,8 +35,14 @@
 	"optionsBlockIPLoggers": {
 		"message": "Bloqueie os registradores de IP se eles n\u00E3o puderem ser ignorados."
 	},
+	"optionsCrowdBypass": {
+		"message": "Participe no Crowd Bypass."
+	},
+	"moreInfo": {
+		"message": "Mais informa\u00E7\u00F5es"
+	},
 	"privacyPolicy": {
-		"message": "Política de Privacidade"
+		"message": "Pol\u00EDtica de Privacidade"
 	},
 	"optionsUserscripts": {
 		"message": "Bypasses Personalizados"
@@ -58,5 +64,14 @@
 	},
 	"blockedSubtitle": {
 		"message": "Se voc\u00EA n\u00E3o quer que o Universal Bypass evite que os maus atores obtenham seu IP, desabilite isso nas op\u00E7\u00F5es:"
+	},
+	"crowdBypassed": {
+		"message": "Talvez voc\u00EA n\u00E3o precise esperar!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Outros usu\u00E1rios do Universal Bypass j\u00E1 esperaram para voc\u00EA e reportaram que isto leva para %"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Isto n\u00E3o estava correto?"
 	}
 }
