@@ -32,6 +32,15 @@
 	"optionsTrackerBypass": {
 		"message": "Bypass de rastreadores usando api.hell.sh."
 	},
+	"optionsBlockIPLoggers": {
+		"message": "Bloquee los registradores IP si no pueden ser desviados."
+	},
+	"optionsCrowdBypass": {
+		"message": "Participar en el Bypass de la comunidad."
+	},
+	"moreInfo": {
+		"message": "Más información (en inglés)"
+	},
 	"privacyPolicy": {
 		"message": "Política de privacidad"
 	},
@@ -49,5 +58,20 @@
 	},
 	"optionsUserscriptsDelete": {
 		"message": "Eliminar Bypass"
+	},
+	"blockedTitle": {
+		"message": "Bypass Universal evitó que su IP se registre."
+	},
+	"blockedSubtitle": {
+		"message": "Si no desea que Universal Bypass evite que los agentes maliciosos obtengan su IP, deshabilite esta opción en las opciones:"
+	},
+	"crowdBypassed": {
+		"message": "Puede que no tengas que esperar!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Otros usuarios de Universal Bypass ya han esperado por usted y han informado que esto lleva a un % de"
+	},
+	"crowdBypassedIgnore": {
+		"message": "¿No era eso correcto?"
 	}
 }
