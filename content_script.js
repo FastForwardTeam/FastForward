@@ -796,14 +796,11 @@ if(document instanceof HTMLDocument)
 						return
 					}
 				}
-				if(document.querySelector(".logo > a[href='http://linkvertise.net'] > img[src='/assets/img/linkvertise.png']"))//Linkvertise.net
+				if(document.querySelector(".top-bar a[href='https://linkvertise.net']")&&typeof app!="undefined"&&app.handleRedirect)//Linkvertise.net
 				{
-					let b=document.querySelector("[data-download]")
-					if(b)
-					{
-						safelyNavigate(b.getAttribute("data-download"))
-						return
-					}
+					app.countdown=0
+					$.post=(u,c)=>c()
+					app.handleRedirect()
 				}
 				if(document.querySelectorAll("img[src='/assets/img/logo.png'][alt='Openload']").length)//OpenLoad
 				{
