@@ -62,7 +62,7 @@ if(document instanceof HTMLDocument)
 			let xhr=new XMLHttpRequest()
 			xhr.onreadystatechange=()=>{
 				if(xhr.readyState==4&&xhr.status==200&&xhr.responseText!="")
-					location.href="https://universal-bypass.org/crowd/bypassed?target="+encodeURIComponent(xhr.responseText)+"&back="+encodeURIComponent(location.href)
+					location.href="https://universal-bypass.org/crowd-bypassed?target="+encodeURIComponent(xhr.responseText)+"&back="+encodeURIComponent(location.href)//The background script will intercept the request and redirect to html/crowd-bypassed.html because we can't redirect to extension urls in this scope.
 				else if(document.querySelector("body[data-crowd-bypass-opt-in]")||!document.querySelector("body[data-crowd-bypass-opt-out]"))
 					callback()
 			}
@@ -71,6 +71,8 @@ if(document instanceof HTMLDocument)
 			xhr.send("domain="+encodeURIComponent(domain)+"&path="+encodeURIComponent(location.pathname.toString().substr(1)))
 		}),
 		contributeAndNavigate=target=>{
+			if(target.substr(target.length-18)=="#ignoreCrowdBypass")
+				target=target.substr(0,target.length-18)
 			let xhr=new XMLHttpRequest()
 			xhr.onreadystatechange=()=>{
 				if(xhr.readyState==4)
@@ -496,6 +498,9 @@ if(document instanceof HTMLDocument)
 					if(b)
 						safelyNavigate(b.href)
 				})
+				domainBypass("oke.io",()=>{
+					window.setInterval=f=>sI(f,1)
+				})
 				domainBypass("rom.io",()=>crowdBypass(()=>{
 					let cT=setInterval(()=>{
 						let a=document.querySelector("a.final-button[href]")
@@ -542,32 +547,27 @@ if(document instanceof HTMLDocument)
 					//AdLinkFly
 					let xhr=new XMLHttpRequest()
 					xhr.onreadystatechange=()=>{
-						if(xhr.readyState==4&&xhr.status==200)
+						if(xhr.readyState==4)
 						{
-							let match=/<img src="\/\/api\.miniature\.io\/[a-zA-Z0-9?=&%."]+\n?.+>/.exec(xhr.responseText)
-							if(match)
-							{
-								let url=new URL(new DOMParser().parseFromString("<!DOCTYPE html><html><body>"+match[0].split("\r").join("").split("\n").join(" ")+"</body></html>","text/html").querySelector("img").src)
-								console.log(url)
-								if(url.search&&url.search.indexOf("url="))
-									safelyNavigate(decodeURIComponent(url.search.split("url=")[1].split("&")[0]))
-							}
-							else crowdBypass(()=>{
-								let cT=setInterval(()=>{
-									let a=document.querySelector("a.get-link[href]")
-									if(!a)
-										a=document.querySelector(".skip-ad a[href]")
-									if(a&&isGoodLink(a.href))
-									{
-										clearInterval(cT)
-										a.parentNode.removeChild(a)
-										contributeAndNavigate(a.href)
-									}
-								},50)
-							})
+							let t=xhr.getResponseHeader("X-Target")
+							if(t=="crowd")
+								crowdBypass(()=>{
+									let cT=setInterval(()=>{
+										let a=document.querySelector("a.get-link[href]")
+										if(!a)
+											a=document.querySelector(".skip-ad a[href]")
+										if(a&&isGoodLink(a.href))
+										{
+											clearInterval(cT)
+											a.parentNode.removeChild(a)
+											contributeAndNavigate(a.href)
+										}
+									},50)
+								})
+							else safelyNavigate(t)
 						}
 					}
-					xhr.open("GET",(location.pathname+"/info").replace("//","/"),true)
+					xhr.open("GET",("https://universal-bypass.org/adlinkfly-info?"+location.href),true)//The background script will intercept the request and return the information we need using headers
 					xhr.send()
 					return
 				}

@@ -14,12 +14,37 @@ chrome.webRequest.onBeforeRequest.addListener(details=>{
 	if(details.method=="GET"&&details.type=="main_frame")
 		return{redirectUrl:decodeURIComponent(details.url.substr(details.url.indexOf("link=")+5))}
 },{urls:["*://*.spaste.com/r/*link=*"]},["blocking"])
+chrome.webRequest.onBeforeRequest.addListener(details=>{
+	if(details.method=="GET"&&details.type=="main_frame")
+		return{redirectUrl:decodeURIComponent(details.url.substr(details.url.indexOf("/12/1/")+6))}
+},{urls:["*://*.sh.st/r/*/12/1/*"]},["blocking"])
 
-//Cheap trick
+//Get AdLinkFly links info even when Access-Control-Allow-Origin is not present because the content script can't
+chrome.webRequest.onHeadersReceived.addListener(details=>{
+	let xhr=new XMLHttpRequest(),t=""
+	xhr.onreadystatechange=()=>{
+		if(xhr.readyState==4&&xhr.status==200)
+		{
+			let match=/<img src="\/\/api\.miniature\.io\/[a-zA-Z0-9?=&%."]+\n?.+>/.exec(xhr.responseText)
+			if(match)
+			{
+				let url=new URL(new DOMParser().parseFromString("<!DOCTYPE html><html><body>"+match[0].split("\r").join("").split("\n").join(" ")+"</body></html>","text/html").querySelector("img").src)
+				if(url.search&&url.search.indexOf("url="))
+					t=decodeURIComponent(url.search.split("url=")[1].split("&")[0])
+			}
+			else t="crowd"
+		}
+	}
+	xhr.open("GET",(details.url.substr(44)+"/info").replace("//","/"),false)
+	xhr.send()
+	return{responseHeaders:[{name:"X-Target",value:t},{name:"Access-Control-Allow-Origin",value:"*"},{name:"Access-Control-Expose-Headers",value:"X-Target"}]}
+},{urls:["https://universal-bypass.org/adlinkfly-info?*"]},["blocking"])
+
+//Intercept and redirect to chrome extension url because the content script can't
 chrome.webRequest.onBeforeRequest.addListener(details=>{
 	if(details.method=="GET"&&details.type=="main_frame")
 		return{redirectUrl:chrome.runtime.getURL("html/crowd-bypassed.html")+details.url.substr(43)}
-},{urls:["https://universal-bypass.org/crowd/bypassed?*"]},["blocking"])
+},{urls:["https://universal-bypass.org/crowd-bypassed?*"]},["blocking"])
 
 //Disableable Tracker Bypass using api.hell.sh. Privacy Policy: https://hell.sh/privacy
 var trackerBypassEnabled=true,blockIPLoggers=true,resolveDestination=url=>{
