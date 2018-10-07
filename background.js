@@ -1,7 +1,7 @@
 //Install & Uninstall Actions
 chrome.runtime.onInstalled.addListener(details=>{
 	if(details.reason=="install")
-		window.open(chrome.extension.getURL("/html/firstrun.html"))
+		window.open(chrome.runtime.getURL("/html/firstrun.html"))
 })
 chrome.runtime.setUninstallURL("https://goo.gl/forms/H8FswYQ2a37LSxc13")
 
@@ -19,34 +19,13 @@ chrome.webRequest.onBeforeRequest.addListener(details=>{
 		return{redirectUrl:decodeURIComponent(details.url.substr(details.url.indexOf("/12/1/")+6))}
 },{urls:["*://*.sh.st/r/*/12/1/*"]},["blocking"])
 
-//Get AdLinkFly links info even when Access-Control-Allow-Origin is not present because the content script can't
-chrome.webRequest.onHeadersReceived.addListener(details=>{
-	let xhr=new XMLHttpRequest(),t=""
-	xhr.onreadystatechange=()=>{
-		if(xhr.readyState==4&&xhr.status==200)
-		{
-			let match=/<img src="\/\/api\.miniature\.io\/[a-zA-Z0-9?=&%."]+\n?.+>/.exec(xhr.responseText)
-			if(match)
-			{
-				let url=new URL(new DOMParser().parseFromString("<!DOCTYPE html><html><body>"+match[0].split("\r").join("").split("\n").join(" ")+"</body></html>","text/html").querySelector("img").src)
-				if(url.search&&url.search.indexOf("url="))
-					t=decodeURIComponent(url.search.split("url=")[1].split("&")[0])
-			}
-			else t="crowd"
-		}
-	}
-	xhr.open("GET",(details.url.substr(44)+"/info").replace("//","/"),false)
-	xhr.send()
-	return{responseHeaders:[{name:"X-Target",value:t},{name:"Access-Control-Allow-Origin",value:"*"},{name:"Access-Control-Expose-Headers",value:"X-Target"}]}
-},{urls:["https://universal-bypass.org/adlinkfly-info?*"]},["blocking"])
-
 //Intercept and redirect to chrome extension url because the content script can't
 chrome.webRequest.onBeforeRequest.addListener(details=>{
 	if(details.method=="GET"&&details.type=="main_frame")
 		return{redirectUrl:chrome.runtime.getURL("html/crowd-bypassed.html")+details.url.substr(43)}
 },{urls:["https://universal-bypass.org/crowd-bypassed?*"]},["blocking"])
 
-//Disableable Tracker Bypass using api.hell.sh. Privacy Policy: https://hell.sh/privacy
+//Tracker Bypass using api.hell.sh — see options for more details
 var trackerBypassEnabled=true,blockIPLoggers=true,resolveDestination=url=>{
 	let xhr=new XMLHttpRequest(),destination
 	xhr.onreadystatechange=()=>{
@@ -59,7 +38,6 @@ var trackerBypassEnabled=true,blockIPLoggers=true,resolveDestination=url=>{
 	}
 	xhr.open("GET","https://api.hell.sh/redirect/"+encodeURIComponent(url),false)
 	xhr.send()
-	console.log(url," -> ",destination)
 	return destination
 }
 chrome.storage.sync.get(["no_tracker_bypass","block_ip_loggers"],result=>{
@@ -120,7 +98,7 @@ chrome.webRequest.onBeforeRequest.addListener(details=>{
 			return{redirectUrl:destination}
 	}
 	if(blockIPLoggers)
-		return{redirectUrl:chrome.extension.getURL("/html/blocked.html")}
+		return{redirectUrl:chrome.runtime.getURL("html/blocked.html")}
 },{urls:getIPLoggerPatterns()},["blocking"])
 function getIPLoggerPatterns()
 {

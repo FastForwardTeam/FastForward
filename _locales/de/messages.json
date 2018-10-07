@@ -11,6 +11,9 @@
 	"firstrunWhatnow": {
 		"message": "Was du nun tun kannst:"
 	},
+	"firstrunExampleLinks": {
+		"message": "Schau dir Beispiellinks an, um sicherzustellen, dass Universal Bypass funktioniert."
+	},
 	"firstrunOptions": {
 		"message": "Ändere die Universal Bypass Optionen."
 	},
@@ -36,10 +39,7 @@
 		"message": "Blockiere IP-Logger wenn sie nicht umgehen werden können."
 	},
 	"optionsCrowdBypass": {
-		"message": "Mach bei Crowd Bypass mit."
-	},
-	"moreInfo": {
-		"message": "Mehr Infos"
+		"message": "Gebe und nehme die Ziel-URL von unumgänglichen Linkkürzern."
 	},
 	"privacyPolicy": {
 		"message": "Datenschutzerklärung"

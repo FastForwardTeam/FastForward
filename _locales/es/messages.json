@@ -35,12 +35,6 @@
 	"optionsBlockIPLoggers": {
 		"message": "Bloquee los registradores IP si no pueden ser desviados."
 	},
-	"optionsCrowdBypass": {
-		"message": "Participar en el Bypass de la comunidad."
-	},
-	"moreInfo": {
-		"message": "Más información"
-	},
 	"privacyPolicy": {
 		"message": "Política de privacidad"
 	},

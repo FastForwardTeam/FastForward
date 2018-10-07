@@ -80,6 +80,8 @@ chrome.storage.local.get(["custom_bypasses"],result=>{
 	}
 })
 chrome.storage.sync.get(["no_tracker_bypass","allow_ip_loggers","crowd_bypass_opt_out"],result=>{
+	if(result==undefined)
+		result={}
 	let trackerBypassCheckbox=document.getElementById("option-tracker-bypass"),
 	blockIPLoggersCheckbox=document.getElementById("option-block-ip-loggers"),
 	crowdBypassCheckbox=document.getElementById("option-crowd-bypass")

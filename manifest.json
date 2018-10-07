@@ -10,7 +10,7 @@
 	"name": "Universal Bypass",
 	"description": "__MSG_appDesc__",
 	"homepage_url": "https://universal-bypass.org/",
-	"version": "6.2",
+	"version": "6.3",
 	"author": "timmyRS",
 	"minimum_chrome_version": "41",
 	"options_ui": {
@@ -33,16 +33,17 @@
 		"default_popup": "html/popup.html"
 	},
 	"background": {
-		"scripts": ["background.js"],
-		"persistent": true
+		"scripts": ["background.js"]
 	},
 	"content_scripts": [
 		{
-			"matches": ["*://*/*"],
-			"js": [
-				"content_script.js"
-			],
+			"matches": ["<all_urls>"],
+			"js": ["content_script.js"],
 			"run_at": "document_start"
 		}
+	],
+	"web_accessible_resources": [
+		"html/blocked.html",
+		"html/crowd-bypassed.html"
 	]
 }

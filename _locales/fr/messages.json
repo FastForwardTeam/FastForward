@@ -20,9 +20,6 @@
 	"homepage": {
 		"message": "Page d'accueil"
 	},
-	"popupOptions": {
-		"message": "Options"
-	},
 	"options": {
 		"message": "Options d'Universal Bypass"
 	},
@@ -34,7 +31,7 @@
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Bloque les enregistreurs d’IP si ils ne peuvent être contournés."
- 	},
+	},
 	"privacyPolicy": {
 		"message": "Politique Vie Privée"
 	},
@@ -57,6 +54,6 @@
 		"message": "Universal Bypass empêche l’enregistrement de votre IP."
 	},
 	"blockedSubtitle": {
- 		"message": "Si vous ne voulez pas que Universal Bypass empêche les mauvais acteurs d'obtenir votre IP, désactivez ceci dans les options ::"
+		"message": "Si vous ne voulez pas que Universal Bypass empêche les mauvais acteurs d'obtenir votre IP, désactivez ceci dans les options ::"
 	}
 }

@@ -11,6 +11,9 @@
 	"firstrunWhatnow": {
 		"message": "Wat je nu kan doen:"
 	},
+	"firstrunExampleLinks": {
+		"message": "Bekijk de voorbeeld links om te zorgen dat Universal Bypass werkt."
+	},
 	"firstrunOptions": {
 		"message": "Wijzig de Universal Bypass-opties."
 	},
@@ -36,10 +39,7 @@
 		"message": "Blokkeer IP-loggers als ze niet kunnen worden omzeilt."
 	},
 	"optionsCrowdBypass": {
-		"message": "Meedoen aan Crowd Bypass."
-	},
-	"moreInfo": {
-		"message": "Meer info"
+		"message": "Geef en neem de bestemmingen van ondoorlaatbare verkortingen."
 	},
 	"privacyPolicy": {
 		"message": "Privacy Verklaring"

@@ -1,30 +1,30 @@
 {
 	"appDesc": {
-		"message": "N\u00E3o perca tempo com conformidades. O Universal Bypass automaticamente ignora encurtadores de links irritantes."
+		"message": "Não perca tempo com conformidades. O Universal Bypass automaticamente ignora encurtadores de links irritantes."
 	},
 	"firstrunTitle": {
 		"message": "Obrigado por instalar o Universal Bypass!"
 	},
 	"firstrunSubtitle": {
-		"message": "Voc\u00EA \u00E9 demais!"
+		"message": "Você é demais!"
 	},
 	"firstrunWhatnow": {
-		"message": "O que voc\u00EA pode fazer agora:"
+		"message": "O que você pode fazer agora:"
 	},
 	"firstrunOptions": {
-		"message": "Altere as op\u00E7\u00F5es do Universal Bypass."
+		"message": "Altere as opções do Universal Bypass."
 	},
 	"firstrunTwitter": {
-		"message": "Siga o Universal Bypass no Twitter para ficar informado sobre as \u00FAltimas novidades."
+		"message": "Siga o Universal Bypass no Twitter para ficar informado sobre as últimas novidades."
 	},
 	"homepage": {
-		"message": "P\u00E1gina na Internet"
+		"message": "Página na Internet"
 	},
 	"popupOptions": {
-		"message": "Op\u00E7\u00F5es"
+		"message": "Opções"
 	},
 	"options": {
-		"message": "Op\u00E7\u00F5es do Universal Bypass"
+		"message": "Opções do Universal Bypass"
 	},
 	"save": {
 		"message": "Salvar"
@@ -33,28 +33,22 @@
 		"message": "Rastreadores de bypass usando api.hell.sh."
 	},
 	"optionsBlockIPLoggers": {
-		"message": "Bloqueie os registradores de IP se eles n\u00E3o puderem ser ignorados."
-	},
-	"optionsCrowdBypass": {
-		"message": "Participe no Crowd Bypass."
-	},
-	"moreInfo": {
-		"message": "Mais informa\u00E7\u00F5es"
+		"message": "Bloqueie os registradores de IP se eles não puderem ser ignorados."
 	},
 	"privacyPolicy": {
-		"message": "Pol\u00EDtica de Privacidade"
+		"message": "Política de Privacidade"
 	},
 	"optionsUserscripts": {
 		"message": "Bypasses Personalizados"
 	},
 	"optionsUserscriptsSubtitle": {
-		"message": "Seria legal se voc\u00EA pudesse enviar bypasses funcionais para o GitHub, para que outros se beneficiem deles: "
+		"message": "Seria legal se você pudesse enviar bypasses funcionais para o GitHub, para que outros se beneficiem deles: "
 	},
 	"optionsUserscriptsName": {
-		"message": "Nome. Com um nome em branco, este bypass ser\u00E1 exclu\u00EDdo."
+		"message": "Nome. Com um nome em branco, este bypass será excluído."
 	},
 	"optionsUserscriptsDomains": {
-		"message": "Dom\u00EDnios. Use * para este bypass ser efetivo em qualquer lugar."
+		"message": "Domínios. Use * para este bypass ser efetivo em qualquer lugar."
 	},
 	"optionsUserscriptsDelete": {
 		"message": "Excluir Bypass"
@@ -63,15 +57,15 @@
 		"message": "O Universal Bypass preveniu que seu IP fosse registrado."
 	},
 	"blockedSubtitle": {
-		"message": "Se voc\u00EA n\u00E3o quer que o Universal Bypass evite que os maus atores obtenham seu IP, desabilite isso nas op\u00E7\u00F5es:"
+		"message": "Se você não quer que o Universal Bypass evite que os maus atores obtenham seu IP, desabilite isso nas opções:"
 	},
 	"crowdBypassed": {
-		"message": "Talvez voc\u00EA n\u00E3o precise esperar!"
+		"message": "Talvez você não precise esperar!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Outros usu\u00E1rios do Universal Bypass j\u00E1 esperaram para voc\u00EA e reportaram que isto leva para %"
+		"message": "Outros usuários do Universal Bypass já esperaram para você e reportaram que isto leva para %"
 	},
 	"crowdBypassedIgnore": {
-		"message": "Isto n\u00E3o estava correto?"
+		"message": "Isto não estava correto?"
 	}
 }

@@ -11,6 +11,9 @@
 	"firstrunWhatnow": {
 		"message": "What you can do now:"
 	},
+	"firstrunExampleLinks": {
+		"message": "Check out example links to make sure Universal Bypass is working."
+	},
 	"firstrunOptions": {
 		"message": "Change Universal Bypass' options."
 	},
@@ -36,10 +39,7 @@
 		"message": "Block IP loggers if they can't be bypassed."
 	},
 	"optionsCrowdBypass": {
-		"message": "Participate in Crowd Bypass."
-	},
-	"moreInfo": {
-		"message": "More info"
+		"message": "Give and take the destinations of unbypassable shorteners."
 	},
 	"privacyPolicy": {
 		"message": "Privacy Policy"
