@@ -11,6 +11,9 @@
 	"firstrunWhatnow": {
 		"message": "Voici ce que vous pouvez faire maintenant:"
 	},
+	"firstrunExampleLinks": {
+		"message": "Vérifiez les exemples de liens pour vous assurer que le contournement universel fonctionne."
+	},
 	"firstrunOptions": {
 		"message": "Changer les options de Universal Bypass."
 	},
@@ -19,6 +22,9 @@
 	},
 	"homepage": {
 		"message": "Page d'accueil"
+	},
+	"popupOptions": {
+		"message": "Réglages"
 	},
 	"options": {
 		"message": "Options d'Universal Bypass"
@@ -31,6 +37,9 @@
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Bloque les enregistreurs d’IP si ils ne peuvent être contournés."
+	},
+	"optionsCrowdBypass": {
+		"message": "Donner et prendre les cibles des raccourcisseurs incontournables."
 	},
 	"privacyPolicy": {
 		"message": "Politique Vie Privée"
@@ -55,5 +64,14 @@
 	},
 	"blockedSubtitle": {
 		"message": "Si vous ne voulez pas que Universal Bypass empêche les mauvais acteurs d'obtenir votre IP, désactivez ceci dans les options ::"
+	},
+	"crowdBypassed": {
+		"message": "Vous n'aurez peut-être pas à attendre !"
+	},
+	"crowdBypassedInfo": {
+		"message": "D'autres utilisateurs du contourneur universel vous ont déjà attendu et ont rapporté que cela mène à %"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Cela n'était-il pas exact ?"
 	}
 }
