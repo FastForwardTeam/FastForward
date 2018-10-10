@@ -521,9 +521,9 @@ if(document instanceof HTMLDocument)
 				window.setInterval=f=>sI(f,1)
 			})
 			domainBypass("shrink-service.it",()=>{
-				if(typeof $=="function"&&typeof screenApi=="function")
+				if(typeof $=="function"&&typeof $.ajax=="function"&&typeof screenApi=="function")
 				{
-					_a=$.ajax
+					let _a=$.ajax
 					$.ajax=a=>(a.data&&a.data.set_one?safelyNavigate(atob(a.data.set_one)):_a(a))
 					screenApi()
 				}

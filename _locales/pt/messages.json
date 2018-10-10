@@ -11,6 +11,9 @@
 	"firstrunWhatnow": {
 		"message": "O que você pode fazer agora:"
 	},
+	"firstrunExampleLinks": {
+		"message": "Veja exemplos de links para ter certeza que o Universal Bypass está funcionando."
+	},
 	"firstrunOptions": {
 		"message": "Altere as opções do Universal Bypass."
 	},
@@ -30,10 +33,13 @@
 		"message": "Salvar"
 	},
 	"optionsTrackerBypass": {
-		"message": "Rastreadores de bypass usando api.hell.sh."
+		"message": "Ignorar rastreadores usando api.hell.sh."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Bloqueie os registradores de IP se eles não puderem ser ignorados."
+	},
+	"optionsCrowdBypass": {
+		"message": "Dê e pegue o destino de encurtadores não-passáveis."
 	},
 	"privacyPolicy": {
 		"message": "Política de Privacidade"

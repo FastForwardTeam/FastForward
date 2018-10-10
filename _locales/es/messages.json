@@ -11,6 +11,9 @@
 	"firstrunWhatnow": {
 		"message": "Lo que puedes hacer ahora:"
 	},
+	"firstrunExampleLinks": {
+		"message": "Revise los enlaces de ejemplo para asegurarse de que el Bypass Universal está funcionando."
+	},
 	"firstrunOptions": {
 		"message": "Configura Universal Bypass' opción."
 	},
@@ -34,6 +37,9 @@
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Bloquee los registradores IP si no pueden ser desviados."
+	},
+	"optionsCrowdBypass": {
+		"message": "Dar y tomar los destinos de los acortadores que no se pueden anular."
 	},
 	"privacyPolicy": {
 		"message": "Política de privacidad"
