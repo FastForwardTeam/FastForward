@@ -19,6 +19,25 @@ chrome.webRequest.onBeforeRequest.addListener(details=>{
 		return{redirectUrl:decodeURIComponent(details.url.substr(details.url.indexOf("/12/1/")+6))}
 },{urls:["*://*.sh.st/r/*/12/1/*"]},["blocking"])
 
+//Shorte.st Bypass
+chrome.webRequest.onBeforeSendHeaders.addListener(details=>{
+	if(details.method=="GET"&&details.type=="main_frame")
+		return{requestHeaders:details.requestHeaders.filter(h=>h.name!="User-Agent")}
+},{
+	urls:[
+	"*://sh.st/*",
+	"*://clkmein.com/*",
+	"*://viid.me/*",
+	"*://xiw34.com/*",
+	"*://corneey.com/*",
+	"*://gestyy.com/*",
+	"*://cllkme.com/*",
+	"*://festyy.com/*",
+	"*://destyy.com/*",
+	"*://ceesty.com/*"
+	]
+},["blocking","requestHeaders"])
+
 //Intercept and redirect to chrome extension url because the content script can't
 chrome.webRequest.onBeforeRequest.addListener(details=>{
 	if(details.method=="GET"&&details.type=="main_frame")

@@ -783,20 +783,6 @@ if(document instanceof HTMLDocument)
 					s.style.display="block"
 				}
 			}
-			if(typeof app!="undefined"&&app.options&&app.options.intermediate&&app.options.intermediate.skipButtonId)//Shorte.st
-			{
-				app.options.intermediate.timeToWait=3
-				let b=document.getElementById(app.options.intermediate.skipButtonId),
-				lT=sI(()=>{
-					if(b.className.indexOf("show")>-1)
-					{
-						clearInterval(lT)
-						contributeAndNavigate(app.options.intermediate.destinationUrl)
-					}
-				},100)
-				crowdBypass(()=>{})
-				return setBypassed()
-			}
 			if(document.querySelector(".img-responsive[alt='Gets URL']")&&typeof x!="undefined")//GetsURL.com
 			{
 				let b=document.getElementById("link")
