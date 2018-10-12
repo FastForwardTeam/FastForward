@@ -1,0 +1,77 @@
+{
+	"appDesc": {
+		"message": "Ikke kast bort tiden din på å følge krav. Universal Bypass hopper automatisk over irriterende lenkeforkortere."
+	},
+	"firstrunTitle": {
+		"message": "Takk for at du har installert Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "Du er fantastisk!"
+	},
+	"firstrunWhatnow": {
+		"message": "Det du kan gjøre nå:"
+	},
+	"firstrunExampleLinks": {
+		"message": "Sjekk ut eksempellenker for å være sikker på at Universal Bypass fungerer."
+	},
+	"firstrunOptions": {
+		"message": "Endre Universal Bypass sine innstillinger."
+	},
+	"firstrunTwitter": {
+		"message": "Følg Universal Bypass på Twitter for å alltid være oppdatert om Universal Bypass."
+	},
+	"homepage": {
+		"message": "Hjemmeside"
+	},
+	"popupOptions": {
+		"message": "Innstillinger"
+	},
+	"options": {
+		"message": "Universal Bypass-innstillinger"
+	},
+	"save": {
+		"message": "Lagre"
+	},
+	"optionsTrackerBypass": {
+		"message": "Hopp forbi sporere ved hjelp av api.hell.sh."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Blokker IP-loggførere dersom de ikke kan bli hoppet forbi."
+	},
+	"optionsCrowdBypass": {
+		"message": "Gi og ta ankomstpunktene til upasserbare forkortere."
+	},
+	"privacyPolicy": {
+		"message": "Privatlivsretningslinjer"
+	},
+	"optionsUserscripts": {
+		"message": "Tilpassede forbipasserere"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "Det hadde vært fint om du kunne meldt inn fungerende forbipasserere til GitHub, sånn at andre kan få nytte av dem: "
+	},
+	"optionsUserscriptsName": {
+		"message": "Navn. Dersom navnet er tomt, vil forbipasseringen bli slettet."
+	},
+	"optionsUserscriptsDomains": {
+		"message": "Domener. Bruk * dersom denne forbipasseringen skal gjelde overalt."
+	},
+	"optionsUserscriptsDelete": {
+		"message": "Slett forbipasseringen"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass hindret IP-adressen din fra å bli loggført."
+	},
+	"blockedSubtitle": {
+		"message": "Dersom du ikke vil at Universal Bypass skal hindre mørke aktører fra å få IP-adressen din, skru av dette i innstillingene:"
+	},
+	"crowdBypassed": {
+		"message": "Du vil kanskje ikke måtte vente!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Andre Universal Bypass-brukere har allerede ventet på deg, og har meldt ifra om at dette fører til %"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Var ikke dette korrekt?"
+	}
+}
