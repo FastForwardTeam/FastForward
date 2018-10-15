@@ -776,11 +776,12 @@ if(document instanceof HTMLDocument)
 			}
 			if(document.querySelector("a[href^='https://linkshrink.net/homepage'] > img.lgo"))//LinkShrink.net
 			{
-				let b=document.getElementById("btd")
-				if(b&&typeof b.onclick=="function")
+				let p=document.getElementById("pause"),s=document.getElementById("skip")
+				if(p&&s)
 				{
-					window.open=()=>{}
-					b.onclick()
+					//Automating the click seems to not always work due to ads so we're only skipping the timer
+					p.style.display="none"
+					s.style.display="block"
 				}
 			}
 			if(document.querySelector(".img-responsive[alt='Gets URL']")&&typeof x!="undefined")//GetsURL.com
