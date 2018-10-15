@@ -50,6 +50,9 @@
 	"optionsUserscriptsSubtitle": {
 		"message": "Es wäre nett, wenn du funktionierende Umgehungen auf GitHub einreichen würdest, damit Andere auch davon profitieren können: "
 	},
+	"optionsUserscriptsUntitled": {
+		"message": "Unbenannte Umgehung"
+	},
 	"optionsUserscriptsName": {
 		"message": "Name. Mit einem leeren Namen, wird diese Umgehung gelöscht."
 	},
@@ -58,6 +61,9 @@
 	},
 	"optionsUserscriptsDelete": {
 		"message": "Umgehung löschen"
+	},
+	"optionsUserscriptsDeleteConfirm": {
+		"message": "Möchtest du diese Umgehung wirklich löschen?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass hat deine IP vor einem Logger geschützt."

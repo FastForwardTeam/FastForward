@@ -24,7 +24,8 @@
 			<div id="custom-bypass-edit-container">
 				<p><input type="text" id="custom-bypass-name" class="form-control" data-placeholder="optionsUserscriptsName"></p>
 				<p><input type="text" id="custom-bypass-domains" class="form-control" data-placeholder="optionsUserscriptsDomains"></p>
-				<p><textarea id="custom-bypass-editor" class="form-control"></textarea></p>
+				<div id="custom-bypass-editor"></div>
+				<br>
 				<p>
 					<a href="#userscripts" id="save-custom-bypass" class="btn btn-primary" data-message="save"></a>
 					<a href="#" id="delete-custom-bypass" class="btn btn-outline-danger" data-message="optionsUserscriptsDelete"></a>
@@ -32,9 +33,12 @@
 			</div>
 		</div>
 	</div>
+	<div id="untitled-name" data-placeholder="optionsUserscriptsUntitled"></div>
+	<div id="delete-confirm" data-placeholder="optionsUserscriptsDeleteConfirm"></div>
 	<hr>
 	<p>Copyright (c) 2018, Tim "timmyRS" Speckhals</p>
 	<script src="translations.js"></script>
+	<script src="ace/ace.js"></script>
 	<script src="options.js"></script>
 </body>
 </html>

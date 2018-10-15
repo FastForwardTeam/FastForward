@@ -50,6 +50,9 @@
 	"optionsUserscriptsSubtitle": {
 		"message": "Ce serait bien si vous pouviez soumettre des dérivations de travail à GitHub, afin que d'autres puissent en bénéficier: "
 	},
+	"optionsUserscriptsUntitled": {
+		"message": "Contournement non nommé"
+	},
 	"optionsUserscriptsName": {
 		"message": "Nom. Avec un nom vide, ce contournements sera supprimé."
 	},
@@ -58,6 +61,9 @@
 	},
 	"optionsUserscriptsDelete": {
 		"message": "Supprimer Bypass"
+	},
+	"optionsUserscriptsDeleteConfirm": {
+		"message": "Voulez-vous vraiment supprimer ce contournement?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass empêche l’enregistrement de votre IP."

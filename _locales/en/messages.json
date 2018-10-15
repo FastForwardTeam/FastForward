@@ -50,6 +50,9 @@
 	"optionsUserscriptsSubtitle": {
 		"message": "It would be nice if you could submit working bypasses to GitHub, so others can benefit from it: "
 	},
+	"optionsUserscriptsUntitled": {
+		"message": "Untitled Bypass"
+	},
 	"optionsUserscriptsName": {
 		"message": "Name. With an empty name, this bypass will be deleted."
 	},
@@ -58,6 +61,9 @@
 	},
 	"optionsUserscriptsDelete": {
 		"message": "Delete Bypass"
+	},
+	"optionsUserscriptsDeleteConfirm": {
+		"message": "Do you really want to delete this bypass?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass prevented your IP from being logged."

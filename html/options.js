@@ -1,10 +1,12 @@
 chrome.storage.local.get(["custom_bypasses"],result=>{
-	let customBypasses=(result&&result.custom_bypasses)?JSON.parse(result.custom_bypasses):{},
+	let untitledName=document.getElementById("untitled-name").getAttribute("placeholder"),
+	deleteConfirm=document.getElementById("delete-confirm").getAttribute("placeholder"),
+	customBypasses=(result&&result.custom_bypasses)?JSON.parse(result.custom_bypasses):{},
 	customBypassesList=document.getElementById("custom-bypasses-list"),
 	customBypassName=document.getElementById("custom-bypass-name"),
 	customBypassDomains=document.getElementById("custom-bypass-domains"),
-	bypassEditor=document.getElementById("custom-bypass-editor"),
-	editingBypass="",
+	bypassEditor=ace.edit("custom-bypass-editor",{mode:"ace/mode/javascript",theme:"ace/theme/monokai"}),
+	editingBypass,
 	reloadCustomBypassList=()=>{
 		customBypassesList.innerHTML=""
 		customBypasses["+"]={}
@@ -19,26 +21,26 @@ chrome.storage.local.get(["custom_bypasses"],result=>{
 			a.href="#userscripts"
 			a.className="list-group-item list-group-item-action"+(editingBypass==name?" active":"")
 			a.textContent=name
-			a.onclick=function()
-			{
+			a.onclick=()=>{
 				let _active=document.querySelector(".list-group-item.active")
 				if(_active)
 					_active.className="list-group-item list-group-item-action"
-				editingBypass=this.id.substr(14)
+				editingBypass=a.id.substr(14)
 				if(editingBypass=="+")
 				{
-					customBypasses[editingBypass="Untitled Bypass"]={
+					customBypasses[editingBypass=untitledName]={
 						domains:"example.com,example.org",
 						content:'let b=document.querySelector("#button[href]")\nif(b)\n\tlocation.href=b.href\n'
 					}
 				}
 				else
 				{
-					this.className="list-group-item list-group-item-action active"
+					a.className="list-group-item list-group-item-action active"
 				}
 				customBypassName.value=editingBypass
 				customBypassDomains.value=customBypasses[editingBypass].domains
-				bypassEditor.textContent=customBypasses[editingBypass].content
+				bypassEditor.setValue(customBypasses[editingBypass].content)
+				bypassEditor.resize()
 				saveCustomBypass()
 			}
 			customBypassesList.appendChild(a)
@@ -56,19 +58,21 @@ chrome.storage.local.get(["custom_bypasses"],result=>{
 			}
 			else
 			{
-				if(confirm("Do you really want to delete this bypass?"))
+				if(confirm(deleteConfirm))
 				{
 					delete customBypasses[editingBypass]
 					editingBypass=""
 				}
 				else
+				{
 					customBypassName.value=editingBypass
+				}
 			}
 		}
-		if(editingBypass!="")
+		if(editingBypass)
 		{
 			customBypasses[editingBypass].domains=customBypassDomains.value
-			customBypasses[editingBypass].content=bypassEditor.value
+			customBypasses[editingBypass].content=bypassEditor.getValue()
 		}
 		chrome.storage.local.set({custom_bypasses:JSON.stringify(customBypasses)},reloadCustomBypassList);
 	}
