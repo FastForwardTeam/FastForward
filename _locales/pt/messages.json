@@ -50,6 +50,9 @@
 	"optionsUserscriptsSubtitle": {
 		"message": "Seria legal se você pudesse enviar bypasses funcionais para o GitHub, para que outros se beneficiem deles: "
 	},
+	"optionsUserscriptsUntitled": {
+		"message": "Bypass sem título"
+	},
 	"optionsUserscriptsName": {
 		"message": "Nome. Com um nome em branco, este bypass será excluído."
 	},
@@ -58,6 +61,9 @@
 	},
 	"optionsUserscriptsDelete": {
 		"message": "Excluir Bypass"
+	},
+	"optionsUserscriptsDeleteConfirm": {
+		"message": "Você deseja realmente excluir este bypass?"
 	},
 	"blockedTitle": {
 		"message": "O Universal Bypass preveniu que seu IP fosse registrado."

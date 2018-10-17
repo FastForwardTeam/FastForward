@@ -1,0 +1,47 @@
+{
+	"appDesc": {
+		"message": "Đừng lãng phí thời gian của bạn. Universal Bypass tự động bỏ qua các liên kết rút gọn phiền phức."
+	},
+	"firstrunTitle": {
+		"message": "Cảm ơn bạn đã cài đặt Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "Bạn thật tuyệt vời!"
+	},
+	"firstrunWhatnow": {
+		"message": "Bạn có thể làm gì bây giờ:"
+	},
+	"firstrunExampleLinks": {
+		"message": "Kiểm tra liên kết này ví dụ để đảm bảo rằng Universal Bypass đang làm việc."
+	},
+	"firstrunOptions": {
+		"message": "Thay đổi tùy chọn Universal Bypass."
+	},
+	"firstrunTwitter": {
+		"message": "Theo dõi Universal Bypass trên Twitter để luôn cập nhật mới về Universal Bypass."
+	},
+	"homepage": {
+		"message": "Trang chủ"
+	},
+	"popupOptions": {
+		"message": "Tùy chọn"
+	},
+	"options": {
+		"message": "Tùy chọn Universal Bypass"
+	},
+	"save": {
+		"message": "Lưu"
+	},
+	"optionsTrackerBypass": {
+		"message": "Bỏ qua trackers bằng cách sử dụng api.hell.sh."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Chặn IP Logger nếu họ không thể được bỏ qua."
+	},
+	"privacyPolicy": {
+		"message": "Chính sách bảo mật"
+	},
+	"optionsUserscripts": {
+		"message": "Tùy chỉnh Bypasses"
+	}
+}

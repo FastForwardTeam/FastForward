@@ -696,14 +696,25 @@ if(document instanceof HTMLDocument)
 				{
 					search=atob(search.substr(3))
 					if(search.substr(0,4)=="http")
+					{
 						safelyNavigate(search)
+						return setBypassed()
+					}
 				}
 				else if(location.pathname.toString().substr(0,4)=="/go/")
 				{
 					search=atob(location.pathname.toString().substr(4))
 					if(search.substr(0,4)=="http")
+					{
 						safelyNavigate(search)
+						return setBypassed()
+					}
 				}
+			}
+			if(document.querySelector("input[type='hidden'][name='newwpsafelink'][value]")&&location.search&&location.search.substr(0,4)=="?go=")
+			{
+				safelyNavigate(atob(location.search.substr(4).split("&")[0]))
+				return setBypassed()
 			}
 			//Other Templates
 			if(document.querySelector("#tungguyabro")&&typeof WaktunyaBro=="number")//short.mangasave.me

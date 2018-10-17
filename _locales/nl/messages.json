@@ -50,6 +50,9 @@
 	"optionsUserscriptsSubtitle": {
 		"message": "Het zou leuk zijn als je je eigen toevoegingen naar GitHub zou kunnen aanbieden, zodat anderen er profijt van kunnen hebben: "
 	},
+	"optionsUserscriptsUntitled": {
+		"message": "Onbenaamde Bypass"
+	},
 	"optionsUserscriptsName": {
 		"message": "Naam. Met een lege naam wordt deze bypass verwijderd."
 	},
@@ -58,6 +61,9 @@
 	},
 	"optionsUserscriptsDelete": {
 		"message": "Verwijder Bypass"
+	},
+	"optionsUserscriptsDeleteConfirm": {
+		"message": "Weet u zeker dat u deze bypass wil verwijderen?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass voorkomt dat uw IP wordt geregistreerd."

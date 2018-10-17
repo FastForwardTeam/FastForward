@@ -45,7 +45,7 @@
 		"message": "Çalışan bypassları GitHub'a eklerseniz diğerlerinin de yararlanması adına iyi olur."
 	},
 	"optionsUserscriptsName": {
-		"message": "Ad. Boş bir isimle, bu bypass silinecek."
+		"message": "İsim. Boş bir isimle, bu bypass silinecek."
 	},
 	"optionsUserscriptsDomains": {
 		"message": "Domainler. Bu bypassin her yerde etkili olabilmesi için * kullanın."
@@ -58,5 +58,8 @@
 	},
 	"blockedSubtitle": {
 		"message": "Universal Bypass'ın IP adresinizi kötü etkinliklerin elde etmesini engellemesini istemiyorsanız, bunu ayarlarda devre dışı bırakın:"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Bu doğru değil miydi?"
 	}
 }
