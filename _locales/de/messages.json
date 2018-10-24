@@ -36,7 +36,7 @@
 		"message": "Umgehe Tracker mit api.hell.sh."
 	},
 	"optionsBlockIPLoggers": {
-		"message": "Blockiere IP-Logger wenn sie nicht umgehen werden können."
+		"message": "Blockiere IP-Logger wenn sie nicht umgangen werden können."
 	},
 	"optionsCrowdBypass": {
 		"message": "Gebe und nehme die Ziel-URL von unumgänglichen Linkkürzern."
