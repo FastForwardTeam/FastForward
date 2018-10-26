@@ -717,6 +717,12 @@ if(document instanceof HTMLDocument)
 				return setBypassed()
 			}
 			//Other Templates
+			if(document.getElementById("getlink")&&document.getElementById("gotolink")&&document.getElementById("timer"))//tetewlink.me,vehicle-techno.cf
+			{
+				document.getElementById("gotolink").removeAttribute("disabled")
+				document.getElementById("gotolink").click()
+				return setBypassed()
+			}
 			if(document.querySelector("#tungguyabro")&&typeof WaktunyaBro=="number")//short.mangasave.me
 			{
 				WaktunyaBro=0
