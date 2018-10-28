@@ -36,12 +36,48 @@
 		"message": "Bỏ qua trackers bằng cách sử dụng api.hell.sh."
 	},
 	"optionsBlockIPLoggers": {
-		"message": "Chặn IP Logger nếu họ không thể được bỏ qua."
+		"message": "Chặn IP Logger nếu chúng không thể bỏ qua."
+	},
+	"optionsCrowdBypass": {
+		"message": "Gửi và lấy đích đến của rút gọn chưa thế bypass."
 	},
 	"privacyPolicy": {
 		"message": "Chính sách bảo mật"
 	},
 	"optionsUserscripts": {
 		"message": "Tùy chỉnh Bypasses"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "Thật tuyệt vời nếu như bạn có thể gửi bypass đang hoạt động đến GitHub, để giúp đỡ những người khác: "
+	},
+	"optionsUserscriptsUntitled": {
+		"message": "Bypass chưa có tiêu đề"
+	},
+	"optionsUserscriptsName": {
+		"message": "Tên. Nếu để trống, bypass này sẽ bị xoá."
+	},
+	"optionsUserscriptsDomains": {
+		"message": "Tên miền. Sử dụng * cho bypass này để hoạt động được ở mọi nơi."
+	},
+	"optionsUserscriptsDelete": {
+		"message": "Xoá Bypass"
+	},
+	"optionsUserscriptsDeleteConfirm": {
+		"message": "Bạn có thật sự muốn xoá bypass này?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass đã ngăn chặn IP của bạn đăng nhập."
+	},
+	"blockedSubtitle": {
+		"message": "Nếu bạn không muốn Universal Bypass ngăn chặn các hành động xấu từ việc nhận IP của bạn, hãy vô hiệu hoá tuỳ chọn này:"
+	},
+	"crowdBypassed": {
+		"message": "Bạn không cần phải đợi!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Người dùng Universal Bypass khác hiện đang chờ bạn và được báo cáo rằng điều này dẫn đến %"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Điều này chưa chính xác?"
 	}
 }

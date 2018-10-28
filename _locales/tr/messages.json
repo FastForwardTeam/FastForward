@@ -11,6 +11,9 @@
 	"firstrunWhatnow": {
 		"message": "Yapabilecekleriniz:"
 	},
+	"firstrunExampleLinks": {
+		"message": "Universal Bypass'ın çalıştığından emin olmak için örnek bağlantılara göz atın."
+	},
 	"firstrunOptions": {
 		"message": "Universal Bypass'ın seçeneklerini değiştir."
 	},
@@ -44,6 +47,9 @@
 	"optionsUserscriptsSubtitle": {
 		"message": "Çalışan bypassları GitHub'a eklerseniz diğerlerinin de yararlanması adına iyi olur."
 	},
+	"optionsUserscriptsUntitled": {
+		"message": "İsimsiz Bypass"
+	},
 	"optionsUserscriptsName": {
 		"message": "İsim. Boş bir isimle, bu bypass silinecek."
 	},
@@ -53,11 +59,20 @@
 	"optionsUserscriptsDelete": {
 		"message": "Bypassi sil"
 	},
+	"optionsUserscriptsDeleteConfirm": {
+		"message": "Bu bypass'ı gerçekten silmek istiyor musunuz?"
+	},
 	"blockedTitle": {
 		"message": "Universal Bypass, IP adresinizin kayıtlara eklenmesini engelledi."
 	},
 	"blockedSubtitle": {
 		"message": "Universal Bypass'ın IP adresinizi kötü etkinliklerin elde etmesini engellemesini istemiyorsanız, bunu ayarlarda devre dışı bırakın:"
+	},
+	"crowdBypassed": {
+		"message": "Beklemek zorunda değilsin!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Diğer Universal Baypass kullanıcıları zaten sizi beklediler ve % 'e ulaştığında bildir"
 	},
 	"crowdBypassedIgnore": {
 		"message": "Bu doğru değil miydi?"

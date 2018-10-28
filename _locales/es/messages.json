@@ -50,6 +50,9 @@
 	"optionsUserscriptsSubtitle": {
 		"message": "Sería bueno que pudieras enviarle a GitHub las bifurcaciones (fork) que funcionan, para que otros puedan beneficiarse de ello: "
 	},
+	"optionsUserscriptsUntitled": {
+		"message": "Tarea sin título"
+	},
 	"optionsUserscriptsName": {
 		"message": "Nombre. Con un nombre vacío, este bypass será borrado."
 	},
@@ -58,6 +61,9 @@
 	},
 	"optionsUserscriptsDelete": {
 		"message": "Eliminar Bypass"
+	},
+	"optionsUserscriptsDeleteConfirm": {
+		"message": "¿Realmente quieres borrar este bypass?"
 	},
 	"blockedTitle": {
 		"message": "Bypass Universal evitó que su IP se registre."
