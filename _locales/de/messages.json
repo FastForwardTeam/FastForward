@@ -36,7 +36,7 @@
 		"message": "Umgehe Tracker mit api.hell.sh."
 	},
 	"optionsBlockIPLoggers": {
-		"message": "Blockiere IP-Logger wenn sie nicht umgehen werden können."
+		"message": "Blockiere IP-Logger wenn sie nicht umgangen werden können."
 	},
 	"optionsCrowdBypass": {
 		"message": "Gebe und nehme die Ziel-URL von unumgänglichen Linkkürzern."
@@ -66,7 +66,7 @@
 		"message": "Möchtest du diese Umgehung wirklich löschen?"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass hat deine IP vor einem Logger geschützt."
+		"message": "Universal Bypass hat dich vor einem IP-Logger geschützt."
 	},
 	"blockedSubtitle": {
 		"message": "Falls du nicht möchtest, dass Universal Bypass deine IP vor bösen Leuten schützt, deaktivere das in den Optionen:"
