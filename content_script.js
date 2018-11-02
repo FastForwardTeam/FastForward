@@ -717,6 +717,11 @@ if(document instanceof HTMLDocument)
 				return setBypassed()
 			}
 			//Other Templates
+			if(document.querySelector(".timed-content-client_show_0_30_0"))//technicoz.com
+			{
+				document.querySelector(".timed-content-client_show_0_30_0").classList.remove("timed-content-client_show_0_30_0")
+				return setBypassed()
+			}
 			if(document.getElementById("getlink")&&document.getElementById("gotolink")&&document.getElementById("timer"))//tetewlink.me,vehicle-techno.cf
 			{
 				document.getElementById("gotolink").removeAttribute("disabled")
