@@ -1,0 +1,83 @@
+{
+	"appDesc": {
+		"message": "Non sprecare il tuo tempo con la conformità. Universal Bypass salta automaticamente fastidiosi link shortener."
+	},
+	"firstrunTitle": {
+		"message": "Grazie per aver installato Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "Sei incredibile!"
+	},
+	"firstrunWhatnow": {
+		"message": "Cosa puoi fare ora:"
+	},
+	"firstrunExampleLinks": {
+		"message": "Controlla i link di esempio per verificare che Universal Bypass funzioni."
+	},
+	"firstrunOptions": {
+		"message": "Cambia le opzioni di Universal Bypass."
+	},
+	"firstrunTwitter": {
+		"message": "Segui Universal Bypass su Twitter per essere sempre aggiornato su Universal Bypass."
+	},
+	"homepage": {
+		"message": "Homepage"
+	},
+	"popupOptions": {
+		"message": "Opzioni"
+	},
+	"options": {
+		"message": "Opzioni di bypass universale"
+	},
+	"save": {
+		"message": "Salva"
+	},
+	"optionsTrackerBypass": {
+		"message": "Bypass tracker utilizzando api.hell.sh."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Blocca i logger IP se essi non possono essere bypassati."
+	},
+	"optionsCrowdBypass": {
+		"message": "Dai e ottieni le destinazioni degli shorteners non bypassati."
+	},
+	"privacyPolicy": {
+		"message": "Informativa sulla privacy"
+	},
+	"optionsUserscripts": {
+		"message": "Bypass personalizzati"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "Sarebbe bello se tu potessi inviare i bypass operativi a GitHub, in modo che anche altri possano trarne beneficio: "
+	},
+	"optionsUserscriptsUntitled": {
+		"message": "Bypass senza titolo"
+	},
+	"optionsUserscriptsName": {
+		"message": "Nome. Con un nome vuoto, questo bypass verrà eliminato."
+	},
+	"optionsUserscriptsDomains": {
+		"message": "Dominio. Usa * perché questo bypass sia efficace ovunque."
+	},
+	"optionsUserscriptsDelete": {
+		"message": "Elimina Bypass"
+	},
+	"optionsUserscriptsDeleteConfirm": {
+		"message": "Vuoi davvero eliminare questo bypass?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass ha impedito la registrazione del tuo IP."
+	},
+	"blockedSubtitle": {
+		"message": "Se non vuoi che Universal Bypass impedisca ai cattivi attori di ottenere il tuo IP, disabilitalo nelle opzioni:"
+	},
+	"crowdBypassed": {
+		"message": "Forse non dovrai aspettare!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Altri utenti di Universal Bypass hanno già aspettato e hanno riferito che questo porta a%"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Non era corretto?"
+	}
+}

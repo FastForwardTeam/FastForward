@@ -1,0 +1,80 @@
+{
+	"appDesc": {
+		"message": "Ne vesztegesd az időd beleegyezésekkel. A Universal Bypass automatikusan kikerüli a bosszantó link-rövidítőket."
+	},
+	"firstrunTitle": {
+		"message": "Köszönjük, hogy telepítetted a Universal Bypass-t!"
+	},
+	"firstrunSubtitle": {
+		"message": "Csodálatos vagy!"
+	},
+	"firstrunWhatnow": {
+		"message": "Innentől a következőket teheted:"
+	},
+	"firstrunExampleLinks": {
+		"message": "Próbáld ki, hogy a Universal Bypass működik-e példalinkek megnyitásával."
+	},
+	"firstrunOptions": {
+		"message": "Változtasd meg a Universal Bypass beállításait."
+	},
+	"firstrunTwitter": {
+		"message": "Kövesd a Universal Bypass-t a Twitteren, hogy mindig képben légy a bővítménnyel kapcsolatban."
+	},
+	"homepage": {
+		"message": "Kezdőlap"
+	},
+	"popupOptions": {
+		"message": "Beállítások"
+	},
+	"options": {
+		"message": "Universal Bypass beállítások"
+	},
+	"save": {
+		"message": "Mentés"
+	},
+	"optionsTrackerBypass": {
+		"message": "api.hell.sh-t használó trackerek kikerülése."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "IP-loggerek blokkolása, ha nem kerülhetők ki."
+	},
+	"privacyPolicy": {
+		"message": "Adatvédelmi irányelvek"
+	},
+	"optionsUserscripts": {
+		"message": "Egyéni kikerülések"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "Örülnénk, ha működő kikerüléseket küldenél a GitHub repo-ba, így másoknak könnyebb dolguk legyen: "
+	},
+	"optionsUserscriptsUntitled": {
+		"message": "Névtelen kikerülés"
+	},
+	"optionsUserscriptsName": {
+		"message": "A név. Ha egy kikerülésnek nincs neve, az törlésre kerül."
+	},
+	"optionsUserscriptsDomains": {
+		"message": "Domain-ek. Használj * jelet, ha azt szeretnéd, hogy ez a kikerülés mindenhol hatásos legyen."
+	},
+	"optionsUserscriptsDelete": {
+		"message": "Kikerülés törlése"
+	},
+	"optionsUserscriptsDeleteConfirm": {
+		"message": "Biztosan törölni szeretnéd ezt a kikerülést?"
+	},
+	"blockedTitle": {
+		"message": "A Universal Bypass megtiltotta, hogy az IP-t naplózható legyen."
+	},
+	"blockedSubtitle": {
+		"message": "Ha nem szeretnéd, hogy a Universal Bypass megakadályozza a kártevők számára az IP-címed beszerzését, kapcsold ki a beállításokban:"
+	},
+	"crowdBypassed": {
+		"message": "Talán nem kell várakoznod!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Más Universal Bypass felhasználók már vártak helyetted, és szerintük ez a(z) % webhelyhez vezet"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Ez helytelen?"
+	}
+}
