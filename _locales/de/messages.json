@@ -8,6 +8,9 @@
 	"firstrunSubtitle": {
 		"message": "Du bist der Beste!"
 	},
+	"firstrunNoScript": {
+		"message": "Jedoch sieht es so aus, als ob du NoScript oder ähnliches verwendest, womit Universal Bypass nicht kompatibel ist."
+	},
 	"firstrunWhatnow": {
 		"message": "Was du nun tun kannst:"
 	},

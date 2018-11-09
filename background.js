@@ -1,9 +1,59 @@
 //Install & Uninstall Actions
 chrome.runtime.onInstalled.addListener(details=>{
 	if(details.reason=="install")
-		window.open(chrome.runtime.getURL("/html/firstrun.html"))
+		window.open("https://universal-bypass.org/firstrun")
 })
 chrome.runtime.setUninstallURL("https://goo.gl/forms/H8FswYQ2a37LSxc13")
+
+//Fixing Content-Security-Policy on Firefox because apparently extensions have no special privileges in Firefox
+if(typeof browser!="undefined")
+	browser.webRequest.onHeadersReceived.addListener(details=>{
+		if(details.method=="GET"&&details.type=="main_frame")
+		{
+			let csp=false
+			for(let i in details.responseHeaders)
+			{
+				if("value"in details.responseHeaders[i]&&["content-security-policy","x-content-security-policy"].indexOf(details.responseHeaders[i].name.toLowerCase())>-1)
+				{
+					csp=true
+					let _policies=details.responseHeaders[i].value.split(";"),policies={}
+					for(let j in _policies)
+					{
+						let policy=_policies[j],name=policy.split(" ")[0]
+						policies[name]=policy.substr(name.length).trim().split(" ")
+					}
+					if("script-src"in policies||"default-src"in policies)
+					{
+						if(!("script-src"in policies))
+							policies["script-src"]=policies["default-src"]
+						if(policies["script-src"].indexOf("'unsafe-inline'")==-1)
+							policies["script-src"].push("'unsafe-inline'")
+						if(policies["script-src"].indexOf("'unsafe-eval'")==-1)
+							policies["script-src"].push("'unsafe-eval'")
+					}
+					else
+						policies["script-src"]=["*","'unsafe-inline'","'unsafe-eval'"]
+					let value=""
+					for(let name in policies)
+					{
+						value+=name;
+						for(let j in policies[name])
+						{
+							value+=" "+policies[name][j]
+						}
+						value+="; "
+					}
+					if(value=="")
+						details.responseHeaders[i].value="script-src * 'unsafe-inline' 'unsafe-eval'"
+					else
+						details.responseHeaders[i].value=value.substr(0, value.length - 2)
+				}
+			}
+			if(!csp)
+				details.responseHeaders.push({name:"content-security-policy",value:"script-src * 'unsafe-inline' 'unsafe-eval'"})
+			return{responseHeaders:details.responseHeaders}
+		}
+	},{urls:["<all_urls>"]},["blocking","responseHeaders"])
 
 //Bypasses of sites specifying the destination in the query
 chrome.webRequest.onBeforeRequest.addListener(details=>{
@@ -38,7 +88,15 @@ chrome.webRequest.onBeforeSendHeaders.addListener(details=>{
 	]
 },["blocking","requestHeaders"])
 
-//Intercept and redirect to chrome extension url because the content script can't
+//Internal redirects to extension URLs to bypass content script limitations
+chrome.webRequest.onBeforeRequest.addListener(details=>{
+	if(details.method=="GET"&&details.type=="main_frame")
+	{
+		if(details.url.substr(38)=="1")
+			return{redirectUrl:chrome.runtime.getURL("html/firstrun.html")}
+		return{redirectUrl:chrome.runtime.getURL("html/firstrun-noscript.html")}
+	}
+},{urls:["https://universal-bypass.org/firstrun?*"]},["blocking"])
 chrome.webRequest.onBeforeRequest.addListener(details=>{
 	if(details.method=="GET"&&details.type=="main_frame")
 		return{redirectUrl:chrome.runtime.getURL("html/crowd-bypassed.html")+details.url.substr(43)}

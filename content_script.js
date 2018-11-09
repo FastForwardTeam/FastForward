@@ -345,6 +345,11 @@ if(document instanceof HTMLDocument)
 		if(bypassed)
 			return
 		ensureDomLoaded(()=>{
+			if(location.href=="https://universal-bypass.org/firstrun")
+			{
+				document.documentElement.setAttribute("data-universal-bypass-firstran","");
+				return setBypassed()
+			}
 			if(document.documentElement.hasAttribute("data-crowd-bypass-opt-in")||!document.documentElement.hasAttribute("data-crowd-bypass-opt-out"))
 				crowdOptIn=true
 			domainBypass("adfoc.us",()=>{
@@ -877,7 +882,6 @@ if(document instanceof HTMLDocument)
 		else document.addEventListener("DOMContentLoaded",()=>func())
 	}
 	injectScript("("+injectionCode.toString()+")()")//
-	chrome.storage.sync.get(["crowd_bypass_opt_out"],result=>ensureDomLoaded(()=>document.documentElement.setAttribute("data-crowd-bypass-opt-"+(result&&result.crowd_bypass_opt_out&&result.crowd_bypass_opt_out==="true"?"out":"in"),"")))
 	ensureDomLoaded(()=>{
 		let dT=setInterval(()=>{
 			if(document.documentElement.hasAttribute("data-universal-bypass-adlinkfly-info"))
@@ -912,9 +916,14 @@ if(document instanceof HTMLDocument)
 				document.documentElement.removeAttribute("data-universal-bypass-stop-watching")
 			}
 		},50)
+		if(location.href.toString()=="https://universal-bypass.org/firstrun")
+			setTimeout(()=>{
+				location.href="https://universal-bypass.org/firstrun?"+(document.documentElement.hasAttribute("data-universal-bypass-firstran")?"1":"0")
+			},50)
 	})
-	chrome.storage.local.get(["custom_bypasses"],result=>{
+	chrome.storage.local.get(["crowd_bypass_opt_out","custom_bypasses"],result=>{
 		ensureDomLoaded(()=>{
+			document.documentElement.setAttribute("data-crowd-bypass-opt-"+(result&&result.crowd_bypass_opt_out&&result.crowd_bypass_opt_out==="true"?"out":"in"),"")
 			if(result&&result.custom_bypasses)
 			{
 				let customBypasses=JSON.parse(result.custom_bypasses)
