@@ -23,19 +23,21 @@ if(typeof browser!="undefined")
 						policies[name]=policy.substr(name.length).trim().split(" ")
 					}
 					if(!("script-src"in policies)&&"default-src"in policies)
-						policies["script-src"]=policies["default-src"]
-					if("script-src"in policies)
 					{
+						policies["script-src"]=policies["default-src"]
 						let ni=policies["script-src"].indexOf("'none'")
 						if(ni>-1)
 							policies["script-src"].splice(ni, 1)
+					}
+					if("script-src"in policies)
+					{
 						if(policies["script-src"].indexOf("'unsafe-inline'")==-1)
 							policies["script-src"].push("'unsafe-inline'")
 						if(policies["script-src"].indexOf("'unsafe-eval'")==-1)
 							policies["script-src"].push("'unsafe-eval'")
 					}
 					else
-						policies["script-src"]=["*","'unsafe-inline'","'unsafe-eval'"]
+						policies["script-src"]=["*","blob:","data:","'unsafe-inline'","'unsafe-eval'"]
 					let value=""
 					for(let name in policies)
 					{
@@ -49,9 +51,8 @@ if(typeof browser!="undefined")
 					details.responseHeaders[i].value=value.substr(0,value.length-2)
 				}
 			}
-			if(!csp)
-				details.responseHeaders.push({name:"content-security-policy",value:"script-src * 'unsafe-inline' 'unsafe-eval'"})
-			return{responseHeaders:details.responseHeaders}
+			if(csp)
+				return{responseHeaders:details.responseHeaders}
 		}
 	},{urls:["<all_urls>"]},["blocking","responseHeaders"])
 
