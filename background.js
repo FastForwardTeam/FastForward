@@ -19,13 +19,16 @@ if(typeof browser!="undefined")
 					let _policies=details.responseHeaders[i].value.split(";"),policies={}
 					for(let j in _policies)
 					{
-						let policy=_policies[j],name=policy.split(" ")[0]
+						let policy=_policies[j].trim(),name=policy.split(" ")[0]
 						policies[name]=policy.substr(name.length).trim().split(" ")
 					}
-					if("script-src"in policies||"default-src"in policies)
+					if(!("script-src"in policies)&&"default-src"in policies)
+						policies["script-src"]=policies["default-src"]
+					if("script-src"in policies)
 					{
-						if(!("script-src"in policies))
-							policies["script-src"]=policies["default-src"]
+						let ni=policies["script-src"].indexOf("'none'")
+						if(ni>-1)
+							policies["script-src"].splice(ni, 1)
 						if(policies["script-src"].indexOf("'unsafe-inline'")==-1)
 							policies["script-src"].push("'unsafe-inline'")
 						if(policies["script-src"].indexOf("'unsafe-eval'")==-1)
@@ -43,10 +46,7 @@ if(typeof browser!="undefined")
 						}
 						value+="; "
 					}
-					if(value=="")
-						details.responseHeaders[i].value="script-src * 'unsafe-inline' 'unsafe-eval'"
-					else
-						details.responseHeaders[i].value=value.substr(0, value.length - 2)
+					details.responseHeaders[i].value=value.substr(0,value.length-2)
 				}
 			}
 			if(!csp)
