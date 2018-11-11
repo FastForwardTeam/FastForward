@@ -8,6 +8,9 @@
 	"firstrunSubtitle": {
 		"message": "Bạn thật tuyệt vời!"
 	},
+	"firstrunNoScript": {
+		"message": "Tuy nhiên, bạn dường như sử dụng NoScript hoặc tương tự, mà Universal Bypass không tương thích với."
+	},
 	"firstrunWhatnow": {
 		"message": "Bạn có thể làm gì bây giờ:"
 	},

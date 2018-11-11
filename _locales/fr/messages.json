@@ -8,6 +8,9 @@
 	"firstrunSubtitle": {
 		"message": "Vou-êtes incroyable!"
 	},
+	"firstrunNoScript": {
+		"message": "Cependant, vous semblez utiliser le module NoScript ou quelque chose de similaire, qui n'est pas compatible avec le contourneur universel."
+	},
 	"firstrunWhatnow": {
 		"message": "Voici ce que vous pouvez faire maintenant:"
 	},
