@@ -1,5 +1,5 @@
 {
 	"html_has_js": false,
 	"json_severity": "failure",
-	"ignore": ["html/style.css"]
+	"ignore": ["html/style.css", "html/ace/"]
 }
