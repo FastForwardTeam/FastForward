@@ -63,7 +63,7 @@ foreach($index as $fn)
 		$firefox->addFromString($fn, $cont);
 		unset($cont);
 	}
-	else
+	else if($fn != "_build.php")
 	{
 		$chrome->addFile($fn, $fn);
 		$firefox->addFile($fn, $fn);
