@@ -1,16 +1,20 @@
 if(document instanceof HTMLDocument)
 {
-	let injectionCode=()=>{
-		let ODP=(t,p,o)=>{
-			try
-			{
-				Object.defineProperty(t,p,o)
-			}
-			catch(e)
-			{
-				console.warn("Universal Bypass failed to set property",e)
-			}
-		},sT=window.setTimeout,sI=window.setInterval,ev=window.eval,// Note that we *need* to use eval for some bypasses to work and it's no security risk because this script is executed at page level which can be seen at https://playground.timmyrs.de/universal-bypass-exploit
+	let injectScript=text=>{//This method of injecting the script is faster than interfering extensions in most cases
+		let script=document.createElement("script")
+		script.innerHTML=text
+		script=document.documentElement.appendChild(script)
+		setTimeout(()=>document.documentElement.removeChild(script),10)//Removing the script after it's been executed to keep the DOM clean
+	},
+	ensureDomLoaded=func=>{
+		if(["interactive","complete"].indexOf(document.readyState)>-1)
+			func()
+		else
+			document.addEventListener("DOMContentLoaded",()=>func())
+	}
+	injectScript("("+(()=>{
+		let ODP=(t,p,o)=>{try{Object.defineProperty(t,p,o)}catch(e){console.warn("Universal Bypass failed to set property",e)}},sT=window.setTimeout,sI=window.setInterval,
+		ev=window.eval,// Note that we *need* to use eval for some bypasses to work and it's no security risk because this script is executed at page level which can be seen at https://playground.timmyrs.de/universal-bypass-exploit
 		isGoodLink=link=>link&&link!=location.href&&link.substr(0,11)!="javascript:",
 		navigated=false,safelyNavigate=target=>{
 			if(!navigated&&isGoodLink(target))
@@ -362,15 +366,19 @@ if(document instanceof HTMLDocument)
 					let steps=document.querySelectorAll(".uk.unlock-step-link.check")
 					if(steps.length)
 					{
-						for(let i in steps)
-							if(i!=0&&steps[i] instanceof HTMLElement&&steps[i].className.substr(0,3)=="uk ")
+						for(let i=1;i<steps.length;i++)
+						{
+							if(steps[i].className.substr(0,3)=="uk ")
+							{
 								steps[i].className = steps[i].className.substr(3)
-							steps[0].removeAttribute("target")
-							steps[0].setAttribute("href","#")
-							steps[0].click()
-							document.getElementById("link").click()
+							}
 						}
-					})
+						steps[0].removeAttribute("target")
+						steps[0].setAttribute("href","#")
+						steps[0].click()
+						document.getElementById("link").click()
+					}
+				})
 			})
 			domainBypass("srt.am",()=>{
 				if(document.querySelector(".skip-container"))
@@ -460,8 +468,27 @@ if(document instanceof HTMLDocument)
 				}
 			})
 			domainBypass("complete2unlock.com",()=>{
-				if(["/","/home","/create","/settings"].indexOf(location.pathname)==-1&&location.pathname.substr(0,5)!="/api/"&&location.pathname.substr(0,6)!="/edit/")
-					safelyNavigate("/api/links/complete"+location.pathname)
+				let bT=setInterval(()=>{
+					let b=document.getElementById("link-success-button"),es=document.querySelectorAll(".unlockpanel")
+					if(b&&es.length>0)
+					{
+						clearInterval(bT)
+						window.open=()=>{}
+						for(let i=0;i<es.length;i++)
+						{
+							let e=es[i]
+							e.dispatchEvent(new MouseEvent("click"))
+						}
+						let dT=setInterval(()=>{
+							if(!b.hasAttribute("disabled"))
+							{
+								clearInterval(dT)
+								b.dispatchEvent(new MouseEvent("click"))
+							}
+						},100)
+					}
+				},300)
+				setInterval(()=>clearInterval(bT),10000)
 			})
 			domainBypass("hidelink.club",()=>{
 				if(hash)
@@ -868,20 +895,7 @@ if(document instanceof HTMLDocument)
 			},100)
 			setTimeout(()=>clearInterval(dT),10000)
 		})
-	},//
-	//This method of injecting the script is faster than any interfering extensions in most cases
-	injectScript=text=>{
-		let script=document.createElement("script")
-		script.innerHTML=text
-		script=document.documentElement.appendChild(script)
-		setTimeout(()=>document.documentElement.removeChild(script),10)//Removing the script again after it's been executed to keep the DOM clean
-	},
-	ensureDomLoaded=func=>{
-		if(["interactive","complete"].indexOf(document.readyState)>-1)
-			func()
-		else document.addEventListener("DOMContentLoaded",()=>func())
-	}
-	injectScript("("+injectionCode.toString()+")()")//
+	})+")()")//injectend
 	ensureDomLoaded(()=>{
 		let dT=setInterval(()=>{
 			if(document.documentElement.hasAttribute("data-universal-bypass-adlinkfly-info"))
@@ -921,7 +935,7 @@ if(document instanceof HTMLDocument)
 				location.href="https://universal-bypass.org/firstrun?"+(document.documentElement.hasAttribute("data-universal-bypass-firstran")?"1":"0")
 			},50)
 	})
-	chrome.storage.local.get(["crowd_bypass_opt_out","custom_bypasses"],result=>{
+	chrome.storage.local.get(["crowd_bypass_opt_out","custom_bypasses"],result=>{//
 		ensureDomLoaded(()=>{
 			document.documentElement.setAttribute("data-crowd-bypass-opt-"+(result&&result.crowd_bypass_opt_out&&result.crowd_bypass_opt_out==="true"?"out":"in"),"")
 			if(result&&result.custom_bypasses)

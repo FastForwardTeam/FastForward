@@ -1,11 +1,15 @@
 <?php
-if(file_exists("Universal Bypass.zip"))
+if(file_exists("Universal Bypass Source.zip"))
 {
-	unlink("Universal Bypass.zip");
+	unlink("Universal Bypass Source.zip");
 }
 if(file_exists("Universal Bypass for Chrome.zip"))
 {
 	unlink("Universal Bypass for Chrome.zip");
+}
+if(file_exists("Universal Bypass for Firefox.zip"))
+{
+	unlink("Universal Bypass for Firefox.zip");
 }
 
 echo "Indexing...\n";
@@ -32,30 +36,40 @@ function recursivelyIndex($dir)
 }
 recursivelyIndex(".");
 
-echo "Generating Generic Build...\n";
-$zip = new ZipArchive();
-$zip->open("Universal Bypass.zip", ZipArchive::CREATE + ZipArchive::EXCL + ZipArchive::CHECKCONS) or die("Failed to create zipfile.\n");
-foreach($index as $fn)
+echo "Building...\n";
+function createZip($file)
 {
-	$zip->addFile($fn, $fn);
+	$zip = new ZipArchive();
+	$zip->open($file, ZipArchive::CREATE + ZipArchive::EXCL + ZipArchive::CHECKCONS) or die("Failed to create {$file}.\n");
+	return $zip;
 }
-$zip->close();
-
-echo "Generating Chrome Build...\n";
-$zip = new ZipArchive();
-$zip->open("Universal Bypass for Chrome.zip", ZipArchive::CREATE + ZipArchive::EXCL + ZipArchive::CHECKCONS) or die("Failed to create zipfile.\n");
+$source = createZip("Universal Bypass Source.zip");
+$chrome = createZip("Universal Bypass for Chrome.zip");
+$firefox = createZip("Universal Bypass for Firefox.zip");
 foreach($index as $fn)
 {
 	if($fn == "manifest.json")
 	{
-		$manifest = json_decode(file_get_contents("manifest.json"), true);
-		unset($manifest["web_accessible_resources"]);
-		$zip->addFromString("manifest.json", json_encode($manifest, JSON_UNESCAPED_SLASHES));
+		$json = json_decode(file_get_contents($fn), true);
+		unset($json["web_accessible_resources"]);
+		$chrome->addFromString($fn, json_encode($json, JSON_UNESCAPED_SLASHES));
+		$firefox->addFile($fn, $fn);
+		unset($json);
+	}
+	else if($fn == "content_script.js")
+	{
+		$cont = str_replace("\\", "\\\\", preg_replace('/injectScript\("\("\+\(\(\)=>({.*})\)\+"\)\(\)"\)\/\/injectend/s', 'injectScript(`(()=>$1)()`)', file_get_contents($fn)));
+		$chrome->addFromString($fn, $cont);
+		$firefox->addFromString($fn, $cont);
+		unset($cont);
 	}
 	else
 	{
-		$zip->addFile($fn, $fn);
+		$chrome->addFile($fn, $fn);
+		$firefox->addFile($fn, $fn);
 	}
+	$source->addFile($fn, $fn);
 }
-$zip->close();
-
+$source->close();
+$chrome->close();
+$firefox->close();

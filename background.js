@@ -3,7 +3,7 @@ chrome.runtime.onInstalled.addListener(details=>{
 	if(details.reason=="install")
 		window.open("https://universal-bypass.org/firstrun")
 })
-chrome.runtime.setUninstallURL("https://goo.gl/forms/H8FswYQ2a37LSxc13")
+chrome.runtime.setUninstallURL("https://docs.google.com/forms/d/e/1FAIpQLSdXw-Yf5IaDXZWw4fDHroZkDFOF6hgWEvVDaXT9ZADqnF2reg/viewform")
 
 //Fixing Content-Security-Policy on Firefox because apparently extensions have no special privileges in Firefox
 if(typeof browser!="undefined")
