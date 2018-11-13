@@ -1,5 +1,6 @@
 {
 	"html_has_js": false,
+	"php_has_html": false,
 	"json_severity": "failure",
 	"ignore": ["html/style.css", "html/ace/"]
 }
