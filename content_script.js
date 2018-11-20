@@ -723,23 +723,32 @@ if(document instanceof HTMLDocument)
 			}
 			if(document.getElementById("wpsafe-generate")&&typeof wpsafegenerate=="function")
 			{
-				let search=location.search.toString().replace("?", "")
-				if(search.substr(0,3)=="go=")
+				let a=document.querySelector("#wpsafegenerate > #wpsafe-link > a[href]")
+				if(a)
 				{
-					search=atob(search.substr(3))
-					if(search.substr(0,4)=="http")
-					{
-						safelyNavigate(search)
-						return setBypassed()
-					}
+					safelyNavigate(a.href)
+					return setBypassed()
 				}
-				else if(location.pathname.toString().substr(0,4)=="/go/")
+				else
 				{
-					search=atob(location.pathname.toString().substr(4))
-					if(search.substr(0,4)=="http")
+					let search=location.search.toString().replace("?", "")
+					if(search.substr(0,3)=="go=")
 					{
-						safelyNavigate(search)
-						return setBypassed()
+						search=atob(search.substr(3))
+						if(search.substr(0,4)=="http")
+						{
+							safelyNavigate(search)
+							return setBypassed()
+						}
+					}
+					else if(location.pathname.toString().substr(0,4)=="/go/")
+					{
+						search=atob(location.pathname.toString().substr(4))
+						if(search.substr(0,4)=="http")
+						{
+							safelyNavigate(search)
+							return setBypassed()
+						}
 					}
 				}
 			}

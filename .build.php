@@ -63,7 +63,7 @@ foreach($index as $fn)
 		$firefox->addFromString($fn, $cont);
 		unset($cont);
 	}
-	else if($fn != "_build.php")
+	else if($fn != ".anylint" && $fn != ".build.php" && $fn != ".jshintrc")
 	{
 		$chrome->addFile($fn, $fn);
 		$firefox->addFile($fn, $fn);
