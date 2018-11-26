@@ -72,8 +72,7 @@ chrome.webRequest.onBeforeRequest.addListener(details=>{
 
 //Shorte.st Bypass
 chrome.webRequest.onBeforeSendHeaders.addListener(details=>{
-	if(details.method=="GET"&&details.type=="main_frame")
-		return{requestHeaders:details.requestHeaders.filter(h=>h.name!="User-Agent")}
+	return{requestHeaders:details.requestHeaders.filter(h=>h.name!="User-Agent")}
 },{
 	urls:[
 	"*://sh.st/*",

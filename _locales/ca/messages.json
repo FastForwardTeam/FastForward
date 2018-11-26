@@ -1,0 +1,86 @@
+{
+	"appDesc": {
+		"message": "No perdis el teu temps amb la conformitat. Universal Bypass se salta automàticament molests escurçadors d'enllaços."
+	},
+	"firstrunTitle": {
+		"message": "Gràcies per instal·lar Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "Ets fantàstic!"
+	},
+	"firstrunNoScript": {
+		"message": "Però, sembla que estàs utilitzant NoScript o similar, amb la qual Universal Bypass no és compatible."
+	},
+	"firstrunWhatnow": {
+		"message": "El que pots fer ara:"
+	},
+	"firstrunExampleLinks": {
+		"message": "Comprova els enllaços d'exemple per a assegurar-te que Universal Bypass està funcionant."
+	},
+	"firstrunOptions": {
+		"message": "Canvia les opcions de Universal Bypass."
+	},
+	"firstrunTwitter": {
+		"message": "Segueix Universal Bypass a Twitter per a mantenir-te actualitzat amb Universal Bypass."
+	},
+	"homepage": {
+		"message": "Pàgina d'inici"
+	},
+	"popupOptions": {
+		"message": "Opcions"
+	},
+	"options": {
+		"message": "Opcions de Universal Bypass"
+	},
+	"save": {
+		"message": "Desa"
+	},
+	"optionsTrackerBypass": {
+		"message": "Circumval·la rastrejadors utilitzant api.hell.sh."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Bloqueja registradors d'adreces IP si no poden circumval·lar-se."
+	},
+	"optionsCrowdBypass": {
+		"message": "Comparteix i rep la destinació de escurçadors no circumval·lables."
+	},
+	"privacyPolicy": {
+		"message": "Política de privacitat"
+	},
+	"optionsUserscripts": {
+		"message": "Circumval·lacions personalitzades"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "Estaria bé si enviés circumval·lacions que funcionen a GitHub, perquè altres puguin beneficiar-se'n: "
+	},
+	"optionsUserscriptsUntitled": {
+		"message": "Circumval·lació sense títol"
+	},
+	"optionsUserscriptsName": {
+		"message": "Nom. Amb un nom buida, aquesta circumval·lació se suprimirà."
+	},
+	"optionsUserscriptsDomains": {
+		"message": "Dominis. Fes servir * perquè aquesta circumval·lació funcioni per tot arreu."
+	},
+	"optionsUserscriptsDelete": {
+		"message": "Suprimeix circumval·lació"
+	},
+	"optionsUserscriptsDeleteConfirm": {
+		"message": "Segur que vols suprimir aquesta circumval·lació?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass ha impedit que la seva adreça IP es registrés."
+	},
+	"blockedSubtitle": {
+		"message": "Si no vols que Universal Bypass impedeixi a agents maliciosos d'obtenir la seva adreça IP, desactiva això a les opcions:"
+	},
+	"crowdBypassed": {
+		"message": "Potser que no hagis d'esperar!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Altres usuaris de Universal Bypass ja han esperat per tu i han informat que això porta a %"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Això no era correcte?"
+	}
+}

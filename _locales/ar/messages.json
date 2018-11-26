@@ -8,8 +8,14 @@
 	"firstrunSubtitle": {
 		"message": "أنت رائع!"
 	},
+	"firstrunNoScript": {
+		"message": "ومع ذلك، يبدو أنك تستخدم NoScript أو المماثلة، التي \"Universal Bypass\" غير متوافق مع."
+	},
 	"firstrunWhatnow": {
 		"message": "ما الذي يمكنك القيام به اﻵن:"
+	},
+	"firstrunExampleLinks": {
+		"message": "تحقق من المواقع التاليه للتأكد من ان \"Universal Bypass\" يعمل."
 	},
 	"firstrunOptions": {
 		"message": "تغيير إعدادات المتجاوز الشامل."
@@ -34,6 +40,9 @@
 	},
 	"optionsBlockIPLoggers": {
 		"message": "منع مسجلات ال IP إذا كان لا يمكن تجاوزهم."
+	},
+	"optionsCrowdBypass": {
+		"message": "أعطي و خذ جهات القصر نبيباسابل."
 	},
 	"privacyPolicy": {
 		"message": "سياسة الخصوصية"

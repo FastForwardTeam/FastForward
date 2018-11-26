@@ -19,18 +19,17 @@ function recursivelyIndex($dir)
 	global $index;
 	foreach(scandir($dir) as $f)
 	{
-		if(substr($f, 0, 1) == ".")
+		if(substr($f, 0, 1) != ".")
 		{
-			continue;
-		}
-		$fn = $dir."/".$f;
-		if(is_dir($fn))
-		{
-			recursivelyIndex($fn);
-		}
-		else
-		{
-			array_push($index, substr($fn, 2));
+			$fn = $dir."/".$f;
+			if(is_dir($fn))
+			{
+				recursivelyIndex($fn);
+			}
+			else
+			{
+				array_push($index, substr($fn, 2));
+			}
 		}
 	}
 }
@@ -48,24 +47,26 @@ $chrome = createZip("Universal Bypass for Chrome.zip");
 $firefox = createZip("Universal Bypass for Firefox.zip");
 foreach($index as $fn)
 {
-	if($fn == "manifest.json")
-	{
-		$json = json_decode(file_get_contents($fn), true);
-		unset($json["web_accessible_resources"]);
-		$chrome->addFromString($fn, json_encode($json, JSON_UNESCAPED_SLASHES));
-		$firefox->addFile($fn, $fn);
-		unset($json);
-	}
-	else if($fn == "content_script.js")
+	if($fn == "content_script.js")
 	{
 		$cont = str_replace("\\", "\\\\", preg_replace('/injectScript\("\("\+\(\(\)=>({.*})\)\+"\)\(\)"\)\/\/injectend/s', 'injectScript(`(()=>$1)()`)', file_get_contents($fn)));
 		$chrome->addFromString($fn, $cont);
 		$firefox->addFromString($fn, $cont);
 		unset($cont);
 	}
-	else if($fn != ".anylint" && $fn != ".build.php" && $fn != ".jshintrc")
+	else
 	{
-		$chrome->addFile($fn, $fn);
+		if($fn == "manifest.json")
+		{
+			$json = json_decode(file_get_contents($fn), true);
+			unset($json["web_accessible_resources"]);
+			$chrome->addFromString($fn, json_encode($json, JSON_UNESCAPED_SLASHES));
+			unset($json);
+		}
+		else
+		{
+			$chrome->addFile($fn, $fn);
+		}
 		$firefox->addFile($fn, $fn);
 	}
 	$source->addFile($fn, $fn);

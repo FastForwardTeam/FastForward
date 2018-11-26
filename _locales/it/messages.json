@@ -8,6 +8,9 @@
 	"firstrunSubtitle": {
 		"message": "Sei incredibile!"
 	},
+	"firstrunNoScript": {
+		"message": "Però, sembra che tu stia usando NoScript o simili, con le quali Universal Bypass non è compatibile."
+	},
 	"firstrunWhatnow": {
 		"message": "Cosa puoi fare ora:"
 	},
@@ -21,13 +24,13 @@
 		"message": "Segui Universal Bypass su Twitter per essere sempre aggiornato su Universal Bypass."
 	},
 	"homepage": {
-		"message": "Homepage"
+		"message": "Pagina principale"
 	},
 	"popupOptions": {
 		"message": "Opzioni"
 	},
 	"options": {
-		"message": "Opzioni di bypass universale"
+		"message": "Opzioni di Universal Bypass"
 	},
 	"save": {
 		"message": "Salva"

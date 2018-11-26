@@ -3,10 +3,13 @@
 		"message": "No pierdas el tiempo para acceder. Universal Bypass omite automáticamente los molestos acortadores de enlaces."
 	},
 	"firstrunTitle": {
-		"message": "Gracias por instalar Universal Bypass!"
+		"message": "¡Gracias por instalar Universal Bypass!"
 	},
 	"firstrunSubtitle": {
 		"message": "¡Eres increíble!"
+	},
+	"firstrunNoScript": {
+		"message": "No obstante, parece que estés utilizando NoScript o similar, con la que Universal Bypass no es compatible."
 	},
 	"firstrunWhatnow": {
 		"message": "Lo que puedes hacer ahora:"
@@ -15,43 +18,43 @@
 		"message": "Revise los enlaces de ejemplo para asegurarse de que el Bypass Universal está funcionando."
 	},
 	"firstrunOptions": {
-		"message": "Configura Universal Bypass' opción."
+		"message": "Configura Universal Bypass."
 	},
 	"firstrunTwitter": {
 		"message": "Siga a Universal Bypass en Twitter para estar informado sobre Universal Bypass."
 	},
 	"homepage": {
-		"message": "Inicio"
+		"message": "Página de inicio"
 	},
 	"popupOptions": {
 		"message": "Opciones"
 	},
 	"options": {
-		"message": "Universal Bypass Opciones"
+		"message": "Opciones de Universal Bypass"
 	},
 	"save": {
 		"message": "Guardar"
 	},
 	"optionsTrackerBypass": {
-		"message": "Bypass de rastreadores usando api.hell.sh."
+		"message": "Circunvala rastreadores usando api.hell.sh."
 	},
 	"optionsBlockIPLoggers": {
-		"message": "Bloquee los registradores IP si no pueden ser desviados."
+		"message": "Bloquea los registradores IP si no pueden ser circunvalados."
 	},
 	"optionsCrowdBypass": {
-		"message": "Dar y tomar los destinos de los acortadores que no se pueden anular."
+		"message": "Da y toma los destinos de los acortadores que no se pueden circunvalar."
 	},
 	"privacyPolicy": {
 		"message": "Política de privacidad"
 	},
 	"optionsUserscripts": {
-		"message": "Personalizar Bypasses"
+		"message": "Circunvalaciones personalizadas"
 	},
 	"optionsUserscriptsSubtitle": {
 		"message": "Sería bueno que pudieras enviarle a GitHub las bifurcaciones (fork) que funcionan, para que otros puedan beneficiarse de ello: "
 	},
 	"optionsUserscriptsUntitled": {
-		"message": "Tarea sin título"
+		"message": "Circunvalación sin título"
 	},
 	"optionsUserscriptsName": {
 		"message": "Nombre. Con un nombre vacío, este bypass será borrado."
@@ -66,16 +69,16 @@
 		"message": "¿Realmente quieres borrar este bypass?"
 	},
 	"blockedTitle": {
-		"message": "Bypass Universal evitó que su IP se registre."
+		"message": "Bypass Universal evitó que su IP se registrara."
 	},
 	"blockedSubtitle": {
-		"message": "Si no desea que Universal Bypass evite que los agentes maliciosos obtengan su IP, deshabilite esta opción en las opciones:"
+		"message": "Si no quieres que Universal Bypass evite que agentes maliciosos obtengan su IP, deshabilita esta opción en las opciones:"
 	},
 	"crowdBypassed": {
 		"message": "Puede que no tengas que esperar!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Otros usuarios de Universal Bypass ya han esperado por usted y han informado que esto lleva a un % de"
+		"message": "Otros usuarios de Universal Bypass ya han esperado por ti y han informado que esto lleva a %"
 	},
 	"crowdBypassedIgnore": {
 		"message": "¿No era eso correcto?"
