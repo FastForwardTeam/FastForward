@@ -117,11 +117,14 @@ var trackerBypassEnabled=true,blockIPLoggers=true,resolveDestination=url=>{
 	xhr.send()
 	return destination
 }
-chrome.storage.sync.get(["no_tracker_bypass","block_ip_loggers"],result=>{
-	if(result&&result.no_tracker_bypass&&result.no_tracker_bypass==="true")
-		trackerBypassEnabled=false
-	if(result&&result.allow_ip_loggers&&result.allow_ip_loggers==="true")
-		blockIPLoggers=false
+chrome.storage.sync.get(["no_tracker_bypass","allow_ip_loggers"],result=>{
+	if(result)
+	{
+		if(result.no_tracker_bypass&&result.no_tracker_bypass==="true")
+			trackerBypassEnabled=false
+		if(result.allow_ip_loggers&&result.allow_ip_loggers==="true")
+			blockIPLoggers=false
+	}
 })
 chrome.storage.onChanged.addListener(changes=>{
 	if(changes.no_tracker_bypass)
