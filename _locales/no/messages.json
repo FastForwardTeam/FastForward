@@ -8,6 +8,9 @@
 	"firstrunSubtitle": {
 		"message": "Du er fantastisk!"
 	},
+	"firstrunNoScript": {
+		"message": "Men du ser ut til å bruke NoScript eller noe lignende, som Universal Bypass ikke er kompatibel med."
+	},
 	"firstrunWhatnow": {
 		"message": "Det du kan gjøre nå:"
 	},
@@ -50,6 +53,9 @@
 	"optionsUserscriptsSubtitle": {
 		"message": "Det hadde vært fint om du kunne meldt inn fungerende forbipasserere til GitHub, sånn at andre kan få nytte av dem: "
 	},
+	"optionsUserscriptsUntitled": {
+		"message": "Unavngitt forbipassering"
+	},
 	"optionsUserscriptsName": {
 		"message": "Navn. Dersom navnet er tomt, vil forbipasseringen bli slettet."
 	},
@@ -58,6 +64,9 @@
 	},
 	"optionsUserscriptsDelete": {
 		"message": "Slett forbipasseringen"
+	},
+	"optionsUserscriptsDeleteConfirm": {
+		"message": "Vil du virkelig slette denne forbipasseringen?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass hindret IP-adressen din fra å bli loggført."

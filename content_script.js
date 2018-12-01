@@ -596,7 +596,7 @@ if(document instanceof HTMLDocument)
 					{
 						clearInterval(iT)
 						let t=document.documentElement.getAttribute("data-universal-bypass-adlinkfly-target")
-						if(t=="crowd")
+						if(t=="")
 							crowdBypass(()=>{
 								let cT=setInterval(()=>{
 									let a=document.querySelector("a.get-link[href]")
@@ -612,7 +612,7 @@ if(document instanceof HTMLDocument)
 							})
 						else contributeAndNavigate(t)
 					}
-			},50)
+				},50)//
 				return setBypassed()
 			}
 			//GemPixel Premium URL Shortener
@@ -916,7 +916,6 @@ if(document instanceof HTMLDocument)
 					{
 						if(xhr.status==200)
 						{
-							t="crowd"
 							let i=new DOMParser().parseFromString(xhr.responseText,"text/html").querySelector("img[src^='//api.miniature.io']")
 							if(i)
 							{
