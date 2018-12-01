@@ -1,0 +1,86 @@
+{
+	"appDesc": {
+		"message": "순하게 시간을 낭비하고 있지 마세요. Universal Bypass로 성가신 URL 단축 서비스를 자동 생략하세요."
+	},
+	"firstrunTitle": {
+		"message": "Universal Bypass를 설치해 주셔서 감사합니다!"
+	},
+	"firstrunSubtitle": {
+		"message": "당신은 멋쟁이에요!"
+	},
+	"firstrunNoScript": {
+		"message": "물론, NoScript나 그와 비슷한 걸 쓰는 것 같지만, Universal Bypass는 그런 것들과 호환되지 않습니다."
+	},
+	"firstrunWhatnow": {
+		"message": "지금 할 수 있는 것들"
+	},
+	"firstrunExampleLinks": {
+		"message": "예시 링크를 통해 Universal Bypass의 작동을 확인하기."
+	},
+	"firstrunOptions": {
+		"message": "Universal Bypass의 설정을 바꾸기"
+	},
+	"firstrunTwitter": {
+		"message": "Twitter에서 Universal Bypass를 팔로우해, 언제나 최신 정보를 알아보세요."
+	},
+	"homepage": {
+		"message": "누리집"
+	},
+	"popupOptions": {
+		"message": "설정"
+	},
+	"options": {
+		"message": "Universal Bypass 설정"
+	},
+	"save": {
+		"message": "저장"
+	},
+	"optionsTrackerBypass": {
+		"message": "Apimon.de 로 추적 우회하기."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "우회할 수 없다면 해당 페이지를 차단합니다."
+	},
+	"optionsCrowdBypass": {
+		"message": "우회할 수 없는 URL 단축 사이트 목적지 주고 받기."
+	},
+	"privacyPolicy": {
+		"message": "개인정보 취급방침"
+	},
+	"optionsUserscripts": {
+		"message": "사용자 지정 우회책"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "잘 작동하는 우회책을 GitHub에 제출하면 모두에게 이득이 됩니다. "
+	},
+	"optionsUserscriptsUntitled": {
+		"message": "이름 없는 우회책"
+	},
+	"optionsUserscriptsName": {
+		"message": "이름. 비워둘 경우 이 우회책을 지웁니다."
+	},
+	"optionsUserscriptsDomains": {
+		"message": "도메인. * 를 사용해 어디서든 작동하게 만듭니다."
+	},
+	"optionsUserscriptsDelete": {
+		"message": "우회책 지우기"
+	},
+	"optionsUserscriptsDeleteConfirm": {
+		"message": "이 우회책을 제거할까요?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass가 당신의 IP를 기록하지 못하게 막았습니다."
+	},
+	"blockedSubtitle": {
+		"message": "Universal Bypass가 나쁜 사이트의 IP 도둑질을 막기 원하지 않는다면, 설정에서 꺼주세요."
+	},
+	"crowdBypassed": {
+		"message": "이제 기다리지 않을 겁니다!"
+	},
+	"crowdBypassedInfo": {
+		"message": "다른 Universal Bypass 사용자가 이미 기다리고 있고, 끝난 순간에 % 로 이동합니다."
+	},
+	"crowdBypassedIgnore": {
+		"message": "올바르지 않나요?"
+	}
+}

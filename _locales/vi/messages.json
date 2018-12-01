@@ -36,7 +36,7 @@
 		"message": "Lưu"
 	},
 	"optionsTrackerBypass": {
-		"message": "Bỏ qua trackers bằng cách sử dụng api.hell.sh."
+		"message": "Bỏ qua trackers bằng cách sử dụng Apimon.de."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Chặn IP Logger nếu chúng không thể bỏ qua."

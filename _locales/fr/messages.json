@@ -36,7 +36,7 @@
 		"message": "Sauvegarder"
 	},
 	"optionsTrackerBypass": {
-		"message": "Contourner les traqueurs en utilisant api.hell.sh."
+		"message": "Contourner les traqueurs en utilisant Apimon.de."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Bloque les enregistreurs d’IP si ils ne peuvent être contournés."

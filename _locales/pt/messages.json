@@ -36,7 +36,7 @@
 		"message": "Salvar"
 	},
 	"optionsTrackerBypass": {
-		"message": "Ignorar rastreadores usando api.hell.sh."
+		"message": "Ignorar rastreadores usando Apimon.de."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Bloqueie os registradores de IP se eles não puderem ser ignorados."

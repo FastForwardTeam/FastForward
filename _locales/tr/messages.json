@@ -33,7 +33,7 @@
 		"message": "Kaydet"
 	},
 	"optionsTrackerBypass": {
-		"message": "api.hell.sh kullanan bypass izleyicileri."
+		"message": "Apimon.de kullanan bypass izleyicileri."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Eğer bypass yapılamazsa, IP kayıtlarını engelle."

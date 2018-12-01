@@ -36,7 +36,7 @@
 		"message": "Desa"
 	},
 	"optionsTrackerBypass": {
-		"message": "Circumval·la rastrejadors utilitzant api.hell.sh."
+		"message": "Circumval·la rastrejadors utilitzant Apimon.de."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Bloqueja registradors d'adreces IP si no poden circumval·lar-se."

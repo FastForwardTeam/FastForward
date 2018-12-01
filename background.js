@@ -102,7 +102,7 @@ chrome.webRequest.onBeforeRequest.addListener(details=>{
 		return{redirectUrl:chrome.runtime.getURL("html/crowd-bypassed.html")+details.url.substr(43)}
 },{urls:["https://universal-bypass.org/crowd-bypassed?*"]},["blocking"])
 
-//Tracker Bypass using api.hell.sh — see options for more details
+//Tracker Bypass using Apimon.de — see options for more details
 var trackerBypassEnabled=true,blockIPLoggers=true,resolveDestination=url=>{
 	let xhr=new XMLHttpRequest(),destination
 	xhr.onreadystatechange=()=>{
@@ -113,7 +113,7 @@ var trackerBypassEnabled=true,blockIPLoggers=true,resolveDestination=url=>{
 				destination=json.destination
 		}
 	}
-	xhr.open("GET","https://api.hell.sh/redirect/"+encodeURIComponent(url),false)
+	xhr.open("GET","https://apimon.de/redirect/"+encodeURIComponent(url),false)
 	xhr.send()
 	return destination
 }

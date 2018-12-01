@@ -36,7 +36,7 @@
 		"message": "Guardar"
 	},
 	"optionsTrackerBypass": {
-		"message": "Circunvala rastreadores usando api.hell.sh."
+		"message": "Circunvala rastreadores usando Apimon.de."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Bloquea los registradores IP si no pueden ser circunvalados."

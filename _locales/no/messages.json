@@ -33,7 +33,7 @@
 		"message": "Lagre"
 	},
 	"optionsTrackerBypass": {
-		"message": "Hopp forbi sporere ved hjelp av api.hell.sh."
+		"message": "Hopp forbi sporere ved hjelp av Apimon.de."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Blokker IP-loggførere dersom de ikke kan bli hoppet forbi."

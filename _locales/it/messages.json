@@ -36,7 +36,7 @@
 		"message": "Salva"
 	},
 	"optionsTrackerBypass": {
-		"message": "Bypass tracker utilizzando api.hell.sh."
+		"message": "Bypass tracker utilizzando Apimon.de."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Blocca i logger IP se essi non possono essere bypassati."

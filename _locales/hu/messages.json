@@ -33,7 +33,7 @@
 		"message": "Mentés"
 	},
 	"optionsTrackerBypass": {
-		"message": "api.hell.sh-t használó trackerek kikerülése."
+		"message": "Apimon.de-t használó trackerek kikerülése."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "IP-loggerek blokkolása, ha nem kerülhetők ki."

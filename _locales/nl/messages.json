@@ -36,7 +36,7 @@
 		"message": "Opslaan"
 	},
 	"optionsTrackerBypass": {
-		"message": "Omzeil trackers met behulp van api.hell.sh."
+		"message": "Omzeil trackers met behulp van Apimon.de."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Blokkeer IP-loggers als ze niet kunnen worden omzeilt."
