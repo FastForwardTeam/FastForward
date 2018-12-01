@@ -7,6 +7,6 @@ Don't waste your time with compliance. Universal Bypass automatically skips anno
 
 ## Building Universal Bypass
 
-Build Requirements: PHP-CLI — I use PHP 7.2.6 but 5.x should be fine as well
+Build Requirements: PHP-CLI — I use PHP 7.2.6 but >=5 should be fine as well
 
-1. Run `_build.php`
+1. Run `.build.php`
