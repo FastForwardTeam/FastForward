@@ -603,14 +603,20 @@ if(document instanceof HTMLDocument)
 						if(t=="")
 							crowdBypass(()=>{
 								let cT=setInterval(()=>{
-									let a=document.querySelector("a.get-link[href]")
+									let a=document.querySelector("a.get-link")
 									if(!a)
 										a=document.querySelector(".skip-ad a[href]")
-									if(a&&isGoodLink(a.href))
+									if(a)
 									{
-										clearInterval(cT)
-										a.parentNode.removeChild(a)
-										contributeAndNavigate(a.href)
+										h=a.href
+										if(!isGoodLink(h)&&a.hasAttribute("data-href"))//cuio.io
+											h=a.getAttribute("data-href")
+										if(isGoodLink(h))
+										{
+											clearInterval(cT)
+											a.parentNode.removeChild(a)
+											contributeAndNavigate(h)
+										}
 									}
 								},50)
 							})
