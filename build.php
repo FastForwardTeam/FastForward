@@ -47,27 +47,30 @@ $chrome = createZip("Universal Bypass for Chrome.zip");
 $firefox = createZip("Universal Bypass for Firefox.zip");
 foreach($index as $fn)
 {
-	if($fn == "content_script.js")
+	if($fn != "build.php")
 	{
-		$cont = str_replace("\\", "\\\\", preg_replace('/injectScript\("\("\+\(\(\)=>({.*})\)\+"\)\(\)"\)\/\/injectend/s', 'injectScript(`(()=>$1)()`)', file_get_contents($fn)));
-		$chrome->addFromString($fn, $cont);
-		$firefox->addFromString($fn, $cont);
-		unset($cont);
-	}
-	else
-	{
-		if($fn == "manifest.json")
+		if($fn == "content_script.js")
 		{
-			$json = json_decode(file_get_contents($fn), true);
-			unset($json["web_accessible_resources"]);
-			$chrome->addFromString($fn, json_encode($json, JSON_UNESCAPED_SLASHES));
-			unset($json);
+			$cont = str_replace("\\", "\\\\", preg_replace('/injectScript\("\("\+\(\(\)=>({.*})\)\+"\)\(\)"\)\/\/injectend/s', 'injectScript(`(()=>$1)()`)', file_get_contents($fn)));
+			$chrome->addFromString($fn, $cont);
+			$firefox->addFromString($fn, $cont);
+			unset($cont);
 		}
 		else
 		{
-			$chrome->addFile($fn, $fn);
+			if($fn == "manifest.json")
+			{
+				$json = json_decode(file_get_contents($fn), true);
+				unset($json["web_accessible_resources"]);
+				$chrome->addFromString($fn, json_encode($json, JSON_UNESCAPED_SLASHES));
+				unset($json);
+			}
+			else
+			{
+				$chrome->addFile($fn, $fn);
+			}
+			$firefox->addFile($fn, $fn);
 		}
-		$firefox->addFile($fn, $fn);
 	}
 	$source->addFile($fn, $fn);
 }

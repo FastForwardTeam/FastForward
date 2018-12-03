@@ -9,4 +9,4 @@ Don't waste your time with compliance. Universal Bypass automatically skips anno
 
 Build Requirements: PHP-CLI — I use PHP 7.2.6 but >=5 should be fine as well
 
-1. Run `.build.php`
+1. Run `build.php`
