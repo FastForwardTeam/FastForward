@@ -346,6 +346,10 @@ if(document instanceof HTMLDocument)
 				xhr.send("id="+location.hash.replace("#",""))
 			}
 		})
+		domainBypass("emulator.games",()=>{
+			if(location.pathname=="/download.php")
+				window.setInterval=f=>sI(f,1)
+		})
 		if(bypassed)
 			return
 		ensureDomLoaded(()=>{

@@ -1,0 +1,86 @@
+{
+	"appDesc": {
+		"message": "ユニバーサルバイパスは、迷惑な短縮URLを自動的にスキップします。コンプライアンスとあなたの時間を無駄にしません。"
+	},
+	"firstrunTitle": {
+		"message": "ユニバーサルバイパスをインストールしていただきありがとうございます!"
+	},
+	"firstrunSubtitle": {
+		"message": "素晴らしいです！"
+	},
+	"firstrunNoScript": {
+		"message": "あなたはNoScriptなどを使用しているようですが、ユニバーサルバイパスとは互換性がありません。"
+	},
+	"firstrunWhatnow": {
+		"message": "今できること："
+	},
+	"firstrunExampleLinks": {
+		"message": "ユニバーサルバイパスが機能しているかどうかを確認するには、リンクを参照してください。"
+	},
+	"firstrunOptions": {
+		"message": "ユニバーサルバイパスのオプションを変更"
+	},
+	"firstrunTwitter": {
+		"message": "ユニバーサルバイパスをTwitterでフォローして最新の情報を手に入れましょう。"
+	},
+	"homepage": {
+		"message": "ホームページ"
+	},
+	"popupOptions": {
+		"message": "オプション"
+	},
+	"options": {
+		"message": "ユニバーサルバイパスの設定"
+	},
+	"save": {
+		"message": "保存"
+	},
+	"optionsTrackerBypass": {
+		"message": "Apimon.deを使用してトラッカーをバイパスする"
+	},
+	"optionsBlockIPLoggers": {
+		"message": "バイパスできない場合は、IPロガーをブロックする"
+	},
+	"optionsCrowdBypass": {
+		"message": "バイパスできない短縮urlの行き先を設定する"
+	},
+	"privacyPolicy": {
+		"message": "プライバシーポリシー"
+	},
+	"optionsUserscripts": {
+		"message": "カスタムバイパス"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "バイパスをGitHubに提出すれば、他の人にもメリットがあります "
+	},
+	"optionsUserscriptsUntitled": {
+		"message": "無題のバイパス"
+	},
+	"optionsUserscriptsName": {
+		"message": "名前 (名前が無い場合、このバイパスは削除されます。)"
+	},
+	"optionsUserscriptsDomains": {
+		"message": "ドメイン (このバイパスがどこでも有効になるように*を使用してください。)"
+	},
+	"optionsUserscriptsDelete": {
+		"message": "Bypassを削除"
+	},
+	"optionsUserscriptsDeleteConfirm": {
+		"message": "本当にこのバイパスを削除しますか？"
+	},
+	"blockedTitle": {
+		"message": "ユニバーサルバイパスにより、IPがログに記録されなくなりました。"
+	},
+	"blockedSubtitle": {
+		"message": "ユニバーサルバイパスで悪意のある人物があなたのIPを取得しないようにするには、オプションでこれを無効にします:"
+	},
+	"crowdBypassed": {
+		"message": "あなたは待つ必要はありません！"
+	},
+	"crowdBypassedInfo": {
+		"message": "他のユニバーサルバイパスユーザーはすでにあなたを待っていて、これが % につながっていると報告しています。"
+	},
+	"crowdBypassedIgnore": {
+		"message": "これは間違っていたのですか？"
+	}
+}
