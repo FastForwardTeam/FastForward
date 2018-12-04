@@ -2,8 +2,11 @@
 
 Don't waste your time with compliance. Universal Bypass automatically skips annoying link shorteners.
 
-- [Get the Extension for Chrome and/or Firefox.](https://universal-bypass.org)
-- [Help translate Universal Bypass on Crowdin.](https://crowdin.com/project/bypass)
+- [Translate Universal Bypass on Crowdin](https://crowdin.com/project/bypass)
+- [Homepage](https://universal-bypass.org)
+- [Install Universal Bypass](https://universal-bypass.org/install)
+- [FAQ](https://universal-bypass.org/faq)
+- [Changelog](https://universal-bypass.org/changelog)
 
 ## Building Universal Bypass
 
