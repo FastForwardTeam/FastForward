@@ -1,0 +1,86 @@
+{
+	"appDesc": {
+		"message": "Jangan habiskan waktu anda dengan menaati aturan. Universal Bypass secara otomatis akan melompati link pemendek yang menyebalkan."
+	},
+	"firstrunTitle": {
+		"message": "Terimakasih anda telah menginstal Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "Anda benar-benar luar biasa !"
+	},
+	"firstrunNoScript": {
+		"message": "Akan tetapi, anda sepertinya tidak menggunakan script atau hal yang menyerupai itu, yang mana Universal Bypass tidak kompatibel dengannya."
+	},
+	"firstrunWhatnow": {
+		"message": "Apa yang anda dapat lakukan sekarang :"
+	},
+	"firstrunExampleLinks": {
+		"message": "coba lihat contoh link kami untuk memastikan Universal Bypass bekerja."
+	},
+	"firstrunOptions": {
+		"message": "Mengganti Pengaturan Universal Bypass."
+	},
+	"firstrunTwitter": {
+		"message": "Ikuti Twitter Universal Bypass untuk selalu mendapatkakn iklan mengenai Universal Bypass."
+	},
+	"homepage": {
+		"message": "Beranda"
+	},
+	"popupOptions": {
+		"message": "Pengaturan"
+	},
+	"options": {
+		"message": "Pengaturan-pengaturan Universal Bypass"
+	},
+	"save": {
+		"message": "Simpan"
+	},
+	"optionsTrackerBypass": {
+		"message": "Pelacak Bypass menggunakan Apimon.de."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Memblokir IP Logger jika meraka tidak dapat dilewati."
+	},
+	"optionsCrowdBypass": {
+		"message": "Memberikan dan mendapatkan tujuan dari pemendek yang tidak dapat dilewati."
+	},
+	"privacyPolicy": {
+		"message": "Kebijakan Pribadi"
+	},
+	"optionsUserscripts": {
+		"message": "Atur Bypass sesuai keinginan"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "Akan sangat baik jika anda bisa mengirim hasil kerja Bypass ke Github, sehingga orang lain dapat memperoleh manfaat dari itu: "
+	},
+	"optionsUserscriptsUntitled": {
+		"message": "Tidak ada nama Bypass"
+	},
+	"optionsUserscriptsName": {
+		"message": "Nama. Dengan nama kosong, bypass ini akan di hapus."
+	},
+	"optionsUserscriptsDomains": {
+		"message": "Domain. gunakan * untuk melewati ini agar efektif dimana saja."
+	},
+	"optionsUserscriptsDelete": {
+		"message": "Hapus Bypass"
+	},
+	"optionsUserscriptsDeleteConfirm": {
+		"message": "Apakah Anda yakin ingin menghapus bypass ini?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass mencegah IP anda terlog."
+	},
+	"blockedSubtitle": {
+		"message": "jika anda tidak ingin Universal Bypass untuk mencegah orang jahat yang mengambil IP anda, non aktifkan ini di pengaturan :"
+	},
+	"crowdBypassed": {
+		"message": "Anda mungkin tidak perlu menunggu !"
+	},
+	"crowdBypassedInfo": {
+		"message": "Pengguna Universal Bypass lainnya sudah menunggu untuk anda dan melaporkan bahwa hal ini menyebabkan %"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Apakah ini tidak benar ?"
+	}
+}

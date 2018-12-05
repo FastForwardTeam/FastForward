@@ -1,4 +1,4 @@
-chrome.storage.local.get(["custom_bypasses"],result=>{
+brws.storage.local.get(["custom_bypasses"],result=>{
 	let untitledName=document.getElementById("untitled-name").getAttribute("placeholder"),
 	deleteConfirm=document.getElementById("delete-confirm").getAttribute("placeholder"),
 	customBypasses=(result&&result.custom_bypasses)?JSON.parse(result.custom_bypasses):{},
@@ -74,7 +74,7 @@ chrome.storage.local.get(["custom_bypasses"],result=>{
 			customBypasses[editingBypass].domains=customBypassDomains.value
 			customBypasses[editingBypass].content=bypassEditor.getValue()
 		}
-		chrome.storage.local.set({custom_bypasses:JSON.stringify(customBypasses)},reloadCustomBypassList);
+		brws.storage.local.set({custom_bypasses:JSON.stringify(customBypasses)},reloadCustomBypassList);
 	}
 	reloadCustomBypassList()
 	document.getElementById("save-custom-bypass").onclick=saveCustomBypass
@@ -83,7 +83,7 @@ chrome.storage.local.get(["custom_bypasses"],result=>{
 		saveCustomBypass()
 	}
 })
-chrome.storage.sync.get(["no_tracker_bypass","allow_ip_loggers","crowd_bypass_opt_out"],result=>{
+brws.storage.sync.get(["no_tracker_bypass","allow_ip_loggers","crowd_bypass_opt_out"],result=>{
 	if(result==undefined)
 		result={}
 	let trackerBypassCheckbox=document.getElementById("option-tracker-bypass"),
@@ -97,7 +97,7 @@ chrome.storage.sync.get(["no_tracker_bypass","allow_ip_loggers","crowd_bypass_op
 		crowdBypassCheckbox.setAttribute("checked","checked")
 	trackerBypassCheckbox.onchange=()=>{
 		trackerBypassCheckbox.setAttribute("disabled","disabled")
-		chrome.storage.sync.set({
+		brws.storage.sync.set({
 			no_tracker_bypass:(!trackerBypassCheckbox.checked).toString()
 		},()=>{
 			trackerBypassCheckbox.removeAttribute("disabled")
@@ -105,7 +105,7 @@ chrome.storage.sync.get(["no_tracker_bypass","allow_ip_loggers","crowd_bypass_op
 	}
 	blockIPLoggersCheckbox.onchange=()=>{
 		blockIPLoggersCheckbox.setAttribute("disabled","disabled")
-		chrome.storage.sync.set({
+		brws.storage.sync.set({
 			allow_ip_loggers:(!blockIPLoggersCheckbox.checked).toString()
 		},()=>{
 			blockIPLoggersCheckbox.removeAttribute("disabled")
@@ -113,7 +113,7 @@ chrome.storage.sync.get(["no_tracker_bypass","allow_ip_loggers","crowd_bypass_op
 	}
 	crowdBypassCheckbox.onchange=()=>{
 		crowdBypassCheckbox.setAttribute("disabled","disabled")
-		chrome.storage.sync.set({
+		brws.storage.sync.set({
 			crowd_bypass_opt_out:(!crowdBypassCheckbox.checked).toString()
 		},()=>{
 			crowdBypassCheckbox.removeAttribute("disabled")

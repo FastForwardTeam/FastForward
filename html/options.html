@@ -4,6 +4,7 @@
 	<title data-message="options"></title>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="style.css">
+	<style>body{min-width:760px}</style>
 </head>
 <body>
 	<h1 data-message="options"></h1>
@@ -17,10 +18,10 @@
 	<a name="userscripts"></a>
 	<p><span data-message="optionsUserscriptsSubtitle"></span> <a href="https://github.com/timmyrs/Universal-Bypass" target="_blank">https://github.com/timmyrs/Universal-Bypass</a></p>
 	<div class="row">
-		<div class="col-lg-3">
+		<div class="col-sm-3">
 			<div class="list-group" id="custom-bypasses-list"></div>
 		</div>
-		<div class="col-lg-9">
+		<div class="col-sm-9">
 			<div id="custom-bypass-edit-container">
 				<p><input type="text" id="custom-bypass-name" class="form-control" data-placeholder="optionsUserscriptsName"></p>
 				<p><input type="text" id="custom-bypass-domains" class="form-control" data-placeholder="optionsUserscriptsDomains"></p>
@@ -37,7 +38,7 @@
 	<div id="delete-confirm" data-placeholder="optionsUserscriptsDeleteConfirm"></div>
 	<hr>
 	<p>Copyright (c) 2018, Tim "timmyRS" Speckhals</p>
-	<script src="translations.js"></script>
+	<script src="base.js"></script>
 	<script src="ace/ace.js"></script>
 	<script src="options.js"></script>
 </body>

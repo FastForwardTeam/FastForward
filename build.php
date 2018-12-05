@@ -1,11 +1,11 @@
 <?php
+if(file_exists("Universal Bypass.zip"))
+{
+	unlink("Universal Bypass.zip");
+}
 if(file_exists("Universal Bypass Source.zip"))
 {
 	unlink("Universal Bypass Source.zip");
-}
-if(file_exists("Universal Bypass for Chrome.zip"))
-{
-	unlink("Universal Bypass for Chrome.zip");
 }
 if(file_exists("Universal Bypass for Firefox.zip"))
 {
@@ -42,19 +42,18 @@ function createZip($file)
 	$zip->open($file, ZipArchive::CREATE + ZipArchive::EXCL + ZipArchive::CHECKCONS) or die("Failed to create {$file}.\n");
 	return $zip;
 }
-$source = createZip("Universal Bypass Source.zip");
-$chrome = createZip("Universal Bypass for Chrome.zip");
+$build = createZip("Universal Bypass.zip");
 $firefox = createZip("Universal Bypass for Firefox.zip");
+$source = createZip("Universal Bypass Source.zip");
 foreach($index as $fn)
 {
 	if($fn != "build.php")
 	{
 		if($fn == "content_script.js")
 		{
-			$cont = str_replace("\\", "\\\\", preg_replace('/injectScript\("\("\+\(\(\)=>({.*})\)\+"\)\(\)"\)\/\/injectend/s', 'injectScript(`(()=>$1)()`)', file_get_contents($fn)));
-			$chrome->addFromString($fn, $cont);
+			$cont = str_replace("//\n", "\n", str_replace("\\", "\\\\", preg_replace('/injectScript\("\("\+\(\(\)=>({.*})\)\+"\)\(\)"\)\/\/injectend/s', 'injectScript(`(()=>$1)()`)', file_get_contents($fn))));
+			$build->addFromString($fn, $cont);
 			$firefox->addFromString($fn, $cont);
-			unset($cont);
 		}
 		else
 		{
@@ -62,18 +61,17 @@ foreach($index as $fn)
 			{
 				$json = json_decode(file_get_contents($fn), true);
 				unset($json["web_accessible_resources"]);
-				$chrome->addFromString($fn, json_encode($json, JSON_UNESCAPED_SLASHES));
-				unset($json);
+				$build->addFromString($fn, json_encode($json, JSON_UNESCAPED_SLASHES));
 			}
 			else
 			{
-				$chrome->addFile($fn, $fn);
+				$build->addFile($fn, $fn);
 			}
 			$firefox->addFile($fn, $fn);
 		}
 	}
 	$source->addFile($fn, $fn);
 }
-$source->close();
-$chrome->close();
+$build->close();
 $firefox->close();
+$source->close();

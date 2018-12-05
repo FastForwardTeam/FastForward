@@ -5,16 +5,10 @@ if(document instanceof HTMLDocument)
 		script.innerHTML=text
 		script=document.documentElement.appendChild(script)
 		setTimeout(()=>document.documentElement.removeChild(script),10)//Removing the script after it's been executed to keep the DOM clean
-	},
-	ensureDomLoaded=func=>{
-		if(["interactive","complete"].indexOf(document.readyState)>-1)
-			func()
-		else
-			document.addEventListener("DOMContentLoaded",()=>func())
 	}
 	injectScript("("+(()=>{
 		let ODP=(t,p,o)=>{try{Object.defineProperty(t,p,o)}catch(e){console.warn("Universal Bypass failed to set property",e)}},sT=window.setTimeout,sI=window.setInterval,
-		ev=window.eval,// Note that we *need* to use eval for some bypasses to work and it's no security risk because this script is executed at page level which can be seen at https://playground.timmyrs.de/universal-bypass-exploit
+		ev=window.eval,//Note that we *need* to use eval for some bypasses to work and it's no security risk because this script is executed at page level which can be seen at https://playground.timmyrs.de/universal-bypass-exploit
 		isGoodLink=link=>link&&link!=location.href&&link.substr(0,11)!="javascript:",
 		navigated=false,safelyNavigate=target=>{
 			if(!navigated&&isGoodLink(target))
@@ -35,54 +29,57 @@ if(document instanceof HTMLDocument)
 			bypassed=true
 			document.documentElement.setAttribute("data-universal-bypass-stop-watching","")
 		},
-		domainBypass=(domain,func)=>{
+		domainBypass=(domain,f)=>{
 			if(!bypassed&&(location.hostname==domain||location.hostname.substr(location.hostname.length-(domain.length+1))=="."+domain))
 			{
-				func()
+				f()
 				setBypassed()
 			}
 		},
-		hrefBypass=(hrefregex,func)=>{
-			if(!bypassed&&hrefregex.test(location.href))
+		hrefBypass=(regex,f)=>{
+			if(!bypassed&&regex.test(location.href))
 			{
-				func()
+				f()
 				setBypassed()
 			}
 		},
-		ensureDomLoaded=func=>{
+		ensureDomLoaded=f=>{
 			if(["interactive","complete"].indexOf(document.readyState)>-1)
-				func()
-			else document.addEventListener("DOMContentLoaded",()=>sT(func,1))
+				f()
+			else document.addEventListener("DOMContentLoaded",()=>sT(f,1))
 		},
-		crowdOptIn=false,//
-		crowdBypass=callback=>ensureDomLoaded(()=>{
+		crowdOptIn,crowdCallback=()=>{},//
+		ensureCrowdLoaded=f=>{
+			if(crowdOptIn==null)
+				crowdCallback=f
+			else f()
+		},
+		crowdBypass=f=>ensureCrowdLoaded(()=>{//
 			if(location.href.substr(location.href.length-18)=="#ignoreCrowdBypass")
 			{
-				let fs=document.querySelectorAll("form[action]")
-				for(let i=0;i<fs.length;i++)
-					fs[i].action+="#ignoreCrowdBypass"
-				let ls=document.querySelectorAll("a[href]")
-				for(let i=0;i<ls.length;i++)
-					ls[i].href+="#ignoreCrowdBypass"
+				document.querySelectorAll("form[action]").forEach(e=>e.action+="#ignoreCrowdBypass")
+				document.querySelectorAll("a[href]").forEach(e=>e.href+="#ignoreCrowdBypass")
 				history.pushState({},document.querySelector("title").textContent,location.href.substr(0,location.href.length-18))
-				callback()
-				return
+				f()
 			}
-			let xhr=new XMLHttpRequest()
-			xhr.onreadystatechange=()=>{
-				if(xhr.readyState==4&&xhr.status==200&&xhr.responseText!="")
-				{
-					debugger
-					location.href="https://universal-bypass.org/crowd-bypassed?target="+encodeURIComponent(xhr.responseText)+"&back="+encodeURIComponent(location.href)//The background script will intercept the request and redirect to html/crowd-bypassed.html because we can't redirect to extension urls in this scope.
+			else if(crowdOptIn)
+			{
+				let xhr=new XMLHttpRequest()
+				xhr.onreadystatechange=()=>{
+					if(xhr.readyState==4&&xhr.status==200&&xhr.responseText!="")
+					{
+						debugger
+						location.href="https://universal-bypass.org/crowd-bypassed?target="+encodeURIComponent(xhr.responseText)+"&back="+encodeURIComponent(location.href)//The background script will intercept the request and redirect to html/crowd-bypassed.html because we can't redirect to extension urls in this scope.
+					}
+					else
+						f()
 				}
-				else if(crowdOptIn)
-					callback()
+				xhr.open("POST","https://universal-bypass.org/crowd/query_v1",true)
+				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+				xhr.send("domain="+encodeURIComponent(domain)+"&path="+encodeURIComponent(location.pathname.toString().substr(1)))
 			}
-			xhr.open("POST","https://universal-bypass.org/crowd/query_v1",true)
-			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
-			xhr.send("domain="+encodeURIComponent(domain)+"&path="+encodeURIComponent(location.pathname.toString().substr(1)))
 		}),
-		contributeAndNavigate=target=>{
+		contributeAndNavigate=target=>ensureCrowdLoaded(()=>{
 			if(navigated||!isGoodLink(target))
 				return
 			if(!crowdOptIn)
@@ -104,15 +101,15 @@ if(document instanceof HTMLDocument)
 			xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
 			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
 			xhr.send("domain="+encodeURIComponent(domain)+"&path="+encodeURIComponent(location.pathname.toString().substr(1))+"&target="+encodeURIComponent(target))
-		},
+		}),
 		domain=location.hostname
 		if(domain.substr(0,4)=="www.")
 			domain=domain.substr(4)
-		ODP(this,"blurred",{
+		ODP(window,"blurred",{
 			value:false,
 			writable:false
 		})
-		ODP(this,"ysmm",//Adf.ly
+		ODP(window,"ysmm",//Adf.ly
 		{
 			set:r=>{
 				let a,m,I="",X=""
@@ -146,7 +143,7 @@ if(document instanceof HTMLDocument)
 		})
 		//LinkBucks
 		var actualInitLbjs
-		ODP(this,"initLbjs",{
+		ODP(window,"initLbjs",{
 			set:(_)=>actualInitLbjs=_,
 			get:()=>(a,p)=>{
 				p.Countdown--
@@ -155,19 +152,17 @@ if(document instanceof HTMLDocument)
 		})
 		//Safelink
 		let actual_safelink=forced_safelink={counter:0}
-		ODP(this,"safelink",
+		ODP(window,"safelink",
 		{
 			set:_=>{
 				ODP(window,"blurred",{
 					value:false,
 					writable:false
 				})
-				for(let k in _)
-				{
-					let v=_[k]
+				_.forEach((v,k)=>{
 					if(forced_safelink[k]===undefined)
 						actual_safelink[k]=v
-				}
+				})
 			},
 			get:()=>actual_safelink
 		})
@@ -181,9 +176,9 @@ if(document instanceof HTMLDocument)
 		}
 		//YetiShare
 		let actual_web_root
-		ODP(this,"WEB_ROOT",{
+		ODP(window,"WEB_ROOT",{
 			set:v=>{
-				ODP(this,"seconds",{
+				ODP(window,"seconds",{
 					value:0,
 					writable:false
 				})
@@ -196,11 +191,11 @@ if(document instanceof HTMLDocument)
 				safelyNavigate("/goii/"+location.pathname.substr(2)+"?ref="+location.hostname+location.pathname)
 		})
 		domainBypass("cshort.org",()=>{
-			ODP(this,"adblock",{
+			ODP(window,"adblock",{
 				value:false,
 				writable:false
 			})
-			ODP(this,"i",{
+			ODP(window,"i",{
 				value:0,
 				writable:false
 			})
@@ -217,7 +212,7 @@ if(document instanceof HTMLDocument)
 			})
 		})
 		domainBypass("link.tl",()=>{
-			ODP(this,"countdown",{
+			ODP(window,"countdown",{
 				value:0,
 				writable:false
 			})
@@ -231,7 +226,7 @@ if(document instanceof HTMLDocument)
 			},100)
 		})
 		domainBypass("onepiece-ex.com.br",()=>{
-			ODP(this,"seconds",{
+			ODP(window,"seconds",{
 				value:1,
 				writable:false
 			})
@@ -244,7 +239,7 @@ if(document instanceof HTMLDocument)
 			},100)
 		})
 		domainBypass("akoam.net",()=>{
-			ODP(this,"timer",{
+			ODP(window,"timer",{
 				value:0,
 				writable:false
 			})
@@ -260,7 +255,7 @@ if(document instanceof HTMLDocument)
 			location.pathname=location.pathname.split("/t/").join("/saliendo/")
 		})
 		domainBypass("share-online.biz",()=>{
-			ODP(this,"wait",{
+			ODP(window,"wait",{
 				set:s=>0,
 				get:()=>{
 					return 2
@@ -268,7 +263,7 @@ if(document instanceof HTMLDocument)
 			})
 		})
 		hrefBypass(/sfile\.(mobi|xyz)/,()=>{
-			ODP(this,"downloadButton",{
+			ODP(window,"downloadButton",{
 				set:b=>{
 					if(b&&b.href)
 						safelyNavigate(b.href)
@@ -276,7 +271,7 @@ if(document instanceof HTMLDocument)
 			})
 		})
 		domainBypass("mylink.zone",()=>{
-			ODP(this,"seconde",{
+			ODP(window,"seconde",{
 				set:_=>{},
 				get:()=>{
 					return -1
@@ -288,7 +283,7 @@ if(document instanceof HTMLDocument)
 			b.className="direct-download"
 			b.style.display="none"
 			document.documentElement.appendChild(b)
-			ODP(this,"log",{
+			ODP(window,"log",{
 				value:m=>{
 					console.log(m)
 					if(m=="triggering downloader:start")
@@ -352,14 +347,21 @@ if(document instanceof HTMLDocument)
 		})
 		if(bypassed)
 			return
+		let cbt=sI(()=>{
+			if(document.documentElement.hasAttribute("data-crowd-bypass-opt"))
+			{
+				clearInterval(cbt)
+				crowdOptIn=(document.documentElement.getAttribute("data-crowd-bypass-opt")==="i")
+				crowdCallback()
+				document.documentElement.removeAttribute("data-crowd-bypass-opt")
+			}
+		},15)
 		ensureDomLoaded(()=>{
 			if(location.href=="https://universal-bypass.org/firstrun")
 			{
 				document.documentElement.setAttribute("data-universal-bypass-firstran","");
 				return setBypassed()
 			}
-			if(document.documentElement.hasAttribute("data-crowd-bypass-opt-in")||!document.documentElement.hasAttribute("data-crowd-bypass-opt-out"))
-				crowdOptIn=true
 			domainBypass("adfoc.us",()=>{
 				let b=document.querySelector(".skip[href]")
 				if(b)
@@ -370,13 +372,12 @@ if(document instanceof HTMLDocument)
 					let steps=document.querySelectorAll(".uk.unlock-step-link.check")
 					if(steps.length)
 					{
-						for(let i=1;i<steps.length;i++)
-						{
-							if(steps[i].className.substr(0,3)=="uk ")
+						steps.forEach(step=>{
+							if(step.className.substr(0,3)=="uk ")
 							{
-								steps[i].className = steps[i].className.substr(3)
+								step.className=step.className.substr(3)
 							}
-						}
+						})
 						steps[0].removeAttribute("target")
 						steps[0].setAttribute("href","#")
 						steps[0].click()
@@ -478,11 +479,7 @@ if(document instanceof HTMLDocument)
 					{
 						clearInterval(bT)
 						window.open=()=>{}
-						for(let i=0;i<es.length;i++)
-						{
-							let e=es[i]
-							e.dispatchEvent(new MouseEvent("click"))
-						}
+						es.forEach(e=>e.dispatchEvent(new MouseEvent("click")))
 						let dT=setInterval(()=>{
 							if(!b.hasAttribute("disabled"))
 							{
@@ -629,14 +626,11 @@ if(document instanceof HTMLDocument)
 			if(typeof appurl!="undefined"&&typeof token!="undefined")
 			{
 				//For this bypass to work, we detect a certain inline script, modify and execute it.
-				let scripts=document.getElementsByTagName("script")
-				for(let i in scripts)
-				{
-					let script=scripts[i]
+				document.getElementsByTagName("script").forEach(script=>{
 					if(script instanceof HTMLScriptElement)
 					{
 						let cont=script.textContent
-						if(cont.indexOf('clearInterval(countdown);')>-1)
+						if(cont.indexOf("clearInterval(countdown);")>-1)
 						{
 							if(typeof countdown!="undefined")
 								clearInterval(countdown)
@@ -668,7 +662,7 @@ if(document instanceof HTMLDocument)
 							return setBypassed()
 						}
 					}
-				}
+				})
 				if(document.getElementById("messa")&&document.getElementById("html_element"))//Ally Captcha
 				{
 					document.getElementById("messa").className+=" hidden"
@@ -915,50 +909,52 @@ if(document instanceof HTMLDocument)
 			setTimeout(()=>clearInterval(dT),10000)
 		})
 	})+")()")//injectend
-	ensureDomLoaded(()=>{
-		let dT=setInterval(()=>{
-			if(document.documentElement.hasAttribute("data-universal-bypass-adlinkfly-info"))
-			{
-				document.documentElement.removeAttribute("data-universal-bypass-adlinkfly-info")
-				let xhr=new XMLHttpRequest(),t="",iu=location.href
-				xhr.onreadystatechange=()=>{
-					if(xhr.readyState==4)
+	let dT=setInterval(()=>{
+		if(document.documentElement.hasAttribute("data-universal-bypass-adlinkfly-info"))
+		{
+			document.documentElement.removeAttribute("data-universal-bypass-adlinkfly-info")
+			let xhr=new XMLHttpRequest(),t="",iu=location.href
+			xhr.onreadystatechange=()=>{
+				if(xhr.readyState==4)
+				{
+					if(xhr.status==200)
 					{
-						if(xhr.status==200)
+						let i=new DOMParser().parseFromString(xhr.responseText,"text/html").querySelector("img[src^='//api.miniature.io']")
+						if(i)
 						{
-							let i=new DOMParser().parseFromString(xhr.responseText,"text/html").querySelector("img[src^='//api.miniature.io']")
-							if(i)
-							{
-								let url=new URL(i.src)
-								if(url.search&&url.search.indexOf("url="))
-									t=decodeURIComponent(url.search.split("url=")[1].split("&")[0])
-							}
+							let url=new URL(i.src)
+							if(url.search&&url.search.indexOf("url="))
+								t=decodeURIComponent(url.search.split("url=")[1].split("&")[0])
 						}
-						document.documentElement.setAttribute("data-universal-bypass-adlinkfly-target",t)
 					}
+					document.documentElement.setAttribute("data-universal-bypass-adlinkfly-target",t)
 				}
-				if(iu.substr(iu.length-1)!="/")
-					iu+="/"
-				xhr.open("GET",iu+"info",true)
-				xhr.send()
 			}
-			if(document.documentElement.hasAttribute("data-universal-bypass-stop-watching"))
-			{
-				clearInterval(dT)
-				document.documentElement.removeAttribute("data-universal-bypass-stop-watching")
-			}
-		},50)
-		if(location.href.toString()=="https://universal-bypass.org/firstrun")
-			setTimeout(()=>{
-				location.href="https://universal-bypass.org/firstrun?"+(document.documentElement.hasAttribute("data-universal-bypass-firstran")?"1":"0")
-			},50)
+			if(iu.substr(iu.length-1)!="/")
+				iu+="/"
+			xhr.open("GET",iu+"info",true)
+			xhr.send()
+		}
+		if(document.documentElement.hasAttribute("data-universal-bypass-stop-watching"))
+		{
+			clearInterval(dT)
+			document.documentElement.removeAttribute("data-universal-bypass-stop-watching")
+		}
+	},50)
+	if(location.href=="https://universal-bypass.org/firstrun")//
+		setTimeout(()=>{
+			debugger
+			location.href="https://universal-bypass.org/firstrun?"+(document.documentElement.hasAttribute("data-universal-bypass-firstran")?"1":"0")
+		},500)
+	let brws=(typeof browser=="undefined"?chrome:browser)
+	brws.storage.sync.get(["crowd_bypass_opt_out"],res=>{
+		document.documentElement.setAttribute("data-crowd-bypass-opt",(res&&res.crowd_bypass_opt_out&&res.crowd_bypass_opt_out==="true"?"o":"i"))
 	})
-	chrome.storage.local.get(["crowd_bypass_opt_out","custom_bypasses"],result=>{//
-		ensureDomLoaded(()=>{
-			document.documentElement.setAttribute("data-crowd-bypass-opt-"+(result&&result.crowd_bypass_opt_out&&result.crowd_bypass_opt_out==="true"?"out":"in"),"")
-			if(result&&result.custom_bypasses)
+	brws.storage.local.get(["custom_bypasses"],res=>{
+		let f=()=>{
+			if(res&&res.custom_bypasses)
 			{
-				let customBypasses=JSON.parse(result.custom_bypasses)
+				let customBypasses=JSON.parse(res.custom_bypasses)
 				for(let name in customBypasses)
 				{
 					let customBypass=customBypasses[name]
@@ -976,6 +972,10 @@ if(document instanceof HTMLDocument)
 					}
 				}
 			}
-		})
+		}
+		if(["interactive","complete"].indexOf(document.readyState)>-1)
+			f()
+		else
+			document.addEventListener("DOMContentLoaded",f)
 	})
 }

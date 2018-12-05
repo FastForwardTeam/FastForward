@@ -1,13 +1,7 @@
-//Install & Uninstall Actions
-chrome.runtime.onInstalled.addListener(details=>{
-	if(details.reason=="install")
-		window.open("https://universal-bypass.org/firstrun")
-})
-chrome.runtime.setUninstallURL("https://docs.google.com/forms/d/e/1FAIpQLSdXw-Yf5IaDXZWw4fDHroZkDFOF6hgWEvVDaXT9ZADqnF2reg/viewform")
-
+var brws=(typeof browser=="undefined"?chrome:browser),platform=brws.runtime.getURL("").split("-")[0]
 //Fixing Content-Security-Policy on Firefox because apparently extensions have no special privileges in Firefox
-if(typeof browser!="undefined")
-	browser.webRequest.onHeadersReceived.addListener(details=>{
+if(platform=="moz")
+	brws.webRequest.onHeadersReceived.addListener(details=>{
 		if(details.method=="GET"&&details.type=="main_frame")
 		{
 			let csp=false
@@ -56,22 +50,34 @@ if(typeof browser!="undefined")
 		}
 	},{urls:["<all_urls>"]},["blocking","responseHeaders"])
 
+//Install & Uninstall Actions
+brws.runtime.onInstalled.addListener(details=>{
+	if(details.reason=="install")
+	{
+		if(platform=="ms")
+			brws.windows.create({url:"https://universal-bypass.org/firstrun"})
+		else
+			window.open("https://universal-bypass.org/firstrun")
+	}
+})
+brws.runtime.setUninstallURL("https://docs.google.com/forms/d/e/1FAIpQLSdXw-Yf5IaDXZWw4fDHroZkDFOF6hgWEvVDaXT9ZADqnF2reg/viewform")
+
 //Bypasses of sites specifying the destination in the query
-chrome.webRequest.onBeforeRequest.addListener(details=>{
+brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(details.method=="GET"&&details.type=="main_frame")
 		return{redirectUrl:decodeURIComponent(details.url.substr(details.url.indexOf("url=")+4))}
 },{urls:["*://*.ourl.io/*url=*"]},["blocking"])
-chrome.webRequest.onBeforeRequest.addListener(details=>{
+brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(details.method=="GET"&&details.type=="main_frame")
 		return{redirectUrl:decodeURIComponent(details.url.substr(details.url.indexOf("link=")+5))}
 },{urls:["*://*.spaste.com/r/*link=*"]},["blocking"])
-chrome.webRequest.onBeforeRequest.addListener(details=>{
+brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(details.method=="GET"&&details.type=="main_frame")
 		return{redirectUrl:decodeURIComponent(details.url.substr(details.url.indexOf("/12/1/")+6))}
 },{urls:["*://*.sh.st/r/*/12/1/*"]},["blocking"])
 
 //Shorte.st Bypass
-chrome.webRequest.onBeforeSendHeaders.addListener(details=>{
+brws.webRequest.onBeforeSendHeaders.addListener(details=>{
 	return{requestHeaders:details.requestHeaders.filter(h=>h.name!="User-Agent")}
 },{
 	urls:[
@@ -89,17 +95,17 @@ chrome.webRequest.onBeforeSendHeaders.addListener(details=>{
 },["blocking","requestHeaders"])
 
 //Internal redirects to extension URLs to bypass content script limitations
-chrome.webRequest.onBeforeRequest.addListener(details=>{
+brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(details.method=="GET"&&details.type=="main_frame")
 	{
 		if(details.url.substr(38)=="1")
-			return{redirectUrl:chrome.runtime.getURL("html/firstrun.html")}
-		return{redirectUrl:chrome.runtime.getURL("html/firstrun-noscript.html")}
+			return{redirectUrl:brws.runtime.getURL("html/firstrun.html")}
+		return{redirectUrl:brws.runtime.getURL("html/firstrun-noscript.html")}
 	}
 },{urls:["https://universal-bypass.org/firstrun?*"]},["blocking"])
-chrome.webRequest.onBeforeRequest.addListener(details=>{
+brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(details.method=="GET"&&details.type=="main_frame")
-		return{redirectUrl:chrome.runtime.getURL("html/crowd-bypassed.html")+details.url.substr(43)}
+		return{redirectUrl:brws.runtime.getURL("html/crowd-bypassed.html")+details.url.substr(43)}
 },{urls:["https://universal-bypass.org/crowd-bypassed?*"]},["blocking"])
 
 //Tracker Bypass using Apimon.de — see options for more details
@@ -117,7 +123,7 @@ var trackerBypassEnabled=true,blockIPLoggers=true,resolveDestination=url=>{
 	xhr.send()
 	return destination
 }
-chrome.storage.sync.get(["no_tracker_bypass","allow_ip_loggers"],result=>{
+brws.storage.sync.get(["no_tracker_bypass","allow_ip_loggers"],result=>{
 	if(result)
 	{
 		if(result.no_tracker_bypass&&result.no_tracker_bypass==="true")
@@ -126,13 +132,13 @@ chrome.storage.sync.get(["no_tracker_bypass","allow_ip_loggers"],result=>{
 			blockIPLoggers=false
 	}
 })
-chrome.storage.onChanged.addListener(changes=>{
+brws.storage.onChanged.addListener(changes=>{
 	if(changes.no_tracker_bypass)
 		trackerBypassEnabled=(changes.no_tracker_bypass.newValue!=="true")
 	if(changes.allow_ip_loggers)
 		blockIPLoggers=(changes.allow_ip_loggers.newValue!=="true")
 })
-chrome.webRequest.onBeforeRequest.addListener(details=>{
+brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(!trackerBypassEnabled||details.method!="GET"||details.type!="main_frame"||new URL(details.url).pathname=="/")
 		return
 	let destination=resolveDestination(details.url)
@@ -168,7 +174,7 @@ chrome.webRequest.onBeforeRequest.addListener(details=>{
 	"*://*.x.co/*"
 	]
 },["blocking"])
-chrome.webRequest.onBeforeRequest.addListener(details=>{
+brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(details.method!="GET"||details.type!="main_frame"||new URL(details.url).pathname=="/")
 		return
 	if(trackerBypassEnabled)
@@ -178,7 +184,7 @@ chrome.webRequest.onBeforeRequest.addListener(details=>{
 			return{redirectUrl:destination}
 	}
 	if(blockIPLoggers)
-		return{redirectUrl:chrome.runtime.getURL("html/blocked.html")}
+		return{redirectUrl:brws.runtime.getURL("html/blocked.html")}
 },{urls:getIPLoggerPatterns()},["blocking"])
 function getIPLoggerPatterns()
 {
