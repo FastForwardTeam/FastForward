@@ -1,4 +1,5 @@
 var brws=(typeof browser=="undefined"?chrome:browser),platform=brws.runtime.getURL("").split("-")[0]
+
 //Fixing Content-Security-Policy on Firefox because apparently extensions have no special privileges in Firefox
 if(platform=="moz")
 	brws.webRequest.onHeadersReceived.addListener(details=>{
