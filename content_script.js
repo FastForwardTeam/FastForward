@@ -7,8 +7,9 @@ if(document instanceof HTMLDocument)
 		setTimeout(()=>document.documentElement.removeChild(script),10)//Removing the script after it's been executed to keep the DOM clean
 	}
 	injectScript("("+(()=>{
-		let ODP=(t,p,o)=>{try{Object.defineProperty(t,p,o)}catch(e){console.warn("Universal Bypass failed to set property",e)}},sT=window.setTimeout,sI=window.setInterval,
-		ev=window.eval,//Note that we *need* to use eval for some bypasses to work and it's no security risk because this script is executed at page level which can be seen at https://playground.timmyrs.de/universal-bypass-exploit
+		let ODP=(t,p,o)=>{try{Object.defineProperty(t,p,o)}catch(e){console.warn("Universal Bypass failed to set property",e)}},
+		//Copying eval, etc. to prevent issues with other extensions, such as uBlockOrigin. Also, note that this is the page level, so there are no security risks in using eval.
+		ev=eval,sT=setTimeout,sI=setInterval,
 		isGoodLink=link=>link&&link!=location.href&&link.substr(0,11)!="javascript:",
 		navigated=false,safelyNavigate=target=>{
 			if(!navigated&&isGoodLink(target))
@@ -572,6 +573,37 @@ if(document instanceof HTMLDocument)
 					}
 				},50)
 			}))
+			domainBypass("show.co",()=>{
+				let s=document.getElementById("show-campaign-data")
+				if(s)
+				{
+					let d=JSON.parse(s.textContent)
+					if(d&&"title"in d&&"unlockable"in d)
+					{
+						document.write("<body></body>")
+						if("title"in d)
+							["title","h1"].forEach(t=>{
+								let e=document.createElement(t)
+								e.textContent=d.title
+								document.body.appendChild(e)
+							})
+						if("message"in d.unlockable)
+						{
+							let p=document.createElement("p")
+							p.textContent=d.unlockable.message
+							document.body.appendChild(p)
+						}
+						if("redirect"in d.unlockable&&"url"in d.unlockable.redirect)
+						{
+							let p=document.createElement("p"),a=document.createElement("a")
+							a.textContent=a.href=d.unlockable.redirect.url
+							p.appendChild(a)
+							document.body.appendChild(p)
+						}
+						stop()
+					}
+				}
+			})
 			if(bypassed)
 				return
 			//Adf.ly Pre-Redirect Nonsense
@@ -626,7 +658,7 @@ if(document instanceof HTMLDocument)
 			if(typeof appurl!="undefined"&&typeof token!="undefined")
 			{
 				//For this bypass to work, we detect a certain inline script, modify and execute it.
-				document.getElementsByTagName("script").forEach(script=>{
+				document.querySelectorAll("script").forEach(script=>{
 					if(script instanceof HTMLScriptElement)
 					{
 						let cont=script.textContent
