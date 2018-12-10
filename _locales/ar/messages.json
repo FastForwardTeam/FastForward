@@ -42,7 +42,7 @@
 		"message": "منع مسجلات ال IP إذا كان لا يمكن تجاوزهم."
 	},
 	"optionsCrowdBypass": {
-		"message": "أعطي و خذ جهات القصر نبيباسابل."
+		"message": "إعطاء وأخذ وجهات الروابط المختصرة الغير قابلة للتجاوز."
 	},
 	"privacyPolicy": {
 		"message": "سياسة الخصوصية"
@@ -53,8 +53,11 @@
 	"optionsUserscriptsSubtitle": {
 		"message": "سيكون من الرائع إذا كنت تستطيع تقديم \"متجاوزات\" تعمل إلي GitHub، حتي يستطيع اﻵخرين اﻹستفادة منها:"
 	},
+	"optionsUserscriptsUntitled": {
+		"message": "متجاوز بلا اسم"
+	},
 	"optionsUserscriptsName": {
-		"message": "الاسم. إذا كان الاسم فارغ هذا المتجاوز سوف يتم مسحه."
+		"message": "الاسم. إذا كان فارغا سيتم مسح هذا المتجاوز."
 	},
 	"optionsUserscriptsDomains": {
 		"message": "النطاقات. استخدم * لهذا المتجاوز كي يكون فعالا فى كل مكان."
@@ -63,7 +66,7 @@
 		"message": "حذف التجاوز"
 	},
 	"optionsUserscriptsDeleteConfirm": {
-		"message": "هل تريد حذف هذا الـbypass؟"
+		"message": "هل تريد حذف هذا المتجاوز؟"
 	},
 	"blockedTitle": {
 		"message": "المتجاوز الشامل قد منع تسجيل عنوان الIP الخاص بك."
@@ -73,6 +76,9 @@
 	},
 	"crowdBypassed": {
 		"message": "ربما لن تحتاج للانتظار بعد الان!"
+	},
+	"crowdBypassedInfo": {
+		"message": "قام مستخدمون آخرون للمتجاوز الشامل بالانتظار بدلا منك والتبليع بأن هذا الرابط يؤدي إلى %"
 	},
 	"crowdBypassedIgnore": {
 		"message": "ليس هذا صحيحاً؟"
