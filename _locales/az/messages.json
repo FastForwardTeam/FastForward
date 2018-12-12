@@ -1,0 +1,86 @@
+{
+	"appDesc": {
+		"message": "Vaxtınızı uyğunlaşdırmaya xərcləməyin. Universal Bypass, zəhlətökən bağlantı qısaldıcılarını ötürür."
+	},
+	"firstrunTitle": {
+		"message": "Universal Bypass quraşdırdığınız üçün təşəkkürlər!"
+	},
+	"firstrunSubtitle": {
+		"message": "Mükəmməlsiniz!"
+	},
+	"firstrunNoScript": {
+		"message": "Buna baxmayaraq, Universal Bypass ilə uyğunlaşmayan NoScript və ta oxşarını istifadə edirsiniz."
+	},
+	"firstrunWhatnow": {
+		"message": "Nələr edə bilərsiniz:"
+	},
+	"firstrunExampleLinks": {
+		"message": "Universal Bypass işlədiyinə əmin olmaq üçün nümunə bağlantıları nəzərdən keçirin."
+	},
+	"firstrunOptions": {
+		"message": "Universal Bypass seçimlərini dəyişdirin."
+	},
+	"firstrunTwitter": {
+		"message": "Universal Bypass haqqında həmişə məlumatlı qalmaq üçün Twitter-də izləyin."
+	},
+	"homepage": {
+		"message": "Əsas səhifə"
+	},
+	"popupOptions": {
+		"message": "Seçimlər"
+	},
+	"options": {
+		"message": "Universal Bypass Seçimləri"
+	},
+	"save": {
+		"message": "Saxla"
+	},
+	"optionsTrackerBypass": {
+		"message": "Apimon.de istifadə edən Bypass izləyiciləri."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Bypass edilə bilməsə, IP qeydlərini əngəllə."
+	},
+	"optionsCrowdBypass": {
+		"message": "Ötürülə bilməyən qısaldıcıların yerlərini götür və apar."
+	},
+	"privacyPolicy": {
+		"message": "Gizlilik Siyasəti"
+	},
+	"optionsUserscripts": {
+		"message": "Özəl Bypass-lar"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "İşləyən bypass-ları GitHub-da yazsanız, digərlərinin də faydalanmağına kömək olar: "
+	},
+	"optionsUserscriptsUntitled": {
+		"message": "Adsız Bypass"
+	},
+	"optionsUserscriptsName": {
+		"message": "Ad. Boş bir adla, bu bypass silinəcək."
+	},
+	"optionsUserscriptsDomains": {
+		"message": "Domenlər. By bypass-ın hər yerdə işlək olması üçün * istifadə edin."
+	},
+	"optionsUserscriptsDelete": {
+		"message": "Bypass-ı sil"
+	},
+	"optionsUserscriptsDeleteConfirm": {
+		"message": "Bu bypass-ı silmək istədiyinizə əminsiniz?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass, IP ünvanların qeydlərə əlavə edilməsinin qarşısı alındı."
+	},
+	"blockedSubtitle": {
+		"message": "Universal Bypass-ın IP ünvanlarınızı pis niyyətli şəxslərin əlin keçməsinin qarşısını almağını istəmirsinizsə, bunu seçimlərdə ləğv edin:"
+	},
+	"crowdBypassed": {
+		"message": "Gözləməyə ehtiyac yoxdur!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Digər Universal Bypass istifadəçiləri artıq sizi gözlədilər və bunun % a çatdığı bildirildi"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Bu doğru deyil?"
+	}
+}
