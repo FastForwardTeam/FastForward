@@ -604,6 +604,11 @@ if(document instanceof HTMLDocument)
 					}
 				}
 			})
+			domainBypass("zxro.com",()=>{
+				let s=new URLSearchParams(location.search)
+				if(s.has("url"))
+					safelyNavigate(s.get("url"))
+			})
 			if(bypassed)
 				return
 			//Adf.ly Pre-Redirect Nonsense

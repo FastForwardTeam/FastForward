@@ -1,0 +1,41 @@
+{
+	"appDesc": {
+		"message": "อย่าไปเสียเวลากับสิ่งที่ต้องทำตามมัน Universal Bypass ช่วยให้คุณข้ามพวกตัวย่อลิงค์ที่โครตราคาญให้อัตโนมัติ"
+	},
+	"firstrunTitle": {
+		"message": "ขอขอบคุณที่ติดตั้ง Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "คุณนี้มันเจ๋งจริงๆเลยแหะ!"
+	},
+	"firstrunNoScript": {
+		"message": "แต่อย่างไรก็ตาม ดูเหมือนคุณกำลังใช้ NoScript หรืออะไรที่มันคล้ายๆกัน ซึ่ง Universal Bypass นั้นไม่เข้ากันกับพวกนี้"
+	},
+	"firstrunWhatnow": {
+		"message": "คุณทำอะไรได้บ้างในตอนนี้:"
+	},
+	"firstrunExampleLinks": {
+		"message": "ลองเข้าตัวอย่างลิงค์ที่เตรียมไว้เพื่อทำให้คุณมั่นใจว่า Universal Bypass ทำงานแล้ว"
+	},
+	"firstrunOptions": {
+		"message": "เปลี่ยนการตั้งค่า Universal Bypass"
+	},
+	"firstrunTwitter": {
+		"message": "ติดตาม Universal Bypass บนทวิตเตอร์เพื่อติดตามข้อมูลต่างๆเกี่ยวกับ Universal Bypass"
+	},
+	"homepage": {
+		"message": "หน้าแรก"
+	},
+	"popupOptions": {
+		"message": "การตั้งค่า"
+	},
+	"options": {
+		"message": "การตั้งค่าของ Universal Bypass"
+	},
+	"save": {
+		"message": "บันทึก"
+	},
+	"privacyPolicy": {
+		"message": "นโยบายความเป็นส่วนตัว"
+	}
+}
