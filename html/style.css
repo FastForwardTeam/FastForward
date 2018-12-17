@@ -9,6 +9,7 @@ body
 {
 	direction: __MSG_@@bidi_dir__;
 	padding: 15px 20px 5px 20px;
+	min-width: 760px;
 }
 #custom-bypass-editor
 {
