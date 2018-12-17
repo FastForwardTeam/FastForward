@@ -77,24 +77,6 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		return{redirectUrl:decodeURIComponent(details.url.substr(details.url.indexOf("/12/1/")+6))}
 },{urls:["*://*.sh.st/r/*/12/1/*"]},["blocking"])
 
-//Shorte.st Bypass
-brws.webRequest.onBeforeSendHeaders.addListener(details=>{
-	return{requestHeaders:details.requestHeaders.filter(h=>h.name!="User-Agent")}
-},{
-	urls:[
-	"*://sh.st/*",
-	"*://clkmein.com/*",
-	"*://viid.me/*",
-	"*://xiw34.com/*",
-	"*://corneey.com/*",
-	"*://gestyy.com/*",
-	"*://cllkme.com/*",
-	"*://festyy.com/*",
-	"*://destyy.com/*",
-	"*://ceesty.com/*"
-	]
-},["blocking","requestHeaders"])
-
 //Internal redirects to extension URLs to bypass content script limitations
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(details.method=="GET"&&details.type=="main_frame")

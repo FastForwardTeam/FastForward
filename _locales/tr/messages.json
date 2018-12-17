@@ -8,6 +8,9 @@
 	"firstrunSubtitle": {
 		"message": "Harikasınız!"
 	},
+	"firstrunNoScript": {
+		"message": "Ancak, Universal Baypas'ın uyumlu olmadığı NoScript veya benzeri kullanıyorsunuz."
+	},
 	"firstrunWhatnow": {
 		"message": "Yapabilecekleriniz:"
 	},
@@ -37,6 +40,9 @@
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Eğer bypass yapılamazsa, IP kayıtlarını engelle."
+	},
+	"optionsCrowdBypass": {
+		"message": "Ötürülə bilməyən qısaldıcıların yerlərini götür və apar."
 	},
 	"privacyPolicy": {
 		"message": "Gizlilik Sözleşmesi"

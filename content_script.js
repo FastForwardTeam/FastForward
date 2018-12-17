@@ -12,18 +12,18 @@ if(document instanceof HTMLDocument)
 		ev=eval,sT=setTimeout,sI=setInterval,
 		isGoodLink=link=>link&&link!=location.href&&link.substr(0,11)!="javascript:",
 		navigated=false,safelyNavigate=target=>{
-			if(!navigated&&isGoodLink(target))
-			{
-				bypassed=true
-				navigated=true
-				debugger
-				let url
-				try{url=new URL(target)}catch(e){}
-				if(!url||!url.hash)
-					target+=location.hash
-				window.onbeforeunload=null
-				location.href=target
-			}
+			if(navigated||!isGoodLink(target))
+				return false
+			bypassed=true
+			navigated=true
+			debugger
+			let url
+			try{url=new URL(target)}catch(e){}
+			if(!url||!url.hash)
+				target+=location.hash
+			window.onbeforeunload=null
+			location.href=target
+			return true
 		},
 		bypassed=false,//We keep track if we have already executed a bypass to stop further checks
 		setBypassed=()=>{
@@ -345,6 +345,11 @@ if(document instanceof HTMLDocument)
 		domainBypass("emulator.games",()=>{
 			if(location.pathname=="/download.php")
 				window.setInterval=f=>sI(f,1)
+		})
+		domainBypass("noriskdomain.com",()=>{
+			let s=new URLSearchParams(location.search)
+			if(s.has("u"))
+				safelyNavigate(atob(s.get("u")))
 		})
 		if(bypassed)
 			return
@@ -772,15 +777,11 @@ if(document instanceof HTMLDocument)
 				}
 				else
 				{
-					let search=location.search.toString().replace("?", "")
-					if(search.substr(0,3)=="go=")
+					let s=new URLSearchParams(location.search)
+					if(s.has("go"))
 					{
-						search=atob(search.substr(3))
-						if(search.substr(0,4)=="http")
-						{
-							safelyNavigate(search)
+						if(safelyNavigate(atob(s.get("go"))))
 							return setBypassed()
-						}
 					}
 					else if(location.pathname.toString().substr(0,4)=="/go/")
 					{
@@ -793,10 +794,14 @@ if(document instanceof HTMLDocument)
 					}
 				}
 			}
-			if(document.querySelector("input[type='hidden'][name='newwpsafelink'][value]")&&location.search&&location.search.substr(0,4)=="?go=")
+			if(document.querySelector("input[type='hidden'][name='newwpsafelink'][value]"))
 			{
-				safelyNavigate(atob(location.search.substr(4).split("&")[0]))
-				return setBypassed()
+				let s=new URLSearchParams(location.search)
+				if(s.has("go"))
+				{
+					safelyNavigate(atob(s.get("go")))
+					return setBypassed()
+				}
 			}
 			//Other Templates
 			if(document.querySelector(".timed-content-client_show_0_30_0"))//technicoz.com

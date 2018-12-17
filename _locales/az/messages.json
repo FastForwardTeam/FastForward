@@ -9,13 +9,13 @@
 		"message": "Mükəmməlsiniz!"
 	},
 	"firstrunNoScript": {
-		"message": "Buna baxmayaraq, Universal Bypass ilə uyğunlaşmayan NoScript və ta oxşarını istifadə edirsiniz."
+		"message": "Buna baxmayaraq, Universal Bypass ilə uyğunlaşmayan NoScript və ya oxşarını istifadə edirsiniz."
 	},
 	"firstrunWhatnow": {
 		"message": "Nələr edə bilərsiniz:"
 	},
 	"firstrunExampleLinks": {
-		"message": "Universal Bypass işlədiyinə əmin olmaq üçün nümunə bağlantıları nəzərdən keçirin."
+		"message": "Universal Bypass-ın işlədiyinə əmin olmaq üçün nümunə bağlantıları nəzərdən keçirin."
 	},
 	"firstrunOptions": {
 		"message": "Universal Bypass seçimlərini dəyişdirin."
@@ -39,10 +39,10 @@
 		"message": "Apimon.de istifadə edən Bypass izləyiciləri."
 	},
 	"optionsBlockIPLoggers": {
-		"message": "Bypass edilə bilməsə, IP qeydlərini əngəllə."
+		"message": "Ötürə bilməsə, IP qeydlərini əngəllə."
 	},
 	"optionsCrowdBypass": {
-		"message": "Ötürülə bilməyən qısaldıcıların yerlərini götür və apar."
+		"message": "Ötürülə bilməyən qısaldıcıların yerlərini verin və aparın."
 	},
 	"privacyPolicy": {
 		"message": "Gizlilik Siyasəti"
@@ -69,13 +69,13 @@
 		"message": "Bu bypass-ı silmək istədiyinizə əminsiniz?"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass, IP ünvanların qeydlərə əlavə edilməsinin qarşısı alındı."
+		"message": "Universal Bypass, IP ünvanların qeydlərə əlavə edilməsinin qarşısı aldı."
 	},
 	"blockedSubtitle": {
 		"message": "Universal Bypass-ın IP ünvanlarınızı pis niyyətli şəxslərin əlin keçməsinin qarşısını almağını istəmirsinizsə, bunu seçimlərdə ləğv edin:"
 	},
 	"crowdBypassed": {
-		"message": "Gözləməyə ehtiyac yoxdur!"
+		"message": "Gözləməyinizə ehtiyac yoxdur!"
 	},
 	"crowdBypassedInfo": {
 		"message": "Digər Universal Bypass istifadəçiləri artıq sizi gözlədilər və bunun % a çatdığı bildirildi"
