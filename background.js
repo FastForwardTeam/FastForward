@@ -51,24 +51,6 @@ if(platform=="moz")
 		}
 	},{urls:["<all_urls>"]},["blocking","responseHeaders"])
 
-//Shorte.st Bypass	
-brws.webRequest.onBeforeSendHeaders.addListener(details=>{
-	if(details.method=="GET"&&details.type=="main_frame"&&new URL(details.url).search=="")
-		return{requestHeaders:details.requestHeaders.filter(h=>h.name!="User-Agent")}
-},{
-	urls:[
-	"*://sh.st/*",
-	"*://clkmein.com/*",
-	"*://viid.me/*",
-	"*://corneey.com/*",
-	"*://gestyy.com/*",
-	"*://cllkme.com/*",
-	"*://festyy.com/*",
-	"*://destyy.com/*",
-	"*://ceesty.com/*"
-	]
-},["blocking","requestHeaders"])
-
 //Install & Uninstall Actions
 brws.runtime.onInstalled.addListener(details=>{
 	if(details.reason=="install")
