@@ -160,10 +160,9 @@ if(document instanceof HTMLDocument)
 					value:false,
 					writable:false
 				})
-				_.forEach((v,k)=>{
+				for(let k in _)
 					if(forced_safelink[k]===undefined)
-						actual_safelink[k]=v
-				})
+						actual_safelink[k]=_[k]
 			},
 			get:()=>actual_safelink
 		})
