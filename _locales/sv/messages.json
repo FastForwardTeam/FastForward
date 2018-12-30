@@ -35,6 +35,9 @@
 	"save": {
 		"message": "Spara"
 	},
+	"optionsInstantNavigation": {
+		"message": "Ta mig omedelbart till målen."
+	},
 	"optionsTrackerBypass": {
 		"message": "Förbikopplare som använder Apimon.de."
 	},
@@ -67,6 +70,15 @@
 	},
 	"optionsUserscriptsDeleteConfirm": {
 		"message": "Vill du ta bort denna förbikoppling?"
+	},
+	"beforeNavigate": {
+		"message": "Du har nästan nått ditt mål."
+	},
+	"beforeNavigateDestination": {
+		"message": "Ditt mål är %"
+	},
+	"beforeNavigateInfo": {
+		"message": "Om du vill att Universal Bypass omedelbart ska dirigera om dig till ditt mål, ändrar du det i alternativen:"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass förhindrade din IP-adress från att loggas."

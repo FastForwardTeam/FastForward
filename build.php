@@ -47,7 +47,7 @@ $firefox = createZip("Universal Bypass for Firefox.zip");
 $source = createZip("Universal Bypass Source.zip");
 foreach($index as $fn)
 {
-	if($fn != "build.php")
+	if($fn != "build.php" && $fn != "README.md")
 	{
 		if($fn == "content_script.js")
 		{
@@ -60,14 +60,16 @@ foreach($index as $fn)
 			if($fn == "manifest.json")
 			{
 				$json = json_decode(file_get_contents($fn), true);
+				unset($json["browser_specific_settings"]);
+				$firefox->addFromString($fn, json_encode($json, JSON_UNESCAPED_SLASHES));
 				unset($json["web_accessible_resources"]);
 				$build->addFromString($fn, json_encode($json, JSON_UNESCAPED_SLASHES));
 			}
 			else
 			{
 				$build->addFile($fn, $fn);
+				$firefox->addFile($fn, $fn);
 			}
-			$firefox->addFile($fn, $fn);
 		}
 	}
 	$source->addFile($fn, $fn);

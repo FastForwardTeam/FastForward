@@ -83,18 +83,29 @@ brws.storage.local.get(["custom_bypasses"],result=>{
 		saveCustomBypass()
 	}
 })
-brws.storage.sync.get(["no_tracker_bypass","allow_ip_loggers","crowd_bypass_opt_out"],result=>{
-	if(result==undefined)
-		result={}
-	let trackerBypassCheckbox=document.getElementById("option-tracker-bypass"),
+brws.storage.sync.get(["instant_navigation","no_tracker_bypass","allow_ip_loggers","crowd_bypass_opt_out"],res=>{
+	if(res==undefined)
+		res={}
+	let instantNavigationCheckbox=document.getElementById("option-instant-navigation"),
+	trackerBypassCheckbox=document.getElementById("option-tracker-bypass"),
 	blockIPLoggersCheckbox=document.getElementById("option-block-ip-loggers"),
 	crowdBypassCheckbox=document.getElementById("option-crowd-bypass")
-	if(!result.no_tracker_bypass||result.no_tracker_bypass!=="true")
+	if(res.instant_navigation&&res.instant_navigation==="true")
+		instantNavigationCheckbox.setAttribute("checked","checked")
+	if(!res.no_tracker_bypass||res.no_tracker_bypass!=="true")
 		trackerBypassCheckbox.setAttribute("checked","checked")
-	if(!result.allow_ip_loggers||result.allow_ip_loggers!=="true")
+	if(!res.allow_ip_loggers||res.allow_ip_loggers!=="true")
 		blockIPLoggersCheckbox.setAttribute("checked","checked")
-	if(!result.crowd_bypass_opt_out||result.crowd_bypass_opt_out!=="true")
+	if(!res.crowd_bypass_opt_out||res.crowd_bypass_opt_out!=="true")
 		crowdBypassCheckbox.setAttribute("checked","checked")
+	instantNavigationCheckbox.onchange=()=>{
+		instantNavigationCheckbox.setAttribute("disabled","disabled")
+		brws.storage.sync.set({
+			instant_navigation:instantNavigationCheckbox.checked.toString()
+		},()=>{
+			instantNavigationCheckbox.removeAttribute("disabled")
+		})
+	}
 	trackerBypassCheckbox.onchange=()=>{
 		trackerBypassCheckbox.setAttribute("disabled","disabled")
 		brws.storage.sync.set({

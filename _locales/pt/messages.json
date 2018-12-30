@@ -35,6 +35,9 @@
 	"save": {
 		"message": "Salvar"
 	},
+	"optionsInstantNavigation": {
+		"message": "Levar-me instantaneamente aos destinos."
+	},
 	"optionsTrackerBypass": {
 		"message": "Ignorar rastreadores usando Apimon.de."
 	},
@@ -67,6 +70,12 @@
 	},
 	"optionsUserscriptsDeleteConfirm": {
 		"message": "Você deseja realmente excluir este bypass?"
+	},
+	"beforeNavigate": {
+		"message": "Você está quase no seu destino."
+	},
+	"beforeNavigateDestination": {
+		"message": "Seu destino é %"
 	},
 	"blockedTitle": {
 		"message": "O Universal Bypass preveniu que seu IP fosse registrado."

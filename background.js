@@ -77,6 +77,24 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		return{redirectUrl:decodeURIComponent(details.url.substr(details.url.indexOf("/12/1/")+6))}
 },{urls:["*://*.sh.st/r/*/12/1/*"]},["blocking"])
 
+//Keeping track of the user's settings
+var instantNavigation=false,trackerBypassEnabled=true,blockIPLoggers=true
+brws.storage.sync.get(["instant_navigation","no_tracker_bypass","allow_ip_loggers"],res=>{
+	if(!res)
+		return
+	instantNavigation=(res.instant_navigation&&res.instant_navigation==="true")
+	trackerBypassEnabled=(!res.no_tracker_bypass||res.no_tracker_bypass!=="true")
+	blockIPLoggers=(!res.allow_ip_loggers&&res.allow_ip_loggers!=="true")
+})
+brws.storage.onChanged.addListener(changes=>{
+	if(changes.instant_navigation)
+		instantNavigation=(changes.instant_navigation.newValue==="true")
+	if(changes.no_tracker_bypass)
+		trackerBypassEnabled=(changes.no_tracker_bypass.newValue!=="true")
+	if(changes.allow_ip_loggers)
+		blockIPLoggers=(changes.allow_ip_loggers.newValue!=="true")
+})
+
 //Internal redirects to extension URLs to bypass content script limitations
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(details.method=="GET"&&details.type=="main_frame")
@@ -88,11 +106,25 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 },{urls:["https://universal-bypass.org/firstrun?*"]},["blocking"])
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(details.method=="GET"&&details.type=="main_frame")
+	{
+		if(instantNavigation)
+		{
+			return{redirectUrl:decodeURIComponent(details.url.substr(52))}
+		}
+		else
+		{
+			return{redirectUrl:brws.runtime.getURL("html/before-navigate.html")+details.url.substr(44)}
+		}
+	}
+},{urls:["https://universal-bypass.org/before-navigate?*"]},["blocking"])
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(details.method=="GET"&&details.type=="main_frame")
 		return{redirectUrl:brws.runtime.getURL("html/crowd-bypassed.html")+details.url.substr(43)}
 },{urls:["https://universal-bypass.org/crowd-bypassed?*"]},["blocking"])
 
-//Tracker Bypass using Apimon.de — see options for more details
-var trackerBypassEnabled=true,blockIPLoggers=true,resolveDestination=url=>{
+//Tracker Bypass using Apimon.de; see options for more details.
+function resolveRedirect(url)
+{
 	let xhr=new XMLHttpRequest(),destination
 	xhr.onreadystatechange=()=>{
 		if(xhr.readyState==4&&xhr.status==200)
@@ -106,25 +138,10 @@ var trackerBypassEnabled=true,blockIPLoggers=true,resolveDestination=url=>{
 	xhr.send()
 	return destination
 }
-brws.storage.sync.get(["no_tracker_bypass","allow_ip_loggers"],result=>{
-	if(result)
-	{
-		if(result.no_tracker_bypass&&result.no_tracker_bypass==="true")
-			trackerBypassEnabled=false
-		if(result.allow_ip_loggers&&result.allow_ip_loggers==="true")
-			blockIPLoggers=false
-	}
-})
-brws.storage.onChanged.addListener(changes=>{
-	if(changes.no_tracker_bypass)
-		trackerBypassEnabled=(changes.no_tracker_bypass.newValue!=="true")
-	if(changes.allow_ip_loggers)
-		blockIPLoggers=(changes.allow_ip_loggers.newValue!=="true")
-})
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(!trackerBypassEnabled||details.method!="GET"||details.type!="main_frame"||new URL(details.url).pathname=="/")
 		return
-	let destination=resolveDestination(details.url)
+	let destination=resolveRedirect(details.url)
 	if(destination&&destination!=details.url)
 		return{redirectUrl:destination}
 },{
@@ -162,7 +179,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		return
 	if(trackerBypassEnabled)
 	{
-		let destination=resolveDestination(details.url)
+		let destination=resolveRedirect(details.url)
 		if(destination&&destination!=details.url)
 			return{redirectUrl:destination}
 	}

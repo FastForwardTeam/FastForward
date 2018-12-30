@@ -35,6 +35,9 @@
 	"save": {
 		"message": "Save"
 	},
+	"optionsInstantNavigation": {
+		"message": "Instantly take me to destinations."
+	},
 	"optionsTrackerBypass": {
 		"message": "Bypass trackers using Apimon.de."
 	},
@@ -67,6 +70,15 @@
 	},
 	"optionsUserscriptsDeleteConfirm": {
 		"message": "Do you really want to delete this bypass?"
+	},
+	"beforeNavigate": {
+		"message": "You're almost at your destination."
+	},
+	"beforeNavigateDestination": {
+		"message": "Your destination is %"
+	},
+	"beforeNavigateInfo": {
+		"message": "If you want Universal Bypass to instantly redirect you to your destination, change this in the options:"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass prevented your IP from being logged."

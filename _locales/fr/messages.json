@@ -35,6 +35,9 @@
 	"save": {
 		"message": "Sauvegarder"
 	},
+	"optionsInstantNavigation": {
+		"message": "M'envoyer instantanément vers les destinations."
+	},
 	"optionsTrackerBypass": {
 		"message": "Contourner les traqueurs en utilisant Apimon.de."
 	},
@@ -67,6 +70,15 @@
 	},
 	"optionsUserscriptsDeleteConfirm": {
 		"message": "Voulez-vous vraiment supprimer ce contournement?"
+	},
+	"beforeNavigate": {
+		"message": "Vous êtes presque arrivé à destination."
+	},
+	"beforeNavigateDestination": {
+		"message": "Votre destination est %"
+	},
+	"beforeNavigateInfo": {
+		"message": "Si vous voulez que Universal Bypass vous redirige instantanément vers votre destination, changez ceci dans les options:"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass empêche l’enregistrement de votre IP."
