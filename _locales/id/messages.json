@@ -1,6 +1,6 @@
 {
 	"appDesc": {
-		"message": "Jangan habiskan waktu anda dengan menaati aturan. Universal Bypass secara otomatis akan melompati link pemendek yang menyebalkan."
+		"message": "Jangan habiskan waktu anda dengan mentaati aturan. Universal Bypass secara otomatis akan melompati link pemendek yang menyebalkan."
 	},
 	"firstrunTitle": {
 		"message": "Terimakasih anda telah menginstal Universal Bypass!"
@@ -9,10 +9,10 @@
 		"message": "Anda benar-benar luar biasa !"
 	},
 	"firstrunNoScript": {
-		"message": "Akan tetapi, anda sepertinya tidak menggunakan script atau hal yang menyerupai itu, yang mana Universal Bypass tidak kompatibel dengannya."
+		"message": "Akan tetapi, anda sepertinya menggunakan NoScript atau menyerupai itu, Karena itu Universal Bypass tidak kompatibel dengannya."
 	},
 	"firstrunWhatnow": {
-		"message": "Apa yang anda dapat lakukan sekarang :"
+		"message": "Apa yang dapat anda lakukan sekarang :"
 	},
 	"firstrunExampleLinks": {
 		"message": "coba lihat contoh link kami untuk memastikan Universal Bypass bekerja."
@@ -21,7 +21,7 @@
 		"message": "Mengganti Pengaturan Universal Bypass."
 	},
 	"firstrunTwitter": {
-		"message": "Ikuti Twitter Universal Bypass untuk selalu mendapatkakn iklan mengenai Universal Bypass."
+		"message": "Ikuti Twitter Universal Bypass agar selalu kabar mengenai Universal Bypass."
 	},
 	"homepage": {
 		"message": "Beranda"
@@ -39,7 +39,7 @@
 		"message": "Pelacak Bypass menggunakan Apimon.de."
 	},
 	"optionsBlockIPLoggers": {
-		"message": "Memblokir IP Logger jika meraka tidak dapat dilewati."
+		"message": "Memblokir IP Logger jika tidak dapat dilewati."
 	},
 	"optionsCrowdBypass": {
 		"message": "Memberikan dan mendapatkan tujuan dari pemendek yang tidak dapat dilewati."
@@ -69,7 +69,7 @@
 		"message": "Apakah Anda yakin ingin menghapus bypass ini?"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass mencegah IP anda terlog."
+		"message": "Universal Bypass mencegah IP Anda saat sedang login."
 	},
 	"blockedSubtitle": {
 		"message": "jika anda tidak ingin Universal Bypass untuk mencegah orang jahat yang mengambil IP anda, non aktifkan ini di pengaturan :"

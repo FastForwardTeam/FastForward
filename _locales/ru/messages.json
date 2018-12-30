@@ -1,0 +1,86 @@
+{
+	"appDesc": {
+		"message": "Не тратьте зря своё время на уступчивость. Universal Bypass автоматически пропускает раздражающие сокращатели ссылок."
+	},
+	"firstrunTitle": {
+		"message": "Спасибо за установку Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "Вы восхитительны!"
+	},
+	"firstrunNoScript": {
+		"message": "Тем не менее, похоже, что Вы используете NoScript или что-то подобное, с чем Universal Bypass несовместим."
+	},
+	"firstrunWhatnow": {
+		"message": "Что Вы можете сделать прямо сейчас:"
+	},
+	"firstrunExampleLinks": {
+		"message": "Проверить ссылки-примеры, чтобы убедиться в работоспособности Universal Bypass."
+	},
+	"firstrunOptions": {
+		"message": "Изменить настройки Universal Bypass."
+	},
+	"firstrunTwitter": {
+		"message": "Подписаться на Universal Bypass в Twitter, чтобы быть в курсе всех новостей."
+	},
+	"homepage": {
+		"message": "Домашняя страница"
+	},
+	"popupOptions": {
+		"message": "Настройки"
+	},
+	"options": {
+		"message": "Настройки Universal Bypass"
+	},
+	"save": {
+		"message": "Сохранить"
+	},
+	"optionsTrackerBypass": {
+		"message": "Обходить средства слежки, используя Apimon.de."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Блокировать всех сохраняющих IP, если их нельзя обойти."
+	},
+	"optionsCrowdBypass": {
+		"message": "Отправлять и принимать адреса назначения сокращателей, которых невозможно обойти."
+	},
+	"privacyPolicy": {
+		"message": "Политика конфиденциальности"
+	},
+	"optionsUserscripts": {
+		"message": "Пользовательские обходы"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "Было бы хорошо, если бы Вы могли сообщить о работающих обходах на GitHub, чтобы они стали полезны другим людям: "
+	},
+	"optionsUserscriptsUntitled": {
+		"message": "Обход без названия"
+	},
+	"optionsUserscriptsName": {
+		"message": "Название. Если название пустое, этот обход будет удалён."
+	},
+	"optionsUserscriptsDomains": {
+		"message": "Домены. Укажите * для этого обхода, чтобы он действовал везде."
+	},
+	"optionsUserscriptsDelete": {
+		"message": "Удалить обход"
+	},
+	"optionsUserscriptsDeleteConfirm": {
+		"message": "Вы действительно хотите удалить этот обход?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass предотвратил запись Вашего IP."
+	},
+	"blockedSubtitle": {
+		"message": "Если Вы не хотите, чтобы Universal Bypass предотвращал получение Вашего IP нежелательными лицами, отключите это в настройках:"
+	},
+	"crowdBypassed": {
+		"message": "Вы можете не ждать!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Другие пользователи Universal Bypass уже подождали за Вас и сообщили, что это ведёт на %"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Это было неправильно?"
+	}
+}
