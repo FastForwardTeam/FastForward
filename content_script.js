@@ -592,9 +592,6 @@ if(document instanceof HTMLDocument)
 				if(b)
 					safelyNavigate(b.href)
 			})
-			domainBypass("oke.io",()=>{
-				window.setInterval=f=>sI(f,1)
-			})
 			domainBypass("shrink-service.it",()=>{
 				if(typeof $=="function"&&typeof $.ajax=="function"&&typeof screenApi=="function")
 				{
@@ -705,6 +702,7 @@ if(document instanceof HTMLDocument)
 						}
 					}
 				},50)
+				domainBypass("oke.io",()=>window.setInterval=f=>sI(f,1))
 				return finish()
 			}
 			//GemPixel Premium URL Shortener

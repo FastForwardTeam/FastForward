@@ -35,6 +35,9 @@
 	"save": {
 		"message": "保存"
 	},
+	"optionsInstantNavigation": {
+		"message": "即座にリンク先へ移動します。"
+	},
 	"optionsTrackerBypass": {
 		"message": "Apimon.deを使用してトラッカーをバイパスする"
 	},
@@ -67,6 +70,15 @@
 	},
 	"optionsUserscriptsDeleteConfirm": {
 		"message": "本当にこのバイパスを削除しますか？"
+	},
+	"beforeNavigate": {
+		"message": "リンク先まであと少しです。"
+	},
+	"beforeNavigateDestination": {
+		"message": "リンク先は %"
+	},
+	"beforeNavigateInfo": {
+		"message": "ユニバーサルバイパスを使ってリンク先に即座に移動したい場合は、オプションでこれを変更します。"
 	},
 	"blockedTitle": {
 		"message": "ユニバーサルバイパスにより、IPがログに記録されなくなりました。"

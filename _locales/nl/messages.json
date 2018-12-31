@@ -35,6 +35,9 @@
 	"save": {
 		"message": "Opslaan"
 	},
+	"optionsInstantNavigation": {
+		"message": "Stuur me gelijk door naar de site."
+	},
 	"optionsTrackerBypass": {
 		"message": "Omzeil trackers met behulp van Apimon.de."
 	},
@@ -67,6 +70,15 @@
 	},
 	"optionsUserscriptsDeleteConfirm": {
 		"message": "Weet u zeker dat u deze bypass wil verwijderen?"
+	},
+	"beforeNavigate": {
+		"message": "Je bent bijna op je bestemming."
+	},
+	"beforeNavigateDestination": {
+		"message": "Uw bestemming is %"
+	},
+	"beforeNavigateInfo": {
+		"message": "Als u wilt dat Universal Bypass u gelijk doorstuurt naar de site, verander dit in de opties:"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass voorkomt dat uw IP wordt geregistreerd."

@@ -35,6 +35,9 @@
 	"save": {
 		"message": "Сохранить"
 	},
+	"optionsInstantNavigation": {
+		"message": "Сразу переходить по адресу назначения."
+	},
 	"optionsTrackerBypass": {
 		"message": "Обходить средства слежки, используя Apimon.de."
 	},
@@ -67,6 +70,15 @@
 	},
 	"optionsUserscriptsDeleteConfirm": {
 		"message": "Вы действительно хотите удалить этот обход?"
+	},
+	"beforeNavigate": {
+		"message": "Вы почти достигли адреса назначения."
+	},
+	"beforeNavigateDestination": {
+		"message": "Ваш адрес назначения - %"
+	},
+	"beforeNavigateInfo": {
+		"message": "Если Вы хотите, чтобы Universal Bypass сразу перенаправлял Вас на адрес назначения, измените это в настройках:"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass предотвратил запись Вашего IP."
