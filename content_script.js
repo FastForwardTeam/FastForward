@@ -659,50 +659,10 @@ if(document instanceof HTMLDocument)
 				}
 				return finish()
 			}
-			if(typeof app_vars=="object")
+			//SafelinkU
+			if(typeof app_vars=="object"&&document.querySelector("b[style='color: #3e66b3']")&&document.querySelector("b[style='color: #3e66b3']").textContent=="SafelinkU")
 			{
-				//SafelinkU
-				if(document.querySelector("b[style='color: #3e66b3']")&&document.querySelector("b[style='color: #3e66b3']").textContent=="SafelinkU")
-				{
-					window.setInterval=(f)=>sI(f,10)
-					return finish()
-				}
-				//AdLinkFly
-				document.documentElement.setAttribute("data-universal-bypass-adlinkfly-info","")
-				let iT=setInterval(()=>{
-					if(document.documentElement.hasAttribute("data-universal-bypass-adlinkfly-target"))
-					{
-						clearInterval(iT)
-						let t=document.documentElement.getAttribute("data-universal-bypass-adlinkfly-target")
-						if(t=="")
-						{
-							crowdBypass(()=>{
-								let cT=setInterval(()=>{
-									let a=document.querySelector("a.get-link")
-									if(!a)
-										a=document.querySelector(".skip-ad a[href]")
-									if(a)
-									{
-										h=a.href
-										if(!isGoodLink(h)&&a.hasAttribute("data-href"))//cuio.io
-											h=a.getAttribute("data-href")
-										if(isGoodLink(h))
-										{
-											clearInterval(cT)
-											a.parentNode.removeChild(a)
-											contributeAndNavigate(h)
-										}
-									}
-								},50)
-							})
-						}
-						else
-						{
-							contributeAndNavigate(t)
-						}
-					}
-				},50)
-				domainBypass("oke.io",()=>window.setInterval=f=>sI(f,1))
+				window.setInterval=(f)=>sI(f,10)
 				return finish()
 			}
 			//GemPixel Premium URL Shortener
@@ -983,15 +943,65 @@ if(document instanceof HTMLDocument)
 					}
 				}
 			}
-			finish()
-			let dT=sI(()=>{//Monitor DOM for other disturbances for 10 seconds.
-				if(document.querySelector(".lay-sh.active-sh"))//Shorte.st Embed
+			//Monitor DOM for disturbances for 3 seconds.
+			let dT=sI(()=>{
+				//Shorte.st Embed
+				if(document.querySelector(".lay-sh.active-sh"))
 				{
 					let elm=document.querySelectorAll(".lay-sh.active-sh")[0]
 					elm.parentNode.removeChild(elm)
 				}
+				//AdLinkFly
+				if(typeof app_vars=="object")
+				{
+					document.documentElement.setAttribute("data-universal-bypass-adlinkfly-info","")
+					let iT=setInterval(()=>{
+						if(document.documentElement.hasAttribute("data-universal-bypass-adlinkfly-target"))
+						{
+							clearInterval(iT)
+							let t=document.documentElement.getAttribute("data-universal-bypass-adlinkfly-target")
+							if(t=="")
+							{
+								crowdBypass(()=>{
+									let cT=setInterval(()=>{
+										let a=document.querySelector("a.get-link")
+										if(!a)
+										{
+											a=document.querySelector(".skip-ad a[href]")
+										}
+										if(a)
+										{
+											h=a.href
+											if(!isGoodLink(h)&&a.hasAttribute("data-href"))//cuio.io
+											{
+												h=a.getAttribute("data-href")
+											}
+											if(isGoodLink(h))
+											{
+												debugger
+												clearInterval(cT)
+												a.parentNode.removeChild(a)
+												contributeAndNavigate(h)
+											}
+										}
+									},50)
+								})
+							}
+							else
+							{
+								contributeAndNavigate(t)
+							}
+						}
+					},50)
+					domainBypass("oke.io",()=>window.setInterval=f=>sI(f,1))
+					clearInterval(dT)
+					finish()
+				}
 			},100)
-			setTimeout(()=>clearInterval(dT),10000)
+			setTimeout(()=>{
+				clearInterval(dT)
+				finish()
+			},3000)
 		})
 	})+")()")//injectend
 	let dT=setInterval(()=>{

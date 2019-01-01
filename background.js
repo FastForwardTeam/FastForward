@@ -47,7 +47,9 @@ if(platform=="moz")
 				}
 			}
 			if(csp)
+			{
 				return{responseHeaders:details.responseHeaders}
+			}
 		}
 	},{urls:["<all_urls>"]},["blocking","responseHeaders"])
 
@@ -56,9 +58,13 @@ brws.runtime.onInstalled.addListener(details=>{
 	if(details.reason=="install")
 	{
 		if(platform=="ms")
+		{
 			brws.windows.create({url:"https://universal-bypass.org/firstrun"})
+		}
 		else
+		{
 			window.open("https://universal-bypass.org/firstrun")
+		}
 	}
 })
 brws.runtime.setUninstallURL("https://docs.google.com/forms/d/e/1FAIpQLSdXw-Yf5IaDXZWw4fDHroZkDFOF6hgWEvVDaXT9ZADqnF2reg/viewform")
@@ -66,19 +72,33 @@ brws.runtime.setUninstallURL("https://docs.google.com/forms/d/e/1FAIpQLSdXw-Yf5I
 //Bypasses of sites specifying the destination in the query
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(details.method=="GET"&&details.type=="main_frame")
-		return{redirectUrl:decodeURIComponent(details.url.substr(details.url.indexOf("url=")+4))}
-},{urls:["*://*.ourl.io/*url=*"]},["blocking"])
+		return encodedRedirect(details.url.substr(details.url.indexOf("url=")+4))
+},{urls:["*://*/st?api=*&url=*"]},["blocking"])
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(details.method=="GET"&&details.type=="main_frame")
-		return{redirectUrl:decodeURIComponent(details.url.substr(details.url.indexOf("link=")+5))}
-},{urls:["*://*.spaste.com/r/*link=*"]},["blocking"])
+		return encodedRedirect(details.url.substr(details.url.indexOf("link=")+5))
+},{urls:["*://*.spaste.com/r/*link=*",]},["blocking"])
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(details.method=="GET"&&details.type=="main_frame")
-		return{redirectUrl:decodeURIComponent(details.url.substr(details.url.indexOf("/12/1/")+6))}
+		return getRedirect(atob(details.url.substr(details.url.indexOf("?link=")+6)))
+},{urls:["*://*.leechpremium.link/cheat/?link=*"]},["blocking"])
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(details.method=="GET"&&details.type=="main_frame")
+		return encodedRedirect(details.url.substr(details.url.indexOf("?s=")+3))
+},{urls:["*://*.ouo.io/s/*?s=*","*://*.cpmlink.net/s/*?s=*"]},["blocking"])
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(details.method=="GET"&&details.type=="main_frame")
+		return encodedRedirect(details.url.substr(details.url.indexOf("/12/1/")+6))
 },{urls:["*://*.sh.st/r/*/12/1/*"]},["blocking"])
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(details.method=="GET"&&details.type=="main_frame")
+		return encodedRedirect(details.url.substr(details.url.indexOf("/s/")+3))
+},{urls:["*://*.gslink.co/e/*/s/*"]},["blocking"])
 
 //Keeping track of the user's settings
-var instantNavigation=false,trackerBypassEnabled=true,blockIPLoggers=true
+var instantNavigation=false,trackerBypassEnabled=true,blockIPLoggers=true,
+getRedirect=url=>({redirectUrl:(instantNavigation?url:brws.runtime.getURL("html/before-navigate.html")+"?target="+encodeURIComponent(url))})
+encodedRedirect=url=>({redirectUrl:(instantNavigation?decodeURIComponent(url):brws.runtime.getURL("html/before-navigate.html")+"?target="+url)})
 brws.storage.sync.get(["instant_navigation","no_tracker_bypass","allow_ip_loggers"],res=>{
 	if(!res)
 		return
@@ -106,17 +126,8 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 },{urls:["https://universal-bypass.org/firstrun?*"]},["blocking"])
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(details.method=="GET"&&details.type=="main_frame")
-	{
-		if(instantNavigation)
-		{
-			return{redirectUrl:decodeURIComponent(details.url.substr(52))}
-		}
-		else
-		{
-			return{redirectUrl:brws.runtime.getURL("html/before-navigate.html")+details.url.substr(44)}
-		}
-	}
-},{urls:["https://universal-bypass.org/before-navigate?*"]},["blocking"])
+		return encodedRedirect(details.url.substr(52))
+},{urls:["https://universal-bypass.org/before-navigate?target=*"]},["blocking"])
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(details.method=="GET"&&details.type=="main_frame")
 		return{redirectUrl:brws.runtime.getURL("html/crowd-bypassed.html")+details.url.substr(43)}
