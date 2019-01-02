@@ -11,9 +11,9 @@
 	"name": "Universal Bypass",
 	"description": "__MSG_appDesc__",
 	"homepage_url": "https://universal-bypass.org/",
-	"version": "8.2",
+	"version": "8.2.1",
 	"author": "Tim \"timmyRS\" Speckhals",
-	"minimum_chrome_version": "41",
+	"incognito": "split",
 	"options_ui": {
 		"page": "html/options.html",
 		"open_in_tab": true

@@ -61,9 +61,13 @@ foreach($index as $fn)
 			{
 				$json = json_decode(file_get_contents($fn), true);
 				unset($json["browser_specific_settings"]);
-				$firefox->addFromString($fn, json_encode($json, JSON_UNESCAPED_SLASHES));
 				unset($json["web_accessible_resources"]);
 				$build->addFromString($fn, json_encode($json, JSON_UNESCAPED_SLASHES));
+				$json = json_decode(file_get_contents($fn), true);
+				unset($json["browser_specific_settings"]);
+				unset($json["incognito"]);
+				unset($json["background"]["persistent"]);
+				$firefox->addFromString($fn, json_encode($json, JSON_UNESCAPED_SLASHES));
 			}
 			else
 			{

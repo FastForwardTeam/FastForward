@@ -3,7 +3,7 @@
 		"message": "No pierdas el tiempo para acceder. Universal Bypass omite automáticamente los molestos acortadores de enlaces."
 	},
 	"firstrunTitle": {
-		"message": "¡Gracias por instalar Universal Bypass!"
+		"message": "Gracias por instalar Universal Bypass!"
 	},
 	"firstrunSubtitle": {
 		"message": "¡Eres increíble!"
@@ -15,7 +15,7 @@
 		"message": "Lo que puedes hacer ahora:"
 	},
 	"firstrunExampleLinks": {
-		"message": "Revise los enlaces de ejemplo para asegurarse de que el Bypass Universal está funcionando."
+		"message": "Revise los enlaces de ejemplo para asegurarte de que Universal Bypass está funcionando."
 	},
 	"firstrunOptions": {
 		"message": "Configura Universal Bypass."
@@ -35,14 +35,17 @@
 	"save": {
 		"message": "Guardar"
 	},
+	"optionsInstantNavigation": {
+		"message": "Llevarme directamente al destino."
+	},
 	"optionsTrackerBypass": {
-		"message": "Circunvala rastreadores usando Apimon.de."
+		"message": "Evita rastreadores usando Apimon.de."
 	},
 	"optionsBlockIPLoggers": {
-		"message": "Bloquea los registradores IP si no pueden ser circunvalados."
+		"message": "Bloquea los registradores IP si no pueden ser Saltados."
 	},
 	"optionsCrowdBypass": {
-		"message": "Da y toma los destinos de los acortadores que no se pueden circunvalar."
+		"message": "Da y toma los destinos de los acortadores que no se pueden Saltar."
 	},
 	"privacyPolicy": {
 		"message": "Política de privacidad"
@@ -67,6 +70,15 @@
 	},
 	"optionsUserscriptsDeleteConfirm": {
 		"message": "¿Realmente quieres borrar este bypass?"
+	},
+	"beforeNavigate": {
+		"message": "Ya casi estas en tu destino."
+	},
+	"beforeNavigateDestination": {
+		"message": "Tu dirección de destino es %"
+	},
+	"beforeNavigateInfo": {
+		"message": "Si deseas que Universal Bypass te redirija automaticamente a tu destino, cambia esto en tus opciones:"
 	},
 	"blockedTitle": {
 		"message": "Bypass Universal evitó que su IP se registrara."
