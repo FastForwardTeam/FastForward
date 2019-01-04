@@ -649,7 +649,18 @@ if(document instanceof HTMLDocument)
 			})
 			if(bypassed)
 				return
-			//Adf.ly Pre-Redirect Nonsense
+			//Adf.ly "Locked" Page
+			if(location.pathname=="/ad/locked"&&document.getElementById("countdown")&&document.querySelector("a").textContent=="Click here to continue")
+			{
+				let wT=setInterval(()=>{
+					if(document.getElementById("countdown").textContent=="0")
+					{
+						clearInterval(wT)
+						document.querySelector("a").click()
+					}
+				},100)
+			}
+			//Adf.ly Pre-Redirect Page
 			if(location.pathname.substr(0,13)=="/redirecting/"&&document.querySelector("p[style]").textContent=="For your safety, never enter your password unless you're on the real Adf.ly site.")
 			{
 				let a=document.querySelector("a[href]")
