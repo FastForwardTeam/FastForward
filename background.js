@@ -11,7 +11,7 @@ if(platform=="moz")
 				if("value"in details.responseHeaders[i]&&["content-security-policy","x-content-security-policy"].indexOf(details.responseHeaders[i].name.toLowerCase())>-1)
 				{
 					csp=true
-					let _policies=details.responseHeaders[i].value.split(";"),policies={}
+					let _policies=details.responseHeaders[i].value.replace(";,",";").split(";"),policies={}
 					for(let j in _policies)
 					{
 						let policy=_policies[j].trim(),name=policy.split(" ")[0]
@@ -32,7 +32,9 @@ if(platform=="moz")
 							policies["script-src"].push("'unsafe-eval'")
 					}
 					else
+					{
 						policies["script-src"]=["*","blob:","data:","'unsafe-inline'","'unsafe-eval'"]
+					}
 					let value=""
 					for(let name in policies)
 					{
