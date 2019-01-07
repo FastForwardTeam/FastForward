@@ -411,22 +411,16 @@ if(document instanceof HTMLDocument)
 					safelyNavigate(b.href)
 			})
 			domainBypass("sub2unlock.com",()=>{
-				$(document).ready(()=>{
-					let steps=document.querySelectorAll(".uk.unlock-step-link.check")
-					if(steps.length)
-					{
-						steps.forEach(step=>{
-							if(step.className.substr(0,3)=="uk ")
-							{
-								step.className=step.className.substr(3)
-							}
-						})
-						steps[0].removeAttribute("target")
-						steps[0].setAttribute("href","#")
-						steps[0].click()
-						document.getElementById("link").click()
-					}
-				})
+				if(location.pathname.substr(0,10)=="/link/get/")
+				{
+					safelyNavigate(document.getElementById("link").href)
+				}
+				else
+				{
+					let f=document.getElementById("getLinkNow")
+					if(f)
+						document.getElementById("getLinkNow").submit()
+				}
 			})
 			domainBypass("srt.am",()=>{
 				if(document.querySelector(".skip-container"))
