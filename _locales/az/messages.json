@@ -35,6 +35,9 @@
 	"save": {
 		"message": "Saxla"
 	},
+	"optionsInstantNavigation": {
+		"message": "Məni dərhal təyinat yerinə apar."
+	},
 	"optionsTrackerBypass": {
 		"message": "Apimon.de istifadə edən Bypass izləyiciləri."
 	},
@@ -67,6 +70,15 @@
 	},
 	"optionsUserscriptsDeleteConfirm": {
 		"message": "Bu bypass-ı silmək istədiyinizə əminsiniz?"
+	},
+	"beforeNavigate": {
+		"message": "Demək olar ki, təyinat yerindəsiniz."
+	},
+	"beforeNavigateDestination": {
+		"message": "Təyinat yeri %"
+	},
+	"beforeNavigateInfo": {
+		"message": "Universal Bypass-ın sizi dərhal təyinat yerinə yönləndirməyini istəyirsinizsə, bunu seçimlərdə dəyişdirin:"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass, IP ünvanların qeydlərə əlavə edilməsinin qarşısı aldı."
