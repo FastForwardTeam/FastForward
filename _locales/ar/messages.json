@@ -14,32 +14,11 @@
 	"firstrunWhatnow": {
 		"message": "ما الذي يمكنك القيام به اﻵن:"
 	},
-	"firstrunExampleLinks": {
-		"message": "تحقق من المواقع التالية للتأكد من أن المتجاوز الشامل يعمل."
-	},
-	"firstrunOptions": {
-		"message": "تغيير إعدادات المتجاوز الشامل."
-	},
-	"firstrunTwitter": {
-		"message": "تابع المتجاوز الشامل على \" تويتر \" حتى تكون دائمًا على الإطلاع بجديد أخباره."
-	},
-	"homepage": {
-		"message": "الصفحة الرئيسية"
-	},
-	"popupOptions": {
-		"message": "الخيارات"
-	},
-	"options": {
-		"message": "خيارات المتجاوز الشامل"
-	},
-	"save": {
-		"message": "حفظ"
-	},
 	"optionsInstantNavigation": {
 		"message": "قم بنقلي إلى الوجهات تلقائيًا."
 	},
 	"optionsTrackerBypass": {
-		"message": "تجاوز المتتبعين بأستخدام Apimon.de."
+		"message": "تجاوز المتتبعين بإستخدام Apimon.de."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "حظر مسجلات الـ IP إذا كان لا يمكن تجاوزهم."
@@ -56,35 +35,14 @@
 	"optionsUserscriptsSubtitle": {
 		"message": "سيكون من الرائع إذا كنت تستطيع إرسال متجاوزات تعمل إلى صفحة الـ GitHub، حتى يستطيع اﻵخرين اﻹستفادة منها: "
 	},
-	"optionsUserscriptsUntitled": {
-		"message": "متجاوز بلا اسم"
-	},
-	"optionsUserscriptsName": {
-		"message": "إسم المتجاوز. إذا كان فارغًا سيتم مسح هذا المتجاوز."
-	},
-	"optionsUserscriptsDomains": {
-		"message": "النطاقات. إستخدم * لهذا المتجاوز كي يكون فعال في كل موقع."
-	},
-	"optionsUserscriptsDelete": {
-		"message": "حذف المتجاوز"
-	},
-	"optionsUserscriptsDeleteConfirm": {
-		"message": "هل تريد بالفعل حذف هذا المتجاوز؟"
-	},
 	"beforeNavigate": {
 		"message": "انت الأن قريب من وجهتك."
 	},
 	"beforeNavigateDestination": {
 		"message": "وجهتك هي %"
 	},
-	"beforeNavigateInfo": {
-		"message": "إذا كنت تريد من المتجاوز الشامل ان يقوم بنقلك إلى وجهتك تلقائيًا، يمكنك تغييرها في الخيارات:"
-	},
 	"blockedTitle": {
-		"message": "المتجاوز الشامل قد حظر تسجيل عنوان الـ IP الخاص بك."
-	},
-	"blockedSubtitle": {
-		"message": "إذا كنت لا تريد أن يحظر المتجاوز الشامل الجهات السيئة من الحصول على عنوان الـ IP الخاص بك، قم بتعطيل هذا في الخيارات:"
+		"message": "المتجاوز الشامل قام بمنع تسجيل عنوان الـ IP الخاص بك."
 	},
 	"crowdBypassed": {
 		"message": "ربما لن تحتاج للإنتظار بعد الأن!"

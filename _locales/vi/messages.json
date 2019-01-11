@@ -14,27 +14,6 @@
 	"firstrunWhatnow": {
 		"message": "Bạn có thể làm gì bây giờ:"
 	},
-	"firstrunExampleLinks": {
-		"message": "Kiểm tra liên kết này ví dụ để đảm bảo rằng Universal Bypass đang làm việc."
-	},
-	"firstrunOptions": {
-		"message": "Thay đổi tùy chọn Universal Bypass."
-	},
-	"firstrunTwitter": {
-		"message": "Theo dõi Universal Bypass trên Twitter để luôn cập nhật mới về Universal Bypass."
-	},
-	"homepage": {
-		"message": "Trang chủ"
-	},
-	"popupOptions": {
-		"message": "Tùy chọn"
-	},
-	"options": {
-		"message": "Tùy chọn Universal Bypass"
-	},
-	"save": {
-		"message": "Lưu"
-	},
 	"optionsTrackerBypass": {
 		"message": "Bỏ qua trackers bằng cách sử dụng Apimon.de."
 	},
@@ -53,26 +32,8 @@
 	"optionsUserscriptsSubtitle": {
 		"message": "Thật tuyệt vời nếu như bạn có thể gửi bypass đang hoạt động đến GitHub, để giúp đỡ những người khác: "
 	},
-	"optionsUserscriptsUntitled": {
-		"message": "Bypass chưa có tiêu đề"
-	},
-	"optionsUserscriptsName": {
-		"message": "Tên. Nếu để trống, bypass này sẽ bị xoá."
-	},
-	"optionsUserscriptsDomains": {
-		"message": "Tên miền. Sử dụng * cho bypass này để hoạt động được ở mọi nơi."
-	},
-	"optionsUserscriptsDelete": {
-		"message": "Xoá Bypass"
-	},
-	"optionsUserscriptsDeleteConfirm": {
-		"message": "Bạn có thật sự muốn xoá bypass này?"
-	},
 	"blockedTitle": {
 		"message": "Universal Bypass đã ngăn chặn IP của bạn đăng nhập."
-	},
-	"blockedSubtitle": {
-		"message": "Nếu bạn không muốn Universal Bypass ngăn chặn các hành động xấu từ việc nhận IP của bạn, hãy vô hiệu hoá tuỳ chọn này:"
 	},
 	"crowdBypassed": {
 		"message": "Bạn không cần phải đợi!"

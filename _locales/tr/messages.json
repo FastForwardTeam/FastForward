@@ -14,27 +14,6 @@
 	"firstrunWhatnow": {
 		"message": "Yapabilecekleriniz:"
 	},
-	"firstrunExampleLinks": {
-		"message": "Universal Bypass'ın çalıştığından emin olmak için örnek bağlantılara göz atın."
-	},
-	"firstrunOptions": {
-		"message": "Universal Bypass'ın seçeneklerini değiştir."
-	},
-	"firstrunTwitter": {
-		"message": "Universal Bypass hakkındaki bilgiler içinde olmak için Twitter'da takip edin."
-	},
-	"homepage": {
-		"message": "Anasayfa"
-	},
-	"popupOptions": {
-		"message": "Seçenekler"
-	},
-	"options": {
-		"message": "Universal Bypass Seçenekleri"
-	},
-	"save": {
-		"message": "Kaydet"
-	},
 	"optionsTrackerBypass": {
 		"message": "Apimon.de kullanan bypass izleyicileri."
 	},
@@ -53,26 +32,8 @@
 	"optionsUserscriptsSubtitle": {
 		"message": "Çalışan bypassları GitHub'a eklerseniz diğerlerinin de yararlanması adına iyi olur."
 	},
-	"optionsUserscriptsUntitled": {
-		"message": "İsimsiz Bypass"
-	},
-	"optionsUserscriptsName": {
-		"message": "İsim. Boş bir isimle, bu bypass silinecek."
-	},
-	"optionsUserscriptsDomains": {
-		"message": "Domainler. Bu bypassin her yerde etkili olabilmesi için * kullanın."
-	},
-	"optionsUserscriptsDelete": {
-		"message": "Bypassi sil"
-	},
-	"optionsUserscriptsDeleteConfirm": {
-		"message": "Bu bypass'ı gerçekten silmek istiyor musunuz?"
-	},
 	"blockedTitle": {
 		"message": "Universal Bypass, IP adresinizin kayıtlara eklenmesini engelledi."
-	},
-	"blockedSubtitle": {
-		"message": "Universal Bypass'ın IP adresinizi kötü etkinliklerin elde etmesini engellemesini istemiyorsanız, bunu ayarlarda devre dışı bırakın:"
 	},
 	"crowdBypassed": {
 		"message": "Beklemek zorunda değilsin!"

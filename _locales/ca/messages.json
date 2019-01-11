@@ -14,27 +14,6 @@
 	"firstrunWhatnow": {
 		"message": "El que pots fer ara:"
 	},
-	"firstrunExampleLinks": {
-		"message": "Comprova els enllaços d'exemple per a assegurar-te que Universal Bypass està funcionant."
-	},
-	"firstrunOptions": {
-		"message": "Canvia les opcions de Universal Bypass."
-	},
-	"firstrunTwitter": {
-		"message": "Segueix Universal Bypass a Twitter per a mantenir-te actualitzat amb Universal Bypass."
-	},
-	"homepage": {
-		"message": "Pàgina d'inici"
-	},
-	"popupOptions": {
-		"message": "Opcions"
-	},
-	"options": {
-		"message": "Opcions de Universal Bypass"
-	},
-	"save": {
-		"message": "Desa"
-	},
 	"optionsTrackerBypass": {
 		"message": "Circumval·la rastrejadors utilitzant Apimon.de."
 	},
@@ -53,26 +32,8 @@
 	"optionsUserscriptsSubtitle": {
 		"message": "Estaria bé si enviés circumval·lacions que funcionen a GitHub, perquè altres puguin beneficiar-se'n: "
 	},
-	"optionsUserscriptsUntitled": {
-		"message": "Circumval·lació sense títol"
-	},
-	"optionsUserscriptsName": {
-		"message": "Nom. Amb un nom buida, aquesta circumval·lació se suprimirà."
-	},
-	"optionsUserscriptsDomains": {
-		"message": "Dominis. Fes servir * perquè aquesta circumval·lació funcioni per tot arreu."
-	},
-	"optionsUserscriptsDelete": {
-		"message": "Suprimeix circumval·lació"
-	},
-	"optionsUserscriptsDeleteConfirm": {
-		"message": "Segur que vols suprimir aquesta circumval·lació?"
-	},
 	"blockedTitle": {
 		"message": "Universal Bypass ha impedit que la seva adreça IP es registrés."
-	},
-	"blockedSubtitle": {
-		"message": "Si no vols que Universal Bypass impedeixi a agents maliciosos d'obtenir la seva adreça IP, desactiva això a les opcions:"
 	},
 	"crowdBypassed": {
 		"message": "Potser que no hagis d'esperar!"

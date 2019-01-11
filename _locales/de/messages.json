@@ -14,26 +14,23 @@
 	"firstrunWhatnow": {
 		"message": "Was du nun tun kannst:"
 	},
-	"firstrunExampleLinks": {
-		"message": "Schau dir Beispiellinks an, um sicherzustellen, dass Universal Bypass funktioniert."
-	},
-	"firstrunOptions": {
-		"message": "Ändere die Universal Bypass Optionen."
-	},
-	"firstrunTwitter": {
+	"twitter": {
 		"message": "Folge Universal Bypass auf Twitter um immer auf dem neusten Stand zu sein."
 	},
-	"homepage": {
-		"message": "Homepage"
+	"exampleLinks": {
+		"message": "Schau dir Beispiellinks an, um sicherzustellen, dass Universal Bypass funktioniert."
 	},
-	"popupOptions": {
-		"message": "Optionen"
+	"homepage": {
+		"message": "Besuche die Homepage von Universal Bypass."
 	},
 	"options": {
-		"message": "Universal Bypass Optionen"
+		"message": "Optionen"
 	},
-	"save": {
-		"message": "Speichern"
+	"optionsLink": {
+		"message": "Ändere die Optionen von Universal Bypass."
+	},
+	"optionsEnabled": {
+		"message": "Aktiviere Webseiten-Umgehungen."
 	},
 	"optionsInstantNavigation": {
 		"message": "Navigiere mich automatisch zu Ziel-Urls."
@@ -56,21 +53,6 @@
 	"optionsUserscriptsSubtitle": {
 		"message": "Es wäre nett, wenn du funktionierende Umgehungen auf GitHub einreichen würdest, damit Andere auch davon profitieren können: "
 	},
-	"optionsUserscriptsUntitled": {
-		"message": "Unbenannte Umgehung"
-	},
-	"optionsUserscriptsName": {
-		"message": "Name. Mit einem leeren Namen, wird diese Umgehung gelöscht."
-	},
-	"optionsUserscriptsDomains": {
-		"message": "Domains. Nutze * damit diese Umgehung überall in effekt tritt."
-	},
-	"optionsUserscriptsDelete": {
-		"message": "Umgehung löschen"
-	},
-	"optionsUserscriptsDeleteConfirm": {
-		"message": "Möchtest du diese Umgehung wirklich löschen?"
-	},
 	"beforeNavigate": {
 		"message": "Du bist fast am Ziel."
 	},
@@ -78,13 +60,13 @@
 		"message": "Dein Ziel ist %"
 	},
 	"beforeNavigateInfo": {
-		"message": "Falls du willst, dass Universal Bypass dich automatisch an dein Ziel bringt, kannst du dies in den Optionen ändern:"
+		"message": "Willst du, dass Universal Bypass dich automatisch an dein Ziel bringt?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass hat dich vor einem IP-Logger geschützt."
 	},
 	"blockedSubtitle": {
-		"message": "Falls du nicht möchtest, dass Universal Bypass deine IP vor bösen Leuten schützt, deaktivere das in den Optionen:"
+		"message": "Möchtest du nicht, dass Universal Bypass deine IP vor bösen Leuten schützt?"
 	},
 	"crowdBypassed": {
 		"message": "Du musst vielleicht nicht warten!"

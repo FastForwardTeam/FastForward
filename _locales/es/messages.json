@@ -14,27 +14,6 @@
 	"firstrunWhatnow": {
 		"message": "Lo que puedes hacer ahora:"
 	},
-	"firstrunExampleLinks": {
-		"message": "Revise los enlaces de ejemplo para asegurarte de que Universal Bypass está funcionando."
-	},
-	"firstrunOptions": {
-		"message": "Configura Universal Bypass."
-	},
-	"firstrunTwitter": {
-		"message": "Siga a Universal Bypass en Twitter para estar informado sobre Universal Bypass."
-	},
-	"homepage": {
-		"message": "Página de inicio"
-	},
-	"popupOptions": {
-		"message": "Opciones"
-	},
-	"options": {
-		"message": "Opciones de Universal Bypass"
-	},
-	"save": {
-		"message": "Guardar"
-	},
 	"optionsInstantNavigation": {
 		"message": "Llevarme directamente al destino."
 	},
@@ -56,35 +35,14 @@
 	"optionsUserscriptsSubtitle": {
 		"message": "Sería bueno que pudieras enviarle a GitHub las bifurcaciones (fork) que funcionan, para que otros puedan beneficiarse de ello: "
 	},
-	"optionsUserscriptsUntitled": {
-		"message": "Circunvalación sin título"
-	},
-	"optionsUserscriptsName": {
-		"message": "Nombre. Con un nombre vacío, este bypass será borrado."
-	},
-	"optionsUserscriptsDomains": {
-		"message": "Dominios. Utilice * para que este bypass sea efectivo en todas partes."
-	},
-	"optionsUserscriptsDelete": {
-		"message": "Eliminar Bypass"
-	},
-	"optionsUserscriptsDeleteConfirm": {
-		"message": "¿Realmente quieres borrar este bypass?"
-	},
 	"beforeNavigate": {
 		"message": "Ya casi estas en tu destino."
 	},
 	"beforeNavigateDestination": {
 		"message": "Tu dirección de destino es %"
 	},
-	"beforeNavigateInfo": {
-		"message": "Si deseas que Universal Bypass te redirija automaticamente a tu destino, cambia esto en tus opciones:"
-	},
 	"blockedTitle": {
 		"message": "Bypass Universal evitó que su IP se registrara."
-	},
-	"blockedSubtitle": {
-		"message": "Si no quieres que Universal Bypass evite que agentes maliciosos obtengan su IP, deshabilita esta opción en las opciones:"
 	},
 	"crowdBypassed": {
 		"message": "Puede que no tengas que esperar!"

@@ -14,26 +14,23 @@
 	"firstrunWhatnow": {
 		"message": "Vad du kan göra nu:"
 	},
-	"firstrunExampleLinks": {
-		"message": "Ta en titt på exempellänkar så du vet att Universal Bypass fungerar."
+	"twitter": {
+		"message": "Följ Universal Bypass på Twitter för att hålla dig uppdaterad."
 	},
-	"firstrunOptions": {
-		"message": "Ändra alternativ för Universal Bypass."
-	},
-	"firstrunTwitter": {
-		"message": "Följ Universal Bypass på Twitter för att alltid vara uppdaterad om Universal Bypass."
+	"exampleLinks": {
+		"message": "Ta en titt på exempellänkarna för att se till att Universal Bypass fungerar."
 	},
 	"homepage": {
-		"message": "Hemsida"
-	},
-	"popupOptions": {
-		"message": "Alternativ"
+		"message": "Besök Universal Bypass hemsida."
 	},
 	"options": {
-		"message": "Alternativ för Universal Bypass"
+		"message": "Alternativ"
 	},
-	"save": {
-		"message": "Spara"
+	"optionsLink": {
+		"message": "Ändra alternativen för Universal Bypass."
+	},
+	"optionsEnabled": {
+		"message": "Aktivera förbikopplingar av webbplats."
 	},
 	"optionsInstantNavigation": {
 		"message": "Ta mig omedelbart till målen."
@@ -56,21 +53,6 @@
 	"optionsUserscriptsSubtitle": {
 		"message": "Det vore snällt om du kunde skicka upp fungerande förbikopplingar till GitHub, så andra också kan ha nytta av dem: "
 	},
-	"optionsUserscriptsUntitled": {
-		"message": "Namnlös förbikoppling"
-	},
-	"optionsUserscriptsName": {
-		"message": "Namn. Namnlös, denna förbikoppling kommer att tas bort."
-	},
-	"optionsUserscriptsDomains": {
-		"message": "Domäner. Använd * för att effektivt förbikoppla överallt."
-	},
-	"optionsUserscriptsDelete": {
-		"message": "Ta bort förbikopplingen"
-	},
-	"optionsUserscriptsDeleteConfirm": {
-		"message": "Vill du ta bort denna förbikoppling?"
-	},
 	"beforeNavigate": {
 		"message": "Du har nästan nått ditt mål."
 	},
@@ -78,13 +60,13 @@
 		"message": "Ditt mål är %"
 	},
 	"beforeNavigateInfo": {
-		"message": "Om du vill att Universal Bypass omedelbart ska dirigera om dig till ditt mål, ändrar du det i alternativen:"
+		"message": "Vill du att Universal Bypass omdirigerar dig direkt till ditt mål?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass förhindrade din IP-adress från att loggas."
 	},
 	"blockedSubtitle": {
-		"message": "Om du inte vill att Universal Bypass ska förhindra dåliga aktörer från att få din IP-adress, inaktivera detta i alternativen:"
+		"message": "Vill du inte att Universal Bypass ska förhindra skurkar från att få tag på din IP-adress?"
 	},
 	"crowdBypassed": {
 		"message": "Det är inte säkert du behöver vänta!"

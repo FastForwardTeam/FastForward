@@ -3,10 +3,6 @@ if(file_exists("Universal Bypass.zip"))
 {
 	unlink("Universal Bypass.zip");
 }
-if(file_exists("Universal Bypass Source.zip"))
-{
-	unlink("Universal Bypass Source.zip");
-}
 if(file_exists("Universal Bypass for Firefox.zip"))
 {
 	unlink("Universal Bypass for Firefox.zip");
@@ -44,40 +40,28 @@ function createZip($file)
 }
 $build = createZip("Universal Bypass.zip");
 $firefox = createZip("Universal Bypass for Firefox.zip");
-$source = createZip("Universal Bypass Source.zip");
 foreach($index as $fn)
 {
 	if($fn != "build.php" && $fn != "README.md")
 	{
-		if($fn == "content_script.js")
+		if($fn == "manifest.json")
 		{
-			$cont = str_replace("//\n", "\n", str_replace("\\", "\\\\", preg_replace('/injectScript\("\("\+\(\(\)=>({.*})\)\+"\)\(\)"\)\/\/injectend/s', 'injectScript(`(()=>$1)()`)', file_get_contents($fn))));
-			$build->addFromString($fn, $cont);
-			$firefox->addFromString($fn, $cont);
+			$json = json_decode(file_get_contents($fn), true);
+			unset($json["browser_specific_settings"]);
+			unset($json["web_accessible_resources"]);
+			$build->addFromString($fn, json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
+			$json = json_decode(file_get_contents($fn), true);
+			unset($json["browser_specific_settings"]);
+			unset($json["incognito"]);
+			unset($json["background"]["persistent"]);
+			$firefox->addFromString($fn, json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
 		}
 		else
 		{
-			if($fn == "manifest.json")
-			{
-				$json = json_decode(file_get_contents($fn), true);
-				unset($json["browser_specific_settings"]);
-				unset($json["web_accessible_resources"]);
-				$build->addFromString($fn, json_encode($json, JSON_UNESCAPED_SLASHES));
-				$json = json_decode(file_get_contents($fn), true);
-				unset($json["browser_specific_settings"]);
-				unset($json["incognito"]);
-				unset($json["background"]["persistent"]);
-				$firefox->addFromString($fn, json_encode($json, JSON_UNESCAPED_SLASHES));
-			}
-			else
-			{
-				$build->addFile($fn, $fn);
-				$firefox->addFile($fn, $fn);
-			}
+			$build->addFile($fn, $fn);
+			$firefox->addFile($fn, $fn);
 		}
 	}
-	$source->addFile($fn, $fn);
 }
 $build->close();
 $firefox->close();
-$source->close();

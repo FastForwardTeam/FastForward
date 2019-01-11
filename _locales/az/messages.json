@@ -14,27 +14,6 @@
 	"firstrunWhatnow": {
 		"message": "Nələr edə bilərsiniz:"
 	},
-	"firstrunExampleLinks": {
-		"message": "Universal Bypass-ın işlədiyinə əmin olmaq üçün nümunə bağlantıları nəzərdən keçirin."
-	},
-	"firstrunOptions": {
-		"message": "Universal Bypass seçimlərini dəyişdirin."
-	},
-	"firstrunTwitter": {
-		"message": "Universal Bypass haqqında həmişə məlumatlı qalmaq üçün Twitter-də izləyin."
-	},
-	"homepage": {
-		"message": "Əsas səhifə"
-	},
-	"popupOptions": {
-		"message": "Seçimlər"
-	},
-	"options": {
-		"message": "Universal Bypass Seçimləri"
-	},
-	"save": {
-		"message": "Saxla"
-	},
 	"optionsInstantNavigation": {
 		"message": "Məni dərhal təyinat yerinə apar."
 	},
@@ -56,35 +35,14 @@
 	"optionsUserscriptsSubtitle": {
 		"message": "İşləyən bypass-ları GitHub-da yazsanız, digərlərinin də faydalanmağına kömək olar: "
 	},
-	"optionsUserscriptsUntitled": {
-		"message": "Adsız Bypass"
-	},
-	"optionsUserscriptsName": {
-		"message": "Ad. Boş bir adla, bu bypass silinəcək."
-	},
-	"optionsUserscriptsDomains": {
-		"message": "Domenlər. By bypass-ın hər yerdə işlək olması üçün * istifadə edin."
-	},
-	"optionsUserscriptsDelete": {
-		"message": "Bypass-ı sil"
-	},
-	"optionsUserscriptsDeleteConfirm": {
-		"message": "Bu bypass-ı silmək istədiyinizə əminsiniz?"
-	},
 	"beforeNavigate": {
 		"message": "Demək olar ki, təyinat yerindəsiniz."
 	},
 	"beforeNavigateDestination": {
 		"message": "Təyinat yeri %"
 	},
-	"beforeNavigateInfo": {
-		"message": "Universal Bypass-ın sizi dərhal təyinat yerinə yönləndirməyini istəyirsinizsə, bunu seçimlərdə dəyişdirin:"
-	},
 	"blockedTitle": {
 		"message": "Universal Bypass, IP ünvanların qeydlərə əlavə edilməsinin qarşısı aldı."
-	},
-	"blockedSubtitle": {
-		"message": "Universal Bypass-ın IP ünvanlarınızı pis niyyətli şəxslərin əlin keçməsinin qarşısını almağını istəmirsinizsə, bunu seçimlərdə ləğv edin:"
 	},
 	"crowdBypassed": {
 		"message": "Gözləməyinizə ehtiyac yoxdur!"

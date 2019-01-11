@@ -14,27 +14,6 @@
 	"firstrunWhatnow": {
 		"message": "Cosa puoi fare ora:"
 	},
-	"firstrunExampleLinks": {
-		"message": "Controlla i link di esempio per verificare che Universal Bypass funzioni."
-	},
-	"firstrunOptions": {
-		"message": "Cambia le opzioni di Universal Bypass."
-	},
-	"firstrunTwitter": {
-		"message": "Segui Universal Bypass su Twitter per essere sempre aggiornato su Universal Bypass."
-	},
-	"homepage": {
-		"message": "Pagina principale"
-	},
-	"popupOptions": {
-		"message": "Opzioni"
-	},
-	"options": {
-		"message": "Opzioni di Universal Bypass"
-	},
-	"save": {
-		"message": "Salva"
-	},
 	"optionsTrackerBypass": {
 		"message": "Bypass tracker utilizzando Apimon.de."
 	},
@@ -53,26 +32,8 @@
 	"optionsUserscriptsSubtitle": {
 		"message": "Sarebbe bello se tu potessi inviare i bypass operativi a GitHub, in modo che anche altri possano trarne beneficio: "
 	},
-	"optionsUserscriptsUntitled": {
-		"message": "Bypass senza titolo"
-	},
-	"optionsUserscriptsName": {
-		"message": "Nome. Con un nome vuoto, questo bypass verrà eliminato."
-	},
-	"optionsUserscriptsDomains": {
-		"message": "Dominio. Usa * perché questo bypass sia efficace ovunque."
-	},
-	"optionsUserscriptsDelete": {
-		"message": "Elimina Bypass"
-	},
-	"optionsUserscriptsDeleteConfirm": {
-		"message": "Vuoi davvero eliminare questo bypass?"
-	},
 	"blockedTitle": {
 		"message": "Universal Bypass ha impedito la registrazione del tuo IP."
-	},
-	"blockedSubtitle": {
-		"message": "Se non vuoi che Universal Bypass impedisca ai cattivi attori di ottenere il tuo IP, disabilitalo nelle opzioni:"
 	},
 	"crowdBypassed": {
 		"message": "Forse non dovrai aspettare!"

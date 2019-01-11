@@ -14,26 +14,23 @@
 	"firstrunWhatnow": {
 		"message": "Wat je nu kan doen:"
 	},
-	"firstrunExampleLinks": {
-		"message": "Bekijk de voorbeeld links om te zorgen dat Universal Bypass werkt."
-	},
-	"firstrunOptions": {
-		"message": "Universal Bypass-opties opties wijzigen."
-	},
-	"firstrunTwitter": {
+	"twitter": {
 		"message": "Volg Universal Bypass op Twitter om altijd op de hoogte te blijven."
 	},
-	"homepage": {
-		"message": "Startpagina"
+	"exampleLinks": {
+		"message": "Bekijk de voorbeeld links om te kijken of Universal Bypass werkt."
 	},
-	"popupOptions": {
-		"message": "Opties"
+	"homepage": {
+		"message": "Bezoek Universal Bypass' startpagina."
 	},
 	"options": {
-		"message": "Universal Bypass Opties"
+		"message": "Opties"
 	},
-	"save": {
-		"message": "Opslaan"
+	"optionsLink": {
+		"message": "Universal Bypass-opties opties wijzigen."
+	},
+	"optionsEnabled": {
+		"message": "Website bypass inschakelen."
 	},
 	"optionsInstantNavigation": {
 		"message": "Stuur me gelijk door naar de site."
@@ -56,21 +53,6 @@
 	"optionsUserscriptsSubtitle": {
 		"message": "Het zou leuk zijn als je je eigen toevoegingen naar GitHub zou kunnen aanbieden, zodat anderen er profijt van kunnen hebben: "
 	},
-	"optionsUserscriptsUntitled": {
-		"message": "Onbenaamde Bypass"
-	},
-	"optionsUserscriptsName": {
-		"message": "Naam. Met een lege naam wordt deze bypass verwijderd."
-	},
-	"optionsUserscriptsDomains": {
-		"message": "Domeinen. Gebruik * om deze bypass overal effectief te maken."
-	},
-	"optionsUserscriptsDelete": {
-		"message": "Verwijder Bypass"
-	},
-	"optionsUserscriptsDeleteConfirm": {
-		"message": "Weet u zeker dat u deze bypass wil verwijderen?"
-	},
 	"beforeNavigate": {
 		"message": "Je bent bijna op je bestemming."
 	},
@@ -78,13 +60,13 @@
 		"message": "Uw bestemming is %"
 	},
 	"beforeNavigateInfo": {
-		"message": "Als u wilt dat Universal Bypass u gelijk doorstuurt naar de site, verander dit in de opties:"
+		"message": "Wilt u dat Universal Bypass u direct doorstuurt naar uw bestemming?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass voorkomt dat uw IP wordt geregistreerd."
 	},
 	"blockedSubtitle": {
-		"message": "Als u uw ip niet wilt omzeilen, schakel dit dan uit in de opties:"
+		"message": "Weet u zeker dat u IP-Logger bescherming wilt uitschakelen?"
 	},
 	"crowdBypassed": {
 		"message": "U hoeft misschien niet te wachten!"

@@ -1,13 +1,45 @@
 if(document instanceof HTMLDocument)
 {
-	let injectScript=text=>{//This method of injecting the script is faster than interfering extensions in most cases
+	let brws=(typeof browser=="undefined"?chrome:browser)
+	brws.storage.sync.get(["crowd_bypass_opt_out"],res=>{
+		document.documentElement.setAttribute("data-crowd-bypass-opt",(res&&res.crowd_bypass_opt_out&&res.crowd_bypass_opt_out==="true"?"o":"i"))
+	})
+	brws.storage.local.get(["custom_bypasses"],res=>{
+		let f=()=>{
+			if(res&&res.custom_bypasses)
+			{
+				let customBypasses=JSON.parse(res.custom_bypasses)
+				for(let name in customBypasses)
+				{
+					let customBypass=customBypasses[name]
+					if(customBypass.domains=="*")
+						injectScript(customBypass.content)
+					else
+					{
+						let domains=customBypass.domains.split(",")
+						for(let i in domains)
+						{
+							let domain=domains[i]
+							if(location.hostname==domain||location.hostname.substr(location.hostname.length-(domain.length+1))=="."+domain)
+								injectScript(customBypass.content)
+						}
+					}
+				}
+			}
+		}
+		if(["interactive","complete"].indexOf(document.readyState)>-1)
+		{
+			f()
+		}
+		else
+		{
+			document.addEventListener("DOMContentLoaded",f)
+		}
+	})
+	brws.runtime.sendMessage({},response=>{
 		let script=document.createElement("script")
-		script.innerHTML=text
-		script=document.documentElement.appendChild(script)
-		setTimeout(()=>document.documentElement.removeChild(script),10)//Removing the script after it's been executed to keep the DOM clean
-	}
-	injectScript("("+(()=>{
-		let ODP=(t,p,o)=>{try{Object.defineProperty(t,p,o)}catch(e){console.warn("Universal Bypass failed to set property",e)}},
+		script.innerHTML=`(()=>{//Hello, this is Universal Bypass' injection!
+		let ODP=(t,p,o)=>{try{Object.defineProperty(t,p,o)}catch(e){console.trace("[Universal Bypass] Couldn't define",p)}},
 		//Copying eval, etc. to prevent issues with other extensions, such as uBlockOrigin. Also, note that this is the page level, so there are no security risks in using eval.
 		ev=eval,sT=setTimeout,sI=setInterval,
 		isGoodLink=link=>link&&link!=location.href&&link.substr(0,11)!="javascript:",
@@ -64,50 +96,42 @@ if(document instanceof HTMLDocument)
 				document.addEventListener("DOMContentLoaded",()=>sT(f,1))
 			}
 		},
-		crowdOptIn,crowdCallback=()=>{},
-		ensureCrowdLoaded=f=>{
-			if(crowdOptIn==null)
+		crowdBypass=f=>{
+			if(crowdEnabled)
 			{
-				crowdCallback=f
-			}
-			else
-			{
-				f()
+				if(location.href.substr(location.href.length-18)=="#ignoreCrowdBypass")
+				{
+					document.querySelectorAll("form[action]").forEach(e=>e.action+="#ignoreCrowdBypass")
+					document.querySelectorAll("a[href]").forEach(e=>e.href+="#ignoreCrowdBypass")
+					history.pushState({},document.querySelector("title").textContent,location.href.substr(0,location.href.length-18))
+					f()
+				}
+				else
+				{
+					let xhr=new XMLHttpRequest()
+					xhr.onreadystatechange=()=>{
+						if(xhr.readyState==4&&xhr.status==200&&xhr.responseText!="")
+						{
+							location.href="https://universal-bypass.org/crowd-bypassed?target="+encodeURIComponent(xhr.responseText)+"&back="+encodeURIComponent(location.href)
+							//The background script will intercept the request and redirect to html/crowd-bypassed.html because we can't redirect to extension urls in this scope.
+						}
+						else
+						{
+							f()
+						}
+					}
+					xhr.open("POST","https://universal-bypass.org/crowd/query_v1",true)
+					xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+					xhr.send("domain="+encodeURIComponent(domain)+"&path="+encodeURIComponent(location.pathname.toString().substr(1)))
+				}
 			}
 		},
-		crowdBypass=f=>ensureCrowdLoaded(()=>{
-			if(location.href.substr(location.href.length-18)=="#ignoreCrowdBypass")
-			{
-				document.querySelectorAll("form[action]").forEach(e=>e.action+="#ignoreCrowdBypass")
-				document.querySelectorAll("a[href]").forEach(e=>e.href+="#ignoreCrowdBypass")
-				history.pushState({},document.querySelector("title").textContent,location.href.substr(0,location.href.length-18))
-				f()
-			}
-			else if(crowdOptIn)
-			{
-				let xhr=new XMLHttpRequest()
-				xhr.onreadystatechange=()=>{
-					if(xhr.readyState==4&&xhr.status==200&&xhr.responseText!="")
-					{
-						location.href="https://universal-bypass.org/crowd-bypassed?target="+encodeURIComponent(xhr.responseText)+"&back="+encodeURIComponent(location.href)
-						//The background script will intercept the request and redirect to html/crowd-bypassed.html because we can't redirect to extension urls in this scope.
-					}
-					else
-					{
-						f()
-					}
-				}
-				xhr.open("POST","https://universal-bypass.org/crowd/query_v1",true)
-				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
-				xhr.send("domain="+encodeURIComponent(domain)+"&path="+encodeURIComponent(location.pathname.toString().substr(1)))
-			}
-		}),
 		contributeAndNavigate=target=>ensureCrowdLoaded(()=>{
 			if(navigated||!isGoodLink(target))
 			{
 				return
 			}
-			if(!crowdOptIn)
+			if(!crowdEnabled)
 			{
 				unsafelyNavigate(target)
 				return
@@ -123,9 +147,16 @@ if(document instanceof HTMLDocument)
 			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
 			xhr.send("domain="+encodeURIComponent(domain)+"&path="+encodeURIComponent(location.pathname.toString().substr(1))+"&target="+encodeURIComponent(target))
 		}),
-		domain=location.hostname
+		domain=location.hostname,
+		crowdEnabled=document.documentElement.hasAttribute("data-universal-bypass-crowd-enabled")
+		if(crowdEnabled)
+		{
+			document.documentElement.removeAttribute("data-universal-bypass-crowd-enabled")
+		}
 		if(domain.substr(0,4)=="www.")
+		{
 			domain=domain.substr(4)
+		}
 		ODP(window,"blurred",{
 			value:false,
 			writable:false
@@ -222,7 +253,7 @@ if(document instanceof HTMLDocument)
 			},
 			get:()=>actual_web_root
 		})
-		hrefBypass(/ur\.ly|urly\.mobi/,()=>{
+		hrefBypass(/ur\\.ly|urly\\.mobi/,()=>{
 			if(location.pathname.length>2&&location.pathname.substr(0,6)!="/goii/")
 				safelyNavigate("/goii/"+location.pathname.substr(2)+"?ref="+location.hostname+location.pathname)
 		})
@@ -287,7 +318,7 @@ if(document instanceof HTMLDocument)
 				}
 			},100)
 		})
-		hrefBypass(/1v\.to\/t\/.*/,()=>{
+		hrefBypass(/1v\\.to\\/t\\/.*/,()=>{
 			location.pathname=location.pathname.split("/t/").join("/saliendo/")
 		})
 		domainBypass("share-online.biz",()=>{
@@ -298,7 +329,7 @@ if(document instanceof HTMLDocument)
 				}
 			})
 		})
-		hrefBypass(/sfile\.(mobi|xyz)/,()=>{
+		hrefBypass(/sfile\\.(mobi|xyz)/,()=>{
 			ODP(window,"downloadButton",{
 				set:b=>{
 					if(b&&b.href)
@@ -333,292 +364,285 @@ if(document instanceof HTMLDocument)
 						clearInterval(bT)
 					else b.click()
 				},100)
-			})
 		})
-		domainBypass("bc.vc",()=>{
-			window.setInterval=f=>sI(f,800)
-			crowdBypass(()=>{
-				window.eval=c=>{
-					let j=ev(c)
-					if(j.message&&j.message.url)
-					{
-						contributeAndNavigate(j.message.url)
-						return{}
-					}
-					return j
-				}
-			})
-			let sT=setInterval(()=>{
-				let a=document.querySelector(".skip_btt > #skip_btt")
-				if(a)
+	})
+	domainBypass("bc.vc",()=>{
+		window.setInterval=f=>sI(f,800)
+		crowdBypass(()=>{
+			window.eval=c=>{
+				let j=ev(c)
+				if(j.message&&j.message.url)
 				{
-					clearInterval(sT)
-					a.click()
+					contributeAndNavigate(j.message.url)
+					return{}
+				}
+				return j
+			}
+		})
+		let sT=setInterval(()=>{
+			let a=document.querySelector(".skip_btt > #skip_btt")
+			if(a)
+			{
+				clearInterval(sT)
+				a.click()
+			}
+		},50)
+	})
+	domainBypass("shortly.xyz",()=>{
+		if(location.pathname.substr(0,3)=="/r/")
+		{
+			document.getElementById=()=>({submit:()=>{
+				let f=document.querySelector("form")
+				f.action="/link#"+document.querySelector("input[name='id']").value
+				f.submit()
+			}})
+		}
+		else if(location.pathname=="/link")
+		{
+			let xhr=new XMLHttpRequest()
+			xhr.onreadystatechange=()=>{
+				if(xhr.readyState==4&&xhr.status==200)
+					safelyNavigate(xhr.responseText)
+			}
+			xhr.open("POST","https://www.shortly.xyz/getlink.php",true)
+			xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded")
+			xhr.setRequestHeader("X-Requested-With","XMLHttpRequest")
+			xhr.send("id="+location.hash.replace("#",""))
+		}
+	})
+	domainBypass("emulator.games",()=>{
+		if(location.pathname=="/download.php")
+			window.setInterval=f=>sI(f,1)
+	})
+	domainBypass("noriskdomain.com",()=>{
+		let s=new URLSearchParams(location.search)
+		if(s.has("u"))
+			safelyNavigate(atob(s.get("u")))
+	})
+	if(bypassed)
+	{
+		return
+	}
+	if(location.href=="https://universal-bypass.org/firstrun")
+	{
+		location.href="https://universal-bypass.org/firstrun?1"
+		return
+	}
+	ensureDomLoaded(()=>{
+		domainBypass("adfoc.us",()=>{
+			let b=document.querySelector(".skip[href]")
+			if(b)
+				safelyNavigate(b.href)
+		})
+		domainBypass("sub2unlock.com",()=>{
+			if(location.pathname.substr(0,10)=="/link/get/")
+			{
+				safelyNavigate(document.getElementById("link").href)
+			}
+			else
+			{
+				let f=document.getElementById("getLinkNow")
+				if(f)
+					document.getElementById("getLinkNow").submit()
+			}
+		})
+		domainBypass("srt.am",()=>{
+			if(document.querySelector(".skip-container"))
+			{
+				let f=document.createElement("form")
+				f.method="POST"
+				f.innerHTML='<input type="hidden" name="_image" value="Continue">'
+				f=document.documentElement.appendChild(f)
+				f.submit()
+			}
+		})
+		domainBypass("admy.link",()=>{
+			let f=document.querySelector(".edit_link")
+			if(f)
+				f.submit()
+		})
+		domainBypass("ysear.ch",()=>{
+			let b=document.querySelector("#NextVideo[href]")
+			if(b)
+				safelyNavigate(b.href)
+		})
+		domainBypass("1ink.cc",()=>{
+			if(typeof SkipAd=="function")
+				SkipAd()
+		})
+		domainBypass("losstor.com",()=>{
+			let b=document.getElementById("re_link")
+			if(b)
+			{
+				window.open=safelyNavigate
+				b.click()
+			}
+		})
+		domainBypass("bagisoft.net",()=>{
+			let b=document.getElementById("makingdifferenttimer")
+			if(b)
+			{
+				window.open=safelyNavigate
+				b.click()
+			}
+			else
+				jQuery.prototype.animateProgress=(p,f)=>f()
+		})
+		domainBypass("skinnycat.net",()=>{
+			let b=document.querySelector("#dl[href]")
+			if(b)
+				safelyNavigate(b.href)
+		})
+		domainBypass("fshare.vn",()=>{
+			if("$" in window)
+			{
+				let f=$("#form-download")
+				if(f.length)
+				{
+					$.ajax({
+						"url":f.attr("action"),
+						"type":"POST",
+						"data":f.serialize()
+					}).done(data=>safelyNavigate(data.url))
+				}
+			}
+		})
+		domainBypass("dwindly.io",()=>{
+			let b=document.getElementById("btd1")
+			if(b)
+			{
+				window.open=()=>{}
+				b.click()
+			}
+			else
+			{
+				b=document.getElementById("btd")
+				if(b)
+				{
+					window.open=safelyNavigate
+					ev("("+b.onclick.toString().split(";")[0]+"})()")
+				}
+			}
+		})
+		domainBypass("bluemediafiles.com",()=>{
+			if(typeof FinishMessage=="string"&&FinishMessage.indexOf("<a href=")>-1)
+			{
+				//The FinishMessage string contains the HTML anchor element needed to get to the destination so we just replace the entire website with it because we don't need any of the other content anymore.
+				document.write(FinishMessage)
+				document.querySelector("a").click()
+			}
+		})
+		domainBypass("complete2unlock.com",()=>{
+			let bT=setInterval(()=>{
+				let b=document.getElementById("link-success-button"),es=document.querySelectorAll(".unlockpanel")
+				if(b&&es.length>0)
+				{
+					clearInterval(bT)
+					window.open=()=>{}
+					es.forEach(e=>e.dispatchEvent(new MouseEvent("click")))
+					let dT=setInterval(()=>{
+						if(!b.hasAttribute("disabled"))
+						{
+							clearInterval(dT)
+							b.dispatchEvent(new MouseEvent("click"))
+						}
+					},100)
+				}
+			},300)
+			setInterval(()=>clearInterval(bT),10000)
+		})
+		domainBypass("hidelink.club",()=>{
+			if(hash)
+				safelyNavigate(decodeURIComponent(atob(hash)).replace("%23", "#"))
+		})
+		domainBypass("won.pe",()=>
+		{
+			if(document.querySelector(".captcha_loader .progress-bar"))
+				document.querySelector(".captcha_loader .progress-bar").setAttribute("aria-valuenow","100")
+		})
+		domainBypass("stealive.club",()=>{
+			if(document.getElementById("counter"))
+				document.getElementById("counter").innerHTML="0"
+		})
+		hrefBypass(/((binerfile|pafpaf)\\.info)|(kurosafety\\.menantisenja\\.com)/,()=>{//KuroSafe
+			let b=document.querySelector("#mybutton[href]")
+			if(b)
+				safelyNavigate(b.href)
+		})
+		domainBypass("gotoo.loncat.in",()=>{
+			let a=document.querySelector("a[href^='http://gotoo.loncat.in/go.php?open=']")
+			if(a)
+				safelyNavigate(a.href)
+		})
+		domainBypass("id-share19.com",()=>window.setTimeout=(f)=>sT(f,1))
+		domainBypass("idnation.net",()=>{
+			let b=document.querySelector("#linko[href]")
+			if(b)
+				safelyNavigate(b.href)
+		})
+		domainBypass("mazika2day.com",()=>{
+			let b=document.querySelector(".linkbtn[href]")
+			if(b)
+				safelyNavigate(b.href)
+		})
+		domainBypass("ux9.de",()=>{
+			let m=document.querySelector("meta[http-equiv='refresh'][content]")
+			if(m&&m.getAttribute("content").indexOf(";url=http")>-1)
+			safelyNavigate(m.getAttribute("content").split(";url=")[1])
+		})
+		domainBypass("telolet.in",()=>{
+			let b=document.querySelector("a#skip[href]")
+			if(!b)
+				b=document.querySelector(".redirect_url > a[href]")
+			if(b)
+				safelyNavigate(b.href)
+		})
+		domainBypass("vipdirect.cc",()=>{
+			if(typeof ab=="number"&&typeof asdf=="function")
+			{
+				ab=5
+				window.open=safelyNavigate
+				asdf()
+			}
+		})
+		domainBypass("rapidcrypt.net",()=>{
+			let b=document.querySelector(".push_button.blue[href]")
+			if(b)
+				safelyNavigate(b.href)
+		})
+		domainBypass("shrink-service.it",()=>{
+			if(typeof $=="function"&&typeof $.ajax=="function"&&typeof screenApi=="function")
+			{
+				let _a=$.ajax
+				$.ajax=a=>(a.data&&a.data.set_one?safelyNavigate(atob(a.data.set_one)):_a(a))
+				screenApi()
+			}
+		})
+		domainBypass("rom.io",()=>crowdBypass(()=>{
+			let cT=setInterval(()=>{
+				let a=document.querySelector("a.final-button[href]")
+				if(a&&isGoodLink(a.href))
+				{
+					clearInterval(cT)
+					a.parentNode.removeChild(a)
+					contributeAndNavigate(a.href)
 				}
 			},50)
-		})
-		domainBypass("shortly.xyz",()=>{
-			if(location.pathname.substr(0,3)=="/r/")
+		}))
+		domainBypass("show.co",()=>{
+			let s=document.getElementById("show-campaign-data")
+			if(s)
 			{
-				document.getElementById=()=>({submit:()=>{
-					let f=document.querySelector("form")
-					f.action="/link#"+document.querySelector("input[name='id']").value
-					f.submit()
-				}})
-			}
-			else if(location.pathname=="/link")
-			{
-				let xhr=new XMLHttpRequest()
-				xhr.onreadystatechange=()=>{
-					if(xhr.readyState==4&&xhr.status==200)
-						safelyNavigate(xhr.responseText)
-				}
-				xhr.open("POST","https://www.shortly.xyz/getlink.php",true)
-				xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded")
-				xhr.setRequestHeader("X-Requested-With","XMLHttpRequest")
-				xhr.send("id="+location.hash.replace("#",""))
-			}
-		})
-		domainBypass("emulator.games",()=>{
-			if(location.pathname=="/download.php")
-				window.setInterval=f=>sI(f,1)
-		})
-		domainBypass("noriskdomain.com",()=>{
-			let s=new URLSearchParams(location.search)
-			if(s.has("u"))
-				safelyNavigate(atob(s.get("u")))
-		})
-		if(bypassed)
-			return
-		let cbt=sI(()=>{
-			if(document.documentElement.hasAttribute("data-crowd-bypass-opt"))
-			{
-				clearInterval(cbt)
-				crowdOptIn=(document.documentElement.getAttribute("data-crowd-bypass-opt")==="i")
-				crowdCallback()
-				document.documentElement.removeAttribute("data-crowd-bypass-opt")
-			}
-		},15)
-		ensureDomLoaded(()=>{
-			if(location.href=="https://universal-bypass.org/firstrun")
-			{
-				document.documentElement.setAttribute("data-universal-bypass-firstran","");
-				return finish()
-			}
-			domainBypass("adfoc.us",()=>{
-				let b=document.querySelector(".skip[href]")
-				if(b)
-					safelyNavigate(b.href)
-			})
-			domainBypass("sub2unlock.com",()=>{
-				if(location.pathname.substr(0,10)=="/link/get/")
+				let d=JSON.parse(s.textContent)
+				if(d&&"title"in d&&"unlockable"in d)
 				{
-					safelyNavigate(document.getElementById("link").href)
-				}
-				else
-				{
-					let f=document.getElementById("getLinkNow")
-					if(f)
-						document.getElementById("getLinkNow").submit()
-				}
-			})
-			domainBypass("srt.am",()=>{
-				if(document.querySelector(".skip-container"))
-				{
-					let f=document.createElement("form")
-					f.method="POST"
-					f.innerHTML='<input type="hidden" name="_image" value="Continue">'
-					f=document.documentElement.appendChild(f)
-					f.submit()
-				}
-			})
-			domainBypass("admy.link",()=>{
-				let f=document.querySelector(".edit_link")
-				if(f)
-					f.submit()
-			})
-			domainBypass("ysear.ch",()=>{
-				let b=document.querySelector("#NextVideo[href]")
-				if(b)
-					safelyNavigate(b.href)
-			})
-			domainBypass("1ink.cc",()=>{
-				if(typeof SkipAd=="function")
-					SkipAd()
-			})
-			domainBypass("losstor.com",()=>{
-				let b=document.getElementById("re_link")
-				if(b)
-				{
-					window.open=safelyNavigate
-					b.click()
-				}
-			})
-			domainBypass("bagisoft.net",()=>{
-				let b=document.getElementById("makingdifferenttimer")
-				if(b)
-				{
-					window.open=safelyNavigate
-					b.click()
-				}
-				else
-					jQuery.prototype.animateProgress=(p,f)=>f()
-			})
-			domainBypass("skinnycat.net",()=>{
-				let b=document.querySelector("#dl[href]")
-				if(b)
-					safelyNavigate(b.href)
-			})
-			domainBypass("fshare.vn",()=>{
-				if("$" in window)
-				{
-					let f=$("#form-download")
-					if(f.length)
-					{
-						$.ajax({
-							"url":f.attr("action"),
-							"type":"POST",
-							"data":f.serialize()
-						}).done(data=>safelyNavigate(data.url))
-					}
-				}
-			})
-			domainBypass("dwindly.io",()=>{
-				let b=document.getElementById("btd1")
-				if(b)
-				{
-					window.open=()=>{}
-					b.click()
-				}
-				else
-				{
-					b=document.getElementById("btd")
-					if(b)
-					{
-						window.open=safelyNavigate
-						ev("("+b.onclick.toString().split(";")[0]+"})()")
-					}
-				}
-			})
-			domainBypass("bluemediafiles.com",()=>{
-				if(typeof FinishMessage=="string"&&FinishMessage.indexOf("<a href=")>-1)
-				{
-					//The FinishMessage string contains the HTML anchor element needed to get to the destination so we just replace the entire website with it because we don't need any of the other content anymore.
-					document.write(FinishMessage)
-					document.querySelector("a").click()
-				}
-			})
-			domainBypass("complete2unlock.com",()=>{
-				let bT=setInterval(()=>{
-					let b=document.getElementById("link-success-button"),es=document.querySelectorAll(".unlockpanel")
-					if(b&&es.length>0)
-					{
-						clearInterval(bT)
-						window.open=()=>{}
-						es.forEach(e=>e.dispatchEvent(new MouseEvent("click")))
-						let dT=setInterval(()=>{
-							if(!b.hasAttribute("disabled"))
-							{
-								clearInterval(dT)
-								b.dispatchEvent(new MouseEvent("click"))
-							}
-						},100)
-					}
-				},300)
-				setInterval(()=>clearInterval(bT),10000)
-			})
-			domainBypass("hidelink.club",()=>{
-				if(hash)
-					safelyNavigate(decodeURIComponent(atob(hash)).replace("%23", "#"))
-			})
-			domainBypass("won.pe",()=>
-			{
-				if(document.querySelector(".captcha_loader .progress-bar"))
-					document.querySelector(".captcha_loader .progress-bar").setAttribute("aria-valuenow","100")
-			})
-			domainBypass("stealive.club",()=>{
-				if(document.getElementById("counter"))
-					document.getElementById("counter").innerHTML="0"
-			})
-			hrefBypass(/((binerfile|pafpaf)\.info)|(kurosafety\.menantisenja\.com)/,()=>{//KuroSafe
-				let b=document.querySelector("#mybutton[href]")
-				if(b)
-					safelyNavigate(b.href)
-			})
-			domainBypass("gotoo.loncat.in",()=>{
-				let a=document.querySelector("a[href^='http://gotoo.loncat.in/go.php?open=']")
-				if(a)
-					safelyNavigate(a.href)
-			})
-			domainBypass("id-share19.com",()=>window.setTimeout=(f)=>sT(f,1))
-			domainBypass("idnation.net",()=>{
-				let b=document.querySelector("#linko[href]")
-				if(b)
-					safelyNavigate(b.href)
-			})
-			domainBypass("mazika2day.com",()=>{
-				let b=document.querySelector(".linkbtn[href]")
-				if(b)
-					safelyNavigate(b.href)
-			})
-			domainBypass("ux9.de",()=>{
-				let m=document.querySelector("meta[http-equiv='refresh'][content]")
-				if(m&&m.getAttribute("content").indexOf(";url=http")>-1)
-				safelyNavigate(m.getAttribute("content").split(";url=")[1])
-			})
-			domainBypass("telolet.in",()=>{
-				let b=document.querySelector("a#skip[href]")
-				if(!b)
-					b=document.querySelector(".redirect_url > a[href]")
-				if(b)
-					safelyNavigate(b.href)
-			})
-			domainBypass("vipdirect.cc",()=>{
-				if(typeof ab=="number"&&typeof asdf=="function")
-				{
-					ab=5
-					window.open=safelyNavigate
-					asdf()
-				}
-			})
-			domainBypass("rapidcrypt.net",()=>{
-				let b=document.querySelector(".push_button.blue[href]")
-				if(b)
-					safelyNavigate(b.href)
-			})
-			domainBypass("shrink-service.it",()=>{
-				if(typeof $=="function"&&typeof $.ajax=="function"&&typeof screenApi=="function")
-				{
-					let _a=$.ajax
-					$.ajax=a=>(a.data&&a.data.set_one?safelyNavigate(atob(a.data.set_one)):_a(a))
-					screenApi()
-				}
-			})
-			domainBypass("rom.io",()=>crowdBypass(()=>{
-				let cT=setInterval(()=>{
-					let a=document.querySelector("a.final-button[href]")
-					if(a&&isGoodLink(a.href))
-					{
-						clearInterval(cT)
-						a.parentNode.removeChild(a)
-						contributeAndNavigate(a.href)
-					}
-				},50)
-			}))
-			domainBypass("show.co",()=>{
-				let s=document.getElementById("show-campaign-data")
-				if(s)
-				{
-					let d=JSON.parse(s.textContent)
-					if(d&&"title"in d&&"unlockable"in d)
-					{
-						document.write("<body></body>")
-						if("title"in d)
-							["title","h1"].forEach(t=>{
-								let e=document.createElement(t)
-								e.textContent=d.title
-								document.body.appendChild(e)
-							})
+					document.write("<body></body>")
+					if("title"in d)
+						["title","h1"].forEach(t=>{
+							let e=document.createElement(t)
+							e.textContent=d.title
+							document.body.appendChild(e)
+						})
 						if("message"in d.unlockable)
 						{
 							let p=document.createElement("p")
@@ -635,11 +659,6 @@ if(document instanceof HTMLDocument)
 						stop()
 					}
 				}
-			})
-			domainBypass("zxro.com",()=>{
-				let s=new URLSearchParams(location.search)
-				if(s.has("url"))
-					safelyNavigate(s.get("url"))
 			})
 			if(bypassed)
 				return
@@ -661,8 +680,8 @@ if(document instanceof HTMLDocument)
 				if(a)
 				{
 					safelyNavigate(a.href)
+					return finish()
 				}
-				return finish()
 			}
 			//SafelinkU
 			if(typeof app_vars=="object"&&document.querySelector("b[style='color: #3e66b3']")&&document.querySelector("b[style='color: #3e66b3']").textContent=="SafelinkU")
@@ -745,11 +764,11 @@ if(document instanceof HTMLDocument)
 				let cLT=sI(()=>{
 					if((document.querySelectorAll("img#pleasewait").length&&document.querySelector(".wait"))
 						||document.getElementById("showlink")
-						||document.getElementById("download")
-						||document.getElementsByTagName("style='margin-top:").length
-						||document.querySelector(".Visit_Link")//yametesenpai.xyz
-						||document.getElementById("daplong")//converthinks.xyz
-						)
+					||document.getElementById("download")
+					||document.getElementsByTagName("style='margin-top:").length
+					||document.querySelector(".Visit_Link")//yametesenpai.xyz
+					||document.getElementById("daplong")//converthinks.xyz
+					)
 					{
 						clearInterval(cLT)
 						window.open=safelyNavigate
@@ -875,9 +894,9 @@ if(document instanceof HTMLDocument)
 				window.setInterval=f=>sI(f,1)
 				return finish()
 			}
-			if(document.querySelector("input[type=\"submit\"][name=\"method_free\"]"))
+			if(document.querySelector("input[type=\\"submit\\"][name=\\"method_free\\"]"))
 			{
-				document.querySelector("input[type=\"submit\"][name=\"method_free\"]").click()
+				document.querySelector("input[type=\\"submit\\"][name=\\"method_free\\"]").click()
 				return finish()
 			}
 			if(document.getElementById("frmdlcenter")&&document.getElementById("pay_modes"))//elsfile.org Timer
@@ -1007,78 +1026,48 @@ if(document instanceof HTMLDocument)
 				clearInterval(dT)
 				finish()
 			},3000)
-		})
-	})+")()")//injectend
-	let dT=setInterval(()=>{
-		if(document.documentElement.hasAttribute("data-universal-bypass-adlinkfly-info"))
-		{
-			document.documentElement.removeAttribute("data-universal-bypass-adlinkfly-info")
-			let xhr=new XMLHttpRequest(),t="",iu=location.href
-			xhr.onreadystatechange=()=>{
-				if(xhr.readyState==4)
-				{
-					if(xhr.status==200)
-					{
-						let i=new DOMParser().parseFromString(xhr.responseText,"text/html").querySelector("img[src^='//api.miniature.io']")
-						if(i)
-						{
-							let url=new URL(i.src)
-							if(url.search&&url.search.indexOf("url="))
-								t=decodeURIComponent(url.search.split("url=")[1].split("&")[0])
-						}
-					}
-					document.documentElement.setAttribute("data-universal-bypass-adlinkfly-target",t)
-				}
-			}
-			if(iu.substr(iu.length-1)!="/")
-				iu+="/"
-			xhr.open("GET",iu+"info",true)
-			xhr.send()
-		}
-		if(document.documentElement.hasAttribute("data-universal-bypass-stop-watching"))
-		{
-			clearInterval(dT)
-			document.documentElement.removeAttribute("data-universal-bypass-stop-watching")
-		}
-	},50)
-	if(location.href=="https://universal-bypass.org/firstrun")//
-		setTimeout(()=>{
-			location.href="https://universal-bypass.org/firstrun?"+(document.documentElement.hasAttribute("data-universal-bypass-firstran")?"1":"0")
-		},500)
-	let brws=(typeof browser=="undefined"?chrome:browser)
-	brws.storage.sync.get(["crowd_bypass_opt_out"],res=>{
-		document.documentElement.setAttribute("data-crowd-bypass-opt",(res&&res.crowd_bypass_opt_out&&res.crowd_bypass_opt_out==="true"?"o":"i"))
-	})
-	brws.storage.local.get(["custom_bypasses"],res=>{
-		let f=()=>{
-			if(res&&res.custom_bypasses)
+		})`
+		let dT=setInterval(()=>{
+			if(document.documentElement.hasAttribute("data-universal-bypass-adlinkfly-info"))
 			{
-				let customBypasses=JSON.parse(res.custom_bypasses)
-				for(let name in customBypasses)
-				{
-					let customBypass=customBypasses[name]
-					if(customBypass.domains=="*")
-						injectScript(customBypass.content)
-					else
+				document.documentElement.removeAttribute("data-universal-bypass-adlinkfly-info")
+				let xhr=new XMLHttpRequest(),t="",iu=location.href
+				xhr.onreadystatechange=()=>{
+					if(xhr.readyState==4)
 					{
-						let domains=customBypass.domains.split(",")
-						for(let i in domains)
+						if(xhr.status==200)
 						{
-							let domain=domains[i]
-							if(location.hostname==domain||location.hostname.substr(location.hostname.length-(domain.length+1))=="."+domain)
-								injectScript(customBypass.content)
+							let i=new DOMParser().parseFromString(xhr.responseText,"text/html").querySelector("img[src^='//api.miniature.io']")
+							if(i)
+							{
+								let url=new URL(i.src)
+								if(url.search&&url.search.indexOf("url="))
+									t=decodeURIComponent(url.search.split("url=")[1].split("&")[0])
+							}
 						}
+						document.documentElement.setAttribute("data-universal-bypass-adlinkfly-target",t)
 					}
 				}
+				if(iu.substr(iu.length-1)!="/")
+					iu+="/"
+				xhr.open("GET",iu+"info",true)
+				xhr.send()
 			}
-		}
-		if(["interactive","complete"].indexOf(document.readyState)>-1)
+			if(document.documentElement.hasAttribute("data-universal-bypass-stop-watching"))
+			{
+				clearInterval(dT)
+				document.documentElement.removeAttribute("data-universal-bypass-stop-watching")
+			}
+		},50)
+		script.innerHTML+="\n"+response.userscript+"\n})()"
+		document.documentElement.setAttribute("data-universal-bypass-crowd-enabled","")
+		script=document.documentElement.appendChild(script)
+		if(location.href=="https://universal-bypass.org/firstrun")
 		{
-			f()
+			setTimeout(()=>{
+				location.href="https://universal-bypass.org/firstrun?"+(document.documentElement.hasAttribute("data-universal-bypass-firstran")?"1":"0")
+			},500)
 		}
-		else
-		{
-			document.addEventListener("DOMContentLoaded",f)
-		}
+		setTimeout(()=>document.documentElement.removeChild(script),10)
 	})
 }

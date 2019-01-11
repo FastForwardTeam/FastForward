@@ -14,26 +14,23 @@
 	"firstrunWhatnow": {
 		"message": "Что Вы можете сделать прямо сейчас:"
 	},
-	"firstrunExampleLinks": {
+	"twitter": {
+		"message": "Наблюдать за Universal Bypass в Twitter, чтобы быть в курсе всех новостей."
+	},
+	"exampleLinks": {
 		"message": "Проверить ссылки-примеры, чтобы убедиться в работоспособности Universal Bypass."
 	},
-	"firstrunOptions": {
-		"message": "Изменить настройки Universal Bypass."
-	},
-	"firstrunTwitter": {
-		"message": "Подписаться на Universal Bypass в Twitter, чтобы быть в курсе всех новостей."
-	},
 	"homepage": {
-		"message": "Домашняя страница"
-	},
-	"popupOptions": {
-		"message": "Настройки"
+		"message": "Посетить домашнюю страницу Universal Bypass."
 	},
 	"options": {
-		"message": "Настройки Universal Bypass"
+		"message": "Настройки"
 	},
-	"save": {
-		"message": "Сохранить"
+	"optionsLink": {
+		"message": "Изменить настройки Universal Bypass."
+	},
+	"optionsEnabled": {
+		"message": "Включить обходы веб-сайтов."
 	},
 	"optionsInstantNavigation": {
 		"message": "Сразу переходить по адресу назначения."
@@ -56,21 +53,6 @@
 	"optionsUserscriptsSubtitle": {
 		"message": "Было бы хорошо, если бы Вы могли сообщить о работающих обходах на GitHub, чтобы они стали полезны другим людям: "
 	},
-	"optionsUserscriptsUntitled": {
-		"message": "Обход без названия"
-	},
-	"optionsUserscriptsName": {
-		"message": "Название. Если название пустое, этот обход будет удалён."
-	},
-	"optionsUserscriptsDomains": {
-		"message": "Домены. Укажите * для этого обхода, чтобы он действовал везде."
-	},
-	"optionsUserscriptsDelete": {
-		"message": "Удалить обход"
-	},
-	"optionsUserscriptsDeleteConfirm": {
-		"message": "Вы действительно хотите удалить этот обход?"
-	},
 	"beforeNavigate": {
 		"message": "Вы почти достигли адреса назначения."
 	},
@@ -78,13 +60,13 @@
 		"message": "Ваш адрес назначения - %"
 	},
 	"beforeNavigateInfo": {
-		"message": "Если Вы хотите, чтобы Universal Bypass сразу перенаправлял Вас на адрес назначения, измените это в настройках:"
+		"message": "Хотите ли Вы, чтобы Universal Bypass сразу перенаправлял Вас по адресу назначения?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass предотвратил запись Вашего IP."
 	},
 	"blockedSubtitle": {
-		"message": "Если Вы не хотите, чтобы Universal Bypass предотвращал получение Вашего IP нежелательными лицами, отключите это в настройках:"
+		"message": "Не хотите, чтобы Universal Bypass предотвращал получение Вашего IP нежелательными лицами?"
 	},
 	"crowdBypassed": {
 		"message": "Вы можете не ждать!"

@@ -14,27 +14,6 @@
 	"firstrunWhatnow": {
 		"message": "คุณทำอะไรได้บ้างในตอนนี้:"
 	},
-	"firstrunExampleLinks": {
-		"message": "ลองเข้าตัวอย่างลิงค์ที่เตรียมไว้เพื่อทำให้คุณมั่นใจว่า Universal Bypass ทำงานแล้ว"
-	},
-	"firstrunOptions": {
-		"message": "เปลี่ยนการตั้งค่า Universal Bypass"
-	},
-	"firstrunTwitter": {
-		"message": "ติดตาม Universal Bypass บนทวิตเตอร์เพื่อติดตามข้อมูลต่างๆเกี่ยวกับ Universal Bypass"
-	},
-	"homepage": {
-		"message": "หน้าแรก"
-	},
-	"popupOptions": {
-		"message": "การตั้งค่า"
-	},
-	"options": {
-		"message": "การตั้งค่าของ Universal Bypass"
-	},
-	"save": {
-		"message": "บันทึก"
-	},
 	"optionsBlockIPLoggers": {
 		"message": "หยุดตัวบันทึก IP ถ้าเขาไม่สามารถให้ผ่านไปได้"
 	},
@@ -47,23 +26,8 @@
 	"optionsUserscriptsSubtitle": {
 		"message": "มันจะดีมากๆเลยนะถ้าคุณส่งตัวข้ามที่คุณสร้างไปยัง Github คนอื่นจะได้ใช้ตัวข้ามของคุณด้วยเหมือนกัน: "
 	},
-	"optionsUserscriptsUntitled": {
-		"message": "ตัวข้ามที่ไม่มีชื่อ"
-	},
-	"optionsUserscriptsDomains": {
-		"message": "โดเมน ใช้ * สำหรับตัวข้ามนี้เพื่อมีผลอย่างสูงในทุกๆส่วน"
-	},
-	"optionsUserscriptsDelete": {
-		"message": "ลบตัวข้าม"
-	},
-	"optionsUserscriptsDeleteConfirm": {
-		"message": "คุณต้องการจะลบตัวข้ามนี้จริงๆเหรอ?"
-	},
 	"blockedTitle": {
 		"message": "Universal Bypass ช่วยป้องกัน IP คุณจากการถูกเก็บประวัติ"
-	},
-	"blockedSubtitle": {
-		"message": "ถ้าคุณไม่อยากให้ Universal Bypass ป้องกันพฤติกรรมแย่ๆจากการถูกจัดเก็บ IP ของคุณ ปิดส่วนนี้ในตั้งค่า:"
 	},
 	"crowdBypassed": {
 		"message": "คุณอาจไม่ต้องรออีกต่อไป!"

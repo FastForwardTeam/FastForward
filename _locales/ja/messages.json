@@ -14,27 +14,6 @@
 	"firstrunWhatnow": {
 		"message": "今できること："
 	},
-	"firstrunExampleLinks": {
-		"message": "ユニバーサルバイパスが機能しているかどうかを確認するには、リンクを参照してください。"
-	},
-	"firstrunOptions": {
-		"message": "ユニバーサルバイパスのオプションを変更"
-	},
-	"firstrunTwitter": {
-		"message": "ユニバーサルバイパスをTwitterでフォローして最新の情報を手に入れましょう。"
-	},
-	"homepage": {
-		"message": "ホームページ"
-	},
-	"popupOptions": {
-		"message": "オプション"
-	},
-	"options": {
-		"message": "ユニバーサルバイパスの設定"
-	},
-	"save": {
-		"message": "保存"
-	},
 	"optionsInstantNavigation": {
 		"message": "即座にリンク先へ移動します。"
 	},
@@ -56,35 +35,14 @@
 	"optionsUserscriptsSubtitle": {
 		"message": "バイパスをGitHubに提出すれば、他の人にもメリットがあります "
 	},
-	"optionsUserscriptsUntitled": {
-		"message": "無題のバイパス"
-	},
-	"optionsUserscriptsName": {
-		"message": "名前 (名前が無い場合、このバイパスは削除されます。)"
-	},
-	"optionsUserscriptsDomains": {
-		"message": "ドメイン (このバイパスがどこでも有効になるように*を使用してください。)"
-	},
-	"optionsUserscriptsDelete": {
-		"message": "Bypassを削除"
-	},
-	"optionsUserscriptsDeleteConfirm": {
-		"message": "本当にこのバイパスを削除しますか？"
-	},
 	"beforeNavigate": {
 		"message": "リンク先まであと少しです。"
 	},
 	"beforeNavigateDestination": {
 		"message": "リンク先は %"
 	},
-	"beforeNavigateInfo": {
-		"message": "ユニバーサルバイパスを使ってリンク先に即座に移動したい場合は、オプションでこれを変更します。"
-	},
 	"blockedTitle": {
 		"message": "ユニバーサルバイパスにより、IPがログに記録されなくなりました。"
-	},
-	"blockedSubtitle": {
-		"message": "ユニバーサルバイパスで悪意のある人物があなたのIPを取得しないようにするには、オプションでこれを無効にします:"
 	},
 	"crowdBypassed": {
 		"message": "あなたは待つ必要はありません！"

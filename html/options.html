@@ -1,42 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title data-message="options"></title>
+	<title>Universal Bypass</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<h1 data-message="options"></h1>
-	<br>
+	<h1>Universal Bypass</a></h1>
 	<p>
+		<a href="https://universal-bypass.org" target="_blank" data-message="homepage"></a><br>
+		<a href="https://twitter.com/unibypass" target="_blank" data-message="twitter"></a><br>
+		<a href="https://universal-bypass.org/example-links" target="_blank" data-message="exampleLinks"></a>
+	</p>
+	<h2 data-message="options"></h2>
+	<p>
+		<input type="checkbox" id="option-enabled"> <label for="option-enabled" data-message="optionsEnabled"></label><br>
 		<input type="checkbox" id="option-instant-navigation"> <label for="option-instant-navigation" data-message="optionsInstantNavigation"></label><br>
 		<input type="checkbox" id="option-tracker-bypass"> <label for="option-tracker-bypass"><span data-message="optionsTrackerBypass"></span> (Bit.ly, Goo.gl, T.co, ...)</label> (<a href="https://apimon.de/privacy" target="_blank" data-message="privacyPolicy"></a>)<br>
 		<input type="checkbox" id="option-block-ip-loggers"> <label for="option-block-ip-loggers" data-message="optionsBlockIPLoggers"></label><br>
 		<input type="checkbox" id="option-crowd-bypass"> <label for="option-crowd-bypass" data-message="optionsCrowdBypass"></label> (<a href="https://github.com/timmyrs/Universal-Bypass/blob/master/PRIVACY.md" target="_blank" data-message="privacyPolicy"></a>)
-	</p>
+	</ul>
 	<h2 data-message="optionsUserscripts"></h2>
 	<a name="userscripts"></a>
 	<p><span data-message="optionsUserscriptsSubtitle"></span> <a href="https://github.com/timmyrs/Universal-Bypass" target="_blank">https://github.com/timmyrs/Universal-Bypass</a></p>
-	<div class="row">
-		<div class="col-sm-3">
-			<div class="list-group" id="custom-bypasses-list"></div>
-		</div>
-		<div class="col-sm-9">
-			<div id="custom-bypass-edit-container">
-				<p><input type="text" id="custom-bypass-name" class="form-control" data-placeholder="optionsUserscriptsName"></p>
-				<p><input type="text" id="custom-bypass-domains" class="form-control" data-placeholder="optionsUserscriptsDomains"></p>
-				<div id="custom-bypass-editor"></div>
-				<br>
-				<p>
-					<a href="#userscripts" id="save-custom-bypass" class="btn btn-primary" data-message="save"></a>
-					<a href="#" id="delete-custom-bypass" class="btn btn-outline-danger" data-message="optionsUserscriptsDelete"></a>
-				</p>
-			</div>
-		</div>
-	</div>
-	<div id="untitled-name" data-placeholder="optionsUserscriptsUntitled"></div>
-	<div id="delete-confirm" data-placeholder="optionsUserscriptsDeleteConfirm"></div>
+	<div id="userscript"></div>
 	<hr>
 	<p>Copyright (c) 2018-2019, Tim "timmyRS" Speckhals</p>
 	<script src="base.js"></script>

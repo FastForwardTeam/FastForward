@@ -14,26 +14,23 @@
 	"firstrunWhatnow": {
 		"message": "What you can do now:"
 	},
-	"firstrunExampleLinks": {
+	"twitter": {
+		"message": "Follow Universal Bypass on Twitter to always be in the loop."
+	},
+	"exampleLinks": {
 		"message": "Check out example links to make sure Universal Bypass is working."
 	},
-	"firstrunOptions": {
-		"message": "Change Universal Bypass' options."
-	},
-	"firstrunTwitter": {
-		"message": "Follow Universal Bypass on Twitter to always be in the loop about Universal Bypass."
-	},
 	"homepage": {
-		"message": "Homepage"
-	},
-	"popupOptions": {
-		"message": "Options"
+		"message": "Visit Universal Bypass' homepage."
 	},
 	"options": {
-		"message": "Universal Bypass Options"
+		"message": "Options"
 	},
-	"save": {
-		"message": "Save"
+	"optionsLink": {
+		"message": "Change Universal Bypass' options."
+	},
+	"optionsEnabled": {
+		"message": "Enable website bypasses."
 	},
 	"optionsInstantNavigation": {
 		"message": "Instantly take me to destinations."
@@ -54,22 +51,7 @@
 		"message": "Custom Bypasses"
 	},
 	"optionsUserscriptsSubtitle": {
-		"message": "It would be nice if you could submit working bypasses to GitHub, so others can benefit from it: "
-	},
-	"optionsUserscriptsUntitled": {
-		"message": "Untitled Bypass"
-	},
-	"optionsUserscriptsName": {
-		"message": "Name. With an empty name, this bypass will be deleted."
-	},
-	"optionsUserscriptsDomains": {
-		"message": "Domains. Use * for this bypass to be effective everywhere."
-	},
-	"optionsUserscriptsDelete": {
-		"message": "Delete Bypass"
-	},
-	"optionsUserscriptsDeleteConfirm": {
-		"message": "Do you really want to delete this bypass?"
+		"message": "It would be nice if you could submit working bypasses on GitHub, so others can benefit from it: "
 	},
 	"beforeNavigate": {
 		"message": "You're almost at your destination."
@@ -78,13 +60,13 @@
 		"message": "Your destination is %"
 	},
 	"beforeNavigateInfo": {
-		"message": "If you want Universal Bypass to instantly redirect you to your destination, change this in the options:"
+		"message": "Do you want Universal Bypass to instantly redirect you to your destination?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass prevented your IP from being logged."
 	},
 	"blockedSubtitle": {
-		"message": "If you don't want Universal Bypass to prevent bad actors from getting your IP, disable this in the options:"
+		"message": "Don't want Universal Bypass to prevent bad actors from getting your IP?"
 	},
 	"crowdBypassed": {
 		"message": "You might not have to wait!"

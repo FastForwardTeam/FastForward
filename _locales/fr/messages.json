@@ -14,26 +14,23 @@
 	"firstrunWhatnow": {
 		"message": "Voici ce que vous pouvez faire maintenant:"
 	},
-	"firstrunExampleLinks": {
+	"twitter": {
+		"message": "Suivre Universal Bypass sur Twitter pour toujours être dans la boucle."
+	},
+	"exampleLinks": {
 		"message": "Vérifiez les exemples de liens pour vous assurer que le contournement universel fonctionne."
 	},
-	"firstrunOptions": {
-		"message": "Changer les options de Universal Bypass."
-	},
-	"firstrunTwitter": {
-		"message": "Suivre Universal Bypass sur Twitter pour être toujours tenu au courrant de Universal Bypass."
-	},
 	"homepage": {
-		"message": "Page d'accueil"
-	},
-	"popupOptions": {
-		"message": "Réglages"
+		"message": "Visiter la page d'accueil d'Universal Bypass."
 	},
 	"options": {
-		"message": "Options d'Universal Bypass"
+		"message": "Réglages"
 	},
-	"save": {
-		"message": "Sauvegarder"
+	"optionsLink": {
+		"message": "Changer les options de Universal Bypass."
+	},
+	"optionsEnabled": {
+		"message": "Activez les contournements de site Web."
 	},
 	"optionsInstantNavigation": {
 		"message": "M'envoyer instantanément vers les destinations."
@@ -56,21 +53,6 @@
 	"optionsUserscriptsSubtitle": {
 		"message": "Ce serait bien si vous pouviez soumettre des dérivations de travail à GitHub, afin que d'autres puissent en bénéficier: "
 	},
-	"optionsUserscriptsUntitled": {
-		"message": "Contournement non nommé"
-	},
-	"optionsUserscriptsName": {
-		"message": "Nom. Avec un nom vide, ce contournements sera supprimé."
-	},
-	"optionsUserscriptsDomains": {
-		"message": "Domaines. Utiliser * pour ce contournement pour qu'il soit éffectif partout."
-	},
-	"optionsUserscriptsDelete": {
-		"message": "Supprimer Bypass"
-	},
-	"optionsUserscriptsDeleteConfirm": {
-		"message": "Voulez-vous vraiment supprimer ce contournement?"
-	},
 	"beforeNavigate": {
 		"message": "Vous êtes presque arrivé à destination."
 	},
@@ -78,13 +60,13 @@
 		"message": "Votre destination est %"
 	},
 	"beforeNavigateInfo": {
-		"message": "Si vous voulez que Universal Bypass vous redirige instantanément vers votre destination, changez ceci dans les options:"
+		"message": "Vouslez-vous qu'Universal Bypass vous redirige instantanément à votre destination?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass empêche l’enregistrement de votre IP."
 	},
 	"blockedSubtitle": {
-		"message": "Si vous ne voulez pas que Universal Bypass empêche les mauvais acteurs d'obtenir votre IP, désactivez ceci dans les options ::"
+		"message": "Pas envie qu'Universal Bypass empêche de mauvais acteurs d'acquérir votre IP?"
 	},
 	"crowdBypassed": {
 		"message": "Vous n'aurez peut-être pas à attendre !"

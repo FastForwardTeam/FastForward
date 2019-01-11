@@ -14,26 +14,23 @@
 	"firstrunWhatnow": {
 		"message": "O que você pode fazer agora:"
 	},
-	"firstrunExampleLinks": {
-		"message": "Veja exemplos de links para ter certeza que o Universal Bypass está funcionando."
-	},
-	"firstrunOptions": {
-		"message": "Altere as opções do Universal Bypass."
-	},
-	"firstrunTwitter": {
+	"twitter": {
 		"message": "Siga o Universal Bypass no Twitter para ficar informado sobre as últimas novidades."
 	},
-	"homepage": {
-		"message": "Página na Internet"
+	"exampleLinks": {
+		"message": "Veja exemplos de links para ter certeza que o Universal Bypass está funcionando."
 	},
-	"popupOptions": {
-		"message": "Opções"
+	"homepage": {
+		"message": "Visite a homepage dos Bypass Universal."
 	},
 	"options": {
-		"message": "Opções do Universal Bypass"
+		"message": "Opções"
 	},
-	"save": {
-		"message": "Salvar"
+	"optionsLink": {
+		"message": "Altere as opções do Universal Bypass."
+	},
+	"optionsEnabled": {
+		"message": "Habilite bypasses de websites."
 	},
 	"optionsInstantNavigation": {
 		"message": "Levar-me instantaneamente aos destinos."
@@ -56,32 +53,20 @@
 	"optionsUserscriptsSubtitle": {
 		"message": "Seria legal se você pudesse enviar bypasses funcionais para o GitHub, para que outros se beneficiem deles: "
 	},
-	"optionsUserscriptsUntitled": {
-		"message": "Bypass sem título"
-	},
-	"optionsUserscriptsName": {
-		"message": "Nome. Com um nome em branco, este bypass será excluído."
-	},
-	"optionsUserscriptsDomains": {
-		"message": "Domínios. Use * para este bypass ser efetivo em qualquer lugar."
-	},
-	"optionsUserscriptsDelete": {
-		"message": "Excluir Bypass"
-	},
-	"optionsUserscriptsDeleteConfirm": {
-		"message": "Você deseja realmente excluir este bypass?"
-	},
 	"beforeNavigate": {
 		"message": "Você está quase no seu destino."
 	},
 	"beforeNavigateDestination": {
 		"message": "Seu destino é %"
 	},
+	"beforeNavigateInfo": {
+		"message": "Deseja que o Universal Bypass instantaneamente redirecione você para o seu destino?"
+	},
 	"blockedTitle": {
 		"message": "O Universal Bypass preveniu que seu IP fosse registrado."
 	},
 	"blockedSubtitle": {
-		"message": "Se você não quer que o Universal Bypass evite que os maus atores obtenham seu IP, desabilite isso nas opções:"
+		"message": "Você quer que o Universal Bypass previna que pessoas mal intencionadas obtenham seu IP?"
 	},
 	"crowdBypassed": {
 		"message": "Talvez você não precise esperar!"

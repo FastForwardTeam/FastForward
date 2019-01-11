@@ -14,27 +14,6 @@
 	"firstrunWhatnow": {
 		"message": "Τι μπορείτε να κάνετε τώρα:"
 	},
-	"firstrunExampleLinks": {
-		"message": "Ελέγξτε τους συνδέσμους με τα παράδειγματα για να βεβαιωθείτε ότι λειτουργεί το Universal Bypass."
-	},
-	"firstrunOptions": {
-		"message": "Αλλαγή επιλογών του Universal Bypass."
-	},
-	"firstrunTwitter": {
-		"message": "Ακολουθήστε το Universal Bypass στο Twitter για να γνωρίζεται ότι γίνεται σχετικά το Universal Bypass."
-	},
-	"homepage": {
-		"message": "Αρχική σελίδα"
-	},
-	"popupOptions": {
-		"message": "Ρυθμίσεις"
-	},
-	"options": {
-		"message": "Ρυθμίσεις του Universal Bypass"
-	},
-	"save": {
-		"message": "Αποθήκευση"
-	},
 	"optionsTrackerBypass": {
 		"message": "Παράκαμψη trackers χρησιμοποιώντας το Apimon.de."
 	},
@@ -53,26 +32,8 @@
 	"optionsUserscriptsSubtitle": {
 		"message": "Θα ήταν ωραίο αν θα μπορούσατε να υποβάλετε παρακάμψεις που να λειτουργούν στο GitHub, έτσι ώστε και άλλοι να μπορούν να επωφεληθούν από αυτό: "
 	},
-	"optionsUserscriptsUntitled": {
-		"message": "Άτιτλη παράκαμψη"
-	},
-	"optionsUserscriptsName": {
-		"message": "Όνομα. Με κενό όνομα, αυτή η παράκαμψη θα διαγραφεί."
-	},
-	"optionsUserscriptsDomains": {
-		"message": "Domains. Χρησημοποιείστε * ώστε η παράκαμψη να είναι αποτελεσματική, παντού."
-	},
-	"optionsUserscriptsDelete": {
-		"message": "Διαγραφή παράκαμψης"
-	},
-	"optionsUserscriptsDeleteConfirm": {
-		"message": "Θέλετε σίγουρα να διαγράψετε αυτή την παράκαμψη;"
-	},
 	"blockedTitle": {
 		"message": "Το Universal Bypass εμπόδισε την IP σας από το να καταγραφεί."
-	},
-	"blockedSubtitle": {
-		"message": "Εάν δεν θέλετε το Universal Bypass να αποτρέπει τους κακούς φορείς από το να υποκλέψουν την IP σας, απενεργοποιήστε αυτήν την επιλογή στις Ρυθμίσεις:"
 	},
 	"crowdBypassed": {
 		"message": "Ίσως να μην χρειαστεί να περιμένετε!"
