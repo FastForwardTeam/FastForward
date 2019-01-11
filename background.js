@@ -1,42 +1,6 @@
 var brws=(typeof browser=="undefined"?chrome:browser),platform=brws.runtime.getURL("").split("-")[0]
 
-//Install & Uninstall Actions
-brws.runtime.onInstalled.addListener(details=>{
-	if(details.reason=="install")
-	{
-		if(platform=="ms")
-		{
-			brws.windows.create({url:"https://universal-bypass.org/firstrun"})
-		}
-		else
-		{
-			window.open("https://universal-bypass.org/firstrun")
-		}
-	}
-	else
-	{
-		//Upgrade configuration
-		brws.storage.local.get(["custom_bypasses"],result=>{
-			if(!result||!result.custom_bypasses)
-			{
-				return
-			}
-			let customBypasses=JSON.parse(result.custom_bypasses),userscript=""
-			for(let name in customBypasses)
-			{
-				userscript += "// " + name + "\ndomainBypass(\"" + customBypasses[name].domains + "\", ()=>{\n" + customBypasses[name].content + "})\n\n"
-			}
-			brws.storage.local.set({
-				userscript: userscript
-			}, ()=>{
-				brws.storage.local.remove("custom_bypasses")
-			})
-		})
-	}
-})
-brws.runtime.setUninstallURL("https://docs.google.com/forms/d/e/1FAIpQLSdXw-Yf5IaDXZWw4fDHroZkDFOF6hgWEvVDaXT9ZADqnF2reg/viewform")
-
-//Tracking options
+//Keeping track of options
 var enabled=true,instantNavigation=false,trackerBypassEnabled=true,blockIPLoggers=true,crowdEnabled=true,userscript="",
 getRedirect=url=>({redirectUrl:(instantNavigation?url:brws.runtime.getURL("html/before-navigate.html")+"?target="+encodeURIComponent(url))})
 encodedRedirect=url=>({redirectUrl:(instantNavigation?decodeURIComponent(url):brws.runtime.getURL("html/before-navigate.html")+"?target="+url)})
@@ -92,8 +56,27 @@ chrome.runtime.onMessage.addListener((request,sender,sendResponse)=>{
 	}
 });
 
-//Bypasses of sites where the destination is in the request
+//Internal redirects to extension URLs to bypass content script limitations
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(details.method=="GET"&&details.type=="main_frame")
+	{
+		if(details.url.substr(38)=="1")
+			return{redirectUrl:brws.runtime.getURL("html/firstrun.html")}
+		return{redirectUrl:brws.runtime.getURL("html/firstrun-noscript.html")}
+	}
+},{urls:["https://universal-bypass.org/firstrun?*"]},["blocking"])
 
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(details.method=="GET"&&details.type=="main_frame")
+		return encodedRedirect(details.url.substr(52))
+},{urls:["https://universal-bypass.org/before-navigate?target=*"]},["blocking"])
+
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(details.method=="GET"&&details.type=="main_frame")
+		return{redirectUrl:brws.runtime.getURL("html/crowd-bypassed.html")+details.url.substr(43)}
+},{urls:["https://universal-bypass.org/crowd-bypassed?*"]},["blocking"])
+
+//Bypasses of sites where the destination is in the request
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled&&details.method=="GET"&&details.type=="main_frame")
 		return encodedRedirect(details.url.substr(details.url.indexOf("url=")+4))
@@ -124,25 +107,43 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		return encodedRedirect(details.url.substr(details.url.indexOf("/s/")+3))
 },{urls:["*://*.gslink.co/e/*/s/*"]},["blocking"])
 
-//Internal redirects to extension URLs to bypass content script limitations
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(details.method=="GET"&&details.type=="main_frame")
+//Install & Uninstall Actions
+brws.runtime.onInstalled.addListener(details=>{
+	if(details.reason=="install")
 	{
-		if(details.url.substr(38)=="1")
-			return{redirectUrl:brws.runtime.getURL("html/firstrun.html")}
-		return{redirectUrl:brws.runtime.getURL("html/firstrun-noscript.html")}
+		if(platform=="ms"||platform=="moz")
+		{
+			brws.windows.create({url:"https://universal-bypass.org/firstrun"})
+		}
+		else
+		{
+			setTimeout(()=>{
+				window.open("https://universal-bypass.org/firstrun")
+			},1000)
+		}
 	}
-},{urls:["https://universal-bypass.org/firstrun?*"]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(details.method=="GET"&&details.type=="main_frame")
-		return encodedRedirect(details.url.substr(52))
-},{urls:["https://universal-bypass.org/before-navigate?target=*"]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(details.method=="GET"&&details.type=="main_frame")
-		return{redirectUrl:brws.runtime.getURL("html/crowd-bypassed.html")+details.url.substr(43)}
-},{urls:["https://universal-bypass.org/crowd-bypassed?*"]},["blocking"])
+	else
+	{
+		//Upgrade configuration
+		brws.storage.local.get(["custom_bypasses"],result=>{
+			if(!result||!result.custom_bypasses)
+			{
+				return
+			}
+			let customBypasses=JSON.parse(result.custom_bypasses),userscript=""
+			for(let name in customBypasses)
+			{
+				userscript += "// " + name + "\ndomainBypass(\"" + customBypasses[name].domains + "\", ()=>{\n" + customBypasses[name].content + "})\n\n"
+			}
+			brws.storage.local.set({
+				userscript: userscript
+			}, ()=>{
+				brws.storage.local.remove("custom_bypasses")
+			})
+		})
+	}
+})
+brws.runtime.setUninstallURL("https://docs.google.com/forms/d/e/1FAIpQLSdXw-Yf5IaDXZWw4fDHroZkDFOF6hgWEvVDaXT9ZADqnF2reg/viewform")
 
 //Fixing Content-Security-Policy on Firefox because apparently extensions have no special privileges in Firefox
 if(platform=="moz")

@@ -126,27 +126,28 @@ if(document instanceof HTMLDocument)
 				}
 			}
 		},
-		contributeAndNavigate=target=>ensureCrowdLoaded(()=>{
-			if(navigated||!isGoodLink(target))
+		contributeAndNavigate=target=>{
+			if(!navigated&&isGoodLink(target))
 			{
-				return
-			}
-			if(!crowdEnabled)
-			{
-				unsafelyNavigate(target)
-				return
-			}
-			let xhr=new XMLHttpRequest()
-			xhr.onreadystatechange=()=>{
-				if(xhr.readyState==4)
+				if(crowdEnabled)
+				{
+					let xhr=new XMLHttpRequest()
+					xhr.onreadystatechange=()=>{
+						if(xhr.readyState==4)
+						{
+							unsafelyNavigate(target)
+						}
+					}
+					xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
+					xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+					xhr.send("domain="+encodeURIComponent(domain)+"&path="+encodeURIComponent(location.pathname.toString().substr(1))+"&target="+encodeURIComponent(target))
+				}
+				else
 				{
 					unsafelyNavigate(target)
 				}
 			}
-			xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
-			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
-			xhr.send("domain="+encodeURIComponent(domain)+"&path="+encodeURIComponent(location.pathname.toString().substr(1))+"&target="+encodeURIComponent(target))
-		}),
+		},
 		domain=location.hostname,
 		crowdEnabled=document.documentElement.hasAttribute("data-universal-bypass-crowd-enabled")
 		if(crowdEnabled)
@@ -256,6 +257,9 @@ if(document instanceof HTMLDocument)
 		hrefBypass(/ur\\.ly|urly\\.mobi/,()=>{
 			if(location.pathname.length>2&&location.pathname.substr(0,6)!="/goii/")
 				safelyNavigate("/goii/"+location.pathname.substr(2)+"?ref="+location.hostname+location.pathname)
+		})
+		hrefBypass(/universal-bypass\\.org\\/firstrun/,()=>{
+			location.href="https://universal-bypass.org/firstrun?1"
 		})
 		domainBypass("cshort.org",()=>{
 			ODP(window,"adblock",{
@@ -421,11 +425,6 @@ if(document instanceof HTMLDocument)
 	})
 	if(bypassed)
 	{
-		return
-	}
-	if(location.href=="https://universal-bypass.org/firstrun")
-	{
-		location.href="https://universal-bypass.org/firstrun?1"
 		return
 	}
 	ensureDomLoaded(()=>{
@@ -1062,12 +1061,6 @@ if(document instanceof HTMLDocument)
 		script.innerHTML+="\n"+response.userscript+"\n})()"
 		document.documentElement.setAttribute("data-universal-bypass-crowd-enabled","")
 		script=document.documentElement.appendChild(script)
-		if(location.href=="https://universal-bypass.org/firstrun")
-		{
-			setTimeout(()=>{
-				location.href="https://universal-bypass.org/firstrun?"+(document.documentElement.hasAttribute("data-universal-bypass-firstran")?"1":"0")
-			},500)
-		}
 		setTimeout(()=>document.documentElement.removeChild(script),10)
 	})
 }
