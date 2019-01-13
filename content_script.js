@@ -1026,7 +1026,7 @@ if(document instanceof HTMLDocument)
 				finish()
 			},3000)
 		})`
-		let dT=setInterval(()=>{
+		let dO=new MutationObserver(mutations=>{
 			if(document.documentElement.hasAttribute("data-universal-bypass-adlinkfly-info"))
 			{
 				document.documentElement.removeAttribute("data-universal-bypass-adlinkfly-info")
@@ -1052,12 +1052,13 @@ if(document instanceof HTMLDocument)
 				xhr.open("GET",iu+"info",true)
 				xhr.send()
 			}
-			if(document.documentElement.hasAttribute("data-universal-bypass-stop-watching"))
+			else if(document.documentElement.hasAttribute("data-universal-bypass-stop-watching"))
 			{
-				clearInterval(dT)
 				document.documentElement.removeAttribute("data-universal-bypass-stop-watching")
+				dO.disconnect()
 			}
-		},50)
+		});
+		dO.observe(document.documentElement, {attributes: true})
 		script.innerHTML+="\n"+response.userscript+"\n})()"
 		document.documentElement.setAttribute("data-universal-bypass-crowd-enabled","")
 		script=document.documentElement.appendChild(script)

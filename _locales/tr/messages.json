@@ -9,16 +9,37 @@
 		"message": "Harikasınız!"
 	},
 	"firstrunNoScript": {
-		"message": "Ancak, Universal Baypas'ın uyumlu olmadığı NoScript veya benzeri kullanıyorsunuz."
+		"message": "Ancak görünen o ki Universal Baypass'in uyumlu olmadığı NoScript veya benzeri bir betik kullanıyorsunuz."
 	},
 	"firstrunWhatnow": {
 		"message": "Yapabilecekleriniz:"
+	},
+	"twitter": {
+		"message": "Universal Bypass'in bir parçası olmak için Twitter'da takip edin."
+	},
+	"exampleLinks": {
+		"message": "Universal Bypass'in çalıştığından emin olmak için örnek bağlantılara göz atın."
+	},
+	"homepage": {
+		"message": "Universal Bypass'in anasayfasını ziyaret edin."
+	},
+	"options": {
+		"message": "Seçenekler"
+	},
+	"optionsLink": {
+		"message": "Universal Bypass'in sunduğu seçenekleri düzenleyin."
+	},
+	"optionsEnabled": {
+		"message": "Web sayfalarını es geçmeyi etkinleştir."
+	},
+	"optionsInstantNavigation": {
+		"message": "Beni anında hedef adrese yönlendir."
 	},
 	"optionsTrackerBypass": {
 		"message": "Apimon.de kullanan bypass izleyicileri."
 	},
 	"optionsBlockIPLoggers": {
-		"message": "Eğer bypass yapılamazsa, IP kayıtlarını engelle."
+		"message": "Eğer es geçilemezse IP kayıtçılarını engelle."
 	},
 	"optionsCrowdBypass": {
 		"message": "Ötürülə bilməyən qısaldıcıların yerlərini götür və apar."
@@ -30,16 +51,28 @@
 		"message": "Özel Bypasslar"
 	},
 	"optionsUserscriptsSubtitle": {
-		"message": "Çalışan bypassları GitHub'a eklerseniz diğerlerinin de yararlanması adına iyi olur."
+		"message": "Diğer kullanıcıların da yararlanabilmesi adına çalışan bypassleri GitHub deposuna eklemenizi isteriz: "
+	},
+	"beforeNavigate": {
+		"message": "Neredeyse vardınız."
+	},
+	"beforeNavigateDestination": {
+		"message": "Hedefiniz: %"
+	},
+	"beforeNavigateInfo": {
+		"message": "Universal Bypass'in sizi doğrudan hedefe yönlendirmesini ister misiniz?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass, IP adresinizin kayıtlara eklenmesini engelledi."
+	},
+	"blockedSubtitle": {
+		"message": "Universal Bypass'in sizi kötü adamların IP adresinizi almasından korumasını istemiyor musunuz?"
 	},
 	"crowdBypassed": {
 		"message": "Beklemek zorunda değilsin!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Diğer Universal Baypass kullanıcıları zaten sizi beklediler ve % 'e ulaştığında bildir"
+		"message": "Diğer Universal Baypass kullanıcıları sizin yerinize beklediler ve bunun % 'e gittiğini bildirdiler."
 	},
 	"crowdBypassedIgnore": {
 		"message": "Bu doğru değil miydi?"
