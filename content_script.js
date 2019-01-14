@@ -1,3 +1,4 @@
+//If you're viewing this on Github and came here to insert your own bypass, please search for "Insertion point"
 if(document instanceof HTMLDocument)
 {
 	let brws=(typeof browser=="undefined"?chrome:browser)
@@ -423,6 +424,7 @@ if(document instanceof HTMLDocument)
 		if(s.has("u"))
 			safelyNavigate(atob(s.get("u")))
 	})
+	//Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
 	if(bypassed)
 	{
 		return
@@ -659,8 +661,32 @@ if(document instanceof HTMLDocument)
 					}
 				}
 			})
+			domainBypass("vcrypt.net",()=>{
+				if(document.querySelector(".btncontinue"))
+				{
+					document.querySelector("form").submit()
+				}
+			})
+			domainBypass("runtyurl.com",()=>{
+				let b=document.getElementById("go_next")
+				if(b)
+				{
+					location.href=b.href
+				}
+				else
+				{
+					b=document.getElementById("download")
+					if(b)
+					{
+						safelyNavigate(b.href)
+					}
+				}
+			})
+			//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 			if(bypassed)
+			{
 				return
+			}
 			//Adf.ly "Locked" Page
 			if(location.pathname=="/ad/locked"&&document.getElementById("countdown")&&document.querySelector("a").textContent=="Click here to continue")
 			{
