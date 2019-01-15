@@ -57,7 +57,6 @@ if(document instanceof HTMLDocument)
 			{
 				return false
 			}
-			debugger
 			bypassed=true
 			let url
 			try{url=new URL(target)}catch(e){}
@@ -909,7 +908,12 @@ if(document instanceof HTMLDocument)
 			let i=document.querySelector("input[name='op'][value^='download']")//nowvideo.club,vidto.stream
 			if(i&&i.parentNode.tagName=="FORM")
 			{
-				i.parentNode.submit()
+				let b=document.querySelector("b.err")
+				if(!b||b.textContent!="Skipped countdown")
+				{
+					i.parentNode.submit()
+					return finish()
+				}
 			}
 			if(document.querySelector("a[href^='https://linkshrink.net/homepage'] > img.lgo"))//LinkShrink.net
 			{
@@ -1005,7 +1009,6 @@ if(document instanceof HTMLDocument)
 											}
 											if(isGoodLink(h))
 											{
-												debugger
 												clearInterval(cT)
 												a.parentNode.removeChild(a)
 												contributeAndNavigate(h)
