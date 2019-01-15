@@ -32,9 +32,6 @@
 	"optionsUserscripts": {
 		"message": "عمليات التجاوز المخصصة"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "سيكون من الرائع إذا كنت تستطيع إرسال متجاوزات تعمل إلى صفحة الـ GitHub، حتى يستطيع اﻵخرين اﻹستفادة منها: "
-	},
 	"beforeNavigate": {
 		"message": "انت الأن قريب من وجهتك."
 	},

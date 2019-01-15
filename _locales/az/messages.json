@@ -32,9 +32,6 @@
 	"optionsUserscripts": {
 		"message": "Özəl Bypass-lar"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "İşləyən bypass-ları GitHub-da yazsanız, digərlərinin də faydalanmağına kömək olar: "
-	},
 	"beforeNavigate": {
 		"message": "Demək olar ki, təyinat yerindəsiniz."
 	},

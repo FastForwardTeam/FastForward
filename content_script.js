@@ -1,4 +1,4 @@
-//If you're viewing this on Github and came here to insert your own bypass, please search for "Insertion point"
+//If you want to insert your own bypass, please search for "Insertion point"
 if(document instanceof HTMLDocument)
 {
 	let brws=(typeof browser=="undefined"?chrome:browser)
@@ -57,6 +57,7 @@ if(document instanceof HTMLDocument)
 			{
 				return false
 			}
+			debugger
 			bypassed=true
 			let url
 			try{url=new URL(target)}catch(e){}
@@ -415,9 +416,8 @@ if(document instanceof HTMLDocument)
 			xhr.send("id="+location.hash.replace("#",""))
 		}
 	})
-	domainBypass("emulator.games",()=>{
-		if(location.pathname=="/download.php")
-			window.setInterval=f=>sI(f,1)
+	hrefBypass(/emulator\\.games\\/download\\.php/,()=>{
+		window.setInterval=f=>sI(f,1)
 	})
 	domainBypass("noriskdomain.com",()=>{
 		let s=new URLSearchParams(location.search)
@@ -669,7 +669,7 @@ if(document instanceof HTMLDocument)
 			})
 			domainBypass("runtyurl.com",()=>{
 				let b=document.getElementById("go_next")
-				if(b)
+				if(b&&isGoodLink(b.href))
 				{
 					location.href=b.href
 				}
@@ -681,6 +681,11 @@ if(document instanceof HTMLDocument)
 						safelyNavigate(b.href)
 					}
 				}
+			})
+			hrefBypass(/4snip\\.pw\\/out\\//,()=>{
+				let f=document.querySelector("form[action^='../out2/']")
+				f.setAttribute("action",f.getAttribute("action").replace("../out2/","../outlink/"))
+				f.submit()
 			})
 			//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 			if(bypassed)
@@ -717,50 +722,16 @@ if(document instanceof HTMLDocument)
 			//GemPixel Premium URL Shortener
 			if(typeof appurl!="undefined"&&typeof token!="undefined")
 			{
-				//For this bypass to work, we detect a certain inline script, modify and execute it.
 				document.querySelectorAll("script").forEach(script=>{
 					if(script instanceof HTMLScriptElement)
 					{
-						let cont=script.textContent
-						if(cont.indexOf("clearInterval(countdown);")>-1)
+						let cont=script.textContent,start=cont.indexOf('clearInterval(countdown);window.location="')
+						if(start>-1&&cont.indexOf('";}count--;}, 1000)')>-1)
 						{
-							if(typeof countdown!="undefined")
-								clearInterval(countdown)
-							if(!document.querySelector("a.redirect"))
-							{
-								let a=document.createElement("a")
-								a.href="#"
-								a.className="redirect"
-								document.documentElement.appendChild(a)
-							}
-							if(cont.indexOf("var count = ")>-1)
-							{
-								cont=cont.split(/var count = [0-9]*;/).join("let count=0;")
-							}
-							else
-							{
-								cont="let count=0;"+cont
-							}
-							cont=cont.split("$(window).on('load', ").join("let r=f=>f();r(")
-							window.setInterval=f=>f()
-							ev(cont)
-							window.setInterval=sI
-							safelyNavigate(document.querySelector("a.redirect").href)
-							return finish()
-						}
-						else if(cont.trim().substr(0,69)=='!function(a){a(document).ready(function(){var b,c=a(".link-content"),')
-						{
-							safelyNavigate(cont.trim().substr(104).split('",e=0,f=a(".count-timer"),g=f.attr("data-timer"),h=setInterval(')[0])
-							return finish()
+							safelyNavigate(cont.substr(start+42).split('";}count--;}, 1000)')[0])
 						}
 					}
 				})
-				if(document.getElementById("messa")&&document.getElementById("html_element"))//Ally Captcha
-				{
-					document.getElementById("messa").className+=" hidden"
-					document.getElementById("html_element").className=document.getElementById("html_element").className.split("hidden").join("").trim()
-					return finish()
-				}
 			}
 			//Soralink Wordpress Plugin
 			if(document.querySelector(".sorasubmit"))
@@ -900,12 +871,14 @@ if(document instanceof HTMLDocument)
 			}
 			if(document.getElementById("countdown")&&document.querySelector(".seconds"))
 			{
-				let doBypass=!0
-				domainBypass("mexashare.com",()=>doBypass=!1)
-				domainBypass("up-4.net",()=>doBypass=!1)
-				domainBypass("file-upload.com",()=>doBypass=!1)
+				let doBypass=true
+				domainBypass("mexashare.com",()=>doBypass=false)
+				domainBypass("up-4.net",()=>doBypass=false)
+				domainBypass("file-upload.com",()=>doBypass=false)
 				if(doBypass)
+				{
 					document.querySelector(".seconds").textContent="0"
+				}
 				return finish()
 			}
 			if(document.querySelector("#ddl #download_link .btn"))
@@ -914,7 +887,7 @@ if(document instanceof HTMLDocument)
 				document.querySelector("#ddl #download_link > .btn").click()
 				return finish()
 			}
-			if(typeof file_download=="function")
+			if(typeof file_download=="function")//2speed.net
 			{
 				window.setInterval=f=>sI(f,1)
 				return finish()
@@ -924,7 +897,7 @@ if(document instanceof HTMLDocument)
 				document.querySelector("input[type=\\"submit\\"][name=\\"method_free\\"]").click()
 				return finish()
 			}
-			if(document.getElementById("frmdlcenter")&&document.getElementById("pay_modes"))//elsfile.org Timer
+			if(document.getElementById("frmdlcenter")&&document.getElementById("pay_modes"))//elsfile.org
 			{
 				let form=document.createElement("form")
 				form.method="POST"
@@ -932,6 +905,11 @@ if(document instanceof HTMLDocument)
 				form=document.documentElement.appendChild(form)
 				form.submit()
 				return finish()
+			}
+			let i=document.querySelector("input[name='op'][value^='download']")//nowvideo.club,vidto.stream
+			if(i&&i.parentNode.tagName=="FORM")
+			{
+				i.parentNode.submit()
 			}
 			if(document.querySelector("a[href^='https://linkshrink.net/homepage'] > img.lgo"))//LinkShrink.net
 			{

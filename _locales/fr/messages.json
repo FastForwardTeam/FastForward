@@ -51,7 +51,7 @@
 		"message": "Bypass sur mesure"
 	},
 	"optionsUserscriptsSubtitle": {
-		"message": "Ce serait bien si vous pouviez soumettre des dérivations de travail à GitHub, afin que d'autres puissent en bénéficier: "
+		"message": "Ce serait bien si vous pouviez soumettre des dérivations fonctionelles sur GitHub, afin que d'autres puissent en bénéficier."
 	},
 	"beforeNavigate": {
 		"message": "Vous êtes presque arrivé à destination."

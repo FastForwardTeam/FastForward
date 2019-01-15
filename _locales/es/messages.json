@@ -32,9 +32,6 @@
 	"optionsUserscripts": {
 		"message": "Circunvalaciones personalizadas"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "Sería bueno que pudieras enviarle a GitHub las bifurcaciones (fork) que funcionan, para que otros puedan beneficiarse de ello: "
-	},
 	"beforeNavigate": {
 		"message": "Ya casi estas en tu destino."
 	},

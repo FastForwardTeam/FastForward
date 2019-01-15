@@ -29,9 +29,6 @@
 	"optionsUserscripts": {
 		"message": "Atur Bypass sesuai keinginan"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "Akan sangat baik jika anda bisa mengirim hasil kerja Bypass ke Github, sehingga orang lain dapat memperoleh manfaat dari itu: "
-	},
 	"blockedTitle": {
 		"message": "Universal Bypass mencegah IP Anda saat sedang login."
 	},

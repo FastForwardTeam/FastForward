@@ -50,9 +50,6 @@
 	"optionsUserscripts": {
 		"message": "Özel Bypasslar"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "Diğer kullanıcıların da yararlanabilmesi adına çalışan bypassleri GitHub deposuna eklemenizi isteriz: "
-	},
 	"beforeNavigate": {
 		"message": "Neredeyse vardınız."
 	},

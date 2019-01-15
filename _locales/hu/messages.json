@@ -23,9 +23,6 @@
 	"optionsUserscripts": {
 		"message": "Egyéni kikerülések"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "Örülnénk, ha működő kikerüléseket küldenél a GitHub repo-ba, így másoknak könnyebb dolguk legyen: "
-	},
 	"blockedTitle": {
 		"message": "A Universal Bypass megtiltotta, hogy az IP-t naplózható legyen."
 	},

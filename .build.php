@@ -42,25 +42,26 @@ $build = createZip("Universal Bypass.zip");
 $firefox = createZip("Universal Bypass for Firefox.zip");
 foreach($index as $fn)
 {
-	if($fn != "build.php" && $fn != "README.md")
+	if($fn == "README.md")
 	{
-		if($fn == "manifest.json")
-		{
-			$json = json_decode(file_get_contents($fn), true);
-			unset($json["browser_specific_settings"]);
-			unset($json["web_accessible_resources"]);
-			$build->addFromString($fn, json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
-			$json = json_decode(file_get_contents($fn), true);
-			unset($json["browser_specific_settings"]);
-			unset($json["incognito"]);
-			unset($json["background"]["persistent"]);
-			$firefox->addFromString($fn, json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
-		}
-		else
-		{
-			$build->addFile($fn, $fn);
-			$firefox->addFile($fn, $fn);
-		}
+		continue;
+	}
+	if($fn == "manifest.json")
+	{
+		$json = json_decode(file_get_contents($fn), true);
+		unset($json["browser_specific_settings"]);
+		unset($json["web_accessible_resources"]);
+		$build->addFromString($fn, json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
+		$json = json_decode(file_get_contents($fn), true);
+		unset($json["browser_specific_settings"]);
+		unset($json["incognito"]);
+		unset($json["background"]["persistent"]);
+		$firefox->addFromString($fn, json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
+	}
+	else
+	{
+		$build->addFile($fn, $fn);
+		$firefox->addFile($fn, $fn);
 	}
 }
 $build->close();

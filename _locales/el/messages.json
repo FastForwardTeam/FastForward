@@ -29,9 +29,6 @@
 	"optionsUserscripts": {
 		"message": "Προσαρμοσμένες παρακάμψεις"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "Θα ήταν ωραίο αν θα μπορούσατε να υποβάλετε παρακάμψεις που να λειτουργούν στο GitHub, έτσι ώστε και άλλοι να μπορούν να επωφεληθούν από αυτό: "
-	},
 	"blockedTitle": {
 		"message": "Το Universal Bypass εμπόδισε την IP σας από το να καταγραφεί."
 	},

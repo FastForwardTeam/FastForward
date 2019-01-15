@@ -29,9 +29,6 @@
 	"optionsUserscripts": {
 		"message": "Tùy chỉnh Bypasses"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "Thật tuyệt vời nếu như bạn có thể gửi bypass đang hoạt động đến GitHub, để giúp đỡ những người khác: "
-	},
 	"blockedTitle": {
 		"message": "Universal Bypass đã ngăn chặn IP của bạn đăng nhập."
 	},

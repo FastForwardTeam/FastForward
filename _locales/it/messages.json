@@ -29,9 +29,6 @@
 	"optionsUserscripts": {
 		"message": "Bypass personalizzati"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "Sarebbe bello se tu potessi inviare i bypass operativi a GitHub, in modo che anche altri possano trarne beneficio: "
-	},
 	"blockedTitle": {
 		"message": "Universal Bypass ha impedito la registrazione del tuo IP."
 	},

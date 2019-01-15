@@ -29,9 +29,6 @@
 	"optionsUserscripts": {
 		"message": "Tilpassede forbipasserere"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "Det hadde vært fint om du kunne meldt inn fungerende forbipasserere til GitHub, sånn at andre kan få nytte av dem: "
-	},
 	"blockedTitle": {
 		"message": "Universal Bypass hindret IP-adressen din fra å bli loggført."
 	},

@@ -23,9 +23,6 @@
 	"optionsUserscripts": {
 		"message": "สร้างตัวข้ามเอง"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "มันจะดีมากๆเลยนะถ้าคุณส่งตัวข้ามที่คุณสร้างไปยัง Github คนอื่นจะได้ใช้ตัวข้ามของคุณด้วยเหมือนกัน: "
-	},
 	"blockedTitle": {
 		"message": "Universal Bypass ช่วยป้องกัน IP คุณจากการถูกเก็บประวัติ"
 	},

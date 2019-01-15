@@ -32,9 +32,6 @@
 	"optionsUserscripts": {
 		"message": "カスタムバイパス"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "バイパスをGitHubに提出すれば、他の人にもメリットがあります "
-	},
 	"beforeNavigate": {
 		"message": "リンク先まであと少しです。"
 	},

@@ -51,7 +51,7 @@
 		"message": "Custom Bypasses"
 	},
 	"optionsUserscriptsSubtitle": {
-		"message": "It would be nice if you could submit working bypasses on GitHub, so others can benefit from it: "
+		"message": "It would be nice if you could submit working bypasses on GitHub, so others can benefit from it."
 	},
 	"beforeNavigate": {
 		"message": "You're almost at your destination."

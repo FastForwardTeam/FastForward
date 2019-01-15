@@ -29,9 +29,6 @@
 	"optionsUserscripts": {
 		"message": "Circumval·lacions personalitzades"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "Estaria bé si enviés circumval·lacions que funcionen a GitHub, perquè altres puguin beneficiar-se'n: "
-	},
 	"blockedTitle": {
 		"message": "Universal Bypass ha impedit que la seva adreça IP es registrés."
 	},

@@ -24,7 +24,9 @@ hrefBypass(/example\\.(com|org)/, function()
 })
 // Feel free to replace this with your own code now!
 // Changes are automatically saved.
-`, saveTimer, editor=ace.edit("userscript",{mode:"ace/mode/javascript",theme:"ace/theme/monokai"})
+`,saveTimer,editor=ace.edit("userscript",{mode:"ace/mode/javascript",theme:"ace/theme/monokai"}),
+span=document.querySelector("[data-message='optionsUserscriptsSubtitle']")
+span.innerHTML=span.textContent.replace("GitHub","<a href='https://github.com/timmyrs/Universal-Bypass/blob/master/content_script.js' target='_blank'>GitHub</a>")
 brws.storage.local.get(["userscript"],res=>{
 	if(res&&res.userscript)
 	{
