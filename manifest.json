@@ -11,19 +11,19 @@
 	"name": "Universal Bypass",
 	"description": "__MSG_appDesc__",
 	"homepage_url": "https://universal-bypass.org/",
-	"version": "9.2.2",
+	"version": "9.2.3",
 	"author": "Tim \"timmyRS\" Speckhals",
 	"incognito": "split",
-	"options_ui": {
-		"page": "html/options.html",
-		"open_in_tab": true
-	},
 	"permissions": [
 		"storage",
 		"webRequest",
 		"webRequestBlocking",
 		"<all_urls>"
 	],
+	"options_ui": {
+		"page": "html/options.html",
+		"open_in_tab": true
+	},
 	"browser_action": {
 		"default_icon": {
 			"40": "icon/icon_40.png",

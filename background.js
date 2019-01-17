@@ -1,7 +1,12 @@
-var brws=(typeof browser=="undefined"?chrome:browser),platform=brws.runtime.getURL("").split("-")[0]
-
+var brws = (typeof browser == "undefined" ? chrome : browser),
+platform = brws.runtime.getURL("").split("-")[0],
 //Keeping track of options
-var enabled=true,instantNavigation=false,trackerBypassEnabled=true,blockIPLoggers=true,crowdEnabled=true,userscript="",
+enabled = true,
+instantNavigation = false,
+trackerBypassEnabled = true,
+blockIPLoggers = true,
+crowdEnabled = true,
+userscript="",
 getRedirect=url=>({redirectUrl:(instantNavigation?url:brws.runtime.getURL("html/before-navigate.html")+"?target="+encodeURIComponent(url))})
 encodedRedirect=url=>({redirectUrl:(instantNavigation?decodeURIComponent(url):brws.runtime.getURL("html/before-navigate.html")+"?target="+url)})
 brws.storage.sync.get(["disable","instant_navigation","no_tracker_bypass","allow_ip_loggers","crowd_bypass_opt_out"],res=>{
@@ -54,7 +59,7 @@ chrome.runtime.onMessage.addListener((request,sender,sendResponse)=>{
 			userscript: userscript
 		})
 	}
-});
+})
 
 //Internal redirects to extension URLs to bypass content script limitations
 brws.webRequest.onBeforeRequest.addListener(details=>{

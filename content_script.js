@@ -40,7 +40,8 @@ if(document instanceof HTMLDocument)
 	brws.runtime.sendMessage({},response=>{
 		let script=document.createElement("script")
 		script.innerHTML=`(()=>{//Hello, this is Universal Bypass' injection!
-		let ODP=(t,p,o)=>{try{Object.defineProperty(t,p,o)}catch(e){console.trace("[Universal Bypass] Couldn't define",p)}},
+		let crowdEnabled=`+(response.crowdEnabled?"true":"false")+`,
+		ODP=(t,p,o)=>{try{Object.defineProperty(t,p,o)}catch(e){console.trace("[Universal Bypass] Couldn't define",p)}},
 		//Copying eval, etc. to prevent issues with other extensions, such as uBlockOrigin. Also, note that this is the page level, so there are no security risks in using eval.
 		ev=eval,sT=setTimeout,sI=setInterval,
 		isGoodLink=link=>link&&link!=location.href&&link.substr(0,11)!="javascript:",
@@ -149,12 +150,7 @@ if(document instanceof HTMLDocument)
 				}
 			}
 		},
-		domain=location.hostname,
-		crowdEnabled=document.documentElement.hasAttribute("data-universal-bypass-crowd-enabled")
-		if(crowdEnabled)
-		{
-			document.documentElement.removeAttribute("data-universal-bypass-crowd-enabled")
-		}
+		domain=location.hostname
 		if(domain.substr(0,4)=="www.")
 		{
 			domain=domain.substr(4)
@@ -1054,9 +1050,11 @@ if(document instanceof HTMLDocument)
 						document.documentElement.setAttribute("data-universal-bypass-adlinkfly-target",t)
 					}
 				}
-				if(iu.substr(iu.length-1)!="/")
-					iu+="/"
-				xhr.open("GET",iu+"info",true)
+				if(iu.substr(iu.length - 1) != "/")
+				{
+					iu += "/"
+				}
+				xhr.open("GET", iu+"info", true)
 				xhr.send()
 			}
 			else if(document.documentElement.hasAttribute("data-universal-bypass-stop-watching"))
@@ -1067,7 +1065,6 @@ if(document instanceof HTMLDocument)
 		});
 		dO.observe(document.documentElement, {attributes: true})
 		script.innerHTML+="\n"+response.userscript+"\n})()"
-		document.documentElement.setAttribute("data-universal-bypass-crowd-enabled","")
 		script=document.documentElement.appendChild(script)
 		setTimeout(()=>document.documentElement.removeChild(script),10)
 	})
