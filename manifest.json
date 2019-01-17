@@ -11,7 +11,7 @@
 	"name": "Universal Bypass",
 	"description": "__MSG_appDesc__",
 	"homepage_url": "https://universal-bypass.org/",
-	"version": "9.2.1",
+	"version": "9.2.2",
 	"author": "Tim \"timmyRS\" Speckhals",
 	"incognito": "split",
 	"options_ui": {

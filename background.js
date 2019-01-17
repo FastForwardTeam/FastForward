@@ -58,68 +58,79 @@ chrome.runtime.onMessage.addListener((request,sender,sendResponse)=>{
 
 //Internal redirects to extension URLs to bypass content script limitations
 brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(details.method=="GET"&&details.type=="main_frame")
+	if(details.url.substr(38)=="1")
 	{
-		if(details.url.substr(38)=="1")
-			return{redirectUrl:brws.runtime.getURL("html/firstrun.html")}
-		return{redirectUrl:brws.runtime.getURL("html/firstrun-noscript.html")}
+		return {redirectUrl:brws.runtime.getURL("html/firstrun.html")}
 	}
-},{urls:["https://universal-bypass.org/firstrun?*"]},["blocking"])
+	else
+	{
+		return {redirectUrl:brws.runtime.getURL("html/firstrun-noscript.html")}
+	}
+},{types:["main_frame"],urls:["https://universal-bypass.org/firstrun?*"]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(details.method=="GET"&&details.type=="main_frame")
-		return encodedRedirect(details.url.substr(52))
-},{urls:["https://universal-bypass.org/before-navigate?target=*"]},["blocking"])
+	return encodedRedirect(details.url.substr(52))
+},{types:["main_frame"],urls:["https://universal-bypass.org/before-navigate?target=*"]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(details.method=="GET"&&details.type=="main_frame")
-		return{redirectUrl:brws.runtime.getURL("html/crowd-bypassed.html")+details.url.substr(43)}
-},{urls:["https://universal-bypass.org/crowd-bypassed?*"]},["blocking"])
+	return {redirectUrl:brws.runtime.getURL("html/crowd-bypassed.html")+details.url.substr(43)}
+},{types:["main_frame"],urls:["https://universal-bypass.org/crowd-bypassed?*"]},["blocking"])
 
 //Bypasses of sites where the destination is in the request
 brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled&&details.method=="GET"&&details.type=="main_frame")
+	if(enabled)
+	{
 		return encodedRedirect(details.url.substr(details.url.indexOf("url=")+4))
-},{urls:["*://*/st?api=*&url=*","*://*.zxro.com/u/*?url=*"]},["blocking"])
+	}
+},{types:["main_frame"],urls:["*://*/st?api=*&url=*","*://*.zxro.com/u/*?url=*"]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled&&details.method=="GET"&&details.type=="main_frame")
+	if(enabled)
+	{
 		return encodedRedirect(details.url.substr(details.url.indexOf("link=")+5))
-},{urls:["*://*.spaste.com/r/*link=*",]},["blocking"])
+	}
+},{types:["main_frame"],urls:["*://*.spaste.com/r/*link=*",]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled&&details.method=="GET"&&details.type=="main_frame")
+	if(enabled)
+	{
 		return getRedirect(atob(details.url.substr(details.url.indexOf("?link=")+6)))
-},{urls:["*://*.leechpremium.link/cheat/?link=*"]},["blocking"])
+	}
+},{types:["main_frame"],urls:["*://*.leechpremium.link/cheat/?link=*"]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled&&details.method=="GET"&&details.type=="main_frame")
+	if(enabled)
+	{
 		return encodedRedirect(details.url.substr(details.url.indexOf("?s=")+3))
-},{urls:["*://*.ouo.io/s/*?s=*","*://*.cpmlink.net/s/*?s=*"]},["blocking"])
+	}
+},{types:["main_frame"],urls:["*://*.ouo.io/s/*?s=*","*://*.cpmlink.net/s/*?s=*"]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled&&details.method=="GET"&&details.type=="main_frame")
+	if(enabled)
+	{
 		return encodedRedirect(details.url.substr(details.url.indexOf("/12/1/")+6))
-},{urls:["*://*.sh.st/r/*/12/1/*"]},["blocking"])
+	}
+},{types:["main_frame"],urls:["*://*.sh.st/r/*/12/1/*"]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled&&details.method=="GET"&&details.type=="main_frame")
+	if(enabled)
+	{
 		return encodedRedirect(details.url.substr(details.url.indexOf("/s/")+3))
-},{urls:["*://*.gslink.co/e/*/s/*"]},["blocking"])
+	}
+},{types:["main_frame"],urls:["*://*.gslink.co/e/*/s/*"]},["blocking"])
 
 //Install & Uninstall Actions
 brws.runtime.onInstalled.addListener(details=>{
-	if(details.reason=="install")
+	if(details.reason == "install")
 	{
-		if(platform=="ms"||platform=="moz")
+		if(platform == "ms" || platform == "moz")
 		{
-			brws.windows.create({url:"https://universal-bypass.org/firstrun"})
+			brws.windows.create({url: "https://universal-bypass.org/firstrun"})
 		}
 		else
 		{
-			setTimeout(()=>{
-				window.open("https://universal-bypass.org/firstrun")
-			},1000)
+			setTimeout(()=>window.open("https://universal-bypass.org/firstrun"),1000)
+			// For some reason, Chromium doesn't instantly register the webRequest handlers, so we're waiting.
 		}
 	}
 	else
@@ -137,45 +148,50 @@ brws.runtime.onInstalled.addListener(details=>{
 			}
 			brws.storage.local.set({
 				userscript: userscript
-			}, ()=>{
-				brws.storage.local.remove("custom_bypasses")
-			})
+			}, ()=>brws.storage.local.remove("custom_bypasses"))
 		})
 	}
 })
 brws.runtime.setUninstallURL("https://docs.google.com/forms/d/e/1FAIpQLSdXw-Yf5IaDXZWw4fDHroZkDFOF6hgWEvVDaXT9ZADqnF2reg/viewform")
 
 //Fixing Content-Security-Policy on Firefox because apparently extensions have no special privileges in Firefox
-if(platform=="moz")
+if(platform == "moz")
 {
 	brws.webRequest.onHeadersReceived.addListener(details=>{
-		if(enabled&&details.method=="GET"&&details.type=="main_frame")
+		if(enabled)
 		{
-			let csp=false
+			let csp = false
 			for(let i in details.responseHeaders)
 			{
 				if("value"in details.responseHeaders[i]&&["content-security-policy","x-content-security-policy"].indexOf(details.responseHeaders[i].name.toLowerCase())>-1)
 				{
-					csp=true
-					let _policies=details.responseHeaders[i].value.replace(";,",";").split(";"),policies={}
+					csp = true
+					let _policies = details.responseHeaders[i].value.replace(";,",";").split(";"),
+					policies = {}
 					for(let j in _policies)
 					{
-						let policy=_policies[j].trim(),name=policy.split(" ")[0]
-						policies[name]=policy.substr(name.length).trim().split(" ")
+						let policy = _policies[j].trim(),name=policy.split(" ")[0]
+						policies[name] = policy.substr(name.length).trim().split(" ")
 					}
 					if(!("script-src"in policies)&&"default-src"in policies)
 					{
-						policies["script-src"]=policies["default-src"]
-						let ni=policies["script-src"].indexOf("'none'")
-						if(ni>-1)
+						policies["script-src"] = policies["default-src"]
+						let ni = policies["script-src"].indexOf("'none'")
+						if(ni > -1)
+						{
 							policies["script-src"].splice(ni, 1)
+						}
 					}
 					if("script-src"in policies)
 					{
 						if(policies["script-src"].indexOf("'unsafe-inline'")==-1)
+						{
 							policies["script-src"].push("'unsafe-inline'")
+						}
 						if(policies["script-src"].indexOf("'unsafe-eval'")==-1)
+						{
 							policies["script-src"].push("'unsafe-eval'")
+						}
 					}
 					else
 					{
@@ -199,7 +215,7 @@ if(platform=="moz")
 				return{responseHeaders:details.responseHeaders}
 			}
 		}
-	},{urls:["<all_urls>"]},["blocking","responseHeaders"])
+	},{types:["main_frame"],urls:["<all_urls>"]},["blocking","responseHeaders"])
 }
 
 //Tracker Bypass using Apimon.de; see options for more details.
@@ -219,13 +235,16 @@ function resolveRedirect(url)
 	return destination
 }
 brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(trackerBypassEnabled&&details.method=="GET"&&details.type=="main_frame"||new URL(details.url).pathname!="/")
+	if(trackerBypassEnabled && new URL(details.url).pathname != "/")
 	{
-		let destination=resolveRedirect(details.url)
-		if(destination&&destination!=details.url)
-			return{redirectUrl:destination}
+		let destination = resolveRedirect(details.url)
+		if(destination && destination != details.url)
+		{
+			return {redirectUrl: destination}
+		}
 	}
 },{
+	types:["main_frame"],
 	urls:[
 	"*://*.great.social/*",
 	"*://*.send.digital/*",
@@ -256,22 +275,22 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	]
 },["blocking"])
 brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(details.method=="GET"&&details.type=="main_frame"&&new URL(details.url).pathname!="/")
+	if(new URL(details.url).pathname != "/")
 	{
 		if(trackerBypassEnabled)
 		{
-			let destination=resolveRedirect(details.url)
-			if(destination&&destination!=details.url)
+			let destination = resolveRedirect(details.url)
+			if(destination && destination != details.url)
 			{
-				return{redirectUrl:destination}
+				return {redirectUrl: destination}
 			}
 		}
 		if(blockIPLoggers)
 		{
-			return{redirectUrl:brws.runtime.getURL("html/blocked.html")}
+			return {redirectUrl: brws.runtime.getURL("html/blocked.html")}
 		}
 	}
-},{urls:getIPLoggerPatterns()},["blocking"])
+},{types:["main_frame"],urls:getIPLoggerPatterns()},["blocking"])
 function getIPLoggerPatterns()
 {
 	let patterns=[],

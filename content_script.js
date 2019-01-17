@@ -909,7 +909,7 @@ if(document instanceof HTMLDocument)
 			if(i&&i.parentNode.tagName=="FORM")
 			{
 				let b=document.querySelector("b.err")
-				if(!b||b.textContent!="Skipped countdown")
+				if(!b||b.textContent!="Skipped countdown")//deltabit.co
 				{
 					i.parentNode.submit()
 					return finish()
