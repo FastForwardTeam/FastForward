@@ -1,7 +1,7 @@
 //If you want to insert your own bypass, please search for "Insertion point"
 if(document instanceof HTMLDocument)
 {
-	let brws=(typeof browser=="undefined"?chrome:browser)
+	let brws = (typeof browser == "undefined" ? chrome : browser)
 	brws.storage.sync.get(["crowd_bypass_opt_out"],res=>{
 		document.documentElement.setAttribute("data-crowd-bypass-opt",(res&&res.crowd_bypass_opt_out&&res.crowd_bypass_opt_out==="true"?"o":"i"))
 	})
@@ -902,7 +902,7 @@ if(document instanceof HTMLDocument)
 				return finish()
 			}
 			let i=document.querySelector("input[name='op'][value^='download']")//nowvideo.club,vidto.stream
-			if(i&&i.parentNode.tagName=="FORM")
+			if(i&&i.parentNode.tagName=="FORM"&&!document.querySelector(".g-recaptcha"))
 			{
 				let b=document.querySelector("b.err")
 				if(!b||b.textContent!="Skipped countdown")//deltabit.co
