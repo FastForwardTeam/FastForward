@@ -2,45 +2,14 @@
 if(document instanceof HTMLDocument)
 {
 	let brws = (typeof browser == "undefined" ? chrome : browser)
-	brws.storage.sync.get(["crowd_bypass_opt_out"],res=>{
-		document.documentElement.setAttribute("data-crowd-bypass-opt",(res&&res.crowd_bypass_opt_out&&res.crowd_bypass_opt_out==="true"?"o":"i"))
-	})
-	brws.storage.local.get(["custom_bypasses"],res=>{
-		let f=()=>{
-			if(res&&res.custom_bypasses)
-			{
-				let customBypasses=JSON.parse(res.custom_bypasses)
-				for(let name in customBypasses)
-				{
-					let customBypass=customBypasses[name]
-					if(customBypass.domains=="*")
-						injectScript(customBypass.content)
-					else
-					{
-						let domains=customBypass.domains.split(",")
-						for(let i in domains)
-						{
-							let domain=domains[i]
-							if(location.hostname==domain||location.hostname.substr(location.hostname.length-(domain.length+1))=="."+domain)
-								injectScript(customBypass.content)
-						}
-					}
-				}
-			}
-		}
-		if(["interactive","complete"].indexOf(document.readyState)>-1)
+	brws.runtime.sendMessage({}, res => {
+		if(!res.enabled)
 		{
-			f()
+			return
 		}
-		else
-		{
-			document.addEventListener("DOMContentLoaded",f)
-		}
-	})
-	brws.runtime.sendMessage({},response=>{
 		let script=document.createElement("script")
 		script.innerHTML=`(()=>{//Hello, this is Universal Bypass' injection!
-		let crowdEnabled=`+(response.crowdEnabled?"true":"false")+`,
+		let crowdEnabled=`+(res.crowdEnabled ? "true" : "false")+`,
 		ODP=(t,p,o)=>{try{Object.defineProperty(t,p,o)}catch(e){console.trace("[Universal Bypass] Couldn't define",p)}},
 		//Copying eval, etc. to prevent issues with other extensions, such as uBlockOrigin. Also, note that this is the page level, so there are no security risks in using eval.
 		ev=eval,sT=setTimeout,sI=setInterval,
@@ -1064,7 +1033,7 @@ if(document instanceof HTMLDocument)
 			}
 		});
 		dO.observe(document.documentElement, {attributes: true})
-		script.innerHTML+="\n"+response.userscript+"\n})()"
+		script.innerHTML+="\n"+res.userscript+"\n})()"
 		script=document.documentElement.appendChild(script)
 		setTimeout(()=>document.documentElement.removeChild(script),10)
 	})

@@ -51,14 +51,12 @@ brws.storage.onChanged.addListener(changes=>{
 		userscript=changes.userscript.newValue
 	}
 })
-chrome.runtime.onMessage.addListener((request,sender,sendResponse)=>{
-	if(enabled)
-	{
-		sendResponse({
-			crowdEnabled: crowdEnabled,
-			userscript: userscript
-		})
-	}
+chrome.runtime.onMessage.addListener((req, sender, respond) => {
+	respond({
+		enabled: enabled,
+		crowdEnabled: crowdEnabled,
+		userscript: userscript
+	})
 })
 
 //Internal redirects to extension URLs to bypass content script limitations
