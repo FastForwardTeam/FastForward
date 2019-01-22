@@ -1,17 +1,18 @@
 {
 	"manifest_version": 2,
 	"icons": {
-		"40": "icon/icon_40.png",
-		"48": "icon/icon_48.png",
-		"128": "icon/icon_128.png",
-		"176": "icon/icon_176.png",
-		"512": "icon/icon_512.png"
+		"40": "icon/40.png",
+		"48": "icon/48.png",
+		"128": "icon/128.png",
+		"150": "icon/150.png",
+		"176": "icon/176.png",
+		"512": "icon/512.png"
 	},
 	"default_locale": "en",
 	"name": "Universal Bypass",
 	"description": "__MSG_appDesc__",
 	"homepage_url": "https://universal-bypass.org/",
-	"version": "9.2.5",
+	"version": "9.2.6",
 	"author": "Tim \"timmyRS\" Speckhals",
 	"incognito": "split",
 	"permissions": [
@@ -26,11 +27,12 @@
 	},
 	"browser_action": {
 		"default_icon": {
-			"40": "icon/icon_40.png",
-			"48": "icon/icon_48.png",
-			"128": "icon/icon_128.png",
-			"176": "icon/icon_176.png",
-			"512": "icon/icon_512.png"
+			"40": "icon/40.png",
+			"48": "icon/48.png",
+			"128": "icon/128.png",
+			"150": "icon/150.png",
+			"176": "icon/176.png",
+			"512": "icon/512.png"
 		},
 		"default_popup": "html/options.html"
 	},

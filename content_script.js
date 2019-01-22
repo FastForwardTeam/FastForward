@@ -383,10 +383,8 @@ if(document instanceof HTMLDocument)
 	hrefBypass(/emulator\\.games\\/download\\.php/,()=>{
 		window.setInterval=f=>sI(f,1)
 	})
-	domainBypass("noriskdomain.com",()=>{
-		let s=new URLSearchParams(location.search)
-		if(s.has("u"))
-			safelyNavigate(atob(s.get("u")))
+	domainBypass("2speed.net",()=>{
+		window.setInterval=f=>sI(f,1)
 	})
 	//Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
 	if(bypassed)
@@ -827,58 +825,6 @@ if(document instanceof HTMLDocument)
 			if(document.querySelector(".shortened_link a[href][ng-href][target='_blank']"))//Go2to.com,Go2too.com,Golink.to
 			{
 				safelyNavigate(document.querySelector(".shortened_link a[href][ng-href][target='_blank']").href)
-			}
-			if(document.querySelector("form#skip")&&document.getElementById("btn-main")&&!document.querySelector(".g-recaptcha"))
-			{
-				document.querySelector("form#skip").submit()
-				return finish()
-			}
-			if(document.getElementById("countdown")&&document.querySelector(".seconds"))
-			{
-				let doBypass=true
-				domainBypass("mexashare.com",()=>doBypass=false)
-				domainBypass("up-4.net",()=>doBypass=false)
-				domainBypass("file-upload.com",()=>doBypass=false)
-				if(doBypass)
-				{
-					document.querySelector(".seconds").textContent="0"
-				}
-				return finish()
-			}
-			if(document.querySelector("#ddl #download_link .btn"))
-			{
-				window.open=safelyNavigate
-				document.querySelector("#ddl #download_link > .btn").click()
-				return finish()
-			}
-			if(typeof file_download=="function")//2speed.net
-			{
-				window.setInterval=f=>sI(f,1)
-				return finish()
-			}
-			if(document.querySelector("input[type=\\"submit\\"][name=\\"method_free\\"]"))
-			{
-				document.querySelector("input[type=\\"submit\\"][name=\\"method_free\\"]").click()
-				return finish()
-			}
-			if(document.getElementById("frmdlcenter")&&document.getElementById("pay_modes"))//elsfile.org
-			{
-				let form=document.createElement("form")
-				form.method="POST"
-				form.innerHTML='<input type="hidden" name="op" value="download1"><input type="hidden" name="usr_login" value="C"><input type="hidden" name="id" value="'+location.pathname.toString().substr(1)+'"><input type="hidden" name="fname" value="'+document.querySelectorAll("div#container > div > div > table > tbody > tr > td")[2].textContent+'"><input type="hidden" name="referer" value="q"><input type="hidden" name="method_free" value="Free Download">'
-				form=document.documentElement.appendChild(form)
-				form.submit()
-				return finish()
-			}
-			let i=document.querySelector("input[name='op'][value^='download']")//nowvideo.club,vidto.stream
-			if(i&&i.parentNode.tagName=="FORM"&&!document.querySelector(".g-recaptcha"))
-			{
-				let b=document.querySelector("b.err")
-				if(!b||b.textContent!="Skipped countdown")//deltabit.co
-				{
-					i.parentNode.submit()
-					return finish()
-				}
 			}
 			if(document.querySelector("a[href^='https://linkshrink.net/homepage'] > img.lgo"))//LinkShrink.net
 			{

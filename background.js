@@ -122,6 +122,13 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	}
 },{types:["main_frame"],urls:["*://*.gslink.co/e/*/s/*"]},["blocking"])
 
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
+		return getRedirect(atob(new URL(details.url).searchParams.get("u")))
+	}
+},{types:["main_frame"],urls:["*://*.noriskdomain.com/*/analyze?u=*"]},["blocking"])
+
 //Install & Uninstall Actions
 brws.runtime.onInstalled.addListener(details=>{
 	if(details.reason == "install")

@@ -1,6 +1,6 @@
 {
 	"appDesc": {
-		"message": "Jangan habiskan waktu anda dengan mentaati aturan. Universal Bypass secara otomatis akan melompati link pemendek yang menyebalkan."
+		"message": "Jangan habiskan waktu anda dengan menaati aturan. Universal Bypass secara otomatis akan melompati link pemendek yang menyebalkan."
 	},
 	"firstrunTitle": {
 		"message": "Terimakasih anda telah menginstal Universal Bypass!"
@@ -13,6 +13,27 @@
 	},
 	"firstrunWhatnow": {
 		"message": "Apa yang dapat anda lakukan sekarang :"
+	},
+	"twitter": {
+		"message": "Ikuti Twitter kami untuk selalu mendapat berita terbaru."
+	},
+	"exampleLinks": {
+		"message": "Klik link berikut untuk memastikan Universal Bypass bekerja dengan baik."
+	},
+	"homepage": {
+		"message": "Kunjungi laman Universal Bypass."
+	},
+	"options": {
+		"message": "Opsi"
+	},
+	"optionsLink": {
+		"message": "Mengubah opsi Universal Bypass."
+	},
+	"optionsEnabled": {
+		"message": "Aktifkan bypass website."
+	},
+	"optionsInstantNavigation": {
+		"message": "Langsung arahkan ke tujuan."
 	},
 	"optionsTrackerBypass": {
 		"message": "Pelacak Bypass menggunakan Apimon.de."
@@ -29,8 +50,23 @@
 	"optionsUserscripts": {
 		"message": "Atur Bypass sesuai keinginan"
 	},
+	"optionsUserscriptsSubtitle": {
+		"message": "Akan lebih baik jika Anda bisa mengirimkan bypass karya anda lewat GitHub, sehingga orang lain dapat memperoleh manfaatnya."
+	},
+	"beforeNavigate": {
+		"message": "Anda hampir sampai pada destinasi anda."
+	},
+	"beforeNavigateDestination": {
+		"message": "Destinasi anda adalah %"
+	},
+	"beforeNavigateInfo": {
+		"message": "Apakah Anda ingin Universal Bypass langsung mengarahkan ke tujuan Anda?"
+	},
 	"blockedTitle": {
 		"message": "Universal Bypass mencegah IP Anda saat sedang login."
+	},
+	"blockedSubtitle": {
+		"message": "Tidak ingin Universal Bypass untuk mencegah situs buruk dari mendapatkan IP Anda?"
 	},
 	"crowdBypassed": {
 		"message": "Anda mungkin tidak perlu menunggu !"
