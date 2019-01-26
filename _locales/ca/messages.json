@@ -11,9 +11,6 @@
 	"firstrunNoScript": {
 		"message": "Però, sembla que estàs utilitzant NoScript o similar, amb la qual Universal Bypass no és compatible."
 	},
-	"firstrunWhatnow": {
-		"message": "El que pots fer ara:"
-	},
 	"optionsTrackerBypass": {
 		"message": "Circumval·la rastrejadors utilitzant Apimon.de."
 	},

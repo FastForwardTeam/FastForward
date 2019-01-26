@@ -11,18 +11,6 @@
 	"firstrunNoScript": {
 		"message": "Akan tetapi, anda sepertinya menggunakan NoScript atau menyerupai itu, Karena itu Universal Bypass tidak kompatibel dengannya."
 	},
-	"firstrunWhatnow": {
-		"message": "Apa yang dapat anda lakukan sekarang :"
-	},
-	"twitter": {
-		"message": "Ikuti Twitter kami untuk selalu mendapat berita terbaru."
-	},
-	"exampleLinks": {
-		"message": "Klik link berikut untuk memastikan Universal Bypass bekerja dengan baik."
-	},
-	"homepage": {
-		"message": "Kunjungi laman Universal Bypass."
-	},
 	"options": {
 		"message": "Opsi"
 	},

@@ -11,18 +11,6 @@
 	"firstrunNoScript": {
 		"message": "Ancak görünen o ki Universal Baypass'in uyumlu olmadığı NoScript veya benzeri bir betik kullanıyorsunuz."
 	},
-	"firstrunWhatnow": {
-		"message": "Yapabilecekleriniz:"
-	},
-	"twitter": {
-		"message": "Universal Bypass'in bir parçası olmak için Twitter'da takip edin."
-	},
-	"exampleLinks": {
-		"message": "Universal Bypass'in çalıştığından emin olmak için örnek bağlantılara göz atın."
-	},
-	"homepage": {
-		"message": "Universal Bypass'in anasayfasını ziyaret edin."
-	},
 	"options": {
 		"message": "Seçenekler"
 	},

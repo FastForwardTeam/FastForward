@@ -11,18 +11,6 @@
 	"firstrunNoScript": {
 		"message": "Cependant, vous semblez utiliser le module NoScript ou quelque chose de similaire, qui n'est pas compatible avec le contourneur universel."
 	},
-	"firstrunWhatnow": {
-		"message": "Voici ce que vous pouvez faire maintenant:"
-	},
-	"twitter": {
-		"message": "Suivre Universal Bypass sur Twitter pour toujours être dans la boucle."
-	},
-	"exampleLinks": {
-		"message": "Vérifiez les exemples de liens pour vous assurer que le contournement universel fonctionne."
-	},
-	"homepage": {
-		"message": "Visiter la page d'accueil d'Universal Bypass."
-	},
 	"options": {
 		"message": "Réglages"
 	},

@@ -11,9 +11,6 @@
 	"firstrunNoScript": {
 		"message": "Tuy nhiên, bạn dường như sử dụng NoScript hoặc tương tự, mà Universal Bypass không tương thích với."
 	},
-	"firstrunWhatnow": {
-		"message": "Bạn có thể làm gì bây giờ:"
-	},
 	"optionsTrackerBypass": {
 		"message": "Bỏ qua trackers bằng cách sử dụng Apimon.de."
 	},

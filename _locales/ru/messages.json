@@ -11,18 +11,6 @@
 	"firstrunNoScript": {
 		"message": "Тем не менее, похоже, что Вы используете NoScript или что-то подобное, с чем Universal Bypass несовместим."
 	},
-	"firstrunWhatnow": {
-		"message": "Что Вы можете сделать прямо сейчас:"
-	},
-	"twitter": {
-		"message": "Наблюдать за Universal Bypass в Twitter, чтобы быть в курсе всех новостей."
-	},
-	"exampleLinks": {
-		"message": "Проверить ссылки-примеры, чтобы убедиться в работоспособности Universal Bypass."
-	},
-	"homepage": {
-		"message": "Посетить домашнюю страницу Universal Bypass."
-	},
 	"options": {
 		"message": "Настройки"
 	},

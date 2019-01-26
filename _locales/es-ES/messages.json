@@ -11,9 +11,6 @@
 	"firstrunNoScript": {
 		"message": "No obstante, parece que estés utilizando NoScript o similar, con la que Universal Bypass no es compatible."
 	},
-	"firstrunWhatnow": {
-		"message": "Lo que puedes hacer ahora:"
-	},
 	"optionsInstantNavigation": {
 		"message": "Llevarme directamente al destino."
 	},

@@ -11,17 +11,8 @@
 	"firstrunNoScript": {
 		"message": "However, you seem to be using NoScript or similar, which Universal Bypass is not compatible with."
 	},
-	"firstrunWhatnow": {
-		"message": "What you can do now:"
-	},
-	"twitter": {
-		"message": "Follow Universal Bypass on Twitter to always be in the loop."
-	},
-	"exampleLinks": {
-		"message": "Check out example links to make sure Universal Bypass is working."
-	},
-	"homepage": {
-		"message": "Visit Universal Bypass' homepage."
+	"faq": {
+		"message": "Frequently Asked Questions (FAQ)"
 	},
 	"options": {
 		"message": "Options"

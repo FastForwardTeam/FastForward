@@ -380,7 +380,7 @@ if(document instanceof HTMLDocument)
 			xhr.send("id="+location.hash.replace("#",""))
 		}
 	})
-	hrefBypass(/2speed\\.net/file/|emulator\\.games\\/download\\.php/,()=>{
+	hrefBypass(/2speed\\.net\\/file\\/|emulator\\.games\\/download\\.php/,()=>{
 		window.setInterval=f=>sI(f,1)
 	})
 	//Insertion point 1 — insert bypasses running before the DOM is loaded above this comment

@@ -11,18 +11,6 @@
 	"firstrunNoScript": {
 		"message": "U lijkt NoScript of dergelijke te gebruiken, daarmee werkt Universal Bypass niet."
 	},
-	"firstrunWhatnow": {
-		"message": "Wat je nu kan doen:"
-	},
-	"twitter": {
-		"message": "Volg Universal Bypass op Twitter om altijd op de hoogte te blijven."
-	},
-	"exampleLinks": {
-		"message": "Bekijk de voorbeeld links om te kijken of Universal Bypass werkt."
-	},
-	"homepage": {
-		"message": "Bezoek Universal Bypass' startpagina."
-	},
 	"options": {
 		"message": "Opties"
 	},

@@ -11,9 +11,6 @@
 	"firstrunNoScript": {
 		"message": "물론, NoScript나 그와 비슷한 걸 쓰는 것 같지만, Universal Bypass는 그런 것들과 호환되지 않습니다."
 	},
-	"firstrunWhatnow": {
-		"message": "지금 할 수 있는 것들"
-	},
 	"optionsTrackerBypass": {
 		"message": "Apimon.de 로 추적 우회하기."
 	},

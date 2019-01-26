@@ -9,33 +9,60 @@
 		"message": "這真是令人驚嘆！"
 	},
 	"firstrunNoScript": {
-		"message": "然而，您似乎安裝了NoScript或類似的插件，導致與Universal Bypass造成衝突。"
-	},
-	"firstrunWhatnow": {
-		"message": "下一步該做些什麼："
-	},
-	"twitter": {
-		"message": "在 Twitter上追蹤Universal Bypass以此隨時獲得最新資訊。"
-	},
-	"exampleLinks": {
-		"message": "試試我們特製的示範連結，確保Universal Bypass能發揮其作用。"
-	},
-	"homepage": {
-		"message": "造訪Universal Bypass的官方首頁。"
+		"message": "然而，您似乎安裝了 NoScript 或類似的插件，導致與 Universal Bypass 造成衝突。"
 	},
 	"options": {
 		"message": "選項"
 	},
 	"optionsLink": {
-		"message": "設定Universal Bypass的選項"
+		"message": "設定 Universal Bypass 的選項"
 	},
 	"optionsEnabled": {
 		"message": "啟用網站繞過功能"
 	},
 	"optionsInstantNavigation": {
-		"message": "跳過詢問，立即帶我到目的地。"
+		"message": "跳過確認頁面，直接帶我到目的地。"
 	},
 	"optionsTrackerBypass": {
-		"message": "利用Apimon.de繞過隱私追蹤器。"
+		"message": "利用 Apimon.de 繞過隱私追蹤器。"
+	},
+	"optionsBlockIPLoggers": {
+		"message": "若實在無法繞過，直接禁止瀏覽器訪問IP記錄網站。"
+	},
+	"optionsCrowdBypass": {
+		"message": "對於無法繞過的短連結，直接帶我到短連結頁面。"
+	},
+	"privacyPolicy": {
+		"message": "隱私權政策"
+	},
+	"optionsUserscripts": {
+		"message": "自定義繞過規則"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "如果您能夠在 GitHub 上協助添加新的繞過規則，那就實在太好了，如此一來大家都能夠受惠於您。"
+	},
+	"beforeNavigate": {
+		"message": "您與目的地觸手可及。"
+	},
+	"beforeNavigateDestination": {
+		"message": "您的目的地是 %"
+	},
+	"beforeNavigateInfo": {
+		"message": "您希望下次 Universal Bypass 自動地帶您到目的地嗎?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass 防止您的IP被記錄。"
+	},
+	"blockedSubtitle": {
+		"message": "不希望Universal Bypass自動防止不法者獲取您的IP嗎?"
+	},
+	"crowdBypassed": {
+		"message": "或許您可以不用再等待了。"
+	},
+	"crowdBypassedInfo": {
+		"message": "其他的 Universal Bypass 用戶已經替您省下寶貴的時間，並回報該短連結重導向 %"
+	},
+	"crowdBypassedIgnore": {
+		"message": "該回報資訊有誤嗎?"
 	}
 }

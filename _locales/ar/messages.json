@@ -11,9 +11,6 @@
 	"firstrunNoScript": {
 		"message": "للأسف يبدو أنك تستخدم الـ NoScript أو احد الإضافات المشابهة، التي تكون غير متوافقة مع المتجاوز الشامل."
 	},
-	"firstrunWhatnow": {
-		"message": "ما الذي يمكنك القيام به اﻵن:"
-	},
 	"optionsInstantNavigation": {
 		"message": "قم بنقلي إلى الوجهات تلقائيًا."
 	},

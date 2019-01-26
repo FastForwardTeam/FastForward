@@ -11,9 +11,6 @@
 	"firstrunNoScript": {
 		"message": "แต่อย่างไรก็ตาม ดูเหมือนคุณกำลังใช้ NoScript หรืออะไรที่มันคล้ายๆกัน ซึ่ง Universal Bypass นั้นไม่เข้ากันกับพวกนี้"
 	},
-	"firstrunWhatnow": {
-		"message": "คุณทำอะไรได้บ้างในตอนนี้:"
-	},
 	"optionsBlockIPLoggers": {
 		"message": "หยุดตัวบันทึก IP ถ้าเขาไม่สามารถให้ผ่านไปได้"
 	},

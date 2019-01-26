@@ -11,9 +11,6 @@
 	"firstrunNoScript": {
 		"message": "Men du ser ut til å bruke NoScript eller noe lignende, som Universal Bypass ikke er kompatibel med."
 	},
-	"firstrunWhatnow": {
-		"message": "Det du kan gjøre nå:"
-	},
 	"optionsTrackerBypass": {
 		"message": "Hopp forbi sporere ved hjelp av Apimon.de."
 	},

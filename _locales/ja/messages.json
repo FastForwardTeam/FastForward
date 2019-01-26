@@ -11,9 +11,6 @@
 	"firstrunNoScript": {
 		"message": "あなたはNoScriptなどを使用しているようですが、ユニバーサルバイパスとは互換性がありません。"
 	},
-	"firstrunWhatnow": {
-		"message": "今できること："
-	},
 	"optionsInstantNavigation": {
 		"message": "即座にリンク先へ移動します。"
 	},

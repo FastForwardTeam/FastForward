@@ -11,9 +11,6 @@
 	"firstrunNoScript": {
 		"message": "Però, sembra che tu stia usando NoScript o simili, con le quali Universal Bypass non è compatibile."
 	},
-	"firstrunWhatnow": {
-		"message": "Cosa puoi fare ora:"
-	},
 	"optionsTrackerBypass": {
 		"message": "Bypass tracker utilizzando Apimon.de."
 	},
