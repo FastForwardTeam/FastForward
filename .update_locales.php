@@ -35,11 +35,11 @@ foreach(scandir("_locales") as $locale)
 		recursivelyDelete("_locales/{$locale}");
 		continue;
 	}
-	$arr = explode("-", $locale);
+	/*$arr = explode("-", $locale);
 	if(count($arr) == 2)
 	{
 		rename("_locales/{$locale}", "_locales/".$arr[0]);
-	}
+	}*/
 }
 $zip->close();
 unlink("bypass.zip");

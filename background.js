@@ -83,9 +83,13 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
-		return encodedRedirect(details.url.substr(details.url.indexOf("url=")+4))
+		let searchParams=new URL(details.url).searchParams
+		if(searchParams.has("url"))
+		{
+			return getRedirect(searchParams.get("url"))
+		}
 	}
-},{types:["main_frame"],urls:["*://*/st?api=*&url=*","*://*.zxro.com/u/*?url=*"]},["blocking"])
+},{types:["main_frame"],urls:["*://*/st?api=*&url=*","*://*.zxro.com/u/*?url=*", "*://*.raidcall.com.tw/direct.php?url=*"]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
@@ -125,9 +129,13 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
-		return getRedirect(atob(new URL(details.url).searchParams.get("u")))
+		let searchParams=new URL(details.url).searchParams
+		if(searchParams.has("u"))
+		{
+			return getRedirect(atob(new URL(details.url).searchParams.get("u")))
+		}
 	}
-},{types:["main_frame"],urls:["*://*.noriskdomain.com/*/analyze?u=*"]},["blocking"])
+},{types:["main_frame"],urls:["*://*.noriskdomain.com/*/analyze?*"]},["blocking"])
 
 //Install & Uninstall Actions
 brws.runtime.onInstalled.addListener(details=>{
