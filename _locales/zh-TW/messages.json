@@ -11,6 +11,9 @@
 	"firstrunNoScript": {
 		"message": "然而，您似乎安裝了 NoScript 或類似的插件，導致與 Universal Bypass 造成衝突。"
 	},
+	"faq": {
+		"message": "常見問答 (FAQ)"
+	},
 	"options": {
 		"message": "選項"
 	},

@@ -11,6 +11,9 @@
 	"firstrunNoScript": {
 		"message": "Cependant, vous semblez utiliser le module NoScript ou quelque chose de similaire, qui n'est pas compatible avec le contourneur universel."
 	},
+	"faq": {
+		"message": "Questions fréquemment posées (FAQ)"
+	},
 	"options": {
 		"message": "Réglages"
 	},

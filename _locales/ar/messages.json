@@ -9,7 +9,19 @@
 		"message": "أنت رائع!"
 	},
 	"firstrunNoScript": {
-		"message": "للأسف يبدو أنك تستخدم الـ NoScript أو احد الإضافات المشابهة، التي تكون غير متوافقة مع المتجاوز الشامل."
+		"message": "للاسف يبدو أنك تستخدم NoScript أو احد الاضافات المماثلة التي تكون غير متوافقة مع المتجاوز الشامل."
+	},
+	"faq": {
+		"message": "الأسئلة المتداولة"
+	},
+	"options": {
+		"message": "الخيارات"
+	},
+	"optionsLink": {
+		"message": "تغيير إعدادات المتجاوز الشامل."
+	},
+	"optionsEnabled": {
+		"message": "تمكين تجاوز مواقع الويب."
 	},
 	"optionsInstantNavigation": {
 		"message": "قم بنقلي إلى الوجهات تلقائيًا."
@@ -29,14 +41,23 @@
 	"optionsUserscripts": {
 		"message": "عمليات التجاوز المخصصة"
 	},
+	"optionsUserscriptsSubtitle": {
+		"message": "سيكون من الرائع إذا كنت تستطيع إرسال متجاوزات تعمل إلى صفحة الـ GitHub، حتى يستطيع اﻵخرين اﻹستفادة منها."
+	},
 	"beforeNavigate": {
 		"message": "انت الأن قريب من وجهتك."
 	},
 	"beforeNavigateDestination": {
 		"message": "وجهتك هي %"
 	},
+	"beforeNavigateInfo": {
+		"message": "هل تريد من المتجاوز الشامل إعادة توجيهك علي الفور الي وجهتك؟"
+	},
 	"blockedTitle": {
 		"message": "المتجاوز الشامل قام بمنع تسجيل عنوان الـ IP الخاص بك."
+	},
+	"blockedSubtitle": {
+		"message": "لا تريد من المتجاوز الشامل ان يمنع الجهات السيئه من الحصول علي الأي بي الخاص بك ؟"
 	},
 	"crowdBypassed": {
 		"message": "ربما لن تحتاج للإنتظار بعد الأن!"

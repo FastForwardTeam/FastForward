@@ -11,6 +11,9 @@
 	"firstrunNoScript": {
 		"message": "Det verkar som om du använder NoScript eller något liknande vilket Universal Bypass inte är kompatibel med."
 	},
+	"faq": {
+		"message": "Vanliga frågor (FAQ)"
+	},
 	"options": {
 		"message": "Alternativ"
 	},

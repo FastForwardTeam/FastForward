@@ -3,13 +3,25 @@
 		"message": "No pierdas el tiempo para acceder. Universal Bypass omite automáticamente los molestos acortadores de enlaces."
 	},
 	"firstrunTitle": {
-		"message": "Gracias por instalar Universal Bypass!"
+		"message": "¡Gracias por instalar Universal Bypass!"
 	},
 	"firstrunSubtitle": {
 		"message": "¡Eres increíble!"
 	},
 	"firstrunNoScript": {
 		"message": "No obstante, parece que estés utilizando NoScript o similar, con la que Universal Bypass no es compatible."
+	},
+	"faq": {
+		"message": "Preguntas más frecuentes"
+	},
+	"options": {
+		"message": "Opciones"
+	},
+	"optionsLink": {
+		"message": "Configura Universal Bypass."
+	},
+	"optionsEnabled": {
+		"message": "Activar bypass pagina web."
 	},
 	"optionsInstantNavigation": {
 		"message": "Llevarme directamente al destino."
@@ -27,7 +39,10 @@
 		"message": "Política de privacidad"
 	},
 	"optionsUserscripts": {
-		"message": "Circunvalaciones personalizadas"
+		"message": "Bypasses personalizadas"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "Sería bueno que pudieras enviarle a GitHub las bifurcaciones (fork) que funcionan, para que otros puedan beneficiarse de ello."
 	},
 	"beforeNavigate": {
 		"message": "Ya casi estas en tu destino."
@@ -35,8 +50,14 @@
 	"beforeNavigateDestination": {
 		"message": "Tu dirección de destino es %"
 	},
+	"beforeNavigateInfo": {
+		"message": "¿Desea que Universal Bypass lo redirija instantáneamente a su destino?"
+	},
 	"blockedTitle": {
 		"message": "Bypass Universal evitó que su IP se registrara."
+	},
+	"blockedSubtitle": {
+		"message": "¿No quiere que Universal Bypass impida que los actores malos obtengan su IP?"
 	},
 	"crowdBypassed": {
 		"message": "Puede que no tengas que esperar!"
