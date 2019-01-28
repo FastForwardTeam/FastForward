@@ -83,10 +83,10 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
-		let searchParams=new URL(details.url).searchParams
-		if(searchParams.has("url"))
+		let url=new URL(details.url)
+		if(url.searchParams.has("url"))
 		{
-			return getRedirect(searchParams.get("url"))
+			return getRedirect(url.searchParams.get("url")+url.hash)
 		}
 	}
 },{types:["main_frame"],urls:["*://*/st?api=*&url=*","*://*.zxro.com/u/*?url=*", "*://*.raidcall.com.tw/direct.php?url=*"]},["blocking"])
@@ -129,10 +129,10 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
-		let searchParams=new URL(details.url).searchParams
-		if(searchParams.has("u"))
+		let url=new URL(details.url)
+		if(url.searchParams.has("u"))
 		{
-			return getRedirect(atob(new URL(details.url).searchParams.get("u")))
+			return getRedirect(atob(url.searchParams.get("u"))+url.hash)
 		}
 	}
 },{types:["main_frame"],urls:["*://*.noriskdomain.com/*/analyze?*"]},["blocking"])
