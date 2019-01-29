@@ -869,6 +869,11 @@ if(document instanceof HTMLDocument)
 				document.querySelector(".redirect_url > div[onclick]").click()
 				return finish()
 			}
+			//Shorte.st
+			if(document.querySelector(".first-img[alt='Shorte.st']"))
+			{
+				window.setInterval=f=>sI(f,400)
+			}
 			let t=document.querySelector("title")
 			if(t)
 			{
