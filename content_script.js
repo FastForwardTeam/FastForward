@@ -870,9 +870,10 @@ if(document instanceof HTMLDocument)
 				return finish()
 			}
 			//Shorte.st
-			if(document.querySelector(".first-img[alt='Shorte.st']"))
+			if(typeof app!="undefined"&&document.querySelector(".first-img[alt='Shorte.st']"))
 			{
 				window.setInterval=f=>sI(f,400)
+				window.decodeURIComponent=c=>safelyNavigate(c)
 			}
 			let t=document.querySelector("title")
 			if(t)
