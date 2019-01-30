@@ -83,11 +83,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
-		let url=new URL(details.url)
-		if(url.searchParams.has("url"))
-		{
-			return getRedirect(url.searchParams.get("url")+url.hash)
-		}
+		return getRedirect(details.url.substr(details.url.indexOf("url=")+4))
 	}
 },{types:["main_frame"],urls:["*://*/st?api=*&url=*","*://*.zxro.com/u/*?url=*", "*://*.raidcall.com.tw/direct.php?url=*"]},["blocking"])
 

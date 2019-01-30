@@ -3,16 +3,19 @@
 		"message": "Jangan habiskan waktu anda dengan menaati aturan. Universal Bypass secara otomatis akan melompati link pemendek yang menyebalkan."
 	},
 	"firstrunTitle": {
-		"message": "Terimakasih anda telah menginstal Universal Bypass!"
+		"message": "Terima kasih anda sudah menginstal Universal Bypass!"
 	},
 	"firstrunSubtitle": {
-		"message": "Anda benar-benar luar biasa !"
+		"message": "Anda luar biasa!"
 	},
 	"firstrunNoScript": {
 		"message": "Akan tetapi, anda sepertinya menggunakan NoScript atau menyerupai itu, Karena itu Universal Bypass tidak kompatibel dengannya."
 	},
+	"faq": {
+		"message": "Pertanyaan yang Sering Diajukan\n(FAQ)"
+	},
 	"options": {
-		"message": "Opsi"
+		"message": "Pilihan"
 	},
 	"optionsLink": {
 		"message": "Mengubah opsi Universal Bypass."
