@@ -1,0 +1,71 @@
+{
+	"appDesc": {
+		"message": "Не си губете времето със спазването. Universal Bypass автоматично прескача досадни съкращения на връзки."
+	},
+	"firstrunTitle": {
+		"message": "Благодарим ви за инсталирането на Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "Ти си невероятен!"
+	},
+	"firstrunNoScript": {
+		"message": "Въпреки това изглежда, че използвате NoScript или подобен, с който Universal Bypass не е съвместим."
+	},
+	"faq": {
+		"message": "Често задавани въпроси (FAQ)"
+	},
+	"options": {
+		"message": "Настроики"
+	},
+	"optionsLink": {
+		"message": "Променете опциите на Universal Bypass."
+	},
+	"optionsEnabled": {
+		"message": "Активирайте заобикалянето на уебсайтовете."
+	},
+	"optionsInstantNavigation": {
+		"message": "Незабавно ме отведе до дестинации."
+	},
+	"optionsTrackerBypass": {
+		"message": "Заобиколете тракерите, използвайки Apimon.de."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Блокирайте IP регистраторите, ако не могат да бъдат прескочени."
+	},
+	"optionsCrowdBypass": {
+		"message": "Дайте и вземете дестинациите на непроходимите сайтове."
+	},
+	"privacyPolicy": {
+		"message": "Декларация за поверителност"
+	},
+	"optionsUserscripts": {
+		"message": "Персонализирани байпаси"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "Би било хубаво, ако можете да изпратите работещи байпаси на GitHub, за да могат другите да се възползват от тях."
+	},
+	"beforeNavigate": {
+		"message": "Почти сте на местоназначението си."
+	},
+	"beforeNavigateDestination": {
+		"message": "Вашата дестинация е %"
+	},
+	"beforeNavigateInfo": {
+		"message": "Искате ли Universal Bypass незабавно да ви пренасочи към вашата дестинация?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass предотврати регистрирането на вашия IP адрес."
+	},
+	"blockedSubtitle": {
+		"message": "Не искате Universal Bypass да попречи на лошите хора да получат вашия IP адрес?"
+	},
+	"crowdBypassed": {
+		"message": "Може да не се наложи да чакате!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Други потребители на Universal Bypass вече са ви чакали и съобщиха, че това води до %"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Не беше ли това правилно?"
+	}
+}
