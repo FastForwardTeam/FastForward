@@ -646,6 +646,10 @@ if(document instanceof HTMLDocument)
 				f.setAttribute("action",f.getAttribute("action").replace("../out2/","../outlink/"))
 				f.submit()
 			})
+			domainBypass("douploads.com",()=>{
+				if(document.querySelectorAll(".seconds").length==1)
+					document.querySelector(".seconds").textContent="1"
+			})
 			//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 			if(bypassed)
 			{
