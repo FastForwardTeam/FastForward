@@ -383,6 +383,9 @@ if(document instanceof HTMLDocument)
 	hrefBypass(/2speed\\.net\\/file\\/|emulator\\.games\\/download\\.php/,()=>{
 		window.setInterval=f=>sI(f,1)
 	})
+	hrefBypass(/id-share19\\.com/,()=>{
+		window.setTimeout=f=>sT(f,1)
+	})
 	//Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
 	if(bypassed)
 	{
@@ -534,7 +537,6 @@ if(document instanceof HTMLDocument)
 			if(a)
 				safelyNavigate(a.href)
 		})
-		domainBypass("id-share19.com",()=>window.setTimeout=(f)=>sT(f,1))
 		domainBypass("idnation.net",()=>{
 			let b=document.querySelector("#linko[href]")
 			if(b)
