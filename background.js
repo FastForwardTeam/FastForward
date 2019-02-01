@@ -79,7 +79,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	return {redirectUrl:brws.runtime.getURL("html/crowd-bypassed.html")+details.url.substr(43)}
 },{types:["main_frame"],urls:["https://universal-bypass.org/crowd-bypassed?*"]},["blocking"])
 
-//Bypasses of sites where the destination is in the request
+//Preflight Bypasses
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
