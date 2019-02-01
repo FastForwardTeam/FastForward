@@ -11,6 +11,9 @@
 	"firstrunNoScript": {
 		"message": "Тем не менее, похоже, что Вы используете NoScript или что-то подобное, с чем Universal Bypass несовместим."
 	},
+	"faq": {
+		"message": "Часто задаваемые вопросы (FAQ)"
+	},
 	"options": {
 		"message": "Настройки"
 	},
