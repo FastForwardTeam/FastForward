@@ -13,7 +13,21 @@ if(document instanceof HTMLDocument)
 		ODP=(t,p,o)=>{try{Object.defineProperty(t,p,o)}catch(e){console.trace("[Universal Bypass] Couldn't define",p)}},
 		//Copying eval, etc. to prevent issues with other extensions, such as uBlockOrigin. Also, note that this is the page level, so there are no security risks in using eval.
 		ev=eval,sT=setTimeout,sI=setInterval,
-		isGoodLink=link=>link&&link!=location.href&&link.substr(0,11)!="javascript:",
+		isGoodLink=link=>{
+			if(!link||link==location.href||link.substr(0,11)=="javascript:")
+			{
+				return false
+			}
+			try
+			{
+				new URL(link)
+			}
+			catch(e)
+			{
+				return false
+			}
+			return true
+		},
 		navigated=false,
 		unsafelyNavigate=target=>{
 			if(navigated)
@@ -422,16 +436,22 @@ if(document instanceof HTMLDocument)
 		domainBypass("admy.link",()=>{
 			let f=document.querySelector(".edit_link")
 			if(f)
+			{
 				f.submit()
+			}
 		})
 		domainBypass("ysear.ch",()=>{
 			let b=document.querySelector("#NextVideo[href]")
 			if(b)
+			{
 				safelyNavigate(b.href)
+			}
 		})
 		domainBypass("1ink.cc",()=>{
 			if(typeof SkipAd=="function")
+			{
 				SkipAd()
+			}
 		})
 		domainBypass("losstor.com",()=>{
 			let b=document.getElementById("re_link")
@@ -440,21 +460,6 @@ if(document instanceof HTMLDocument)
 				window.open=safelyNavigate
 				b.click()
 			}
-		})
-		domainBypass("bagisoft.net",()=>{
-			let b=document.getElementById("makingdifferenttimer")
-			if(b)
-			{
-				window.open=safelyNavigate
-				b.click()
-			}
-			else
-				jQuery.prototype.animateProgress=(p,f)=>f()
-		})
-		domainBypass("skinnycat.net",()=>{
-			let b=document.querySelector("#dl[href]")
-			if(b)
-				safelyNavigate(b.href)
 		})
 		domainBypass("fshare.vn",()=>{
 			if("$" in window)
@@ -660,6 +665,28 @@ if(document instanceof HTMLDocument)
 				form.submit()
 				return finish()
 			})
+			domainBypass("goou.in",()=>{
+				let a=document.querySelector("div#download_link > a#download[href]")
+				if(a)
+				{
+					safelyNavigate(a.href)
+				}
+			})
+			domainBypass("skinnycat.org",()=>{
+				let a=document.querySelector("a.redirect[href]")
+				if(a)
+				{
+					safelyNavigate(a.href)
+				}
+			})
+			domainBypass("ryn.cc",()=>{
+				if(typeof countdown=="function")
+				{
+					document.write('<div id="link"><p id="timer">0</p></div>')
+					countdown()
+					safelyNavigate(document.querySelector("#link > a").href)
+				}
+			})
 			//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 			if(bypassed)
 			{
@@ -732,7 +759,7 @@ if(document instanceof HTMLDocument)
 			{
 				let cLT=sI(()=>{
 					if((document.querySelectorAll("img#pleasewait").length&&document.querySelector(".wait"))
-						||document.getElementById("showlink")
+					||document.getElementById("showlink")
 					||document.getElementById("download")
 					||document.getElementsByTagName("style='margin-top:").length
 					||document.querySelector(".Visit_Link")//yametesenpai.xyz
@@ -742,9 +769,13 @@ if(document instanceof HTMLDocument)
 						clearInterval(cLT)
 						window.open=safelyNavigate
 						if(typeof changeLink=="function")
+						{
 							changeLink()
+						}
 						else if(document.getElementById("link-download"))//hightech.web.id
+						{
 							safelyNavigate(document.getElementById("link-download").href)
+						}
 					}
 				},100)
 			}
@@ -892,13 +923,29 @@ if(document instanceof HTMLDocument)
 			let t=document.querySelector("title")
 			if(t)
 			{
-				if(t.textContent.trim()=="Viid.su")//Viid.su
+				t=t.textContent.trim()
+				if(t=="Viid.su")//Viid.su
 				{
 					let b=document.getElementById("link-success-button")
 					if(b&&b.getAttribute("data-url"))
 					{
 						safelyNavigate(b.getAttribute("data-url"))
 						return finish()
+					}
+				}
+				else
+				{
+					let b=document.querySelector("a#makingdifferenttimer[href]")
+					if(b)
+					{
+						if(isGoodLink(t))
+						{
+							unsafelyNavigate(t)
+						}
+						else
+						{
+							safelyNavigate(b.href)
+						}
 					}
 				}
 			}
@@ -927,6 +974,10 @@ if(document instanceof HTMLDocument)
 										if(!a)
 										{
 											a=document.querySelector(".skip-ad a[href]")
+											if(!a)
+											{
+												a=document.querySelector("[enlace]")//adigp.com
+											}
 										}
 										if(a)
 										{
@@ -934,6 +985,10 @@ if(document instanceof HTMLDocument)
 											if(!isGoodLink(h)&&a.hasAttribute("data-href"))//cuio.io
 											{
 												h=a.getAttribute("data-href")
+											}
+											if(!isGoodLink(h)&&a.hasAttribute("enlace"))
+											{
+												h=a.getAttribute("enlace")
 											}
 											if(isGoodLink(h))
 											{
