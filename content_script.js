@@ -652,6 +652,14 @@ if(document instanceof HTMLDocument)
 				if(document.querySelectorAll(".seconds").length==1)
 					document.querySelector(".seconds").textContent="1"
 			})
+			domainBypass("elsfile.org",()=>{
+				let form=document.createElement("form")
+				form.method="POST"
+				form.innerHTML='<input type="hidden" name="op" value="download1"><input type="hidden" name="usr_login" value="C"><input type="hidden" name="id" value="'+location.pathname.toString().substr(1)+'"><input type="hidden" name="fname" value="'+document.querySelectorAll("div#container > div > div > table > tbody > tr > td")[2].textContent+'"><input type="hidden" name="referer" value="q"><input type="hidden" name="method_free" value="Free Download">'
+				form=document.documentElement.appendChild(form)
+				form.submit()
+				return finish()
+			})
 			//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 			if(bypassed)
 			{

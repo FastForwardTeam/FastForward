@@ -11,6 +11,12 @@
 	"firstrunNoScript": {
 		"message": "あなたはNoScriptなどを使用しているようですが、ユニバーサルバイパスとは互換性がありません。"
 	},
+	"options": {
+		"message": "オプション"
+	},
+	"optionsEnabled": {
+		"message": "ウェブサイトのバイパスを有効化する"
+	},
 	"optionsInstantNavigation": {
 		"message": "即座にリンク先へ移動します。"
 	},
