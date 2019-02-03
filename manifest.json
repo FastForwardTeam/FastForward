@@ -14,7 +14,6 @@
 	"homepage_url": "https://universal-bypass.org/",
 	"version": "9.5.1",
 	"author": "Tim \"timmyRS\" Speckhals",
-	"incognito": "split",
 	"permissions": [
 		"storage",
 		"webRequest",
@@ -37,8 +36,7 @@
 		"default_popup": "html/options.html"
 	},
 	"background": {
-		"scripts": ["background.js"],
-		"persistent": true
+		"scripts": ["background.js"]
 	},
 	"content_scripts": [
 		{
@@ -47,11 +45,6 @@
 			"run_at": "document_start"
 		}
 	],
-	"browser_specific_settings": {
-		"gecko": {
-			"id": "dev@universal-bypass.org"
-		}
-	},
 	"web_accessible_resources": [
 		"html/before-navigate.html",
 		"html/blocked.html",
