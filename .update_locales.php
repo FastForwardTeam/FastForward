@@ -18,6 +18,10 @@ function recursivelyDelete($file)
 	}
 }
 
+if(!file_exists("bypass.zip"))
+{
+	die("bypass.zip not found.\n");
+}
 $zip = new ZipArchive();
 $zip->open("bypass.zip") or die("Failed to open bypass.zip\n");
 rename("_locales/en/messages.json", "messages.json");
@@ -30,7 +34,7 @@ foreach(scandir("_locales") as $locale)
 		continue;
 	}
 	unlink("_locales/{$locale}/marketing.json");
-	if(file_get_contents("_locales/{$locale}/messages.json") == "[\n\n]")
+	if(file_get_contents("_locales/{$locale}/messages.json") == "{\n\n}")
 	{
 		recursivelyDelete("_locales/{$locale}");
 		continue;
