@@ -17,9 +17,6 @@
 	"options": {
 		"message": "الخيارات"
 	},
-	"optionsLink": {
-		"message": "تغيير إعدادات المتجاوز الشامل."
-	},
 	"optionsEnabled": {
 		"message": "تمكين تجاوز مواقع الويب."
 	},

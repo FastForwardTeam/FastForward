@@ -17,9 +17,6 @@
 	"options": {
 		"message": "Настройки"
 	},
-	"optionsLink": {
-		"message": "Изменить настройки Universal Bypass."
-	},
 	"optionsEnabled": {
 		"message": "Включить обходы веб-сайтов."
 	},

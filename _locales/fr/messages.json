@@ -17,9 +17,6 @@
 	"options": {
 		"message": "Réglages"
 	},
-	"optionsLink": {
-		"message": "Changer les options de Universal Bypass."
-	},
 	"optionsEnabled": {
 		"message": "Activez les contournements de site Web."
 	},

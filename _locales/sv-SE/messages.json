@@ -17,9 +17,6 @@
 	"options": {
 		"message": "Alternativ"
 	},
-	"optionsLink": {
-		"message": "Ändra alternativen för Universal Bypass."
-	},
 	"optionsEnabled": {
 		"message": "Aktivera förbikopplingar av webbplats."
 	},

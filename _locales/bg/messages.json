@@ -17,9 +17,6 @@
 	"options": {
 		"message": "Настроики"
 	},
-	"optionsLink": {
-		"message": "Променете опциите на Universal Bypass."
-	},
 	"optionsEnabled": {
 		"message": "Активирайте заобикалянето на уебсайтовете."
 	},
