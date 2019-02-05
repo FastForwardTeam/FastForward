@@ -196,7 +196,7 @@ if(document instanceof HTMLDocument)
 			}
 		})
 		//Safelink
-		let actual_safelink=forced_safelink={counter:0}
+		let actual_safelink=forced_safelink={counter:0,adblock:false}
 		ODP(window,"safelink",
 		{
 			set:_=>{
@@ -447,7 +447,7 @@ if(document instanceof HTMLDocument)
 				safelyNavigate(b.href)
 			}
 		})
-		domainBypass("1ink.cc",()=>{
+		hrefBypass(/1ink\\.(cc|live)/,()=>{
 			if(typeof SkipAd=="function")
 			{
 				SkipAd()
@@ -863,6 +863,14 @@ if(document instanceof HTMLDocument)
 			{
 				safelyNavigate(document.querySelector("a.redirectBTN.disabled").href)
 				return finish()
+			}
+			if(typeof generate=="function")//lewat.wibuindo.com
+			{
+				let b=document.querySelector("#download > a.akani[href]")
+				if(b)
+				{
+					safelyNavigate(b.href)
+				}
 			}
 			if(document.querySelector(".shortened_link a[href][ng-href][target='_blank']"))//Go2to.com,Go2too.com,Golink.to
 			{
