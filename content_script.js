@@ -554,8 +554,10 @@ if(document instanceof HTMLDocument)
 		})
 		domainBypass("ux9.de",()=>{
 			let m=document.querySelector("meta[http-equiv='refresh'][content]")
-			if(m&&m.getAttribute("content").indexOf(";url=http")>-1)
-			safelyNavigate(m.getAttribute("content").split(";url=")[1])
+			if(m&&m.content.indexOf(";url=http"))
+			{
+				safelyNavigate(m.content.split(";url=")[1])
+			}
 		})
 		domainBypass("telolet.in",()=>{
 			let b=document.querySelector("a#skip[href]")
@@ -886,13 +888,34 @@ if(document instanceof HTMLDocument)
 					s.style.display="block"
 				}
 			}
-			if(document.querySelector(".img-responsive[alt='Gets URL']")&&typeof x!="undefined")//GetsURL.com
+			if(typeof x!="undefined")
 			{
-				let b=document.getElementById("link")
-				if(b)
+				if(document.querySelector("a.navbar-brand.logo-image[href='/'] > img[src='/img/4.png']"))//gslink.co
 				{
-					safelyNavigate(b.href+"&ab"+x)
-					return finish()
+					let a=document.querySelector("a.btnx[href][onclick]")
+					if(a)
+					{
+						safelyNavigate(a.href+"&ab=1")
+						return finish()
+					}
+					else
+					{
+						let b=document.querySelector("form[method='POST'] > input.btn[type='submit'][name='btn']")
+						if(b)
+						{
+							b.click()
+							return finish()
+						}
+					}
+				}
+				else if(document.querySelector(".img-responsive[alt='Gets URL']"))//gsul.me
+				{
+					let b=document.getElementById("link")
+					if(b)
+					{
+						safelyNavigate(b.href+"&ab=1")
+						return finish()
+					}
 				}
 			}
 			if(document.querySelector(".top-bar a[href='https://linkvertise.net']")&&typeof app!="undefined"&&app.handleRedirect)//Linkvertise.net

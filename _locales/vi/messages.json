@@ -11,11 +11,23 @@
 	"firstrunNoScript": {
 		"message": "Tuy nhiên, bạn dường như sử dụng NoScript hoặc tương tự, mà Universal Bypass không tương thích với."
 	},
+	"faq": {
+		"message": "Câu Hỏi Thường Gặp (FAQ)"
+	},
+	"options": {
+		"message": "Tùy chỉnh"
+	},
+	"optionsEnabled": {
+		"message": "Bật bỏ qua website."
+	},
+	"optionsInstantNavigation": {
+		"message": "Lập tức dẫn tôi đến đích đến."
+	},
 	"optionsTrackerBypass": {
 		"message": "Bỏ qua trackers bằng cách sử dụng Apimon.de."
 	},
 	"optionsBlockIPLoggers": {
-		"message": "Chặn IP Logger nếu chúng không thể bỏ qua."
+		"message": "Chặn IP Logger nếu nó không thể bỏ qua."
 	},
 	"optionsCrowdBypass": {
 		"message": "Gửi và lấy đích đến của rút gọn chưa thế bypass."
@@ -24,10 +36,25 @@
 		"message": "Chính sách bảo mật"
 	},
 	"optionsUserscripts": {
-		"message": "Tùy chỉnh Bypasses"
+		"message": "Bypasses tùy chỉnh"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "Sẽ thật tuyệt vời nếu bạn có thể gửi Code bỏ qua hoạt động được lên GitHub, để giúp đỡ người khác."
+	},
+	"beforeNavigate": {
+		"message": "Bạn sắp đến đích đến."
+	},
+	"beforeNavigateDestination": {
+		"message": "Điểm đến của bạn là %"
+	},
+	"beforeNavigateInfo": {
+		"message": "Bạn có muốn Universal Bypass chuyển hướng bạn đến đích đến của bạn ngay lập tức?"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass đã ngăn chặn IP của bạn đăng nhập."
+		"message": "Universal Bypass đã ngăn chặn IP của bạn bị ghi lại."
+	},
+	"blockedSubtitle": {
+		"message": "Không muốn Universal Bypass ngăn kẻ xấu lấy được IP của bạn?"
 	},
 	"crowdBypassed": {
 		"message": "Bạn không cần phải đợi!"
