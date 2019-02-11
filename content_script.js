@@ -394,7 +394,7 @@ if(document instanceof HTMLDocument)
 			xhr.send("id="+location.hash.replace("#",""))
 		}
 	})
-	hrefBypass(/2speed\\.net\\/file\\/|emulator\\.games\\/download\\.php/,()=>{
+	hrefBypass(/2speed\\.net\\/file\\/|emulator\\.games\\/download\\.php|firefaucet\\.win\\/l\\//,()=>{
 		window.setInterval=f=>sI(f,1)
 	})
 	hrefBypass(/id-share19\\.com/,()=>{
