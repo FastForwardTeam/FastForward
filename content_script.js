@@ -394,10 +394,10 @@ if(document instanceof HTMLDocument)
 			xhr.send("id="+location.hash.replace("#",""))
 		}
 	})
-	hrefBypass(/2speed\\.net\\/file\\/|emulator\\.games\\/download\\.php|firefaucet\\.win\\/l\\//,()=>{
+	hrefBypass(/firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php|2speed\\.net\\/file\\//,()=>{
 		window.setInterval=f=>sI(f,1)
 	})
-	hrefBypass(/id-share19\\.com/,()=>{
+	hrefBypass(/datei\\.to|id-share19\\.com/,()=>{
 		window.setTimeout=f=>sT(f,1)
 	})
 	//Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
