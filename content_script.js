@@ -1044,13 +1044,12 @@ if(document instanceof HTMLDocument)
 					},50)
 					domainBypass("oke.io",()=>window.setInterval=f=>sI(f,1))
 					clearInterval(dT)
-					finish()
 				}
 			},100)
 			setTimeout(()=>{
 				clearInterval(dT)
 				finish()
-			},3000)
+			},30000)
 		})`
 		let dO=new MutationObserver(mutations=>{
 			if(document.documentElement.hasAttribute("data-universal-bypass-stop-watching"))
@@ -1090,7 +1089,6 @@ if(document instanceof HTMLDocument)
 				xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
 				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
 				xhr.send("domain="+encodeURIComponent(domain)+"&path="+encodeURIComponent(location.pathname.toString().substr(1))+"&target="+encodeURIComponent(target))
-				dO.disconnect()
 			}
 			else if(document.documentElement.hasAttribute("data-universal-bypass-adlinkfly-info"))
 			{
