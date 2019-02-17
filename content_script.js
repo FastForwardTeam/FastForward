@@ -93,21 +93,14 @@ if(document instanceof HTMLDocument)
 				}
 				else
 				{
-					let xhr=new XMLHttpRequest()
-					xhr.onreadystatechange=()=>{
-						if(xhr.readyState==4&&xhr.status==200&&xhr.responseText!="")
+					document.documentElement.setAttribute("data-universal-bypass-crowd-query","")
+					let iT=setInterval(()=>{
+						if(document.documentElement.hasAttribute("data-universal-bypass-crowd-queried"))
 						{
-							location.href="https://universal-bypass.org/crowd-bypassed?target="+encodeURIComponent(xhr.responseText)+"&back="+encodeURIComponent(location.href)
-							//The background script will intercept the request and redirect to html/crowd-bypassed.html because we can't redirect to extension urls in this scope.
-						}
-						else
-						{
+							document.documentElement.removeAttribute("data-universal-bypass-crowd-queried")
 							f()
 						}
-					}
-					xhr.open("POST","https://universal-bypass.org/crowd/query_v1",true)
-					xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
-					xhr.send("domain="+encodeURIComponent(domain)+"&path="+encodeURIComponent(location.pathname.toString().substr(1)))
+					},20)
 				}
 			}
 		},
@@ -116,16 +109,14 @@ if(document instanceof HTMLDocument)
 			{
 				if(crowdEnabled)
 				{
-					let xhr=new XMLHttpRequest()
-					xhr.onreadystatechange=()=>{
-						if(xhr.readyState==4)
+					document.documentElement.setAttribute("data-universal-bypass-crowd-contribute",target)
+					let iT=setInterval(()=>{
+						if(document.documentElement.hasAttribute("data-universal-bypass-crowd-contributed"))
 						{
+							document.documentElement.removeAttribute("data-universal-bypass-crowd-contributed")
 							unsafelyNavigate(target)
 						}
-					}
-					xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
-					xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
-					xhr.send("domain="+encodeURIComponent(domain)+"&path="+encodeURIComponent(location.pathname.toString().substr(1))+"&target="+encodeURIComponent(target))
+					},20)
 				}
 				else
 				{
@@ -946,10 +937,24 @@ if(document instanceof HTMLDocument)
 				return finish()
 			}
 			//Shorte.st
-			if(typeof app!="undefined"&&document.querySelector(".first-img[alt='Shorte.st']"))
+			if(typeof app!="undefined"&&document.querySelector(".skip-add-container .first-img[alt='Shorte.st']"))
 			{
-				window.setInterval=f=>sI(f,400)
-				window.decodeURIComponent=c=>safelyNavigate(c)
+				window.setInterval=f=>sI(f,500)
+				let dUC=window.decodeURIComponent
+				window.decodeURIComponent=c=>{
+					c=dUC(c)
+					safelyNavigate(c)
+					return c
+				}
+				crowdBypass(()=>{
+					window.decodeURIComponent=c=>{
+						c=dUC(c)
+						document.querySelector(".skip-add-container").textContent=""
+						contributeAndNavigate(c)
+						return c
+					}
+				})
+				return
 			}
 			let t=document.querySelector("title")
 			if(t)
@@ -1028,7 +1033,7 @@ if(document instanceof HTMLDocument)
 												contributeAndNavigate(h)
 											}
 										}
-									},50)
+									},20)
 								})
 							}
 							else
@@ -1048,7 +1053,46 @@ if(document instanceof HTMLDocument)
 			},3000)
 		})`
 		let dO=new MutationObserver(mutations=>{
-			if(document.documentElement.hasAttribute("data-universal-bypass-adlinkfly-info"))
+			if(document.documentElement.hasAttribute("data-universal-bypass-stop-watching"))
+			{
+				document.documentElement.removeAttribute("data-universal-bypass-stop-watching")
+				dO.disconnect()
+			}
+			else if(document.documentElement.hasAttribute("data-universal-bypass-crowd-query"))
+			{
+				document.documentElement.removeAttribute("data-universal-bypass-crowd-query")
+				let xhr=new XMLHttpRequest()
+				xhr.onreadystatechange=()=>{
+					if(xhr.readyState==4&&xhr.status==200&&xhr.responseText!="")
+					{
+						location.href=brws.runtime.getURL("html/crowd-bypassed.html")+"?target="+encodeURIComponent(xhr.responseText)+"&back="+encodeURIComponent(location.href)
+					}
+					else
+					{
+						document.documentElement.setAttribute("data-universal-bypass-crowd-queried","")
+					}
+				}
+				xhr.open("POST","https://universal-bypass.org/crowd/query_v1",true)
+				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+				xhr.send("domain="+encodeURIComponent(domain)+"&path="+encodeURIComponent(location.pathname.toString().substr(1)))
+			}
+			else if(document.documentElement.hasAttribute("data-universal-bypass-crowd-contribute"))
+			{
+				let target=document.documentElement.getAttribute("data-universal-bypass-crowd-contribute"),
+				xhr=new XMLHttpRequest()
+				document.documentElement.removeAttribute("data-universal-bypass-crowd-contribute")
+				xhr.onreadystatechange=()=>{
+					if(xhr.readyState==4)
+					{
+						document.documentElement.setAttribute("data-universal-bypass-crowd-contributed","")
+					}
+				}
+				xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
+				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+				xhr.send("domain="+encodeURIComponent(domain)+"&path="+encodeURIComponent(location.pathname.toString().substr(1))+"&target="+encodeURIComponent(target))
+				dO.disconnect()
+			}
+			else if(document.documentElement.hasAttribute("data-universal-bypass-adlinkfly-info"))
 			{
 				document.documentElement.removeAttribute("data-universal-bypass-adlinkfly-info")
 				let xhr=new XMLHttpRequest(),t="",iu=location.href
@@ -1075,13 +1119,13 @@ if(document instanceof HTMLDocument)
 				xhr.open("GET", iu+"info", true)
 				xhr.send()
 			}
-			else if(document.documentElement.hasAttribute("data-universal-bypass-stop-watching"))
-			{
-				document.documentElement.removeAttribute("data-universal-bypass-stop-watching")
-				dO.disconnect()
-			}
-		});
-		dO.observe(document.documentElement, {attributes: true})
+		}),
+		domain=location.hostname
+		if(domain.substr(0,4)=="www.")
+		{
+			domain=domain.substr(4)
+		}
+		dO.observe(document.documentElement,{attributes:true})
 		script.innerHTML+="\n"+res.userscript+"\n})()"
 		script=document.documentElement.appendChild(script)
 		setTimeout(()=>document.documentElement.removeChild(script),10)

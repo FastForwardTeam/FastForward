@@ -11,6 +11,9 @@
 	"firstrunNoScript": {
 		"message": "U lijkt NoScript of dergelijke te gebruiken, daarmee werkt Universal Bypass niet."
 	},
+	"faq": {
+		"message": "Veelgestelde Vragen (FAQ)"
+	},
 	"options": {
 		"message": "Opties"
 	},
