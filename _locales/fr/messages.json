@@ -27,19 +27,19 @@
 		"message": "Contourner les traqueurs en utilisant Apimon.de."
 	},
 	"optionsBlockIPLoggers": {
-		"message": "Bloque les enregistreurs d’IP si ils ne peuvent être contournés."
+		"message": "Bloque les enregistreurs d’IP si ils ne peuvent pas êtres contournés."
 	},
 	"optionsCrowdBypass": {
-		"message": "Donner et prendre les cibles des raccourcisseurs incontournables."
+		"message": "Fournir et acquérir les cibles des raccourcisseurs incontournables."
 	},
 	"privacyPolicy": {
-		"message": "Politique Vie Privée"
+		"message": "Politique de Vie Privée"
 	},
 	"optionsUserscripts": {
-		"message": "Bypass sur mesure"
+		"message": "Contournement sur mesure"
 	},
 	"optionsUserscriptsSubtitle": {
-		"message": "Ce serait bien si vous pouviez soumettre des dérivations fonctionelles sur GitHub, afin que d'autres puissent en bénéficier."
+		"message": "Ce serait bien si vous pouviez soumettre des contournements fonctionelles sur GitHub, afin que d'autres puissent en bénéficier."
 	},
 	"beforeNavigate": {
 		"message": "Vous êtes presque arrivé à destination."
@@ -48,7 +48,7 @@
 		"message": "Votre destination est %"
 	},
 	"beforeNavigateInfo": {
-		"message": "Vouslez-vous qu'Universal Bypass vous redirige instantanément à votre destination?"
+		"message": "Voulez-vous qu'Universal Bypass vous redirige instantanément à votre destination?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass empêche l’enregistrement de votre IP."
