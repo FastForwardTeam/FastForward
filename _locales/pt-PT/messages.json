@@ -1,0 +1,68 @@
+{
+	"appDesc": {
+		"message": "Não perca tempo com conformidades. O Universal Bypass automaticamente ignora encurtadores de links irritantes."
+	},
+	"firstrunTitle": {
+		"message": "Obrigado por instalar o Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "Você é demais!"
+	},
+	"firstrunNoScript": {
+		"message": "No entanto, parece que você está usando o NoScript ou similar, com o qual o Universal Bypass não é compatível."
+	},
+	"faq": {
+		"message": "Perguntas Frequentes (FAQ)"
+	},
+	"options": {
+		"message": "Opções"
+	},
+	"optionsEnabled": {
+		"message": "Habilite bypasses de websites."
+	},
+	"optionsInstantNavigation": {
+		"message": "Levar-me instantaneamente aos destinos."
+	},
+	"optionsTrackerBypass": {
+		"message": "Ignorar rastreadores usando Apimon.de."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Bloqueie os registradores de IP se eles não puderem ser ignorados."
+	},
+	"optionsCrowdBypass": {
+		"message": "Dê e pegue o destino de encurtadores não-passáveis."
+	},
+	"privacyPolicy": {
+		"message": "Política de Privacidade"
+	},
+	"optionsUserscripts": {
+		"message": "Bypasses Personalizados"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "Seria legal se você pudesse enviar bypasses funcionais para o GitHub, para que outros se beneficiem deles."
+	},
+	"beforeNavigate": {
+		"message": "Você está quase no seu destino."
+	},
+	"beforeNavigateDestination": {
+		"message": "Seu destino é %"
+	},
+	"beforeNavigateInfo": {
+		"message": "Deseja que o Universal Bypass instantaneamente redirecione você para o seu destino?"
+	},
+	"blockedTitle": {
+		"message": "O Universal Bypass preveniu que seu IP fosse registrado."
+	},
+	"blockedSubtitle": {
+		"message": "Você quer que o Universal Bypass previna que pessoas mal intencionadas obtenham seu IP?"
+	},
+	"crowdBypassed": {
+		"message": "Talvez você não precise esperar!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Outros usuários do Universal Bypass já esperaram para você e reportaram que isto leva para %"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Isto não estava correto?"
+	}
+}

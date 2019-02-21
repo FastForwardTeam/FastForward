@@ -1,0 +1,41 @@
+{
+	"appDesc": {
+		"message": "Μην σπαταλάτε το χρόνο σας περιμένοντας. Ο Universal Bypass παραλείπει αυτόματα ενοχλητικούς συνδέσμους συντομεύσεων."
+	},
+	"firstrunTitle": {
+		"message": "Ευχαριστούμε που εγκαταστήσατε το Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "Είστε καταπληκτικός\/ή!"
+	},
+	"firstrunNoScript": {
+		"message": "Ωστόσο, φαίνεται να χρησιμοποιείτε NoScript ή παρόμοιο, με τα οποία το Universal Bypass δεν είναι συμβατό."
+	},
+	"optionsTrackerBypass": {
+		"message": "Παράκαμψη trackers χρησιμοποιώντας το Apimon.de."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Μπλόκαρε IP loggers, αν αυτοί δεν μπορούν να παρακάμπτουν."
+	},
+	"optionsCrowdBypass": {
+		"message": "Δώσε και να πάρε τους προορισμούς των unbypassable shorteners."
+	},
+	"privacyPolicy": {
+		"message": "Πολιτική Απορρήτου"
+	},
+	"optionsUserscripts": {
+		"message": "Προσαρμοσμένες παρακάμψεις"
+	},
+	"blockedTitle": {
+		"message": "Το Universal Bypass εμπόδισε την IP σας από το να καταγραφεί."
+	},
+	"crowdBypassed": {
+		"message": "Ίσως να μην χρειαστεί να περιμένετε!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Άλλοι χρήστες του Universal Bypass έχουν ήδη περιμένει εσάς και έχουν αναφέρει ότι αυτό οδηγεί σε %"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Δεν ήταν αυτό σωστό;"
+	}
+}

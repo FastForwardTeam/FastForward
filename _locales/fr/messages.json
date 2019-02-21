@@ -6,56 +6,63 @@
 		"message": "Merci d'avoir installer Universal Bypass!"
 	},
 	"firstrunSubtitle": {
-		"message": "Vou-êtes incroyable!"
+		"message": "Vous êtes incroyable!"
 	},
-	"firstrunWhatnow": {
-		"message": "Voici ce que vous pouvez faire maintenant:"
+	"firstrunNoScript": {
+		"message": "Cependant, vous semblez utiliser le module NoScript ou quelque chose de similaire, qui n'est pas compatible avec le contourneur universel."
 	},
-	"firstrunOptions": {
-		"message": "Changer les options de Universal Bypass."
-	},
-	"firstrunTwitter": {
-		"message": "Suivre Universal Bypass sur Twitter pour être toujours tenu au courrant de Universal Bypass."
-	},
-	"homepage": {
-		"message": "Page d'accueil"
-	},
-	"popupOptions": {
-		"message": "Options"
+	"faq": {
+		"message": "Questions fréquemment posées (FAQ)"
 	},
 	"options": {
-		"message": "Options d'Universal Bypass"
+		"message": "Réglages"
 	},
-	"save": {
-		"message": "Sauvegarder"
+	"optionsEnabled": {
+		"message": "Activez les contournements de site Web."
 	},
-	"save": {
-		"message": "Sauvegarder"
+	"optionsInstantNavigation": {
+		"message": "M'envoyer instantanément vers les destinations."
 	},
-	"optionsNotifications": {
-		"message": "Afficher notifications de statut sur les sites webs que Universal Bypass connaît."
+	"optionsTrackerBypass": {
+		"message": "Contourner les traqueurs en utilisant Apimon.de."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Bloque les enregistreurs d’IP si ils ne peuvent être contournés."
+	},
+	"optionsCrowdBypass": {
+		"message": "Donner et prendre les cibles des raccourcisseurs incontournables."
+	},
+	"privacyPolicy": {
+		"message": "Politique Vie Privée"
 	},
 	"optionsUserscripts": {
 		"message": "Bypass sur mesure"
 	},
 	"optionsUserscriptsSubtitle": {
-		"message": "Ce serait bien si vous pouviez soumettre des dérivations de travail à GitHub, afin que d'autres puissent en bénéficier: "
+		"message": "Ce serait bien si vous pouviez soumettre des dérivations fonctionelles sur GitHub, afin que d'autres puissent en bénéficier."
 	},
-	"optionsUserscriptsName": {
-		"message": "Nom. Avec un nom vide, ce contournements sera supprimé."
+	"beforeNavigate": {
+		"message": "Vous êtes presque arrivé à destination."
 	},
-	"optionsUserscriptsDomains": {
-		"message": "Domaines. Utiliser * pour ce contournement pour qu'il soit éffectif partout."
+	"beforeNavigateDestination": {
+		"message": "Votre destination est %"
 	},
-	"optionsUserscriptsDelete": {
-		"message": "Supprimer Bypass"
+	"beforeNavigateInfo": {
+		"message": "Vouslez-vous qu'Universal Bypass vous redirige instantanément à votre destination?"
 	},
-	"notificationTimerSkip": {
-		"message": "Universal Bypass zappe juste ce compteur pour vous."
+	"blockedTitle": {
+		"message": "Universal Bypass empêche l’enregistrement de votre IP."
 	},
-	"notificationTimerLeap": {
-		"message": "Universal Bypass supprime juste les %secs% seconde(s) fr votre compteur."
+	"blockedSubtitle": {
+		"message": "Pas envie qu'Universal Bypass empêche de mauvais acteurs d'acquérir votre IP?"
 	},
-	"notificationBackend": {
-		"message": "Universal Bypass ne peut pas contourner ce site parce qu\'ils ont une vérification côté serveur."
+	"crowdBypassed": {
+		"message": "Vous n'aurez peut-être pas à attendre !"
+	},
+	"crowdBypassedInfo": {
+		"message": "D'autres utilisateurs du contourneur universel vous ont déjà attendu et ont rapporté que cela mène à %"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Cela n'était-il pas exact ?"
+	}
 }

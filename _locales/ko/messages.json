@@ -1,0 +1,41 @@
+{
+	"appDesc": {
+		"message": "순하게 시간을 낭비하고 있지 마세요. Universal Bypass로 성가신 URL 단축 서비스를 자동 생략하세요."
+	},
+	"firstrunTitle": {
+		"message": "Universal Bypass를 설치해 주셔서 감사합니다!"
+	},
+	"firstrunSubtitle": {
+		"message": "당신은 멋쟁이에요!"
+	},
+	"firstrunNoScript": {
+		"message": "물론, NoScript나 그와 비슷한 걸 쓰는 것 같지만, Universal Bypass는 그런 것들과 호환되지 않습니다."
+	},
+	"optionsTrackerBypass": {
+		"message": "Apimon.de 로 추적 우회하기."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "우회할 수 없다면 해당 페이지를 차단합니다."
+	},
+	"optionsCrowdBypass": {
+		"message": "우회할 수 없는 URL 단축 사이트 목적지 주고 받기."
+	},
+	"privacyPolicy": {
+		"message": "개인정보 취급방침"
+	},
+	"optionsUserscripts": {
+		"message": "사용자 지정 우회책"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass가 당신의 IP를 기록하지 못하게 막았습니다."
+	},
+	"crowdBypassed": {
+		"message": "이제 기다리지 않을 겁니다!"
+	},
+	"crowdBypassedInfo": {
+		"message": "다른 Universal Bypass 사용자가 이미 기다리고 있고, 끝난 순간에 % 로 이동합니다."
+	},
+	"crowdBypassedIgnore": {
+		"message": "올바르지 않나요?"
+	}
+}

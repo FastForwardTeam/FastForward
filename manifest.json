@@ -1,43 +1,55 @@
 {
 	"manifest_version": 2,
 	"icons": {
-		"128": "icon/icon_128.png",
-		"256": "icon/icon_256.png",
-		"512": "icon/icon_512.png"
+		"40": "icon/40.png",
+		"48": "icon/48.png",
+		"128": "icon/128.png",
+		"150": "icon/150.png",
+		"176": "icon/176.png",
+		"512": "icon/512.png"
 	},
 	"default_locale": "en",
 	"name": "Universal Bypass",
 	"description": "__MSG_appDesc__",
 	"homepage_url": "https://universal-bypass.org/",
-	"version": "4.0.2",
-	"author": "timmyRS",
-	"minimum_chrome_version": "41",
+	"version": "9.6.5",
+	"author": "Tim \"timmyRS\" Speckhals",
+	"permissions": [
+		"storage",
+		"webRequest",
+		"webRequestBlocking",
+		"<all_urls>"
+	],
 	"options_ui": {
 		"page": "html/options.html",
 		"open_in_tab": true
 	},
-	"permissions": [
-		"storage"
-	],
 	"browser_action": {
 		"default_icon": {
-			"128": "icon/icon_128.png",
-			"256": "icon/icon_256.png",
-			"512": "icon/icon_512.png"
+			"40": "icon/40.png",
+			"48": "icon/48.png",
+			"128": "icon/128.png",
+			"150": "icon/150.png",
+			"176": "icon/176.png",
+			"512": "icon/512.png"
 		},
-		"default_popup": "html/popup.html"
+		"default_popup": "html/options.html"
 	},
 	"background": {
-		"scripts": ["background.js"],
-		"persistent": false
+		"scripts": ["background.js"]
 	},
 	"content_scripts": [
 		{
-			"matches": ["*://*/*"],
-			"js": [
-				"content_script.js"
-			],
+			"matches": ["<all_urls>"],
+			"js": ["content_script.js"],
 			"run_at": "document_start"
 		}
+	],
+	"web_accessible_resources": [
+		"html/before-navigate.html",
+		"html/blocked.html",
+		"html/crowd-bypassed.html",
+		"html/firstrun.html",
+		"html/firstrun-noscript.html"
 	]
 }

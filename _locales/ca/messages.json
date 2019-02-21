@@ -1,0 +1,41 @@
+{
+	"appDesc": {
+		"message": "No perdis el teu temps amb la conformitat. Universal Bypass se salta automàticament molests escurçadors d'enllaços."
+	},
+	"firstrunTitle": {
+		"message": "Gràcies per instal·lar Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "Ets fantàstic!"
+	},
+	"firstrunNoScript": {
+		"message": "Però, sembla que estàs utilitzant NoScript o similar, amb la qual Universal Bypass no és compatible."
+	},
+	"optionsTrackerBypass": {
+		"message": "Circumval·la rastrejadors utilitzant Apimon.de."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Bloqueja registradors d'adreces IP si no poden circumval·lar-se."
+	},
+	"optionsCrowdBypass": {
+		"message": "Comparteix i rep la destinació de escurçadors no circumval·lables."
+	},
+	"privacyPolicy": {
+		"message": "Política de privacitat"
+	},
+	"optionsUserscripts": {
+		"message": "Circumval·lacions personalitzades"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass ha impedit que la seva adreça IP es registrés."
+	},
+	"crowdBypassed": {
+		"message": "Potser que no hagis d'esperar!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Altres usuaris de Universal Bypass ja han esperat per tu i han informat que això porta a %"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Això no era correcte?"
+	}
+}

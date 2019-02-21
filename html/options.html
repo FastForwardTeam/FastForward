@@ -1,38 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title data-message="options"></title>
+	<title>Universal Bypass</title>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="basic.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<style>body{padding:20px}#custom-bypass-editor{font-family:"DejaVu Sans Mono",monospace;min-height:500px;min-height:calc(100vh - 370px)}</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<h1 data-message="options"></h1>
-	<br>
-	<p><input type="checkbox" id="option-notifications"> <label for="option-notifications" data-message="optionsNotifications"></label></li></p>
+	<h1>Universal Bypass</h1>
+	<p><a href="https://universal-bypass.org/faq" target="_blank" data-message="faq"></a></p>
+	<h2 data-message="options"></h2>
+	<p>
+		<input type="checkbox" id="option-enabled"> <label for="option-enabled" data-message="optionsEnabled"></label><br>
+		<input type="checkbox" id="option-instant-navigation"> <label for="option-instant-navigation" data-message="optionsInstantNavigation"></label><br>
+		<input type="checkbox" id="option-tracker-bypass"> <label for="option-tracker-bypass"><span data-message="optionsTrackerBypass"></span> (Bit.ly, Goo.gl, T.co, ...)</label> (<a href="https://apimon.de/privacy" target="_blank" data-message="privacyPolicy"></a>)<br>
+		<input type="checkbox" id="option-block-ip-loggers"> <label for="option-block-ip-loggers" data-message="optionsBlockIPLoggers"></label><br>
+		<input type="checkbox" id="option-crowd-bypass"> <label for="option-crowd-bypass" data-message="optionsCrowdBypass"></label> (<a href="https://github.com/timmyrs/Universal-Bypass/blob/master/PRIVACY.md" target="_blank" data-message="privacyPolicy"></a>)
+	</ul>
 	<h2 data-message="optionsUserscripts"></h2>
 	<a name="userscripts"></a>
-	<p><span data-message="optionsUserscriptsSubtitle"></span> <a href="https://github.com/hellshltd/Universal-Bypass" target="_blank">https://github.com/hellshltd/Universal-Bypass</a></p>
-	<div class="row">
-		<div class="col-lg-3">
-			<div class="list-group" id="custom-bypasses-list"></div>
-		</div>
-		<div class="col-lg-9">
-			<div id="custom-bypass-edit-container">
-				<p><input type="text" id="custom-bypass-name" class="form-control" data-placeholder="optionsUserscriptsName"></p>
-				<p><input type="text" id="custom-bypass-domains" class="form-control" data-placeholder="optionsUserscriptsDomains"></p>
-				<p><textarea id="custom-bypass-editor" class="form-control"></textarea></p>
-				<p>
-					<a href="#userscripts" id="save-custom-bypass" class="btn btn-primary" data-message="save"></a>
-					<a href="#" id="delete-custom-bypass" class="btn btn-outline-danger" data-message="optionsUserscriptsDelete"></a>
-				</p>
-			</div>
-		</div>
-	</div>
+	<p><span data-message="optionsUserscriptsSubtitle"></span></p>
+	<div id="userscript" style="font-family:'DejaVu Sans Mono',monospace;min-height:440px;height:calc(100vh - 400px)"></div>
 	<hr>
-	<p>Copyright (c) 2018, <a href="https://hellsh.com" target="_blank">Hellsh Ltd.</a></p>
-	<script src="translations.js"></script>
+	<p>Copyright (c) 2018-19 Tim "timmyRS" Speckhals</p>
+	<script src="base.js"></script>
+	<script src="ace/ace.js"></script>
 	<script src="options.js"></script>
 </body>
 </html>

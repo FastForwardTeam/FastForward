@@ -1,4 +1,6 @@
 {
 	"html_has_js": false,
-	"json_severity": "failure"
+	"php_has_html": false,
+	"json_severity": "failure",
+	"ignore": ["html/ace/"]
 }

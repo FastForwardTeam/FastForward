@@ -1,0 +1,68 @@
+{
+	"appDesc": {
+		"message": "Не тратьте зря своё время на уступчивость. Universal Bypass автоматически пропускает раздражающие сокращатели ссылок."
+	},
+	"firstrunTitle": {
+		"message": "Спасибо за установку Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "Вы восхитительны!"
+	},
+	"firstrunNoScript": {
+		"message": "Тем не менее, похоже, что Вы используете NoScript или что-то подобное, с чем Universal Bypass несовместим."
+	},
+	"faq": {
+		"message": "Часто задаваемые вопросы (FAQ)"
+	},
+	"options": {
+		"message": "Настройки"
+	},
+	"optionsEnabled": {
+		"message": "Включить обходы веб-сайтов."
+	},
+	"optionsInstantNavigation": {
+		"message": "Сразу переходить по адресу назначения."
+	},
+	"optionsTrackerBypass": {
+		"message": "Обходить средства слежки, используя Apimon.de."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Блокировать всех сохраняющих IP, если их нельзя обойти."
+	},
+	"optionsCrowdBypass": {
+		"message": "Отправлять и принимать адреса назначения сокращателей, которых невозможно обойти."
+	},
+	"privacyPolicy": {
+		"message": "Политика конфиденциальности"
+	},
+	"optionsUserscripts": {
+		"message": "Пользовательские обходы"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "Было бы хорошо, если бы Вы могли сообщить о работающих обходах на GitHub, чтобы они стали полезны другим людям."
+	},
+	"beforeNavigate": {
+		"message": "Вы почти достигли адреса назначения."
+	},
+	"beforeNavigateDestination": {
+		"message": "Ваш адрес назначения - %"
+	},
+	"beforeNavigateInfo": {
+		"message": "Хотите ли Вы, чтобы Universal Bypass сразу перенаправлял Вас по адресу назначения?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass предотвратил запись Вашего IP."
+	},
+	"blockedSubtitle": {
+		"message": "Не хотите, чтобы Universal Bypass предотвращал получение Вашего IP нежелательными лицами?"
+	},
+	"crowdBypassed": {
+		"message": "Вы можете не ждать!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Другие пользователи Universal Bypass уже подождали за Вас и сообщили, что это ведёт на %"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Это было неправильно?"
+	}
+}

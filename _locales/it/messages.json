@@ -1,0 +1,68 @@
+{
+	"appDesc": {
+		"message": "Non sprecare il tuo tempo con il conformismo. Universal Bypass salta automaticamente i fastidiosi link shortener."
+	},
+	"firstrunTitle": {
+		"message": "Grazie per aver installato Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "Sei incredibile!"
+	},
+	"firstrunNoScript": {
+		"message": "Però, sembra che tu stia usando NoScript o simili, con le quali Universal Bypass non è compatibile."
+	},
+	"faq": {
+		"message": "Domande frequenti (FAQ)"
+	},
+	"options": {
+		"message": "Opzioni"
+	},
+	"optionsEnabled": {
+		"message": "Attiva i bypass dei siti web."
+	},
+	"optionsInstantNavigation": {
+		"message": "Portami istantaneamente alla destinazione."
+	},
+	"optionsTrackerBypass": {
+		"message": "Bypass tracker utilizzando Apimon.de."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Blocca i logger IP se essi non possono essere bypassati."
+	},
+	"optionsCrowdBypass": {
+		"message": "Dai e ottieni le destinazioni degli shorteners non bypassati."
+	},
+	"privacyPolicy": {
+		"message": "Informativa sulla privacy"
+	},
+	"optionsUserscripts": {
+		"message": "Bypass personalizzati"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "Sarebbe bello se tu potessi inviare i bypass funzionanti su GitHub, in modo che anche altri possano trarne beneficio."
+	},
+	"beforeNavigate": {
+		"message": "Sei quasi a destinazione."
+	},
+	"beforeNavigateDestination": {
+		"message": "La tua destinazione è %"
+	},
+	"beforeNavigateInfo": {
+		"message": "Vuoi che Universal Bypass ti porti istantaneamente a destinazione?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass ha impedito la registrazione del tuo IP."
+	},
+	"blockedSubtitle": {
+		"message": "Non vuoi che Universal Bypass impedisca ai malintenzionati di ottenere il tuo IP?"
+	},
+	"crowdBypassed": {
+		"message": "Forse non dovrai aspettare!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Altri utenti di Universal Bypass hanno già aspettato e hanno riferito che questo porta a%"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Non era corretto?"
+	}
+}

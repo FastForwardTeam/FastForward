@@ -1,0 +1,29 @@
+{
+	"appDesc": {
+		"message": "อย่าไปเสียเวลากับสิ่งที่ต้องทำตามมัน Universal Bypass ช่วยให้คุณข้ามพวกตัวย่อลิงค์ที่โครตราคาญให้อัตโนมัติ"
+	},
+	"firstrunTitle": {
+		"message": "ขอขอบคุณที่ติดตั้ง Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "คุณนี้มันเจ๋งจริงๆเลยแหะ!"
+	},
+	"firstrunNoScript": {
+		"message": "แต่อย่างไรก็ตาม ดูเหมือนคุณกำลังใช้ NoScript หรืออะไรที่มันคล้ายๆกัน ซึ่ง Universal Bypass นั้นไม่เข้ากันกับพวกนี้"
+	},
+	"optionsBlockIPLoggers": {
+		"message": "หยุดตัวบันทึก IP ถ้าเขาไม่สามารถให้ผ่านไปได้"
+	},
+	"privacyPolicy": {
+		"message": "นโยบายความเป็นส่วนตัว"
+	},
+	"optionsUserscripts": {
+		"message": "สร้างตัวข้ามเอง"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass ช่วยป้องกัน IP คุณจากการถูกเก็บประวัติ"
+	},
+	"crowdBypassed": {
+		"message": "คุณอาจไม่ต้องรออีกต่อไป!"
+	}
+}

@@ -1,0 +1,68 @@
+{
+	"appDesc": {
+		"message": "Đừng lãng phí thời gian của bạn. Universal Bypass tự động bỏ qua các liên kết rút gọn phiền phức."
+	},
+	"firstrunTitle": {
+		"message": "Cảm ơn bạn đã cài đặt Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "Bạn thật tuyệt vời!"
+	},
+	"firstrunNoScript": {
+		"message": "Tuy nhiên, bạn dường như sử dụng NoScript hoặc tương tự, mà Universal Bypass không tương thích với."
+	},
+	"faq": {
+		"message": "Câu Hỏi Thường Gặp (FAQ)"
+	},
+	"options": {
+		"message": "Tùy chỉnh"
+	},
+	"optionsEnabled": {
+		"message": "Bật bỏ qua website."
+	},
+	"optionsInstantNavigation": {
+		"message": "Lập tức dẫn tôi đến đích đến."
+	},
+	"optionsTrackerBypass": {
+		"message": "Bỏ qua trackers bằng cách sử dụng Apimon.de."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Chặn IP Logger nếu nó không thể bỏ qua."
+	},
+	"optionsCrowdBypass": {
+		"message": "Gửi và lấy đích đến của rút gọn chưa thế bypass."
+	},
+	"privacyPolicy": {
+		"message": "Chính sách bảo mật"
+	},
+	"optionsUserscripts": {
+		"message": "Bypasses tùy chỉnh"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "Sẽ thật tuyệt vời nếu bạn có thể gửi Code bỏ qua hoạt động được lên GitHub, để giúp đỡ người khác."
+	},
+	"beforeNavigate": {
+		"message": "Bạn sắp đến đích đến."
+	},
+	"beforeNavigateDestination": {
+		"message": "Điểm đến của bạn là %"
+	},
+	"beforeNavigateInfo": {
+		"message": "Bạn có muốn Universal Bypass chuyển hướng bạn đến đích đến của bạn ngay lập tức?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass đã ngăn chặn IP của bạn bị ghi lại."
+	},
+	"blockedSubtitle": {
+		"message": "Không muốn Universal Bypass ngăn kẻ xấu lấy được IP của bạn?"
+	},
+	"crowdBypassed": {
+		"message": "Bạn không cần phải đợi!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Người dùng Universal Bypass khác hiện đang chờ bạn và được báo cáo rằng điều này dẫn đến %"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Điều này chưa chính xác?"
+	}
+}

@@ -1,0 +1,68 @@
+{
+	"appDesc": {
+		"message": "Jangan habiskan waktu anda dengan menaati aturan. Universal Bypass secara otomatis akan melompati link pemendek yang menyebalkan."
+	},
+	"firstrunTitle": {
+		"message": "Terima kasih anda sudah menginstal Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "Anda luar biasa!"
+	},
+	"firstrunNoScript": {
+		"message": "Akan tetapi, anda sepertinya menggunakan NoScript atau menyerupai itu, Karena itu Universal Bypass tidak kompatibel dengannya."
+	},
+	"faq": {
+		"message": "Pertanyaan yang Sering Diajukan\n(FAQ)"
+	},
+	"options": {
+		"message": "Pilihan"
+	},
+	"optionsEnabled": {
+		"message": "Aktifkan bypass website."
+	},
+	"optionsInstantNavigation": {
+		"message": "Langsung arahkan ke tujuan."
+	},
+	"optionsTrackerBypass": {
+		"message": "Pelacak Bypass menggunakan Apimon.de."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Memblokir IP Logger jika tidak dapat dilewati."
+	},
+	"optionsCrowdBypass": {
+		"message": "Memberikan dan mendapatkan tujuan dari pemendek yang tidak dapat dilewati."
+	},
+	"privacyPolicy": {
+		"message": "Kebijakan Pribadi"
+	},
+	"optionsUserscripts": {
+		"message": "Atur Bypass sesuai keinginan"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "Akan lebih baik jika Anda bisa mengirimkan bypass karya anda lewat GitHub, sehingga orang lain dapat memperoleh manfaatnya."
+	},
+	"beforeNavigate": {
+		"message": "Anda hampir sampai pada destinasi anda."
+	},
+	"beforeNavigateDestination": {
+		"message": "Destinasi anda adalah %"
+	},
+	"beforeNavigateInfo": {
+		"message": "Apakah Anda ingin Universal Bypass langsung mengarahkan ke tujuan Anda?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass mencegah IP Anda saat sedang login."
+	},
+	"blockedSubtitle": {
+		"message": "Tidak ingin Universal Bypass untuk mencegah situs buruk dari mendapatkan IP Anda?"
+	},
+	"crowdBypassed": {
+		"message": "Anda mungkin tidak perlu menunggu !"
+	},
+	"crowdBypassedInfo": {
+		"message": "Pengguna Universal Bypass lainnya sudah menunggu untuk anda dan melaporkan bahwa hal ini menyebabkan %"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Apakah ini tidak benar ?"
+	}
+}

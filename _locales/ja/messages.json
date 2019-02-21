@@ -1,0 +1,56 @@
+{
+	"appDesc": {
+		"message": "ユニバーサルバイパスは、迷惑な短縮URLを自動的にスキップします。コンプライアンスとあなたの時間を無駄にしません。"
+	},
+	"firstrunTitle": {
+		"message": "ユニバーサルバイパスをインストールしていただきありがとうございます!"
+	},
+	"firstrunSubtitle": {
+		"message": "素晴らしいです！"
+	},
+	"firstrunNoScript": {
+		"message": "あなたはNoScriptなどを使用しているようですが、ユニバーサルバイパスとは互換性がありません。"
+	},
+	"options": {
+		"message": "オプション"
+	},
+	"optionsEnabled": {
+		"message": "ウェブサイトのバイパスを有効化する"
+	},
+	"optionsInstantNavigation": {
+		"message": "即座にリンク先へ移動します。"
+	},
+	"optionsTrackerBypass": {
+		"message": "Apimon.deを使用してトラッカーをバイパスする"
+	},
+	"optionsBlockIPLoggers": {
+		"message": "バイパスできない場合は、IPロガーをブロックする"
+	},
+	"optionsCrowdBypass": {
+		"message": "バイパスできない短縮urlの行き先を設定する"
+	},
+	"privacyPolicy": {
+		"message": "プライバシーポリシー"
+	},
+	"optionsUserscripts": {
+		"message": "カスタムバイパス"
+	},
+	"beforeNavigate": {
+		"message": "リンク先まであと少しです。"
+	},
+	"beforeNavigateDestination": {
+		"message": "リンク先は %"
+	},
+	"blockedTitle": {
+		"message": "ユニバーサルバイパスにより、IPがログに記録されなくなりました。"
+	},
+	"crowdBypassed": {
+		"message": "あなたは待つ必要はありません！"
+	},
+	"crowdBypassedInfo": {
+		"message": "他のユニバーサルバイパスユーザーはすでにあなたを待っていて、これが % につながっていると報告しています。"
+	},
+	"crowdBypassedIgnore": {
+		"message": "これは間違っていたのですか？"
+	}
+}

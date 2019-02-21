@@ -1,0 +1,68 @@
+{
+	"appDesc": {
+		"message": "لا تضيع وقتك بالتخطي. المتجاوز الشامل سيتخطى تلقائيًا كل مواقع إختصار الروابط المزعجة."
+	},
+	"firstrunTitle": {
+		"message": "شكرًا لتثبيتك المتجاوز الشامل!"
+	},
+	"firstrunSubtitle": {
+		"message": "أنت رائع!"
+	},
+	"firstrunNoScript": {
+		"message": "للاسف يبدو أنك تستخدم NoScript أو احد الاضافات المماثلة التي تكون غير متوافقة مع المتجاوز الشامل."
+	},
+	"faq": {
+		"message": "الأسئلة المتداولة"
+	},
+	"options": {
+		"message": "الخيارات"
+	},
+	"optionsEnabled": {
+		"message": "تمكين تجاوز مواقع الويب."
+	},
+	"optionsInstantNavigation": {
+		"message": "قم بنقلي إلى الوجهات تلقائيًا."
+	},
+	"optionsTrackerBypass": {
+		"message": "تجاوز المتتبعين بإستخدام Apimon.de."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "حظر مسجلات الـ IP إذا كان لا يمكن تجاوزهم."
+	},
+	"optionsCrowdBypass": {
+		"message": "إعطاء وأخذ وجهات الروابط المختصرة الغير قابلة للتجاوز."
+	},
+	"privacyPolicy": {
+		"message": "سياسة الخصوصية"
+	},
+	"optionsUserscripts": {
+		"message": "عمليات التجاوز المخصصة"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "سيكون من الرائع إذا كنت تستطيع إرسال متجاوزات تعمل إلى صفحة الـ GitHub، حتى يستطيع اﻵخرين اﻹستفادة منها."
+	},
+	"beforeNavigate": {
+		"message": "انت الأن قريب من وجهتك."
+	},
+	"beforeNavigateDestination": {
+		"message": "وجهتك هي %"
+	},
+	"beforeNavigateInfo": {
+		"message": "هل تريد من المتجاوز الشامل إعادة توجيهك علي الفور الي وجهتك؟"
+	},
+	"blockedTitle": {
+		"message": "المتجاوز الشامل قام بمنع تسجيل عنوان الـ IP الخاص بك."
+	},
+	"blockedSubtitle": {
+		"message": "لا تريد من المتجاوز الشامل ان يمنع الجهات السيئه من الحصول علي الأي بي الخاص بك ؟"
+	},
+	"crowdBypassed": {
+		"message": "ربما لن تحتاج للإنتظار بعد الأن!"
+	},
+	"crowdBypassedInfo": {
+		"message": "قام مستخدمون آخرون للمتجاوز الشامل بالإنتظار بدلاً عنك والتبليع بأن هذا الرابط يؤدي إلى %"
+	},
+	"crowdBypassedIgnore": {
+		"message": "ليس هذا صحيحًا؟"
+	}
+}

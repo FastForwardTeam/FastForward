@@ -1,77 +1,207 @@
-let d=document
-if(d instanceof HTMLDocument)
+//If you want to insert your own bypass, please search for "Insertion point"
+if(document instanceof HTMLDocument)
 {
-	let c=()=>{
-		let ms={},ODP=Object.defineProperty,ev=window.eval,sT=window.setTimeout,sI=window.setInterval,n=(t)=>{if(t&&t!=location.href){window.onbeforeunload=null;location.href=t}},
-		bp=!1,db=(d,b)=>{if(!bp&&(location.hostname==d||location.hostname.substr(location.hostname.length-(d.length+1))=="."+d)){b();bp=!0}},hb=(h,b)=>{if(!bp&&h.test(location.href)){b();bp=!0}},
-		ad=(f)=>{if(["interactive","complete"].indexOf(document.readyState)>-1)f();else document.addEventListener("DOMContentLoaded",()=>sT(f,1))},
-		ui=(m)=>ad(()=>{
-			if(document.getElementById("UNIVERSAL_BYPASS_NO_NOTIFICATIONS"))
-				return
-			let d=document.createElement("div")
-			d.setAttribute("style","position:fixed;right:0;bottom:0;box-shadow:0 0 10px 0 rgba(0,0,0,0.75);color:#000;background:#fff;overflow:hidden;border-radius:3px;padding:10px;margin:20px;z-index:100000;line-height:16px;font-size:18px;font-family:sans-serif;direction:ltr")
-			d.innerHTML="<img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALDwAACw8BkvkDpQAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4yMfEgaZUAAAFnSURBVDhPY8AFdAJr1ugEVr/WD6gygwqRBnSCau63LD7wXz+k9qNOQK0lVJh4ADJg55WX/2duvwg0pO6TdlCtNVSKOAAz4NyLXxBDgms/6wVU20ClEUA3sCZEN6hmPwxrB9aagsSB/r81fet5sAFwQ0KwGKIXWC+mHVztAMNaofU8YHGgQgOgBpBGgobgAiCFIKcTNEQvsFJHN7C6RzewqhcZ6wXXmgNpC6Ahb+fuvgI3ZBbQEIOQus9a/lUGYAN0gyqUgAY0oGPtwBp9nYBKe5PIps/LD9+GGzB181lQoD7XCqlQARuACwAD2A+o+duKo3fgmieuP/Uf6LLnOkGVGmBFIFOAoZ+AjnUCqiuAmn8ja+5dc/y/XlANQjMI6AZVu+gE1s5Hx0AvfF6w9xpcc9fKo/+BBqNqxgeQE1LH8sOkaQYBmAEdy4CaA6tJ0wwCIAOKJm8iTzMIALPzNJ2g6hv4NTMwAAD+oRymmiME5wAAAABJRU5ErkJggg==\"> "+m
-			d=document.body.appendChild(d)
-			sT(()=>{
-				document.body.removeChild(d)
-			},5000)
-		})
-		//AdLinkFly
-		let actual_app_vars
-		ODP(this,"app_vars",{
-			set:(v)=>{
-				actual_app_vars=v
-				ui(ms.b)
-			},
-			get:()=>actual_app_vars
-		})
-		ODP(this,"ysmm",//Adf.ly
+	let brws = (typeof browser == "undefined" ? chrome : browser)
+	brws.runtime.sendMessage({}, res => {
+		if(!res.enabled)
 		{
-			set:(r)=>{
-				let I=X=""
-				for(let m=0;m<r.length;m++)
-					if(m%2==0)I+=r.charAt(m);else X=r.charAt(m)+X
+			return
+		}
+		let script=document.createElement("script")
+		script.innerHTML=`(()=>{
+		let crowdEnabled=`+(res.crowdEnabled ? "true" : "false")+`,
+		ODP=(t,p,o)=>{try{Object.defineProperty(t,p,o)}catch(e){console.trace("[Universal Bypass] Couldn't define",p)}},
+		//Copying eval, etc. to prevent issues with other extensions, such as uBlockOrigin. Also, note that this is the page level, so there are no security risks in using eval.
+		ev=eval,sT=setTimeout,sI=setInterval,
+		isGoodLink=link=>{
+			if(!link||link==location.href||link.substr(0,11)=="javascript:")
+			{
+				return false
+			}
+			try
+			{
+				new URL(link)
+			}
+			catch(e)
+			{
+				return false
+			}
+			return true
+		},
+		navigated=false,
+		unsafelyNavigate=target=>{
+			if(navigated)
+				return
+			navigated=true
+			location.href="https://universal-bypass.org/before-navigate?target="+encodeURIComponent(target)
+			//The background script will intercept the request and redirect to html/before-navigate.html or to the target depending on the user's settings.
+		},
+		safelyNavigate=target=>{
+			if(navigated||!isGoodLink(target))
+			{
+				return false
+			}
+			bypassed=true
+			let url
+			try{url=new URL(target)}catch(e){}
+			if(!url||!url.hash)
+			{
+				target+=location.hash
+			}
+			window.onbeforeunload=null
+			unsafelyNavigate(target)
+			return true
+		},
+		bypassed=false,
+		finish=()=>{
+			bypassed=true
+			document.documentElement.setAttribute("data-universal-bypass-stop-watching","")
+		},
+		domainBypass=(domain,f)=>{
+			if(!bypassed&&(location.hostname==domain||location.hostname.substr(location.hostname.length-(domain.length+1))=="."+domain))
+			{
+				f()
+				finish()
+			}
+		},
+		hrefBypass=(regex,f)=>{
+			if(!bypassed&&regex.test(location.href))
+			{
+				f()
+				finish()
+			}
+		},
+		ensureDomLoaded=f=>{
+			if(["interactive","complete"].indexOf(document.readyState)>-1)
+			{
+				f()
+			}
+			else
+			{
+				document.addEventListener("DOMContentLoaded",()=>sT(f,1))
+			}
+		},
+		crowdBypass=f=>{
+			if(crowdEnabled)
+			{
+				if(location.href.substr(location.href.length-18)=="#ignoreCrowdBypass")
+				{
+					document.querySelectorAll("form[action]").forEach(e=>e.action+="#ignoreCrowdBypass")
+					document.querySelectorAll("a[href]").forEach(e=>e.href+="#ignoreCrowdBypass")
+					history.pushState({},document.querySelector("title").textContent,location.href.substr(0,location.href.length-18))
+					f()
+				}
+				else
+				{
+					document.documentElement.setAttribute("data-universal-bypass-crowd-query","")
+					let iT=setInterval(()=>{
+						if(document.documentElement.hasAttribute("data-universal-bypass-crowd-queried"))
+						{
+							document.documentElement.removeAttribute("data-universal-bypass-crowd-queried")
+							f()
+						}
+					},20)
+				}
+			}
+		},
+		contributeAndNavigate=target=>{
+			if(!navigated&&isGoodLink(target))
+			{
+				if(crowdEnabled)
+				{
+					document.documentElement.setAttribute("data-universal-bypass-crowd-contribute",target)
+					let iT=setInterval(()=>{
+						if(document.documentElement.hasAttribute("data-universal-bypass-crowd-contributed"))
+						{
+							document.documentElement.removeAttribute("data-universal-bypass-crowd-contributed")
+							unsafelyNavigate(target)
+						}
+					},20)
+				}
+				else
+				{
+					unsafelyNavigate(target)
+				}
+			}
+		},
+		domain=location.hostname
+		if(domain.substr(0,4)=="www.")
+		{
+			domain=domain.substr(4)
+		}
+		ODP(window,"blurred",{
+			value:false,
+			writable:false
+		})
+		//adf.ly
+		ODP(window,"ysmm",
+		{
+			set:r=>{
+				let a,m,I="",X=""
+				for(m=0;m<r.length;m++)
+				{
+					if(m%2==0)
+					{
+						I+=r.charAt(m)
+					}
+					else
+					{
+						X=r.charAt(m)+X
+					}
+				}
 				r=I+X
-				let U=r.split("")
-				for(m=0;m<U.length;m++)if(!isNaN(U[m]))for(let R=m+1;R<U.length;R++)
-					if(!isNaN(U[R])){let S=U[m]^U[R];if(S<10)U[m]=S;m=R;R=U.length}
-				r=U.join("")
+				a=r.split("")
+				for(m=0;m<a.length;m++)
+				{
+					if(!isNaN(a[m]))
+					{
+						for(var R=m+1;R<a.length;R++)
+						{
+							if(!isNaN(a[R]))
+							{
+								let S=a[m]^a[R]
+								if(S<10)
+								{
+									a[m]=S
+								}
+								m=R
+								R=a.length
+							}
+						}
+					}
+				}
+				r=a.join('')
 				r=atob(r)
 				r=r.substring(r.length-(r.length-16))
 				r=r.substring(0,r.length-16)
-				if(r&&(r.indexOf("http://")==0||r.indexOf("https://")==0))
-				{
-					ui(ms.tS)
-					n(r)
-				}
+				safelyNavigate(r)
 			}
 		})
 		//LinkBucks
 		var actualInitLbjs
-		ODP(this,"initLbjs",{
+		ODP(window,"initLbjs",{
 			set:(_)=>actualInitLbjs=_,
 			get:()=>(a,p)=>{
 				p.Countdown--
 				actualInitLbjs(a,p)
-				ui(ms.tL.replace("%secs%","1"))
 			}
 		})
 		//Safelink
-		let actual_safelink=forced_safelink={counter:0}
-		ODP(this,"safelink",
+		let actual_safelink=forced_safelink={counter:0,adblock:false}
+		ODP(window,"safelink",
 		{
-			set:(_)=>{
+			set:_=>{
 				ODP(window,"blurred",{
-					value:!1,
-					writable:!1
+					value:false,
+					writable:false
 				})
 				for(let k in _)
 				{
-					let v=_[k]
 					if(forced_safelink[k]===undefined)
-						actual_safelink[k]=v
+					{
+						actual_safelink[k]=_[k]
+					}
 				}
-				ui(ms.tS)
 			},
 			get:()=>actual_safelink
 		})
@@ -79,653 +209,923 @@ if(d instanceof HTMLDocument)
 		{
 			ODP(safelink,key,
 			{
-				writable:!1,
+				writable:false,
 				value:forced_safelink[key]
 			})
 		}
-		//YetiShare Template
+		//YetiShare
 		let actual_web_root
-		ODP(this,"WEB_ROOT",{
-			set:(v)=>{
-				ODP(this,"seconds",{
+		ODP(window,"WEB_ROOT",{
+			set:v=>{
+				ODP(window,"seconds",{
 					value:0,
-					writable:!1
+					writable:false
 				})
 				actual_web_root=v
 			},
 			get:()=>actual_web_root
 		})
-		hb(/ur\.ly|urly\.mobi/,()=>{
+		hrefBypass(/ur\\.ly|urly\\.mobi/,()=>{
 			if(location.pathname.length>2&&location.pathname.substr(0,6)!="/goii/")
-				n("/goii/"+location.pathname.substr(2)+"?ref="+location.hostname+location.pathname)
+				safelyNavigate("/goii/"+location.pathname.substr(2)+"?ref="+location.hostname+location.pathname)
 		})
-		db("cshort.org",()=>{
-			ODP(this,"adblock",{
-				value:!1,
-				writable:!1
+		hrefBypass(/universal-bypass\\.org\\/firstrun/,()=>{
+			location.href="https://universal-bypass.org/firstrun?1"
+		})
+		domainBypass("cshort.org",()=>{
+			ODP(window,"adblock",{
+				value:false,
+				writable:false
 			})
-			ODP(this,"i",{
+			ODP(window,"i",{
 				value:0,
-				writable:!1
+				writable:false
 			})
-			ad(()=>
+			ensureDomLoaded(()=>
 			{
 				let lT=sI(()=>
 				{
 					if(document.querySelector(".next[href]"))
 					{
 						clearInterval(lT)
-						ui(ms.tS)
-						n(atob(atob(document.querySelector(".next[href]").getAttribute("href"))))
+						safelyNavigate(atob(atob(document.querySelector(".next[href]").getAttribute("href"))))
 					}
 				},100)
 			})
 		})
-		db("link.tl",()=>{
-			ODP(this,"countdown",{
+		domainBypass("link.tl",()=>{
+			ODP(window,"countdown",{
 				value:0,
-				writable:!1
+				writable:false
 			})
 			let lT=sI(()=>
 			{
 				if(document.querySelector(".skip > .btn"))
 				{
-					ui(ms.tS)
+					clearInterval(lT)
 					document.querySelector(".skip > .btn").click()
 				}
 			},100)
 		})
-		db("onepiece-ex.com.br",()=>{
-			ODP(this,"seconds",{
+		domainBypass("onepiece-ex.com.br",()=>{
+			ODP(window,"seconds",{
 				value:1,
-				writable:!1
+				writable:false
 			})
 			let lT=sI(()=>{
 				if(document.getElementById("continuar"))
 				{
 					clearInterval(lT)
-					ui(ms.tS)
-					n(document.getElementById("continuar").href)
+					safelyNavigate(document.getElementById("continuar").href)
 				}
 			},100)
 		})
-		db("akoam.net",()=>{
-			ODP(this,"timer",{
+		domainBypass("akoam.net",()=>{
+			ODP(window,"timer",{
 				value:0,
-				writable:!1
+				writable:false
 			})
 			let lT=sI(()=>{
 				if(document.querySelector(".download_button"))
 				{
 					clearInterval(lT)
-					ui(ms.tS)
-					n(document.querySelector(".download_button").href)
+					safelyNavigate(document.querySelector(".download_button").href)
 				}
 			},100)
 		})
-		hb(/1v\.to\/t\/.*/,()=>{
+		hrefBypass(/1v\\.to\\/t\\/.*/,()=>{
 			location.pathname=location.pathname.split("/t/").join("/saliendo/")
 		})
-		db("share-online.biz",()=>{
-			ODP(this,"wait",{
-				set:(_)=>{},
+		domainBypass("share-online.biz",()=>{
+			ODP(window,"wait",{
+				set:s=>0,
 				get:()=>{
-					ui(ms.tL.replace("%secs%","13"))
 					return 2
 				}
 			})
 		})
-		db("sfile.mobi",()=>{
-			ODP(this,"downloadButton",{
-				set:function(b)
-				{
+		hrefBypass(/sfile\\.(mobi|xyz)/,()=>{
+			ODP(window,"downloadButton",{
+				set:b=>{
 					if(b&&b.href)
-					{
-						ui(ms.tS)
-						n(b.href)
-					}
+						safelyNavigate(b.href)
 				}
 			})
 		})
-		db("mylink.zone",()=>{
-			ODP(this,"seconde",{
-				set:(_)=>{},
+		domainBypass("mylink.zone",()=>{
+			ODP(window,"seconde",{
+				set:_=>{},
 				get:()=>{
-					ui(ms.tS)
 					return -1
 				}
 			})
 		})
-		db("sourceforge.net",()=>{
+		domainBypass("sourceforge.net",()=>{
 			var b=document.createElement("button"),d=false
 			b.className="direct-download"
 			b.style.display="none"
 			document.documentElement.appendChild(b)
-			ODP(this,"log",{
-				value:(m)=>{
+			ODP(window,"log",{
+				value:m=>{
 					console.log(m)
 					if(m=="triggering downloader:start")
-					{
-						ui(ms.tS)
 						d=true
-					}
 				},
-				writable:!1
+				writable:false
 			})
-			ad(()=>{
+			ensureDomLoaded(()=>{
 				let bT=sI(()=>{
 					if(d)
-					{
 						clearInterval(bT)
-						location.href="about:blank"
-					}
 					else b.click()
 				},100)
-			})
 		})
-		db("bc.vc",()=>{
-			window.setInterval=(f)=>{
-				ui(ms.tL.replace("%secs%","1"))
-				return sI(f,800)
+	})
+	domainBypass("bc.vc",()=>{
+		window.setInterval=f=>sI(f,800)
+		crowdBypass(()=>{
+			window.eval=c=>{
+				let j=ev(c)
+				if(j.message&&j.message.url)
+				{
+					contributeAndNavigate(j.message.url)
+					return{}
+				}
+				return j
 			}
 		})
-		if(!bp)
-			ad(()=>{
-				db("adfoc.us",()=>{
-					let b=document.querySelector(".skip")
-					if(b&&b.href)
-					{
-						ui(ms.tS)
-						n(b.href)
-					}
-				})
-				db("linkshrink.net",()=>{
-					let p=document.getElementById("pause"),s=document.getElementById("skip")
-					if(p&&s)
-					{
-						p.style.display="none"
-						s.style.display="block"
-						ui(ms.tS)
-					}
-				})
-				db("sub2unlock.com",()=>{
-					$(document).ready(()=>{
-						let steps=document.querySelectorAll(".uk.unlock-step-link.check")
-						if(steps.length)
+		let sT=setInterval(()=>{
+			let a=document.querySelector(".skip_btt > #skip_btt")
+			if(a)
+			{
+				clearInterval(sT)
+				a.click()
+			}
+		},50)
+	})
+	domainBypass("shortly.xyz",()=>{
+		if(location.pathname.substr(0,3)=="/r/")
+		{
+			document.getElementById=()=>({submit:()=>{
+				let f=document.querySelector("form")
+				f.action="/link#"+document.querySelector("input[name='id']").value
+				f.submit()
+			}})
+		}
+		else if(location.pathname=="/link")
+		{
+			let xhr=new XMLHttpRequest()
+			xhr.onreadystatechange=()=>{
+				if(xhr.readyState==4&&xhr.status==200)
+					safelyNavigate(xhr.responseText)
+			}
+			xhr.open("POST","https://www.shortly.xyz/getlink.php",true)
+			xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded")
+			xhr.setRequestHeader("X-Requested-With","XMLHttpRequest")
+			xhr.send("id="+location.hash.replace("#",""))
+		}
+	})
+	hrefBypass(/firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php|2speed\\.net\\/file\\//,()=>{
+		window.setInterval=f=>sI(f,1)
+	})
+	hrefBypass(/datei\\.to|id-share19\\.com/,()=>{
+		window.setTimeout=f=>sT(f,1)
+	})
+	//Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
+	if(bypassed)
+	{
+		return
+	}
+	ensureDomLoaded(()=>{
+		domainBypass("adfoc.us",()=>{
+			let b=document.querySelector(".skip[href]")
+			if(b)
+				safelyNavigate(b.href)
+		})
+		domainBypass("sub2unlock.com",()=>{
+			if(location.pathname.substr(0,10)=="/link/get/")
+			{
+				safelyNavigate(document.getElementById("link").href)
+			}
+			else
+			{
+				let f=document.getElementById("getLinkNow")
+				if(f)
+					document.getElementById("getLinkNow").submit()
+			}
+		})
+		domainBypass("srt.am",()=>{
+			if(document.querySelector(".skip-container"))
+			{
+				let f=document.createElement("form")
+				f.method="POST"
+				f.innerHTML='<input type="hidden" name="_image" value="Continue">'
+				f=document.documentElement.appendChild(f)
+				f.submit()
+			}
+		})
+		domainBypass("admy.link",()=>{
+			let f=document.querySelector(".edit_link")
+			if(f)
+			{
+				f.submit()
+			}
+		})
+		domainBypass("ysear.ch",()=>{
+			let b=document.querySelector("#NextVideo[href]")
+			if(b)
+			{
+				safelyNavigate(b.href)
+			}
+		})
+		hrefBypass(/1ink\\.(cc|live)/,()=>{
+			if(typeof SkipAd=="function")
+			{
+				SkipAd()
+			}
+		})
+		domainBypass("losstor.com",()=>{
+			let b=document.getElementById("re_link")
+			if(b)
+			{
+				window.open=safelyNavigate
+				b.click()
+			}
+		})
+		domainBypass("fshare.vn",()=>{
+			if("$" in window)
+			{
+				let f=$("#form-download")
+				if(f.length)
+				{
+					$.ajax({
+						"url":f.attr("action"),
+						"type":"POST",
+						"data":f.serialize()
+					}).done(data=>safelyNavigate(data.url))
+				}
+			}
+		})
+		domainBypass("dwindly.io",()=>{
+			let b=document.getElementById("btd1")
+			if(b)
+			{
+				window.open=()=>{}
+				b.click()
+			}
+			else
+			{
+				b=document.getElementById("btd")
+				if(b)
+				{
+					window.open=safelyNavigate
+					ev("("+b.onclick.toString().split(";")[0]+"})()")
+				}
+			}
+		})
+		domainBypass("bluemediafiles.com",()=>{
+			if(typeof FinishMessage=="string"&&FinishMessage.indexOf("<a href=")>-1)
+			{
+				//The FinishMessage string contains the HTML anchor element needed to get to the destination so we just replace the entire website with it because we don't need any of the other content anymore.
+				document.write(FinishMessage)
+				document.querySelector("a").click()
+			}
+		})
+		domainBypass("complete2unlock.com",()=>{
+			let bT=setInterval(()=>{
+				let b=document.getElementById("link-success-button"),es=document.querySelectorAll(".unlockpanel")
+				if(b&&es.length>0)
+				{
+					clearInterval(bT)
+					window.open=()=>{}
+					es.forEach(e=>e.dispatchEvent(new MouseEvent("click")))
+					let dT=setInterval(()=>{
+						if(!b.hasAttribute("disabled"))
 						{
-							for(let i in steps)
-								if(i!=0&&steps[i] instanceof HTMLElement&&steps[i].className.substr(0,3)=="uk ")
-									steps[i].className = steps[i].className.substr(3)
-								steps[0].removeAttribute("target")
-								steps[0].setAttribute("href","#")
-								steps[0].click()
-								ui(ms.tS)
-								document.getElementById("link").click()
-							}
-						})
-				})
-				db("srt.am",()=>{
-					if(document.querySelector(".skip-container"))
-					{
-						let f=document.createElement("form")
-						f.method="POST"
-						f.innerHTML='<input type="hidden" name="_image" value="Continue">'
-						f=document.body.appendChild(f)
-						ui(ms.tS)
-						f.submit()
-					}
-				})
-				db("admy.link",()=>{
-					let f=document.querySelector(".edit_link")
-					if(f)
-					{
-						ui(ms.tS)
-						f.submit()
-					}
-				})
-				db("ysear.ch",()=>{
-					let b=document.getElementById("NextVideo")
-					if(b&&b.href)
-					{
-						ui(ms.tS)
-						n(b.href)
-					}
-				})
-				db("1ink.cc",()=>{
-					if(typeof SkipAd=="function")
-					{
-						ui(ms.tS)
-						SkipAd()
-					}
-				})
-				db("v1.94lauin.com",()=>{
-					jQuery.prototype._attr=jQuery.prototype.attr
-					jQuery.prototype.attr=function(a,v)
-					{
-						if(!v&&window.selector==".count-timer"&&a=="data-timer")
-						{
-							ui(ms.tS)
-							return 1
-						}
-						return window._attr(a,v)
-					}
-					let lT=sI(()=>{
-						if(document.querySelector(".link-content > a")&&document.querySelector(".link-content > a").getAttribute("href")!="#")
-						{
-							clearInterval(lT)
-							n(document.querySelector(".link-content > a").href)
+							clearInterval(dT)
+							b.dispatchEvent(new MouseEvent("click"))
 						}
 					},100)
-				})
-				db("losstor.com",()=>{
-					let b=document.getElementById("re_link")
-					if(b)
-					{
-						window.open=n
-						ui(ms.tS)
-						b.click()
-					}
-				})
-				db("bagisoft.net",()=>{
-					let b=document.getElementById("makingdifferenttimer")
-					if(b)
-					{
-						window.open=n
-						ui(ms.tS)
-						b.click()
-					}
-					else
-						jQuery.prototype.animateProgress=(p,f)=>f()
-				})
-				db("skinnycat.net",()=>{
-					let b=document.getElementById("dl")
-					if(b&&b.href)
-					{
-						ui(ms.tS)
-						n(b.href)
-					}
-				})
-				db("fshare.vn",()=>{
-					if("$" in window)
-					{
-						let f=$("#form-download")
-						if(f.length)
+				}
+			},300)
+			setInterval(()=>clearInterval(bT),10000)
+		})
+		domainBypass("hidelink.club",()=>{
+			if(hash)
+				safelyNavigate(decodeURIComponent(atob(hash)).replace("%23", "#"))
+		})
+		domainBypass("won.pe",()=>
+		{
+			if(document.querySelector(".captcha_loader .progress-bar"))
+				document.querySelector(".captcha_loader .progress-bar").setAttribute("aria-valuenow","100")
+		})
+		domainBypass("stealive.club",()=>{
+			if(document.getElementById("counter"))
+				document.getElementById("counter").innerHTML="0"
+		})
+		hrefBypass(/((binerfile|pafpaf)\\.info)|(kurosafety\\.menantisenja\\.com)/,()=>{//KuroSafe
+			let b=document.querySelector("#mybutton[href]")
+			if(b)
+				safelyNavigate(b.href)
+		})
+		domainBypass("gotoo.loncat.in",()=>{
+			let a=document.querySelector("a[href^='http://gotoo.loncat.in/go.php?open=']")
+			if(a)
+				safelyNavigate(a.href)
+		})
+		domainBypass("idnation.net",()=>{
+			let b=document.querySelector("#linko[href]")
+			if(b)
+				safelyNavigate(b.href)
+		})
+		domainBypass("mazika2day.com",()=>{
+			let b=document.querySelector(".linkbtn[href]")
+			if(b)
+				safelyNavigate(b.href)
+		})
+		domainBypass("ux9.de",()=>{
+			let m=document.querySelector("meta[http-equiv='refresh'][content]")
+			if(m&&m.content.indexOf(";url=http"))
+			{
+				safelyNavigate(m.content.split(";url=")[1])
+			}
+		})
+		domainBypass("telolet.in",()=>{
+			let b=document.querySelector("a#skip[href]")
+			if(!b)
+				b=document.querySelector(".redirect_url > a[href]")
+			if(b)
+				safelyNavigate(b.href)
+		})
+		domainBypass("vipdirect.cc",()=>{
+			if(typeof ab=="number"&&typeof asdf=="function")
+			{
+				ab=5
+				window.open=safelyNavigate
+				asdf()
+			}
+		})
+		domainBypass("rapidcrypt.net",()=>{
+			let b=document.querySelector(".push_button.blue[href]")
+			if(b)
+				safelyNavigate(b.href)
+		})
+		domainBypass("shrink-service.it",()=>{
+			if(typeof $=="function"&&typeof $.ajax=="function"&&typeof screenApi=="function")
+			{
+				let _a=$.ajax
+				$.ajax=a=>(a.data&&a.data.set_one?safelyNavigate(atob(a.data.set_one)):_a(a))
+				screenApi()
+			}
+		})
+		domainBypass("rom.io",()=>crowdBypass(()=>{
+			let cT=setInterval(()=>{
+				let a=document.querySelector("a.final-button[href]")
+				if(a&&isGoodLink(a.href))
+				{
+					clearInterval(cT)
+					a.parentNode.removeChild(a)
+					contributeAndNavigate(a.href)
+				}
+			},50)
+		}))
+		domainBypass("show.co",()=>{
+			let s=document.getElementById("show-campaign-data")
+			if(s)
+			{
+				let d=JSON.parse(s.textContent)
+				if(d&&"title"in d&&"unlockable"in d)
+				{
+					document.write("<body></body>")
+					if("title"in d)
+						["title","h1"].forEach(t=>{
+							let e=document.createElement(t)
+							e.textContent=d.title
+							document.body.appendChild(e)
+						})
+						if("message"in d.unlockable)
 						{
-							$.ajax({
-								"url":f.attr("action"),
-								"type":"POST",
-								"data":f.serialize()
-							}).done((data)=>{
-								ui(ms.tS)
-								n(data.url)
-							})
+							let p=document.createElement("p")
+							p.textContent=d.unlockable.message
+							document.body.appendChild(p)
 						}
+						if("redirect"in d.unlockable&&"url"in d.unlockable.redirect)
+						{
+							let p=document.createElement("p"),a=document.createElement("a")
+							a.textContent=a.href=d.unlockable.redirect.url
+							p.appendChild(a)
+							document.body.appendChild(p)
+						}
+						stop()
 					}
-				})
-				db("dwindly.io",()=>{
-					let b=document.getElementById("btd1")
+				}
+			})
+			domainBypass("vcrypt.net",()=>{
+				if(document.querySelector(".btncontinue"))
+				{
+					document.querySelector("form").submit()
+				}
+			})
+			domainBypass("runtyurl.com",()=>{
+				let b=document.getElementById("go_next")
+				if(b&&isGoodLink(b.href))
+				{
+					location.href=b.href
+				}
+				else
+				{
+					b=document.getElementById("download")
 					if(b)
 					{
-						window.open=()=>{}
-						b.click()
+						safelyNavigate(b.href)
 					}
-					else
+				}
+			})
+			hrefBypass(/4snip\\.pw\\/out\\//,()=>{
+				let f=document.querySelector("form[action^='../out2/']")
+				f.setAttribute("action",f.getAttribute("action").replace("../out2/","../outlink/"))
+				f.submit()
+			})
+			domainBypass("douploads.com",()=>{
+				if(document.querySelectorAll(".seconds").length==1)
+					document.querySelector(".seconds").textContent="1"
+			})
+			domainBypass("elsfile.org",()=>{
+				let form=document.createElement("form")
+				form.method="POST"
+				form.innerHTML='<input type="hidden" name="op" value="download1"><input type="hidden" name="usr_login" value="C"><input type="hidden" name="id" value="'+location.pathname.toString().substr(1)+'"><input type="hidden" name="fname" value="'+document.querySelectorAll("div#container > div > div > table > tbody > tr > td")[2].textContent+'"><input type="hidden" name="referer" value="q"><input type="hidden" name="method_free" value="Free Download">'
+				form=document.documentElement.appendChild(form)
+				form.submit()
+				return finish()
+			})
+			domainBypass("goou.in",()=>{
+				let a=document.querySelector("div#download_link > a#download[href]")
+				if(a)
+				{
+					safelyNavigate(a.href)
+				}
+			})
+			domainBypass("skinnycat.org",()=>{
+				let a=document.querySelector("a.redirect[href]")
+				if(a)
+				{
+					safelyNavigate(a.href)
+				}
+			})
+			domainBypass("ryn.cc",()=>{
+				if(typeof countdown=="function")
+				{
+					document.write('<div id="link"><p id="timer">0</p></div>')
+					countdown()
+					safelyNavigate(document.querySelector("#link > a").href)
+				}
+			})
+			//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
+			if(bypassed)
+			{
+				return
+			}
+			//Adf.ly "Locked" Page
+			if(location.pathname=="/ad/locked"&&document.getElementById("countdown")&&document.querySelector("a").textContent=="Click here to continue")
+			{
+				let wT=setInterval(()=>{
+					if(document.getElementById("countdown").textContent=="0")
 					{
-						b=document.getElementById("btd")
-						if(b)
-						{
-							window.open=n
-							ev("("+b.onclick.toString().split(";")[0]+"})()")
-						}
-					}
-					ui(ms.tS)
-				})
-				db("vpsat.net",()=>{
-					ui(ms.tS)
-					n(url)
-				})
-				db("bluemediafiles.com",()=>{
-					if(typeof FinishMessage=="string"&&FinishMessage.indexOf("<a href=")>-1)
-					{
-						ui(ms.tS)
-						document.write(FinishMessage)
+						clearInterval(wT)
 						document.querySelector("a").click()
 					}
-				})
-				db("complete2unlock.com",()=>{
-					let jT=sI(()=>{
-						if(typeof $=="function")
-						{
-							clearInterval(jT)
-							$(document).ready(()=>sT(()=>{
-								window.open=(h)=>{return{location:{href:h}}}
-								window.setTimeout=(f)=>f()
-								let bs=document.querySelectorAll("[data-main-url]")
-								for(let i in bs)
-								{
-									let b=bs[i]
-									if(b instanceof HTMLElement)
-										b.click()
-								}
-							},100))
-						}
-					},100)
-				})
-				db("hidelink.club",()=>{
-					if(hash)
-					{
-						ui(ms.tS)
-						n(decodeURIComponent(atob(hash)).replace("%23", "#"))
-					}
-				})
-				db("won.pe",()=>
+				},100)
+			}
+			//Adf.ly Pre-Redirect Page
+			if(location.pathname.substr(0,13)=="/redirecting/"&&document.querySelector("p[style]").textContent=="For your safety, never enter your password unless you're on the real Adf.ly site.")
+			{
+				let a=document.querySelector("a[href]")
+				if(a)
 				{
-					if(document.querySelector(".captcha_loader .progress-bar"))
+					safelyNavigate(a.href)
+					return finish()
+				}
+			}
+			//SafelinkU
+			if(typeof app_vars=="object"&&document.querySelector("b[style='color: #3e66b3']")&&document.querySelector("b[style='color: #3e66b3']").textContent=="SafelinkU")
+			{
+				window.setInterval=(f)=>sI(f,10)
+				return finish()
+			}
+			//GemPixel Premium URL Shortener
+			if(typeof appurl!="undefined"&&typeof token!="undefined")
+			{
+				document.querySelectorAll("script").forEach(script=>{
+					if(script instanceof HTMLScriptElement)
 					{
-						document.querySelector(".captcha_loader .progress-bar").setAttribute("aria-valuenow","100")
-						ui(ms.tS)
-					}
-				})
-				db("stealive.club",()=>{
-					if(document.getElementById("counter"))
-					{
-						document.getElementById("counter").innerHTML="0"
-						ui(ms.tS)
-					}
-				})
-				hb(/ouo\.(io|press)/,()=>ui(ms.b))
-				if(bp)
-					return
-				//GemPixel Premium URL Shortener
-				if(typeof appurl!="undefined"&&typeof token!="undefined")
-				{
-					let scripts=document.getElementsByTagName("script")
-					for(let i in scripts)
-					{
-						let script=scripts[i]
-						if(script instanceof HTMLScriptElement)
+						let cont=script.textContent,start=cont.indexOf('clearInterval(countdown);window.location="')
+						if(start>-1&&cont.indexOf('";}count--;}, 1000)')>-1)
 						{
-							let cont=script.textContent
-							if(cont.indexOf('clearInterval(countdown);')>-1)
-							{
-								if(typeof countdown!="undefined")
-									clearInterval(countdown)
-								if(!document.querySelector("a.redirect"))
-								{
-									let a=document.createElement("a")
-									a.href="#"
-									a.className="redirect"
-									document.body.appendChild(a)
-								}
-								if(cont.indexOf("var count = ")>-1)
-								{
-									cont=cont.split(/var count = [0-9]*;/).join("let count=0;")
-								}
-								else
-								{
-									cont="let count=0;"+cont
-								}
-								cont=cont.split("$(window).on('load', ").join("let r=(f)=>f();r(")
-								window.setInterval=(f)=>f()
-								ev(cont)
-								window.setInterval=sI
-								n(document.querySelector("a.redirect").href)
-								return
-							}
+							safelyNavigate(cont.substr(start+42).split('";}count--;}, 1000)')[0])
 						}
 					}
-					//Ally Captcha
-					if(document.getElementById("messa")&&document.getElementById("html_element"))
+				})
+			}
+			//Soralink Wordpress Plugin
+			if(document.querySelector(".sorasubmit"))
+			{
+				document.querySelector(".sorasubmit").click()
+				return finish()
+			}
+			if(document.querySelector("#lanjut > #goes[href]"))
+			{
+				safelyNavigate(document.querySelector("#lanjut > #goes[href]").href)
+				return finish()
+			}
+			if(document.getElementById("waktu")&&document.getElementById("goto"))
+			{
+				safelyNavigate(document.getElementById("goto").href)
+				return finish()
+			}
+			if(typeof bukalink=="function"&&document.getElementById("bijil1")&&document.getElementById("bijil2"))//gosavelink.com
+			{
+				window.open=safelyNavigate
+				bukalink()
+				return finish()
+			}
+			if(typeof changeLink=="function")
+			{
+				let cLT=sI(()=>{
+					if((document.querySelectorAll("img#pleasewait").length&&document.querySelector(".wait"))
+					||document.getElementById("showlink")
+					||document.getElementById("download")
+					||document.getElementsByTagName("style='margin-top:").length
+					||document.querySelector(".Visit_Link")//yametesenpai.xyz
+					||document.getElementById("daplong")//converthinks.xyz
+					)
 					{
-						document.getElementById("messa").className+=" hidden"
-						document.getElementById("html_element").className=document.getElementById("html_element").className.split("hidden").join("").trim()
-					}
-				}
-				//Soralink Plugin
-				if(document.querySelector(".sorasubmit"))
-				{
-					document.querySelector(".sorasubmit").click()
-					return
-				}
-				let rCL=()=>((document.querySelectorAll("img#pleasewait").length&&document.querySelector(".wait"))||document.getElementById("showlink")||document.getElementById("download")||document.getElementsByTagName("style='margin-top:").length)
-				if(typeof changeLink=="function")
-				{
-					if(rCL())
-					{
-						window.open=n
-						ui(ms.tS)
-						changeLink()
-						return
-					}
-					let cLT=sI(()=>{
-						if(rCL())
+						clearInterval(cLT)
+						window.open=safelyNavigate
+						if(typeof changeLink=="function")
 						{
-							clearInterval(cLT)
-							window.open=n
-							ui(ms.tS)
 							changeLink()
 						}
-					},100)
-				}
-				if(document.querySelector("#lanjut > #goes"))
-				{
-					let b=document.querySelector("#lanjut > #goes")
-					if(b&&b.href)
-					{
-						ui(ms.tS)
-						n(b.href)
-					}
-					return
-				}
-				if(document.getElementById("waktu")&&document.getElementById("goto"))
-				{
-					ui(ms.tS)
-					n(document.getElementById("goto").href)
-					return
-				}
-				//Other Templates
-				if(document.querySelector("form#skip")&&document.getElementById("btn-main")&&!document.querySelector(".g-recaptcha"))
-				{
-					ui(ms.tS)
-					document.querySelector("form#skip").submit()
-					return
-				}
-				if(document.querySelector("a#btn-main")&&typeof Countdown=="function")
-				{
-					ui(ms.tS)
-					n(document.querySelector("a#btn-main").href)
-					return
-				}
-				if(document.getElementById("countdown")&&document.querySelector(".seconds"))
-				{
-					ui(ms.tS)
-					document.querySelector(".seconds").textContent="0"
-					return
-				}
-				if(typeof file_download=="function")
-				{
-					window.setInterval=(f)=>{
-						ui(ms.tS)
-						return sI(f,1)
-					}
-					return
-				}
-				if(document.querySelector("input[type=\"submit\"][name=\"method_free\"]"))
-				{
-					ui(ms.tS)
-					document.querySelector("input[type=\"submit\"][name=\"method_free\"]").click()
-					return
-				}
-				if(document.getElementById("frmdlcenter")&&document.getElementById("pay_modes"))//elsfile.org Timer
-				{
-					let form=document.createElement("form")
-					form.method="POST"
-					form.innerHTML='<input type="hidden" name="op" value="download1"><input type="hidden" name="usr_login" value="C"><input type="hidden" name="id" value="'+location.pathname.toString().substr(1)+'"><input type="hidden" name="fname" value="'+document.querySelectorAll("div#container > div > div > table > tbody > tr > td")[2].textContent+'"><input type="hidden" name="referer" value="q"><input type="hidden" name="method_free" value="Free Download">'
-					form=document.body.appendChild(form)
-					ui(ms.tS)
-					form.submit()
-					return
-				}
-				//Shorte.st
-				if(typeof app!="undefined"&&"options"in app&&"intermediate"in app.options)
-				{
-					app.options.intermediate.timeToWait=3
-					ui(ms.tL.replace("%secs%","2"))
-					let b=document.getElementById(app.options.intermediate.skipButtonId),
-					lT=sI(()=>{
-						if(b.className.indexOf("show")>-1)
+						else if(document.getElementById("link-download"))//hightech.web.id
 						{
-							clearInterval(lT)
-							n(app.options.intermediate.destinationUrl)
+							safelyNavigate(document.getElementById("link-download").href)
 						}
-					},100)
-					return
+					}
+				},100)
+			}
+			//Safelink Wordpress Plugin
+			if(document.querySelector(".wp-safelink-button"))
+			{
+				window.setInterval=f=>sI(f,1)
+				let lT=sI(()=>{
+					if(document.querySelector(".wp-safelink-button.wp-safelink-success-color"))
+					{
+						clearInterval(lT)
+						window.open=safelyNavigate
+						document.querySelector(".wp-safelink-button.wp-safelink-success-color").click()
+					}
+				},100)
+			}
+			if(document.getElementById("wpsafe-generate")&&typeof wpsafegenerate=="function")
+			{
+				let a=document.querySelector("#wpsafegenerate > #wpsafe-link > a[href]")
+				if(a)
+				{
+					safelyNavigate(a.href)
+					return finish()
 				}
-				//GetsURL.com
-				if(document.querySelector(".img-responsive[alt='Gets URL']")&&typeof x!="undefined")
+				else
+				{
+					let s=new URLSearchParams(location.search)
+					if(s.has("go"))
+					{
+						if(safelyNavigate(atob(s.get("go"))))
+							return finish()
+					}
+					else if(location.pathname.toString().substr(0,4)=="/go/")
+					{
+						search=atob(location.pathname.toString().substr(4))
+						if(search.substr(0,4)=="http")
+						{
+							safelyNavigate(search)
+							return finish()
+						}
+					}
+				}
+			}
+			if(document.querySelector("input[type='hidden'][name='newwpsafelink'][value]"))
+			{
+				let s=new URLSearchParams(location.search)
+				if(s.has("go"))
+				{
+					safelyNavigate(atob(s.get("go")))
+					return finish()
+				}
+			}
+			//Other Templates
+			if(document.querySelector(".timed-content-client_show_0_30_0"))//technicoz.com
+			{
+				document.querySelector(".timed-content-client_show_0_30_0").classList.remove("timed-content-client_show_0_30_0")
+				return finish()
+			}
+			if(document.getElementById("getlink")&&document.getElementById("gotolink")&&document.getElementById("timer"))//tetewlink.me,vehicle-techno.cf
+			{
+				document.getElementById("gotolink").removeAttribute("disabled")
+				document.getElementById("gotolink").click()
+				return finish()
+			}
+			if(document.querySelector("#tungguyabro")&&typeof WaktunyaBro=="number")//short.mangasave.me
+			{
+				WaktunyaBro=0
+				setInterval(()=>{
+					if(document.querySelector("#tungguyabro a[href]"))
+						safelyNavigate(document.querySelector("#tungguyabro a[href]").href)
+				},100)
+				return finish()
+			}
+			if(document.querySelector("#yangDihilangkan > a")&&document.querySelector("#downloadArea > .text-center"))//rathestation.bid
+			{
+				safelyNavigate(document.querySelector("#yangDihilangkan > a").href)
+				return finish()
+			}
+			if(document.querySelector("a#btn-main.disabled")&&typeof Countdown=="function")//Croco,CPMLink,Sloomp.space
+			{
+				safelyNavigate(document.querySelector("a#btn-main.disabled").href)
+				return finish()
+			}
+			if(document.querySelector("a.redirectBTN.disabled")&&document.querySelector(".timer"))//Arablionz.online
+			{
+				safelyNavigate(document.querySelector("a.redirectBTN.disabled").href)
+				return finish()
+			}
+			if(typeof generate=="function")//lewat.wibuindo.com
+			{
+				let b=document.querySelector("#download > a.akani[href]")
+				if(b)
+				{
+					safelyNavigate(b.href)
+				}
+			}
+			if(document.querySelector(".shortened_link a[href][ng-href][target='_blank']"))//Go2to.com,Go2too.com,Golink.to
+			{
+				safelyNavigate(document.querySelector(".shortened_link a[href][ng-href][target='_blank']").href)
+			}
+			if(document.querySelector("a[href^='https://linkshrink.net/homepage'] > img.lgo"))//LinkShrink.net
+			{
+				let p=document.getElementById("pause"),s=document.getElementById("skip")
+				if(p&&s)
+				{
+					//Automating the click seems to not always work due to ads so we're only skipping the timer
+					p.style.display="none"
+					s.style.display="block"
+				}
+			}
+			if(typeof x!="undefined")
+			{
+				if(document.querySelector("a.navbar-brand.logo-image[href='/'] > img[src='/img/4.png']"))//gslink.co
+				{
+					let a=document.querySelector("a.btnx[href][onclick]")
+					if(a)
+					{
+						safelyNavigate(a.href+"&ab=1")
+						return finish()
+					}
+					else
+					{
+						let b=document.querySelector("form[method='POST'] > input.btn[type='submit'][name='btn']")
+						if(b)
+						{
+							b.click()
+							return finish()
+						}
+					}
+				}
+				else if(document.querySelector(".img-responsive[alt='Gets URL']"))//gsul.me
 				{
 					let b=document.getElementById("link")
 					if(b)
 					{
-						ui(ms.tS)
-						n(b.href+"&ab"+x)
-						return
+						safelyNavigate(b.href+"&ab=1")
+						return finish()
 					}
 				}
-				//Linkvertise.net
-				if(document.querySelector(".logo > a[href='http://linkvertise.net'] > img[src='/assets/img/linkvertise.png']"))
+			}
+			if(document.querySelector(".top-bar a[href='https://linkvertise.net']")&&typeof app!="undefined"&&app.handleRedirect)//Linkvertise.net
+			{
+				app.countdown=0
+				$.post=(u,c)=>c()
+				app.handleRedirect()
+			}
+			if(document.querySelectorAll("img[src='/assets/img/logo.png'][alt='Openload']").length)//OpenLoad
+			{
+				if(typeof secondsdl!="undefined")
 				{
-					let b=document.querySelector("[data-download]")
+					secondsdl=0
+				}
+				return finish()
+			}
+			//SafeLinkReview.com
+			if(document.querySelector(".navbar-brand")&&document.querySelector(".navbar-brand").textContent.trim()=="Safe Link Review"&&document.querySelector(".button.green"))
+			{
+				window.open=safelyNavigate
+				document.querySelector(".button.green").click()
+				return finish()
+			}
+			if(location.hostname=="decrypt2.safelinkconverter.com"&&document.querySelector(".redirect_url > div[onclick]"))
+			{
+				window.open=safelyNavigate
+				document.querySelector(".redirect_url > div[onclick]").click()
+				return finish()
+			}
+			//Shorte.st
+			if(typeof app!="undefined"&&document.querySelector(".skip-add-container .first-img[alt='Shorte.st']"))
+			{
+				window.setInterval=f=>sI(f,500)
+				let dUC=window.decodeURIComponent
+				window.decodeURIComponent=c=>{
+					c=dUC(c)
+					safelyNavigate(c)
+					return c
+				}
+				crowdBypass(()=>{
+					window.decodeURIComponent=c=>{
+						c=dUC(c)
+						document.querySelector(".skip-add-container").textContent=""
+						contributeAndNavigate(c)
+						return c
+					}
+				})
+				return
+			}
+			let t=document.querySelector("title")
+			if(t)
+			{
+				t=t.textContent.trim()
+				if(t=="Viid.su")//Viid.su
+				{
+					let b=document.getElementById("link-success-button")
+					if(b&&b.getAttribute("data-url"))
+					{
+						safelyNavigate(b.getAttribute("data-url"))
+						return finish()
+					}
+				}
+				else
+				{
+					let b=document.querySelector("a#makingdifferenttimer[href]")
 					if(b)
 					{
-						ui(ms.tS)
-						n(b.getAttribute("data-download"))
-						return
-					}
-				}
-				//OpenLoad
-				if(document.querySelectorAll("img[src='/assets/img/logo.png'][alt='Openload']").length)
-				{
-					if(typeof secondsdl!=="undefined")
-					{
-						secondsdl=0
-						ui(ms.tS)
-					}
-					return
-				}
-				//SafelinkU
-				if(document.querySelector("b[style='color: #3e66b3']")&&document.querySelector("b[style='color: #3e66b3']").textContent=="SafelinkU")
-				{
-					window.setInterval=(f)=>{
-						ui(ms.tS)
-						return sI(f,10)
-					}
-					let lT=sI(()=>{
-						if(document.querySelector("a.btn.btn-primary.btn-lg.get-link[href]")&&document.querySelector("a.btn.btn-primary.btn-lg.get-link[href]").getAttribute("href").substr(0,11)!="javascript:")
+						if(isGoodLink(t))
 						{
-							clearInterval(lT)
-							ui(ms.tS)
-							n(document.querySelector("a.btn.btn-primary.btn-lg.get-link[href]").href)
+							unsafelyNavigate(t)
 						}
-					},100)
-					return
-				}
-				else if(document.querySelector("b[style='color : #3e66b3']")&&document.querySelector("b[style='color: #3e66b3']").textContent=="Shortener url?")
-				{
-					ui(ms.tS)
-					document.querySelector("button.btn.btn-success[type='submit']").click()
-					return
-				}
-				//KuroSafe
-				if(document.querySelector("a#mybutton.btn.btn-md.btn-primary[href^='https://www.kurosafe.online/']")||document.querySelector("a#mybutton.btn.btn-md.btn-primary[href^='https://kurosafe.online/']"))
-				{
-					ui(ms.tS)
-					n(document.getElementById("mybutton").href)
-					return
-				}
-				//SafeLinkReview.com
-				if(document.querySelector(".navbar-brand")&&document.querySelector(".navbar-brand").textContent.trim()=="Safe Link Review"&&document.querySelector(".button.green"))
-				{
-					window.open=n
-					ui(ms.tS)
-					document.querySelector(".button.green").click()
-					return
-				}
-				if(location.hostname=="decrypt2.safelinkconverter.com"&&document.querySelector(".redirect_url a"))
-				{
-					window.open=n
-					ui(ms.tS)
-					document.querySelector(".redirect_url a").click()
-					return
-				}
-				let t=document.querySelector("title")
-				if(t)
-				{
-					//Viid.su
-					if(t.textContent.trim()=="Viid.su")
-					{
-						let b=document.getElementById("link-success-button")
-						if(b&&b.getAttribute("data-url"))
+						else
 						{
-							ui(ms.tS)
-							n(b.getAttribute("data-url"))
-							return
+							safelyNavigate(b.href)
 						}
 					}
 				}
-				sI(()=>{
-					//Shorte.st Embed
-					if(document.querySelectorAll(".lay-sh.active-sh").length)
-					{
-						let elm=document.querySelectorAll(".lay-sh.active-sh")[0]
-						elm.parentNode.removeChild(elm)
-					}
-				},500)
-			})
-	},//
-	i=(t)=>{
-		s=d.createElement("script")
-		s.innerHTML=t
-		s=d.documentElement.appendChild(s)
-		setTimeout(()=>{d.documentElement.removeChild(s)},10)
-	}
-	i("("+c.toString().replace("let ms={},","let ms={tS:\""+chrome.i18n.getMessage("notificationTimerSkip")+"\",tL:\""+chrome.i18n.getMessage("notificationTimerLeap")+"\",b:\""+chrome.i18n.getMessage("notificationBackend")+"\"},")+")()")
-	chrome.storage.sync.get(["no_notifications"],(result)=>{
-		if(result&&result.no_notifications&&result.no_notifications==="true")
-		{
-			let f=()=>{
-				let d=document.createElement("div")
-				d.id="UNIVERSAL_BYPASS_NO_NOTIFICATIONS"
-				d.style.display="none"
-				document.body.appendChild(d)
 			}
-			if(["interactive","complete"].indexOf(document.readyState)>-1)f();else document.addEventListener("DOMContentLoaded",f)
-		}
-	})
-	chrome.storage.local.get(["custom_bypasses"],(result)=>
-	{
-		let evalResult=(result)=>{
-			if(result&&result.custom_bypasses)
-			{
-				let cB=JSON.parse(result.custom_bypasses)
-				for(let n in cB)
+			//Monitor DOM for disturbances for 3 seconds.
+			let dT=sI(()=>{
+				//Shorte.st Embed
+				if(document.querySelector(".lay-sh.active-sh"))
 				{
-					let b=cB[n],cs=b.content
-					if(b.domains=="*")
-						i(cs)
+					let elm=document.querySelectorAll(".lay-sh.active-sh")[0]
+					elm.parentNode.removeChild(elm)
+				}
+				//AdLinkFly
+				if(typeof app_vars=="object")
+				{
+					document.documentElement.setAttribute("data-universal-bypass-adlinkfly-info","")
+					let iT=setInterval(()=>{
+						if(document.documentElement.hasAttribute("data-universal-bypass-adlinkfly-target"))
+						{
+							clearInterval(iT)
+							let t=document.documentElement.getAttribute("data-universal-bypass-adlinkfly-target")
+							if(t=="")
+							{
+								crowdBypass(()=>{
+									let cT=setInterval(()=>{
+										let a=document.querySelector("a.get-link")
+										if(!a)
+										{
+											a=document.querySelector(".skip-ad a[href]")
+											if(!a)
+											{
+												a=document.querySelector("[enlace]")//adigp.com
+											}
+										}
+										if(a)
+										{
+											h=a.href
+											if(!isGoodLink(h)&&a.hasAttribute("data-href"))//cuio.io
+											{
+												h=a.getAttribute("data-href")
+											}
+											if(!isGoodLink(h)&&a.hasAttribute("enlace"))
+											{
+												h=a.getAttribute("enlace")
+											}
+											if(isGoodLink(h))
+											{
+												clearInterval(cT)
+												a.parentNode.removeChild(a)
+												contributeAndNavigate(h)
+											}
+										}
+									},20)
+								})
+							}
+							else
+							{
+								contributeAndNavigate(t)
+							}
+						}
+					},50)
+					domainBypass("oke.io",()=>window.setInterval=f=>sI(f,1))
+					clearInterval(dT)
+				}
+			},100)
+			setTimeout(()=>{
+				clearInterval(dT)
+				finish()
+			},30000)
+		})`
+		let dO=new MutationObserver(mutations=>{
+			if(document.documentElement.hasAttribute("data-universal-bypass-stop-watching"))
+			{
+				document.documentElement.removeAttribute("data-universal-bypass-stop-watching")
+				dO.disconnect()
+			}
+			else if(document.documentElement.hasAttribute("data-universal-bypass-crowd-query"))
+			{
+				document.documentElement.removeAttribute("data-universal-bypass-crowd-query")
+				let xhr=new XMLHttpRequest()
+				xhr.onreadystatechange=()=>{
+					if(xhr.readyState==4&&xhr.status==200&&xhr.responseText!="")
+					{
+						location.href=brws.runtime.getURL("html/crowd-bypassed.html")+"?target="+encodeURIComponent(xhr.responseText)+"&back="+encodeURIComponent(location.href)
+					}
 					else
 					{
-						let ds=b.domains.split(",")
-						for(let di in ds)
-						{
-							let d=ds[di]
-							if(location.hostname==d||location.hostname.substr(location.hostname.length-(d.length+1))=="."+d)
-								i(cs)
-						}
+						document.documentElement.setAttribute("data-universal-bypass-crowd-queried","")
 					}
 				}
+				xhr.open("POST","https://universal-bypass.org/crowd/query_v1",true)
+				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+				xhr.send("domain="+encodeURIComponent(domain)+"&path="+encodeURIComponent(location.pathname.toString().substr(1)))
 			}
+			else if(document.documentElement.hasAttribute("data-universal-bypass-crowd-contribute"))
+			{
+				let target=document.documentElement.getAttribute("data-universal-bypass-crowd-contribute"),
+				xhr=new XMLHttpRequest()
+				document.documentElement.removeAttribute("data-universal-bypass-crowd-contribute")
+				xhr.onreadystatechange=()=>{
+					if(xhr.readyState==4)
+					{
+						document.documentElement.setAttribute("data-universal-bypass-crowd-contributed","")
+					}
+				}
+				xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
+				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+				xhr.send("domain="+encodeURIComponent(domain)+"&path="+encodeURIComponent(location.pathname.toString().substr(1))+"&target="+encodeURIComponent(target))
+			}
+			else if(document.documentElement.hasAttribute("data-universal-bypass-adlinkfly-info"))
+			{
+				document.documentElement.removeAttribute("data-universal-bypass-adlinkfly-info")
+				let xhr=new XMLHttpRequest(),t="",iu=location.href
+				xhr.onreadystatechange=()=>{
+					if(xhr.readyState==4)
+					{
+						if(xhr.status==200)
+						{
+							let i=new DOMParser().parseFromString(xhr.responseText,"text/html").querySelector("img[src^='//api.miniature.io']")
+							if(i)
+							{
+								let url=new URL(i.src)
+								if(url.search&&url.search.indexOf("url="))
+									t=decodeURIComponent(url.search.split("url=")[1].split("&")[0])
+							}
+						}
+						document.documentElement.setAttribute("data-universal-bypass-adlinkfly-target",t)
+					}
+				}
+				if(iu.substr(iu.length - 1) != "/")
+				{
+					iu += "/"
+				}
+				xhr.open("GET", iu+"info", true)
+				xhr.send()
+			}
+		}),
+		domain=location.hostname
+		if(domain.substr(0,4)=="www.")
+		{
+			domain=domain.substr(4)
 		}
-		if(["interactive","complete"].indexOf(document.readyState)>-1)evalResult(result);else document.addEventListener("DOMContentLoaded",()=>evalResult(result))
+		dO.observe(document.documentElement,{attributes:true})
+		script.innerHTML+="\n"+res.userscript+"\n})()"
+		script=document.documentElement.appendChild(script)
+		setTimeout(()=>document.documentElement.removeChild(script),10)
 	})
 }

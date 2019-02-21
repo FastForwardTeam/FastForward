@@ -8,52 +8,61 @@
 	"firstrunSubtitle": {
 		"message": "Du bist der Beste!"
 	},
-	"firstrunWhatnow": {
-		"message": "Was du nun tun kannst:"
+	"firstrunNoScript": {
+		"message": "Jedoch sieht es so aus, als ob du NoScript oder ähnliches verwendest, womit Universal Bypass nicht kompatibel ist."
 	},
-	"firstrunOptions": {
-		"message": "Ändere die Universal Bypass Optionen."
-	},
-	"firstrunTwitter": {
-		"message": "Folge Universal Bypass auf Twitter um immer auf dem neusten Stand zu sein."
-	},
-	"homepage": {
-		"message": "Homepage"
-	},
-	"popupOptions": {
-		"message": "Optionen"
+	"faq": {
+		"message": "Häufig gestellte Fragen (FAQ)"
 	},
 	"options": {
-		"message": "Universal Bypass Optionen"
+		"message": "Optionen"
 	},
-	"save": {
-		"message": "Speichern"
+	"optionsEnabled": {
+		"message": "Aktiviere Webseiten-Umgehungen."
 	},
-	"optionsNotifications": {
-		"message": "Status-Meldungen auf Webseiten, die Universal Bypass kennt, anzeigen."
+	"optionsInstantNavigation": {
+		"message": "Navigiere mich automatisch zu Ziel-Urls."
+	},
+	"optionsTrackerBypass": {
+		"message": "Umgehe Tracker mit Apimon.de."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Blockiere IP-Logger wenn sie nicht umgangen werden können."
+	},
+	"optionsCrowdBypass": {
+		"message": "Gebe und nehme die Ziel-Urls von unumgänglichen Linkkürzern."
+	},
+	"privacyPolicy": {
+		"message": "Datenschutzerklärung"
 	},
 	"optionsUserscripts": {
 		"message": "Eigene Umgehungen"
 	},
 	"optionsUserscriptsSubtitle": {
-		"message": "Es wäre nett, wenn du funktionierende Umgehungen auf GitHub einreichen wüdest, damit Andere auch davon profitieren können: "
+		"message": "Es wäre nett, wenn du funktionierende Umgehungen auf GitHub einreichen würdest, damit Andere auch davon profitieren können."
 	},
-	"optionsUserscriptsName": {
-		"message": "Name. Mit einem leeren Namen, wird diese Umgehung gelöscht."
+	"beforeNavigate": {
+		"message": "Du bist fast am Ziel."
 	},
-	"optionsUserscriptsDomains": {
-		"message": "Domains. Nutze * damit diese Umgehung überall in effekt tritt."
+	"beforeNavigateDestination": {
+		"message": "Dein Ziel ist %"
 	},
-	"optionsUserscriptsDelete": {
-		"message": "Umgehung löschen"
+	"beforeNavigateInfo": {
+		"message": "Willst du, dass Universal Bypass dich automatisch an dein Ziel bringt?"
 	},
-	"notificationTimerSkip": {
-		"message": "Universal Bypass hat gerade den Timer übersprungen."
+	"blockedTitle": {
+		"message": "Universal Bypass hat dich vor einem IP-Logger geschützt."
 	},
-	"notificationTimerLeap": {
-		"message": "Universal Bypass hat gerade %secs% Sekunde(n) von dem Timer entfernt."
+	"blockedSubtitle": {
+		"message": "Möchtest du nicht, dass Universal Bypass deine IP vor bösen Leuten schützt?"
 	},
-	"notificationBackend": {
-		"message": "Universal Bypass kann diese Seite nicht umgehen, da diese einen Server-seitigen Check hat."
+	"crowdBypassed": {
+		"message": "Du musst vielleicht nicht warten!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Andere Universal Bypass-Nutzer haben bereits für dich gewartet und gemeldet, dass das zu % führt."
+	},
+	"crowdBypassedIgnore": {
+		"message": "War das nicht richtig?"
 	}
 }

@@ -3,45 +3,66 @@
 		"message": "No pierdas el tiempo para acceder. Universal Bypass omite automáticamente los molestos acortadores de enlaces."
 	},
 	"firstrunTitle": {
-		"message": "Gracias por instalar Universal Bypass!"
+		"message": "¡Gracias por instalar Universal Bypass!"
 	},
 	"firstrunSubtitle": {
 		"message": "¡Eres increíble!"
 	},
-	"firstrunWhatnow": {
-		"message": "Lo que puedes hacer ahora:"
+	"firstrunNoScript": {
+		"message": "No obstante, parece que estés utilizando NoScript o similar, con la que Universal Bypass no es compatible."
 	},
-	"firstrunOptions": {
-		"message": "Configura Universal Bypass' opción."
-	},
-	"firstrunTwitter": {
-		"message": "Siga a Universal Bypass en Twitter para estar informado sobre Universal Bypass."
-	},
-	"homepage": {
-		"message": "Inicio"
-	},
-	"popupOptions": {
-		"message": "Opciones"
+	"faq": {
+		"message": "Preguntas más frecuentes"
 	},
 	"options": {
-		"message": "Universal Bypass Opciones"
+		"message": "Opciones"
 	},
-	"save": {
-		"message": "Guardar"
+	"optionsEnabled": {
+		"message": "Activar bypass pagina web."
+	},
+	"optionsInstantNavigation": {
+		"message": "Llevarme directamente al destino."
+	},
+	"optionsTrackerBypass": {
+		"message": "Evita rastreadores usando Apimon.de."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Bloquea los registradores IP si no pueden ser Saltados."
+	},
+	"optionsCrowdBypass": {
+		"message": "Da y toma los destinos de los acortadores que no se pueden Saltar."
+	},
+	"privacyPolicy": {
+		"message": "Política de privacidad"
 	},
 	"optionsUserscripts": {
-		"message": "Personalizar Bypasses"
+		"message": "Bypasses personalizadas"
 	},
 	"optionsUserscriptsSubtitle": {
-		"message": "Sería bueno que pudieras enviarle a GitHub las bifurcaciones (fork) que funcionan, para que otros puedan beneficiarse de ello: "
+		"message": "Sería bueno que pudieras enviarle a GitHub las bifurcaciones (fork) que funcionan, para que otros puedan beneficiarse de ello."
 	},
-	"optionsUserscriptsName": {
-		"message": "Nombre. Con un nombre vacío, este bypass será borrado."
+	"beforeNavigate": {
+		"message": "Ya casi estas en tu destino."
 	},
-	"optionsUserscriptsDomains": {
-		"message": "Dominios. Utilice * para que este bypass sea efectivo en todas partes."
+	"beforeNavigateDestination": {
+		"message": "Tu dirección de destino es %"
 	},
-	"optionsUserscriptsDelete": {
-		"message": "Eliminar Bypass"
+	"beforeNavigateInfo": {
+		"message": "¿Desea que Universal Bypass lo redirija instantáneamente a su destino?"
+	},
+	"blockedTitle": {
+		"message": "Bypass Universal evitó que su IP se registrara."
+	},
+	"blockedSubtitle": {
+		"message": "¿No quiere que Universal Bypass impida que los actores malos obtengan su IP?"
+	},
+	"crowdBypassed": {
+		"message": "Puede que no tengas que esperar!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Otros usuarios de Universal Bypass ya han esperado por ti y han informado que esto lleva a %"
+	},
+	"crowdBypassedIgnore": {
+		"message": "¿No era eso correcto?"
 	}
 }

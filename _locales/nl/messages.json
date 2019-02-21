@@ -8,52 +8,61 @@
 	"firstrunSubtitle": {
 		"message": "Je bent geweldig!"
 	},
-	"firstrunWhatnow": {
-		"message": "Wat je nu kan doen:"
+	"firstrunNoScript": {
+		"message": "U lijkt NoScript of dergelijke te gebruiken, daarmee werkt Universal Bypass niet."
 	},
-	"firstrunOptions": {
-		"message": "Wijzig de Universal Bypass-opties."
-	},
-	"firstrunTwitter": {
-		"message": "Volg Universal Bypass op Twitter om altijd op de hoogte te blijven van Universal Bypass."
-	},
-	"homepage": {
-		"message": "Startpagina"
-	},
-	"popupOptions": {
-		"message": "Opties"
+	"faq": {
+		"message": "Veelgestelde Vragen (FAQ)"
 	},
 	"options": {
-		"message": "Universal Bypass Opties"
+		"message": "Opties"
 	},
-	"save": {
-		"message": "Opslaan"
+	"optionsEnabled": {
+		"message": "Website bypass inschakelen."
 	},
-	"optionsNotifications": {
-		"message": "Toon statusmeldingen op websites die Universal Bypass kent."
+	"optionsInstantNavigation": {
+		"message": "Stuur me gelijk door naar de site."
+	},
+	"optionsTrackerBypass": {
+		"message": "Omzeil trackers met behulp van Apimon.de."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Blokkeer IP-loggers als ze niet kunnen worden omzeilt."
+	},
+	"optionsCrowdBypass": {
+		"message": "Geef en neem de bestemmingen van ondoorlaatbare verkortingen."
+	},
+	"privacyPolicy": {
+		"message": "Privacy Verklaring"
 	},
 	"optionsUserscripts": {
 		"message": "Aangepaste bypasses"
 	},
 	"optionsUserscriptsSubtitle": {
-		"message": "Het zou leuk zijn als je je eigen toevoegingen naar GitHub zou kunnen aanbieden, zodat anderen er profijt van kunnen hebben: "
+		"message": "Het zou leuk zijn als je je eigen toevoegingen op Github zou publiceren, zodat anderen er ook profijt van kunnen hebben."
 	},
-	"optionsUserscriptsName": {
-		"message": "Naam. Met een lege naam wordt deze bypass verwijderd."
+	"beforeNavigate": {
+		"message": "Je bent bijna op je bestemming."
 	},
-	"optionsUserscriptsDomains": {
-		"message": "Domeinen. Gebruik * om deze bypass overal effectief te maken."
+	"beforeNavigateDestination": {
+		"message": "Uw bestemming is %"
 	},
-	"optionsUserscriptsDelete": {
-		"message": "Verwijder Bypass"
+	"beforeNavigateInfo": {
+		"message": "Wilt u dat Universal Bypass u direct doorstuurt naar uw bestemming?"
 	},
-	"notificationTimerSkip": {
-		"message": "Universal Bypass heeft die timer voor u overgeslagen."
+	"blockedTitle": {
+		"message": "Universal Bypass voorkomt dat uw IP wordt geregistreerd."
 	},
-	"notificationTimerLeap": {
-		"message": "Universal Bypass heeft zojuist %sec% seconde(n) uit die timer verwijderd."
+	"blockedSubtitle": {
+		"message": "Weet u zeker dat u IP-Logger bescherming wilt uitschakelen?"
 	},
-	"notificationBackend": {
-		"message": "Universal Bypass kan deze site niet omzeilen omdat ze een controle aan de serverzijde hebben."
+	"crowdBypassed": {
+		"message": "U hoeft misschien niet te wachten!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Andere Universal Bypass-gebruikers hebben al aangegeven dat dit aan % ligt"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Klopt dit niet?"
 	}
 }

@@ -1,0 +1,35 @@
+{
+	"appDesc": {
+		"message": "Ne vesztegesd az időd beleegyezésekkel. A Universal Bypass automatikusan kikerüli a bosszantó link-rövidítőket."
+	},
+	"firstrunTitle": {
+		"message": "Köszönjük, hogy telepítetted a Universal Bypass-t!"
+	},
+	"firstrunSubtitle": {
+		"message": "Csodálatos vagy!"
+	},
+	"optionsTrackerBypass": {
+		"message": "Apimon.de-t használó trackerek kikerülése."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "IP-loggerek blokkolása, ha nem kerülhetők ki."
+	},
+	"privacyPolicy": {
+		"message": "Adatvédelmi irányelvek"
+	},
+	"optionsUserscripts": {
+		"message": "Egyéni kikerülések"
+	},
+	"blockedTitle": {
+		"message": "A Universal Bypass megtiltotta, hogy az IP-t naplózható legyen."
+	},
+	"crowdBypassed": {
+		"message": "Talán nem kell várakoznod!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Más Universal Bypass felhasználók már vártak helyetted, és szerintük ez a(z) % webhelyhez vezet"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Ez helytelen?"
+	}
+}

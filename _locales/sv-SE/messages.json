@@ -1,0 +1,68 @@
+{
+	"appDesc": {
+		"message": "Slösa inte bort din tid med samstämmighet. Universal Bypass hoppar automatiskt över irriterande länkförkortare."
+	},
+	"firstrunTitle": {
+		"message": "Tack för att du installerat Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "Du är fantastisk!"
+	},
+	"firstrunNoScript": {
+		"message": "Det verkar som om du använder NoScript eller något liknande vilket Universal Bypass inte är kompatibel med."
+	},
+	"faq": {
+		"message": "Vanliga frågor (FAQ)"
+	},
+	"options": {
+		"message": "Alternativ"
+	},
+	"optionsEnabled": {
+		"message": "Aktivera förbikopplingar av webbplats."
+	},
+	"optionsInstantNavigation": {
+		"message": "Ta mig omedelbart till målen."
+	},
+	"optionsTrackerBypass": {
+		"message": "Förbikopplare som använder Apimon.de."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Blockera IP-loggerare om de inte kan förbikopplas."
+	},
+	"optionsCrowdBypass": {
+		"message": "Ge och ta destinationerna för icke förbikopplade länkförkortare."
+	},
+	"privacyPolicy": {
+		"message": "Integritetspolicy"
+	},
+	"optionsUserscripts": {
+		"message": "Anpassade förbikopplingar"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "Det vore snällt om du kunde skicka upp fungerande förbikopplingar till GitHub, så andra också kan ha nytta av dem."
+	},
+	"beforeNavigate": {
+		"message": "Du har nästan nått ditt mål."
+	},
+	"beforeNavigateDestination": {
+		"message": "Ditt mål är %"
+	},
+	"beforeNavigateInfo": {
+		"message": "Vill du att Universal Bypass omdirigerar dig direkt till ditt mål?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass förhindrade din IP-adress från att loggas."
+	},
+	"blockedSubtitle": {
+		"message": "Vill du inte att Universal Bypass ska förhindra skurkar från att få tag på din IP-adress?"
+	},
+	"crowdBypassed": {
+		"message": "Det är inte säkert du behöver vänta!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Andra användare av Universal Bypass har redan väntat på dig och rapporterat att denna leder till %"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Var detta inte korrekt?"
+	}
+}

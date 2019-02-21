@@ -1,96 +1,108 @@
-chrome.storage.local.get(["custom_bypasses"],(result)=>{
-	let customBypasses=(result&&result.custom_bypasses)?JSON.parse(result.custom_bypasses):{},
-	customBypassesList=document.getElementById("custom-bypasses-list"),
-	customBypassName=document.getElementById("custom-bypass-name"),
-	customBypassDomains=document.getElementById("custom-bypass-domains"),
-	bypassEditor=document.getElementById("custom-bypass-editor"),
-	editingBypass="",
-	reloadCustomBypassList=()=>{
-		customBypassesList.innerHTML=""
-		customBypasses["+ Add"]={}
-		if(editingBypass)
-			document.getElementById("custom-bypass-edit-container").style.display="block"
-		else
-			document.getElementById("custom-bypass-edit-container").style.display="none"
-		for(let name in customBypasses)
-		{
-			let a=document.createElement("a")
-			a.id="custom-bypass-"+name
-			a.href="#userscripts"
-			a.className="list-group-item list-group-item-action"+(editingBypass==name?" active":"")
-			a.textContent=name
-			a.onclick=function()
-			{
-				let _active=document.querySelector(".list-group-item.active")
-				if(_active)
-					_active.className="list-group-item list-group-item-action"
-				editingBypass=this.id.substr(14)
-				if(editingBypass=="+ Add")
-				{
-					customBypasses[editingBypass="Untitled Bypass"]={
-						domains:"example.com,example.org",
-						content:'let b=document.getElementById("button")\nif(b&&b.href)\n    location.href=b.href'
-					}
-				}
-				else
-				{
-					this.className="list-group-item list-group-item-action active"
-				}
-				customBypassName.value=editingBypass
-				customBypassDomains.value=customBypasses[editingBypass].domains
-				bypassEditor.textContent=customBypasses[editingBypass].content
-				saveCustomBypass()
-			}
-			customBypassesList.appendChild(a)
-		}
-		delete customBypasses["+ Add"]
-	},
-	saveCustomBypass=()=>{
-		if(customBypassName.value!=editingBypass)
-		{
-			if(customBypassName.value)
-			{
-				customBypasses[customBypassName.value]=customBypasses[editingBypass]
-				delete customBypasses[editingBypass]
-				editingBypass=customBypassName.value
-			}
-			else
-			{
-				if(confirm("Do you really want to delete this bypass?"))
-				{
-					delete customBypasses[editingBypass]
-					editingBypass=""
-				}
-				else
-					customBypassName.value=editingBypass
-			}
-		}
-		if(editingBypass!="")
-		{
-			customBypasses[editingBypass].domains=customBypassDomains.value
-			customBypasses[editingBypass].content=bypassEditor.value
-		}
-		chrome.storage.local.set({custom_bypasses:JSON.stringify(customBypasses)},reloadCustomBypassList);
-	}
-	reloadCustomBypassList()
-	document.getElementById("save-custom-bypass").onclick=saveCustomBypass
-	document.getElementById("delete-custom-bypass").onclick=()=>{
-		customBypassName.value=""
-		saveCustomBypass()
-	}
-})
-chrome.storage.sync.get(["no_notifications"],(result)=>{
-	let notificationsCheckbox=document.getElementById("option-notifications")
-	if(!result||!result.no_notifications||result.no_notifications!=="true")
+var example=`//Some examples of what you can do with custom bypasses:
+domainBypass("example.com", function()
+{
+	ensureDomLoaded(function()
 	{
-		notificationsCheckbox.setAttribute("checked","checked")
+		let button = document.getElementById("skip-button")
+		if(button != null)
+		{
+			button.click()
+		}
+	})
+})
+hrefBypass(/example\\.(com|org)/, function()
+{
+	// This bypass won't trigger on example.com because
+	// we have already defined a bypass for example.com.
+	sI(function()
+	{
+		// sI is a copy of window.setInterval.
+		// You may also use sT (setTimeout), ev (eval),
+		// and safelyNavigate(url) in your bypasses.
+		console.log("A second has passed")
+	}, 1000)
+})
+// Feel free to replace this with your own code now!
+// Changes are automatically saved.
+`,saveTimer,editor=ace.edit("userscript",{mode:"ace/mode/javascript",theme:"ace/theme/monokai"}),
+span=document.querySelector("[data-message='optionsUserscriptsSubtitle']")
+span.innerHTML=span.textContent.replace("GitHub","<a href='https://github.com/timmyrs/Universal-Bypass/blob/master/content_script.js' target='_blank'>GitHub</a>")
+brws.storage.local.get(["userscript"],res=>{
+	if(res&&res.userscript)
+	{
+		editor.setValue(res.userscript)
 	}
-	notificationsCheckbox.onchange=()=>{
-		notificationsCheckbox.setAttribute("disabled","disabled")
-		chrome.storage.sync.set({
-			no_notifications:(!notificationsCheckbox.checked).toString()
-		},()=>{
-			notificationsCheckbox.removeAttribute("disabled")
+	else
+	{
+		editor.setValue(example)
+		brws.storage.local.set({
+			userscript: example
+		})
+	}
+	editor.resize()
+	editor.clearSelection()
+	editor.on("change", ()=>{
+		clearInterval(saveTimer)
+		saveTimer=setTimeout(()=>{
+			brws.storage.local.set({
+				userscript: editor.getValue()
+			})
+		},500)
+	})
+})
+brws.storage.sync.get(["disable","instant_navigation","no_tracker_bypass","allow_ip_loggers","crowd_bypass_opt_out"],res=>{
+	if(res==undefined)
+	{
+		res={}
+	}
+	let enabledCheckbox=document.getElementById("option-enabled"),
+	instantNavigationCheckbox=document.getElementById("option-instant-navigation"),
+	trackerBypassCheckbox=document.getElementById("option-tracker-bypass"),
+	blockIPLoggersCheckbox=document.getElementById("option-block-ip-loggers"),
+	crowdBypassCheckbox=document.getElementById("option-crowd-bypass")
+	if(!res.disable||res.disable!=="true")
+	{
+		enabledCheckbox.setAttribute("checked","checked")
+	}
+	if(res.instant_navigation&&res.instant_navigation==="true")
+	{
+		instantNavigationCheckbox.setAttribute("checked","checked")
+	}
+	if(!res.no_tracker_bypass||res.no_tracker_bypass!=="true")
+	{
+		trackerBypassCheckbox.setAttribute("checked","checked")
+	}
+	if(!res.allow_ip_loggers||res.allow_ip_loggers!=="true")
+	{
+		blockIPLoggersCheckbox.setAttribute("checked","checked")
+	}
+	if(!res.crowd_bypass_opt_out||res.crowd_bypass_opt_out!=="true")
+	{
+		crowdBypassCheckbox.setAttribute("checked","checked")
+	}
+	enabledCheckbox.onchange=()=>{
+		brws.storage.sync.set({
+			disable:(!enabledCheckbox.checked).toString()
+		})
+	}
+	instantNavigationCheckbox.onchange=()=>{
+		brws.storage.sync.set({
+			instant_navigation:instantNavigationCheckbox.checked.toString()
+		})
+	}
+	trackerBypassCheckbox.onchange=()=>{
+		brws.storage.sync.set({
+			no_tracker_bypass:(!trackerBypassCheckbox.checked).toString()
+		})
+	}
+	blockIPLoggersCheckbox.onchange=()=>{
+		brws.storage.sync.set({
+			allow_ip_loggers:(!blockIPLoggersCheckbox.checked).toString()
+		})
+	}
+	crowdBypassCheckbox.onchange=()=>{
+		brws.storage.sync.set({
+			crowd_bypass_opt_out:(!crowdBypassCheckbox.checked).toString()
 		})
 	}
 })

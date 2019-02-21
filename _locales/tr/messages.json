@@ -1,0 +1,62 @@
+{
+	"appDesc": {
+		"message": "Zamanınızı karmaşa ile harcamayın. Universal Bypass, rahatsız edici bağlantı kısaltıcıları kendiliğinden geçer."
+	},
+	"firstrunTitle": {
+		"message": "Universal Bypass'i kurduğunuz için çok teşekkürler!"
+	},
+	"firstrunSubtitle": {
+		"message": "Harikasınız!"
+	},
+	"firstrunNoScript": {
+		"message": "Ancak görünen o ki Universal Baypass'in uyumlu olmadığı NoScript veya benzeri bir betik kullanıyorsunuz."
+	},
+	"options": {
+		"message": "Seçenekler"
+	},
+	"optionsEnabled": {
+		"message": "Web sayfalarını es geçmeyi etkinleştir."
+	},
+	"optionsInstantNavigation": {
+		"message": "Beni anında hedef adrese yönlendir."
+	},
+	"optionsTrackerBypass": {
+		"message": "Apimon.de kullanan bypass izleyicileri."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Eğer es geçilemezse IP kayıtçılarını engelle."
+	},
+	"optionsCrowdBypass": {
+		"message": "Ötürülə bilməyən qısaldıcıların yerlərini götür və apar."
+	},
+	"privacyPolicy": {
+		"message": "Gizlilik Sözleşmesi"
+	},
+	"optionsUserscripts": {
+		"message": "Özel Bypasslar"
+	},
+	"beforeNavigate": {
+		"message": "Neredeyse vardınız."
+	},
+	"beforeNavigateDestination": {
+		"message": "Hedefiniz: %"
+	},
+	"beforeNavigateInfo": {
+		"message": "Universal Bypass'in sizi doğrudan hedefe yönlendirmesini ister misiniz?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass, IP adresinizin kayıtlara eklenmesini engelledi."
+	},
+	"blockedSubtitle": {
+		"message": "Universal Bypass'in sizi kötü adamların IP adresinizi almasından korumasını istemiyor musunuz?"
+	},
+	"crowdBypassed": {
+		"message": "Beklemek zorunda değilsin!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Diğer Universal Baypass kullanıcıları sizin yerinize beklediler ve bunun % 'e gittiğini bildirdiler."
+	},
+	"crowdBypassedIgnore": {
+		"message": "Bu doğru değil miydi?"
+	}
+}
