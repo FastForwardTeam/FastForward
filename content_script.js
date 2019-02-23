@@ -385,7 +385,7 @@ if(document instanceof HTMLDocument)
 			xhr.send("id="+location.hash.replace("#",""))
 		}
 	})
-	hrefBypass(/firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php|2speed\\.net\\/file\\//,()=>{
+	hrefBypass(/linkasm\\.com|firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php|2speed\\.net\\/file\\//,()=>{
 		window.setInterval=f=>sI(f,1)
 	})
 	hrefBypass(/datei\\.to|id-share19\\.com/,()=>{
