@@ -680,6 +680,14 @@ if(document instanceof HTMLDocument)
 					safelyNavigate(document.querySelector("#link > a").href)
 				}
 			})
+			domainBypass("connect-trojan.net",()=>{
+				let a=document.querySelector("#post_download > a[onclick]")
+				if(a)
+				{
+					redireciona=safelyNavigate
+					a.onclick()
+				}
+			})
 			//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 			if(bypassed)
 			{
