@@ -14,7 +14,7 @@ if(document instanceof HTMLDocument)
 		//Copying eval, etc. to prevent issues with other extensions, such as uBlockOrigin. Also, note that this is the page level, so there are no security risks in using eval.
 		ev=eval,sT=setTimeout,sI=setInterval,
 		isGoodLink=link=>{
-			if(!link||link==location.href||link.substr(0,11)=="javascript:")
+			if(!link||link==location.href||link.substr(0,6)=="about:"||link.substr(0,11)=="javascript:")
 			{
 				return false
 			}
