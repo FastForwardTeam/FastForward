@@ -688,6 +688,9 @@ if(document instanceof HTMLDocument)
 					a.onclick()
 				}
 			})
+			domainBypass("shirosafe.web.id",()=>{
+				safelyNavigate(document.querySelector("#generate > center > a[style]").href)
+			})
 			//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 			if(bypassed)
 			{
