@@ -1,0 +1,32 @@
+{
+	"firstrunTitle": {
+		"message": "سوپاس بۆ دامەزراندی Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "تۆ واقوڕمێنه‌ریت!"
+	},
+	"faq": {
+		"message": "ئەم پرسیارانەی زۆر کراون"
+	},
+	"options": {
+		"message": "هەڵبژاردنەکان"
+	},
+	"optionsEnabled": {
+		"message": "بەکارخستنی رێگاگرتنی وێبسایت."
+	},
+	"optionsInstantNavigation": {
+		"message": "دەستبەجی بمبە بۆ شوێنی چوون."
+	},
+	"optionsUserscripts": {
+		"message": "دەربازبوونی نەریتی"
+	},
+	"beforeNavigateDestination": {
+		"message": "ئەو شوێنەی کە ذەچیت: %"
+	},
+	"crowdBypassed": {
+		"message": "لەوانەیە پێویست نەکات بوەستیت!"
+	},
+	"crowdBypassedIgnore": {
+		"message": "ئایە ئەمە ڕاست نەبوو؟"
+	}
+}

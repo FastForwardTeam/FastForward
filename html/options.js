@@ -1,29 +1,19 @@
-var example=`//Some examples of what you can do with custom bypasses:
+var example=`// Some examples of what you can do with custom bypasses:
 domainBypass("example.com", function()
 {
 	ensureDomLoaded(function()
 	{
-		let button = document.getElementById("skip-button")
-		if(button != null)
-		{
-			button.click()
-		}
+		safelyNavigate(a.querySelector("a#skip_button[href]").href)
+		// Make sure to use safelyNavigate(url) to avoid bad redirects.
 	})
 })
 hrefBypass(/example\\.(com|org)/, function()
 {
-	// This bypass won't trigger on example.com because
-	// we have already defined a bypass for example.com.
-	sI(function()
-	{
-		// sI is a copy of window.setInterval.
-		// You may also use sT (setTimeout), ev (eval),
-		// and safelyNavigate(url) in your bypasses.
-		console.log("A second has passed")
-	}, 1000)
+	// This bypass would trigger on example.com
+	// if we didn't already have a bypass for it.
 })
 // Feel free to replace this with your own code now!
-// Changes are automatically saved.
+// Changes are saved automatically.
 `,saveTimer,editor=ace.edit("userscript",{mode:"ace/mode/javascript",theme:"ace/theme/monokai"}),
 span=document.querySelector("[data-message='optionsUserscriptsSubtitle']")
 span.innerHTML=span.textContent.replace("GitHub","<a href='https://github.com/timmyrs/Universal-Bypass/blob/master/content_script.js' target='_blank'>GitHub</a>")

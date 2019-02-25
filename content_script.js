@@ -9,10 +9,10 @@ if(document instanceof HTMLDocument)
 		}
 		let script=document.createElement("script")
 		script.innerHTML=`(()=>{
-		let crowdEnabled=`+(res.crowdEnabled ? "true" : "false")+`,
+		const crowdEnabled=`+(res.crowdEnabled ? "true" : "false")+`,
 		ODP=(t,p,o)=>{try{Object.defineProperty(t,p,o)}catch(e){console.trace("[Universal Bypass] Couldn't define",p)}},
 		//Copying eval, etc. to prevent issues with other extensions, such as uBlockOrigin. Also, note that this is the page level, so there are no security risks in using eval.
-		ev=eval,sT=setTimeout,sI=setInterval,
+		eval=window.eval,setTimeout=window.setTimeout,setInterval=window.setInterval,
 		isGoodLink=link=>{
 			if(!link||link==location.href||link.substr(0,6)=="about:"||link.substr(0,11)=="javascript:")
 			{
@@ -28,7 +28,6 @@ if(document instanceof HTMLDocument)
 			}
 			return true
 		},
-		navigated=false,
 		unsafelyNavigate=target=>{
 			if(navigated)
 				return
@@ -52,7 +51,6 @@ if(document instanceof HTMLDocument)
 			unsafelyNavigate(target)
 			return true
 		},
-		bypassed=false,
 		finish=()=>{
 			bypassed=true
 			document.documentElement.setAttribute("data-universal-bypass-stop-watching","")
@@ -78,7 +76,7 @@ if(document instanceof HTMLDocument)
 			}
 			else
 			{
-				document.addEventListener("DOMContentLoaded",()=>sT(f,1))
+				document.addEventListener("DOMContentLoaded",()=>setTimeout(f,1))
 			}
 		},
 		crowdBypass=f=>{
@@ -123,7 +121,9 @@ if(document instanceof HTMLDocument)
 					unsafelyNavigate(target)
 				}
 			}
-		},
+		}
+		var navigated=false,
+		bypassed=false,
 		domain=location.hostname
 		if(domain.substr(0,4)=="www.")
 		{
@@ -225,6 +225,24 @@ if(document instanceof HTMLDocument)
 			},
 			get:()=>actual_web_root
 		})
+		//GemPixel Premium URL Shortener
+		let actual_appurl,actual_token
+		ODP(window,"appurl",{
+			set:v=>{
+				actual_appurl=v
+			},
+			get:()=>actual_appurl
+		})
+		ODP(window,"token",{
+			set:v=>{
+				actual_token=v
+				if(actual_appurl)
+				{
+					window.setInterval=f=>setInterval(f,1)
+				}
+			},
+			get:()=>actual_token
+		})
 		hrefBypass(/ur\\.ly|urly\\.mobi/,()=>{
 			if(location.pathname.length>2&&location.pathname.substr(0,6)!="/goii/")
 				safelyNavigate("/goii/"+location.pathname.substr(2)+"?ref="+location.hostname+location.pathname)
@@ -243,7 +261,7 @@ if(document instanceof HTMLDocument)
 			})
 			ensureDomLoaded(()=>
 			{
-				let lT=sI(()=>
+				let lT=setInterval(()=>
 				{
 					if(document.querySelector(".next[href]"))
 					{
@@ -258,7 +276,7 @@ if(document instanceof HTMLDocument)
 				value:0,
 				writable:false
 			})
-			let lT=sI(()=>
+			let lT=setInterval(()=>
 			{
 				if(document.querySelector(".skip > .btn"))
 				{
@@ -272,7 +290,7 @@ if(document instanceof HTMLDocument)
 				value:1,
 				writable:false
 			})
-			let lT=sI(()=>{
+			let lT=setInterval(()=>{
 				if(document.getElementById("continuar"))
 				{
 					clearInterval(lT)
@@ -285,7 +303,7 @@ if(document instanceof HTMLDocument)
 				value:0,
 				writable:false
 			})
-			let lT=sI(()=>{
+			let lT=setInterval(()=>{
 				if(document.querySelector(".download_button"))
 				{
 					clearInterval(lT)
@@ -334,7 +352,7 @@ if(document instanceof HTMLDocument)
 				writable:false
 			})
 			ensureDomLoaded(()=>{
-				let bT=sI(()=>{
+				let bT=setInterval(()=>{
 					if(d)
 						clearInterval(bT)
 					else b.click()
@@ -342,10 +360,10 @@ if(document instanceof HTMLDocument)
 		})
 	})
 	domainBypass("bc.vc",()=>{
-		window.setInterval=f=>sI(f,800)
+		window.setInterval=f=>setInterval(f,800)
 		crowdBypass(()=>{
 			window.eval=c=>{
-				let j=ev(c)
+				let j=eval(c)
 				if(j.message&&j.message.url)
 				{
 					contributeAndNavigate(j.message.url)
@@ -385,13 +403,13 @@ if(document instanceof HTMLDocument)
 			xhr.send("id="+location.hash.replace("#",""))
 		}
 	})
+	//Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
 	hrefBypass(/linkasm\\.com|firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php|2speed\\.net\\/file\\//,()=>{
-		window.setInterval=f=>sI(f,1)
+		window.setInterval=f=>setInterval(f,1)
 	})
 	hrefBypass(/datei\\.to|id-share19\\.com/,()=>{
-		window.setTimeout=f=>sT(f,1)
+		window.setTimeout=f=>setTimeout(f,1)
 	})
-	//Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
 	if(bypassed)
 	{
 		return
@@ -479,7 +497,7 @@ if(document instanceof HTMLDocument)
 				if(b)
 				{
 					window.open=safelyNavigate
-					ev("("+b.onclick.toString().split(";")[0]+"})()")
+					eval("("+b.onclick.toString().split(";")[0]+"})()")
 				}
 			}
 		})
@@ -720,22 +738,8 @@ if(document instanceof HTMLDocument)
 			//SafelinkU
 			if(typeof app_vars=="object"&&document.querySelector("b[style='color: #3e66b3']")&&document.querySelector("b[style='color: #3e66b3']").textContent=="SafelinkU")
 			{
-				window.setInterval=(f)=>sI(f,10)
+				window.setInterval=(f)=>setInterval(f,10)
 				return finish()
-			}
-			//GemPixel Premium URL Shortener
-			if(typeof appurl!="undefined"&&typeof token!="undefined")
-			{
-				document.querySelectorAll("script").forEach(script=>{
-					if(script instanceof HTMLScriptElement)
-					{
-						let cont=script.textContent,start=cont.indexOf('clearInterval(countdown);window.location="')
-						if(start>-1&&cont.indexOf('";}count--;}, 1000)')>-1)
-						{
-							safelyNavigate(cont.substr(start+42).split('";}count--;}, 1000)')[0])
-						}
-					}
-				})
 			}
 			//Soralink Wordpress Plugin
 			if(document.querySelector(".sorasubmit"))
@@ -761,7 +765,7 @@ if(document instanceof HTMLDocument)
 			}
 			if(typeof changeLink=="function")
 			{
-				let cLT=sI(()=>{
+				let cLT=setInterval(()=>{
 					if((document.querySelectorAll("img#pleasewait").length&&document.querySelector(".wait"))
 					||document.getElementById("showlink")
 					||document.getElementById("download")
@@ -786,8 +790,8 @@ if(document instanceof HTMLDocument)
 			//Safelink Wordpress Plugin
 			if(document.querySelector(".wp-safelink-button"))
 			{
-				window.setInterval=f=>sI(f,1)
-				let lT=sI(()=>{
+				window.setInterval=f=>setInterval(f,1)
+				let lT=setInterval(()=>{
 					if(document.querySelector(".wp-safelink-button.wp-safelink-success-color"))
 					{
 						clearInterval(lT)
@@ -950,7 +954,7 @@ if(document instanceof HTMLDocument)
 			//Shorte.st
 			if(typeof app!="undefined"&&document.querySelector(".skip-add-container .first-img[alt='Shorte.st']"))
 			{
-				window.setInterval=f=>sI(f,500)
+				window.setInterval=f=>setInterval(f,500)
 				let dUC=window.decodeURIComponent
 				window.decodeURIComponent=c=>{
 					c=dUC(c)
@@ -997,7 +1001,7 @@ if(document instanceof HTMLDocument)
 				}
 			}
 			//Monitor DOM for disturbances for 3 seconds.
-			let dT=sI(()=>{
+			let dT=setInterval(()=>{
 				//Shorte.st Embed
 				if(document.querySelector(".lay-sh.active-sh"))
 				{
@@ -1053,7 +1057,7 @@ if(document instanceof HTMLDocument)
 							}
 						}
 					},50)
-					domainBypass("oke.io",()=>window.setInterval=f=>sI(f,1))
+					domainBypass("oke.io",()=>window.setInterval=f=>setInterval(f,1))
 					clearInterval(dT)
 				}
 			},100)
