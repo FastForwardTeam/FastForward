@@ -1079,7 +1079,8 @@ if(document instanceof HTMLDocument)
 				xhr.onreadystatechange=()=>{
 					if(xhr.readyState==4&&xhr.status==200&&xhr.responseText!="")
 					{
-						location.href=brws.runtime.getURL("html/crowd-bypassed.html")+"?target="+encodeURIComponent(xhr.responseText)+"&back="+encodeURIComponent(location.href)
+						location.href="https://universal-bypass.org/crowd-bypassed?target="+encodeURIComponent(xhr.responseText)+"&back="+encodeURIComponent(location.href)
+						//The background script will intercept the request and redirect to html/crowd-bypassed.html
 					}
 					else
 					{

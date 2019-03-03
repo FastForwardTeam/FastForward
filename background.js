@@ -70,11 +70,9 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		return {redirectUrl:brws.runtime.getURL("html/firstrun-noscript.html")}
 	}
 },{types:["main_frame"],urls:["https://universal-bypass.org/firstrun?*"]},["blocking"])
-
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	return encodedRedirect(details.url.substr(52))
 },{types:["main_frame"],urls:["https://universal-bypass.org/before-navigate?target=*"]},["blocking"])
-
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	return {redirectUrl:brws.runtime.getURL("html/crowd-bypassed.html")+details.url.substr(43)}
 },{types:["main_frame"],urls:["https://universal-bypass.org/crowd-bypassed?*"]},["blocking"])

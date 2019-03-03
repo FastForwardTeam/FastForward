@@ -11,6 +11,9 @@
 	"firstrunNoScript": {
 		"message": "Ancak görünen o ki Universal Baypass'in uyumlu olmadığı NoScript veya benzeri bir betik kullanıyorsunuz."
 	},
+	"faq": {
+		"message": "Sıkça Sorulan Sorular (SSS)"
+	},
 	"options": {
 		"message": "Seçenekler"
 	},
@@ -27,13 +30,16 @@
 		"message": "Eğer es geçilemezse IP kayıtçılarını engelle."
 	},
 	"optionsCrowdBypass": {
-		"message": "Ötürülə bilməyən qısaldıcıların yerlərini götür və apar."
+		"message": "Es geçilemeyen link kısaltıcıların hedeflerini geliştiriciyle paylaş."
 	},
 	"privacyPolicy": {
 		"message": "Gizlilik Sözleşmesi"
 	},
 	"optionsUserscripts": {
-		"message": "Özel Bypasslar"
+		"message": "Özel Es Geçmeler"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "Eğer GitHub'da çalışan es geçmeler paylaşabilirseniz güzel olur, hem böylelikle diğer kullanıcılar da yararlanmış olurlar."
 	},
 	"beforeNavigate": {
 		"message": "Neredeyse vardınız."
