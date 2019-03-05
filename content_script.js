@@ -938,6 +938,12 @@ if(document instanceof HTMLDocument)
 				}
 				return finish()
 			}
+			//KBRmedia jQuery Premium URL Shortener
+			let a=document.querySelector(".custom-message > c.-message .download-link > a[href]")
+			if(a)
+			{
+				safelyNavigate(a.href)
+			}
 			//SafeLinkReview.com
 			if(document.querySelector(".navbar-brand")&&document.querySelector(".navbar-brand").textContent.trim()=="Safe Link Review"&&document.querySelector(".button.green"))
 			{
@@ -1082,10 +1088,7 @@ if(document instanceof HTMLDocument)
 						location.href="https://universal-bypass.org/crowd-bypassed?target="+encodeURIComponent(xhr.responseText)+"&back="+encodeURIComponent(location.href)
 						//The background script will intercept the request and redirect to html/crowd-bypassed.html
 					}
-					else
-					{
-						document.documentElement.setAttribute("data-universal-bypass-crowd-queried","")
-					}
+					else document.documentElement.setAttribute("data-universal-bypass-crowd-queried","")
 				}
 				xhr.open("POST","https://universal-bypass.org/crowd/query_v1",true)
 				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
