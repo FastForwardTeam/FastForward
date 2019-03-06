@@ -749,6 +749,7 @@ if(document instanceof HTMLDocument)
 			{
 				domainBypass("bagilagi.com",()=>{})//Not executing bypass here because it breaks the site. I'm pretty sure they're making sure you've actually waited in the backend.
 				if(!bypassed)
+				{
 					let cLT=setInterval(()=>{
 						if((document.querySelectorAll("img#pleasewait").length&&document.querySelector(".wait"))
 						||document.getElementById("showlink")
@@ -770,6 +771,7 @@ if(document instanceof HTMLDocument)
 							}
 						}
 					},100)
+				}
 			}
 			//Safelink Wordpress Plugin
 			if(document.querySelector(".wp-safelink-button"))
