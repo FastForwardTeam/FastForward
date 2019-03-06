@@ -225,24 +225,6 @@ if(document instanceof HTMLDocument)
 			},
 			get:()=>actual_web_root
 		})
-		//GemPixel Premium URL Shortener
-		let actual_appurl,actual_token
-		ODP(window,"appurl",{
-			set:v=>{
-				actual_appurl=v
-			},
-			get:()=>actual_appurl
-		})
-		ODP(window,"token",{
-			set:v=>{
-				actual_token=v
-				if(actual_appurl)
-				{
-					window.setInterval=f=>setInterval(f,1)
-				}
-			},
-			get:()=>actual_token
-		})
 		hrefBypass(/ur\\.ly|urly\\.mobi/,()=>{
 			if(location.pathname.length>2&&location.pathname.substr(0,6)!="/goii/")
 				safelyNavigate("/goii/"+location.pathname.substr(2)+"?ref="+location.hostname+location.pathname)
@@ -838,6 +820,18 @@ if(document instanceof HTMLDocument)
 					return finish()
 				}
 			}
+			//GemPixel/KBRMedia Premium URL Shortener
+			if(typeof appurl=="string"&&typeof token=="string")
+			{
+				let regex = /^var count = .*;var countdown = setInterval\\\(function\\\(\\\){\\\$\\\(".+"\\\)(\\\.attr\\\("href","#pleasewait"\\\))?\\\.html\\\(count( \\\+ ".+")?\\\);if \\\(count < 1\\\) {clearInterval\\\(countdown\\\);window\\\.location=\\\"(https?:\\\/\\\/.+)\\\";}count--;}, 1000\\\);$/
+				document.querySelectorAll("script").forEach(script => {
+					let matches = regex.exec(script.textContent)
+					if(matches && matches[3])
+					{
+						safelyNavigate(matches[3])
+					}
+				})
+			}
 			//SafeLinkReview.com
 			if(document.querySelector(".navbar-brand")&&document.querySelector(".navbar-brand").textContent.trim()=="Safe Link Review"&&document.querySelector(".button.green"))
 			{
@@ -972,12 +966,6 @@ if(document instanceof HTMLDocument)
 					secondsdl=0
 				}
 				return finish()
-			}
-			//KBRmedia jQuery Premium URL Shortener
-			let a=document.querySelector(".custom-message > c.-message .download-link > a[href]")
-			if(a)
-			{
-				safelyNavigate(a.href)
 			}
 			let t=document.querySelector("title")
 			if(t)
