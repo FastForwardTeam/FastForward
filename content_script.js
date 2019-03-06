@@ -747,31 +747,27 @@ if(document instanceof HTMLDocument)
 			}
 			if(typeof changeLink=="function")
 			{
-				domainBypass("bagilagi.com",()=>{})//Not executing bypass here because it breaks the site. I'm pretty sure they're making sure you've actually waited in the backend.
-				if(!bypassed)
-				{
-					let cLT=setInterval(()=>{
-						if((document.querySelectorAll("img#pleasewait").length&&document.querySelector(".wait"))
-						||document.getElementById("showlink")
-						||document.getElementById("download")
-						||document.getElementsByTagName("style='margin-top:").length
-						||document.querySelector(".Visit_Link")//yametesenpai.xyz
-						||document.getElementById("daplong")//converthinks.xyz
-						)
+				let cLT=setInterval(()=>{
+					if((document.querySelectorAll("img#pleasewait").length&&document.querySelector(".wait"))
+					||document.getElementById("showlink")
+					||document.getElementById("download")
+					||document.getElementsByTagName("style='margin-top:").length
+					||document.querySelector(".Visit_Link")//yametesenpai.xyz
+					||document.getElementById("daplong")//converthinks.xyz
+					)
+					{
+						clearInterval(cLT)
+						window.open=safelyNavigate
+						if(typeof changeLink=="function")
 						{
-							clearInterval(cLT)
-							window.open=safelyNavigate
-							if(typeof changeLink=="function")
-							{
-								changeLink()
-							}
-							else if(document.getElementById("link-download"))//hightech.web.id
-							{
-								safelyNavigate(document.getElementById("link-download").href)
-							}
+							changeLink()
 						}
-					},100)
-				}
+						else if(document.getElementById("link-download"))//hightech.web.id
+						{
+							safelyNavigate(document.getElementById("link-download").href)
+						}
+					}
+				},100)
 			}
 			//Safelink Wordpress Plugin
 			if(document.querySelector(".wp-safelink-button"))
@@ -1134,9 +1130,13 @@ if(document instanceof HTMLDocument)
 		{
 			domain=domain.substr(4)
 		}
-		dO.observe(document.documentElement,{attributes:true})
-		script.innerHTML+="\n"+res.userscript+"\n})()"
-		script=document.documentElement.appendChild(script)
-		setTimeout(()=>document.documentElement.removeChild(script),10)
+		//Not doing anything on sites which break if Universal Bypass runs:
+		if(["bagilagi.com","api.rurafs.me","drivenime.com"].indexOf(domain)<0)
+		{
+			dO.observe(document.documentElement,{attributes:true})
+			script.innerHTML+="\n"+res.userscript+"\n})()"
+			script=document.documentElement.appendChild(script)
+			setTimeout(()=>document.documentElement.removeChild(script),10)
+		}
 	})
 }
