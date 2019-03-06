@@ -838,6 +838,39 @@ if(document instanceof HTMLDocument)
 					return finish()
 				}
 			}
+			//SafeLinkReview.com
+			if(document.querySelector(".navbar-brand")&&document.querySelector(".navbar-brand").textContent.trim()=="Safe Link Review"&&document.querySelector(".button.green"))
+			{
+				window.open=safelyNavigate
+				document.querySelector(".button.green").click()
+				return finish()
+			}
+			if(location.hostname=="decrypt2.safelinkconverter.com"&&document.querySelector(".redirect_url > div[onclick]"))
+			{
+				window.open=safelyNavigate
+				document.querySelector(".redirect_url > div[onclick]").click()
+				return finish()
+			}
+			//Shorte.st
+			if(typeof app!="undefined"&&document.querySelector(".skip-add-container .first-img[alt='Shorte.st']"))
+			{
+				window.setInterval=f=>setInterval(f,500)
+				let dUC=window.decodeURIComponent
+				window.decodeURIComponent=c=>{
+					c=dUC(c)
+					safelyNavigate(c)
+					return c
+				}
+				crowdBypass(()=>{
+					window.decodeURIComponent=c=>{
+						c=dUC(c)
+						document.querySelector(".skip-add-container").textContent=""
+						contributeAndNavigate(c)
+						return c
+					}
+				})
+				return
+			}
 			//Other Templates
 			if(document.querySelector(".timed-content-client_show_0_30_0"))//technicoz.com
 			{
@@ -945,39 +978,6 @@ if(document instanceof HTMLDocument)
 			if(a)
 			{
 				safelyNavigate(a.href)
-			}
-			//SafeLinkReview.com
-			if(document.querySelector(".navbar-brand")&&document.querySelector(".navbar-brand").textContent.trim()=="Safe Link Review"&&document.querySelector(".button.green"))
-			{
-				window.open=safelyNavigate
-				document.querySelector(".button.green").click()
-				return finish()
-			}
-			if(location.hostname=="decrypt2.safelinkconverter.com"&&document.querySelector(".redirect_url > div[onclick]"))
-			{
-				window.open=safelyNavigate
-				document.querySelector(".redirect_url > div[onclick]").click()
-				return finish()
-			}
-			//Shorte.st
-			if(typeof app!="undefined"&&document.querySelector(".skip-add-container .first-img[alt='Shorte.st']"))
-			{
-				window.setInterval=f=>setInterval(f,500)
-				let dUC=window.decodeURIComponent
-				window.decodeURIComponent=c=>{
-					c=dUC(c)
-					safelyNavigate(c)
-					return c
-				}
-				crowdBypass(()=>{
-					window.decodeURIComponent=c=>{
-						c=dUC(c)
-						document.querySelector(".skip-add-container").textContent=""
-						contributeAndNavigate(c)
-						return c
-					}
-				})
-				return
 			}
 			let t=document.querySelector("title")
 			if(t)
