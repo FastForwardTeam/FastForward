@@ -145,6 +145,13 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	}
 },{types:["main_frame"],urls:["*://*.noriskdomain.com/*/analyze?*"]},["blocking"])
 
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
+		return getRedirect(atob(details.url.substr(details.url.indexOf("/dl/")+4)))
+	}
+},{types:["main_frame"],urls:["*://*.k2nblog.com/dl/*"]},["blocking"])
+
 //Install & Uninstall Actions
 brws.runtime.onInstalled.addListener(details=>{
 	if(details.reason == "install")

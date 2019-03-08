@@ -24,7 +24,7 @@
 		"message": "Beni anında hedef adrese yönlendir."
 	},
 	"optionsTrackerBypass": {
-		"message": "Apimon.de kullanan bypass izleyicileri."
+		"message": "Apimon.de kullanan Bypass izleyicileri."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Eğer es geçilemezse IP kayıtçılarını engelle."
