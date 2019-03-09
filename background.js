@@ -186,11 +186,13 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 			let xhr=new XMLHttpRequest()
 			xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",false)
 			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
-			xhr.send("domain=ouo.io&path="+encodeURIComponent(url.pathname.substr(5))+"&target="+encodeURIComponent(target))
+			xhr.send("domain=ouo.io&path="+encodeURIComponent(url.pathname.split("/")[2])+"&target="+encodeURIComponent(target))
 			return{responseHeaders:details.responseHeaders}
 		}
 	}
 },{types:["main_frame"],urls:[
+"*://*.ouo.io/go/*",
+"*://*.ouo.press/go/*",
 "*://*.ouo.io/rgo/*",
 "*://*.ouo.press/rgo/*"
 ]},["blocking","responseHeaders"])
