@@ -59,14 +59,12 @@ if(document instanceof HTMLDocument)
 			if(!bypassed&&(location.hostname==domain||location.hostname.substr(location.hostname.length-(domain.length+1))=="."+domain))
 			{
 				f()
-				finish()
 			}
 		},
 		hrefBypass=(regex,f)=>{
 			if(!bypassed&&regex.test(location.href))
 			{
 				f()
-				finish()
 			}
 		},
 		ensureDomLoaded=f=>{
@@ -691,6 +689,32 @@ if(document instanceof HTMLDocument)
 			domainBypass("shirosafe.web.id",()=>{
 				safelyNavigate(document.querySelector("#generate > center > a[style]").href)
 			})
+			domainBypass("binbox.io",()=>{
+				let xhr=new XMLHttpRequest()
+				xhr.onreadystatechange=()=>{
+					if(xhr.readyState==4&&xhr.status==200)
+					{
+						let json=JSON.parse(xhr.responseText)
+						if(json.paste)
+						{
+							safelyNavigate(json.paste.url)
+						}
+					}
+				}
+				xhr.open("GET",location.pathname+".json")
+				document.cookie="referrer=1"
+				xhr.send()
+			})
+			hrefBypass(/ouo\\.(io|press)/,()=>{
+				if(location.pathname.substr(0,4)=="/go/")
+				{
+					document.querySelector("form").submit()
+				}
+				else
+				{
+					crowdBypass(()=>{})
+				}
+			})
 			//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 			if(bypassed)
 			{
@@ -1057,13 +1081,13 @@ if(document instanceof HTMLDocument)
 			},100)
 			setTimeout(()=>{
 				clearInterval(dT)
-				finish()
-			},30000)
+			},10000)
 		})`
 		let dO=new MutationObserver(mutations=>{
 			if(document.documentElement.hasAttribute("data-universal-bypass-stop-watching"))
 			{
 				document.documentElement.removeAttribute("data-universal-bypass-stop-watching")
+				clearTimeout(disconnectTimer)
 				dO.disconnect()
 			}
 			else if(document.documentElement.hasAttribute("data-universal-bypass-crowd-query"))
@@ -1125,18 +1149,16 @@ if(document instanceof HTMLDocument)
 				xhr.send()
 			}
 		}),
+		disconnectTimer,
 		domain=location.hostname
 		if(domain.substr(0,4)=="www.")
 		{
 			domain=domain.substr(4)
 		}
-		//Not doing anything on sites which break if Universal Bypass runs:
-		if(["bagilagi.com","api.rurafs.me","drivenime.com"].indexOf(domain)<0)
-		{
-			dO.observe(document.documentElement,{attributes:true})
-			script.innerHTML+="\n"+res.userscript+"\n})()"
-			script=document.documentElement.appendChild(script)
-			setTimeout(()=>document.documentElement.removeChild(script),10)
-		}
+		dO.observe(document.documentElement,{attributes:true})
+		script.innerHTML+="\n"+res.userscript+"\n})()"
+		script=document.documentElement.appendChild(script)
+		setTimeout(()=>document.documentElement.removeChild(script),10)
+		disconnectTimer=setTimeout(()=>{dO.disconnect()},15000)
 	})
 }

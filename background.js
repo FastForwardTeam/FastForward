@@ -7,8 +7,24 @@ trackerBypassEnabled = true,
 blockIPLoggers = true,
 crowdEnabled = true,
 userscript="",
-getRedirect=url=>({redirectUrl:(instantNavigation?url:brws.runtime.getURL("html/before-navigate.html")+"?target="+encodeURIComponent(url))})
-encodedRedirect=url=>({redirectUrl:(instantNavigation?decodeURIComponent(url):brws.runtime.getURL("html/before-navigate.html")+"?target="+url)})
+getRedirectUrl=url=>(instantNavigation?url:brws.runtime.getURL("html/before-navigate.html")+"?target="+encodeURIComponent(url)),
+getRedirect=url=>({redirectUrl:getRedirectUrl(url)}),
+encodedRedirect=url=>({redirectUrl:(instantNavigation?decodeURIComponent(url):brws.runtime.getURL("html/before-navigate.html")+"?target="+url)}),
+isGoodLink=link=>{
+	if(!link||link==location.href||link.substr(0,6)=="about:"||link.substr(0,11)=="javascript:")
+	{
+		return false
+	}
+	try
+	{
+		new URL(link)
+	}
+	catch(e)
+	{
+		return false
+	}
+	return true
+}
 brws.storage.sync.get(["disable","instant_navigation","no_tracker_bypass","allow_ip_loggers","crowd_bypass_opt_out"],res=>{
 	if(res)
 	{
@@ -151,6 +167,33 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		return getRedirect(atob(details.url.substr(details.url.indexOf("/dl/")+4)))
 	}
 },{types:["main_frame"],urls:["*://*.k2nblog.com/dl/*"]},["blocking"])
+
+brws.webRequest.onHeadersReceived.addListener(details=>{
+	if(enabled)
+	{
+		let url = new URL(details.url), target
+		for(let i in details.responseHeaders)
+		{
+			let header = details.responseHeaders[i]
+			if(header.name == "location" && isGoodLink(header.value))
+			{
+				details.responseHeaders[i].value = getRedirectUrl(target = header.value)
+				break
+			}
+		}
+		if(target)
+		{
+			let xhr=new XMLHttpRequest()
+			xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",false)
+			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+			xhr.send("domain=ouo.io&path="+encodeURIComponent(url.pathname.substr(5))+"&target="+encodeURIComponent(target))
+			return{responseHeaders:details.responseHeaders}
+		}
+	}
+},{types:["main_frame"],urls:[
+"*://*.ouo.io/rgo/*",
+"*://*.ouo.press/rgo/*"
+]},["blocking","responseHeaders"])
 
 //Install & Uninstall Actions
 brws.runtime.onInstalled.addListener(details=>{
