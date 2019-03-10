@@ -11,7 +11,7 @@ getRedirectUrl=url=>(instantNavigation?url:brws.runtime.getURL("html/before-navi
 getRedirect=url=>({redirectUrl:getRedirectUrl(url)}),
 encodedRedirect=url=>({redirectUrl:(instantNavigation?decodeURIComponent(url):brws.runtime.getURL("html/before-navigate.html")+"?target="+url)}),
 isGoodLink=link=>{
-	if(!link||link==location.href||link.substr(0,6)=="about:"||link.substr(0,11)=="javascript:")
+	if(!link||link.split("#")[0]==location.href.split("#")[0]||link.substr(0,6)=="about:"||link.substr(0,11)=="javascript:")
 	{
 		return false
 	}

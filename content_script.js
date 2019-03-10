@@ -14,7 +14,7 @@ if(document instanceof HTMLDocument)
 		//Copying eval, etc. to prevent issues with other extensions, such as uBlockOrigin. Also, note that this is the page level, so there are no security risks in using eval.
 		eval=window.eval,setTimeout=window.setTimeout,setInterval=window.setInterval,
 		isGoodLink=link=>{
-			if(!link||link==location.href||link.substr(0,6)=="about:"||link.substr(0,11)=="javascript:")
+			if(!link||link.split("#")[0]==location.href.split("#")[0]||link.substr(0,6)=="about:"||link.substr(0,11)=="javascript:")
 			{
 				return false
 			}
@@ -384,7 +384,7 @@ if(document instanceof HTMLDocument)
 		}
 	})
 	//Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
-	hrefBypass(/linkasm\\.com|firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php|2speed\\.net\\/file\\//,()=>{
+	hrefBypass(/punchsubs\\.net|linkasm\\.com|firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php|2speed\\.net\\/file\\//,()=>{
 		window.setInterval=f=>setInterval(f,1)
 	})
 	hrefBypass(/datei\\.to|id-share19\\.com/,()=>{
@@ -751,6 +751,11 @@ if(document instanceof HTMLDocument)
 			if(document.querySelector(".sorasubmit"))
 			{
 				document.querySelector(".sorasubmit").click()
+				return finish()
+			}
+			if(document.querySelector("#goes > #lanjut > a[href]"))//#165
+			{
+				safelyNavigate(document.querySelector("#goes > #lanjut > a[href]").href)
 				return finish()
 			}
 			if(document.querySelector("#lanjut > #goes[href]"))
