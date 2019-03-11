@@ -786,7 +786,26 @@ if(document instanceof HTMLDocument)
 					)
 					{
 						clearInterval(cLT)
-						window.open=safelyNavigate
+						window.open=l=>{
+							if(l.substr(0,22)=="https://api.rurafs.me/")
+							{
+								let i=5,t=setInterval(function()
+								{
+									i--
+									document.querySelector("h1").textContent="Please wait... "+i
+									if(i==0)
+									{
+										clearInterval(t)
+										location.href=l
+									}
+								},900)
+								document.write("<h1>Please wait... "+i+"</h1>")
+							}
+							else
+							{
+								safelyNavigate(l)
+							}
+						}
 						if(typeof changeLink=="function")
 						{
 							changeLink()
