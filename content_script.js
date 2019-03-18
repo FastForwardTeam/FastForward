@@ -786,20 +786,11 @@ if(document instanceof HTMLDocument)
 					)
 					{
 						clearInterval(cLT)
+						let _open=window.open
 						window.open=l=>{
 							if(l.substr(0,22)=="https://api.rurafs.me/")
 							{
-								let i=5,t=setInterval(function()
-								{
-									i--
-									document.querySelector("h1").textContent="Please wait... "+i
-									if(i==0)
-									{
-										clearInterval(t)
-										location.href=l
-									}
-								},900)
-								document.write("<h1>Please wait... "+i+"</h1>")
+								window.open=_open
 							}
 							else
 							{
@@ -1175,6 +1166,10 @@ if(document instanceof HTMLDocument)
 		}),
 		disconnectTimer,
 		domain=location.hostname
+		if(domain=="api.rurafs.me")
+		{
+			return
+		}
 		if(domain.substr(0,4)=="www.")
 		{
 			domain=domain.substr(4)

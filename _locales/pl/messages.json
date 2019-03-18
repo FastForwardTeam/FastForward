@@ -1,0 +1,68 @@
+{
+	"appDesc": {
+		"message": "Nie marnuj czasu na przestrzeganie przepisów, Uniwersalne Obejście automatycznie pomija irytujące skróty linkowe."
+	},
+	"firstrunTitle": {
+		"message": "Dziękujemy za instalacje Uniwersalnego Obejścia!"
+	},
+	"firstrunSubtitle": {
+		"message": "Jesteś niesamowity!"
+	},
+	"firstrunNoScript": {
+		"message": "Wydaje się, że używasz „NoScript” lub czegoś podobnego co powoduje, że Uniwersalne Obejście nie jest kompatybilne."
+	},
+	"faq": {
+		"message": "Najczęściej zadawane pytania (FAQ)"
+	},
+	"options": {
+		"message": "Opcje"
+	},
+	"optionsEnabled": {
+		"message": "Włącz obejścia stron."
+	},
+	"optionsInstantNavigation": {
+		"message": "Natychmiast zabieraj mnie do miejsc docelowych."
+	},
+	"optionsTrackerBypass": {
+		"message": "Omijaj namierzanie, używając Apimon.de."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Zablokuj rejestratory IP, jeśli nie można ich ominąć."
+	},
+	"optionsCrowdBypass": {
+		"message": "Podaj i wykorzystaj miejsca, do których nie można przejść."
+	},
+	"privacyPolicy": {
+		"message": "Polityka prywatności"
+	},
+	"optionsUserscripts": {
+		"message": "Niestandardowe obejścia"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "Byłoby miło, gdybyś mógł wysyłać własne działające niestandardowe obejście na GitHub-a, więc inni mogą z nich korzystać."
+	},
+	"beforeNavigate": {
+		"message": "Jesteś prawie w miejscu docelowym."
+	},
+	"beforeNavigateDestination": {
+		"message": "Twoje miejsce docelowe jest %"
+	},
+	"beforeNavigateInfo": {
+		"message": "Czy chcesz, aby Uniwersalne Obejście natychmiast przekierowywało natychmiast do miejsca docelowego?"
+	},
+	"blockedTitle": {
+		"message": "Uniwersalne obejście zapobiegło zarejestrowanie twojego IP."
+	},
+	"blockedSubtitle": {
+		"message": "Nie chcesz, aby Uniwersalne Obejście przeszkadzało złym aktorom uzyskanie twojego adresu IP?"
+	},
+	"crowdBypassed": {
+		"message": "Już nie musisz czekać!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Inni użytkownicy Uniwersalnego obejścia czekali na ciebie i zgłosili, że prowadzi to do %"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Czy to było nieprawidłowe?"
+	}
+}
