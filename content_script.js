@@ -302,14 +302,6 @@ if(document instanceof HTMLDocument)
 				}
 			})
 		})
-		hrefBypass(/sfile\\.(mobi|xyz)/,()=>{
-			ODP(window,"downloadButton",{
-				set:b=>{
-					if(b&&b.href)
-						safelyNavigate(b.href)
-				}
-			})
-		})
 		domainBypass("mylink.zone",()=>{
 			ODP(window,"seconde",{
 				set:_=>{},
@@ -807,6 +799,10 @@ if(document instanceof HTMLDocument)
 						}
 					}
 				},100)
+			}
+			if(document.querySelector("form#show > [type='submit']") && document.getElementById("tunggu") && document.getElementById("hapus") && typeof counter != "undefined" && typeof countDown != "undefined" && typeof download != "undefined")//realsht.mobi,namiyt.com
+			{
+				document.querySelector("form#show > [type='submit']").click()
 			}
 			//Safelink Wordpress Plugin
 			if(document.querySelector(".wp-safelink-button"))
