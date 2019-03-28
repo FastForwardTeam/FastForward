@@ -881,7 +881,7 @@ if(document instanceof HTMLDocument)
 			//Shorte.st
 			if(typeof app!="undefined"&&document.querySelector(".skip-add-container .first-img[alt='Shorte.st']"))
 			{
-				window.setInterval=f=>setInterval(f,500)
+				window.setInterval=f=>setInterval(f,800)
 				let dUC=window.decodeURIComponent
 				window.decodeURIComponent=c=>{
 					c=dUC(c)
