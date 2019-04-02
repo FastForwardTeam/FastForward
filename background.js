@@ -67,12 +67,48 @@ brws.storage.onChanged.addListener(changes=>{
 		userscript=changes.userscript.newValue
 	}
 })
-chrome.runtime.onMessage.addListener((req, sender, respond) => {
-	respond({
-		enabled: enabled,
-		crowdEnabled: crowdEnabled,
-		userscript: userscript
-	})
+brws.runtime.onMessage.addListener((req, sender, respond) => {
+	switch(req.type)
+	{
+		case "can-run":
+		respond({
+			enabled: enabled,
+			crowdEnabled: crowdEnabled,
+			userscript: userscript
+		})
+		break;
+
+		case "adlinkfly-info":
+		let xhr=new XMLHttpRequest(),t="",iu=req.url
+		xhr.onreadystatechange=()=>{
+			if(xhr.readyState==4)
+			{
+				if(xhr.status==200)
+				{
+					let i=new DOMParser().parseFromString(xhr.responseText,"text/html").querySelector("img[src^='//api.miniature.io']")
+					if(i)
+					{
+						let url=new URL(i.src)
+						if(url.search&&url.search.indexOf("url="))
+						{
+							t=decodeURIComponent(url.search.split("url=")[1].split("&")[0])
+						}
+					}
+				}
+				respond({t: t})
+			}
+		}
+		if(iu.substr(iu.length - 1) != "/")
+		{
+			iu += "/"
+		}
+		xhr.open("GET", iu+"info", false)
+		xhr.send()
+		break;
+
+		default:
+		console.warn("Invalid message:", req)
+	}
 })
 
 //Internal redirects to extension URLs to bypass content script limitations
@@ -175,7 +211,7 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 		for(let i in details.responseHeaders)
 		{
 			let header = details.responseHeaders[i]
-			if(header.name == "location" && isGoodLink(header.value))
+			if(header.name.toLowerCase() == "location" && isGoodLink(header.value))
 			{
 				details.responseHeaders[i].value = getRedirectUrl(target = header.value)
 				break

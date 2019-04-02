@@ -1,0 +1,68 @@
+{
+	"appDesc": {
+		"message": ".وقت خود را با مطابقت دادن هدر ندهید. میان بر جهانی به طور خودکار کوتاه کننده های لینک مزاحم را از قلم می اندازد"
+	},
+	"firstrunTitle": {
+		"message": ".با تشکر برای نصب میان بر جهانی"
+	},
+	"firstrunSubtitle": {
+		"message": "!تو فوق العاده هستی"
+	},
+	"firstrunNoScript": {
+		"message": ".به نظر می رسد شما از نو اسکریپت یا مشابه آن استفاده می کنید که با میان بر جهانی سازگار نیست"
+	},
+	"faq": {
+		"message": ".سوالات متداول"
+	},
+	"options": {
+		"message": "گزینه ها"
+	},
+	"optionsEnabled": {
+		"message": ".میان بر های وب سایت را فعال سازید"
+	},
+	"optionsInstantNavigation": {
+		"message": ".مستقیما من را به مقاصد برسانید"
+	},
+	"optionsTrackerBypass": {
+		"message": " Apimon.de ردیاب ها را میان بر بزن با استفاده از"
+	},
+	"optionsBlockIPLoggers": {
+		"message": ".آی پی ورودگر ها که قابل به رد شدن نیستند را مسدود کن"
+	},
+	"optionsCrowdBypass": {
+		"message": ".مقاصد غیر قابل رد شدن کوتاه کننده ها را بدهید و بگیرید"
+	},
+	"privacyPolicy": {
+		"message": ".مقررات حفظ حریم شخصی"
+	},
+	"optionsUserscripts": {
+		"message": ".میان بر های سفارشی"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": ".خوب می شد اگر تو می توانستی میان بر های کار کننده را به گیت هاب ارسال کنی تا دیگران هم از آن سود ببرند"
+	},
+	"beforeNavigate": {
+		"message": ".شما تقریبا به مقصدتان رسیده اید"
+	},
+	"beforeNavigateDestination": {
+		"message": ".مقصد شما % است"
+	},
+	"beforeNavigateInfo": {
+		"message": "آیا شما می خواهید تا میان بر جهانی مستقیما شما را به مقصدتان هدایت کند؟"
+	},
+	"blockedTitle": {
+		"message": ".میان بر جهانی مانع از وارد شدن آی پی شما شده است"
+	},
+	"blockedSubtitle": {
+		"message": "یا شما نمی خواهید تا میان بر جهانی مانع از گرفته شدن آی پی شما توسط فعالان نادرست شود؟"
+	},
+	"crowdBypassed": {
+		"message": "!ممکن است شما مجبور به صبر کردن نباشید"
+	},
+	"crowdBypassedInfo": {
+		"message": ".دیگر کاربران میان بر جهانی منتظر شما بوده اند و گزارش داده اند که این منجر به % شده است"
+	},
+	"crowdBypassedIgnore": {
+		"message": "آیا این نادرست است؟"
+	}
+}

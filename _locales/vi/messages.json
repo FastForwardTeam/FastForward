@@ -17,6 +17,9 @@
 	"options": {
 		"message": "Tùy chỉnh"
 	},
+	"optionsLink": {
+		"message": "Thay đổi tùy chọn Universal Bypass."
+	},
 	"optionsEnabled": {
 		"message": "Bật bỏ qua website."
 	},

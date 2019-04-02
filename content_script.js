@@ -2,7 +2,7 @@
 if(document instanceof HTMLDocument)
 {
 	let brws = (typeof browser == "undefined" ? chrome : browser)
-	brws.runtime.sendMessage({}, res => {
+	brws.runtime.sendMessage({type: "can-run"}, res => {
 		if(!res.enabled)
 		{
 			return
@@ -1135,29 +1135,13 @@ if(document instanceof HTMLDocument)
 			else if(document.documentElement.hasAttribute("data-universal-bypass-adlinkfly-info"))
 			{
 				document.documentElement.removeAttribute("data-universal-bypass-adlinkfly-info")
-				let xhr=new XMLHttpRequest(),t="",iu=location.href
-				xhr.onreadystatechange=()=>{
-					if(xhr.readyState==4)
-					{
-						if(xhr.status==200)
-						{
-							let i=new DOMParser().parseFromString(xhr.responseText,"text/html").querySelector("img[src^='//api.miniature.io']")
-							if(i)
-							{
-								let url=new URL(i.src)
-								if(url.search&&url.search.indexOf("url="))
-									t=decodeURIComponent(url.search.split("url=")[1].split("&")[0])
-							}
-						}
-						document.documentElement.setAttribute("data-universal-bypass-adlinkfly-target",t)
-					}
-				}
-				if(iu.substr(iu.length - 1) != "/")
+				brws.runtime.sendMessage({
+					type: "adlinkfly-info",
+					url: location.href
+				}, function(res)
 				{
-					iu += "/"
-				}
-				xhr.open("GET", iu+"info", true)
-				xhr.send()
+					document.documentElement.setAttribute("data-universal-bypass-adlinkfly-target", res.t)
+				})
 			}
 		}),
 		disconnectTimer,
