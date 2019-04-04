@@ -17,6 +17,9 @@
 	"options": {
 		"message": "Opzioni"
 	},
+	"optionsLink": {
+		"message": "Cambia le opzioni di Universal Bypass."
+	},
 	"optionsEnabled": {
 		"message": "Attiva i bypass dei siti web."
 	},

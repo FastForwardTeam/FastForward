@@ -11,6 +11,21 @@
 	"firstrunNoScript": {
 		"message": "Ωστόσο, φαίνεται να χρησιμοποιείτε NoScript ή παρόμοιο, με τα οποία το Universal Bypass δεν είναι συμβατό."
 	},
+	"faq": {
+		"message": "Συχνές Ερωτήσεις (FAQ)"
+	},
+	"options": {
+		"message": "Επιλογές"
+	},
+	"optionsLink": {
+		"message": "Αλλαγή επιλογών του Universal Bypass."
+	},
+	"optionsEnabled": {
+		"message": "Ενεργοποίηση παρακάμψεων ιστοσελίδων."
+	},
+	"optionsInstantNavigation": {
+		"message": "Πήγαινε με άμεσα στους προορισμούς."
+	},
 	"optionsTrackerBypass": {
 		"message": "Παράκαμψη trackers χρησιμοποιώντας το Apimon.de."
 	},
@@ -26,8 +41,23 @@
 	"optionsUserscripts": {
 		"message": "Προσαρμοσμένες παρακάμψεις"
 	},
+	"optionsUserscriptsSubtitle": {
+		"message": "Θα ήταν ωραίο αν θα μπορούσατε να υποβάλετε παρακάμψεις που να λειτουργούν στο GitHub, έτσι ώστε και άλλοι να μπορούν να επωφεληθούν από αυτό."
+	},
+	"beforeNavigate": {
+		"message": "Είστε σχεδόν στο προορισμό σας."
+	},
+	"beforeNavigateDestination": {
+		"message": "Ο προορισμός σας είναι %"
+	},
+	"beforeNavigateInfo": {
+		"message": "Θέλετε το Universal Bypass να σας ανακατευθύνει αμέσως στον προορισμό σας;"
+	},
 	"blockedTitle": {
 		"message": "Το Universal Bypass εμπόδισε την IP σας από το να καταγραφεί."
+	},
+	"blockedSubtitle": {
+		"message": "Δεν θέλετε το Universal Bypass να αποτρέψει τους κακόβουλους φορείς από το να υποκλέψουν την IP σας;"
 	},
 	"crowdBypassed": {
 		"message": "Ίσως να μην χρειαστεί να περιμένετε!"

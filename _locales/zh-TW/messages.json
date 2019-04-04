@@ -17,6 +17,9 @@
 	"options": {
 		"message": "選項"
 	},
+	"optionsLink": {
+		"message": "設定 Universal Bypass 的選項"
+	},
 	"optionsEnabled": {
 		"message": "啟用網站繞過功能"
 	},

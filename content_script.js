@@ -1098,7 +1098,6 @@ if(document instanceof HTMLDocument)
 			if(document.documentElement.hasAttribute("data-universal-bypass-stop-watching"))
 			{
 				document.documentElement.removeAttribute("data-universal-bypass-stop-watching")
-				clearTimeout(disconnectTimer)
 				dO.disconnect()
 			}
 			else if(document.documentElement.hasAttribute("data-universal-bypass-crowd-query"))
@@ -1119,8 +1118,7 @@ if(document instanceof HTMLDocument)
 			}
 			else if(document.documentElement.hasAttribute("data-universal-bypass-crowd-contribute"))
 			{
-				let target=document.documentElement.getAttribute("data-universal-bypass-crowd-contribute"),
-				xhr=new XMLHttpRequest()
+				let xhr=new XMLHttpRequest(),target=document.documentElement.getAttribute("data-universal-bypass-crowd-contribute")
 				document.documentElement.removeAttribute("data-universal-bypass-crowd-contribute")
 				xhr.onreadystatechange=()=>{
 					if(xhr.readyState==4)
@@ -1144,7 +1142,6 @@ if(document instanceof HTMLDocument)
 				})
 			}
 		}),
-		disconnectTimer,
 		domain=location.hostname
 		if(domain=="api.rurafs.me")
 		{
@@ -1158,6 +1155,5 @@ if(document instanceof HTMLDocument)
 		script.innerHTML+="\n"+res.userscript+"\n})()"
 		script=document.documentElement.appendChild(script)
 		setTimeout(()=>document.documentElement.removeChild(script),10)
-		disconnectTimer=setTimeout(()=>{dO.disconnect()},15000)
 	})
 }
