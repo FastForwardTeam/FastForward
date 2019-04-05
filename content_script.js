@@ -1138,7 +1138,7 @@ if(document instanceof HTMLDocument)
 					url: location.href
 				}, function(res)
 				{
-					document.documentElement.setAttribute("data-universal-bypass-adlinkfly-target", res.t)
+					document.documentElement.setAttribute("data-universal-bypass-adlinkfly-target", "t" in res ? res.t : "")
 				})
 			}
 		}),

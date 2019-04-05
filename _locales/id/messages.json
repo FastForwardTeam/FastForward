@@ -17,11 +17,14 @@
 	"options": {
 		"message": "Pilihan"
 	},
+	"optionsLink": {
+		"message": "Ganti pengaturan Universal Bypass."
+	},
 	"optionsEnabled": {
 		"message": "Aktifkan bypass website."
 	},
 	"optionsInstantNavigation": {
-		"message": "Langsung arahkan ke tujuan."
+		"message": "Langsung arahkan ke halaman tujuan."
 	},
 	"optionsTrackerBypass": {
 		"message": "Pelacak Bypass menggunakan Apimon.de."
@@ -42,10 +45,10 @@
 		"message": "Akan lebih baik jika Anda bisa mengirimkan bypass karya anda lewat GitHub, sehingga orang lain dapat memperoleh manfaatnya."
 	},
 	"beforeNavigate": {
-		"message": "Anda hampir sampai pada destinasi anda."
+		"message": "Anda hampir sampai pada tujuan anda."
 	},
 	"beforeNavigateDestination": {
-		"message": "Destinasi anda adalah %"
+		"message": "Tujuan anda adalah %"
 	},
 	"beforeNavigateInfo": {
 		"message": "Apakah Anda ingin Universal Bypass langsung mengarahkan ke tujuan Anda?"
