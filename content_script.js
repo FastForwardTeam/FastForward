@@ -856,14 +856,29 @@ if(document instanceof HTMLDocument)
 			//GemPixel/KBRMedia Premium URL Shortener
 			if(typeof appurl=="string"&&typeof token=="string")
 			{
-				let regex = /^var count = .*;var countdown = setInterval\\\(function\\\(\\\){\\\$\\\(".+"\\\)(\\\.attr\\\("href","#pleasewait"\\\))?\\\.html\\\(count( \\\+ ".+")?\\\);if \\\(count < 1\\\) {clearInterval\\\(countdown\\\);window\\\.location=\\\"(https?:\\\/\\\/.+)\\\";}count--;}, 1000\\\);$/
+				let regex = /var count = [0-9]*;var countdown = setInterval\\\(function\\\(\\\){\\\$\\\("[a-z.]+"\\\)(\\\.attr\\\("href","#pleasewait"\\\))?(\\\.attr\\\("disabled",""\\\))?\\\.html\\\(count( \\\+ ".+")?\\\);if \\\(count < 1\\\) {clearInterval\\\(countdown\\\);(\\\$\\\("[a-z.]+"\\\)\\\.attr\\\("href",|window\\\.location=)"(https?:\\\/\\\/.+)"( \\\+ hash\\\)\\\.removeAttr\\\("disabled"\\\)\\\.removeClass\\\("disabled"\\\)\\\.html\\\(".+"\\\))?;}count--;}, 1000\\\);/
 				document.querySelectorAll("script").forEach(script => {
 					let matches = regex.exec(script.textContent)
-					if(matches && matches[3])
+					if(matches && matches[5])
 					{
-						safelyNavigate(matches[3])
+						safelyNavigate(matches[5])
 					}
 				})
+				if(!bypassed)
+				{
+					hrefBypass(/al\\.ly|ally\\.sh|dausel\\.co/,()=>{
+						let e=document.getElementById("html_element")
+						if(e)
+						{
+							let m=document.getElementById("messa")
+							if(m)
+							{
+								m.parentNode.removeChild(m)
+							}
+							e.classList.remove("hidden")
+						}
+					})
+				}
 			}
 			//SafeLinkReview.com
 			if(document.querySelector(".navbar-brand")&&document.querySelector(".navbar-brand").textContent.trim()=="Safe Link Review"&&document.querySelector(".button.green"))

@@ -11,8 +11,14 @@
 	"firstrunNoScript": {
 		"message": "あなたはNoScriptなどを使用しているようですが、ユニバーサルバイパスとは互換性がありません。"
 	},
+	"faq": {
+		"message": "よくある質問と回答(FAQ)"
+	},
 	"options": {
 		"message": "オプション"
+	},
+	"optionsLink": {
+		"message": "ユニバーサルバイパスの設定"
 	},
 	"optionsEnabled": {
 		"message": "ウェブサイトのバイパスを有効化する"
@@ -35,14 +41,23 @@
 	"optionsUserscripts": {
 		"message": "カスタムバイパス"
 	},
+	"optionsUserscriptsSubtitle": {
+		"message": "他のユーザーもメリットを受けられるように、あなたが所有するバイパスをGitHubに提出して頂けると嬉しいです。"
+	},
 	"beforeNavigate": {
 		"message": "リンク先まであと少しです。"
 	},
 	"beforeNavigateDestination": {
 		"message": "リンク先は %"
 	},
+	"beforeNavigateInfo": {
+		"message": "ユニバーサルバイパスを使用して、目的のサイトへ簡単にアクセスしたいですか？"
+	},
 	"blockedTitle": {
 		"message": "ユニバーサルバイパスにより、IPがログに記録されなくなりました。"
+	},
+	"blockedSubtitle": {
+		"message": "ユニバーサルバイパスが、悪意のある人からあなたのIPアドレスを保護する機能を停止したいですか？"
 	},
 	"crowdBypassed": {
 		"message": "あなたは待つ必要はありません！"

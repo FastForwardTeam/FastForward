@@ -17,6 +17,9 @@
 	"options": {
 		"message": "Seçenekler"
 	},
+	"optionsLink": {
+		"message": "Universal Bypass'ın seçeneklerini değiştir."
+	},
 	"optionsEnabled": {
 		"message": "Web sayfalarını es geçmeyi etkinleştir."
 	},
