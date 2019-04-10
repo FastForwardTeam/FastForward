@@ -106,13 +106,9 @@ if(document instanceof HTMLDocument)
 				if(crowdEnabled)
 				{
 					document.documentElement.setAttribute("data-universal-bypass-crowd-contribute",target)
-					let iT=setInterval(()=>{
-						if(document.documentElement.hasAttribute("data-universal-bypass-crowd-contributed"))
-						{
-							document.documentElement.removeAttribute("data-universal-bypass-crowd-contributed")
-							unsafelyNavigate(target)
-						}
-					},20)
+					setTimeout(()=>{
+						unsafelyNavigate(target)
+					},10)
 				}
 				else
 				{
@@ -332,7 +328,6 @@ if(document instanceof HTMLDocument)
 		})
 	})
 	domainBypass("bc.vc",()=>{
-		window.setInterval=f=>setInterval(f,800)
 		crowdBypass(()=>{
 			window.eval=c=>{
 				let j=eval(c)
@@ -705,6 +700,21 @@ if(document instanceof HTMLDocument)
 				else
 				{
 					crowdBypass(()=>{})
+				}
+			})
+			hrefBypass(/tetew\\.info|siherp\\.com/,()=>{
+				let a=document.querySelector("div.download-link > a[href]")
+				if(a)
+				{
+					let u=new URL(a.href)
+					if(u.searchParams.has("r"))
+					{
+						safelyNavigate(atob(u.searchParams.get("r")))
+					}
+					else
+					{
+						safelyNavigate(a.href)
+					}
 				}
 			})
 			//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
@@ -1133,17 +1143,12 @@ if(document instanceof HTMLDocument)
 			}
 			else if(document.documentElement.hasAttribute("data-universal-bypass-crowd-contribute"))
 			{
-				let xhr=new XMLHttpRequest(),target=document.documentElement.getAttribute("data-universal-bypass-crowd-contribute")
+				let target=document.documentElement.getAttribute("data-universal-bypass-crowd-contribute")
 				document.documentElement.removeAttribute("data-universal-bypass-crowd-contribute")
-				xhr.onreadystatechange=()=>{
-					if(xhr.readyState==4)
-					{
-						document.documentElement.setAttribute("data-universal-bypass-crowd-contributed","")
-					}
-				}
-				xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
-				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
-				xhr.send("domain="+encodeURIComponent(domain)+"&path="+encodeURIComponent(location.pathname.toString().substr(1))+"&target="+encodeURIComponent(target))
+				brws.runtime.sendMessage({
+					type: "crowd-contribute",
+					data: "domain="+encodeURIComponent(domain)+"&path="+encodeURIComponent(location.pathname.toString().substr(1))+"&target="+encodeURIComponent(target)
+				})
 			}
 			else if(document.documentElement.hasAttribute("data-universal-bypass-adlinkfly-info"))
 			{

@@ -78,32 +78,41 @@ brws.runtime.onMessage.addListener((req, sender, respond) => {
 		})
 		break;
 
-		case "adlinkfly-info":
-		let xhr=new XMLHttpRequest(),t="",iu=req.url
-		xhr.onreadystatechange=()=>{
-			if(xhr.readyState==4)
-			{
-				if(xhr.status==200)
+		case "crowd-contribute": {
+			let xhr=new XMLHttpRequest()
+			xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
+			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+			xhr.send(req.data)
+		}
+		break;
+
+		case "adlinkfly-info": {
+			let xhr=new XMLHttpRequest(),t="",iu=req.url
+			xhr.onreadystatechange=()=>{
+				if(xhr.readyState==4)
 				{
-					let i=new DOMParser().parseFromString(xhr.responseText,"text/html").querySelector("img[src^='//api.miniature.io']")
-					if(i)
+					if(xhr.status==200)
 					{
-						let url=new URL(i.src)
-						if(url.search&&url.search.indexOf("url="))
+						let i=new DOMParser().parseFromString(xhr.responseText,"text/html").querySelector("img[src^='//api.miniature.io']")
+						if(i)
 						{
-							t=decodeURIComponent(url.search.split("url=")[1].split("&")[0])
+							let url=new URL(i.src)
+							if(url.search&&url.search.indexOf("url="))
+							{
+								t=decodeURIComponent(url.search.split("url=")[1].split("&")[0])
+							}
 						}
 					}
+					respond({t: t})
 				}
-				respond({t: t})
 			}
+			if(iu.substr(iu.length - 1) != "/")
+			{
+				iu += "/"
+			}
+			xhr.open("GET", iu+"info", false)
+			xhr.send()
 		}
-		if(iu.substr(iu.length - 1) != "/")
-		{
-			iu += "/"
-		}
-		xhr.open("GET", iu+"info", false)
-		xhr.send()
 		break;
 
 		default:
@@ -220,7 +229,7 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 		if(target)
 		{
 			let xhr=new XMLHttpRequest()
-			xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",false)
+			xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
 			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
 			xhr.send("domain=ouo.io&path="+encodeURIComponent(url.pathname.split("/")[2])+"&target="+encodeURIComponent(target))
 			return{responseHeaders:details.responseHeaders}
