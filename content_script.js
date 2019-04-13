@@ -360,10 +360,7 @@ if(document instanceof HTMLDocument)
 		else if(location.pathname=="/link")
 		{
 			let xhr=new XMLHttpRequest()
-			xhr.onreadystatechange=()=>{
-				if(xhr.readyState==4&&xhr.status==200)
-					safelyNavigate(xhr.responseText)
-			}
+			xhr.onload=()=>safelyNavigate(xhr.responseText)
 			xhr.open("POST","https://www.shortly.xyz/getlink.php",true)
 			xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded")
 			xhr.setRequestHeader("X-Requested-With","XMLHttpRequest")
@@ -678,14 +675,11 @@ if(document instanceof HTMLDocument)
 			})
 			domainBypass("binbox.io",()=>{
 				let xhr=new XMLHttpRequest()
-				xhr.onreadystatechange=()=>{
-					if(xhr.readyState==4&&xhr.status==200)
+				xhr.onload=()=>{
+					let json=JSON.parse(xhr.responseText)
+					if(json.paste)
 					{
-						let json=JSON.parse(xhr.responseText)
-						if(json.paste)
-						{
-							safelyNavigate(json.paste.url)
-						}
+						safelyNavigate(json.paste.url)
 					}
 				}
 				xhr.open("GET",location.pathname+".json")
@@ -1153,13 +1147,12 @@ if(document instanceof HTMLDocument)
 			else if(document.documentElement.hasAttribute("data-universal-bypass-adlinkfly-info"))
 			{
 				document.documentElement.removeAttribute("data-universal-bypass-adlinkfly-info")
-				brws.runtime.sendMessage({
-					type: "adlinkfly-info",
-					url: location.href
-				}, function(res)
-				{
-					document.documentElement.setAttribute("data-universal-bypass-adlinkfly-target", "t" in res ? res.t : "")
+				let port=brws.runtime.connect({name: "adlinkfly-info"})
+				port.onMessage.addListener(msg => {
+					document.documentElement.setAttribute("data-universal-bypass-adlinkfly-target", msg)
+					port.disconnect()
 				})
+				port.postMessage(location.href)
 			}
 		}),
 		domain=location.hostname

@@ -17,6 +17,9 @@
 	"options": {
 		"message": "Opcje"
 	},
+	"optionsLink": {
+		"message": "Zmień opcje Uniwersalnego Obejścia."
+	},
 	"optionsEnabled": {
 		"message": "Włącz obejścia stron."
 	},

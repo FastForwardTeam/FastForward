@@ -67,6 +67,7 @@ brws.storage.onChanged.addListener(changes=>{
 		userscript=changes.userscript.newValue
 	}
 })
+
 brws.runtime.onMessage.addListener((req, sender, respond) => {
 	switch(req.type)
 	{
@@ -78,46 +79,45 @@ brws.runtime.onMessage.addListener((req, sender, respond) => {
 		})
 		break;
 
-		case "crowd-contribute": {
+		case "crowd-contribute":
+		if(crowdEnabled)
+		{
 			let xhr=new XMLHttpRequest()
 			xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
 			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
 			xhr.send(req.data)
 		}
-		break;
-
-		case "adlinkfly-info": {
-			let xhr=new XMLHttpRequest(),t="",iu=req.url
-			xhr.onreadystatechange=()=>{
-				if(xhr.readyState==4)
-				{
-					if(xhr.status==200)
-					{
-						let i=new DOMParser().parseFromString(xhr.responseText,"text/html").querySelector("img[src^='//api.miniature.io']")
-						if(i)
-						{
-							let url=new URL(i.src)
-							if(url.search&&url.search.indexOf("url="))
-							{
-								t=decodeURIComponent(url.search.split("url=")[1].split("&")[0])
-							}
-						}
-					}
-					respond({t: t})
-				}
-			}
-			if(iu.substr(iu.length - 1) != "/")
-			{
-				iu += "/"
-			}
-			xhr.open("GET", iu+"info", false)
-			xhr.send()
-		}
+		else console.warn("Unexpected message:", req)
 		break;
 
 		default:
 		console.warn("Invalid message:", req)
 	}
+})
+brws.runtime.onConnect.addListener(port => {
+	console.assert(port.name == "adlinkfly-info")
+	port.onMessage.addListener(msg => {
+		let xhr=new XMLHttpRequest(),t="",iu=msg
+		xhr.onload=()=>{
+			let i=new DOMParser().parseFromString(xhr.responseText,"text/html").querySelector("img[src^='//api.miniature.io']")
+			if(i)
+			{
+				let url=new URL(i.src)
+				if(url.search&&url.search.indexOf("url="))
+				{
+					t=decodeURIComponent(url.search.split("url=")[1].split("&")[0])
+				}
+			}
+			port.postMessage(t)
+		}
+		xhr.onerror=()=>port.postMessage(t)
+		if(iu.substr(iu.length - 1) != "/")
+		{
+			iu += "/"
+		}
+		xhr.open("GET", iu+"info", true)
+		xhr.send()
+	})
 })
 
 //Internal redirects to extension URLs to bypass content script limitations
@@ -345,13 +345,10 @@ if(platform == "moz")
 function resolveRedirect(url)
 {
 	let xhr=new XMLHttpRequest(),destination
-	xhr.onreadystatechange=()=>{
-		if(xhr.readyState==4&&xhr.status==200)
-		{
-			let json=JSON.parse(xhr.responseText)
-			if(json&&json.destination)
-				destination=json.destination
-		}
+	xhr.onload=()=>{
+		let json=JSON.parse(xhr.responseText)
+		if(json&&json.destination)
+			destination=json.destination
 	}
 	xhr.open("GET","https://apimon.de/redirect/"+encodeURIComponent(url),false)
 	xhr.send()
