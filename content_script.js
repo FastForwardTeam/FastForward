@@ -975,36 +975,6 @@ if(document instanceof HTMLDocument)
 					s.style.display="block"
 				}
 			}
-			if(typeof x!="undefined")
-			{
-				if(document.querySelector("a.navbar-brand.logo-image[href='/'] > img[src='/img/4.png']"))//gslink.co
-				{
-					let a=document.querySelector("a.btnx[href][onclick]")
-					if(a)
-					{
-						safelyNavigate(a.href+"&ab=1")
-						return finish()
-					}
-					else
-					{
-						let b=document.querySelector("form[method='POST'] > input.btn[type='submit'][name='btn']")
-						if(b)
-						{
-							b.click()
-							return finish()
-						}
-					}
-				}
-				else if(document.querySelector(".img-responsive[alt='Gets URL']"))//gsul.me
-				{
-					let b=document.getElementById("link")
-					if(b)
-					{
-						safelyNavigate(b.href+"&ab=1")
-						return finish()
-					}
-				}
-			}
 			if(document.querySelector(".top-bar a[href='https://linkvertise.net']")&&typeof app!="undefined"&&app.handleRedirect)//Linkvertise.net
 			{
 				app.countdown=0
