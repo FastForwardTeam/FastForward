@@ -213,6 +213,19 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	}
 },{types:["main_frame"],urls:["*://*.k2nblog.com/dl/*"]},["blocking"])
 
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
+		let url=new URL(details.url)
+		console.log(url.searchParams.get("id"))
+		if(url.searchParams.has("id"))
+		{
+			return getRedirect(atob(url.searchParams.get("id").split("").reverse().join("")))
+		}
+	}
+},{types:["main_frame"],urls:["*://*.masterads.info/instagram/campanha.php?*"]},["blocking"])
+
+//Ouo.io/press Crowd Bypass
 brws.webRequest.onHeadersReceived.addListener(details=>{
 	if(enabled)
 	{
