@@ -1,0 +1,71 @@
+{
+	"appDesc": {
+		"message": "अनुपालन के साथ अपना समय बर्बाद मत करो। यूनिवर्सल बायपास आप को तंग करने वाले शॉर्टर्स लिंक को छोड़ देता है।"
+	},
+	"firstrunTitle": {
+		"message": "यूनिवर्सल बाईपास को एड करने के लिए आपका धन्यवाद!"
+	},
+	"firstrunSubtitle": {
+		"message": "आप कमाल हो!"
+	},
+	"firstrunNoScript": {
+		"message": "हालाँकि, आप नोस्क्रिप्ट या इसी की तरह कुछ उपयोग करते दिख रहे हैं, जिसके साथ यूनिवर्सल बाईपास काम नहीं कर सकता।"
+	},
+	"faq": {
+		"message": "अकसर पूछे जाने वाले प्रश्न (FAQ)"
+	},
+	"options": {
+		"message": "विकल्प"
+	},
+	"optionsLink": {
+		"message": "यूनिवर्सल बाईपास के विकल्प बदलें"
+	},
+	"optionsEnabled": {
+		"message": "वेबसाइट बाइपास को चालू करें ।"
+	},
+	"optionsInstantNavigation": {
+		"message": "लिंक को बिना रुके बाईपास करे।"
+	},
+	"optionsTrackerBypass": {
+		"message": "ट्रैकर्स को बाईपास करे Apimon.de उपयोग करके"
+	},
+	"optionsBlockIPLoggers": {
+		"message": "अगर आईपी का संग्रह करने वाले बाईपास नहीं हो सकते तो उन्हे ब्लॉक करदे"
+	},
+	"optionsCrowdBypass": {
+		"message": "जो शॉर्ट लिंक बाईपास नहीं हो सकता उसका लिंक हमे दे दे।"
+	},
+	"privacyPolicy": {
+		"message": "गोपनीयता नीति"
+	},
+	"optionsUserscripts": {
+		"message": "कस्टम बाईपासेस"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "यह अच्छा होगा यदि आप काम करता हुआ बाईपासेस Github pe प्रस्तुत करे, जिससे अन्य लोगों को इससे लाभ मिले।"
+	},
+	"beforeNavigate": {
+		"message": "आप लगभग अपने लक्ष्य पर हो"
+	},
+	"beforeNavigateDestination": {
+		"message": "ये रहा आपका लिंक %"
+	},
+	"beforeNavigateInfo": {
+		"message": "क्या आप चाहते हैं कि यूनिवर्सल बाईपास आपको तुरंत अपने लक्ष्य(लिंक) पे पहुंचा दे?"
+	},
+	"blockedTitle": {
+		"message": "यूनिवर्सल बाईपास ने अपकी आईपी को लॉग होने से बचाया।"
+	},
+	"blockedSubtitle": {
+		"message": "क्या आप नहीं चाहते कि यूनिवर्सल बाईपास आपकी आईपी को बुरे लोगो के पास जाने से बचाए?"
+	},
+	"crowdBypassed": {
+		"message": "आपको इंतजार नहीं करना पड़ सकता है!"
+	},
+	"crowdBypassedInfo": {
+		"message": "अन्य यूनिवर्सल बाईपास उपयोगकर्ता आपके लिए पहले ही इंतजार कर चुके हैं और रिपोर्ट कर चुके हैं कि यह लिंक इसपे जाता है %"
+	},
+	"crowdBypassedIgnore": {
+		"message": "क्या ये सही नहीं था?"
+	}
+}
