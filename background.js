@@ -1,11 +1,11 @@
-var brws = (typeof browser == "undefined" ? chrome : browser),
-platform = brws.runtime.getURL("").split("-")[0],
+const brws=(typeof browser=="undefined"?chrome:browser),
+platform=brws.runtime.getURL("").split("-")[0];
 //Keeping track of options
-enabled = true,
-instantNavigation = false,
-trackerBypassEnabled = true,
-blockIPLoggers = true,
-crowdEnabled = true,
+var enabled=true,
+instantNavigation=false,
+trackerBypassEnabled=true,
+blockIPLoggers=true,
+crowdEnabled=true,
 userscript="",
 getRedirectUrl=url=>(instantNavigation?url:brws.runtime.getURL("html/before-navigate.html")+"?target="+encodeURIComponent(url)),
 getRedirect=url=>({redirectUrl:getRedirectUrl(url)}),
@@ -119,6 +119,22 @@ brws.runtime.onConnect.addListener(port => {
 		xhr.send()
 	})
 })
+
+//Install & Uninstall Actions
+brws.runtime.onInstalled.addListener(details=>{
+	if(details.reason=="install")
+	{
+		if(platform=="moz")
+		{
+			brws.windows.create({url:"https://universal-bypass.org/firstrun"})
+		}
+		else
+		{
+			window.open("https://universal-bypass.org/firstrun")
+		}
+	}
+})
+brws.runtime.setUninstallURL("https://docs.google.com/forms/d/e/1FAIpQLSdXw-Yf5IaDXZWw4fDHroZkDFOF6hgWEvVDaXT9ZADqnF2reg/viewform")
 
 //Internal redirects to extension URLs to bypass content script limitations
 brws.webRequest.onBeforeRequest.addListener(details=>{
@@ -255,43 +271,8 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 "*://*.ouo.press/rgo/*"
 ]},["blocking","responseHeaders"])
 
-//Install & Uninstall Actions
-brws.runtime.onInstalled.addListener(details=>{
-	if(details.reason == "install")
-	{
-		if(platform == "ms" || platform == "moz")
-		{
-			brws.windows.create({url: "https://universal-bypass.org/firstrun"})
-		}
-		else
-		{
-			setTimeout(()=>window.open("https://universal-bypass.org/firstrun"),1000)
-			// For some reason, Chromium doesn't instantly register the webRequest handlers, so we're waiting.
-		}
-	}
-	else
-	{
-		//Upgrade configuration
-		brws.storage.local.get(["custom_bypasses"],result=>{
-			if(!result||!result.custom_bypasses)
-			{
-				return
-			}
-			let customBypasses=JSON.parse(result.custom_bypasses),userscript=""
-			for(let name in customBypasses)
-			{
-				userscript += "// " + name + "\ndomainBypass(\"" + customBypasses[name].domains + "\", ()=>{\n" + customBypasses[name].content + "})\n\n"
-			}
-			brws.storage.local.set({
-				userscript: userscript
-			}, ()=>brws.storage.local.remove("custom_bypasses"))
-		})
-	}
-})
-brws.runtime.setUninstallURL("https://docs.google.com/forms/d/e/1FAIpQLSdXw-Yf5IaDXZWw4fDHroZkDFOF6hgWEvVDaXT9ZADqnF2reg/viewform")
-
 //Fixing Content-Security-Policy on Firefox because apparently extensions have no special privileges in Firefox
-if(platform == "moz")
+if(platform=="moz")
 {
 	brws.webRequest.onHeadersReceived.addListener(details=>{
 		if(enabled)
