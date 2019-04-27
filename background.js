@@ -173,7 +173,8 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	}
 },{types:["main_frame"],urls:[
 "*://*.raidcall.com.tw/direct.php?url=*",
-"*://*.raidcall.com.tw/direct.tips.php?url=*"
+"*://*.raidcall.com.tw/direct.tips.php?url=*",
+"*://news-gg.com/l/?*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
@@ -233,7 +234,6 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
 		let url=new URL(details.url)
-		console.log(url.searchParams.get("id"))
 		if(url.searchParams.has("id"))
 		{
 			return getRedirect(atob(url.searchParams.get("id").split("").reverse().join("")))

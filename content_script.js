@@ -711,6 +711,14 @@ if(document instanceof HTMLDocument)
 					}
 				}
 			})
+			domainBypass("drivehub.link",()=>{
+				let a=document.querySelector("a#proceed[href]")
+				if(a)
+					safelyNavigate(a.href)
+			})
+			domainBypass("oxy.cloud",()=>{
+				location.href=new URL(document.querySelector("#divdownload > a[href]").href).searchParams.get("url")
+			})
 			//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 			if(bypassed)
 			{
