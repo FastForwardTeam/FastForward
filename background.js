@@ -174,7 +174,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 },{types:["main_frame"],urls:[
 "*://*.raidcall.com.tw/direct.php?url=*",
 "*://*.raidcall.com.tw/direct.tips.php?url=*",
-"*://news-gg.com/l/?*"
+"*://*.news-gg.com/l/?*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
@@ -335,7 +335,7 @@ if(platform=="moz")
 	},{types:["main_frame"],urls:["<all_urls>"]},["blocking","responseHeaders"])
 }
 
-//Tracker Bypass using Apimon.de; see options for more details.
+//Tracker Bypass using Apimon.de
 function resolveRedirect(url)
 {
 	let xhr=new XMLHttpRequest(),destination
@@ -349,12 +349,12 @@ function resolveRedirect(url)
 	return destination
 }
 brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(trackerBypassEnabled && new URL(details.url).pathname != "/")
+	if(trackerBypassEnabled&&new URL(details.url).pathname!="/")
 	{
-		let destination = resolveRedirect(details.url)
-		if(destination && destination != details.url)
+		let destination=resolveRedirect(details.url)
+		if(destination&&destination!=details.url)
 		{
-			return {redirectUrl: destination}
+			return getRedirect(destination)
 		}
 	}
 },{
@@ -389,19 +389,19 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	]
 },["blocking"])
 brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(new URL(details.url).pathname != "/")
+	if(new URL(details.url).pathname!="/")
 	{
 		if(trackerBypassEnabled)
 		{
-			let destination = resolveRedirect(details.url)
-			if(destination && destination != details.url)
+			let destination=resolveRedirect(details.url)
+			if(destination&&destination!=details.url)
 			{
-				return {redirectUrl: destination}
+				return getRedirect(destination)
 			}
 		}
 		if(blockIPLoggers)
 		{
-			return {redirectUrl: brws.runtime.getURL("html/blocked.html")}
+			return {redirectUrl:brws.runtime.getURL("html/blocked.html")}
 		}
 	}
 },{types:["main_frame"],urls:getIPLoggerPatterns()},["blocking"])
