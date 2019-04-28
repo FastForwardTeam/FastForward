@@ -23,11 +23,11 @@
 	"optionsEnabled": {
 		"message": "ウェブサイトのバイパスを有効化する"
 	},
-	"optionsInstantNavigation": {
-		"message": "即座にリンク先へ移動します。"
-	},
 	"optionsTrackerBypass": {
 		"message": "Apimon.deを使用してトラッカーをバイパスする"
+	},
+	"optionsInstantNavigation": {
+		"message": "即座にリンク先へ移動します。"
 	},
 	"optionsBlockIPLoggers": {
 		"message": "バイパスできない場合は、IPロガーをブロックする"

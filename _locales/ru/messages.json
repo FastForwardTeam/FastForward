@@ -23,11 +23,11 @@
 	"optionsEnabled": {
 		"message": "Включить обходы веб-сайтов."
 	},
-	"optionsInstantNavigation": {
-		"message": "Сразу переходить по адресу назначения."
-	},
 	"optionsTrackerBypass": {
 		"message": "Обходить средства слежки, используя Apimon.de."
+	},
+	"optionsInstantNavigation": {
+		"message": "Сразу переходить по адресу назначения."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Блокировать всех сохраняющих IP, если их нельзя обойти."

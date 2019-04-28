@@ -23,11 +23,14 @@
 	"optionsEnabled": {
 		"message": "Enable website bypasses."
 	},
+	"optionsTrackerBypass": {
+		"message": "Bypass trackers using Apimon.de."
+	},
 	"optionsInstantNavigation": {
 		"message": "Instantly take me to destinations."
 	},
-	"optionsTrackerBypass": {
-		"message": "Bypass trackers using Apimon.de."
+	"optionsInstantNavigationTrackers": {
+		"message": "Instantly take me to destinations of trackers."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Block IP loggers if they can't be bypassed."

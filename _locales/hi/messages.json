@@ -23,11 +23,11 @@
 	"optionsEnabled": {
 		"message": "वेबसाइट बाइपास को चालू करें ।"
 	},
-	"optionsInstantNavigation": {
-		"message": "लिंक को बिना रुके बाईपास करे।"
-	},
 	"optionsTrackerBypass": {
 		"message": "ट्रैकर्स को बाईपास करे Apimon.de उपयोग करके"
+	},
+	"optionsInstantNavigation": {
+		"message": "लिंक को बिना रुके बाईपास करे।"
 	},
 	"optionsBlockIPLoggers": {
 		"message": "अगर आईपी का संग्रह करने वाले बाईपास नहीं हो सकते तो उन्हे ब्लॉक करदे"

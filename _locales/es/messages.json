@@ -20,11 +20,11 @@
 	"optionsEnabled": {
 		"message": "Activar bypass pagina web."
 	},
-	"optionsInstantNavigation": {
-		"message": "Llevarme directamente al destino."
-	},
 	"optionsTrackerBypass": {
 		"message": "Evita rastreadores usando Apimon.de."
+	},
+	"optionsInstantNavigation": {
+		"message": "Llevarme directamente al destino."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Bloquea los registradores IP si no pueden ser Saltados."

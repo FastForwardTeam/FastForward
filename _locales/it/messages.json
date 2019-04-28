@@ -23,11 +23,11 @@
 	"optionsEnabled": {
 		"message": "Attiva i bypass dei siti web."
 	},
-	"optionsInstantNavigation": {
-		"message": "Portami istantaneamente alla destinazione."
-	},
 	"optionsTrackerBypass": {
 		"message": "Bypass tracker utilizzando Apimon.de."
+	},
+	"optionsInstantNavigation": {
+		"message": "Portami istantaneamente alla destinazione."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Blocca i logger IP se essi non possono essere bypassati."

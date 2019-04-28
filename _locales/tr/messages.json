@@ -23,11 +23,11 @@
 	"optionsEnabled": {
 		"message": "Web sayfalarını es geçmeyi etkinleştir."
 	},
-	"optionsInstantNavigation": {
-		"message": "Beni anında hedef adrese yönlendir."
-	},
 	"optionsTrackerBypass": {
 		"message": "Apimon.de kullanan Bypass izleyicileri."
+	},
+	"optionsInstantNavigation": {
+		"message": "Beni anında hedef adrese yönlendir."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Eğer es geçilemezse IP kayıtçılarını engelle."

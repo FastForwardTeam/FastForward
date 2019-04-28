@@ -23,11 +23,11 @@
 	"optionsEnabled": {
 		"message": "Bật bỏ qua website."
 	},
-	"optionsInstantNavigation": {
-		"message": "Lập tức dẫn tôi đến đích đến."
-	},
 	"optionsTrackerBypass": {
 		"message": "Bỏ qua trackers bằng cách sử dụng Apimon.de."
+	},
+	"optionsInstantNavigation": {
+		"message": "Lập tức dẫn tôi đến đích đến."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Chặn IP Logger nếu nó không thể bỏ qua."

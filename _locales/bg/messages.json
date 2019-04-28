@@ -20,11 +20,11 @@
 	"optionsEnabled": {
 		"message": "Активирайте заобикалянето на уебсайтовете."
 	},
-	"optionsInstantNavigation": {
-		"message": "Незабавно ме отведе до дестинации."
-	},
 	"optionsTrackerBypass": {
 		"message": "Заобиколете тракерите, използвайки Apimon.de."
+	},
+	"optionsInstantNavigation": {
+		"message": "Незабавно ме отведе до дестинации."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Блокирайте IP регистраторите, ако не могат да бъдат прескочени."

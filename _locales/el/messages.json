@@ -23,11 +23,11 @@
 	"optionsEnabled": {
 		"message": "Ενεργοποίηση παρακάμψεων ιστοσελίδων."
 	},
-	"optionsInstantNavigation": {
-		"message": "Πήγαινε με άμεσα στους προορισμούς."
-	},
 	"optionsTrackerBypass": {
 		"message": "Παράκαμψη trackers χρησιμοποιώντας το Apimon.de."
+	},
+	"optionsInstantNavigation": {
+		"message": "Πήγαινε με άμεσα στους προορισμούς."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Μπλόκαρε IP loggers, αν αυτοί δεν μπορούν να παρακάμπτουν."

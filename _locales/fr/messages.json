@@ -23,11 +23,11 @@
 	"optionsEnabled": {
 		"message": "Activez les contournements de site Web."
 	},
-	"optionsInstantNavigation": {
-		"message": "M'envoyer instantanément vers les destinations."
-	},
 	"optionsTrackerBypass": {
 		"message": "Contourner les traqueurs en utilisant Apimon.de."
+	},
+	"optionsInstantNavigation": {
+		"message": "M'envoyer instantanément vers les destinations."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Bloque les enregistreurs d’IP si ils ne peuvent pas êtres contournés."

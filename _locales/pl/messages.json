@@ -23,11 +23,11 @@
 	"optionsEnabled": {
 		"message": "Włącz obejścia stron."
 	},
-	"optionsInstantNavigation": {
-		"message": "Natychmiast zabieraj mnie do miejsc docelowych."
-	},
 	"optionsTrackerBypass": {
 		"message": "Omijaj namierzanie, używając Apimon.de."
+	},
+	"optionsInstantNavigation": {
+		"message": "Natychmiast zabieraj mnie do miejsc docelowych."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Zablokuj rejestratory IP, jeśli nie można ich ominąć."

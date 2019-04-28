@@ -1,3 +1,86 @@
+//Options
+const enabledCheckbox=document.getElementById("option-enabled"),
+trackerBypassCheckbox=document.getElementById("option-tracker-bypass"),
+instantNavigationCheckbox=document.getElementById("option-instant-navigation"),
+instantNavigationTrackersCheckbox=document.getElementById("option-instant-navigation-trackers"),
+blockIPLoggersCheckbox=document.getElementById("option-block-ip-loggers"),
+crowdBypassCheckbox=document.getElementById("option-crowd-bypass")
+brws.storage.sync.get(["disable","no_tracker_bypass","instant_navigation","no_instant_navigation_trackers","allow_ip_loggers","crowd_bypass_opt_out"],res=>{
+	if(res==undefined)
+	{
+		res={}
+	}
+	if(!res.disable||res.disable!=="true")
+	{
+		enabledCheckbox.setAttribute("checked","checked")
+	}
+	if(!res.no_tracker_bypass||res.no_tracker_bypass!=="true")
+	{
+		trackerBypassCheckbox.setAttribute("checked","checked")
+	}
+	if(res.instant_navigation&&res.instant_navigation==="true")
+	{
+		instantNavigationCheckbox.setAttribute("checked","checked")
+	}
+	if(!res.no_instant_navigation_trackers||res.no_instant_navigation_trackers!=="true")
+	{
+		instantNavigationTrackersCheckbox.setAttribute("checked","checked")
+	}
+	if(!res.allow_ip_loggers||res.allow_ip_loggers!=="true")
+	{
+		blockIPLoggersCheckbox.setAttribute("checked","checked")
+	}
+	if(!res.crowd_bypass_opt_out||res.crowd_bypass_opt_out!=="true")
+	{
+		crowdBypassCheckbox.setAttribute("checked","checked")
+	}
+	instantNavigationTrackersLogic()
+	enabledCheckbox.onchange=()=>{
+		brws.storage.sync.set({
+			disable:(!enabledCheckbox.checked).toString()
+		})
+	}
+	trackerBypassCheckbox.onchange=()=>{
+		brws.storage.sync.set({
+			no_tracker_bypass:(!trackerBypassCheckbox.checked).toString()
+		})
+		instantNavigationTrackersLogic()
+	}
+	instantNavigationCheckbox.onchange=()=>{
+		brws.storage.sync.set({
+			instant_navigation:instantNavigationCheckbox.checked.toString()
+		})
+		instantNavigationTrackersLogic()
+	}
+	instantNavigationTrackersCheckbox.onchange=()=>{
+		brws.storage.sync.set({
+			no_instant_navigation_trackers:(!instantNavigationTrackersCheckbox.checked).toString()
+		})
+	}
+	blockIPLoggersCheckbox.onchange=()=>{
+		brws.storage.sync.set({
+			allow_ip_loggers:(!blockIPLoggersCheckbox.checked).toString()
+		})
+	}
+	crowdBypassCheckbox.onchange=()=>{
+		brws.storage.sync.set({
+			crowd_bypass_opt_out:(!crowdBypassCheckbox.checked).toString()
+		})
+	}
+})
+function instantNavigationTrackersLogic()
+{
+	if(!trackerBypassCheckbox.checked||instantNavigationCheckbox.checked)
+	{
+		instantNavigationTrackersCheckbox.setAttribute("disabled","disabled")
+	}
+	else
+	{
+		instantNavigationTrackersCheckbox.removeAttribute("disabled")
+	}
+}
+
+//Custom Bypasses
 var example=`// Some examples of what you can do with custom bypasses:
 domainBypass("example.com", function()
 {
@@ -39,60 +122,4 @@ brws.storage.local.get(["userscript"],res=>{
 			})
 		},500)
 	})
-})
-brws.storage.sync.get(["disable","instant_navigation","no_tracker_bypass","allow_ip_loggers","crowd_bypass_opt_out"],res=>{
-	if(res==undefined)
-	{
-		res={}
-	}
-	let enabledCheckbox=document.getElementById("option-enabled"),
-	instantNavigationCheckbox=document.getElementById("option-instant-navigation"),
-	trackerBypassCheckbox=document.getElementById("option-tracker-bypass"),
-	blockIPLoggersCheckbox=document.getElementById("option-block-ip-loggers"),
-	crowdBypassCheckbox=document.getElementById("option-crowd-bypass")
-	if(!res.disable||res.disable!=="true")
-	{
-		enabledCheckbox.setAttribute("checked","checked")
-	}
-	if(res.instant_navigation&&res.instant_navigation==="true")
-	{
-		instantNavigationCheckbox.setAttribute("checked","checked")
-	}
-	if(!res.no_tracker_bypass||res.no_tracker_bypass!=="true")
-	{
-		trackerBypassCheckbox.setAttribute("checked","checked")
-	}
-	if(!res.allow_ip_loggers||res.allow_ip_loggers!=="true")
-	{
-		blockIPLoggersCheckbox.setAttribute("checked","checked")
-	}
-	if(!res.crowd_bypass_opt_out||res.crowd_bypass_opt_out!=="true")
-	{
-		crowdBypassCheckbox.setAttribute("checked","checked")
-	}
-	enabledCheckbox.onchange=()=>{
-		brws.storage.sync.set({
-			disable:(!enabledCheckbox.checked).toString()
-		})
-	}
-	instantNavigationCheckbox.onchange=()=>{
-		brws.storage.sync.set({
-			instant_navigation:instantNavigationCheckbox.checked.toString()
-		})
-	}
-	trackerBypassCheckbox.onchange=()=>{
-		brws.storage.sync.set({
-			no_tracker_bypass:(!trackerBypassCheckbox.checked).toString()
-		})
-	}
-	blockIPLoggersCheckbox.onchange=()=>{
-		brws.storage.sync.set({
-			allow_ip_loggers:(!blockIPLoggersCheckbox.checked).toString()
-		})
-	}
-	crowdBypassCheckbox.onchange=()=>{
-		brws.storage.sync.set({
-			crowd_bypass_opt_out:(!crowdBypassCheckbox.checked).toString()
-		})
-	}
 })

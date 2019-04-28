@@ -20,11 +20,11 @@
 	"optionsEnabled": {
 		"message": ".میان بر های وب سایت را فعال سازید"
 	},
-	"optionsInstantNavigation": {
-		"message": ".مستقیما من را به مقاصد برسانید"
-	},
 	"optionsTrackerBypass": {
 		"message": " Apimon.de ردیاب ها را میان بر بزن با استفاده از"
+	},
+	"optionsInstantNavigation": {
+		"message": ".مستقیما من را به مقاصد برسانید"
 	},
 	"optionsBlockIPLoggers": {
 		"message": ".آی پی ورودگر ها که قابل به رد شدن نیستند را مسدود کن"

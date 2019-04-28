@@ -1,14 +1,7 @@
 const brws=(typeof browser=="undefined"?chrome:browser),
-platform=brws.runtime.getURL("").split("-")[0];
-//Keeping track of options
-var enabled=true,
-instantNavigation=false,
-trackerBypassEnabled=true,
-blockIPLoggers=true,
-crowdEnabled=true,
-userscript="",
-getRedirectUrl=url=>(instantNavigation?url:brws.runtime.getURL("html/before-navigate.html")+"?target="+encodeURIComponent(url)),
-getRedirect=url=>({redirectUrl:getRedirectUrl(url)}),
+platform=brws.runtime.getURL("").split("-")[0],
+getRedirectUrl=(url,tracker)=>(instantNavigation||(tracker&&instantNavigationTrackers)?url:brws.runtime.getURL("html/before-navigate.html")+"?target="+encodeURIComponent(url)),
+getRedirect=(url,tracker)=>({redirectUrl:getRedirectUrl(url,tracker)}),
 encodedRedirect=url=>({redirectUrl:(instantNavigation?decodeURIComponent(url):brws.runtime.getURL("html/before-navigate.html")+"?target="+url)}),
 isGoodLink=link=>{
 	if(!link||link.split("#")[0]==location.href.split("#")[0]||link.substr(0,6)=="about:"||link.substr(0,11)=="javascript:")
@@ -25,12 +18,32 @@ isGoodLink=link=>{
 	}
 	return true
 }
-brws.storage.sync.get(["disable","instant_navigation","no_tracker_bypass","allow_ip_loggers","crowd_bypass_opt_out"],res=>{
+
+//Install & Uninstall Actions
+brws.runtime.onInstalled.addListener(details=>{
+	if(details.reason=="install")
+	{
+		if(platform=="moz")
+		{
+			brws.windows.create({url:"https://universal-bypass.org/firstrun"})
+		}
+		else
+		{
+			window.open("https://universal-bypass.org/firstrun")
+		}
+	}
+})
+brws.runtime.setUninstallURL("https://docs.google.com/forms/d/e/1FAIpQLSdXw-Yf5IaDXZWw4fDHroZkDFOF6hgWEvVDaXT9ZADqnF2reg/viewform")
+
+//Keeping track of options
+var enabled=true,trackerBypassEnabled=true,instantNavigationTrackers=false,blockIPLoggers=true,crowdEnabled=true,userscript=""
+brws.storage.sync.get(["disable","no_tracker_bypass","instant_navigation","no_instant_navigation_trackers","allow_ip_loggers","crowd_bypass_opt_out"],res=>{
 	if(res)
 	{
 		enabled=(!res.disable||res.disable!=="true")
-		instantNavigation=(res.instant_navigation&&res.instant_navigation==="true")
 		trackerBypassEnabled=(!res.no_tracker_bypass||res.no_tracker_bypass!=="true")
+		instantNavigation=(res.instant_navigation&&res.instant_navigation==="true")
+		instantNavigationTrackers=(!res.no_instant_navigation_trackers||res.no_instant_navigation_trackers!=="true")
 		blockIPLoggers=(!res.allow_ip_loggers||res.allow_ip_loggers!=="true")
 		crowdEnabled=(!res.crowd_bypass_opt_out||res.crowd_bypass_opt_out!=="true")
 	}
@@ -46,13 +59,17 @@ brws.storage.onChanged.addListener(changes=>{
 	{
 		enabled=(changes.disable.newValue!=="true")
 	}
+	if(changes.no_tracker_bypass)
+	{
+		trackerBypassEnabled=(changes.no_tracker_bypass.newValue!=="true")
+	}
 	if(changes.instant_navigation)
 	{
 		instantNavigation=(changes.instant_navigation.newValue==="true")
 	}
-	if(changes.no_tracker_bypass)
+	if(changes.no_instant_navigation_trackers)
 	{
-		trackerBypassEnabled=(changes.no_tracker_bypass.newValue!=="true")
+		instantNavigationTrackers=(changes.no_instant_navigation_trackers.newValue!=="true")
 	}
 	if(changes.allow_ip_loggers)
 	{
@@ -68,6 +85,7 @@ brws.storage.onChanged.addListener(changes=>{
 	}
 })
 
+//Messaging
 brws.runtime.onMessage.addListener((req, sender, respond) => {
 	switch(req.type)
 	{
@@ -119,22 +137,6 @@ brws.runtime.onConnect.addListener(port => {
 		xhr.send()
 	})
 })
-
-//Install & Uninstall Actions
-brws.runtime.onInstalled.addListener(details=>{
-	if(details.reason=="install")
-	{
-		if(platform=="moz")
-		{
-			brws.windows.create({url:"https://universal-bypass.org/firstrun"})
-		}
-		else
-		{
-			window.open("https://universal-bypass.org/firstrun")
-		}
-	}
-})
-brws.runtime.setUninstallURL("https://docs.google.com/forms/d/e/1FAIpQLSdXw-Yf5IaDXZWw4fDHroZkDFOF6hgWEvVDaXT9ZADqnF2reg/viewform")
 
 //Internal redirects to extension URLs to bypass content script limitations
 brws.webRequest.onBeforeRequest.addListener(details=>{
@@ -354,7 +356,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		let destination=resolveRedirect(details.url)
 		if(destination&&destination!=details.url)
 		{
-			return getRedirect(destination)
+			return getRedirect(destination,true)
 		}
 	}
 },{
@@ -396,7 +398,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 			let destination=resolveRedirect(details.url)
 			if(destination&&destination!=details.url)
 			{
-				return getRedirect(destination)
+				return getRedirect(destination,true)
 			}
 		}
 		if(blockIPLoggers)

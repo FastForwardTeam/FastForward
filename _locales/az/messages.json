@@ -11,11 +11,11 @@
 	"firstrunNoScript": {
 		"message": "Buna baxmayaraq, Universal Bypass ilə uyğunlaşmayan NoScript və ya oxşarını istifadə edirsiniz."
 	},
-	"optionsInstantNavigation": {
-		"message": "Məni dərhal təyinat yerinə apar."
-	},
 	"optionsTrackerBypass": {
 		"message": "Apimon.de istifadə edən Bypass izləyiciləri."
+	},
+	"optionsInstantNavigation": {
+		"message": "Məni dərhal təyinat yerinə apar."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Ötürə bilməsə, IP qeydlərini əngəllə."

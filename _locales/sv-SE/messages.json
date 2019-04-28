@@ -23,11 +23,11 @@
 	"optionsEnabled": {
 		"message": "Aktivera förbikopplingar av webbplats."
 	},
-	"optionsInstantNavigation": {
-		"message": "Ta mig omedelbart till målen."
-	},
 	"optionsTrackerBypass": {
 		"message": "Förbikopplare som använder Apimon.de."
+	},
+	"optionsInstantNavigation": {
+		"message": "Ta mig omedelbart till målen."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Blockera IP-loggerare om de inte kan förbikopplas."

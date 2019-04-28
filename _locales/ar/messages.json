@@ -20,11 +20,11 @@
 	"optionsEnabled": {
 		"message": "تمكين تجاوز مواقع الويب."
 	},
-	"optionsInstantNavigation": {
-		"message": "قم بنقلي إلى الوجهات تلقائيًا."
-	},
 	"optionsTrackerBypass": {
 		"message": "تجاوز المتتبعين بإستخدام Apimon.de."
+	},
+	"optionsInstantNavigation": {
+		"message": "قم بنقلي إلى الوجهات تلقائيًا."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "حظر مسجلات الـ IP إذا كان لا يمكن تجاوزهم."

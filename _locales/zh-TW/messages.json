@@ -23,11 +23,11 @@
 	"optionsEnabled": {
 		"message": "啟用網站繞過功能"
 	},
-	"optionsInstantNavigation": {
-		"message": "跳過確認頁面，直接帶我到目的地。"
-	},
 	"optionsTrackerBypass": {
 		"message": "利用 Apimon.de 繞過隱私追蹤器。"
+	},
+	"optionsInstantNavigation": {
+		"message": "跳過確認頁面，直接帶我到目的地。"
 	},
 	"optionsBlockIPLoggers": {
 		"message": "若實在無法繞過，直接禁止瀏覽器訪問IP記錄網站。"

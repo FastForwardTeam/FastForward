@@ -23,11 +23,11 @@
 	"optionsEnabled": {
 		"message": "Aktifkan bypass website."
 	},
-	"optionsInstantNavigation": {
-		"message": "Langsung arahkan ke halaman tujuan."
-	},
 	"optionsTrackerBypass": {
 		"message": "Pelacak Bypass menggunakan Apimon.de."
+	},
+	"optionsInstantNavigation": {
+		"message": "Langsung arahkan ke halaman tujuan."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Memblokir IP Logger jika tidak dapat dilewati."
