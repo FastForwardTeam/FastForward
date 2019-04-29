@@ -29,6 +29,9 @@
 	"optionsInstantNavigation": {
 		"message": "Сразу переходить по адресу назначения."
 	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Сразу переходить по адресу средств слежки."
+	},
 	"optionsBlockIPLoggers": {
 		"message": "Блокировать всех сохраняющих IP, если их нельзя обойти."
 	},

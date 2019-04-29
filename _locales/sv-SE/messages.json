@@ -29,6 +29,9 @@
 	"optionsInstantNavigation": {
 		"message": "Ta mig omedelbart till målen."
 	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Ta mig omedelbart till målen av trackers."
+	},
 	"optionsBlockIPLoggers": {
 		"message": "Blockera IP-loggerare om de inte kan förbikopplas."
 	},

@@ -15,7 +15,10 @@
 		"message": "Често задавани въпроси (FAQ)"
 	},
 	"options": {
-		"message": "Настроики"
+		"message": "Опции"
+	},
+	"optionsLink": {
+		"message": "Променете опциите на Universal Bypass."
 	},
 	"optionsEnabled": {
 		"message": "Активирайте заобикалянето на уебсайтовете."
@@ -25,6 +28,9 @@
 	},
 	"optionsInstantNavigation": {
 		"message": "Незабавно ме отведе до дестинации."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Незабавно ме отведете до дестинациите на тракерите."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Блокирайте IP регистраторите, ако не могат да бъдат прескочени."
@@ -60,7 +66,7 @@
 		"message": "Може да не се наложи да чакате!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Други потребители на Universal Bypass вече са ви чакали и съобщиха, че това води до %"
+		"message": "Други потребители на Universal Bypass вече са чакали и съобщиха, че това води до %"
 	},
 	"crowdBypassedIgnore": {
 		"message": "Не беше ли това правилно?"

@@ -29,6 +29,9 @@
 	"optionsInstantNavigation": {
 		"message": "Lập tức dẫn tôi đến đích đến."
 	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Ngay lập tức đưa tôi đến đích của trình theo dõi."
+	},
 	"optionsBlockIPLoggers": {
 		"message": "Chặn IP Logger nếu nó không thể bỏ qua."
 	},

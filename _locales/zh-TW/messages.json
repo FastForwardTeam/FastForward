@@ -29,6 +29,9 @@
 	"optionsInstantNavigation": {
 		"message": "跳過確認頁面，直接帶我到目的地。"
 	},
+	"optionsInstantNavigationTrackers": {
+		"message": "跳過追蹤紀錄器，直接帶我到目的地。"
+	},
 	"optionsBlockIPLoggers": {
 		"message": "若實在無法繞過，直接禁止瀏覽器訪問IP記錄網站。"
 	},

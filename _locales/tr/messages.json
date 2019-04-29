@@ -24,7 +24,7 @@
 		"message": "Web sayfalarını es geçmeyi etkinleştir."
 	},
 	"optionsTrackerBypass": {
-		"message": "Apimon.de kullanan Bypass izleyicileri."
+		"message": "Apimon.de kullanarak izleyicileri es geçin."
 	},
 	"optionsInstantNavigation": {
 		"message": "Beni anında hedef adrese yönlendir."

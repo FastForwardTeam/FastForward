@@ -29,6 +29,9 @@
 	"optionsInstantNavigation": {
 		"message": "Levar-me instantaneamente aos destinos."
 	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Leve-me instantaneamente para destinos de rastreadores."
+	},
 	"optionsBlockIPLoggers": {
 		"message": "Bloqueie os registradores de IP se eles não puderem ser ignorados."
 	},
