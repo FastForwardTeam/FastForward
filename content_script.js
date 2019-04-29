@@ -376,7 +376,7 @@ if(document instanceof HTMLDocument)
 		hrefBypass(/punchsubs\\.net|linkasm\\.com|firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php|2speed\\.net\\/file\\//,()=>{
 			window.setInterval=f=>setInterval(f,1)
 		})
-		hrefBypass(/datei\\.to|id-share19\\.com/,()=>{
+		hrefBypass(/longfiles\\.com|datei\\.to|id-share19\\.com/,()=>{
 			window.setTimeout=f=>setTimeout(f,1)
 		})
 		if(bypassed)
