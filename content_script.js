@@ -726,6 +726,9 @@ if(document instanceof HTMLDocument)
 			domainBypass("oxy.cloud",()=>{
 				location.href=new URL(document.querySelector("#divdownload > a[href]").href).searchParams.get("url")
 			})
+			domainBypass("linkduit.net",()=>{
+				document.querySelector(".countdown").textContent="1"
+			})
 			//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 			if(bypassed)
 			{
