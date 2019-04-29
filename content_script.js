@@ -788,7 +788,7 @@ if(document instanceof HTMLDocument)
 			if(typeof changeLink=="function")
 			{
 				let cLT=setInterval(()=>{
-					if((document.querySelectorAll("img#pleasewait").length&&document.querySelector(".wait"))
+					if((document.querySelector("img#pleasewait")&&document.querySelector(".wait"))
 					||document.getElementById("showlink")
 					||document.getElementById("download")
 					||document.getElementsByTagName("style='margin-top:").length
