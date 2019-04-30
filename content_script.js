@@ -372,6 +372,16 @@ if(document instanceof HTMLDocument)
 				xhr.send("id="+location.hash.replace("#",""))
 			}
 		})
+		domainBypass("uploaded.net",()=>{
+			let i=0
+			window.setTimeout=f=>{
+				if(++i==62)
+				{
+					window.setTimeout=setTimeout
+				}
+				return setTimeout(f,100)
+			}
+		})
 		//Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
 		hrefBypass(/punchsubs\\.net|linkasm\\.com|firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php|2speed\\.net\\/file\\//,()=>{
 			window.setInterval=f=>setInterval(f,1)
