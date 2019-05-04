@@ -209,7 +209,11 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	{
 		return encodedRedirect(details.url.substr(details.url.indexOf("?s=")+3))
 	}
-},{types:["main_frame"],urls:["*://*.ouo.io/s/*?s=*","*://*.cpmlink.net/s/*?s=*"]},["blocking"])
+},{types:["main_frame"],urls:[
+"*://*.ouo.io/s/*?s=*",
+"*://*.ouo.io/qs/*?s=*",
+"*://*.cpmlink.net/s/*?s=*"
+]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
