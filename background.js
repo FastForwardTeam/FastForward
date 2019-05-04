@@ -207,6 +207,13 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
+		return getRedirect(atob(details.url.substr(details.url.indexOf("?r=")+3)))
+	}
+},{types:["main_frame"],urls:["*://yumechan.club/?r=*"]},["blocking"])
+
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
 		return encodedRedirect(details.url.substr(details.url.indexOf("?s=")+3))
 	}
 },{types:["main_frame"],urls:[
