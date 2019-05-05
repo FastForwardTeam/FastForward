@@ -1,5 +1,6 @@
 //Options
 const enabledCheckbox=document.getElementById("option-enabled"),
+enabledLabel=document.querySelector("label[for='option-enabled']"),
 trackerBypassCheckbox=document.getElementById("option-tracker-bypass"),
 instantNavigationCheckbox=document.getElementById("option-instant-navigation"),
 instantNavigationTrackersCheckbox=document.getElementById("option-instant-navigation-trackers"),
@@ -13,6 +14,10 @@ brws.storage.sync.get(["disable","no_tracker_bypass","instant_navigation","no_in
 	if(!res.disable||res.disable!=="true")
 	{
 		enabledCheckbox.setAttribute("checked","checked")
+	}
+	else
+	{
+		enabledLabel.style.color="red"
 	}
 	if(!res.no_tracker_bypass||res.no_tracker_bypass!=="true")
 	{
@@ -35,36 +40,43 @@ brws.storage.sync.get(["disable","no_tracker_bypass","instant_navigation","no_in
 		crowdBypassCheckbox.setAttribute("checked","checked")
 	}
 	instantNavigationTrackersLogic()
-	enabledCheckbox.onchange=()=>{
+	enabledCheckbox.onchange=function()
+	{
+		enabledLabel.style.color=""
 		brws.storage.sync.set({
-			disable:(!enabledCheckbox.checked).toString()
+			disable:(!this.checked).toString()
 		})
 	}
-	trackerBypassCheckbox.onchange=()=>{
+	trackerBypassCheckbox.onchange=function()
+	{
 		brws.storage.sync.set({
-			no_tracker_bypass:(!trackerBypassCheckbox.checked).toString()
-		})
-		instantNavigationTrackersLogic()
-	}
-	instantNavigationCheckbox.onchange=()=>{
-		brws.storage.sync.set({
-			instant_navigation:instantNavigationCheckbox.checked.toString()
+			no_tracker_bypass:(!this.checked).toString()
 		})
 		instantNavigationTrackersLogic()
 	}
-	instantNavigationTrackersCheckbox.onchange=()=>{
+	instantNavigationCheckbox.onchange=function()
+	{
 		brws.storage.sync.set({
-			no_instant_navigation_trackers:(!instantNavigationTrackersCheckbox.checked).toString()
+			instant_navigation:this.checked.toString()
+		})
+		instantNavigationTrackersLogic()
+	}
+	instantNavigationTrackersCheckbox.onchange=function()
+	{
+		brws.storage.sync.set({
+			no_instant_navigation_trackers:(!this.checked).toString()
 		})
 	}
-	blockIPLoggersCheckbox.onchange=()=>{
+	blockIPLoggersCheckbox.onchange=function()
+	{
 		brws.storage.sync.set({
-			allow_ip_loggers:(!blockIPLoggersCheckbox.checked).toString()
+			allow_ip_loggers:(!this.checked).toString()
 		})
 	}
-	crowdBypassCheckbox.onchange=()=>{
+	crowdBypassCheckbox.onchange=function()
+	{
 		brws.storage.sync.set({
-			crowd_bypass_opt_out:(!crowdBypassCheckbox.checked).toString()
+			crowd_bypass_opt_out:(!this.checked).toString()
 		})
 	}
 })

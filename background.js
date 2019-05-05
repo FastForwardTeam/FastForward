@@ -41,6 +41,17 @@ brws.storage.sync.get(["disable","no_tracker_bypass","instant_navigation","no_in
 	if(res)
 	{
 		enabled=(!res.disable||res.disable!=="true")
+		if(!enabled)
+		{
+			brws.browserAction.setIcon({path: {
+				"40": "icon_disabled/40.png",
+				"48": "icon_disabled/48.png",
+				"128": "icon_disabled/128.png",
+				"150": "icon_disabled/150.png",
+				"176": "icon_disabled/176.png",
+				"512": "icon_disabled/512.png"
+			}})
+		}
 		trackerBypassEnabled=(!res.no_tracker_bypass||res.no_tracker_bypass!=="true")
 		instantNavigation=(res.instant_navigation&&res.instant_navigation==="true")
 		instantNavigationTrackers=(!res.no_instant_navigation_trackers||res.no_instant_navigation_trackers!=="true")
@@ -58,6 +69,28 @@ brws.storage.onChanged.addListener(changes=>{
 	if(changes.disable)
 	{
 		enabled=(changes.disable.newValue!=="true")
+		if(enabled)
+		{
+			brws.browserAction.setIcon({path: {
+				"40": "icon/40.png",
+				"48": "icon/48.png",
+				"128": "icon/128.png",
+				"150": "icon/150.png",
+				"176": "icon/176.png",
+				"512": "icon/512.png"
+			}})
+		}
+		else
+		{
+			brws.browserAction.setIcon({path: {
+				"40": "icon_disabled/40.png",
+				"48": "icon_disabled/48.png",
+				"128": "icon_disabled/128.png",
+				"150": "icon_disabled/150.png",
+				"176": "icon_disabled/176.png",
+				"512": "icon_disabled/512.png"
+			}})
+		}
 	}
 	if(changes.no_tracker_bypass)
 	{
