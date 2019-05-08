@@ -206,11 +206,19 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 			return getRedirect(url.searchParams.get("url"))
 		}
 	}
-},{types:["main_frame"],urls:[
-"*://*.raidcall.com.tw/direct.php?url=*",
-"*://*.raidcall.com.tw/direct.tips.php?url=*",
-"*://*.news-gg.com/l/?*"
-]},["blocking"])
+},{types:["main_frame"],urls:["*://*.news-gg.com/l/?*"]},["blocking"])
+
+
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
+		let url=new URL(details.url)
+		if(url.search)
+		{
+			return getRedirect(url.search.substr(1))+url.hash
+		}
+	}
+},{types:["main_frame"],urls:["*://*.anonym.to/?*"]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
