@@ -128,7 +128,7 @@ brws.runtime.onMessage.addListener((req, sender, respond) => {
 			crowdEnabled: crowdEnabled,
 			userscript: userscript
 		})
-		break;
+		break
 
 		case "crowd-contribute":
 		if(crowdEnabled)
@@ -138,8 +138,11 @@ brws.runtime.onMessage.addListener((req, sender, respond) => {
 			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
 			xhr.send(req.data)
 		}
-		else console.warn("Unexpected message:", req)
-		break;
+		else
+		{
+			console.warn("Unexpected message:", req)
+		}
+		break
 
 		default:
 		console.warn("Invalid message:", req)
@@ -382,7 +385,7 @@ if(platform=="moz")
 					let value=""
 					for(let name in policies)
 					{
-						value+=name;
+						value+=name
 						for(let j in policies[name])
 						{
 							value+=" "+policies[name][j]
@@ -560,7 +563,7 @@ function getIPLoggerPatterns()
 	lines=ipLoggers.split("\n")
 	for(let i in lines)
 	{
-		let line=lines[i].trim();
+		let line=lines[i].trim()
 		if(line&&line.substr(0,1)!="#")
 		{
 			if(line.substr(0,4)=="www.")
