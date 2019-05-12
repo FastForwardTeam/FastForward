@@ -283,6 +283,27 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
+		let url=details.url
+		do
+		{
+			let arr=url.substr(19).split("/")
+			if(arr.length!=2)
+			{
+				return
+			}
+			url=atob(arr[1])
+		}
+		while(url.length>=19&&url.substr(0,19)=="http://gslink.co/a/");
+		if(url!=details.url&&isGoodLink(url))
+		{
+			return getRedirect(url)
+		}
+	}
+},{types:["main_frame"],urls:["http://gslink.co/a/*"]},["blocking"])
+
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
 		let url=new URL(details.url)
 		if(url.searchParams.has("u"))
 		{
