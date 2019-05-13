@@ -240,12 +240,12 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
-		return getRedirect(atob(details.url.substr(details.url.indexOf("?site=")+6)))
+		return getRedirect(atob(new URL(details.url).searchParams.values().next().value))
 	}
 },{types:["main_frame"],urls:[
-"*://pafpaf.info/?site=*",
-"*://binerfile.info/?site=*",
-"*://kurosafety.menantisenja.com/?site=*"
+"*://pafpaf.info/?*=*",
+"*://binerfile.info/?*=*",
+"*://kurosafety.menantisenja.com/?*=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
