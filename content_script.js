@@ -746,7 +746,7 @@ if(document instanceof HTMLDocument)
 						safelyNavigate(a.href)
 				})
 				domainBypass("oxy.cloud",()=>{
-					location.href=new URL(document.querySelector("#divdownload > a[href]").href).searchParams.get("url")
+					location.href=new URL(document.querySelector("#divdownload > a[href]").href).searchParams.get("predirect")
 				})
 				domainBypass("linkduit.net",()=>{
 					document.querySelector(".countdown").textContent="1"
