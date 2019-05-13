@@ -757,6 +757,9 @@ if(document instanceof HTMLDocument)
 				domainBypass("teknosafe.teknologilink.com",()=>{
 					safelyNavigate(document.querySelector("#templatemo_content > div > a[href]").href)
 				})
+				domainBypass("imgtaxi.com",()=>{
+					document.querySelector("a.overlay_ad_link").click()
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
