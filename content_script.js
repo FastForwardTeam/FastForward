@@ -751,6 +751,12 @@ if(document instanceof HTMLDocument)
 				domainBypass("linkduit.net",()=>{
 					document.querySelector(".countdown").textContent="1"
 				})
+				domainBypass("daunshorte.teknologilink.com",()=>{
+					location.href=document.querySelector("a[href^='https://teknosafe.teknologilink.com/linkteknolink/safelinkscript.php?']").href
+				})
+				domainBypass("teknosafe.teknologilink.com",()=>{
+					safelyNavigate(document.querySelector("#templatemo_content > div > a[href]").href)
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
