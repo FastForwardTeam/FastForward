@@ -341,6 +341,24 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	}
 },{types:["main_frame"],urls:["*://*.surfsees.com/?*"]},["blocking"])
 
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
+		let url=new URL(details.url)
+		if(url.searchParams.has("id"))
+		{
+			return getRedirect(atob(url.searchParams.get("id")).split("!").join("a").split(")").join("e").split("_").join("i").split("(").join("o").split("*").join("u"))
+		}
+	}
+},{types:["main_frame"],urls:[
+"*://*.safelinkconverter.com/*?*",
+"*://*.safelinkreview.com/*?*",
+"*://*.safelinkreviewx.com/*?*",
+"*://*.safelinkreview.co/*?*",
+"*://*.awsubsco.ml/*?*",
+"*://*.awsubsco.cf/*?*"
+]},["blocking"])
+
 //Ouo.io/press Crowd Bypass
 brws.webRequest.onHeadersReceived.addListener(details=>{
 	if(enabled)

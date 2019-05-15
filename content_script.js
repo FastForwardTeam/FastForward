@@ -933,19 +933,6 @@ if(document instanceof HTMLDocument)
 						})
 					}
 				}
-				//SafeLinkReview.com
-				if(document.querySelector(".navbar-brand")&&document.querySelector(".navbar-brand").textContent.trim()=="Safe Link Review"&&document.querySelector(".button.green"))
-				{
-					window.open=safelyNavigate
-					document.querySelector(".button.green").click()
-					return finish()
-				}
-				if(location.hostname=="decrypt2.safelinkconverter.com"&&document.querySelector(".redirect_url > div[onclick]"))
-				{
-					window.open=safelyNavigate
-					document.querySelector(".redirect_url > div[onclick]").click()
-					return finish()
-				}
 				//Shorte.st
 				if(typeof app!="undefined"&&document.querySelector(".skip-add-container .first-img[alt='Shorte.st']"))
 				{
