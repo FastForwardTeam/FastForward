@@ -1097,7 +1097,9 @@ if(document instanceof HTMLDocument)
 								}
 							}
 						},50)
-						domainBypass("oke.io",()=>window.setInterval=f=>setInterval(f,1))
+						hrefBypass(/123l\\.pw|123link|oke\\.io/,()=>{
+							window.setInterval=f=>setInterval(f,1)
+						})
 						clearInterval(dT)
 					}
 				},100)
