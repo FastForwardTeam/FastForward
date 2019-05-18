@@ -13,11 +13,11 @@ if(document instanceof HTMLDocument)
 			ODP=(t,p,o)=>{try{Object.defineProperty(t,p,o)}catch(e){console.trace("[Universal Bypass] Couldn't define",p)}},
 			//Copying eval, etc. to prevent issues with other extensions, such as uBlockOrigin. Also, note that this is the page level, so there are no security risks in using eval.
 			eval=window.eval,setTimeout=window.setTimeout,setInterval=window.setInterval,
-			transparentProperty=(name,conditionFunc,valFunc)=>{
+			transparentProperty=(name,valFunc)=>{
 				let real
 				ODP(window,name,{
 					set:_=>real=_,
-					get:()=>conditionFunc()?valFunc(real):real
+					get:()=>valFunc(real)
 				})
 			}
 			isGoodLink=link=>{
@@ -229,13 +229,13 @@ if(document instanceof HTMLDocument)
 				get:()=>actual_web_root
 			})
 			//Shorte.st
-			transparentProperty("reqwest",()=>typeof app!="undefined"&&document.querySelector(".skip-add-container .first-img[alt='Shorte.st']"),r=>a=>{
+			transparentProperty("reqwest",r=>(typeof app!="undefined"&&document.querySelector(".skip-add-container .first-img[alt='Shorte.st']"))?a=>{
 				if(a.type==="jsonp")
 				{
 					a.success=s=>contributeAndNavigate(s.destinationUrl)
 				}
 				r(a)
-			})
+			}:r)
 			hrefBypass(/ur\\.ly|urly\\.mobi/,()=>{
 				if(location.pathname.length>2&&location.pathname.substr(0,6)!="/goii/")
 					safelyNavigate("/goii/"+location.pathname.substr(2)+"?ref="+location.hostname+location.pathname)
