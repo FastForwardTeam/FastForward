@@ -209,7 +209,11 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 			return getRedirect(url.searchParams.get("url"))
 		}
 	}
-},{types:["main_frame"],urls:["*://*.news-gg.com/l/?*"]},["blocking"])
+},{types:["main_frame"],urls:[
+"*://*.news-gg.com/l/?*",
+"*://*.mobile01.com/redirect.php?*",
+"*://ref.gamer.com.tw/redir.php?*"
+]},["blocking"])
 
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
