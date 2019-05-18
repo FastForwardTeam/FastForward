@@ -96,19 +96,19 @@ function instantNavigationTrackersLogic()
 var example=`// Some examples of what you can do with custom bypasses:
 domainBypass("example.com", function()
 {
+	// Triggered on example.com and subdomains (e.g. www.example.com)
 	ensureDomLoaded(function()
 	{
-		safelyNavigate(a.querySelector("a#skip_button[href]").href)
-		// Make sure to use safelyNavigate(url) to avoid bad redirects.
+		// Triggered as soon as the DOM is ready
+		safelyNavigate(document.querySelector("a#skip_button[href]").href)
+		// safelyNavigate makes sure the given URL is valid
 	})
 })
 hrefBypass(/example\\.(com|org)/, function()
 {
-	// This bypass would trigger on example.com
-	// if we didn't already have a bypass for it.
+	// Triggered if the URL matches the regex
 })
-// Feel free to replace this with your own code now!
-// Changes are saved automatically.
+// Enjoy! Your changes will be saved automatically.
 `,saveTimer,editor=ace.edit("userscript",{mode:"ace/mode/javascript",theme:"ace/theme/monokai"}),
 span=document.querySelector("[data-message='optionsUserscriptsSubtitle']")
 span.innerHTML=span.textContent.replace("GitHub","<a href='https://github.com/timmyrs/Universal-Bypass/blob/master/content_script.js' target='_blank'>GitHub</a>")
