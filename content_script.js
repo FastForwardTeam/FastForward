@@ -773,6 +773,9 @@ if(document instanceof HTMLDocument)
 						safelyNavigate(a.href)
 					}
 				})
+				domainBypass("sub2unlock.net",()=>{
+					safelyNavigate(document.getElementById("theLinkID").textContent)
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
