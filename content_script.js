@@ -760,6 +760,19 @@ if(document instanceof HTMLDocument)
 				domainBypass("imgtaxi.com",()=>{
 					document.querySelector("a.overlay_ad_link").click()
 				})
+				domainBypass("do2unlock.com",()=>{
+					let a=document.querySelector("a#locked_action_link[href^='/getlink/']")
+					if(a)
+					{
+						location.href="/redirect/"+a.getAttribute("href").substr(9)
+						return
+					}
+					a=document.querySelector("a#redirecting_counter[href]")
+					if(a)
+					{
+						safelyNavigate(a.href)
+					}
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
