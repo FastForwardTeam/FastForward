@@ -349,6 +349,17 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
 		let url=new URL(details.url)
+		if(url.searchParams.has("href"))
+		{
+			return getRedirect(url.searchParams.get("href"))
+		}
+	}
+},{types:["main_frame"],urls:["*://*.maranhesduve.club/?*"]},["blocking"])
+
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
+		let url=new URL(details.url)
 		if(url.searchParams.has("id"))
 		{
 			return getRedirect(atob(url.searchParams.get("id")).split("!").join("a").split(")").join("e").split("_").join("i").split("(").join("o").split("*").join("u"))
