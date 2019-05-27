@@ -1,0 +1,32 @@
+{
+	"appDesc": {
+		"message": "Spild ikke din tid med overholdelse. Universal Bypass springer automatisk over irriterende link-forkortere."
+	},
+	"firstrunTitle": {
+		"message": "Tak for at du installerede Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "Du er fantastisk!"
+	},
+	"firstrunNoScript": {
+		"message": "Men, det ser ud til at du bruger NoScript eller lignende, som Universal Bypass ikke understøtter."
+	},
+	"faq": {
+		"message": "Ofte stilte spørgsmål (FAQ)"
+	},
+	"options": {
+		"message": "Indstillinger"
+	},
+	"optionsLink": {
+		"message": "Ændr Universal Bypass's indstillinger."
+	},
+	"optionsEnabled": {
+		"message": "Slå internetside-omledninger til."
+	},
+	"optionsTrackerBypass": {
+		"message": "Undgå sporing ved hjælp af Apimon.de."
+	},
+	"optionsInstantNavigation": {
+		"message": "Tag mig til destinationer med det samme."
+	}
+}

@@ -29,6 +29,9 @@
 	"optionsInstantNavigation": {
 		"message": "Beni anında hedef adrese yönlendir."
 	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Beni anında hedef adrese yönlendir."
+	},
 	"optionsBlockIPLoggers": {
 		"message": "Eğer es geçilemezse IP kayıtçılarını engelle."
 	},
@@ -36,7 +39,7 @@
 		"message": "Es geçilemeyen link kısaltıcıların hedeflerini geliştiriciyle paylaş."
 	},
 	"privacyPolicy": {
-		"message": "Gizlilik Sözleşmesi"
+		"message": "Gizlilik Politikası"
 	},
 	"optionsUserscripts": {
 		"message": "Özel Es Geçmeler"

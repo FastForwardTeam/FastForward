@@ -9,19 +9,19 @@
 		"message": "Vous êtes incroyable!"
 	},
 	"firstrunNoScript": {
-		"message": "Cependant, vous semblez utiliser le module NoScript ou quelque chose de similaire, qui n'est pas compatible avec le contourneur universel."
+		"message": "Cependant, vous semblez utiliser NoScript ou quelque chose de similaire, avec lequel Universal Bypass n'est pas compatible."
 	},
 	"faq": {
 		"message": "Questions fréquemment posées (FAQ)"
 	},
 	"options": {
-		"message": "Réglages"
+		"message": "Options"
 	},
 	"optionsLink": {
-		"message": "Changer les options de Universal Bypass."
+		"message": "Modifier les options de Universal Bypass."
 	},
 	"optionsEnabled": {
-		"message": "Activez les contournements de site Web."
+		"message": "Activer les contournements de sites Web."
 	},
 	"optionsTrackerBypass": {
 		"message": "Contourner les traqueurs en utilisant Apimon.de."
@@ -33,19 +33,19 @@
 		"message": "M'envoyer instantanément vers les destinations des traqueurs."
 	},
 	"optionsBlockIPLoggers": {
-		"message": "Bloque les enregistreurs d’IP si ils ne peuvent pas êtres contournés."
+		"message": "Bloquer les enregistreurs d’IP si ils ne peuvent pas être contournés."
 	},
 	"optionsCrowdBypass": {
-		"message": "Fournir et acquérir les cibles des raccourcisseurs incontournables."
+		"message": "Acquérir les cibles des raccourcisseurs incontournables."
 	},
 	"privacyPolicy": {
 		"message": "Politique de Vie Privée"
 	},
 	"optionsUserscripts": {
-		"message": "Contournement sur mesure"
+		"message": "Personnaliser les contournements"
 	},
 	"optionsUserscriptsSubtitle": {
-		"message": "Ce serait bien si vous pouviez soumettre des contournements fonctionelles sur GitHub, afin que d'autres puissent en bénéficier."
+		"message": "Ce serait bien si vous pouviez soumettre des contournements fonctionnels sur GitHub, afin que d'autres personnes puissent en bénéficier."
 	},
 	"beforeNavigate": {
 		"message": "Vous êtes presque arrivé à destination."
@@ -54,19 +54,19 @@
 		"message": "Votre destination est %"
 	},
 	"beforeNavigateInfo": {
-		"message": "Voulez-vous qu'Universal Bypass vous redirige instantanément à votre destination?"
+		"message": "Voulez-vous que Universal Bypass vous redirige automatiquement vers votre destination ?"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass empêche l’enregistrement de votre IP."
+		"message": "Universal Bypass a empêché l’enregistrement de votre adresse IP."
 	},
 	"blockedSubtitle": {
-		"message": "Pas envie qu'Universal Bypass empêche de mauvais acteurs d'acquérir votre IP?"
+		"message": "Vous ne souhaitez pas que Universal Bypass empêche de mauvais acteurs d'obtenir votre adresse IP ?"
 	},
 	"crowdBypassed": {
 		"message": "Vous n'aurez peut-être pas à attendre !"
 	},
 	"crowdBypassedInfo": {
-		"message": "D'autres utilisateurs du contourneur universel vous ont déjà attendu et ont rapporté que cela mène à %"
+		"message": "D'autres utilisateurs de Universal Bypass vous ont déjà attendu et ont rapporté que cela mène à %"
 	},
 	"crowdBypassedIgnore": {
 		"message": "Cela n'était-il pas exact ?"
