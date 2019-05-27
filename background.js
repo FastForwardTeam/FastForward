@@ -244,6 +244,13 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
+		return getRedirect(atob(details.url.substr(details.url.indexOf("?kesehatan=")+11)))
+	}
+},{types:["main_frame"],urls:["*://*.infosia.xyz/?kesehatan=*"]},["blocking"])
+
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
 		return getRedirect(atob(new URL(details.url).searchParams.values().next().value))
 	}
 },{types:["main_frame"],urls:[
