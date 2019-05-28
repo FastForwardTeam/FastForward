@@ -222,7 +222,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		let url=new URL(details.url)
 		if(url.search)
 		{
-			return getRedirect(url.search.substr(1))+url.hash
+			return getRedirect(url.search.substr(1)+url.hash)
 		}
 	}
 },{types:["main_frame"],urls:["*://*.anonym.to/?*"]},["blocking"])
