@@ -1,6 +1,6 @@
 {
 	"appDesc": {
-		"message": "Ne perdez pas votre temps avec la conformité. Le contournement universel saute automatiquement les raccourcisseurs de liens ennuyeux."
+		"message": "Ne perdez pas votre temps avec la conformité. Universal Bypass saute automatiquement les raccourcisseurs de liens ennuyeux."
 	},
 	"firstrunTitle": {
 		"message": "Merci d'avoir installer Universal Bypass!"
@@ -36,7 +36,7 @@
 		"message": "Bloquer les enregistreurs d’IP si ils ne peuvent pas être contournés."
 	},
 	"optionsCrowdBypass": {
-		"message": "Acquérir les cibles des raccourcisseurs incontournables."
+		"message": "Acquérir les cibles des raccourcisseurs non contournables."
 	},
 	"privacyPolicy": {
 		"message": "Politique de Vie Privée"
@@ -48,7 +48,7 @@
 		"message": "Ce serait bien si vous pouviez soumettre des contournements fonctionnels sur GitHub, afin que d'autres personnes puissent en bénéficier."
 	},
 	"beforeNavigate": {
-		"message": "Vous êtes presque arrivé à destination."
+		"message": "Vous êtes presque arrivé à destination !"
 	},
 	"beforeNavigateDestination": {
 		"message": "Votre destination est %"
@@ -60,7 +60,7 @@
 		"message": "Universal Bypass a empêché l’enregistrement de votre adresse IP."
 	},
 	"blockedSubtitle": {
-		"message": "Vous ne souhaitez pas que Universal Bypass empêche de mauvais acteurs d'obtenir votre adresse IP ?"
+		"message": "Vous ne souhaitez pas que Universal Bypass empêche de mauvais acteurs d'obtenir votre IP ?"
 	},
 	"crowdBypassed": {
 		"message": "Vous n'aurez peut-être pas à attendre !"
