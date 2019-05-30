@@ -902,9 +902,9 @@ if(document instanceof HTMLDocument)
 							if(safelyNavigate(atob(s.get("go"))))
 								return finish()
 						}
-						else if(location.pathname.toString().substr(0,4)=="/go/")
+						else if(location.pathname.substr(0,4)=="/go/")
 						{
-							search=atob(location.pathname.toString().substr(4))
+							search=atob(location.pathname.substr(4))
 							if(search.substr(0,4)=="http")
 							{
 								safelyNavigate(search)
