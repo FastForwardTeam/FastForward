@@ -86,6 +86,12 @@ if(document instanceof HTMLDocument)
 					document.addEventListener("DOMContentLoaded",()=>setTimeout(f,1))
 				}
 			},
+			crowdPath=p=>{
+				if(crowdEnabled)
+				{
+					document.documentElement.setAttribute("data-universal-bypass-crowd-path",p)
+				}
+			},
 			crowdBypass=f=>{
 				if(crowdEnabled)
 				{
@@ -664,7 +670,7 @@ if(document instanceof HTMLDocument)
 				domainBypass("elsfile.org",()=>{
 					let form=document.createElement("form")
 					form.method="POST"
-					form.innerHTML='<input type="hidden" name="op" value="download1"><input type="hidden" name="usr_login" value="C"><input type="hidden" name="id" value="'+location.pathname.toString().substr(1)+'"><input type="hidden" name="fname" value="'+document.querySelectorAll("div#container > div > div > table > tbody > tr > td")[2].textContent+'"><input type="hidden" name="referer" value="q"><input type="hidden" name="method_free" value="Free Download">'
+					form.innerHTML='<input type="hidden" name="op" value="download1"><input type="hidden" name="usr_login" value="C"><input type="hidden" name="id" value="'+location.pathname.substr(1)+'"><input type="hidden" name="fname" value="'+document.querySelectorAll("div#container > div > div > table > tbody > tr > td")[2].textContent+'"><input type="hidden" name="referer" value="q"><input type="hidden" name="method_free" value="Free Download">'
 					form=document.documentElement.appendChild(form)
 					form.submit()
 					return finish()
@@ -801,12 +807,6 @@ if(document instanceof HTMLDocument)
 						safelyNavigate(a.href)
 						return finish()
 					}
-				}
-				//SafelinkU
-				if(typeof app_vars=="object"&&document.querySelector("b[style='color: #3e66b3']")&&document.querySelector("b[style='color: #3e66b3']").textContent=="SafelinkU")
-				{
-					window.setInterval=(f)=>setInterval(f,10)
-					return finish()
 				}
 				//Soralink Wordpress Plugin
 				if(document.querySelector(".sorasubmit"))
@@ -1067,6 +1067,15 @@ if(document instanceof HTMLDocument)
 					//AdLinkFly
 					if(typeof app_vars=="object")
 					{
+						if((document.querySelector(".navbar-brand")&&document.querySelector(".navbar-brand").textContent=="SafelinkU")||(document.querySelector("b[style='color: #3e66b3']")&&document.querySelector("b[style='color: #3e66b3']").textContent=="SafelinkU"))
+						{
+							//SafelinkU
+							window.setInterval=f=>setInterval(f,10)
+							if(location.search.substr(0,3)=="?a=")
+							{
+								crowdPath(location.search.substr(3))
+							}
+						}
 						document.documentElement.setAttribute("data-universal-bypass-adlinkfly-info","")
 						let iT=setInterval(()=>{
 							if(document.documentElement.hasAttribute("data-universal-bypass-adlinkfly-target"))
@@ -1129,6 +1138,11 @@ if(document instanceof HTMLDocument)
 				document.documentElement.removeAttribute("data-universal-bypass-stop-watching")
 				dO.disconnect()
 			}
+			else if(document.documentElement.hasAttribute("data-universal-bypass-crowd-path"))
+			{
+				crowdPath=document.documentElement.getAttribute("data-universal-bypass-crowd-path")
+				document.documentElement.removeAttribute("data-universal-bypass-crowd-path")
+			}
 			else if(document.documentElement.hasAttribute("data-universal-bypass-crowd-query"))
 			{
 				document.documentElement.removeAttribute("data-universal-bypass-crowd-query")
@@ -1146,15 +1160,15 @@ if(document instanceof HTMLDocument)
 				}
 				xhr.open("POST","https://universal-bypass.org/crowd/query_v1",true)
 				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
-				xhr.send("domain="+encodeURIComponent(domain)+"&path="+encodeURIComponent(location.pathname.toString().substr(1)))
+				xhr.send("domain="+encodeURIComponent(domain)+"&path="+encodeURIComponent(crowdPath))
 			}
 			else if(document.documentElement.hasAttribute("data-universal-bypass-crowd-contribute"))
 			{
-				let target=document.documentElement.getAttribute("data-universal-bypass-crowd-contribute")
+				const target=document.documentElement.getAttribute("data-universal-bypass-crowd-contribute")
 				document.documentElement.removeAttribute("data-universal-bypass-crowd-contribute")
 				brws.runtime.sendMessage({
 					type: "crowd-contribute",
-					data: "domain="+encodeURIComponent(domain)+"&path="+encodeURIComponent(location.pathname.toString().substr(1))+"&target="+encodeURIComponent(target)
+					data: "domain="+encodeURIComponent(domain)+"&path="+encodeURIComponent(crowdPath)+"&target="+encodeURIComponent(target)
 				})
 			}
 			else if(document.documentElement.hasAttribute("data-universal-bypass-adlinkfly-info"))
@@ -1168,7 +1182,8 @@ if(document instanceof HTMLDocument)
 				port.postMessage(location.href)
 			}
 		}),
-		domain=location.hostname
+		domain=location.hostname,
+		crowdPath=location.pathname.substr(1)
 		if(domain=="api.rurafs.me")
 		{
 			return
