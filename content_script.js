@@ -767,7 +767,7 @@ if(document instanceof HTMLDocument)
 					location.href=new URL(document.querySelector("#divdownload > a[href]").href).searchParams.get("predirect")
 				})
 				domainBypass("linkduit.net",()=>{
-					document.querySelector(".countdown").textContent="1"
+					safelyNavigate(document.querySelector("h1").textContent)
 				})
 				domainBypass("daunshorte.teknologilink.com",()=>{
 					location.href=document.querySelector("a[href^='https://teknosafe.teknologilink.com/linkteknolink/safelinkscript.php?']").href
