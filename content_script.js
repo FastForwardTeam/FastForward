@@ -93,6 +93,10 @@ if(document instanceof HTMLDocument)
 				}
 			},
 			crowdBypass=f=>{
+				if(!f)
+				{
+					f=()=>{}
+				}
 				if(crowdEnabled)
 				{
 					if(location.href.substr(location.href.length-18)=="#ignoreCrowdBypass")
@@ -108,6 +112,7 @@ if(document instanceof HTMLDocument)
 						let iT=setInterval(()=>{
 							if(document.documentElement.hasAttribute("data-universal-bypass-crowd-queried"))
 							{
+								clearInterval(iT)
 								document.documentElement.removeAttribute("data-universal-bypass-crowd-queried")
 								f()
 							}
@@ -728,7 +733,7 @@ if(document instanceof HTMLDocument)
 					}
 					else
 					{
-						crowdBypass(()=>{})
+						crowdBypass()
 					}
 				})
 				hrefBypass(/tetew\\.info|siherp\\.com/,()=>{
@@ -953,7 +958,7 @@ if(document instanceof HTMLDocument)
 				if(typeof app!="undefined"&&document.querySelector(".skip-add-container .first-img[alt='Shorte.st']"))
 				{
 					window.setInterval=f=>setInterval(f,800)
-					return crowdBypass(()=>{})
+					return crowdBypass()
 				}
 				//Other Templates
 				if(document.querySelector(".timed-content-client_show_0_30_0"))//technicoz.com
