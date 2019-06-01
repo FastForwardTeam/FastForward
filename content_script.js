@@ -41,6 +41,7 @@ if(document instanceof HTMLDocument)
 					return
 				}
 				navigated=true
+				window.onbeforeunload=null
 				location.href="https://universal-bypass.org/before-navigate?target="+encodeURIComponent(target)
 				//The background script will intercept the request and redirect to html/before-navigate.html or to the target depending on the user's settings.
 			},
@@ -56,7 +57,6 @@ if(document instanceof HTMLDocument)
 				{
 					target+=location.hash
 				}
-				window.onbeforeunload=null
 				unsafelyNavigate(target)
 				return true
 			},
@@ -83,7 +83,14 @@ if(document instanceof HTMLDocument)
 				}
 				else
 				{
-					document.addEventListener("DOMContentLoaded",()=>setTimeout(f,1))
+					let triggered=false
+					document.addEventListener("DOMContentLoaded",()=>{
+						if(!triggered)
+						{
+							triggered=true
+							setTimeout(f,1)
+						}
+					})
 				}
 			},
 			crowdPath=p=>{
@@ -1036,27 +1043,59 @@ if(document instanceof HTMLDocument)
 				if(t)
 				{
 					t=t.textContent.trim()
-					if(t=="Viid.su")//Viid.su
+					switch(t)
 					{
-						let b=document.getElementById("link-success-button")
-						if(b&&b.getAttribute("data-url"))
+						case"Viid.su":
 						{
-							safelyNavigate(b.getAttribute("data-url"))
-							return finish()
-						}
-					}
-					else
-					{
-						let b=document.querySelector("a#makingdifferenttimer[href]")
-						if(b)
-						{
-							if(isGoodLink(t))
+							let b=document.getElementById("link-success-button")
+							if(b&&b.getAttribute("data-url"))
 							{
-								unsafelyNavigate(t)
+								safelyNavigate(b.getAttribute("data-url"))
+								return finish()
 							}
-							else
+						}
+						break;
+
+						case"shortadd : 302 Moved":
+						crowdBypass()
+						let lT=setInterval(()=>{
+							if(typeof $!="undefined")
 							{
-								safelyNavigate(b.href)
+								clearInterval(lT)
+								let _ajax=$.ajax,req=0
+								$.ajax=d=>{
+									if(typeof d=="object"&&"success"in d&&"dataType"in d&&d.dataType=="json"&&"url" in d&&d.url.length>15&&d.url.substr(d.url.length-11)=="/skip_timer")
+									{
+										if("data"in d&&"adblock"in d.data)
+										{
+											d.data.adblock=false
+										}
+										if(++req==2)
+										{
+											d.success=res=>{
+												contributeAndNavigate(res.messages.url)
+											}
+										}
+									}
+									_ajax(d)
+								}
+							}
+						},10)
+						break;
+
+						default:
+						{
+							let b=document.querySelector("a#makingdifferenttimer[href]")
+							if(b)
+							{
+								if(isGoodLink(t))
+								{
+									unsafelyNavigate(t)
+								}
+								else
+								{
+									safelyNavigate(b.href)
+								}
 							}
 						}
 					}
