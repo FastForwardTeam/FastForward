@@ -676,8 +676,14 @@ if(document instanceof HTMLDocument)
 					f.submit()
 				})
 				domainBypass("douploads.com",()=>{
-					if(document.querySelectorAll(".seconds").length==1)
-						document.querySelector(".seconds").textContent="1"
+					let s=document.querySelector(".seconds")
+					if(s)
+					{
+						s.textContent="1"
+						document.getElementById("chkIsAdd").checked=false
+						document.getElementById("downloadBtnClick").style.display="none"
+						document.getElementById("downloadbtn").style.display="block"
+					}
 				})
 				domainBypass("elsfile.org",()=>{
 					let form=document.createElement("form")
