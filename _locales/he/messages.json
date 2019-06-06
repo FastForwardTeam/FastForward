@@ -1,0 +1,35 @@
+{
+	"appDesc": {
+		"message": "אל תבזבז את הזמן שלך! Universal Bypass מדלג אוטומטית על שעונים מעצבנים."
+	},
+	"firstrunTitle": {
+		"message": "תודה לך על כך שהתקנת את Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "אתה תותח!"
+	},
+	"faq": {
+		"message": "שאלות שכיחות (FAQ)"
+	},
+	"options": {
+		"message": "הגדרות"
+	},
+	"optionsLink": {
+		"message": "החלף הגדרות של Universal Bypass."
+	},
+	"optionsEnabled": {
+		"message": "הפעל מעקף לאתר."
+	},
+	"optionsTrackerBypass": {
+		"message": "הפעל מעקף על ידי Apimon.de."
+	},
+	"optionsInstantNavigation": {
+		"message": "העבר אותי למקור אוטומטית."
+	},
+	"optionsUserscripts": {
+		"message": "מעקפים מותאמים"
+	},
+	"crowdBypassedIgnore": {
+		"message": "האם נתיב זה שגוי?"
+	}
+}

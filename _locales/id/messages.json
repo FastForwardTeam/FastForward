@@ -29,6 +29,9 @@
 	"optionsInstantNavigation": {
 		"message": "Langsung arahkan ke halaman tujuan."
 	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Langsung arahkan ke halaman tujuan."
+	},
 	"optionsBlockIPLoggers": {
 		"message": "Memblokir IP Logger jika tidak dapat dilewati."
 	},

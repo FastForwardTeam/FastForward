@@ -29,6 +29,9 @@
 	"optionsInstantNavigation": {
 		"message": "Portami istantaneamente alla destinazione."
 	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Portami instantaneamente alla destinazione dei tracciatori."
+	},
 	"optionsBlockIPLoggers": {
 		"message": "Blocca i logger IP se essi non possono essere bypassati."
 	},

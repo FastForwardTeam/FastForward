@@ -57,7 +57,7 @@
 		"message": "¿No quiere que Universal Bypass impida que los actores malos obtengan su IP?"
 	},
 	"crowdBypassed": {
-		"message": "Puede que no tengas que esperar!"
+		"message": "¡Puede que no tengas que esperar!"
 	},
 	"crowdBypassedInfo": {
 		"message": "Otros usuarios de Universal Bypass ya han esperado por ti y han informado que esto lleva a %"
