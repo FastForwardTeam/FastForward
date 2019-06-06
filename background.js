@@ -264,7 +264,10 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	{
 		return getRedirect(atob(details.url.substr(details.url.indexOf("?r=")+3)))
 	}
-},{types:["main_frame"],urls:["*://yumechan.club/?r=*"]},["blocking"])
+},{types:["main_frame"],urls:[
+"*://yumechan.club/?r=*",
+"*://celeclub.org/?r=*"
+]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
