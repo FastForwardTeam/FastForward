@@ -17,6 +17,9 @@
 	"options": {
 		"message": "الخيارات"
 	},
+	"optionsLink": {
+		"message": "تغيير إعدادات المتجاوز الشامل."
+	},
 	"optionsEnabled": {
 		"message": "تمكين تجاوز مواقع الويب."
 	},
@@ -25,6 +28,9 @@
 	},
 	"optionsInstantNavigation": {
 		"message": "قم بنقلي إلى الوجهات تلقائيًا."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "قم بنقلي إلى الواجهات تلقائيًا."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "حظر مسجلات الـ IP إذا كان لا يمكن تجاوزهم."
