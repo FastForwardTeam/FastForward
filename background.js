@@ -254,8 +254,8 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		return getRedirect(atob(new URL(details.url).searchParams.values().next().value))
 	}
 },{types:["main_frame"],urls:[
-"*://pafpaf.info/?*=*",
-"*://binerfile.info/?*=*",
+"*://*.pafpaf.info/?*=*",
+"*://*.binerfile.info/?*=*",
 "*://kurosafety.menantisenja.com/?*=*"
 ]},["blocking"])
 
@@ -265,8 +265,8 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		return getRedirect(atob(details.url.substr(details.url.indexOf("?r=")+3)))
 	}
 },{types:["main_frame"],urls:[
-"*://yumechan.club/?r=*",
-"*://celeclub.org/?r=*"
+"*://*.yumechan.club/?r=*",
+"*://*.celeclub.org/?r=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
