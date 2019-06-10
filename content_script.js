@@ -800,6 +800,12 @@ if(document instanceof HTMLDocument)
 				domainBypass("sub2unlock.net",()=>{
 					safelyNavigate(document.getElementById("theLinkID").textContent)
 				})
+				domainBypass("haaretz.co.il",()=>{
+					if(location.href.indexOf(".premium")>-1)
+					{
+						location.href=location.href.replace(".premium","")
+					}
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
