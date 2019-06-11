@@ -384,6 +384,17 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 "*://*.awsubsco.cf/*?*"
 ]},["blocking"])
 
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
+		let url=new URL(details.url)
+		if(url.searchParams.has("dest"))
+		{
+			return getRedirect(url.searchParams.get("dest"))
+		}
+	}
+},{types:["main_frame"],urls:["*://*.ecleneue.com/pushredirect/?*"]},["blocking"])
+
 //Ouo.io/press Crowd Bypass
 brws.webRequest.onHeadersReceived.addListener(details=>{
 	if(enabled)
