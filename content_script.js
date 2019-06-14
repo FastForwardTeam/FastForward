@@ -809,6 +809,9 @@ if(document instanceof HTMLDocument)
 				domainBypass("boostme.gg",()=>{
 					safelyNavigate(document.querySelector("a[href]#go").href)
 				})
+				domainBypass("apkmodif.com",()=>{
+					safelyNavigate(document.querySelector("input[type='hidden'][name='geturl'][value^='https://']").value)
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
