@@ -30,7 +30,7 @@
 		"message": "Langsung arahkan ke halaman tujuan."
 	},
 	"optionsInstantNavigationTrackers": {
-		"message": "Langsung arahkan ke halaman tujuan."
+		"message": "Langsung arahkan ke halaman tujuan pelacak."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Memblokir IP Logger jika tidak dapat dilewati."

@@ -17,8 +17,11 @@
 	"options": {
 		"message": "Opciones"
 	},
+	"optionsLink": {
+		"message": "Cambiar las opciones de Universal Bypass."
+	},
 	"optionsEnabled": {
-		"message": "Activar bypass pagina web."
+		"message": "Habilitar las bypasses del sitio web."
 	},
 	"optionsTrackerBypass": {
 		"message": "Evita rastreadores usando Apimon.de."
@@ -26,11 +29,14 @@
 	"optionsInstantNavigation": {
 		"message": "Llevarme directamente al destino."
 	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Llevarme instantáneamente a los destinos de los rastreadores."
+	},
 	"optionsBlockIPLoggers": {
 		"message": "Bloquea los registradores IP si no pueden ser Saltados."
 	},
 	"optionsCrowdBypass": {
-		"message": "Da y toma los destinos de los acortadores que no se pueden Saltar."
+		"message": "Dar y tomar los destinos de los acortadores que no se pueden anular."
 	},
 	"privacyPolicy": {
 		"message": "Política de privacidad"
@@ -51,7 +57,7 @@
 		"message": "¿Desea que Universal Bypass lo redirija instantáneamente a su destino?"
 	},
 	"blockedTitle": {
-		"message": "Bypass Universal evitó que su IP se registrara."
+		"message": "Universal Bypass evitó que su IP se registrara."
 	},
 	"blockedSubtitle": {
 		"message": "¿No quiere que Universal Bypass impida que los actores malos obtengan su IP?"
