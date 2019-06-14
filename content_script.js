@@ -806,6 +806,9 @@ if(document instanceof HTMLDocument)
 						location.href=location.href.replace(".premium","")
 					}
 				})
+				domainBypass("boostme.gg",()=>{
+					safelyNavigate(document.querySelector("a[href]#go").href)
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
