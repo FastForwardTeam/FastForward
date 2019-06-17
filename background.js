@@ -198,7 +198,11 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	{
 		return getRedirect(details.url.substr(details.url.indexOf("url=")+4))
 	}
-},{types:["main_frame"],urls:["*://*/st?api=*&url=*","*://*.zxro.com/u/*?url=*"]},["blocking"])
+},{types:["main_frame"],urls:[
+"*://*/st?api=*&url=*",
+"*://*.zxro.com/u/*?url=*",
+"*://*.leechall.com/redirect.php?url=*"
+]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
