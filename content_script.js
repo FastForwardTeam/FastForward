@@ -815,6 +815,9 @@ if(document instanceof HTMLDocument)
 				domainBypass("driverays.com",()=>{
 					safelyNavigate(document.querySelector("a#link[href]").href)
 				})
+				domainBypass("wikitrik.com",()=>{
+					document.querySelector("#download > form[action='/getlink.php'] > input[type='submit'].button").click()
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
