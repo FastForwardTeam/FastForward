@@ -11,8 +11,26 @@
 	"firstrunNoScript": {
 		"message": "물론, NoScript나 그와 비슷한 걸 쓰는 것 같지만, Universal Bypass는 그런 것들과 호환되지 않습니다."
 	},
+	"faq": {
+		"message": "자주 묻는 질문"
+	},
+	"options": {
+		"message": "설정하기"
+	},
+	"optionsLink": {
+		"message": "Universal Bypass의 설정을 바꾸세요."
+	},
+	"optionsEnabled": {
+		"message": "웹사이트 우회 켜기"
+	},
 	"optionsTrackerBypass": {
 		"message": "Apimon.de 로 추적 우회하기."
+	},
+	"optionsInstantNavigation": {
+		"message": "즉시 목적지로 보내기"
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "즉시 추적기의 목적지로 보내기"
 	},
 	"optionsBlockIPLoggers": {
 		"message": "우회할 수 없다면 해당 페이지를 차단합니다."
@@ -26,8 +44,23 @@
 	"optionsUserscripts": {
 		"message": "사용자 지정 우회책"
 	},
+	"optionsUserscriptsSubtitle": {
+		"message": "잘 작동하는 우회책을 GitHub에 제출하면 모두에게 이득이 됩니다."
+	},
+	"beforeNavigate": {
+		"message": "거의 다 왔습니다."
+	},
+	"beforeNavigateDestination": {
+		"message": "목적지는 % 입니다."
+	},
+	"beforeNavigateInfo": {
+		"message": "Universal Bypass가 즉시 목적지로 보내주기를 바라나요?"
+	},
 	"blockedTitle": {
 		"message": "Universal Bypass가 당신의 IP를 기록하지 못하게 막았습니다."
+	},
+	"blockedSubtitle": {
+		"message": "Universal Bypass가 그들이 당신의 IP를 기록하도록 허락하기를 바라나요?"
 	},
 	"crowdBypassed": {
 		"message": "이제 기다리지 않을 겁니다!"
