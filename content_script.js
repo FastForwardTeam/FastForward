@@ -812,6 +812,9 @@ if(document instanceof HTMLDocument)
 				domainBypass("apkmodif.com",()=>{
 					safelyNavigate(document.querySelector("input[type='hidden'][name='geturl'][value^='https://']").value)
 				})
+				domainBypass("driverays.com",()=>{
+					safelyNavigate(document.querySelector("a#link[href]").href)
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
