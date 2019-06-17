@@ -424,10 +424,8 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 		}
 	}
 },{types:["main_frame"],urls:[
-"*://*.ouo.io/go/*",
-"*://*.ouo.press/go/*",
-"*://*.ouo.io/rgo/*",
-"*://*.ouo.press/rgo/*"
+"*://*.ouo.io/*/*",
+"*://*.ouo.press/*/*"
 ]},["blocking","responseHeaders"])
 
 //Fixing Content-Security-Policy on Firefox because apparently extensions have no special privileges in Firefox
