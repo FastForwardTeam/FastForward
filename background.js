@@ -234,6 +234,13 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
+		return getRedirect(atob(details.url.substr(details.url.indexOf("?rel=")+5)))
+	}
+},{types:["main_frame"],urls:["*://*.kharismanews.com/?rel=*"]},["blocking"])
+
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
 		return encodedRedirect(details.url.substr(details.url.indexOf("link=")+5))
 	}
 },{types:["main_frame"],urls:["*://*.spaste.com/r/*link=*",]},["blocking"])
