@@ -417,6 +417,12 @@ if(document instanceof HTMLDocument)
 					return setTimeout(f,100)
 				}
 			})
+			domainBypass("linkduit.net",()=>{
+				window.setInterval=f=>setInterval(f,1)
+				ensureDomLoaded(()=>{
+					document.querySelector("input[type='submit']").click()
+				})
+			})
 			//Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
 			hrefBypass(/muhammadyoga\\.me|u\\.to|skiplink\\.io|healthykk\\.com|punchsubs\\.net|linkasm\\.com|firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php|2speed\\.net\\/file\\//,()=>{
 				window.setInterval=f=>setInterval(f,1)
@@ -771,9 +777,6 @@ if(document instanceof HTMLDocument)
 				})
 				domainBypass("oxy.cloud",()=>{
 					location.href=new URL(document.querySelector("#divdownload > a[href]").href).searchParams.get("predirect")
-				})
-				domainBypass("linkduit.net",()=>{
-					safelyNavigate(document.querySelector("h1").textContent)
 				})
 				domainBypass("daunshorte.teknologilink.com",()=>{
 					location.href=document.querySelector("a[href^='https://teknosafe.teknologilink.com/linkteknolink/safelinkscript.php?']").href
