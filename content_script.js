@@ -93,6 +93,17 @@ if(document instanceof HTMLDocument)
 					})
 				}
 			},
+			awaitElement=(q,f)=>ensureDomLoaded(()=>{
+				let t=setInterval(()=>{
+					let e=document.querySelector(q)
+					if(e)
+					{
+						f(e)
+						clearInterval(t)
+					}
+				},10)
+				setInterval(()=>clearInterval(t),30000)
+			}),
 			crowdPath=p=>{
 				if(crowdEnabled)
 				{
@@ -270,57 +281,28 @@ if(document instanceof HTMLDocument)
 					value:0,
 					writable:false
 				})
-				ensureDomLoaded(()=>
-				{
-					let lT=setInterval(()=>
-					{
-						if(document.querySelector(".next[href]"))
-						{
-							clearInterval(lT)
-							safelyNavigate(atob(atob(document.querySelector(".next[href]").getAttribute("href"))))
-						}
-					},100)
-				})
+				awaitElement(".next[href]",a=>safelyNavigate(atob(atob(a.getAttribute("href")))))
 			})
 			domainBypass("link.tl",()=>{
 				ODP(window,"countdown",{
 					value:0,
 					writable:false
 				})
-				let lT=setInterval(()=>
-				{
-					if(document.querySelector(".skip > .btn"))
-					{
-						clearInterval(lT)
-						document.querySelector(".skip > .btn").click()
-					}
-				},100)
+				awaitElement(".skip > .btn",a=>a.click())
 			})
 			domainBypass("onepiece-ex.com.br",()=>{
 				ODP(window,"seconds",{
 					value:1,
 					writable:false
 				})
-				let lT=setInterval(()=>{
-					if(document.getElementById("continuar"))
-					{
-						clearInterval(lT)
-						safelyNavigate(document.getElementById("continuar").href)
-					}
-				},100)
+				awaitElement("#continuar[href]",a=>safelyNavigate(a.href))
 			})
 			domainBypass("akoam.net",()=>{
 				ODP(window,"timer",{
 					value:0,
 					writable:false
 				})
-				let lT=setInterval(()=>{
-					if(document.querySelector(".download_button"))
-					{
-						clearInterval(lT)
-						safelyNavigate(document.querySelector(".download_button").href)
-					}
-				},100)
+				awaitElement(".download_button[href]",a=>safelyNavigate(a.href))
 			})
 			hrefBypass(/1v\\.to\\/t\\/.*/,()=>{
 				location.pathname=location.pathname.split("/t/").join("/saliendo/")
@@ -371,14 +353,7 @@ if(document instanceof HTMLDocument)
 						return j
 					}
 				})
-				let sT=setInterval(()=>{
-					let a=document.querySelector(".skip_btt > #skip_btt")
-					if(a)
-					{
-						clearInterval(sT)
-						a.click()
-					}
-				},50)
+				awaitElement(".skip_btt > #skip_btt",a=>a.click())
 			})
 			domainBypass("shortly.xyz",()=>{
 				if(location.pathname.substr(0,3)=="/r/")
@@ -417,12 +392,7 @@ if(document instanceof HTMLDocument)
 			})
 			hrefBypass(/mylinks\\.xyz|mylink\\.zone/,()=>{
 				window.setTimeout=f=>setTimeout(f,1)
-				ensureDomLoaded(()=>{
-					setTimeout(function()
-					{
-						safelyNavigate(new URL(document.querySelector("#compteur a[href]").href).searchParams.get("url"))
-					},50)
-				})
+				awaitElement("#compteur a[href]",a=>safelyNavigate(new URL(a.href).searchParams.get("url")))
 			})
 			//Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
 			hrefBypass(/muhammadyoga\\.me|u\\.to|skiplink\\.io|healthykk\\.com|punchsubs\\.net|linkasm\\.com|firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php|2speed\\.net\\/file\\//,()=>{
@@ -547,7 +517,7 @@ if(document instanceof HTMLDocument)
 							},100)
 						}
 					},300)
-					setInterval(()=>clearInterval(bT),10000)
+					setInterval(()=>clearInterval(bT),30000)
 				})
 				domainBypass("hidelink.club",()=>{
 					if(hash)
@@ -612,17 +582,13 @@ if(document instanceof HTMLDocument)
 						screenApi()
 					}
 				})
-				domainBypass("rom.io",()=>crowdBypass(()=>{
-					let cT=setInterval(()=>{
-						let a=document.querySelector("a.final-button[href]")
-						if(a&&isGoodLink(a.href))
-						{
-							clearInterval(cT)
-							a.parentNode.removeChild(a)
-							contributeAndNavigate(a.href)
-						}
-					},50)
-				}))
+				domainBypass("rom.io",()=>crowdBypass(()=>awaitElement("a.final-button[href]",a=>{
+					if(isGoodLink(a.href))
+					{
+						a.parentNode.removeChild(a)
+						contributeAndNavigate(a.href)
+					}
+				})))
 				domainBypass("show.co",()=>{
 					let s=document.getElementById("show-campaign-data")
 					if(s)
@@ -917,14 +883,10 @@ if(document instanceof HTMLDocument)
 				if(document.querySelector(".wp-safelink-button"))
 				{
 					window.setInterval=f=>setInterval(f,1)
-					let lT=setInterval(()=>{
-						if(document.querySelector(".wp-safelink-button.wp-safelink-success-color"))
-						{
-							clearInterval(lT)
-							window.open=safelyNavigate
-							document.querySelector(".wp-safelink-button.wp-safelink-success-color").click()
-						}
-					},100)
+					awaitElement(".wp-safelink-button.wp-safelink-success-color",a=>{
+						window.open=safelyNavigate
+						a.click()
+					})
 				}
 				if(document.getElementById("wpsafe-generate")&&typeof wpsafegenerate=="function")
 				{
@@ -1128,7 +1090,7 @@ if(document instanceof HTMLDocument)
 						}
 					}
 				}
-				//Monitor DOM for disturbances for 3 seconds.
+				//Monitor DOM for disturbances for 10 seconds.
 				let dT=setInterval(()=>{
 					//Shorte.st Embed
 					if(document.querySelector(".lay-sh.active-sh"))
