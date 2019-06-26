@@ -423,6 +423,15 @@ if(document instanceof HTMLDocument)
 					document.querySelector("input[type='submit']").click()
 				})
 			})
+			domainBypass("mylinks.xyz",()=>{
+				window.setTimeout=f=>setTimeout(f,1)
+				ensureDomLoaded(()=>{
+					setTimeout(function()
+					{
+						safelyNavigate(new URL(document.querySelector("#compteur a[href]").href).searchParams.get("url"))
+					},50)
+				})
+			})
 			//Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
 			hrefBypass(/muhammadyoga\\.me|u\\.to|skiplink\\.io|healthykk\\.com|punchsubs\\.net|linkasm\\.com|firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php|2speed\\.net\\/file\\//,()=>{
 				window.setInterval=f=>setInterval(f,1)
