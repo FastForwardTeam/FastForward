@@ -333,14 +333,6 @@ if(document instanceof HTMLDocument)
 					}
 				})
 			})
-			domainBypass("mylink.zone",()=>{
-				ODP(window,"seconde",{
-					set:_=>{},
-					get:()=>{
-						return -1
-					}
-				})
-			})
 			domainBypass("sourceforge.net",()=>{
 				var b=document.createElement("button"),d=false
 				b.className="direct-download"
@@ -423,7 +415,7 @@ if(document instanceof HTMLDocument)
 					document.querySelector("input[type='submit']").click()
 				})
 			})
-			domainBypass("mylinks.xyz",()=>{
+			hrefBypass(/mylinks\\.xyz|mylink\\.zone/,()=>{
 				window.setTimeout=f=>setTimeout(f,1)
 				ensureDomLoaded(()=>{
 					setTimeout(function()
