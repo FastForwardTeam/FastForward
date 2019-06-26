@@ -1,0 +1,26 @@
+{
+	"appDesc": {
+		"message": "Neztrácejte čas. Universal Bypass automaticky přeskočí nepříjemné zkracovače odkazů."
+	},
+	"firstrunTitle": {
+		"message": "Děkujeme za instalaci Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "Jste úžasní!"
+	},
+	"firstrunNoScript": {
+		"message": "Niceméně, vypadá že používáte NoScript nebo něco podobného, s kterým Universal Bypass není kompatibilní."
+	},
+	"faq": {
+		"message": "Často kladené otázky (FAQ)"
+	},
+	"options": {
+		"message": "Možnosti"
+	},
+	"optionsLink": {
+		"message": "Změnit nastavení Universal Bypass."
+	},
+	"optionsEnabled": {
+		"message": "Povolit obcházení zkracovačů."
+	}
+}
