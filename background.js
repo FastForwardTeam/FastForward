@@ -400,6 +400,16 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
 		let url=new URL(details.url)
+		return getRedirect(atob(url.search.replace("?","")))
+	}
+},{types:["main_frame"],urls:[
+"*://*.hikarinoakariost.info/out/?*",
+]},["blocking"])
+
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
+		let url=new URL(details.url)
 		if(url.searchParams.has("dest"))
 		{
 			return getRedirect(url.searchParams.get("dest"))
