@@ -394,6 +394,10 @@ if(document instanceof HTMLDocument)
 				window.setTimeout=f=>setTimeout(f,1)
 				awaitElement("#compteur a[href]",a=>safelyNavigate(new URL(a.href).searchParams.get("url")))
 			})
+			domainBypass("shortmoz.link",()=>{
+				window.setInterval=f=>setInterval(f,1)
+				awaitElement("a.btn.redirect[href^='http']",a=>safelyNavigate(a.href))
+			})
 			//Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
 			hrefBypass(/muhammadyoga\\.me|u\\.to|skiplink\\.io|healthykk\\.com|punchsubs\\.net|linkasm\\.com|firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php|2speed\\.net\\/file\\//,()=>{
 				window.setInterval=f=>setInterval(f,1)
