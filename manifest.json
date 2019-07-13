@@ -12,7 +12,7 @@
 	"name": "Universal Bypass",
 	"description": "__MSG_appDesc__",
 	"homepage_url": "https://universal-bypass.org/",
-	"version": "10.35",
+	"version": "10.36",
 	"author": "Tim \"timmyRS\" Speckhals",
 	"permissions": [
 		"storage",
