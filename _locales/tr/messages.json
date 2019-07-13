@@ -30,7 +30,7 @@
 		"message": "Beni anında hedef adrese yönlendir."
 	},
 	"optionsInstantNavigationTrackers": {
-		"message": "Beni anında hedef adrese yönlendir."
+		"message": "Beni anında izleyicilerin hedeflerine götür."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Eğer es geçilemezse IP kayıtçılarını engelle."
@@ -39,13 +39,13 @@
 		"message": "Es geçilemeyen link kısaltıcıların hedeflerini geliştiriciyle paylaş."
 	},
 	"privacyPolicy": {
-		"message": "Gizlilik Politikası"
+		"message": "Gizlilik Sözleşmesi"
 	},
 	"optionsUserscripts": {
 		"message": "Özel Es Geçmeler"
 	},
 	"optionsUserscriptsSubtitle": {
-		"message": "Eğer GitHub'da çalışan es geçmeler paylaşabilirseniz güzel olur, hem böylelikle diğer kullanıcılar da yararlanmış olurlar."
+		"message": "Çalışan es geçmelerinizi GitHub'a eklerseniz diğerlerinin de yararlanması adına iyi olur."
 	},
 	"beforeNavigate": {
 		"message": "Neredeyse vardınız."
@@ -54,16 +54,16 @@
 		"message": "Hedefiniz: %"
 	},
 	"beforeNavigateInfo": {
-		"message": "Universal Bypass'in sizi doğrudan hedefe yönlendirmesini ister misiniz?"
+		"message": "Universal Bypass'ın sizi doğrudan hedefe yönlendirmesini ister misiniz?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass, IP adresinizin kayıtlara eklenmesini engelledi."
 	},
 	"blockedSubtitle": {
-		"message": "Universal Bypass'in sizi kötü adamların IP adresinizi almasından korumasını istemiyor musunuz?"
+		"message": "Universal Bypass'ın sizi kötü kişilerin IP adresinizi almasından korumasını istemiyor musunuz?"
 	},
 	"crowdBypassed": {
-		"message": "Beklemek zorunda değilsin!"
+		"message": "Beklemeniz gerekmeyebilir!"
 	},
 	"crowdBypassedInfo": {
 		"message": "Diğer Universal Baypass kullanıcıları sizin yerinize beklediler ve bunun % 'e gittiğini bildirdiler."

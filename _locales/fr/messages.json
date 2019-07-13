@@ -9,7 +9,7 @@
 		"message": "Vous êtes incroyable!"
 	},
 	"firstrunNoScript": {
-		"message": "Cependant, vous semblez utiliser NoScript ou quelque chose de similaire, avec lequel Universal Bypass n'est pas compatible."
+		"message": "Cependant, vous semblez utiliser le module NoScript ou quelque chose de similaire, avec lequel Universal Bypass n'est pas compatible."
 	},
 	"faq": {
 		"message": "Questions fréquemment posées (FAQ)"
@@ -36,13 +36,13 @@
 		"message": "Bloquer les enregistreurs d’IP si ils ne peuvent pas être contournés."
 	},
 	"optionsCrowdBypass": {
-		"message": "Acquérir les cibles des raccourcisseurs non contournables."
+		"message": "Acquérir les destinations des raccourcisseurs incontournables."
 	},
 	"privacyPolicy": {
 		"message": "Politique de Vie Privée"
 	},
 	"optionsUserscripts": {
-		"message": "Personnaliser les contournements"
+		"message": "Contournements personnalisés"
 	},
 	"optionsUserscriptsSubtitle": {
 		"message": "Ce serait bien si vous pouviez soumettre des contournements fonctionnels sur GitHub, afin que d'autres personnes puissent en bénéficier."
@@ -66,7 +66,7 @@
 		"message": "Vous n'aurez peut-être pas à attendre !"
 	},
 	"crowdBypassedInfo": {
-		"message": "D'autres utilisateurs de Universal Bypass vous ont déjà attendu et ont rapporté que cela mène à %"
+		"message": "D'autres utilisateurs de Universal Bypass ont déjà utilisé ce lien et ont rapporté que cela mène à %"
 	},
 	"crowdBypassedIgnore": {
 		"message": "Cela n'était-il pas exact ?"
