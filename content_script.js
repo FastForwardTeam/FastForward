@@ -792,6 +792,9 @@ if(document instanceof HTMLDocument)
 				domainBypass("wikitrik.com",()=>{
 					document.querySelector("#download > form[action='/getlink.php'] > input[type='submit'].button").click()
 				})
+				domainBypass("dawnstation.com",()=>{
+					safelyNavigate(document.querySelector("#tidakakanselamanya.hiddenPlace > a").href)
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
