@@ -895,6 +895,10 @@ if(document instanceof HTMLDocument)
 						a.click()
 					})
 				}
+				if(a=document.querySelector("#wpsafegenerate > #wpsafe-linkio > a[href*='?safelink_redirect=']"))
+				{
+					safelyNavigate(new URL(a.href).searchParams.get("safelink_redirect"))
+				}
 				if(document.getElementById("wpsafe-generate")&&typeof wpsafegenerate=="function")
 				{
 					let a=document.querySelector("#wpsafegenerate > #wpsafe-link > a[href]")
