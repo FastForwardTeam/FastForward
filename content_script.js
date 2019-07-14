@@ -93,6 +93,17 @@ if(document instanceof HTMLDocument)
 					})
 				}
 			},
+			ifElement=(q,f,ef)=>ensureDomLoaded(()=>{
+				let e=document.querySelector(q)
+				if(e)
+				{
+					f(e)
+				}
+				else if(ef)
+				{
+					ef()
+				}
+			}),
 			awaitElement=(q,f)=>ensureDomLoaded(()=>{
 				let t=setInterval(()=>{
 					let e=document.querySelector(q)
@@ -411,21 +422,14 @@ if(document instanceof HTMLDocument)
 			}
 			ensureDomLoaded(()=>{
 				domainBypass("adfoc.us",()=>{
-					let b=document.querySelector(".skip[href]")
-					if(b)
-						safelyNavigate(b.href)
+					ifElement(".skip[href]",b=>safelyNavigate(b.href))
 				})
 				domainBypass("sub2unlock.com",()=>{
 					if(location.pathname.substr(0,10)=="/link/get/")
 					{
 						safelyNavigate(document.getElementById("link").href)
 					}
-					else
-					{
-						let f=document.getElementById("getLinkNow")
-						if(f)
-							document.getElementById("getLinkNow").submit()
-					}
+					else ifElement("#getLinkNow",f=>f.submit())
 				})
 				domainBypass("srt.am",()=>{
 					if(document.querySelector(".skip-container"))
@@ -438,18 +442,10 @@ if(document instanceof HTMLDocument)
 					}
 				})
 				domainBypass("admy.link",()=>{
-					let f=document.querySelector(".edit_link")
-					if(f)
-					{
-						f.submit()
-					}
+					ifElement(".edit_link",f=>f.submit())
 				})
 				domainBypass("ysear.ch",()=>{
-					let b=document.querySelector("#NextVideo[href]")
-					if(b)
-					{
-						safelyNavigate(b.href)
-					}
+					ifElement("#NextVideo[href]",b=>safelyNavigate(b.href))
 				})
 				hrefBypass(/1ink\\.(cc|live)/,()=>{
 					if(typeof SkipAd=="function")
@@ -458,12 +454,10 @@ if(document instanceof HTMLDocument)
 					}
 				})
 				domainBypass("losstor.com",()=>{
-					let b=document.getElementById("re_link")
-					if(b)
-					{
+					ifElement("#re_link",b=>{
 						window.open=safelyNavigate
 						b.click()
-					}
+					})
 				})
 				domainBypass("fshare.vn",()=>{
 					if("$" in window)
@@ -480,21 +474,13 @@ if(document instanceof HTMLDocument)
 					}
 				})
 				domainBypass("dwindly.io",()=>{
-					let b=document.getElementById("btd1")
-					if(b)
-					{
+					ifElement("#btd1",b=>{
 						window.open=()=>{}
 						b.click()
-					}
-					else
-					{
-						b=document.getElementById("btd")
-						if(b)
-						{
-							window.open=safelyNavigate
-							eval("("+b.onclick.toString().split(";")[0]+"})()")
-						}
-					}
+					},()=>ifElement("#btd",b=>{
+						window.open=safelyNavigate
+						eval("("+b.onclick.toString().split(";")[0]+"})()")
+					}))
 				})
 				domainBypass("bluemediafiles.com",()=>{
 					if(typeof FinishMessage=="string"&&FinishMessage.indexOf("<a href=")>-1)
@@ -537,19 +523,13 @@ if(document instanceof HTMLDocument)
 						document.getElementById("counter").innerHTML="0"
 				})
 				domainBypass("gotoo.loncat.in",()=>{
-					let a=document.querySelector("a[href^='http://gotoo.loncat.in/go.php?open=']")
-					if(a)
-						safelyNavigate(a.href)
+					ifElement("a[href^='http://gotoo.loncat.in/go.php?open=']",a=>safelyNavigate(a.href))
 				})
 				domainBypass("idnation.net",()=>{
-					let b=document.querySelector("#linko[href]")
-					if(b)
-						safelyNavigate(b.href)
+					ifElement("#linko[href]",b=>safelyNavigate(b.href))
 				})
 				domainBypass("mazika2day.com",()=>{
-					let b=document.querySelector(".linkbtn[href]")
-					if(b)
-						safelyNavigate(b.href)
+					ifElement(".linkbtn[href]",b=>safelyNavigate(b.href))
 				})
 				domainBypass("ux9.de",()=>{
 					let m=document.querySelector("meta[http-equiv='refresh'][content]")
@@ -561,9 +541,13 @@ if(document instanceof HTMLDocument)
 				domainBypass("telolet.in",()=>{
 					let b=document.querySelector("a#skip[href]")
 					if(!b)
+					{
 						b=document.querySelector(".redirect_url > a[href]")
+					}
 					if(b)
+					{
 						safelyNavigate(b.href)
+					}
 				})
 				domainBypass("vipdirect.cc",()=>{
 					if(typeof ab=="number"&&typeof asdf=="function")
@@ -574,9 +558,7 @@ if(document instanceof HTMLDocument)
 					}
 				})
 				domainBypass("rapidcrypt.net",()=>{
-					let b=document.querySelector(".push_button.blue[href]")
-					if(b)
-						safelyNavigate(b.href)
+					ifElement(".push_button.blue[href]",b=>safelyNavigate(b.href))
 				})
 				domainBypass("shrink-service.it",()=>{
 					if(typeof $=="function"&&typeof $.ajax=="function"&&typeof screenApi=="function")
@@ -638,14 +620,7 @@ if(document instanceof HTMLDocument)
 					{
 						location.href=b.href
 					}
-					else
-					{
-						b=document.getElementById("download")
-						if(b)
-						{
-							safelyNavigate(b.href)
-						}
-					}
+					else ifElement("#download",b=>safelyNavigate(b.href))
 				})
 				hrefBypass(/4snip\\.pw\\/out\\//,()=>{
 					let f=document.querySelector("form[action^='../out2/']")
@@ -671,18 +646,10 @@ if(document instanceof HTMLDocument)
 					return finish()
 				})
 				domainBypass("goou.in",()=>{
-					let a=document.querySelector("div#download_link > a#download[href]")
-					if(a)
-					{
-						safelyNavigate(a.href)
-					}
+					ifElement("div#download_link > a#download[href]",a=>a.href)
 				})
 				domainBypass("skinnycat.org",()=>{
-					let a=document.querySelector("a.redirect[href]")
-					if(a)
-					{
-						safelyNavigate(a.href)
-					}
+					ifElement("a.redirect[href]",a=>a.href)
 				})
 				domainBypass("ryn.cc",()=>{
 					if(typeof countdown=="function")
@@ -693,12 +660,10 @@ if(document instanceof HTMLDocument)
 					}
 				})
 				domainBypass("connect-trojan.net",()=>{
-					let a=document.querySelector("#post_download > a[onclick]")
-					if(a)
-					{
+					ifElement("#post_download > a[onclick]",a=>{
 						redireciona=safelyNavigate
 						a.onclick()
-					}
+					})
 				})
 				domainBypass("shirosafe.web.id",()=>{
 					safelyNavigate(document.querySelector("#generate > center > a[style]").href)
@@ -727,9 +692,7 @@ if(document instanceof HTMLDocument)
 					}
 				})
 				hrefBypass(/tetew\\.info|siherp\\.com/,()=>{
-					let a=document.querySelector("div.download-link > a[href]")
-					if(a)
-					{
+					ifElement("div.download-link > a[href]",a=>{
 						let u=new URL(a.href)
 						if(u.searchParams.has("r"))
 						{
@@ -739,12 +702,10 @@ if(document instanceof HTMLDocument)
 						{
 							safelyNavigate(a.href)
 						}
-					}
+					})
 				})
 				domainBypass("drivehub.link",()=>{
-					let a=document.querySelector("a#proceed[href]")
-					if(a)
-						safelyNavigate(a.href)
+					ifElement("a#proceed[href]",a=>safelyNavigate(a.href))
 				})
 				domainBypass("oxy.cloud",()=>{
 					location.href=new URL(document.querySelector("#divdownload > a[href]").href).searchParams.get("predirect")
@@ -895,20 +856,15 @@ if(document instanceof HTMLDocument)
 						a.click()
 					})
 				}
-				if(a=document.querySelector("#wpsafegenerate > #wpsafe-linkio > a[href*='?safelink_redirect=']"))
-				{
+				ifElement("#wpsafegenerate > #wpsafe-linkio > a[href*='?safelink_redirect=']",a=>{
 					safelyNavigate(new URL(a.href).searchParams.get("safelink_redirect"))
-				}
+				})
 				if(document.getElementById("wpsafe-generate")&&typeof wpsafegenerate=="function")
 				{
-					let a=document.querySelector("#wpsafegenerate > #wpsafe-link > a[href]")
-					if(a)
-					{
+					ifElement("#wpsafegenerate > #wpsafe-link > a[href]",a=>{
 						safelyNavigate(a.href)
 						return finish()
-					}
-					else
-					{
+					},()=>{
 						let s=new URLSearchParams(location.search)
 						if(s.has("go"))
 						{
@@ -924,7 +880,7 @@ if(document instanceof HTMLDocument)
 								return finish()
 							}
 						}
-					}
+					})
 				}
 				if(document.querySelector("input[type='hidden'][name='newwpsafelink'][value]"))
 				{
@@ -1006,11 +962,7 @@ if(document instanceof HTMLDocument)
 				}
 				if(typeof generate=="function")//lewat.wibuindo.com
 				{
-					let b=document.querySelector("#download > a.akani[href]")
-					if(b)
-					{
-						safelyNavigate(b.href)
-					}
+					ifElement("#download > a.akani[href]",b=>safelyNavigate(b.href))
 				}
 				if(document.querySelector(".shortened_link a[href][ng-href][target='_blank']"))//Go2to.com,Go2too.com,Golink.to
 				{
@@ -1048,8 +1000,8 @@ if(document instanceof HTMLDocument)
 					{
 						case"Viid.su":
 						{
-							let b=document.getElementById("link-success-button")
-							if(b&&b.getAttribute("data-url"))
+							let b=document.querySelector("#link-success-button[data-url]")
+							if(b)
 							{
 								safelyNavigate(b.getAttribute("data-url"))
 								return finish()
@@ -1086,9 +1038,7 @@ if(document instanceof HTMLDocument)
 
 						default:
 						{
-							let b=document.querySelector("a#makingdifferenttimer[href]")
-							if(b)
-							{
+							ifElement("a#makingdifferenttimer[href]",b=>{
 								if(isGoodLink(t))
 								{
 									unsafelyNavigate(t)
@@ -1097,7 +1047,7 @@ if(document instanceof HTMLDocument)
 								{
 									safelyNavigate(b.href)
 								}
-							}
+							})
 						}
 					}
 				}
