@@ -111,6 +111,10 @@ domainBypass("example.com", function()
 		safelyNavigate(a.href)
 	})
 })
+domainBypass(/example\\.(com|org)/, function()
+{
+	// Triggered if the regex matches any part of the hostname
+})
 hrefBypass(/example\\.(com|org)/, function()
 {
 	// Triggered if the regex matches any part of the URL

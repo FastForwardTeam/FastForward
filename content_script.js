@@ -65,9 +65,27 @@ if(document instanceof HTMLDocument)
 				document.documentElement.setAttribute("data-universal-bypass-stop-watching","")
 			},
 			domainBypass=(domain,f)=>{
-				if(!bypassed&&(location.hostname==domain||location.hostname.substr(location.hostname.length-(domain.length+1))=="."+domain))
+				if(bypassed)
 				{
-					f()
+					return
+				}
+				if(typeof domain=="string")
+				{
+					if(location.hostname==domain||location.hostname.substr(location.hostname.length-(domain.length+1))=="."+domain)
+					{
+						f()
+					}
+				}
+				else if("test" in domain)
+				{
+					if(domain.test(location.hostname))
+					{
+						f()
+					}
+				}
+				else
+				{
+					console.error("[Universal Bypass] Invalid domain:",domain)
 				}
 			},
 			hrefBypass=(regex,f)=>{
@@ -276,7 +294,7 @@ if(document instanceof HTMLDocument)
 				}
 				r(a)
 			}:r)
-			hrefBypass(/ur\\.ly|urly\\.mobi/,()=>{
+			domainBypass(/ur\\.ly|urly\\.mobi/,()=>{
 				if(location.pathname.length>2&&location.pathname.substr(0,6)!="/goii/")
 					safelyNavigate("/goii/"+location.pathname.substr(2)+"?ref="+location.hostname+location.pathname)
 			})
@@ -401,7 +419,7 @@ if(document instanceof HTMLDocument)
 					document.querySelector("input[type='submit']").click()
 				})
 			})
-			hrefBypass(/mylinks\\.xyz|mylink\\.zone/,()=>{
+			domainBypass(/mylinks\\.xyz|mylink\\.zone/,()=>{
 				window.setTimeout=f=>setTimeout(f,1)
 				awaitElement("#compteur a[href]",a=>safelyNavigate(new URL(a.href).searchParams.get("url")))
 			})
@@ -419,7 +437,7 @@ if(document instanceof HTMLDocument)
 			hrefBypass(/muhammadyoga\\.me|u\\.to|skiplink\\.io|healthykk\\.com|punchsubs\\.net|linkasm\\.com|firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php|2speed\\.net\\/file\\//,()=>{
 				window.setInterval=f=>setInterval(f,1)
 			})
-			hrefBypass(/uploadrar\\.com|longfiles\\.com|datei\\.to|id-share19\\.com/,()=>{
+			domainBypass(/uploadrar\\.com|longfiles\\.com|datei\\.to|id-share19\\.com/,()=>{
 				window.setTimeout=f=>setTimeout(f,1)
 			})
 			if(bypassed)
@@ -453,7 +471,7 @@ if(document instanceof HTMLDocument)
 				domainBypass("ysear.ch",()=>{
 					ifElement("#NextVideo[href]",b=>safelyNavigate(b.href))
 				})
-				hrefBypass(/1ink\\.(cc|live)/,()=>{
+				domainBypass(/1ink\\.(cc|live)/,()=>{
 					if(typeof SkipAd=="function")
 					{
 						SkipAd()
@@ -687,7 +705,7 @@ if(document instanceof HTMLDocument)
 					document.cookie="referrer=1"
 					xhr.send()
 				})
-				hrefBypass(/ouo\\.(io|press)/,()=>{
+				domainBypass(/ouo\\.(io|press)/,()=>{
 					if(location.pathname.substr(0,4)=="/go/")
 					{
 						document.querySelector("form").submit()
@@ -697,7 +715,7 @@ if(document instanceof HTMLDocument)
 						crowdBypass()
 					}
 				})
-				hrefBypass(/tetew\\.info|siherp\\.com/,()=>{
+				domainBypass(/tetew\\.info|siherp\\.com/,()=>{
 					ifElement("div.download-link > a[href]",a=>{
 						let u=new URL(a.href)
 						if(u.searchParams.has("r"))
@@ -910,7 +928,7 @@ if(document instanceof HTMLDocument)
 					})
 					if(!bypassed)
 					{
-						hrefBypass(/al\\.ly|ally\\.sh|dausel\\.co/,()=>{
+						domainBypass(/al\\.ly|ally\\.sh|dausel\\.co/,()=>{
 							let e=document.getElementById("html_element")
 							if(e)
 							{
@@ -1123,7 +1141,7 @@ if(document instanceof HTMLDocument)
 								}
 							}
 						},50)
-						hrefBypass(/123l\\.pw|123link|oke\\.io/,()=>{
+						domainBypass(/123l\\.pw|123link|oke\\.io/,()=>{
 							window.setInterval=f=>setInterval(f,1)
 						})
 						clearInterval(dT)
