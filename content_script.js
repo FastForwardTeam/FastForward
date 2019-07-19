@@ -651,15 +651,13 @@ if(document instanceof HTMLDocument)
 					f.setAttribute("action",f.getAttribute("action").replace("../out2/","../outlink/"))
 					f.submit()
 				})
-				domainBypass("douploads.com",()=>{
-					let s=document.querySelector(".seconds")
-					if(s)
-					{
+				domainBypass(/douploads\\.(com|net)/,()=>{
+					ifElement(".seconds",s=>{
 						s.textContent="1"
 						document.getElementById("chkIsAdd").checked=false
 						document.getElementById("downloadBtnClick").style.display="none"
 						document.getElementById("downloadbtn").style.display="block"
-					}
+					})
 				})
 				domainBypass("elsfile.org",()=>{
 					let form=document.createElement("form")
