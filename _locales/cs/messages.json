@@ -22,5 +22,26 @@
 	},
 	"optionsEnabled": {
 		"message": "Povolit obcházení zkracovačů."
+	},
+	"optionsTrackerBypass": {
+		"message": "Blokovat sledovače procházení pomocí Apimon.de."
+	},
+	"optionsInstantNavigation": {
+		"message": "Okamžitě mě přesuňtě na destinaci zkracovačů."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Okamžitě mě přesuňtě na destinaci sledovačů procházení."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Blokovat IP loggery pokud je nelze obejít."
+	},
+	"privacyPolicy": {
+		"message": "Zásady ochrany osobních údajů"
+	},
+	"beforeNavigateDestination": {
+		"message": "Vaše destinace tohoto zkráceného odkazu je"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Nebylo to správně?"
 	}
 }

@@ -9,7 +9,7 @@
 		"message": "Vous êtes incroyable!"
 	},
 	"firstrunNoScript": {
-		"message": "Cependant, vous semblez utiliser le module NoScript ou quelque chose de similaire, avec lequel Universal Bypass n'est pas compatible."
+		"message": "Cependant, vous semblez utiliser NoScript ou similaire, avec lequel Universal Bypass n'est pas compatible."
 	},
 	"faq": {
 		"message": "Questions fréquemment posées (FAQ)"
