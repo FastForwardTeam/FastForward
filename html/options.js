@@ -100,15 +100,20 @@ domainBypass("example.com", function()
 	ensureDomLoaded(function()
 	{
 		// Triggered as soon as the DOM is ready
-		safelyNavigate(document.querySelector("a#skip_button[href]").href)
-		// safelyNavigate makes sure the given URL is valid
+		// You can use ifElement to check if an element is available via document.querySelector:
+		ifElement("a#skip_button[href]", a => {
+			safelyNavigate(a.href)
+			// safelyNavigate makes sure the given URL is valid
+		})
 	})
 	// You can also use awaitElement to wait until a given element is available via document.querySelector:
-	awaitElement("a#skip_button[href]",a=>safelyNavigate(a.href))
+	awaitElement("a#skip_button[href]", a=> {
+		safelyNavigate(a.href)
+	})
 })
 hrefBypass(/example\\.(com|org)/, function()
 {
-	// Triggered if the URL matches the regex
+	// Triggered if the regex matches any part of the URL
 })
 // Enjoy! Your changes will be saved automatically.
 `,saveTimer,editor=ace.edit("userscript",{mode:"ace/mode/javascript",theme:"ace/theme/monokai"}),
