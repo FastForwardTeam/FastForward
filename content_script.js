@@ -301,7 +301,7 @@ if(document instanceof HTMLDocument)
 			hrefBypass(/universal-bypass\\.org\\/firstrun/,()=>{
 				location.href="https://universal-bypass.org/firstrun?1"
 			})
-			domainBypass("cshort.org",()=>{
+			domainBypass(/cshort.(org|xyz)/,()=>{
 				ODP(window,"adblock",{
 					value:false,
 					writable:false
