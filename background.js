@@ -229,7 +229,10 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 			return getRedirect(url.search.substr(1)+url.hash)
 		}
 	}
-},{types:["main_frame"],urls:["*://*.anonym.to/?*"]},["blocking"])
+},{types:["main_frame"],urls:[
+"*://*.anonym.to/?*",
+"*://*.anonymz.com/?*",
+]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
