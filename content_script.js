@@ -483,20 +483,6 @@ if(document instanceof HTMLDocument)
 						b.click()
 					})
 				})
-				domainBypass("fshare.vn",()=>{
-					if("$" in window)
-					{
-						let f=$("#form-download")
-						if(f.length)
-						{
-							$.ajax({
-								"url":f.attr("action"),
-								"type":"POST",
-								"data":f.serialize()
-							}).done(data=>safelyNavigate(data.url))
-						}
-					}
-				})
 				domainBypass("dwindly.io",()=>{
 					ifElement("#btd1",b=>{
 						window.open=()=>{}
