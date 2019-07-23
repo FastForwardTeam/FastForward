@@ -301,17 +301,6 @@ if(document instanceof HTMLDocument)
 			hrefBypass(/universal-bypass\\.org\\/firstrun/,()=>{
 				location.href="https://universal-bypass.org/firstrun?1"
 			})
-			domainBypass(/cshort.(org|xyz)/,()=>{
-				ODP(window,"adblock",{
-					value:false,
-					writable:false
-				})
-				ODP(window,"i",{
-					value:0,
-					writable:false
-				})
-				awaitElement(".next[href]",a=>safelyNavigate(atob(atob(a.getAttribute("href")))))
-			})
 			domainBypass("link.tl",()=>{
 				ODP(window,"countdown",{
 					value:0,
@@ -434,7 +423,7 @@ if(document instanceof HTMLDocument)
 				})
 			})
 			//Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
-			hrefBypass(/muhammadyoga\\.me|u\\.to|skiplink\\.io|healthykk\\.com|punchsubs\\.net|linkasm\\.com|firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php|2speed\\.net\\/file\\//,()=>{
+			hrefBypass(/cshort\\.(org|xyz)|muhammadyoga\\.me|u\\.to|skiplink\\.io|healthykk\\.com|punchsubs\\.net|linkasm\\.com|firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php|2speed\\.net\\/file\\//,()=>{
 				window.setInterval=f=>setInterval(f,1)
 			})
 			domainBypass(/uploadrar\\.com|longfiles\\.com|datei\\.to|id-share19\\.com/,()=>{
