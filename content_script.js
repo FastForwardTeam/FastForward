@@ -146,11 +146,8 @@ if(document instanceof HTMLDocument)
 				}
 				if(crowdEnabled)
 				{
-					if(location.href.substr(location.href.length-18)=="#ignoreCrowdBypass")
+					if(ignoreCrowdBypass)
 					{
-						document.querySelectorAll("form[action]").forEach(e=>e.action+="#ignoreCrowdBypass")
-						document.querySelectorAll("a[href]").forEach(e=>e.href+="#ignoreCrowdBypass")
-						history.pushState({},document.querySelector("title").textContent,location.href.substr(0,location.href.length-18))
 						f()
 					}
 					else
@@ -185,10 +182,20 @@ if(document instanceof HTMLDocument)
 			}
 			var navigated=false,
 			bypassed=false,
+			ignoreCrowdBypass=false,
 			domain=location.hostname
 			if(domain.substr(0,4)=="www.")
 			{
 				domain=domain.substr(4)
+			}
+			if(location.href.substr(location.href.length-18)=="#ignoreCrowdBypass")
+			{
+				ignoreCrowdBypass=true
+				history.pushState({},document.querySelector("title").textContent,location.href.substr(0,location.href.length-18))
+				ensureDomLoaded(()=>{
+					document.querySelectorAll("form[action]").forEach(e=>e.action+="#ignoreCrowdBypass")
+					document.querySelectorAll("a[href]").forEach(e=>e.href+="#ignoreCrowdBypass")
+				})
 			}
 			ODP(window,"blurred",{
 				value:false,
