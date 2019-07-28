@@ -191,6 +191,9 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	return {redirectUrl:brws.runtime.getURL("html/crowd-bypassed.html")+details.url.substr(43)}
 },{types:["main_frame"],urls:["https://universal-bypass.org/crowd-bypassed?*"]},["blocking"])
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	return {redirectUrl:brws.runtime.getURL("html/options.html")+details.url.substr(36)}
+},{types:["main_frame"],urls:["https://universal-bypass.org/options"]},["blocking"])
 
 //Preflight Bypasses
 brws.webRequest.onBeforeRequest.addListener(details=>{
