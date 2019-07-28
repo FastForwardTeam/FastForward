@@ -80,6 +80,11 @@ brws.storage.sync.get(["disable","no_tracker_bypass","instant_navigation","no_in
 		})
 	}
 })
+let hash=location.hash.toString().replace("#","")
+if(hash)
+{
+	document.querySelector("label[for='"+hash+"']").style.background="yellow"
+}
 function instantNavigationTrackersLogic()
 {
 	if(!trackerBypassCheckbox.checked||instantNavigationCheckbox.checked)
