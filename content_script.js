@@ -757,6 +757,9 @@ if(document instanceof HTMLDocument)
 				domainBypass("dawnstation.com",()=>{
 					safelyNavigate(document.querySelector("#tidakakanselamanya.hiddenPlace > a").href)
 				})
+				domainBypass("hokiwikiped.net",()=>{
+					ifElement("a#DrRO[href]",a=>safelyNavigate(a.href))
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
