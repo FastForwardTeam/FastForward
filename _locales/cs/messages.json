@@ -38,8 +38,32 @@
 	"privacyPolicy": {
 		"message": "Zásady ochrany osobních údajů"
 	},
+	"optionsUserscripts": {
+		"message": "Vlastní obcházení"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "Pomůžete nám, pokud dáte na GitHub funkčí bypassy."
+	},
+	"beforeNavigate": {
+		"message": "Jste téměř na destinaci."
+	},
 	"beforeNavigateDestination": {
 		"message": "Vaše destinace tohoto zkráceného odkazu je"
+	},
+	"beforeNavigateInfo": {
+		"message": "Chcete, aby vás Universal Bypass okamžitě přesměroval na destinaci?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass ochránil vaši IP před zaznamenáním."
+	},
+	"blockedSubtitle": {
+		"message": "Nechcete, aby Universal Bypass ochránil vaši IP?"
+	},
+	"crowdBypassed": {
+		"message": "Nemusel byste čekat!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Ostatní uživatelé Universal Bypass na vás čekali a náhlasit to vede k %"
 	},
 	"crowdBypassedIgnore": {
 		"message": "Nebylo to správně?"

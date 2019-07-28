@@ -1,0 +1,74 @@
+{
+	"appDesc": {
+		"message": "Ne gubite svoje vrijeme. Universal Bypass automatski preskače dosadne skraćivače veza."
+	},
+	"firstrunTitle": {
+		"message": "Hvala na instaliranju Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "Ti si nevjerojatan!"
+	},
+	"firstrunNoScript": {
+		"message": "Međutim, čini se da koristiš NoScript ili slično, sa čime Universal Bypass nije kompatibilan."
+	},
+	"faq": {
+		"message": "Često Postavljena Pitanja (ČPP)"
+	},
+	"options": {
+		"message": "Opcije"
+	},
+	"optionsLink": {
+		"message": "Promjeni Universal Bypass opcije."
+	},
+	"optionsEnabled": {
+		"message": "Omogući zaobilaženje stranice."
+	},
+	"optionsTrackerBypass": {
+		"message": "Zaobiđi traker koristeći Apimon.de."
+	},
+	"optionsInstantNavigation": {
+		"message": "Odmah me odvedi na odredište."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Odmah me odvedi na odredišta trakera."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Blokiraj zapisivanje IP adrese ako se ne nemože zaobići."
+	},
+	"optionsCrowdBypass": {
+		"message": "Give and take the destinations of unbypassable shorteners."
+	},
+	"privacyPolicy": {
+		"message": "Pravila privatnosti"
+	},
+	"optionsUserscripts": {
+		"message": "Prilagođeno zaobilaženje"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "Bilo bi lijepo kada bi poslati ispavni zaobilazak na GitHub, tako da i drugi imaju koristi od toga."
+	},
+	"beforeNavigate": {
+		"message": "Skoro ste na odredištu."
+	},
+	"beforeNavigateDestination": {
+		"message": "Vaše odredište je %"
+	},
+	"beforeNavigateInfo": {
+		"message": "Želite li da vas Universal Bypass odmah preusmjeri na odredište?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass spriječio je zapisivanje vaše IP adrese."
+	},
+	"blockedSubtitle": {
+		"message": "Ne želite da Universal Bypass spriječi loše aktere da dobiju vašu IP adresu?"
+	},
+	"crowdBypassed": {
+		"message": "Možda ne morate čekati!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Ostali Universal Bypass korisnici su već prijavili da ovo vodi prema %"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Da li je ovo nije točno?"
+	}
+}

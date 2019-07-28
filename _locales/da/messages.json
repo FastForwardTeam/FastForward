@@ -1,15 +1,15 @@
 {
 	"appDesc": {
-		"message": "Spild ikke din tid med overholdelse. Universal Bypass springer automatisk over irriterende link-forkortere."
+		"message": "Spild ikke din tid med overholdelse. Universal Bypass overspringer automatisk irriterende link-afkortere."
 	},
 	"firstrunTitle": {
-		"message": "Tak for at du installerede Universal Bypass!"
+		"message": "Tak fordi du installerede Universal Bypass!"
 	},
 	"firstrunSubtitle": {
 		"message": "Du er fantastisk!"
 	},
 	"firstrunNoScript": {
-		"message": "Men, det ser ud til at du bruger NoScript eller lignende, som Universal Bypass ikke understøtter."
+		"message": "Dog ser det ud til, at du benytter NoScript el.lign., hvilket Universal Bypass ikke understøtter."
 	},
 	"faq": {
 		"message": "Ofte stilte spørgsmål (FAQ)"
@@ -18,15 +18,57 @@
 		"message": "Indstillinger"
 	},
 	"optionsLink": {
-		"message": "Ændr Universal Bypass's indstillinger."
+		"message": "Ændr Universal Bypass-indstillinger."
 	},
 	"optionsEnabled": {
-		"message": "Slå internetside-omledninger til."
+		"message": "Aktivér websteds-bypass."
 	},
 	"optionsTrackerBypass": {
-		"message": "Undgå sporing ved hjælp af Apimon.de."
+		"message": "Omgå trackers vha. Apimon.de."
 	},
 	"optionsInstantNavigation": {
-		"message": "Tag mig til destinationer med det samme."
+		"message": "Bring mig direkte til destinationer."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Bring mig direkte til trackers-destinationer."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Blokér IP-loggere, hvis de ikke kan omgås."
+	},
+	"optionsCrowdBypass": {
+		"message": "Giv og tag destinationerne for afkortere, som ikke kan omgås."
+	},
+	"privacyPolicy": {
+		"message": "Fortrolighedspolitik"
+	},
+	"optionsUserscripts": {
+		"message": "Tilpassede Omgåelser"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "Det ville være fint, hvis du kunne indsende fungerende omgåelser til GitHub, så andre kan drage fordel af dem."
+	},
+	"beforeNavigate": {
+		"message": "Du er næsten på din destination."
+	},
+	"beforeNavigateDestination": {
+		"message": "Din destination er %"
+	},
+	"beforeNavigateInfo": {
+		"message": "Skal Universal Bypass strakt omdirigerer dig til din destination?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass forhindrede din IP i at blive logget."
+	},
+	"blockedSubtitle": {
+		"message": "Ønsker ikke, at Universal Bypass skal forhindre dårlige udbydere i at få din IP?"
+	},
+	"crowdBypassed": {
+		"message": "Du behøver måske ikke at vente!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Andre Universal Bypass-brugere har allerede ventet på dig og rapporteret, at dette fører til %"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Var dette ukorrekt?"
 	}
 }
