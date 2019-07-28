@@ -412,7 +412,7 @@ if(document instanceof HTMLDocument)
 				window.setTimeout=f=>setTimeout(f,1)
 				awaitElement("#compteur a[href]",a=>safelyNavigate(new URL(a.href).searchParams.get("url")))
 			})
-			domainBypass("shortmoz.link",()=>{
+			domainBypass(/shortmoz\\.link|skinnycat\\.org|safelink\\.polrec\\.site/,()=>{
 				window.setInterval=f=>setInterval(f,1)
 				awaitElement("a.btn.redirect[href^='http']",a=>safelyNavigate(a.href))
 			})
@@ -644,9 +644,6 @@ if(document instanceof HTMLDocument)
 				})
 				domainBypass("goou.in",()=>{
 					ifElement("div#download_link > a#download[href]",a=>a.href)
-				})
-				domainBypass("skinnycat.org",()=>{
-					ifElement("a.redirect[href]",a=>a.href)
 				})
 				domainBypass("ryn.cc",()=>{
 					if(typeof countdown=="function")
