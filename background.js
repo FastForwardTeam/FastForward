@@ -281,7 +281,8 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 },{types:["main_frame"],urls:[
 "*://*.yumechan.club/?r=*",
 "*://*.celeclub.org/?r=*",
-"*://*.duniaislamku.com/?r=*"
+"*://*.duniaislamku.com/?r=*",
+"*://*.situsbaru.me/?r=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
