@@ -537,12 +537,17 @@ if(document instanceof HTMLDocument)
 				domainBypass("mazika2day.com",()=>{
 					ifElement(".linkbtn[href]",b=>safelyNavigate(b.href))
 				})
-				domainBypass("ux9.de",()=>{
-					let m=document.querySelector("meta[http-equiv='refresh'][content]")
-					if(m&&m.content.indexOf(";url=http"))
-					{
-						safelyNavigate(m.content.split(";url=")[1])
-					}
+				domainBypass(/ux9\\.de|pucuktranslation\\.pw/,()=>{
+					ifElement("meta[http-equiv='refresh'][content]",m=>{
+						if(m.content.indexOf(";url=http") > -1)
+						{
+							safelyNavigate(m.content.split(";url=")[1])
+						}
+						else if(m.content.indexOf("; url=http") > -1)
+						{
+							safelyNavigate(m.content.split("; url=")[1])
+						}
+					})
 				})
 				domainBypass("telolet.in",()=>{
 					let b=document.querySelector("a#skip[href]")
