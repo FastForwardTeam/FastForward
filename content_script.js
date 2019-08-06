@@ -1065,14 +1065,11 @@ if(document instanceof HTMLDocument)
 					//AdLinkFly
 					if(typeof app_vars=="object")
 					{
-						if((document.querySelector(".navbar-brand")&&document.querySelector(".navbar-brand").textContent=="SafelinkU")||(document.querySelector("b[style='color: #3e66b3']")&&document.querySelector("b[style='color: #3e66b3']").textContent=="SafelinkU"))
+						if(location.search.substr(0,3)=="?a=")
 						{
 							//SafelinkU
 							window.setInterval=f=>setInterval(f,10)
-							if(location.search.substr(0,3)=="?a=")
-							{
-								crowdPath(location.search.substr(3))
-							}
+							crowdPath(location.search.substr(3))
 						}
 						domainBypass(/atv\\.pw|safe\\.mirrordown\\.com/,()=>{
 							//Safelinkblog
