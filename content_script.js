@@ -1074,6 +1074,10 @@ if(document instanceof HTMLDocument)
 								crowdPath(location.search.substr(3))
 							}
 						}
+						domainBypass("atv.pw",()=>{
+							//Safelinkblog
+							crowdPath(location.search.substr(1).replace("=",""))
+						})
 						document.documentElement.setAttribute("data-universal-bypass-adlinkfly-info","")
 						let iT=setInterval(()=>{
 							if(document.documentElement.hasAttribute("data-universal-bypass-adlinkfly-target"))
