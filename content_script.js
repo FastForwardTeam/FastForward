@@ -1074,7 +1074,7 @@ if(document instanceof HTMLDocument)
 								crowdPath(location.search.substr(3))
 							}
 						}
-						domainBypass("atv.pw",()=>{
+						domainBypass(/atv\\.pw|safe\\.mirrordown\\.com/,()=>{
 							//Safelinkblog
 							crowdPath(location.search.substr(1).replace("=",""))
 						})
