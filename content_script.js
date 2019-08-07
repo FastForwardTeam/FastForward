@@ -308,13 +308,6 @@ if(document instanceof HTMLDocument)
 			hrefBypass(/universal-bypass\\.org\\/firstrun/,()=>{
 				location.href="https://universal-bypass.org/firstrun?1"
 			})
-			domainBypass("link.tl",()=>{
-				ODP(window,"countdown",{
-					value:0,
-					writable:false
-				})
-				awaitElement(".skip > .btn",a=>a.click())
-			})
 			domainBypass("onepiece-ex.com.br",()=>{
 				ODP(window,"seconds",{
 					value:1,
@@ -927,6 +920,14 @@ if(document instanceof HTMLDocument)
 					window.setInterval=f=>setInterval(f,800)
 					return crowdBypass()
 				}
+				//Link.TL
+				ifElement("img.navbar-logo[alt='LinkTL']",()=>{
+					ifElement("form#skip_form",f=>{
+						f.target=""
+						f.submit()
+					})
+					finish()
+				})
 				//Other Templates
 				if(document.querySelector(".timed-content-client_show_0_30_0"))//technicoz.com
 				{
