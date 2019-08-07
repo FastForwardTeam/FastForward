@@ -367,6 +367,17 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
 		let url=new URL(details.url)
+		if(url.searchParams.has("token"))
+		{
+			return getRedirect(atob(url.searchParams.get("token")))
+		}
+	}
+},{types:["main_frame"],urls:["*://*.mundodocinema.ga/redirecionamento_final?*"]},["blocking"])
+
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
+		let url=new URL(details.url)
 		if(url.searchParams.has("go"))
 		{
 			return getRedirect("https://clickar.net/"+url.searchParams.get("go"))
