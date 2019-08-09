@@ -929,11 +929,14 @@ if(document instanceof HTMLDocument)
 					finish()
 				})
 				//Other Templates
-				if(document.querySelector(".timed-content-client_show_0_30_0"))//technicoz.com
-				{
-					document.querySelector(".timed-content-client_show_0_30_0").classList.remove("timed-content-client_show_0_30_0")
-					return finish()
-				}
+				ifElement(".timed-content-client_show_0_30_0",d=>{//technicoz.com
+					d.classList.remove("timed-content-client_show_0_30_0")
+					d.style.display="block"
+					domainBypass("technicoz.com",()=>{
+						safelyNavigate(d.querySelector("a").href)
+					})
+					finish()
+				})
 				if(document.getElementById("getlink")&&document.getElementById("gotolink")&&document.getElementById("timer"))//tetewlink.me,vehicle-techno.cf
 				{
 					document.getElementById("gotolink").removeAttribute("disabled")
