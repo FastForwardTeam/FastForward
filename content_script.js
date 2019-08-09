@@ -271,7 +271,10 @@ if(document instanceof HTMLDocument)
 						}
 					}
 				},
-				get:()=>actual_safelink
+				get:()=>{
+					awaitElement(".bagi .link > .result > a[href]",a=>safelyNavigate(a.href))
+					return actual_safelink
+				}
 			})
 			for(let key in forced_safelink)
 			{
