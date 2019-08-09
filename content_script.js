@@ -1072,9 +1072,8 @@ if(document instanceof HTMLDocument)
 							window.setInterval=f=>setInterval(f,10)
 							crowdPath(location.search.substr(3))
 						}
-						domainBypass(/atv\\.pw|safe\\.mirrordown\\.com/,()=>{
-							//Safelinkblog
-							crowdPath(location.search.substr(1).replace("=",""))
+						domainBypass(/atv\\.pw|safe\\.mirrordown\\.com|kabarviral\\.blog/,()=>{
+							crowdPath(location.search.substr(1).split("=")[0])
 						})
 						document.documentElement.setAttribute("data-universal-bypass-adlinkfly-info","")
 						let iT=setInterval(()=>{
