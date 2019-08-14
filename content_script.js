@@ -787,6 +787,9 @@ if(document instanceof HTMLDocument)
 						safelyNavigate(u)
 					}
 				})
+				domainBypass("hello.tribuntekno.com",()=>{
+					ifElement("#splash p[style] > u > b > a[href]",a=>safelyNavigate(a.href))
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
