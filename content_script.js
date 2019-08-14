@@ -879,6 +879,10 @@ if(document instanceof HTMLDocument)
 					document.querySelector("form#show > [type='submit']").click()
 				}
 				//Safelink Wordpress Plugin
+				ifElement("#wpsafe-linksz > a[href*='?safelink_redirect='], #wpsafegenerate > #wpsafe-linkio > a[href*='?safelink_redirect=']",a=>{
+					safelyNavigate(new URL(a.href).searchParams.get("safelink_redirect"))
+					finish()
+				})
 				if(document.querySelector(".wp-safelink-button"))
 				{
 					window.setInterval=f=>setInterval(f,1)
@@ -887,9 +891,6 @@ if(document instanceof HTMLDocument)
 						a.click()
 					})
 				}
-				ifElement("#wpsafegenerate > #wpsafe-linkio > a[href*='?safelink_redirect=']",a=>{
-					safelyNavigate(new URL(a.href).searchParams.get("safelink_redirect"))
-				})
 				if(document.getElementById("wpsafe-generate")&&typeof wpsafegenerate=="function")
 				{
 					ifElement("#wpsafegenerate > #wpsafe-link > a[href]",a=>{
