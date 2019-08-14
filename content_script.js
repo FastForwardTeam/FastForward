@@ -755,9 +755,6 @@ if(document instanceof HTMLDocument)
 				domainBypass("hokiwikiped.net",()=>{
 					ifElement("a#DrRO[href]",a=>safelyNavigate(a.href))
 				})
-				domainBypass("viralking.xyz",()=>{
-					ifElement("#mybutton > a[name='a'][href]",a=>safelyNavigate(a.href))
-				})
 				hrefBypass(/spaste\\.com\\/s\\//,()=>{
 					let doTheThing=()=>{
 						let item=document.getElementById("currentCapQue").textContent,
@@ -1028,6 +1025,13 @@ if(document instanceof HTMLDocument)
 						secondsdl=0
 					}
 					return finish()
+				}
+				if(location.search.startsWith("?n="))//viralking.xyz,indian4uh.com
+				{
+					ifElement("center a[name=a][href]",a=>{
+						safelyNavigate(a.href)
+						finish()
+					})
 				}
 				let t=document.querySelector("title")
 				if(t)
