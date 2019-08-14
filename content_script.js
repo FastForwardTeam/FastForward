@@ -758,6 +758,30 @@ if(document instanceof HTMLDocument)
 				domainBypass("viralking.xyz",()=>{
 					ifElement("#mybutton > a[name='a'][href]",a=>safelyNavigate(a.href))
 				})
+				hrefBypass(/spaste\\.com\\/s\\//,()=>{
+					let doTheThing=()=>{
+						let item=document.getElementById("currentCapQue").textContent,
+						as = document.querySelectorAll(".markAnswer")
+						for(let i = 0; i < as.length; i++)
+						{
+							if(as[i].querySelector("img").getAttribute("src").toLowerCase().indexOf(item)>-1)
+							{
+								as[i].click();
+								break;
+							}
+						}
+					}
+					document.getElementById("captchaVerifiedStatus").click()
+					setTimeout(()=>{
+						doTheThing()
+						setTimeout(()=>{
+							doTheThing()
+							setTimeout(()=>{
+								doTheThing()
+							}, 200)
+						}, 200)
+					}, 200)
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
