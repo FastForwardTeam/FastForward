@@ -286,7 +286,8 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 "*://*.duniaislamku.com/?r=*",
 "*://*.situsbaru.me/?r=*",
 "*://*.polrec.site/?r=*",
-"*://*.space.tribuntekno.com/?r=*"
+"*://*.space.tribuntekno.com/?r=*",
+"*://*.jossbingit.xyz/?r=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
