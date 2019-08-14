@@ -779,6 +779,14 @@ if(document instanceof HTMLDocument)
 						}, 200)
 					}, 200)
 				})
+				domainBypass("get-click2.blogspot.com",()=>{
+					let u=aesCrypto.decrypt(convertstr($.urlParam("o")),convertstr("root"))
+					if(isGoodLink(u))
+					{
+						location.hash=""
+						safelyNavigate(u)
+					}
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
