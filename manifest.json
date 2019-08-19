@@ -50,6 +50,7 @@
 		"html/blocked.html",
 		"html/crowd-bypassed.html",
 		"html/firstrun.html",
-		"html/firstrun-noscript.html"
+		"html/firstrun-noscript.html",
+		"html/options.html"
 	]
 }
