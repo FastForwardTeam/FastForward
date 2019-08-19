@@ -1,0 +1,17 @@
+{
+	"firstrunTitle": {
+		"message": "Trugarez evit ho staliañ Universal Bypass!"
+	},
+	"options": {
+		"message": "Dibarzhioù"
+	},
+	"optionsLink": {
+		"message": "Kemmañ dibarzhioù Universal Bypass."
+	},
+	"privacyPolicy": {
+		"message": "Reolenn a-fet buhez prevez"
+	},
+	"beforeNavigateDestination": {
+		"message": "% eo hoc'h arvoned"
+	}
+}

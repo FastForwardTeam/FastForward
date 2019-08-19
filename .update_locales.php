@@ -39,7 +39,7 @@ foreach(scandir("_locales") as $locale)
 		recursivelyDelete("_locales/{$locale}");
 		continue;
 	}
-	if(in_array($locale, ["es-ES"]))
+	if(in_array($locale, ["es-ES", "br-FR"]))
 	{
 		rename("_locales/{$locale}", "_locales/".substr($locale, 0, 2));
 	}

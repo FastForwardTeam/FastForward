@@ -33,7 +33,7 @@
 		"message": "Llevarme instantáneamente a los destinos de los rastreadores."
 	},
 	"optionsBlockIPLoggers": {
-		"message": "Bloquea los registradores IP si no pueden ser Saltados."
+		"message": "Bloquea los registradores IP si no pueden ser saltados."
 	},
 	"optionsCrowdBypass": {
 		"message": "Dar y tomar los destinos de los acortadores que no se pueden anular."
@@ -45,7 +45,7 @@
 		"message": "Bypasses personalizadas"
 	},
 	"optionsUserscriptsSubtitle": {
-		"message": "Nos ayudarías mucho enviando \"bypasses\" que funcionen mediante GitHub, para que otros puedan beneficiarse de ellos."
+		"message": "Nos ayudarías mucho enviando reglas de desvío funcionales mediante GitHub, de forma que otros puedan beneficiarse de ellas."
 	},
 	"beforeNavigate": {
 		"message": "Ya casi estas en tu destino."

@@ -1,6 +1,6 @@
 {
 	"appDesc": {
-		"message": "อย่าไปเสียเวลากับสิ่งที่ต้องทำตามมัน Universal Bypass ช่วยให้คุณข้ามพวกตัวย่อลิงค์ที่โครตราคาญให้อัตโนมัติ"
+		"message": "อย่าไปเสียเวลากับสิ่งที่ต้องทำตามมัน Universal Bypass ช่วยให้คุณข้ามพวกตัวย่อลิงค์ที่โครตน่ารำคาญให้อัตโนมัติ"
 	},
 	"firstrunTitle": {
 		"message": "ขอขอบคุณที่ติดตั้ง Universal Bypass!"
@@ -11,8 +11,32 @@
 	"firstrunNoScript": {
 		"message": "แต่อย่างไรก็ตาม ดูเหมือนคุณกำลังใช้ NoScript หรืออะไรที่มันคล้ายๆกัน ซึ่ง Universal Bypass นั้นไม่เข้ากันกับพวกนี้"
 	},
+	"faq": {
+		"message": "คำถามที่พบบ่อย"
+	},
+	"options": {
+		"message": "ตัวเลือก"
+	},
+	"optionsLink": {
+		"message": "เปลี่ยนการตั้งค่า Universal Bypass"
+	},
+	"optionsEnabled": {
+		"message": "เปิกใช้งาน website bypasses"
+	},
+	"optionsTrackerBypass": {
+		"message": "บายพาสแทร็กเกอร์ที่ใช้ Apimon.de"
+	},
+	"optionsInstantNavigation": {
+		"message": "พาฉันไปที่ปลายทางทันที"
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "พาฉันไปที่ปลายทางของเครื่องมือติดตามทันที"
+	},
 	"optionsBlockIPLoggers": {
 		"message": "หยุดตัวบันทึก IP ถ้าเขาไม่สามารถให้ผ่านไปได้"
+	},
+	"optionsCrowdBypass": {
+		"message": "การรับและการให้จุดหมายปลายทางของ shorteners ที่ไม่มีใครเทียบได้"
 	},
 	"privacyPolicy": {
 		"message": "นโยบายความเป็นส่วนตัว"
@@ -20,10 +44,31 @@
 	"optionsUserscripts": {
 		"message": "สร้างตัวข้ามเอง"
 	},
+	"optionsUserscriptsSubtitle": {
+		"message": "มันจะดีมาก ถ้าคุณสามารถส่งงาน bypasses บน GitHub เพื่อให้ผู้อื่นได้รับประโยชน์"
+	},
+	"beforeNavigate": {
+		"message": "คุณใกล้ถึงจุดหมายปลายทางแล้ว"
+	},
+	"beforeNavigateDestination": {
+		"message": "ปลายทางของคุณคือ %"
+	},
+	"beforeNavigateInfo": {
+		"message": "คุณต้องการให้ Universal Bypass นำคุณไปยังปลายทางทันทีหรือไม่?"
+	},
 	"blockedTitle": {
 		"message": "Universal Bypass ช่วยป้องกัน IP คุณจากการถูกเก็บประวัติ"
 	},
+	"blockedSubtitle": {
+		"message": "ไม่ต้องการ Universal Bypass ป้องกันผู้ที่ไม่ประสงดีรับ IP ของคุณใช่ไหม?"
+	},
 	"crowdBypassed": {
 		"message": "คุณอาจไม่ต้องรออีกต่อไป!"
+	},
+	"crowdBypassedInfo": {
+		"message": "ผู้ใช้ Universal Bypass รายรอคุณแล้วและรายงานว่าสิ่งนี้นำไปสู่ %"
+	},
+	"crowdBypassedIgnore": {
+		"message": "สิ่งนี้ไม่ถูกต้องหรือ?"
 	}
 }

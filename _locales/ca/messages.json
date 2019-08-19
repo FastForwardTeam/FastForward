@@ -11,8 +11,26 @@
 	"firstrunNoScript": {
 		"message": "Però, sembla que estàs utilitzant NoScript o similar, amb la qual Universal Bypass no és compatible."
 	},
+	"faq": {
+		"message": "Preguntes més freqüents (FAQ)"
+	},
+	"options": {
+		"message": "Opcions"
+	},
+	"optionsLink": {
+		"message": "Canvia les opcions de Universal Bypass."
+	},
+	"optionsEnabled": {
+		"message": "Activa omissió de pàgines web."
+	},
 	"optionsTrackerBypass": {
 		"message": "Circumval·la rastrejadors utilitzant Apimon.de."
+	},
+	"optionsInstantNavigation": {
+		"message": "Porta'm instantàniament a les destinacions."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Porta'm instantàniament a les destinacions dels seguidors."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Bloqueja registradors d'adreces IP si no poden circumval·lar-se."
