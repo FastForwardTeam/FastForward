@@ -796,6 +796,11 @@ if(document instanceof HTMLDocument)
 						safelyNavigate(a.href)
 					})
 				})
+				domainBypass("shortlink.in",()=>{
+					ifElement("#continueButton.interContinueButton > a[href]",a=>{
+						safelyNavigate(a.href)
+					},()=>ifElement("frame[src^='interstitualAdTop.php?url=']",f=>location.href=f.src))
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
