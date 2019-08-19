@@ -295,10 +295,11 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
-		return getRedirect(atob(details.url.substr(details.url.indexOf("?site=")+6)))
+		return getRedirect(atob(details.url.substr(details.url.indexOf("?site=")+6).split("&")[0]))
 	}
 },{types:["main_frame"],urls:[
-"*://*.hightech.web.id/*?site=*"
+"*://*.hightech.web.id/*?site=*",
+"*://*.masreyhan.com/*?site=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
