@@ -289,7 +289,8 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 "*://*.space.tribuntekno.com/?r=*",
 "*://*.jossbingit.xyz/?r=*",
 "*://*.starzone.cc/?r=*",
-"*://*.gomentod.com/?r=*"
+"*://*.gomentod.com/?r=*",
+"*://*.lifeasurance.com/?r=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
