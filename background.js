@@ -305,6 +305,15 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
+		return getRedirect(atob(details.url.substr(details.url.indexOf("?reff=")+6)))
+	}
+},{types:["main_frame"],urls:[
+"*://*.remiyu.me/?reff=*"
+]},["blocking"])
+
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
 		return encodedRedirect(details.url.substr(details.url.indexOf("?s=")+3))
 	}
 },{types:["main_frame"],urls:[
