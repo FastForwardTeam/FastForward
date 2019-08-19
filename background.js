@@ -294,6 +294,15 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
+		return getRedirect(atob(details.url.substr(details.url.indexOf("?site=")+6)))
+	}
+},{types:["main_frame"],urls:[
+"*://*.hightech.web.id/*?site=*"
+]},["blocking"])
+
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
 		return encodedRedirect(details.url.substr(details.url.indexOf("?s=")+3))
 	}
 },{types:["main_frame"],urls:[
