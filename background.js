@@ -315,6 +315,15 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
+		return getRedirect(atob(details.url.substr(details.url.indexOf("?kareeI=")+8)).split("||")[0])
+	}
+},{types:["main_frame"],urls:[
+"*://*.idalponse.blogspot.com/?kareeI=*"
+]},["blocking"])
+
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
 		return encodedRedirect(details.url.substr(details.url.indexOf("?s=")+3))
 	}
 },{types:["main_frame"],urls:[
