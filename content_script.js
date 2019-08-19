@@ -779,8 +779,8 @@ if(document instanceof HTMLDocument)
 						}, 200)
 					}, 200)
 				})
-				domainBypass("get-click2.blogspot.com",()=>{
-					let u=aesCrypto.decrypt(convertstr($.urlParam("o")),convertstr("root"))
+				domainBypass(/get-click2\\.blogspot\\.com|kisechan\\.web\\.id/,()=>{
+					let u=aesCrypto.decrypt(convertstr(location.href.substr(location.href.indexOf("?o=")+3)),convertstr("root"))
 					if(isGoodLink(u))
 					{
 						location.hash=""
