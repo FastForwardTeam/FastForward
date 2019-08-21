@@ -801,9 +801,9 @@ if(document instanceof HTMLDocument)
 						safelyNavigate(a.href)
 					},()=>ifElement("frame[src^='interstitualAdTop.php?url=']",f=>location.href=f.src))
 				})
-				hrefBypass(/safe\.doramaku\.me\/\?web=/,()=>{
-					document.querySelector('form').setAttribute('action','//'+location.hostname)
-					document.querySelector('input').setAttribute('name','link')
+				domainBypass("safe.doramaku.me",()=>{
+					document.querySelector("form").setAttribute("action","//"+location.hostname)
+					document.querySelector("input").setAttribute("name","link")
 				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
