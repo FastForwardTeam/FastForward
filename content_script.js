@@ -860,37 +860,28 @@ if(document instanceof HTMLDocument)
 				}
 				if(typeof changeLink=="function")
 				{
-					let cLT=setInterval(()=>{
-						if((document.querySelector("img#pleasewait")&&document.querySelector(".wait"))
-							||document.getElementById("showlink")
-						||document.getElementById("download")
-						||document.getElementsByTagName("style='margin-top:").length
-						||document.querySelector(".Visit_Link")//yametesenpai.xyz
-						||document.getElementById("daplong")//converthinks.xyz
-						)
-						{
-							clearInterval(cLT)
-							let _open=window.open
-							window.open=l=>{
-								if(l.substr(0,22)=="https://api.rurafs.me/")
-								{
-									window.open=_open
-								}
-								else
-								{
-									safelyNavigate(l)
-								}
-							}
-							if(typeof changeLink=="function")
+					ifElement("#showlink",()=>{
+						let _open=window.open
+						window.open=l=>_open(l,"_self")
+						setTimeout(()=>{
+							document.querySelector("a[href='#generate']").click()
+							setTimeout(()=>document.querySelector("#showlink").click(),500)
+						},500)
+					},()=>{
+						let cLT=setInterval(()=>{
+							if((document.querySelector("img#pleasewait")&&document.querySelector(".wait"))
+							||document.getElementById("download")
+							||document.getElementsByTagName("style='margin-top:").length
+							||document.querySelector(".Visit_Link")//yametesenpai.xyz
+							||document.getElementById("daplong")//converthinks.xyz
+							)
 							{
+								clearInterval(cLT)
+								window.open=l=>safelyNavigate(l)
 								changeLink()
 							}
-							else if(document.getElementById("link-download"))//hightech.web.id
-							{
-								safelyNavigate(document.getElementById("link-download").href)
-							}
-						}
-					},100)
+						},100)
+					})
 				}
 				if(document.querySelector("form#show > [type='submit']") && document.getElementById("tunggu") && document.getElementById("hapus") && typeof counter != "undefined" && typeof countDown != "undefined" && typeof download != "undefined")//realsht.mobi,namiyt.com
 				{
