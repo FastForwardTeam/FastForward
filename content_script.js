@@ -1130,7 +1130,7 @@ if(document instanceof HTMLDocument)
 					//AdLinkFly
 					if(typeof app_vars=="object")
 					{
-						if(location.search.substr(0,3)=="?a=")
+						if(location.search.substr(0,3)=="?a="&&document.querySelector("img[alt='SafelinkU']"))
 						{
 							//SafelinkU
 							window.setInterval=f=>setInterval(f,10)
