@@ -48,7 +48,7 @@
 		"message": "Ce serait bien si vous pouviez soumettre des contournements fonctionnels sur GitHub, afin que d'autres personnes puissent en bénéficier."
 	},
 	"beforeNavigate": {
-		"message": "Vous êtes presque arrivé à destination !"
+		"message": "Vous êtes presque arrivé à destination."
 	},
 	"beforeNavigateDestination": {
 		"message": "Votre destination est %"
