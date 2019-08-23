@@ -1124,10 +1124,12 @@ if(document instanceof HTMLDocument)
 					//AdLinkFly
 					if(typeof app_vars=="object")
 					{
-						if(location.search.substr(0,3)=="?a="&&document.querySelector("img[alt='SafelinkU']"))
+						if(location.search.substr(0,3)=="?a=")
 						{
-							//SafelinkU
-							window.setInterval=f=>setInterval(f,10)
+							if(document.querySelector("img[alt='SafelinkU']"))
+							{
+								window.setInterval=f=>setInterval(f,10)
+							}
 							crowdPath(location.search.substr(3))
 						}
 						domainBypass(/atv\\.pw|safe\\.mirrordown\\.com|kabarviral\\.blog/,()=>{
