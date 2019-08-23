@@ -891,6 +891,14 @@ if(document instanceof HTMLDocument)
 					document.querySelector("form#show > [type='submit']").click()
 				}
 				//Safelink Wordpress Plugin
+				ifElement(".wpsafe-bottom > #wpsafe-link1 > a[href*='/r/?']",a=>{
+					safelyNavigate(new URL(a.href).search.replace("?",""))
+					finish()
+				})
+				ifElement(".wpsafe-bottom > #wpsafe-linkq1 > a[href]",a=>{
+					safelyNavigate(a.href)
+					finish()
+				})
 				ifElement("a[href*='?safelink_redirect=']",a=>{
 					safelyNavigate(new URL(a.href).searchParams.get("safelink_redirect"))
 					finish()
