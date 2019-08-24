@@ -861,15 +861,17 @@ if(document instanceof HTMLDocument)
 					bukalink()
 					return finish()
 				}
+				if(document.querySelector(".rurasafesubmit")){
+					document.querySelector(".rurasafesubmit").click()
+					return finish()
+				}
 				if(typeof changeLink=="function")
 				{
 					ifElement("#showlink",()=>{
 						let _open=window.open
 						window.open=l=>_open(l,"_self")
-						setTimeout(()=>{
-							document.querySelector("a[href='#generate']").click()
-							setTimeout(()=>document.querySelector("#showlink").click(),500)
-						},500)
+						$(document).ajaxStop(()=>document.querySelector("#showlink").click())
+						document.querySelector("a[href='#generate']").click()
 					},()=>{
 						let cLT=setInterval(()=>{
 							if((document.querySelector("img#pleasewait")&&document.querySelector(".wait"))
