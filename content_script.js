@@ -336,7 +336,7 @@ if(document instanceof HTMLDocument)
 					}
 				})
 			})
-			domainBypass("sourceforge.net",()=>{
+			hrefBypass(/sourceforge\\.net\\/projects\\/.+\\/files\\/.+\\/download/,()=>{
 				var b=document.createElement("button"),d=false
 				b.className="direct-download"
 				b.style.display="none"
