@@ -707,7 +707,15 @@ if(document instanceof HTMLDocument)
 					ifElement("a#proceed[href]",a=>safelyNavigate(a.href))
 				})
 				domainBypass("oxy.cloud",()=>{
-					location.href=new URL(document.querySelector("#divdownload > a[href]").href).searchParams.get("predirect")
+					let params=new URL(document.querySelector("#divdownload > a[href]").href).searchParams
+					if(params.has("predirect"))
+					{
+						location.href=params.get("predirect")
+					}
+					else if(params.has("bpredirect"))
+					{
+						location.href=atob(params.get("bpredirect"))
+					}
 				})
 				domainBypass("daunshorte.teknologilink.com",()=>{
 					location.href=document.querySelector("a[href^='https://teknosafe.teknologilink.com/linkteknolink/safelinkscript.php?']").href
