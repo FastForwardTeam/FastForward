@@ -867,12 +867,12 @@ if(document instanceof HTMLDocument)
 				})
 				if(typeof changeLink=="function")
 				{
-					ifElement("#showlink",s=>{
+					ifElement(".rurasafectrl",()=>{
 						let _open=window.open
 						window.open=l=>_open(l,"_self")
 						if(typeof $!="undefined")
 						{
-							$(document).ajaxStop(()=>s.click())
+							$(document).ajaxStop(()=>document.querySelector("#showlink").click())
 						}
 						ifElement("a[href='#generate']",a=>{
 							a.click()
@@ -884,6 +884,7 @@ if(document instanceof HTMLDocument)
 							||document.getElementsByTagName("style='margin-top:").length
 							||document.querySelector(".Visit_Link")//yametesenpai.xyz
 							||document.getElementById("daplong")//converthinks.xyz
+							||document.querySelector(".eastsafelink")//anjay.info
 							)
 							{
 								clearInterval(cLT)
