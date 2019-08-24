@@ -861,17 +861,22 @@ if(document instanceof HTMLDocument)
 					bukalink()
 					return finish()
 				}
-				if(document.querySelector(".rurasafesubmit")){
-					document.querySelector(".rurasafesubmit").click()
-					return finish()
-				}
+				ifElement(".rurasafesubmit",b=>{
+					b.click()
+					finish()
+				})
 				if(typeof changeLink=="function")
 				{
-					ifElement("#showlink",()=>{
+					ifElement("#showlink",s=>{
 						let _open=window.open
 						window.open=l=>_open(l,"_self")
-						$(document).ajaxStop(()=>document.querySelector("#showlink").click())
-						document.querySelector("a[href='#generate']").click()
+						if(typeof $!="undefined")
+						{
+							$(document).ajaxStop(()=>s.click())
+						}
+						ifElement("a[href='#generate']",a=>{
+							a.click()
+						})
 					},()=>{
 						let cLT=setInterval(()=>{
 							if((document.querySelector("img#pleasewait")&&document.querySelector(".wait"))
