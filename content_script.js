@@ -7,7 +7,17 @@ if(document instanceof HTMLDocument)
 		{
 			return
 		}
-		let script=document.createElement("script")
+		let script=document.createElement("script"),
+		gen_chan=()=>"data-"+Math.random().toString().substr(2),
+		message_channel={
+			stop_watching:gen_chan(),
+			crowd_path:gen_chan(),
+			crowd_query:gen_chan(),
+			crowd_queried:gen_chan(),
+			crowd_contribute:gen_chan(),
+			adlinkfly_info:gen_chan(),
+			adlinkfly_target:gen_chan()
+		}
 		script.innerHTML=`(()=>{
 			const crowdEnabled=`+(res.crowdEnabled?"true":"false")+`,
 			ODP=(t,p,o)=>{try{Object.defineProperty(t,p,o)}catch(e){console.trace("[Universal Bypass] Couldn't define",p)}},
@@ -62,7 +72,7 @@ if(document instanceof HTMLDocument)
 			},
 			finish=()=>{
 				bypassed=true
-				document.documentElement.setAttribute("data-universal-bypass-stop-watching","")
+				document.documentElement.setAttribute("`+message_channel.stop_watching+`","")
 			},
 			domainBypass=(domain,f)=>{
 				if(bypassed)
@@ -136,7 +146,7 @@ if(document instanceof HTMLDocument)
 			crowdPath=p=>{
 				if(crowdEnabled)
 				{
-					document.documentElement.setAttribute("data-universal-bypass-crowd-path",p)
+					document.documentElement.setAttribute("`+message_channel.crowd_path+`",p)
 				}
 			},
 			crowdBypass=f=>{
@@ -152,12 +162,12 @@ if(document instanceof HTMLDocument)
 					}
 					else
 					{
-						document.documentElement.setAttribute("data-universal-bypass-crowd-query","")
+						document.documentElement.setAttribute("`+message_channel.crowd_query+`","")
 						let iT=setInterval(()=>{
-							if(document.documentElement.hasAttribute("data-universal-bypass-crowd-queried"))
+							if(document.documentElement.hasAttribute("`+message_channel.crowd_queried+`"))
 							{
 								clearInterval(iT)
-								document.documentElement.removeAttribute("data-universal-bypass-crowd-queried")
+								document.documentElement.removeAttribute("`+message_channel.crowd_queried+`")
 								f()
 							}
 						},20)
@@ -169,7 +179,7 @@ if(document instanceof HTMLDocument)
 				{
 					if(crowdEnabled)
 					{
-						document.documentElement.setAttribute("data-universal-bypass-crowd-contribute",target)
+						document.documentElement.setAttribute("`+message_channel.crowd_contribute+`",target)
 						setTimeout(()=>{
 							unsafelyNavigate(target)
 						},10)
@@ -1159,12 +1169,12 @@ if(document instanceof HTMLDocument)
 						domainBypass(/atv\\.pw|safe\\.mirrordown\\.com|kabarviral\\.blog|lewat\\.club/,()=>{
 							crowdPath(location.search.substr(1).split("=")[0])
 						})
-						document.documentElement.setAttribute("data-universal-bypass-adlinkfly-info","")
+						document.documentElement.setAttribute("`+message_channel.adlinkfly_info+`","")
 						let iT=setInterval(()=>{
-							if(document.documentElement.hasAttribute("data-universal-bypass-adlinkfly-target"))
+							if(document.documentElement.hasAttribute("`+message_channel.adflinkfly_target+`"))
 							{
 								clearInterval(iT)
-								let t=document.documentElement.getAttribute("data-universal-bypass-adlinkfly-target")
+								let t=document.documentElement.getAttribute("`+message_channel.adlinkfly_target+`")
 								if(t=="")
 								{
 									crowdBypass(()=>{
@@ -1216,19 +1226,19 @@ if(document instanceof HTMLDocument)
 				},10000)
 			})`
 		let dO=new MutationObserver(mutations=>{//
-			if(document.documentElement.hasAttribute("data-universal-bypass-stop-watching"))
+			if(document.documentElement.hasAttribute(message_channel.stop_watching))
 			{
-				document.documentElement.removeAttribute("data-universal-bypass-stop-watching")
+				document.documentElement.removeAttribute(message_channel.stop_watching)
 				dO.disconnect()
 			}
-			else if(document.documentElement.hasAttribute("data-universal-bypass-crowd-path"))
+			else if(document.documentElement.hasAttribute(message_channel.crowd_path))
 			{
-				crowdPath=document.documentElement.getAttribute("data-universal-bypass-crowd-path")
-				document.documentElement.removeAttribute("data-universal-bypass-crowd-path")
+				crowdPath=document.documentElement.getAttribute(message_channel.crowd_path)
+				document.documentElement.removeAttribute(message_channel.crowd_path)
 			}
-			else if(document.documentElement.hasAttribute("data-universal-bypass-crowd-query"))
+			else if(document.documentElement.hasAttribute(message_channel.crowd_query))
 			{
-				document.documentElement.removeAttribute("data-universal-bypass-crowd-query")
+				document.documentElement.removeAttribute(message_channel.crowd_query)
 				let xhr=new XMLHttpRequest()
 				xhr.onreadystatechange=()=>{
 					if(xhr.readyState==4&&xhr.status==200&&xhr.responseText!="")
@@ -1238,28 +1248,28 @@ if(document instanceof HTMLDocument)
 					}
 					else
 					{
-						document.documentElement.setAttribute("data-universal-bypass-crowd-queried","")
+						document.documentElement.setAttribute(message_channel.crowd_queried,"")
 					}
 				}
 				xhr.open("POST","https://universal-bypass.org/crowd/query_v1",true)
 				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
 				xhr.send("domain="+encodeURIComponent(domain)+"&path="+encodeURIComponent(crowdPath))
 			}
-			else if(document.documentElement.hasAttribute("data-universal-bypass-crowd-contribute"))
+			else if(document.documentElement.hasAttribute(message_channel.crowd_contribute))
 			{
-				const target=document.documentElement.getAttribute("data-universal-bypass-crowd-contribute")
-				document.documentElement.removeAttribute("data-universal-bypass-crowd-contribute")
+				const target=document.documentElement.getAttribute(message_channel.crowd_contribute)
+				document.documentElement.removeAttribute(message_channel.crowd_contribute)
 				brws.runtime.sendMessage({
 					type: "crowd-contribute",
 					data: "domain="+encodeURIComponent(domain)+"&path="+encodeURIComponent(crowdPath)+"&target="+encodeURIComponent(target)
 				})
 			}
-			else if(document.documentElement.hasAttribute("data-universal-bypass-adlinkfly-info"))
+			else if(document.documentElement.hasAttribute(message_channel.adlinkfly_info))
 			{
-				document.documentElement.removeAttribute("data-universal-bypass-adlinkfly-info")
+				document.documentElement.removeAttribute(message_channel.adlinkfly_info)
 				let port=brws.runtime.connect({name: "adlinkfly-info"})
 				port.onMessage.addListener(msg => {
-					document.documentElement.setAttribute("data-universal-bypass-adlinkfly-target", msg)
+					document.documentElement.setAttribute(message_channel.adlinkfly_target, msg)
 					port.disconnect()
 				})
 				port.postMessage(location.href)
