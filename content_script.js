@@ -542,13 +542,19 @@ if(document instanceof HTMLDocument)
 				})
 				domainBypass(/ux9\\.de|pucuktranslation\\.pw/,()=>{
 					ifElement("meta[http-equiv='refresh'][content]",m=>{
-						if(m.content.indexOf(";url=http") > -1)
+						let c=m.content.replace("; url=",";url=")
+						if(c.indexOf(";url=") > -1)
 						{
-							safelyNavigate(m.content.split(";url=")[1])
+							safelyNavigate(c.split(";url=")[1])
 						}
-						else if(m.content.indexOf("; url=http") > -1)
+					})
+				})
+				domainBypass("softpedia.com",()=>{
+					ifElement("meta[http-equiv='refresh'][content]",m=>{
+						let c=m.content.replace("; url=",";url=")
+						if(c.indexOf(";url=") > -1)
 						{
-							safelyNavigate(m.content.split("; url=")[1])
+							location.href=c.split(";url=")[1]
 						}
 					})
 				})
