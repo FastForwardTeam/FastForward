@@ -832,6 +832,16 @@ if(document instanceof HTMLDocument)
 					document.querySelector("form").setAttribute("action","//"+location.hostname)
 					document.querySelector("input").setAttribute("name","link")
 				})
+				domainBypass("bermedsos.com",()=>{
+					awaitElement("#recaptchaResponse[value]",r=>{
+						let f=document.createElement("form")
+						f.method="POST"
+						f.action=theShit.base+"?z="+theShit.id
+						f.innerHTML='<input type="hidden" name="z" value="'+theShit.z+'"><input type="hidden" name="c" value="'+r.value+'"><input type="hidden" name="soramode" value="'+soramode+'">'
+						f=document.body.appendChild(f)
+						f.submit()
+					})
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
