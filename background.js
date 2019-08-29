@@ -218,7 +218,8 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 },{types:["main_frame"],urls:[
 "*://*.news-gg.com/l/?*",
 "*://*.mobile01.com/redirect.php?*",
-"*://ref.gamer.com.tw/redir.php?*"
+"*://*.nurhamka.com/*?url=*",
+"*://*.linepc.site/*?url=*",
 ]},["blocking"])
 
 
