@@ -294,7 +294,8 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 "*://*.lifeasurance.com/?r=*",
 "*://*.ceklinku.xyz/?r=*",
 "*://*.xneet.id/?r=*",
-"*://*.uxglow.com/?r=*"
+"*://*.uxglow.com/?r=*",
+"*://*.infokesehatan.club/?r=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
