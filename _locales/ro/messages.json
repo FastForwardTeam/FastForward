@@ -1,0 +1,56 @@
+{
+	"appDesc": {
+		"message": "Nu-ți pierde timpul așteptând după ei. Universal Bypass te scapă de linkurile scurtate, ducându-te direct la destinație."
+	},
+	"firstrunTitle": {
+		"message": "Vă mulțumim că ați instalat Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "Ești fantastic(ă)!"
+	},
+	"firstrunNoScript": {
+		"message": "Totuși, se pare că folosești NoScript, care interferează cu Universal Bypass."
+	},
+	"faq": {
+		"message": "Întrebări populare"
+	},
+	"options": {
+		"message": "Opțiuni"
+	},
+	"optionsLink": {
+		"message": "Schimbă setările Universal Bypass."
+	},
+	"optionsEnabled": {
+		"message": "Pornește bypassul."
+	},
+	"optionsTrackerBypass": {
+		"message": "Scapă de urmăritori folosind Apimon.de."
+	},
+	"optionsInstantNavigation": {
+		"message": "Du-mă instant la destinație."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Du-mă instant la destinația urmăritorilor."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Blochează urmăritorii de IP dacă nu poți scăpa de ei."
+	},
+	"optionsCrowdBypass": {
+		"message": "Arată destinațiile scurtăturilor ce nu pot fi păcălite."
+	},
+	"privacyPolicy": {
+		"message": "Politică de confidențialitate"
+	},
+	"optionsUserscripts": {
+		"message": "Bypassuri personalizate"
+	},
+	"optionsUserscriptsSubtitle": {
+		"message": "Ar fi frumos să împărtășiți bypassurile care funcționează pe GitHub, ca alții să le folosească."
+	},
+	"beforeNavigate": {
+		"message": "Sunteți aproape de destinație."
+	},
+	"beforeNavigateDestination": {
+		"message": "Mai sunt doar %"
+	}
+}

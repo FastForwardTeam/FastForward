@@ -57,7 +57,7 @@
 		"message": "Apakah Anda ingin Universal Bypass langsung mengarahkan ke tujuan Anda?"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass mencegah IP Anda saat sedang login."
+		"message": "Universal Bypass mencegah IP anda terlog."
 	},
 	"blockedSubtitle": {
 		"message": "Tidak ingin Universal Bypass untuk mencegah situs buruk dari mendapatkan IP Anda?"
@@ -66,7 +66,7 @@
 		"message": "Anda mungkin tidak perlu menunggu !"
 	},
 	"crowdBypassedInfo": {
-		"message": "Pengguna Universal Bypass lainnya sudah menunggu untuk anda dan melaporkan bahwa hal ini menyebabkan %"
+		"message": "Pengguna Universal Bypass lainnya sudah menunggu untuk anda dan melaporkan bahwa tautan ini menuju ke %"
 	},
 	"crowdBypassedIgnore": {
 		"message": "Apakah ini tidak benar ?"
