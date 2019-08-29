@@ -767,9 +767,6 @@ if(document instanceof HTMLDocument)
 				domainBypass("boostme.gg",()=>{
 					safelyNavigate(document.querySelector("a[href]#go").href)
 				})
-				domainBypass("apkmodif.com",()=>{
-					safelyNavigate(document.querySelector("input[type='hidden'][name='geturl'][value^='https://']").value)
-				})
 				domainBypass("driverays.com",()=>{
 					safelyNavigate(document.querySelector("a#link[href]").href)
 				})
@@ -1101,6 +1098,13 @@ if(document instanceof HTMLDocument)
 				{
 					ifElement("center a[name=a][href]",a=>{
 						safelyNavigate(a.href)
+						finish()
+					})
+				}
+				if(document.querySelector(".fb-comments[data-href^='https://duit.cc/']"))
+				{
+					ifElement("input[type='hidden'][name='geturl'][value^='http']",i=>{
+						safelyNavigate(i.value)
 						finish()
 					})
 				}
