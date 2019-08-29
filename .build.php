@@ -49,7 +49,6 @@ foreach($index as $fn)
 	if($fn == "manifest.json")
 	{
 		$json = json_decode(file_get_contents($fn), true);
-		unset($json["web_accessible_resources"]);
 		$json["incognito"] = "split";
 		$build->addFromString($fn, json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
 	}

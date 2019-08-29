@@ -1191,7 +1191,7 @@ if(document instanceof HTMLDocument)
 						})
 						document.documentElement.setAttribute("`+message_channel.adlinkfly_info+`","")
 						let iT=setInterval(()=>{
-							if(document.documentElement.hasAttribute("`+message_channel.adflinkfly_target+`"))
+							if(document.documentElement.hasAttribute("`+message_channel.adlinkfly_target+`"))
 							{
 								clearInterval(iT)
 								let t=document.documentElement.getAttribute("`+message_channel.adlinkfly_target+`")
