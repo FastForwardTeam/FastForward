@@ -44,8 +44,8 @@
 	"optionsUserscripts": {
 		"message": "Custom Bypasses"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "It would be nice if you could submit working bypasses on GitHub, so others can benefit from it."
+	"optionsUserscriptsDescription": {
+		"message": "This is an advanced feature for developers to create their own scripts to bypass sites. Once perfected, they can then be submitted on GitHub to be added to Universal Bypass, so they're available to everyone."
 	},
 	"beforeNavigate": {
 		"message": "You're almost at your destination."

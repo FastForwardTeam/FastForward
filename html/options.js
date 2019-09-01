@@ -126,7 +126,7 @@ hrefBypass(/example\\.(com|org)/, function()
 })
 // Enjoy! Your changes will be saved automatically.
 `,saveTimer,editor=ace.edit("userscript",{mode:"ace/mode/javascript",theme:"ace/theme/monokai"}),
-span=document.querySelector("[data-message='optionsUserscriptsSubtitle']")
+span=document.querySelector("[data-message='optionsUserscriptsDescription']")
 span.innerHTML=span.textContent.replace("GitHub","<a href='https://github.com/timmyrs/Universal-Bypass/blob/master/content_script.js' target='_blank'>GitHub</a>")
 brws.storage.local.get(["userscript"],res=>{
 	if(res&&res.userscript)
