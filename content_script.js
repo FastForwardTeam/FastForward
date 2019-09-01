@@ -839,6 +839,18 @@ if(document instanceof HTMLDocument)
 						f.submit()
 					})
 				})
+				domainBypass("confile.net",()=>{
+					ifElement("#verif > form [type='submit']",b=>b.click(),()=>{
+						if(typeof downloadButton=="object"&&downloadButton instanceof HTMLAnchorElement)
+						{
+							safelyNavigate(downloadButton.href)
+						}
+						else
+						{
+							window.setInterval=f=>setInterval(f,1)
+						}
+					})
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
