@@ -851,6 +851,17 @@ if(document instanceof HTMLDocument)
 						}
 					})
 				})
+				domainBypass(/linkshrtn\\.com|(xtiny|shrten)\\.link/,()=>{
+					window.open=u=>window
+					window.setTimeout=f=>setTimeout(f,1)
+					window.setInterval=f=>setInterval(f,1)
+					awaitElement(".complete_btn:not([disabled])",b=>b.onclick({isTrusted:1}))
+					document.querySelectorAll(".all_steps > .step_block:not(.step_done)").forEach(e=>{
+						e.onclick({isTrusted:1})
+						$(window).on("blur")
+						$(window).on("focus")
+					})
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
