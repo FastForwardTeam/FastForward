@@ -862,6 +862,9 @@ if(document instanceof HTMLDocument)
 						$(window).on("focus")
 					})
 				})
+				domainBypass("spacetica.com",()=>{
+					ifElement("a.btn-primary[href]",a=>safelyNavigate(a.href))
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
