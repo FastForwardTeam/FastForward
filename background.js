@@ -305,7 +305,8 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		return getRedirect(atob(details.url.substr(details.url.indexOf("?url=")+5)))
 	}
 },{types:["main_frame"],urls:[
-"*://*.mispuani.xyz/*?url=*"
+"*://*.mispuani.xyz/*?url=*",
+"*://*.zonangopi.ml/p/generate.html?url=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
