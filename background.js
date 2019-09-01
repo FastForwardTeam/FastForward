@@ -487,6 +487,19 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
 		let url=new URL(details.url)
+		if(url.hash)
+		{
+			return getRedirect(atob(url.hash.replace("#","")))
+		}
+	}
+},{types:["main_frame"],urls:[
+"*://*.acorme.com/*",
+]},["blocking"])
+
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
+		let url=new URL(details.url)
 		if(url.searchParams.has("dest"))
 		{
 			return getRedirect(url.searchParams.get("dest"))
