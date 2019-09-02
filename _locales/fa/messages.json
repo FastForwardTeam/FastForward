@@ -38,9 +38,6 @@
 	"optionsUserscripts": {
 		"message": ".میان بر های سفارشی"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": ".خوب می شد اگر تو می توانستی میان بر های کار کننده را به گیت هاب ارسال کنی تا دیگران هم از آن سود ببرند"
-	},
 	"beforeNavigate": {
 		"message": ".شما تقریبا به مقصدتان رسیده اید"
 	},

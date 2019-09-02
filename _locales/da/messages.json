@@ -44,8 +44,8 @@
 	"optionsUserscripts": {
 		"message": "Tilpassede Omgåelser"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "Det ville være fint, hvis du kunne indsende fungerende omgåelser til GitHub, så andre kan drage fordel af dem."
+	"optionsUserscriptsDescription": {
+		"message": "Dette er en avanceret funktion, så udviklere kan oprette deres egne scripts til at omgå websteder. Når de er finpudsede, kan de derefter indsendes på GitHub for at blive føjet til Universal Bypass, og blive tilgængelige for alle."
 	},
 	"beforeNavigate": {
 		"message": "Du er næsten på din destination."

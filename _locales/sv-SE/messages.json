@@ -44,8 +44,8 @@
 	"optionsUserscripts": {
 		"message": "Anpassade förbikopplingar"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "Det vore snällt om du kunde skicka upp fungerande förbikopplingar till GitHub, så andra också kan ha nytta av dem."
+	"optionsUserscriptsDescription": {
+		"message": "Detta är en avancerad funktion för utvecklare som vill skapa egna skript för att gå förbi webbplatser. När de fungerar, kan de sedan skickas in till GitHub för att läggas till Universal Bypass, så alla får tillgång till dem."
 	},
 	"beforeNavigate": {
 		"message": "Du har nästan nått ditt mål."

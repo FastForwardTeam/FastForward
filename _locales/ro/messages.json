@@ -44,9 +44,6 @@
 	"optionsUserscripts": {
 		"message": "Bypassuri personalizate"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "Ar fi frumos să împărtășiți bypassurile care funcționează pe GitHub, ca alții să le folosească."
-	},
 	"beforeNavigate": {
 		"message": "Sunteți aproape de destinație."
 	},

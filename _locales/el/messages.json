@@ -6,7 +6,7 @@
 		"message": "Ευχαριστούμε που εγκαταστήσατε το Universal Bypass!"
 	},
 	"firstrunSubtitle": {
-		"message": "Είστε καταπληκτικός\/ή!"
+		"message": "Είστε καταπληκτικός/ή!"
 	},
 	"firstrunNoScript": {
 		"message": "Ωστόσο, φαίνεται να χρησιμοποιείτε NoScript ή παρόμοιο, με τα οποία το Universal Bypass δεν είναι συμβατό."
@@ -40,9 +40,6 @@
 	},
 	"optionsUserscripts": {
 		"message": "Προσαρμοσμένες παρακάμψεις"
-	},
-	"optionsUserscriptsSubtitle": {
-		"message": "Θα ήταν ωραίο αν θα μπορούσατε να υποβάλετε παρακάμψεις που να λειτουργούν στο GitHub, έτσι ώστε και άλλοι να μπορούν να επωφεληθούν από αυτό."
 	},
 	"beforeNavigate": {
 		"message": "Είστε σχεδόν στο προορισμό σας."

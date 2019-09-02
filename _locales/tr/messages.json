@@ -44,9 +44,6 @@
 	"optionsUserscripts": {
 		"message": "Özel Es Geçmeler"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "Çalışan es geçmelerinizi GitHub'a eklerseniz diğerlerinin de yararlanması adına iyi olur."
-	},
 	"beforeNavigate": {
 		"message": "Neredeyse vardınız."
 	},

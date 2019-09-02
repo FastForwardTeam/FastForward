@@ -44,9 +44,6 @@
 	"optionsUserscripts": {
 		"message": "Персонализирани байпаси"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "Би било хубаво, ако можете да изпратите работещи байпаси на GitHub, за да могат другите да се възползват от тях."
-	},
 	"beforeNavigate": {
 		"message": "Почти сте на местоназначението си."
 	},

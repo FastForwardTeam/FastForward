@@ -44,8 +44,8 @@
 	"optionsUserscripts": {
 		"message": "Prilagođeno zaobilaženje"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "Bilo bi lijepo kada bi poslati ispavni zaobilazak na GitHub, tako da i drugi imaju koristi od toga."
+	"optionsUserscriptsDescription": {
+		"message": "Ovo je napredna mogućnost za developere kako bi stvorili nova zaobilaženja. Jednom kada su usavršena mogu se poslati na GitHub, kako bi bi bila dostupna svim korisnicima Universal Bypass-a."
 	},
 	"beforeNavigate": {
 		"message": "Skoro ste na odredištu."

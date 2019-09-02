@@ -44,9 +44,6 @@
 	"optionsUserscripts": {
 		"message": "Aangepaste bypasses"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "Het zou leuk zijn als je je eigen toevoegingen op Github zou publiceren, zodat anderen er ook profijt van kunnen hebben."
-	},
 	"beforeNavigate": {
 		"message": "Je bent bijna op je bestemming."
 	},

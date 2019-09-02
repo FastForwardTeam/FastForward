@@ -44,8 +44,8 @@
 	"optionsUserscripts": {
 		"message": "Atur Bypass sesuai keinginan"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "Akan lebih baik jika Anda bisa mengirimkan bypass karya anda lewat GitHub, sehingga orang lain dapat memperoleh manfaatnya."
+	"optionsUserscriptsDescription": {
+		"message": "Ini adalah fitur canggih bagi pengembang untuk membuat skrip sendiri untuk mem-bypass situs. Setelah disempurnakan, dapat diajukan di GitHub untuk ditambahkan ke Universal Bypass Universal, sehingga mereka tersedia untuk semua orang."
 	},
 	"beforeNavigate": {
 		"message": "Anda hampir sampai pada tujuan anda."

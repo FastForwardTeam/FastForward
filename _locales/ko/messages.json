@@ -44,9 +44,6 @@
 	"optionsUserscripts": {
 		"message": "사용자 지정 우회책"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "잘 작동하는 우회책을 GitHub에 제출하면 모두에게 이득이 됩니다."
-	},
 	"beforeNavigate": {
 		"message": "거의 다 왔습니다."
 	},

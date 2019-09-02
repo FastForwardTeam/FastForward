@@ -3,7 +3,7 @@
 		"message": "Ne perdez pas votre temps avec la conformité. Universal Bypass saute automatiquement les raccourcisseurs de liens ennuyeux."
 	},
 	"firstrunTitle": {
-		"message": "Merci d'avoir installer Universal Bypass!"
+		"message": "Merci d'avoir installé Universal Bypass !"
 	},
 	"firstrunSubtitle": {
 		"message": "Vous êtes incroyable!"
@@ -36,7 +36,7 @@
 		"message": "Bloquer les enregistreurs d’IP si ils ne peuvent pas être contournés."
 	},
 	"optionsCrowdBypass": {
-		"message": "Acquérir les destinations des raccourcisseurs incontournables."
+		"message": "Obtenir les destinations des raccourcisseurs incontournables."
 	},
 	"privacyPolicy": {
 		"message": "Politique de Vie Privée"
@@ -44,8 +44,8 @@
 	"optionsUserscripts": {
 		"message": "Contournements personnalisés"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "Ce serait bien si vous pouviez soumettre des contournements fonctionnels sur GitHub, afin que d'autres personnes puissent en bénéficier."
+	"optionsUserscriptsDescription": {
+		"message": "Il s'agit d'une fonctionnalité avancée permettant aux développeurs de créer leurs propres scripts pour contourner les sites. Une fois mis au point, ils peuvent ensuite être soumis sur GitHub pour être ajoutés à Universal Bypass, afin qu'ils soient accessibles à tous."
 	},
 	"beforeNavigate": {
 		"message": "Vous êtes presque arrivé à destination."

@@ -44,9 +44,6 @@
 	"optionsUserscripts": {
 		"message": "Bypasses tùy chỉnh"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "Sẽ thật tuyệt vời nếu bạn có thể gửi Code bỏ qua hoạt động được lên GitHub, để giúp đỡ người khác."
-	},
 	"beforeNavigate": {
 		"message": "Bạn sắp đến đích đến."
 	},

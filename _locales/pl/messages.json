@@ -44,9 +44,6 @@
 	"optionsUserscripts": {
 		"message": "Niestandardowe obejścia"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "Byłoby miło, gdybyś mógł wysyłać własne działające niestandardowe obejście na GitHub-a, więc inni mogą z nich korzystać."
-	},
 	"beforeNavigate": {
 		"message": "Jesteś prawie w miejscu docelowym."
 	},

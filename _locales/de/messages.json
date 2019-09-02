@@ -44,8 +44,8 @@
 	"optionsUserscripts": {
 		"message": "Eigene Umgehungen"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "Es wäre nett, wenn du funktionierende Umgehungen auf GitHub einreichen würdest, damit Andere auch davon profitieren können."
+	"optionsUserscriptsDescription": {
+		"message": "Dies ist eine erweiterte Funktion für Entwickler, um eigene Skripte zu erstellen, um Webseiten zu umgehen. Wenn perfektioniert, können diese auf GitHub eingereicht werden, um in Universal Bypass hinzugefügt zu werden und allen zur Verfügung zu stehen."
 	},
 	"beforeNavigate": {
 		"message": "Du bist fast am Ziel."

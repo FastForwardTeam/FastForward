@@ -44,9 +44,6 @@
 	"optionsUserscripts": {
 		"message": "Tilpassede forbipasserere"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "Det hadde vært fint om du kunne meldt inn fungerende bypasser til GitHub, sånn at andre kan få nytte dem."
-	},
 	"beforeNavigate": {
 		"message": "Du er nesten i destinasjonen din."
 	},

@@ -44,9 +44,6 @@
 	"optionsUserscripts": {
 		"message": "Bypasses personalizadas"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "Nos ayudarías mucho enviando reglas de desvío funcionales mediante GitHub, de forma que otros puedan beneficiarse de ellas."
-	},
 	"beforeNavigate": {
 		"message": "Ya casi estas en tu destino."
 	},

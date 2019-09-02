@@ -44,9 +44,6 @@
 	"optionsUserscripts": {
 		"message": "Bypass personalizzati"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "Sarebbe bello se tu potessi inviare i bypass funzionanti su GitHub, in modo che anche altri possano trarne beneficio."
-	},
 	"beforeNavigate": {
 		"message": "Sei quasi a destinazione."
 	},

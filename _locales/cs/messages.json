@@ -41,9 +41,6 @@
 	"optionsUserscripts": {
 		"message": "Vlastní obcházení"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "Pomůžete nám, pokud dáte na GitHub funkčí bypassy."
-	},
 	"beforeNavigate": {
 		"message": "Jste téměř na destinaci."
 	},

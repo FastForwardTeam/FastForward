@@ -44,9 +44,6 @@
 	"optionsUserscripts": {
 		"message": "自定義繞過規則"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "如果您能夠在 GitHub 上協助添加新的繞過規則，那就實在太好了，如此一來大家都能夠受惠於您。"
-	},
 	"beforeNavigate": {
 		"message": "您與目的地觸手可及。"
 	},

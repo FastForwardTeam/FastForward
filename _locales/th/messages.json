@@ -44,9 +44,6 @@
 	"optionsUserscripts": {
 		"message": "สร้างตัวข้ามเอง"
 	},
-	"optionsUserscriptsSubtitle": {
-		"message": "มันจะดีมาก ถ้าคุณสามารถส่งงาน bypasses บน GitHub เพื่อให้ผู้อื่นได้รับประโยชน์"
-	},
 	"beforeNavigate": {
 		"message": "คุณใกล้ถึงจุดหมายปลายทางแล้ว"
 	},
