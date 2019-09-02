@@ -303,6 +303,15 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
+		return getRedirect(atob(details.url.substr(details.url.indexOf("?a=")+3)))
+	}
+},{types:["main_frame"],urls:[
+"*://*.adsafelink.net/generate?a=*"
+]},["blocking"])
+
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
 		return getRedirect(atob(details.url.substr(details.url.indexOf("?url=")+5)))
 	}
 },{types:["main_frame"],urls:[
