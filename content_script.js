@@ -1212,7 +1212,7 @@ if(document instanceof HTMLDocument)
 							}
 							crowdPath(location.search.substr(3))
 						}
-						domainBypass(/atv\\.pw|safe\\.mirrordown\\.com|kabarviral\\.blog|lewat\\.club/,()=>{
+						domainBypass(/(atv|adlink)\\.pw|safe\\.mirrordown\\.com|kabarviral\\.blog|lewat\\.club/,()=>{
 							crowdPath(location.search.substr(1).split("=")[0])
 						})
 						document.documentElement.setAttribute("`+message_channel.adlinkfly_info+`","")
