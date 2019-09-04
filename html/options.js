@@ -109,6 +109,8 @@ domainBypass("example.com", function()
 		ifElement("a#skip_button[href]", a => {
 			safelyNavigate(a.href)
 			// safelyNavigate makes sure the given URL is valid
+		}, () => {
+			// Optional function to be called if the given element is not available
 		})
 	})
 	// You can also use awaitElement to wait until a given element is available via document.querySelector:
