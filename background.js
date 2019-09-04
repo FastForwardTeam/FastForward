@@ -560,6 +560,8 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 },{types:["main_frame"],urls:[
 //SafelinkU
 "*://*.bercara.com/*",
+"*://*.semawur.com/*",
+"*://*.in11.site/*",
 //Wadooo.com
 "*://*.wetbread.me/*"
 ]},["blocking","responseHeaders"])

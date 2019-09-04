@@ -1212,7 +1212,7 @@ if(document instanceof HTMLDocument)
 							}
 							crowdPath(location.search.substr(3))
 						}
-						domainBypass("bercara.com",()=>{
+						domainBypass(/(semawur|bercara)\\.com|in11\\.site/,()=>{
 							ifElement("input[type='hidden'][name='alias'][value]",i=>crowdPath(i.value),()=>crowdPath(location.hash.substr(1)))
 						})
 						domainBypass(/(atv|adlink)\\.pw|safe\\.mirrordown\\.com|kabarviral\\.blog|lewat\\.club/,()=>{
