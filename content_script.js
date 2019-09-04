@@ -1313,12 +1313,19 @@ if(document instanceof HTMLDocument)
 			else if(document.documentElement.hasAttribute(message_channel.adlinkfly_info))
 			{
 				document.documentElement.removeAttribute(message_channel.adlinkfly_info)
-				let port=brws.runtime.connect({name: "adlinkfly-info"})
-				port.onMessage.addListener(msg => {
-					document.documentElement.setAttribute(message_channel.adlinkfly_target, msg)
-					port.disconnect()
-				})
-				port.postMessage(location.href)
+				if(crowdPath==location.pathname.substr(1))
+				{
+					let port=brws.runtime.connect({name: "adlinkfly-info"})
+					port.onMessage.addListener(msg => {
+						document.documentElement.setAttribute(message_channel.adlinkfly_target, msg)
+						port.disconnect()
+					})
+					port.postMessage(location.href)
+				}
+				else
+				{
+					document.documentElement.setAttribute(message_channel.adlinkfly_target, "")
+				}
 			}
 		}),
 		domain=location.hostname,
