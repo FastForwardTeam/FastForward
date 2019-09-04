@@ -829,16 +829,6 @@ if(document instanceof HTMLDocument)
 					document.querySelector("form").setAttribute("action","//"+location.hostname)
 					document.querySelector("input").setAttribute("name","link")
 				})
-				domainBypass("bermedsos.com",()=>{
-					awaitElement("#recaptchaResponse[value]",r=>{
-						let f=document.createElement("form")
-						f.method="POST"
-						f.action=theShit.base+"?z="+theShit.id
-						f.innerHTML='<input type="hidden" name="z" value="'+theShit.z+'"><input type="hidden" name="c" value="'+r.value+'"><input type="hidden" name="soramode" value="'+soramode+'">'
-						f=document.body.appendChild(f)
-						f.submit()
-					})
-				})
 				domainBypass("confile.net",()=>{
 					ifElement("#verif > form [type='submit']",b=>b.click(),()=>{
 						if(typeof downloadButton=="object"&&downloadButton instanceof HTMLAnchorElement)
