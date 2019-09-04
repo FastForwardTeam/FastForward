@@ -546,6 +546,27 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 "*://*.ouo.press/*/*"
 ]},["blocking","responseHeaders"])
 
+
+//SafelinkU Crowd Bypass
+brws.webRequest.onHeadersReceived.addListener(details=>{
+	if(enabled)
+	{
+		let url = new URL(details.url)
+		for(let i in details.responseHeaders)
+		{
+			let header = details.responseHeaders[i]
+			if(header.name.toLowerCase() == "location")
+			{
+				details.responseHeaders[i].value += "#" + url.pathname.substr(1)
+				break
+			}
+		}
+		return{responseHeaders:details.responseHeaders}
+	}
+},{types:["main_frame"],urls:[
+"*://*.bercara.com/*"
+]},["blocking","responseHeaders"])
+
 //Fixing Content-Security-Policy on Firefox because apparently extensions have no special privileges in Firefox
 if(platform=="moz")
 {
