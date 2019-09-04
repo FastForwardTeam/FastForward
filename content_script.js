@@ -865,6 +865,9 @@ if(document instanceof HTMLDocument)
 				domainBypass("spacetica.com",()=>{
 					ifElement("a.btn-primary[href]",a=>safelyNavigate(a.href))
 				})
+				domainBypass("uiz.io",()=>{
+					ifElement("#go-adsredirect",f=>f.submit())
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
