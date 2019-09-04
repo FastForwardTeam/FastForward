@@ -432,6 +432,10 @@ if(document instanceof HTMLDocument)
 			domainBypass("hokiciki.org",()=>{
 				ifElement("a[href^='/get-link/']",a=>location.href=a.href)
 			})
+			domainBypass("wadooo.com",()=>{
+				crowdPath(location.hash.substr(1))
+				crowdBypass()
+			})
 			//Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
 			hrefBypass(/njiir\\.com|linkduit\\.net|k2s\\.cc|1link\\.club|cshort\\.(org|xyz)|muhammadyoga\\.me|u\\.to|skiplink\\.io|healthykk\\.com|punchsubs\\.net|linkasm\\.com|firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php|2speed\\.net\\/file\\//,()=>{
 				window.setInterval=f=>setInterval(f,1)
@@ -452,7 +456,10 @@ if(document instanceof HTMLDocument)
 					{
 						safelyNavigate(document.getElementById("link").href)
 					}
-					else ifElement("#getLinkNow",f=>f.submit())
+					else
+					{
+						ifElement("#getLinkNow",f=>f.submit())
+					}
 				})
 				domainBypass("srt.am",()=>{
 					if(document.querySelector(".skip-container"))
@@ -640,7 +647,10 @@ if(document instanceof HTMLDocument)
 					{
 						location.href=b.href
 					}
-					else ifElement("#download",b=>safelyNavigate(b.href))
+					else
+					{
+						ifElement("#download",b=>safelyNavigate(b.href))
+					}
 				})
 				hrefBypass(/4snip\\.pw\\/out\\//,()=>{
 					let f=document.querySelector("form[action^='../out2/']")
@@ -927,7 +937,7 @@ if(document instanceof HTMLDocument)
 					},()=>{
 						let cLT=setInterval(()=>{
 							if((document.querySelector("img#pleasewait")&&document.querySelector(".wait"))
-							||document.getElementById("download")
+								||document.getElementById("download")
 							||document.getElementsByTagName("style='margin-top:").length
 							||document.querySelector(".Visit_Link")//yametesenpai.xyz
 							||document.getElementById("daplong")//converthinks.xyz
@@ -1202,7 +1212,7 @@ if(document instanceof HTMLDocument)
 							}
 							crowdPath(location.search.substr(3))
 						}
-						domainBypass(/bercara\\.com/,()=>{
+						domainBypass("bercara.com",()=>{
 							ifElement("input[type='hidden'][name='alias'][value]",i=>crowdPath(i.value),()=>crowdPath(location.hash.substr(1)))
 						})
 						domainBypass(/(atv|adlink)\\.pw|safe\\.mirrordown\\.com|kabarviral\\.blog|lewat\\.club/,()=>{
