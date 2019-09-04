@@ -541,7 +541,7 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 "*://*.ouo.press/*/*"
 ]},["blocking","responseHeaders"])
 
-//Crowd Bypass Path Helper
+//SafelinkU Crowd Bypass
 brws.webRequest.onHeadersReceived.addListener(details=>{
 	if(enabled)
 	{
@@ -558,15 +558,30 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 		return{responseHeaders:details.responseHeaders}
 	}
 },{types:["main_frame"],urls:[
-//SafelinkU
 "*://*.bercara.com/*",
 "*://*.semawur.com/*",
-"*://*.in11.site/*",
-//Wadooo.com
-"*://*.wetbread.me/*"
+"*://*.in11.site/*"
 ]},["blocking","responseHeaders"])
 
 //Wadooo.com Crowd Bypass
+brws.webRequest.onHeadersReceived.addListener(details=>{
+	if(enabled)
+	{
+		let url = new URL(details.url)
+		for(let i in details.responseHeaders)
+		{
+			let header = details.responseHeaders[i]
+			if(header.name.toLowerCase() == "location")
+			{
+				details.responseHeaders[i].value += "#" + url.pathname.substr(3).split("/")[0]
+				break
+			}
+		}
+		return{responseHeaders:details.responseHeaders}
+	}
+},{types:["main_frame"],urls:[
+"*://*.wadooo.com/g/*"
+]},["blocking","responseHeaders"])
 brws.webRequest.onHeadersReceived.addListener(details=>{
 	if(enabled&&crowdEnabled&&details.method=="POST")
 	{
