@@ -3,16 +3,11 @@ if(file_exists("Universal Bypass.zip"))
 {
 	unlink("Universal Bypass.zip");
 }
-if(file_exists("Universal Bypass for Firefox.zip"))
-{
-	unlink("Universal Bypass for Firefox.zip");
-}
-
-echo "Indexing...\n";
-$index = [];
+$zip = new ZipArchive();
+$zip->open("Universal Bypass.zip", ZipArchive::CREATE + ZipArchive::EXCL + ZipArchive::CHECKCONS) or die("Failed to create Universal Bypass.zip.\n");
 function recursivelyIndex($dir)
 {
-	global $index;
+	global $zip;
 	foreach(scandir($dir) as $f)
 	{
 		if(substr($f, 0, 1) != ".")
@@ -22,41 +17,13 @@ function recursivelyIndex($dir)
 			{
 				recursivelyIndex($fn);
 			}
-			else
+			else if($fn != "README.md")
 			{
-				array_push($index, substr($fn, 2));
+				$fn = substr($fn, 2);
+				$zip->addFile($fn, $fn);
 			}
 		}
 	}
 }
 recursivelyIndex(".");
-
-echo "Building...\n";
-function createZip($file)
-{
-	$zip = new ZipArchive();
-	$zip->open($file, ZipArchive::CREATE + ZipArchive::EXCL + ZipArchive::CHECKCONS) or die("Failed to create {$file}.\n");
-	return $zip;
-}
-$build = createZip("Universal Bypass.zip");
-$firefox = createZip("Universal Bypass for Firefox.zip");
-foreach($index as $fn)
-{
-	if($fn == "README.md")
-	{
-		continue;
-	}
-	if($fn == "manifest.json")
-	{
-		$json = json_decode(file_get_contents($fn), true);
-		$json["incognito"] = "split";
-		$build->addFromString($fn, json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
-	}
-	else
-	{
-		$build->addFile($fn, $fn);
-	}
-	$firefox->addFile($fn, $fn);
-}
-$build->close();
-$firefox->close();
+$zip->close();
