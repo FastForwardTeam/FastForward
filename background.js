@@ -322,6 +322,15 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
+		return getRedirect(atob(details.url.substr(details.url.indexOf("?u=")+3)))
+	}
+},{types:["main_frame"],urls:[
+"*://*.rikucan.com/?u=*"
+]},["blocking"])
+
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
 		return getRedirect(atob(details.url.substr(details.url.indexOf("?site=")+6).split("&")[0]))
 	}
 },{types:["main_frame"],urls:[
