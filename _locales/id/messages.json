@@ -6,10 +6,10 @@
 		"message": "Terima kasih anda sudah menginstal Universal Bypass!"
 	},
 	"firstrunSubtitle": {
-		"message": "Anda luar biasa!"
+		"message": "Anda benar-benar luar biasa !"
 	},
 	"firstrunNoScript": {
-		"message": "Akan tetapi, anda sepertinya menggunakan NoScript atau menyerupai itu, Karena itu Universal Bypass tidak kompatibel dengannya."
+		"message": "Akan tetapi, anda sepertinya menggunakan ekstensi NoScript atau yang menyerupai itu, Karena itu Universal Bypass tidak kompatibel dengannya."
 	},
 	"faq": {
 		"message": "Pertanyaan yang Sering Diajukan\n(FAQ)"
@@ -24,7 +24,7 @@
 		"message": "Aktifkan bypass website."
 	},
 	"optionsTrackerBypass": {
-		"message": "Pelacak Bypass menggunakan Apimon.de."
+		"message": "Bypass pelacak menggunakan Apimon.de."
 	},
 	"optionsInstantNavigation": {
 		"message": "Langsung arahkan ke halaman tujuan."
@@ -36,7 +36,7 @@
 		"message": "Memblokir IP Logger jika tidak dapat dilewati."
 	},
 	"optionsCrowdBypass": {
-		"message": "Memberikan dan mendapatkan tujuan dari pemendek yang tidak dapat dilewati."
+		"message": "Memberi dan mendapatkan tujuan dari pemendek link yang tidak dapat dilewati."
 	},
 	"privacyPolicy": {
 		"message": "Kebijakan Pribadi"
@@ -45,7 +45,7 @@
 		"message": "Atur Bypass sesuai keinginan"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "Ini adalah fitur canggih bagi pengembang untuk membuat skrip sendiri untuk mem-bypass situs. Setelah disempurnakan, dapat diajukan di GitHub untuk ditambahkan ke Universal Bypass Universal, sehingga mereka tersedia untuk semua orang."
+		"message": "Ini adalah fitur khusus bagi para pengembang untuk membuat skrip sendiri untuk mem-bypass situs. Setelah disempurnakan, dapat diajukan di GitHub untuk ditambahkan ke Universal Bypass, sehingga bypass tersebut tersedia untuk semua orang."
 	},
 	"beforeNavigate": {
 		"message": "Anda hampir sampai pada tujuan anda."

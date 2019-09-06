@@ -1,0 +1,74 @@
+{
+	"appDesc": {
+		"message": "Ojo ngentekne waktune sampeyan gawe manuti aturan. Universal Bypass bakal kanthi otomatis nglewati pemendek link sing ngganggu."
+	},
+	"firstrunTitle": {
+		"message": "Matur sembah nuwun kanggo sampeyan sing nginstal Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "Sampeyan pancen Joss tenan!"
+	},
+	"firstrunNoScript": {
+		"message": "Nanging, kayane sampeyan nggunakake ekstensi NoScript utawa seng meh padha, mulane Universal Bypass ora kompatibel karo iku."
+	},
+	"faq": {
+		"message": "Pitakon Seng Umum (FAQ)"
+	},
+	"options": {
+		"message": "Pilihan"
+	},
+	"optionsLink": {
+		"message": "Ngganti setelan Universal Bypass."
+	},
+	"optionsEnabled": {
+		"message": "Ngaktifake trabasan situs web."
+	},
+	"optionsTrackerBypass": {
+		"message": "Trabas pelacak nggunakake Apimon.de."
+	},
+	"optionsInstantNavigation": {
+		"message": "Langsung arahne menyang tujuan."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Langsung arahne menyang tujuan saka pelacak."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Blokir IP loggers yen ora bisa ditrabas."
+	},
+	"optionsCrowdBypass": {
+		"message": "Menehi lan entuk tujuan saka pemendek link sing ora bisa ditrabas."
+	},
+	"privacyPolicy": {
+		"message": "Kebijakan Privasi"
+	},
+	"optionsUserscripts": {
+		"message": "Setel Trabasan kaya sing dikarepake"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Iki minangka fitur khusus kanggo pangembang nggawe skrip dhewe kanggo nrabas situs. Sakwise wes sempurno, bisa dikirim ing GitHub supaya bisa ditambahake ing Universal Bypass, supaya trabasane kasedhiya kanggo kabeh wong."
+	},
+	"beforeNavigate": {
+		"message": "Sampeyan meh ana ing tujuane sampeyan."
+	},
+	"beforeNavigateDestination": {
+		"message": "Tujuane sampeyan yaiku %"
+	},
+	"beforeNavigateInfo": {
+		"message": "Opo sampeyan pingin Universal Bypass ngarahake sampeyan langsung menyang tujuan?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass nyegah IP sampeyan supaya ora mlebu log."
+	},
+	"blockedSubtitle": {
+		"message": "Ora pingin Universal Bypass nyegah situs kanggo njupuk IP ne sampeyan?"
+	},
+	"crowdBypassed": {
+		"message": "Sampeyan mungkin ora butuh ngenteni!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Pangguna Universal Bypass liyane wis ngenteni kanggo sampeyan lan nglaporake yen link iki tujuane yaiku %"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Opo iki ora bener?"
+	}
+}

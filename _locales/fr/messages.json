@@ -6,10 +6,10 @@
 		"message": "Merci d'avoir installé Universal Bypass !"
 	},
 	"firstrunSubtitle": {
-		"message": "Vous êtes incroyable!"
+		"message": "Vous êtes incroyable !"
 	},
 	"firstrunNoScript": {
-		"message": "Cependant, vous semblez utiliser le module NoScript ou quelque chose de similaire, avec lequel Universal Bypass n'est pas compatible."
+		"message": "Cependant, il semble que vous utilisez le module NoScript ou quelque chose de similaire, avec lequel Universal Bypass n'est pas compatible."
 	},
 	"faq": {
 		"message": "Questions fréquemment posées (FAQ)"
@@ -33,19 +33,19 @@
 		"message": "M'envoyer instantanément vers les destinations des traqueurs."
 	},
 	"optionsBlockIPLoggers": {
-		"message": "Bloquer les enregistreurs d’IP si ils ne peuvent pas être contournés."
+		"message": "Bloquer les enregistreurs d'IP si ils ne peuvent pas être contournés."
 	},
 	"optionsCrowdBypass": {
-		"message": "Obtenir les destinations des raccourcisseurs incontournables."
+		"message": "Obtenir les cibles des raccourcisseurs incontournables."
 	},
 	"privacyPolicy": {
-		"message": "Politique de Vie Privée"
+		"message": "Politique de confidentialité"
 	},
 	"optionsUserscripts": {
 		"message": "Contournements personnalisés"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "Il s'agit d'une fonctionnalité avancée permettant aux développeurs de créer leurs propres scripts pour contourner les sites. Une fois mis au point, ils peuvent ensuite être soumis sur GitHub pour être ajoutés à Universal Bypass, afin qu'ils soient accessibles à tous."
+		"message": "Il s'agit d'une fonctionnalité avancée permettant aux développeurs de créer leurs propres scripts pour contourner des sites Web. Une fois mis au point, ils peuvent ensuite être soumis sur GitHub pour être ajoutés à Universal Bypass, afin qu'ils soient accessibles à tous."
 	},
 	"beforeNavigate": {
 		"message": "Vous êtes presque arrivé à destination."
