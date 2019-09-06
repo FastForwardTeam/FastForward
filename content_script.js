@@ -716,19 +716,6 @@ if(document instanceof HTMLDocument)
 						crowdBypass()
 					}
 				})
-				domainBypass(/tetew\\.info|siherp\\.com/,()=>{
-					ifElement("div.download-link > a[href]",a=>{
-						let u=new URL(a.href)
-						if(u.searchParams.has("r"))
-						{
-							safelyNavigate(atob(u.searchParams.get("r")))
-						}
-						else
-						{
-							safelyNavigate(a.href)
-						}
-					})
-				})
 				domainBypass("drivehub.link",()=>{
 					ifElement("a#proceed[href]",a=>safelyNavigate(a.href))
 				})
@@ -1011,33 +998,6 @@ if(document instanceof HTMLDocument)
 						return finish()
 					}
 				}
-				//GemPixel/KBRMedia Premium URL Shortener
-				if(typeof appurl=="string"&&typeof token=="string")
-				{
-					let regex = /var count = [0-9]*;var countdown = setInterval\\\(function\\\(\\\){\\\$\\\("[a-z.]+"\\\)(\\\.attr\\\("href","#pleasewait"\\\))?(\\\.attr\\\("disabled",""\\\))?\\\.html\\\(count( \\\+ ".+")?\\\);if \\\(count < 1\\\) {clearInterval\\\(countdown\\\);(\\\$\\\("[a-z.]+"\\\)\\\.attr\\\("href",|window\\\.location=)"(https?:\\\/\\\/.+)"( \\\+ hash\\\)\\\.removeAttr\\\("disabled"\\\)\\\.removeClass\\\("disabled"\\\)\\\.html\\\(".+"\\\))?;}count--;}, 1000\\\);/
-					document.querySelectorAll("script").forEach(script => {
-						let matches = regex.exec(script.textContent)
-						if(matches && matches[5])
-						{
-							safelyNavigate(matches[5])
-						}
-					})
-					if(!bypassed)
-					{
-						domainBypass(/al\\.ly|ally\\.sh|dausel\\.co/,()=>{
-							let e=document.getElementById("html_element")
-							if(e)
-							{
-								let m=document.getElementById("messa")
-								if(m)
-								{
-									m.parentNode.removeChild(m)
-								}
-								e.classList.remove("hidden")
-							}
-						})
-					}
-				}
 				//Shorte.st
 				if(typeof app!="undefined"&&document.querySelector(".skip-add-container .first-img[alt='Shorte.st']"))
 				{
@@ -1271,6 +1231,33 @@ if(document instanceof HTMLDocument)
 							window.setInterval=f=>setInterval(f,1)
 						})
 						clearInterval(dT)
+					}
+					//GemPixel/KBRMedia Premium URL Shortener
+					if(typeof appurl=="string"&&typeof token=="string")
+					{
+						let regex = /var count = [0-9]*;var countdown = setInterval\\\(function\\\(\\\){\\\$\\\("[a-z\\\-.# ]+"\\\)(\\\.attr\\\("href","#pleasewait"\\\))?(\\\.attr\\\("disabled",""\\\))?\\\.html\\\(count( \\\+ ".+")?\\\);if \\\(count < 1\\\) {clearInterval\\\(countdown\\\);(\\\$\\\("[a-z\\\-.# ]+"\\\)\\\.attr\\\("href",|window\\\.location=)"(https?:\\\/\\\/.+)"( \\\+ hash\\\)\\\.removeAttr\\\("disabled"\\\)\\\.removeClass\\\("disabled"\\\)\\\.html\\\(".+"\\\))?;}count--;}, 1000\\\);/
+						document.querySelectorAll("script").forEach(script=>{
+							let matches=regex.exec(script.textContent)
+							if(matches&&matches[5])
+							{
+								safelyNavigate(matches[5])
+							}
+						})
+						if(!bypassed)
+						{
+							domainBypass(/al\\.ly|ally\\.sh|dausel\\.co/,()=>{
+								let e=document.getElementById("html_element")
+								if(e)
+								{
+									let m=document.getElementById("messa")
+									if(m)
+									{
+										m.parentNode.removeChild(m)
+									}
+									e.classList.remove("hidden")
+								}
+							})
+						}
 					}
 				},100)
 				setTimeout(()=>{
