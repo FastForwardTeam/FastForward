@@ -436,6 +436,21 @@ if(document instanceof HTMLDocument)
 				crowdPath(location.hash.substr(1))
 				crowdBypass()
 			})
+			domainBypass("link.tl",()=>{
+				if(location.host=="lt10.link.tl")
+				{
+					ensureDomLoaded(()=>{
+						if(typeof goToUrl=="function")
+						{
+							goToUrl()
+						}
+					})
+				}
+				else
+				{
+					location.host="lt10.link.tl"
+				}
+			})
 			//Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
 			hrefBypass(/njiir\\.com|linkduit\\.net|k2s\\.cc|1link\\.club|cshort\\.(org|xyz)|muhammadyoga\\.me|u\\.to|skiplink\\.io|healthykk\\.com|punchsubs\\.net|linkasm\\.com|firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php|2speed\\.net\\/file\\//,()=>{
 				window.setInterval=f=>setInterval(f,1)
@@ -1004,14 +1019,6 @@ if(document instanceof HTMLDocument)
 					window.setInterval=f=>setInterval(f,800)
 					return crowdBypass()
 				}
-				//Link.TL
-				ifElement("img.navbar-logo[alt='LinkTL']",()=>{
-					ifElement("form#skip_form",f=>{
-						f.target=""
-						f.submit()
-					})
-					finish()
-				})
 				//Other Templates
 				ifElement(".timed-content-client_show_0_30_0",d=>{//technicoz.com
 					d.classList.remove("timed-content-client_show_0_30_0")
