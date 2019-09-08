@@ -571,8 +571,6 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 "*://*.semawur.com/*",
 "*://*.in11.site/*"
 ]},["blocking","responseHeaders"])
-
-//Wadooo.com Crowd Bypass
 brws.webRequest.onHeadersReceived.addListener(details=>{
 	if(enabled)
 	{
@@ -589,8 +587,12 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 		return{responseHeaders:details.responseHeaders}
 	}
 },{types:["main_frame"],urls:[
-"*://*.wadooo.com/g/*"
+"*://*.wadooo.com/g/*",
+"*://*.gotravelgo.space/g/*",
+"*://*.pantauterus.me/g/*",
+"*://*.liputannubi.net/g/*"
 ]},["blocking","responseHeaders"])
+
 brws.webRequest.onHeadersReceived.addListener(details=>{
 	if(enabled&&crowdEnabled&&details.method=="POST")
 	{
@@ -605,14 +607,17 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 					let xhr=new XMLHttpRequest()
 					xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
 					xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
-					xhr.send("domain=wadooo.com&path="+encodeURIComponent(url.hash.substr(1))+"&target="+encodeURIComponent(header.value))
+					xhr.send("domain="+url.host+"&path="+encodeURIComponent(url.hash.substr(1))+"&target="+encodeURIComponent(header.value))
 					break
 				}
 			}
 		}
 	}
 },{types:["main_frame"],urls:[
-"*://*.wadooo.com/*"
+"*://*.wadooo.com/*",
+"*://*.gotravelgo.space/*",
+"*://*.pantauterus.me/*",
+"*://*.liputannubi.net/*"
 ]},["blocking","responseHeaders"])
 
 //Fixing Content-Security-Policy on Firefox because apparently extensions have no special privileges in Firefox

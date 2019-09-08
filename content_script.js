@@ -432,7 +432,7 @@ if(document instanceof HTMLDocument)
 			domainBypass("hokiciki.org",()=>{
 				ifElement("a[href^='/get-link/']",a=>location.href=a.href)
 			})
-			domainBypass("wadooo.com",()=>{
+			domainBypass(/wadooo\\.com|gotravelgo\\.space|pantauterus\\.me|liputannubi\\.net/,()=>{
 				crowdPath(location.hash.substr(1))
 				crowdBypass()
 			})
