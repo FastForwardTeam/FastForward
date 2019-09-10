@@ -44,6 +44,9 @@
 	"optionsUserscripts": {
 		"message": "Bypasses personalizadas"
 	},
+	"optionsUserscriptsDescription": {
+		"message": "Esta es una característica avanzada para que los desarrolladores creen sus propios scripts para evitar sitios. Una vez perfeccionados, se pueden enviar en GitHub para agregarlos a Universal Bypass, de modo que estén disponibles para todos."
+	},
 	"beforeNavigate": {
 		"message": "Ya casi estas en tu destino."
 	},
