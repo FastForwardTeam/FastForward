@@ -27,7 +27,7 @@
 		"message": "Enable website bypasses."
 	},
 	"optionsNavigationDelay": {
-		"message": "Take me to destinations after % seconds. (Use 0 to be navigated instantly.)"
+		"message": "Take me to destinations after % second(s). (Use 0 to be navigated instantly.)"
 	},
 	"optionsTrackerBypass": {
 		"message": "Bypass trackers using Apimon.de."
@@ -58,6 +58,9 @@
 	},
 	"beforeNavigateTimer": {
 		"message": "You will be automatically redirected in % seconds."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "You will be automatically redirected in 1 second."
 	},
 	"beforeNavigateOptions": {
 		"message": "Do you want to be redirected instantly or in x seconds?"

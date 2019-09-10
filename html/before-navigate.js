@@ -5,23 +5,25 @@ if(args.has("target"))
 	span.innerHTML=span.innerHTML.replace("%",'<a></a>')
 	let a=span.querySelector("a")
 	a.textContent=a.href=args.get("target")
-	span=document.querySelector("[data-message='beforeNavigateTimer']")
-	span.innerHTML=span.innerHTML.replace("%","<span></span>")
-	span=span.querySelector("span")
 	brws.storage.sync.get(["navigation_delay"],res=>{
 		let secondsLeft=res.navigation_delay
 		if(secondsLeft<61)
 		{
-			span.textContent=secondsLeft
-			document.getElementById("timer").style.display="block"
+			let div=document.getElementById("timer"),
 			timer=setInterval(()=>{
-				span.textContent=--secondsLeft
+				secondsLeft--
+				updateSpan()
 				if(secondsLeft<=0)
 				{
 					location.href=args.get("target")
 					clearInterval(timer)
 				}
 			},1000)
+			div.style.display="block"
+			const span=div.querySelector("span"),updateSpan=()=>{
+				span.textContent=brws.i18n.getMessage("beforeNavigateTimer"+(secondsLeft==1?"Singular":"")).replace("%",secondsLeft)
+			}
+			updateSpan()
 		}
 	})
 }
