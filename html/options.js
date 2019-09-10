@@ -1,12 +1,14 @@
 //Options
+document.querySelector("[for='option-navigation-delay']").innerHTML=document.querySelector("[for='option-navigation-delay']").innerHTML.replace("%",'<input id="option-navigation-delay" type="number" min="0" max="60" skip="1" style="width:34px">')
 const enabledCheckbox=document.getElementById("option-enabled"),
 enabledLabel=document.querySelector("label[for='option-enabled']"),
+navigationDelayInput=document.getElementById("option-navigation-delay"),
 trackerBypassCheckbox=document.getElementById("option-tracker-bypass"),
-instantNavigationCheckbox=document.getElementById("option-instant-navigation"),
 instantNavigationTrackersCheckbox=document.getElementById("option-instant-navigation-trackers"),
 blockIPLoggersCheckbox=document.getElementById("option-block-ip-loggers"),
 crowdBypassCheckbox=document.getElementById("option-crowd-bypass")
-brws.storage.sync.get(["disable","no_tracker_bypass","instant_navigation","no_instant_navigation_trackers","allow_ip_loggers","crowd_bypass_opt_out"],res=>{
+var navigationDelayInputTimer
+brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_instant_navigation_trackers","allow_ip_loggers","crowd_bypass_opt_out"],res=>{
 	if(res==undefined)
 	{
 		res={}
@@ -19,13 +21,10 @@ brws.storage.sync.get(["disable","no_tracker_bypass","instant_navigation","no_in
 	{
 		enabledLabel.style.color="red"
 	}
+	navigationDelayInput.value=res.navigation_delay
 	if(!res.no_tracker_bypass||res.no_tracker_bypass!=="true")
 	{
 		trackerBypassCheckbox.setAttribute("checked","checked")
-	}
-	if(res.instant_navigation&&res.instant_navigation==="true")
-	{
-		instantNavigationCheckbox.setAttribute("checked","checked")
 	}
 	if(!res.no_instant_navigation_trackers||res.no_instant_navigation_trackers!=="true")
 	{
@@ -47,17 +46,19 @@ brws.storage.sync.get(["disable","no_tracker_bypass","instant_navigation","no_in
 			disable:(!this.checked).toString()
 		})
 	}
+	navigationDelayInput.oninput=()=>{
+		window.clearTimeout(navigationDelayInputTimer)
+		navigationDelayInputTimer=setTimeout(()=>{
+			brws.storage.sync.set({
+				navigation_delay:navigationDelayInput.value
+			})
+			instantNavigationTrackersLogic()
+		},300)
+	}
 	trackerBypassCheckbox.onchange=function()
 	{
 		brws.storage.sync.set({
 			no_tracker_bypass:(!this.checked).toString()
-		})
-		instantNavigationTrackersLogic()
-	}
-	instantNavigationCheckbox.onchange=function()
-	{
-		brws.storage.sync.set({
-			instant_navigation:this.checked.toString()
 		})
 		instantNavigationTrackersLogic()
 	}
@@ -80,14 +81,9 @@ brws.storage.sync.get(["disable","no_tracker_bypass","instant_navigation","no_in
 		})
 	}
 })
-let hash=location.hash.toString().replace("#","")
-if(hash)
-{
-	document.querySelector("label[for='"+hash+"']").style.background="yellow"
-}
 function instantNavigationTrackersLogic()
 {
-	if(!trackerBypassCheckbox.checked||instantNavigationCheckbox.checked)
+	if(!trackerBypassCheckbox.checked||navigationDelayInput.value==0)
 	{
 		instantNavigationTrackersCheckbox.setAttribute("disabled","disabled")
 	}
@@ -95,6 +91,13 @@ function instantNavigationTrackersLogic()
 	{
 		instantNavigationTrackersCheckbox.removeAttribute("disabled")
 	}
+}
+
+//Highlight option from hash
+let hash=location.hash.toString().replace("#","")
+if(hash)
+{
+	document.querySelector("[for='"+hash+"']").style.background="yellow"
 }
 
 //Custom Bypasses

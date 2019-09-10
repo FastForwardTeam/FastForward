@@ -1,14 +1,25 @@
-let params=new URLSearchParams(location.search)
-if(params.has("target"))
+const args=new URLSearchParams(location.search)
+if(args.has("target"))
 {
-	brws.storage.sync.get(["instant_navigation"],res=>{
-		if(res&&res.instant_navigation&&res.instant_navigation==="true")
-			location.href=params.get("target")
+	let span=document.querySelector("[data-message='beforeNavigateDestination']")
+	span.innerHTML=span.innerHTML.replace("%",'<a></a>')
+	let a=span.querySelector("a")
+	a.textContent=a.href=args.get("target")
+	span=document.querySelector("[data-message='beforeNavigateTimer']")
+	span.innerHTML=span.innerHTML.replace("%","<span></span>")
+	span=span.querySelector("span")
+	brws.storage.sync.get(["navigation_delay"],res=>{
+		let secondsLeft=res.navigation_delay,
+		timer=setInterval(()=>{
+			span.textContent=--secondsLeft
+			if(secondsLeft<=0)
+			{
+				location.href=args.get("target")
+				clearInterval(timer)
+			}
+		},1000)
+		span.textContent=secondsLeft
 	})
-	let i=document.querySelector('[data-message="beforeNavigateDestination"]')
-	i.innerHTML=i.innerHTML.replace("%",'<a></a>')
-	let a=i.querySelector("a")
-	a.href=a.textContent=params.get("target")
 }
 else
 {

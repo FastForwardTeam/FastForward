@@ -19,7 +19,7 @@ isGoodLink=link=>{
 	return true
 }
 
-//Install & Uninstall Actions
+//Install handler
 brws.runtime.onInstalled.addListener(details=>{
 	if(details.reason=="install")
 	{
@@ -32,11 +32,24 @@ brws.runtime.onInstalled.addListener(details=>{
 			window.open("https://universal-bypass.org/firstrun")
 		}
 	}
+	//Set default options & convert old options
+	brws.storage.sync.get(["navigation_delay"],res=>{
+		if(!res.navigation_delay)
+		{
+			brws.storage.sync.get(["instant_navigation"],res=>{
+				brws.storage.sync.set({navigation_delay:(res.instant_navigation&&res.instant_navigation==="true"?0:10)})
+				if(res.instant_navigation)
+				{
+					brws.storage.sync.remove("instant_navigation")
+				}
+			})
+		}
+	})
 })
 
 //Keeping track of options
-var enabled=true,trackerBypassEnabled=true,instantNavigationTrackers=false,blockIPLoggers=true,crowdEnabled=true,userscript=""
-brws.storage.sync.get(["disable","no_tracker_bypass","instant_navigation","no_instant_navigation_trackers","allow_ip_loggers","crowd_bypass_opt_out"],res=>{
+var enabled=true,instantNavigation=false,trackerBypassEnabled=true,instantNavigationTrackers=false,blockIPLoggers=true,crowdEnabled=true,userscript=""
+brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_instant_navigation_trackers","allow_ip_loggers","crowd_bypass_opt_out"],res=>{
 	if(res)
 	{
 		enabled=(!res.disable||res.disable!=="true")
@@ -51,8 +64,8 @@ brws.storage.sync.get(["disable","no_tracker_bypass","instant_navigation","no_in
 				"512": "icon_disabled/512.png"
 			}})
 		}
+		instantNavigation=(res.navigation_delay==0)
 		trackerBypassEnabled=(!res.no_tracker_bypass||res.no_tracker_bypass!=="true")
-		instantNavigation=(res.instant_navigation&&res.instant_navigation==="true")
 		instantNavigationTrackers=(!res.no_instant_navigation_trackers||res.no_instant_navigation_trackers!=="true")
 		blockIPLoggers=(!res.allow_ip_loggers||res.allow_ip_loggers!=="true")
 		crowdEnabled=(!res.crowd_bypass_opt_out||res.crowd_bypass_opt_out!=="true")
@@ -91,13 +104,13 @@ brws.storage.onChanged.addListener(changes=>{
 			}})
 		}
 	}
+	if(changes.navigation_delay)
+	{
+		instantNavigation=(changes.navigation_delay.newValue==0)
+	}
 	if(changes.no_tracker_bypass)
 	{
 		trackerBypassEnabled=(changes.no_tracker_bypass.newValue!=="true")
-	}
-	if(changes.instant_navigation)
-	{
-		instantNavigation=(changes.instant_navigation.newValue==="true")
 	}
 	if(changes.no_instant_navigation_trackers)
 	{

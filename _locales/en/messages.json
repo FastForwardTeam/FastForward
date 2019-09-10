@@ -26,11 +26,11 @@
 	"optionsEnabled": {
 		"message": "Enable website bypasses."
 	},
+	"optionsNavigationDelay": {
+		"message": "Take me to destinations after % seconds. (Use 0 to be navigated instantly.)"
+	},
 	"optionsTrackerBypass": {
 		"message": "Bypass trackers using Apimon.de."
-	},
-	"optionsInstantNavigation": {
-		"message": "Instantly take me to destinations."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Instantly take me to destinations of trackers."
@@ -56,8 +56,11 @@
 	"beforeNavigateDestination": {
 		"message": "Your destination is %"
 	},
-	"beforeNavigateInfo": {
-		"message": "Do you want Universal Bypass to instantly redirect you to your destination?"
+	"beforeNavigateTimer": {
+		"message": "You will be automatically redirected in % seconds."
+	},
+	"beforeNavigateOptions": {
+		"message": "Do you want to be redirected instantly or in x seconds?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass prevented your IP from being logged."
