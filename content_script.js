@@ -870,6 +870,12 @@ if(document instanceof HTMLDocument)
 				domainBypass("uiz.io",()=>{
 					ifElement("#go-adsredirect",f=>f.submit())
 				})
+				hrefBypass(/mirrored\\.to\\/files\\//,()=>{
+					ifElement("#dl_form button",b=>b.click())
+				})
+				hrefBypass(/mirrored\\.to\\/downlink\\//,()=>{
+					ifElement(".centered.highlight a[href]",a=>safelyNavigate(a.href))
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
