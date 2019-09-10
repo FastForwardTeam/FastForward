@@ -9,16 +9,20 @@ if(args.has("target"))
 	span.innerHTML=span.innerHTML.replace("%","<span></span>")
 	span=span.querySelector("span")
 	brws.storage.sync.get(["navigation_delay"],res=>{
-		let secondsLeft=res.navigation_delay,
-		timer=setInterval(()=>{
-			span.textContent=--secondsLeft
-			if(secondsLeft<=0)
-			{
-				location.href=args.get("target")
-				clearInterval(timer)
-			}
-		},1000)
-		span.textContent=secondsLeft
+		let secondsLeft=res.navigation_delay
+		if(secondsLeft<61)
+		{
+			span.textContent=secondsLeft
+			document.getElementById("timer").style.display="block"
+			timer=setInterval(()=>{
+				span.textContent=--secondsLeft
+				if(secondsLeft<=0)
+				{
+					location.href=args.get("target")
+					clearInterval(timer)
+				}
+			},1000)
+		}
 	})
 }
 else

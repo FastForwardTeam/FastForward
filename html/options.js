@@ -3,6 +3,7 @@ document.querySelector("[for='option-navigation-delay']").innerHTML=document.que
 const enabledCheckbox=document.getElementById("option-enabled"),
 enabledLabel=document.querySelector("label[for='option-enabled']"),
 navigationDelayInput=document.getElementById("option-navigation-delay"),
+navigationDelayCheckbox=document.getElementById("navigation-delay-toggle"),
 trackerBypassCheckbox=document.getElementById("option-tracker-bypass"),
 instantNavigationTrackersCheckbox=document.getElementById("option-instant-navigation-trackers"),
 blockIPLoggersCheckbox=document.getElementById("option-block-ip-loggers"),
@@ -21,7 +22,16 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 	{
 		enabledLabel.style.color="red"
 	}
-	navigationDelayInput.value=res.navigation_delay
+	if(res.navigation_delay>60)
+	{
+		navigationDelayInput.value=10
+		navigationDelayInput.setAttribute("disabled","disabled")
+	}
+	else
+	{
+		navigationDelayInput.value=res.navigation_delay
+		navigationDelayCheckbox.setAttribute("checked","checked")
+	}
 	if(!res.no_tracker_bypass||res.no_tracker_bypass!=="true")
 	{
 		trackerBypassCheckbox.setAttribute("checked","checked")
@@ -54,6 +64,18 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 			})
 			instantNavigationTrackersLogic()
 		},300)
+	}
+	navigationDelayCheckbox.onchange=function()
+	{
+		brws.storage.sync.set({navigation_delay:(this.checked?navigationDelayInput.value:61)})
+		if(this.checked)
+		{
+			navigationDelayInput.removeAttribute("disabled")
+		}
+		else
+		{
+			navigationDelayInput.setAttribute("disabled","disabled")
+		}
 	}
 	trackerBypassCheckbox.onchange=function()
 	{
