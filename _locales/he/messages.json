@@ -1,6 +1,6 @@
 {
 	"appDesc": {
-		"message": "אל תבזבז את הזמן שלך! Universal Bypass מדלג אוטומטית על שעונים מעצבנים."
+		"message": "אל תבזבז את הזמן שלך! Universal Bypass מדלג אוטומטית על מקצרי לינקים מעצבנים."
 	},
 	"firstrunTitle": {
 		"message": "תודה לך על כך שהתקנת את Universal Bypass!"
@@ -8,14 +8,20 @@
 	"firstrunSubtitle": {
 		"message": "אתה תותח!"
 	},
+	"firstrunNoScript": {
+		"message": "ככול הנראה אתה עושה שימוש ב-NoScript ודומיו, מה שלא מאפשר את פעולת Universal Bypass."
+	},
 	"faq": {
-		"message": "שאלות שכיחות (FAQ)"
+		"message": "שאלות נפוצות (FAQ)"
+	},
+	"support": {
+		"message": "תמוך ב-Universal Bypass"
 	},
 	"options": {
 		"message": "הגדרות"
 	},
 	"optionsLink": {
-		"message": "החלף הגדרות של Universal Bypass."
+		"message": "הגדר את Universal Bypass."
 	},
 	"optionsEnabled": {
 		"message": "הפעל מעקף לאתר."
@@ -23,11 +29,26 @@
 	"optionsTrackerBypass": {
 		"message": "הפעל מעקף על ידי Apimon.de."
 	},
-	"optionsInstantNavigation": {
-		"message": "העבר אותי למקור אוטומטית."
+	"privacyPolicy": {
+		"message": "מדיניות פרטיות"
 	},
 	"optionsUserscripts": {
-		"message": "מעקפים מותאמים"
+		"message": "מעקפים מותאמים אישית"
+	},
+	"beforeNavigateDestination": {
+		"message": "כתובת היעד שלך היא %"
+	},
+	"beforeNavigateTimer": {
+		"message": "תועבר אוטומטית עוד % שניות."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "תועבר אוטומטית בעוד שנייה."
+	},
+	"crowdBypassed": {
+		"message": "יתכן ואתה לא צריך להמתין בכלל!"
+	},
+	"crowdBypassedInfo": {
+		"message": "משתמשים נוספים כבר המתינו, ודיווחו שהקישור מוביל ל- %"
 	},
 	"crowdBypassedIgnore": {
 		"message": "האם נתיב זה שגוי?"

@@ -14,6 +14,9 @@
 	"faq": {
 		"message": "Pertanyaan yang Sering Diajukan\n(FAQ)"
 	},
+	"support": {
+		"message": "Dukungan untuk Universal Bypass"
+	},
 	"options": {
 		"message": "Pilihan"
 	},
@@ -23,11 +26,11 @@
 	"optionsEnabled": {
 		"message": "Aktifkan bypass website."
 	},
+	"optionsNavigationDelay": {
+		"message": "Arahkan ke halaman tujuan setelah % detik. (Gunakan 0 untuk diarahkan secara langsung.)"
+	},
 	"optionsTrackerBypass": {
 		"message": "Bypass pelacak menggunakan Apimon.de."
-	},
-	"optionsInstantNavigation": {
-		"message": "Langsung arahkan ke halaman tujuan."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Langsung arahkan ke halaman tujuan pelacak."
@@ -53,8 +56,14 @@
 	"beforeNavigateDestination": {
 		"message": "Tujuan anda adalah %"
 	},
-	"beforeNavigateInfo": {
-		"message": "Apakah Anda ingin Universal Bypass langsung mengarahkan ke tujuan Anda?"
+	"beforeNavigateTimer": {
+		"message": "Anda akan dialihkan secara otomatis dalam % detik."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Anda akan dialihkan secara otomatis dalam 1 detik."
+	},
+	"beforeNavigateOptions": {
+		"message": "Apakah Anda ingin dialihkan secara langsung atau dalam x detik?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass mencegah IP anda terlog."

@@ -14,6 +14,9 @@
 	"faq": {
 		"message": "Ofte stilte spørgsmål (FAQ)"
 	},
+	"support": {
+		"message": "Støt Universal Bypass"
+	},
 	"options": {
 		"message": "Indstillinger"
 	},
@@ -23,11 +26,11 @@
 	"optionsEnabled": {
 		"message": "Aktivér websteds-bypass."
 	},
+	"optionsNavigationDelay": {
+		"message": "Tag mig til destinationer efter % sekunder (benyt 0 for at blive navigeret straks)."
+	},
 	"optionsTrackerBypass": {
 		"message": "Omgå trackers vha. Apimon.de."
-	},
-	"optionsInstantNavigation": {
-		"message": "Bring mig direkte til destinationer."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Bring mig direkte til trackers-destinationer."
@@ -53,8 +56,14 @@
 	"beforeNavigateDestination": {
 		"message": "Din destination er %"
 	},
-	"beforeNavigateInfo": {
-		"message": "Skal Universal Bypass strakt omdirigerer dig til din destination?"
+	"beforeNavigateTimer": {
+		"message": "Du omdirigeres automatisk om % sekunder."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Du omdirigeres automatisk om 1 sekund."
+	},
+	"beforeNavigateOptions": {
+		"message": "Vil du omdirigeres straks eller om x sekunder?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass forhindrede din IP i at blive logget."

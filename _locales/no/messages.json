@@ -26,9 +26,6 @@
 	"optionsTrackerBypass": {
 		"message": "Hopp forbi sporere ved hjelp av Apimon.de."
 	},
-	"optionsInstantNavigation": {
-		"message": "Ta meg til destinasjoner med en gang."
-	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Ta meg til destinasjoner av trackere med en gang."
 	},
@@ -49,9 +46,6 @@
 	},
 	"beforeNavigateDestination": {
 		"message": "Destinasjonen din er %"
-	},
-	"beforeNavigateInfo": {
-		"message": "Vil du at Universal Bypass skal sende deg til destinasjonen med en gang?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass hindret IP-adressen din fra å bli loggført."

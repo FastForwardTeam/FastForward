@@ -26,9 +26,6 @@
 	"optionsTrackerBypass": {
 		"message": "Apimon.deを使用してトラッカーをバイパスする"
 	},
-	"optionsInstantNavigation": {
-		"message": "即座にリンク先へ移動します。"
-	},
 	"optionsBlockIPLoggers": {
 		"message": "バイパスできない場合は、IPロガーをブロックする"
 	},
@@ -46,9 +43,6 @@
 	},
 	"beforeNavigateDestination": {
 		"message": "リンク先は %"
-	},
-	"beforeNavigateInfo": {
-		"message": "ユニバーサルバイパスを使用して、目的のサイトへ簡単にアクセスしたいですか？"
 	},
 	"blockedTitle": {
 		"message": "ユニバーサルバイパスにより、IPがログに記録されなくなりました。"

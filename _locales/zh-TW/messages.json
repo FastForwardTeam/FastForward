@@ -26,9 +26,6 @@
 	"optionsTrackerBypass": {
 		"message": "利用 Apimon.de 繞過隱私追蹤器。"
 	},
-	"optionsInstantNavigation": {
-		"message": "跳過確認頁面，直接帶我到目的地。"
-	},
 	"optionsInstantNavigationTrackers": {
 		"message": "跳過追蹤紀錄器，直接帶我到目的地。"
 	},
@@ -49,9 +46,6 @@
 	},
 	"beforeNavigateDestination": {
 		"message": "您的目的地是 %"
-	},
-	"beforeNavigateInfo": {
-		"message": "您希望下次 Universal Bypass 自動地帶您到目的地嗎?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass 防止您的IP被記錄。"

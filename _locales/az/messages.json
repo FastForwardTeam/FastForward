@@ -14,9 +14,6 @@
 	"optionsTrackerBypass": {
 		"message": "Apimon.de istifadə edən Bypass izləyiciləri."
 	},
-	"optionsInstantNavigation": {
-		"message": "Məni dərhal təyinat yerinə apar."
-	},
 	"optionsBlockIPLoggers": {
 		"message": "Ötürə bilməsə, IP qeydlərini əngəllə."
 	},

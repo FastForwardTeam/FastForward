@@ -26,9 +26,6 @@
 	"optionsTrackerBypass": {
 		"message": "Scapă de urmăritori folosind Apimon.de."
 	},
-	"optionsInstantNavigation": {
-		"message": "Du-mă instant la destinație."
-	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Du-mă instant la destinația urmăritorilor."
 	},

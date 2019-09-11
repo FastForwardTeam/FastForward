@@ -14,6 +14,9 @@
 	"faq": {
 		"message": "الأسئلة المتداولة"
 	},
+	"support": {
+		"message": "ادعم المتجاوز الشامل"
+	},
 	"options": {
 		"message": "الخيارات"
 	},
@@ -23,11 +26,11 @@
 	"optionsEnabled": {
 		"message": "تمكين تجاوز مواقع الويب."
 	},
+	"optionsNavigationDelay": {
+		"message": "خذنى للواجهة بعد % ثانية. (استخدم 0 للذهاب مباشرة.)"
+	},
 	"optionsTrackerBypass": {
 		"message": "تجاوز المتتبعين بإستخدام Apimon.de."
-	},
-	"optionsInstantNavigation": {
-		"message": "قم بنقلي إلى الوجهات تلقائيًا."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "قم بنقلي إلى الواجهات تلقائيًا."
@@ -53,8 +56,14 @@
 	"beforeNavigateDestination": {
 		"message": "وجهتك هي %"
 	},
-	"beforeNavigateInfo": {
-		"message": "هل تريد من المتجاوز الشامل إعادة توجيهك علي الفور الي وجهتك؟"
+	"beforeNavigateTimer": {
+		"message": "سيتم تحويلك تلقائيا بعد % ثانية."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "سيتم تحويلك تلقائيا بعد % ثانية."
+	},
+	"beforeNavigateOptions": {
+		"message": "هل تريد ان يتم تحويلك تلقائيا او بعدد ثوانى محددة؟"
 	},
 	"blockedTitle": {
 		"message": "المتجاوز الشامل قام بمنع تسجيل عنوان الـ IP الخاص بك."

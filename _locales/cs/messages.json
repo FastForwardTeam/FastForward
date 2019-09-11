@@ -26,9 +26,6 @@
 	"optionsTrackerBypass": {
 		"message": "Blokovat sledovače procházení pomocí Apimon.de."
 	},
-	"optionsInstantNavigation": {
-		"message": "Okamžitě mě přesuňtě na destinaci zkracovačů."
-	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Okamžitě mě přesuňtě na destinaci sledovačů procházení."
 	},
@@ -46,9 +43,6 @@
 	},
 	"beforeNavigateDestination": {
 		"message": "Vaše destinace tohoto zkráceného odkazu je"
-	},
-	"beforeNavigateInfo": {
-		"message": "Chcete, aby vás Universal Bypass okamžitě přesměroval na destinaci?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass ochránil vaši IP před zaznamenáním."

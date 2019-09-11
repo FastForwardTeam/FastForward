@@ -26,9 +26,6 @@
 	"optionsTrackerBypass": {
 		"message": "Evita rastreadores usando Apimon.de."
 	},
-	"optionsInstantNavigation": {
-		"message": "Llevarme directamente al destino."
-	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Llevarme instantáneamente a los destinos de los rastreadores."
 	},
@@ -52,9 +49,6 @@
 	},
 	"beforeNavigateDestination": {
 		"message": "Tu dirección de destino es %"
-	},
-	"beforeNavigateInfo": {
-		"message": "¿Desea que Universal Bypass lo redirija instantáneamente a su destino?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass evitó que su IP se registrara."

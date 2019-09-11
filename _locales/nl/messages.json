@@ -26,9 +26,6 @@
 	"optionsTrackerBypass": {
 		"message": "Omzeil trackers met behulp van Apimon.de."
 	},
-	"optionsInstantNavigation": {
-		"message": "Stuur me gelijk door naar de site."
-	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Stuur me gelijk naar de bestemming van trackers."
 	},
@@ -49,9 +46,6 @@
 	},
 	"beforeNavigateDestination": {
 		"message": "Uw bestemming is %"
-	},
-	"beforeNavigateInfo": {
-		"message": "Wilt u dat Universal Bypass u direct doorstuurt naar uw bestemming?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass voorkomt dat uw IP wordt geregistreerd."

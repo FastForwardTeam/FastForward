@@ -14,6 +14,9 @@
 	"faq": {
 		"message": "Câu Hỏi Thường Gặp (FAQ)"
 	},
+	"support": {
+		"message": "Giúp đỡ Universal Bypass"
+	},
 	"options": {
 		"message": "Tùy chỉnh"
 	},
@@ -23,11 +26,11 @@
 	"optionsEnabled": {
 		"message": "Bật bỏ qua website."
 	},
+	"optionsNavigationDelay": {
+		"message": "Đưa tôi đến đích sau % giây. (Sử dụng 0 để điều hướng nhanh.)"
+	},
 	"optionsTrackerBypass": {
 		"message": "Bỏ qua trackers bằng cách sử dụng Apimon.de."
-	},
-	"optionsInstantNavigation": {
-		"message": "Lập tức dẫn tôi đến đích đến."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Ngay lập tức đưa tôi đến đích của trình theo dõi."
@@ -44,14 +47,20 @@
 	"optionsUserscripts": {
 		"message": "Bypasses tùy chỉnh"
 	},
+	"optionsUserscriptsDescription": {
+		"message": "Đây là tính năng nâng cao cho nhà phát triển để tạo mã bypass các trang. Một khi đã hoàn thành, họ có thể gửi lên GitHub để được thêm vào Universal Bypass, do đó mọi người có thể sử dụng."
+	},
 	"beforeNavigate": {
 		"message": "Bạn sắp đến đích đến."
 	},
 	"beforeNavigateDestination": {
 		"message": "Điểm đến của bạn là %"
 	},
-	"beforeNavigateInfo": {
-		"message": "Bạn có muốn Universal Bypass chuyển hướng bạn đến đích đến của bạn ngay lập tức?"
+	"beforeNavigateTimer": {
+		"message": "Bạn sẽ được điều hướng trong % giây."
+	},
+	"beforeNavigateOptions": {
+		"message": "Bạn có muốn điều hướng nhanh hoặc trong x giây?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass đã ngăn chặn IP của bạn bị ghi lại."

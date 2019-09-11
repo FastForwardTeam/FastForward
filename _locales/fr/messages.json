@@ -14,6 +14,9 @@
 	"faq": {
 		"message": "Questions fréquemment posées (FAQ)"
 	},
+	"support": {
+		"message": "Soutenir le Contourneur Universel"
+	},
 	"options": {
 		"message": "Options"
 	},
@@ -23,11 +26,11 @@
 	"optionsEnabled": {
 		"message": "Activer les contournements de sites Web."
 	},
+	"optionsNavigationDelay": {
+		"message": "Me mener à la destination après % seconde(s). (Utiliser 0 pour y être instantanément mené.)"
+	},
 	"optionsTrackerBypass": {
 		"message": "Contourner les traqueurs en utilisant Apimon.de."
-	},
-	"optionsInstantNavigation": {
-		"message": "M'envoyer instantanément vers les destinations."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "M'envoyer instantanément vers les destinations des traqueurs."
@@ -53,8 +56,14 @@
 	"beforeNavigateDestination": {
 		"message": "Votre destination est %"
 	},
-	"beforeNavigateInfo": {
-		"message": "Voulez-vous que Universal Bypass vous redirige automatiquement vers votre destination ?"
+	"beforeNavigateTimer": {
+		"message": "Vous serez automatiquement redirigé dans % secondes."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Vous serez automatiquement redirigé dans 1 seconde."
+	},
+	"beforeNavigateOptions": {
+		"message": "Voulez-vous être redirigé instantanément ou dans x secondes?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass a empêché l’enregistrement de votre adresse IP."

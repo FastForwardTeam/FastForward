@@ -26,9 +26,6 @@
 	"optionsTrackerBypass": {
 		"message": "Παράκαμψη trackers χρησιμοποιώντας το Apimon.de."
 	},
-	"optionsInstantNavigation": {
-		"message": "Πήγαινε με άμεσα στους προορισμούς."
-	},
 	"optionsBlockIPLoggers": {
 		"message": "Μπλόκαρε IP loggers, αν αυτοί δεν μπορούν να παρακάμπτουν."
 	},
@@ -46,9 +43,6 @@
 	},
 	"beforeNavigateDestination": {
 		"message": "Ο προορισμός σας είναι %"
-	},
-	"beforeNavigateInfo": {
-		"message": "Θέλετε το Universal Bypass να σας ανακατευθύνει αμέσως στον προορισμό σας;"
 	},
 	"blockedTitle": {
 		"message": "Το Universal Bypass εμπόδισε την IP σας από το να καταγραφεί."

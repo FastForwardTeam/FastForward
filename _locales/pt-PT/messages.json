@@ -14,6 +14,9 @@
 	"faq": {
 		"message": "Perguntas Frequentes (FAQ)"
 	},
+	"support": {
+		"message": "Suporte Universal Bypass"
+	},
 	"options": {
 		"message": "Opções"
 	},
@@ -23,11 +26,11 @@
 	"optionsEnabled": {
 		"message": "Habilite bypasses de websites."
 	},
+	"optionsNavigationDelay": {
+		"message": "Leve-me para destinos após % segundo(s). (Use 0 para ser navegado instantaneamente.)"
+	},
 	"optionsTrackerBypass": {
 		"message": "Ignorar rastreadores usando Apimon.de."
-	},
-	"optionsInstantNavigation": {
-		"message": "Levar-me instantaneamente aos destinos."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Leve-me instantaneamente para destinos de rastreadores."
@@ -44,14 +47,23 @@
 	"optionsUserscripts": {
 		"message": "Bypasses Personalizados"
 	},
+	"optionsUserscriptsDescription": {
+		"message": "Este é um recurso avançado para que os desenvolvedores criam seus próprios scripts para ignorar sites. Uma vez aperfeiçoados, eles podem ser enviados no GitHub para serem adicionados ao Universal Bypass, então eles estarão disponíveis para todos."
+	},
 	"beforeNavigate": {
 		"message": "Você está quase no seu destino."
 	},
 	"beforeNavigateDestination": {
 		"message": "Seu destino é %"
 	},
-	"beforeNavigateInfo": {
-		"message": "Deseja que o Universal Bypass instantaneamente redirecione você para o seu destino?"
+	"beforeNavigateTimer": {
+		"message": "Você será automaticamente redirecionado em % segundos."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Você será automaticamente redirecionado em 1 segundo."
+	},
+	"beforeNavigateOptions": {
+		"message": "Você quer ser redirecionado instantaneamente ou em x segundos?"
 	},
 	"blockedTitle": {
 		"message": "O Universal Bypass preveniu que seu IP fosse registrado."

@@ -26,9 +26,6 @@
 	"optionsTrackerBypass": {
 		"message": "Apimon.de 로 추적 우회하기."
 	},
-	"optionsInstantNavigation": {
-		"message": "즉시 목적지로 보내기"
-	},
 	"optionsInstantNavigationTrackers": {
 		"message": "즉시 추적기의 목적지로 보내기"
 	},
@@ -49,9 +46,6 @@
 	},
 	"beforeNavigateDestination": {
 		"message": "목적지는 % 입니다."
-	},
-	"beforeNavigateInfo": {
-		"message": "Universal Bypass가 즉시 목적지로 보내주기를 바라나요?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass가 당신의 IP를 기록하지 못하게 막았습니다."

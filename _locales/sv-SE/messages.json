@@ -14,6 +14,9 @@
 	"faq": {
 		"message": "Vanliga frågor (FAQ)"
 	},
+	"support": {
+		"message": "Stöd Universal Bypass"
+	},
 	"options": {
 		"message": "Alternativ"
 	},
@@ -23,11 +26,11 @@
 	"optionsEnabled": {
 		"message": "Aktivera förbikopplingar av webbplats."
 	},
+	"optionsNavigationDelay": {
+		"message": "Ta mig till målet efter % sekunder. (Ange 0 för att inaktivera fördröjningen.)"
+	},
 	"optionsTrackerBypass": {
 		"message": "Förbikopplare som använder Apimon.de."
-	},
-	"optionsInstantNavigation": {
-		"message": "Ta mig omedelbart till målen."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Ta mig omedelbart till målen av trackers."
@@ -36,7 +39,7 @@
 		"message": "Blockera IP-loggerare om de inte kan förbikopplas."
 	},
 	"optionsCrowdBypass": {
-		"message": "Ge och ta destinationerna för icke förbikopplade länkförkortare."
+		"message": "Ge och ta målen för icke förbikopplade länkförkortare."
 	},
 	"privacyPolicy": {
 		"message": "Integritetspolicy"
@@ -53,8 +56,14 @@
 	"beforeNavigateDestination": {
 		"message": "Ditt mål är %"
 	},
-	"beforeNavigateInfo": {
-		"message": "Vill du att Universal Bypass omdirigerar dig direkt till ditt mål?"
+	"beforeNavigateTimer": {
+		"message": "Du kommer automatiskt att omdirigeras om % sekunder."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Du kommer automatiskt att omdirigeras om 1 sekund."
+	},
+	"beforeNavigateOptions": {
+		"message": "Vill du omdirigeras direkt eller om x antal sekunder?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass förhindrade din IP-adress från att loggas."

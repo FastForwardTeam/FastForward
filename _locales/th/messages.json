@@ -26,9 +26,6 @@
 	"optionsTrackerBypass": {
 		"message": "บายพาสแทร็กเกอร์ที่ใช้ Apimon.de"
 	},
-	"optionsInstantNavigation": {
-		"message": "พาฉันไปที่ปลายทางทันที"
-	},
 	"optionsInstantNavigationTrackers": {
 		"message": "พาฉันไปที่ปลายทางของเครื่องมือติดตามทันที"
 	},
@@ -49,9 +46,6 @@
 	},
 	"beforeNavigateDestination": {
 		"message": "ปลายทางของคุณคือ %"
-	},
-	"beforeNavigateInfo": {
-		"message": "คุณต้องการให้ Universal Bypass นำคุณไปยังปลายทางทันทีหรือไม่?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass ช่วยป้องกัน IP คุณจากการถูกเก็บประวัติ"

@@ -23,9 +23,6 @@
 	"optionsTrackerBypass": {
 		"message": " Apimon.de ردیاب ها را میان بر بزن با استفاده از"
 	},
-	"optionsInstantNavigation": {
-		"message": ".مستقیما من را به مقاصد برسانید"
-	},
 	"optionsBlockIPLoggers": {
 		"message": ".آی پی ورودگر ها که قابل به رد شدن نیستند را مسدود کن"
 	},
@@ -43,9 +40,6 @@
 	},
 	"beforeNavigateDestination": {
 		"message": ".مقصد شما % است"
-	},
-	"beforeNavigateInfo": {
-		"message": "آیا شما می خواهید تا میان بر جهانی مستقیما شما را به مقصدتان هدایت کند؟"
 	},
 	"blockedTitle": {
 		"message": ".میان بر جهانی مانع از وارد شدن آی پی شما شده است"

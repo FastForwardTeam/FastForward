@@ -14,6 +14,9 @@
 	"faq": {
 		"message": "Häufig gestellte Fragen (FAQ)"
 	},
+	"support": {
+		"message": "Unterstütze Universal Bypass"
+	},
 	"options": {
 		"message": "Optionen"
 	},
@@ -23,11 +26,11 @@
 	"optionsEnabled": {
 		"message": "Aktiviere Webseiten-Umgehungen."
 	},
+	"optionsNavigationDelay": {
+		"message": "Bring mich nach % Sekunde(n) ans Ziel. (Nutze 0 um direkt navigiert zu werden.)"
+	},
 	"optionsTrackerBypass": {
 		"message": "Umgehe Tracker mit Apimon.de."
-	},
-	"optionsInstantNavigation": {
-		"message": "Navigiere mich automatisch zu Ziel-Urls."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Navigiere mich automatisch zu Ziel-Urls von Trackern."
@@ -53,8 +56,14 @@
 	"beforeNavigateDestination": {
 		"message": "Dein Ziel ist %"
 	},
-	"beforeNavigateInfo": {
-		"message": "Willst du, dass Universal Bypass dich automatisch an dein Ziel bringt?"
+	"beforeNavigateTimer": {
+		"message": "Du wirst in % Sekunden automatisch weitergeleitet."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Du wirst in einer Sekunde automatisch weitergeleitet."
+	},
+	"beforeNavigateOptions": {
+		"message": "Möchtest du sofort oder in x Sekunden weitergeleitet werden?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass hat dich vor einem IP-Logger geschützt."

@@ -14,6 +14,9 @@
 	"faq": {
 		"message": "Sıkça Sorulan Sorular (SSS)"
 	},
+	"support": {
+		"message": "Universal Bypass'ı Destekleyin"
+	},
 	"options": {
 		"message": "Seçenekler"
 	},
@@ -23,11 +26,11 @@
 	"optionsEnabled": {
 		"message": "Web sayfalarını es geçmeyi etkinleştir."
 	},
+	"optionsNavigationDelay": {
+		"message": "Beni % saniye sonra yönlendir. ( Hemen yönlendirilmek için 0 yazın)"
+	},
 	"optionsTrackerBypass": {
 		"message": "Apimon.de kullanarak izleyicileri es geçin."
-	},
-	"optionsInstantNavigation": {
-		"message": "Beni anında hedef adrese yönlendir."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Beni anında izleyicilerin hedeflerine götür."
@@ -44,14 +47,23 @@
 	"optionsUserscripts": {
 		"message": "Özel Es Geçmeler"
 	},
+	"optionsUserscriptsDescription": {
+		"message": "Bu, geliştiricilerin siteleri atlamak için kendi komut dosyalarını oluşturmaları için gelişmiş bir özelliktir. Kusursuz çalıştığında, GitHub'a Universal Bypass'a eklenmesi için gönderilebilirsiniz, böylece herkesin kullanımına açık olur."
+	},
 	"beforeNavigate": {
 		"message": "Neredeyse vardınız."
 	},
 	"beforeNavigateDestination": {
 		"message": "Hedefiniz: %"
 	},
-	"beforeNavigateInfo": {
-		"message": "Universal Bypass'ın sizi doğrudan hedefe yönlendirmesini ister misiniz?"
+	"beforeNavigateTimer": {
+		"message": "% saniye içinde otomatik olarak yönlendirileceksiniz."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "1 saniye içinde otomatik olarak yönlendirileceksiniz."
+	},
+	"beforeNavigateOptions": {
+		"message": "Hemen mi x saniye içinde mi yönlendirilmek istersiniz?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass, IP adresinizin kayıtlara eklenmesini engelledi."

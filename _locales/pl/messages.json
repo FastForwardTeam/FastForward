@@ -26,9 +26,6 @@
 	"optionsTrackerBypass": {
 		"message": "Omijaj namierzanie, używając Apimon.de."
 	},
-	"optionsInstantNavigation": {
-		"message": "Natychmiast zabieraj mnie do miejsc docelowych."
-	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Natychmiast zabieraj mnie do miejsc docelowych."
 	},
@@ -49,9 +46,6 @@
 	},
 	"beforeNavigateDestination": {
 		"message": "Twoje miejsce docelowe jest %"
-	},
-	"beforeNavigateInfo": {
-		"message": "Czy chcesz, aby Uniwersalne Obejście natychmiast przekierowywało natychmiast do miejsca docelowego?"
 	},
 	"blockedTitle": {
 		"message": "Uniwersalne obejście zapobiegło zarejestrowanie twojego IP."

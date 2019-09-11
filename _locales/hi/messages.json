@@ -26,9 +26,6 @@
 	"optionsTrackerBypass": {
 		"message": "Apimon.de उपयोग करके ट्रैकर्स को बाईपास करे"
 	},
-	"optionsInstantNavigation": {
-		"message": "बिना रुके लिंक को बाईपास करें"
-	},
 	"optionsInstantNavigationTrackers": {
 		"message": "बिना रुके ट्रैकर्स को बाईपास करें"
 	},
@@ -52,9 +49,6 @@
 	},
 	"beforeNavigateDestination": {
 		"message": "ये रहा आपका लिंक %"
-	},
-	"beforeNavigateInfo": {
-		"message": "क्या आप चाहते हैं कि यूनिवर्सल बाईपास आपको तुरंत अपने लक्ष्य(लिंक) पर पहुंचा दे?"
 	},
 	"blockedTitle": {
 		"message": "यूनिवर्सल बाईपास ने अपकी आईपी को साझा होने से बचाया।"

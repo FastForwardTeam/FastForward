@@ -26,9 +26,6 @@
 	"optionsTrackerBypass": {
 		"message": "Circumval·la rastrejadors utilitzant Apimon.de."
 	},
-	"optionsInstantNavigation": {
-		"message": "Porta'm instantàniament a les destinacions."
-	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Porta'm instantàniament a les destinacions dels seguidors."
 	},

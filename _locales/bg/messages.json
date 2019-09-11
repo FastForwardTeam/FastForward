@@ -26,9 +26,6 @@
 	"optionsTrackerBypass": {
 		"message": "Заобиколете тракерите, използвайки Apimon.de."
 	},
-	"optionsInstantNavigation": {
-		"message": "Незабавно ме отведе до дестинации."
-	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Незабавно ме отведете до дестинациите на тракерите."
 	},
@@ -49,9 +46,6 @@
 	},
 	"beforeNavigateDestination": {
 		"message": "Вашата дестинация е %"
-	},
-	"beforeNavigateInfo": {
-		"message": "Искате ли Universal Bypass незабавно да ви пренасочи към вашата дестинация?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass предотврати регистрирането на вашия IP адрес."
