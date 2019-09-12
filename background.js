@@ -310,7 +310,8 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 "*://*.uxglow.com/?r=*",
 "*://*.infokesehatan.club/?r=*",
 "*://*.wanhealth.me/?r=*",
-"*://*.otoponsel.com/?r=*"
+"*://*.otoponsel.com/?r=*",
+"*://*.kepoow.me/?r=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
