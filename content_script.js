@@ -1154,6 +1154,12 @@ if(document instanceof HTMLDocument)
 						},10)
 						break;
 
+						case "Glinks!":
+						ifElement("form[method='POST'] > input[type='submit'][name='btn'].btn",i=>i.click(),()=>{
+							ifElement(".btnx",a=>a.click())
+						})
+						break;
+
 						default:
 						{
 							ifElement("a#makingdifferenttimer[href]",b=>{
