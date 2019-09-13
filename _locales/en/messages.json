@@ -41,6 +41,9 @@
 	"optionsCrowdBypass": {
 		"message": "Give and take the destinations of unbypassable shorteners."
 	},
+	"optionsCrowdAutoOpen": {
+		"message": "Automatically open crowd-sourced destinations in a new tab."
+	},
 	"privacyPolicy": {
 		"message": "Privacy Policy"
 	},

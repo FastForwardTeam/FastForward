@@ -41,8 +41,8 @@ brws.runtime.onInstalled.addListener(details=>{
 })
 
 //Keeping track of options
-var enabled=true,instantNavigation=false,trackerBypassEnabled=true,instantNavigationTrackers=false,blockIPLoggers=true,crowdEnabled=true,userscript=""
-brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_instant_navigation_trackers","allow_ip_loggers","crowd_bypass_opt_out"],res=>{
+var enabled=true,instantNavigation=false,trackerBypassEnabled=true,instantNavigationTrackers=false,blockIPLoggers=true,crowdEnabled=true,crowdAutoOpen=false,userscript=""
+brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_instant_navigation_trackers","allow_ip_loggers","crowd_bypass_opt_out","crowd_auto_open"],res=>{
 	if(res)
 	{
 		enabled=(!res.disable||res.disable!=="true")
@@ -58,10 +58,11 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 			}})
 		}
 		instantNavigation=(res.navigation_delay==0)
-		trackerBypassEnabled=(!res.no_tracker_bypass||res.no_tracker_bypass!=="true")
-		instantNavigationTrackers=(!res.no_instant_navigation_trackers||res.no_instant_navigation_trackers!=="true")
-		blockIPLoggers=(!res.allow_ip_loggers||res.allow_ip_loggers!=="true")
-		crowdEnabled=(!res.crowd_bypass_opt_out||res.crowd_bypass_opt_out!=="true")
+		trackerBypassEnabled=(res.no_tracker_bypass!=="true")
+		instantNavigationTrackers=(res.no_instant_navigation_trackers!=="true")
+		blockIPLoggers=(res.allow_ip_loggers!=="true")
+		crowdEnabled=(res.crowd_bypass_opt_out!=="true")
+		crowdAutoOpen=(res.crowd_auto_open==="true")
 	}
 })
 brws.storage.local.get(["userscript"],res=>{
@@ -116,6 +117,10 @@ brws.storage.onChanged.addListener(changes=>{
 	if(changes.crowd_bypass_opt_out)
 	{
 		crowdEnabled=(changes.crowd_bypass_opt_out.newValue!=="true")
+	}
+	if(changes.crowd_auto_open)
+	{
+		crowdAutoOpen=(changes.crowd_auto_open.newValue==="true")
 	}
 	if(changes.userscript)
 	{
@@ -194,6 +199,14 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	return encodedRedirect(details.url.substr(52))
 },{types:["main_frame"],urls:["https://universal-bypass.org/before-navigate?target=*"]},["blocking"])
 brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(crowdAutoOpen)
+	{
+		const args=new URLSearchParams(details.url.substr(43))
+		if(args.has("target")&&args.has("back"))
+		{
+			brws.tabs.create({url:args.get("target")})
+		}
+	}
 	return {redirectUrl:brws.runtime.getURL("html/crowd-bypassed.html")+details.url.substr(43)}
 },{types:["main_frame"],urls:["https://universal-bypass.org/crowd-bypassed?*"]},["blocking"])
 brws.webRequest.onBeforeRequest.addListener(details=>{

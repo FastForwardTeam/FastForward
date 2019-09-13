@@ -7,9 +7,10 @@ navigationDelayCheckbox=document.getElementById("navigation-delay-toggle"),
 trackerBypassCheckbox=document.getElementById("option-tracker-bypass"),
 instantNavigationTrackersCheckbox=document.getElementById("option-instant-navigation-trackers"),
 blockIPLoggersCheckbox=document.getElementById("option-block-ip-loggers"),
-crowdBypassCheckbox=document.getElementById("option-crowd-bypass")
+crowdBypassCheckbox=document.getElementById("option-crowd-bypass"),
+crowdAutoOpenCheckbox=document.getElementById("option-crowd-auto-open")
 var navigationDelayInputTimer
-brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_instant_navigation_trackers","allow_ip_loggers","crowd_bypass_opt_out"],res=>{
+brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_instant_navigation_trackers","allow_ip_loggers","crowd_bypass_opt_out","crowd_auto_open"],res=>{
 	if(res==undefined)
 	{
 		res={}
@@ -32,21 +33,25 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 		navigationDelayInput.value=res.navigation_delay
 		navigationDelayCheckbox.setAttribute("checked","checked")
 	}
-	if(!res.no_tracker_bypass||res.no_tracker_bypass!=="true")
+	if(res.no_tracker_bypass!=="true")
 	{
 		trackerBypassCheckbox.setAttribute("checked","checked")
 	}
-	if(!res.no_instant_navigation_trackers||res.no_instant_navigation_trackers!=="true")
+	if(res.no_instant_navigation_trackers!=="true")
 	{
 		instantNavigationTrackersCheckbox.setAttribute("checked","checked")
 	}
-	if(!res.allow_ip_loggers||res.allow_ip_loggers!=="true")
+	if(res.allow_ip_loggers!=="true")
 	{
 		blockIPLoggersCheckbox.setAttribute("checked","checked")
 	}
-	if(!res.crowd_bypass_opt_out||res.crowd_bypass_opt_out!=="true")
+	if(res.crowd_bypass_opt_out!=="true")
 	{
 		crowdBypassCheckbox.setAttribute("checked","checked")
+	}
+	if(res.crowd_auto_open==="true")
+	{
+		crowdAutoOpenCheckbox.setAttribute("checked","checked")
 	}
 	instantNavigationTrackersLogic()
 	enabledCheckbox.onchange=function()
@@ -100,6 +105,12 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 	{
 		brws.storage.sync.set({
 			crowd_bypass_opt_out:(!this.checked).toString()
+		})
+	}
+	crowdAutoOpenCheckbox.onchange=function()
+	{
+		brws.storage.sync.set({
+			crowd_auto_open:this.checked.toString()
 		})
 	}
 })
