@@ -23,14 +23,7 @@ isGoodLink=link=>{
 brws.runtime.onInstalled.addListener(details=>{
 	if(details.reason=="install")
 	{
-		if(platform=="moz")
-		{
-			brws.windows.create({url:"https://universal-bypass.org/firstrun"})
-		}
-		else
-		{
-			window.open("https://universal-bypass.org/firstrun")
-		}
+		brws.tabs.create({url:"https://universal-bypass.org/firstrun"})
 	}
 	//Set default options & convert old options
 	brws.storage.sync.get(["navigation_delay"],res=>{
