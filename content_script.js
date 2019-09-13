@@ -99,9 +99,14 @@ if(document instanceof HTMLDocument)
 				}
 			},
 			hrefBypass=(regex,f)=>{
-				if(!bypassed&&regex.test(location.href))
+				if(bypassed)
 				{
-					f()
+					return
+				}
+				let res=regex.exec(location.href)
+				if(res)
+				{
+					f(res)
 				}
 			},
 			ensureDomLoaded=f=>{
@@ -681,11 +686,11 @@ if(document instanceof HTMLDocument)
 					})
 				})
 				domainBypass("elsfile.org",()=>{
-					let form=document.createElement("form")
-					form.method="POST"
-					form.innerHTML='<input type="hidden" name="op" value="download1"><input type="hidden" name="usr_login" value="C"><input type="hidden" name="id" value="'+location.pathname.substr(1)+'"><input type="hidden" name="fname" value="'+document.querySelectorAll("div#container > div > div > table > tbody > tr > td")[2].textContent+'"><input type="hidden" name="referer" value="q"><input type="hidden" name="method_free" value="Free Download">'
-					form=document.documentElement.appendChild(form)
-					form.submit()
+					let f=document.createElement("form")
+					f.method="POST"
+					f.innerHTML='<input type="hidden" name="op" value="download1"><input type="hidden" name="usr_login" value="C"><input type="hidden" name="id" value="'+location.pathname.substr(1)+'"><input type="hidden" name="fname" value="'+document.querySelectorAll("div#container > div > div > table > tbody > tr > td")[2].textContent+'"><input type="hidden" name="referer" value="q"><input type="hidden" name="method_free" value="Free Download">'
+					f=document.documentElement.appendChild(f)
+					f.submit()
 					return finish()
 				})
 				domainBypass("goou.in",()=>{
@@ -875,6 +880,16 @@ if(document instanceof HTMLDocument)
 				})
 				hrefBypass(/mirrored\\.to\\/downlink\\//,()=>{
 					ifElement(".centered.highlight a[href]",a=>safelyNavigate(a.href))
+				})
+				hrefBypass(/new\\.lewd\\.ninja\\/external\\/game\\/([0-9]+)\\/([a-z0-9]{64})/,m=>{
+					let f=document.createElement("form")
+					f.method="POST"
+					f.action="https://xxx.lewd.ninja/game/"+m[1]+"/out/"+m[2]
+					f=document.body.appendChild(f)
+					f.submit()
+				})
+				domainBypass("xxx.lewd.ninja",()=>{
+					safelyNavigate(document.body.textContent)
 				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
