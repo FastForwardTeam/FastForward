@@ -149,7 +149,7 @@ domainBypass("example.com", function()
 			// Optional function to be called if the given element is not available
 		})
 	})
-	// You can also use awaitElement to wait until a given element is available via document.querySelector:
+	// You can also use awaitElement to wait until an element is available via a query selector:
 	awaitElement("a#skip_button[href]", a=> {
 		safelyNavigate(a.href)
 	})
