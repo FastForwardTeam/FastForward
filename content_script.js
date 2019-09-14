@@ -21,8 +21,7 @@ if(document instanceof HTMLDocument)
 		script.innerHTML=`(()=>{
 			const crowdEnabled=`+(res.crowdEnabled?"true":"false")+`,
 			ODP=(t,p,o)=>{try{Object.defineProperty(t,p,o)}catch(e){console.trace("[Universal Bypass] Couldn't define",p)}},
-			//Copying eval, etc. to prevent issues with other extensions, such as uBlockOrigin. Also, note that this is the page level, so there are no security risks in using eval.
-			eval=window.eval,setTimeout=window.setTimeout,setInterval=window.setInterval,
+			setTimeout=window.setTimeout,setInterval=window.setInterval,
 			transparentProperty=(name,valFunc)=>{
 				let real
 				ODP(window,name,{
