@@ -29,7 +29,7 @@ if(document instanceof HTMLDocument)
 					set:_=>real=_,
 					get:()=>valFunc(real)
 				})
-			}
+			},
 			isGoodLink=link=>{
 				if(!link||link.split("#")[0]==location.href.split("#")[0]||link.substr(0,6)=="about:"||link.substr(0,11)=="javascript:")
 				{
@@ -195,7 +195,7 @@ if(document instanceof HTMLDocument)
 					}
 				}
 			}
-			var navigated=false,
+			let navigated=false,
 			bypassed=false,
 			ignoreCrowdBypass=false,
 			domain=location.hostname
@@ -217,8 +217,7 @@ if(document instanceof HTMLDocument)
 				writable:false
 			})
 			//adf.ly
-			ODP(window,"ysmm",
-			{
+			ODP(window,"ysmm",{
 				set:r=>{
 					let a,m,I="",X=""
 					for(m=0;m<r.length;m++)
@@ -1297,6 +1296,7 @@ if(document instanceof HTMLDocument)
 								}
 							})
 						}
+						clearInterval(dT)
 					}
 				},100)
 				setTimeout(()=>{
