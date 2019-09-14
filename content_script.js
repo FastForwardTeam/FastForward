@@ -1230,7 +1230,7 @@ if(document instanceof HTMLDocument)
 								{
 									crowdBypass(()=>{
 										let cT=setInterval(()=>{
-											let a=document.querySelector("a.get-link")
+											let a=document.querySelector("a.get-link:not(.disabled)")
 											if(!a)
 											{
 												a=document.querySelector(".skip-ad a[href]")
