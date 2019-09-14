@@ -891,6 +891,10 @@ if(document instanceof HTMLDocument)
 				domainBypass("xxx.lewd.ninja",()=>{
 					safelyNavigate(document.body.textContent)
 				})
+				domainBypass("btcleets.xyz",()=>{
+					$=()=>({attr:(n,v)=>safelyNavigate(atob(v))})
+					goto()
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
