@@ -41,6 +41,9 @@
 	"optionsCrowdBypass": {
 		"message": "Gebe und nehme die Ziel-Urls von unumgänglichen Linkkürzern."
 	},
+	"optionsCrowdAutoOpen": {
+		"message": "Nutzer-geteilte Ziele automatisch in einem neuen Tab öffnen."
+	},
 	"privacyPolicy": {
 		"message": "Datenschutzerklärung"
 	},

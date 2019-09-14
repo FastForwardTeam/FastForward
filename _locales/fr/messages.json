@@ -6,7 +6,7 @@
 		"message": "Merci d'avoir installé Universal Bypass !"
 	},
 	"firstrunSubtitle": {
-		"message": "Vous êtes incroyable !"
+		"message": "Vous êtes fantastique !"
 	},
 	"firstrunNoScript": {
 		"message": "Cependant, il semble que vous utilisez le module NoScript ou quelque chose de similaire, avec lequel Universal Bypass n'est pas compatible."
@@ -15,7 +15,7 @@
 		"message": "Questions fréquemment posées (FAQ)"
 	},
 	"support": {
-		"message": "Soutenir le Contourneur Universel"
+		"message": "Soutenir Universal Bypass"
 	},
 	"options": {
 		"message": "Options"
@@ -27,19 +27,22 @@
 		"message": "Activer les contournements de sites Web."
 	},
 	"optionsNavigationDelay": {
-		"message": "Me mener à la destination après % seconde(s). (Utiliser 0 pour y être instantanément mené.)"
+		"message": "M'envoyer à destination après % seconde(s). (Utilisez le chiffre 0 pour y être instantanément envoyé.)"
 	},
 	"optionsTrackerBypass": {
 		"message": "Contourner les traqueurs en utilisant Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
-		"message": "M'envoyer instantanément vers les destinations des traqueurs."
+		"message": "Me rediriger instantanément vers les destinations des traqueurs."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Bloquer les enregistreurs d'IP si ils ne peuvent pas être contournés."
 	},
 	"optionsCrowdBypass": {
 		"message": "Obtenir les cibles des raccourcisseurs incontournables."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Ouvrir automatiquement les destinations partagées dans un nouvel onglet."
 	},
 	"privacyPolicy": {
 		"message": "Politique de confidentialité"
@@ -63,7 +66,7 @@
 		"message": "Vous serez automatiquement redirigé dans 1 seconde."
 	},
 	"beforeNavigateOptions": {
-		"message": "Voulez-vous être redirigé instantanément ou dans x secondes?"
+		"message": "Voulez-vous être redirigé instantanément ou après x secondes ?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass a empêché l’enregistrement de votre adresse IP."

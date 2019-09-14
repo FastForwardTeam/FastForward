@@ -41,6 +41,9 @@
 	"optionsCrowdBypass": {
 		"message": "Giv og tag destinationerne for afkortere, som ikke kan omgås."
 	},
+	"optionsCrowdAutoOpen": {
+		"message": "Åbn automatisk crowd-sourced destinationer i en ny fane."
+	},
 	"privacyPolicy": {
 		"message": "Fortrolighedspolitik"
 	},

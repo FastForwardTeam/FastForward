@@ -41,6 +41,9 @@
 	"optionsCrowdBypass": {
 		"message": "Give and take the destinations of unbypassable shorteners."
 	},
+	"optionsCrowdAutoOpen": {
+		"message": "Automatski otvori crowd-sourced odredišta u novoj kartici."
+	},
 	"privacyPolicy": {
 		"message": "Pravila privatnosti"
 	},

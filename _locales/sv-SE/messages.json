@@ -41,6 +41,9 @@
 	"optionsCrowdBypass": {
 		"message": "Ge och ta målen för icke förbikopplade länkförkortare."
 	},
+	"optionsCrowdAutoOpen": {
+		"message": "Öppna automatiskt crowdsourced mål i en ny flik."
+	},
 	"privacyPolicy": {
 		"message": "Integritetspolicy"
 	},
