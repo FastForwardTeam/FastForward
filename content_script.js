@@ -1210,7 +1210,7 @@ if(document instanceof HTMLDocument)
 							crowdPath(location.search.substr(3))
 						}
 						domainBypass("adcoinfly.com",()=>{
-							document.querySelectorAll("a.btn[href=''], a.btn[href$='clickme']").forEach(e=>{
+							document.querySelectorAll("a.btn[href=''], a.btn[href*='clickme']").forEach(e=>{
 								e.parentNode.removeChild(e)
 							})
 						})
