@@ -898,6 +898,9 @@ if(document instanceof HTMLDocument)
 					$=()=>({attr:(n,v)=>safelyNavigate(atob(v))})
 					goto()
 				})
+				domainBypass("tr.link",()=>{
+					app_vars={}
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
