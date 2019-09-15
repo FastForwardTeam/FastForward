@@ -317,7 +317,8 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 "*://*.infokesehatan.club/?r=*",
 "*://*.wanhealth.me/?r=*",
 "*://*.otoponsel.com/?r=*",
-"*://*.kepoow.me/?r=*"
+"*://*.kepoow.me/?r=*",
+"*://*.dlbatch.com/?r=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
