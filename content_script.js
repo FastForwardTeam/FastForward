@@ -211,10 +211,13 @@ if(document instanceof HTMLDocument)
 			{
 				ignoreCrowdBypass=true
 				history.pushState({},document.querySelector("title").textContent,location.href.substr(0,location.href.length-18))
-				ensureDomLoaded(()=>{
-					document.querySelectorAll("form[action]").forEach(e=>e.action+="#ignoreCrowdBypass")
-					document.querySelectorAll("a[href]").forEach(e=>e.href+="#ignoreCrowdBypass")
-				})
+				if(domain!="bc.vc")
+				{
+					ensureDomLoaded(()=>{
+						document.querySelectorAll("form[action]").forEach(e=>e.action+="#ignoreCrowdBypass")
+						document.querySelectorAll("a[href]").forEach(e=>e.href+="#ignoreCrowdBypass")
+					})
+				}
 			}
 			ODP(window,"blurred",{
 				value:false,
