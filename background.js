@@ -318,7 +318,8 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 "*://*.wanhealth.me/?r=*",
 "*://*.otoponsel.com/?r=*",
 "*://*.kepoow.me/?r=*",
-"*://*.dlbatch.com/?r=*"
+"*://*.dlbatch.com/?r=*",
+"*://*.bolaoke.club/?r=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
