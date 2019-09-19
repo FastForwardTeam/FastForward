@@ -26,6 +26,9 @@
 	"optionsEnabled": {
 		"message": "Habilitar las bypasses del sitio web."
 	},
+	"optionsNavigationDelay": {
+		"message": "Llevame a mi destino después de % segundo(s). (Use 0 para navegar al instante.)"
+	},
 	"optionsTrackerBypass": {
 		"message": "Evita rastreadores usando Apimon.de."
 	},
@@ -37,6 +40,9 @@
 	},
 	"optionsCrowdBypass": {
 		"message": "Dar y tomar los destinos de los acortadores que no se pueden anular."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Abrir automáticamente destinos de Crowd-Sourced en una nueva pestaña."
 	},
 	"privacyPolicy": {
 		"message": "Política de privacidad"
@@ -52,6 +58,15 @@
 	},
 	"beforeNavigateDestination": {
 		"message": "Tu dirección de destino es %"
+	},
+	"beforeNavigateTimer": {
+		"message": "Serás redirigido automáticamente en % segundo(s)."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Serás redirigido automáticamente en % segundo(s).\n"
+	},
+	"beforeNavigateOptions": {
+		"message": "¿Quieres ser redirigido al instante o en x segundos?\n"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass evitó que su IP se registrara."

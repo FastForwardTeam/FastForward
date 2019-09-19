@@ -27,7 +27,7 @@
 		"message": "Activer les contournements de sites Web."
 	},
 	"optionsNavigationDelay": {
-		"message": "M'envoyer à destination après % seconde(s). (Utilisez le chiffre 0 pour y être instantanément envoyé.)"
+		"message": "M'envoyer à destination après % seconde(s). (Utilisez 0 pour être instantanément redirigé.)"
 	},
 	"optionsTrackerBypass": {
 		"message": "Contourner les traqueurs en utilisant Apimon.de."
@@ -42,7 +42,7 @@
 		"message": "Obtenir les cibles des raccourcisseurs incontournables."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Ouvrir automatiquement les destinations partagées dans un nouvel onglet."
+		"message": "Ouvrir automatiquement les destinations partagées par les utilisateurs dans un nouvel onglet."
 	},
 	"privacyPolicy": {
 		"message": "Politique de confidentialité"

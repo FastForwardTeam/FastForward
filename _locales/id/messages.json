@@ -41,6 +41,9 @@
 	"optionsCrowdBypass": {
 		"message": "Memberi dan mendapatkan tujuan dari pemendek link yang tidak dapat dilewati."
 	},
+	"optionsCrowdAutoOpen": {
+		"message": "Secara otomatis membuka halaman tujuan crowd-sourced pada tab baru."
+	},
 	"privacyPolicy": {
 		"message": "Kebijakan Pribadi"
 	},
