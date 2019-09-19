@@ -318,7 +318,7 @@ if(document instanceof HTMLDocument)
 				get:()=>actual_web_root
 			})
 			//Shorte.st
-			transparentProperty(window,"reqwest",r=>(typeof app!="undefined"&&document.querySelector(".skip-add-container .first-img[alt='Shorte.st']"))?a=>{
+			transparentProperty("reqwest",r=>(typeof app!="undefined"&&document.querySelector(".skip-add-container .first-img[alt='Shorte.st']"))?a=>{
 				if(a.type==="jsonp")
 				{
 					a.success=s=>contributeAndNavigate(s.destinationUrl)
