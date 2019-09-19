@@ -463,7 +463,7 @@ if(document instanceof HTMLDocument)
 				}
 			})
 			//Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
-			hrefBypass(/njiir\\.com|linkduit\\.net|k2s\\.cc|1link\\.club|muhammadyoga\\.me|u\\.to|skiplink\\.io|healthykk\\.com|punchsubs\\.net|linkasm\\.com|firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php|2speed\\.net\\/file\\//,()=>{
+			hrefBypass(/njiir\\.com|linkduit\\.net|k2s\\.cc|muhammadyoga\\.me|u\\.to|skiplink\\.io|healthykk\\.com|punchsubs\\.net|linkasm\\.com|firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php|2speed\\.net\\/file\\//,()=>{
 				window.setInterval=f=>setInterval(f,1)
 			})
 			domainBypass(/indishare\\.org|uploadrar\\.com|longfiles\\.com|datei\\.to|id-share19\\.com/,()=>{
@@ -667,7 +667,8 @@ if(document instanceof HTMLDocument)
 						document.querySelector("form").submit()
 					}
 				})
-				domainBypass("runtyurl.com",()=>{
+				domainBypass("1link.club",()=>{
+					window.setInterval=f=>setInterval(f,1)
 					let b=document.getElementById("go_next")
 					if(b&&isGoodLink(b.href))
 					{
