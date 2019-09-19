@@ -61,3 +61,32 @@ hr
 	border-bottom: 1px solid #000;
 	margin: 10px 0;
 }
+
+input[disabled]
+{
+	cursor: not-allowed;
+}
+
+@media(prefers-color-scheme: dark)
+{
+	body, input
+	{
+		color: #e8e6e3;
+		background: #181a1b;
+	}
+
+	hr
+	{
+		border-bottom-color: #e8e6e3;
+	}
+
+	input
+	{
+		border: #474747 1px solid;
+	}
+
+	input[disabled]
+	{
+		opacity:.5;
+	}
+}
