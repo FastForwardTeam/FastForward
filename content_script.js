@@ -905,6 +905,15 @@ if(document instanceof HTMLDocument)
 				domainBypass("tr.link",()=>{
 					app_vars={}
 				})
+				domainBypass("lompat.in",()=>{
+					window.open=u=>{
+						if(u.substr(0,28)=="http://henpoi.lompat.in/?go="&&u.substr(u.length-4)=="&s=1")
+						{
+							safelyNavigate(atob(u.substr(28,u.length-32)))
+						}
+					}
+					awaitElement("a[onclick='changeLink()']",changeLink)
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
