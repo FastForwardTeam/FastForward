@@ -898,10 +898,6 @@ if(document instanceof HTMLDocument)
 				domainBypass("xxx.lewd.ninja",()=>{
 					safelyNavigate(document.body.textContent)
 				})
-				domainBypass("btcleets.xyz",()=>{
-					$=()=>({attr:(n,v)=>safelyNavigate(atob(v))})
-					goto()
-				})
 				domainBypass("tr.link",()=>{
 					app_vars={}
 				})
@@ -1143,6 +1139,11 @@ if(document instanceof HTMLDocument)
 						safelyNavigate(i.value)
 						finish()
 					})
+				}
+				if(typeof adblock_message=="string"&&adblock_message.indexOf("mm1.ink")>-1&&typeof goto=="function")//mm1.ink#442
+				{
+					$=()=>({attr:(n,v)=>safelyNavigate(atob(v))})
+					goto()
 				}
 				let t=document.querySelector("title")
 				if(t)
