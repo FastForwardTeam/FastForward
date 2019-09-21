@@ -9,21 +9,29 @@ if(args.has("target"))
 		let secondsLeft=res.navigation_delay
 		if(secondsLeft<61)
 		{
-			let div=document.getElementById("timer"),
+			const div=document.getElementById("timer"),
 			timer=setInterval(()=>{
 				secondsLeft--
-				updateSpan()
+				tick()
+			},1000),
+			p=div.querySelector("p"),
+			tick=()=>{
 				if(secondsLeft<=0)
 				{
 					location.href=args.get("target")
 					clearInterval(timer)
 				}
-			},1000)
-			div.style.display="block"
-			const span=div.querySelector("span"),updateSpan=()=>{
-				span.textContent=brws.i18n.getMessage("beforeNavigateTimer"+(secondsLeft==1?"Singular":"")).replace("%",secondsLeft)
+				if(secondsLeft==1)
+				{
+					p.textContent=brws.i18n.getMessage("beforeNavigateTimerSingular")
+				}
+				else
+				{
+					p.textContent=brws.i18n.getMessage("beforeNavigateTimer").replace("%",secondsLeft)
+				}
 			}
-			updateSpan()
+			div.style.display="block"
+			tick()
 		}
 	})
 }

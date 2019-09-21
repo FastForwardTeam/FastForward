@@ -1,7 +1,7 @@
 //If you want to insert your own bypass, please search for "Insertion point"
 if(document instanceof HTMLDocument)
 {
-	let brws = (typeof browser == "undefined" ? chrome : browser)
+	const brws=(typeof browser=="undefined"?chrome:browser)
 	brws.runtime.sendMessage({type: "can-run"}, res => {
 		if(!res.enabled)
 		{

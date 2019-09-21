@@ -25,24 +25,11 @@ brws.runtime.onInstalled.addListener(details=>{
 	{
 		brws.tabs.create({url:"https://universal-bypass.org/firstrun"})
 	}
-	//Set default options & convert old options
-	brws.storage.sync.get(["navigation_delay"],res=>{
-		if(!res.navigation_delay)
-		{
-			brws.storage.sync.get(["instant_navigation"],res=>{
-				brws.storage.sync.set({navigation_delay:(res.instant_navigation&&res.instant_navigation==="true"?0:10)})
-				if(res.instant_navigation)
-				{
-					brws.storage.sync.remove("instant_navigation")
-				}
-			})
-		}
-	})
 })
 
 //Keeping track of options
-var enabled=true,instantNavigation=false,trackerBypassEnabled=true,instantNavigationTrackers=false,blockIPLoggers=true,crowdEnabled=true,crowdAutoOpen=false,userscript=""
-brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_instant_navigation_trackers","allow_ip_loggers","crowd_bypass_opt_out","crowd_auto_open"],res=>{
+var enabled=true,instantNavigation=false,trackerBypassEnabled=true,instantNavigationTrackers=false,blockIPLoggers=true,crowdEnabled=true,userscript=""
+brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_instant_navigation_trackers","allow_ip_loggers","crowd_bypass_opt_out","crowd_open_delay"],res=>{
 	if(res)
 	{
 		enabled=(!res.disable||res.disable!=="true")
@@ -57,12 +44,45 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 				"512": "icon_disabled/512.png"
 			}})
 		}
-		instantNavigation=(res.navigation_delay==0)
+		if(res.navigation_delay)
+		{
+			if(res.navigation_delay==0)
+			{
+				instantNavigation=true
+			}
+		}
+		else
+		{
+			brws.storage.sync.get(["instant_navigation"],r=>{
+				if(r.instant_navigation)
+				{
+					if(r.instant_navigation==="true")
+					{
+						instantNavigation=true
+					}
+					brws.storage.sync.remove("instant_navigation")
+				}
+				brws.storage.sync.set({
+					navigation_delay: (instantNavigation ? 0 : 10)
+				})
+			})
+		}
 		trackerBypassEnabled=(res.no_tracker_bypass!=="true")
 		instantNavigationTrackers=(res.no_instant_navigation_trackers!=="true")
 		blockIPLoggers=(res.allow_ip_loggers!=="true")
 		crowdEnabled=(res.crowd_bypass_opt_out!=="true")
-		crowdAutoOpen=(res.crowd_auto_open==="true")
+		if(!res.crowd_open_delay)
+		{
+			brws.storage.sync.get(["crowd_auto_open"],r=>{
+				brws.storage.sync.set({
+					crowd_open_delay: (r.crowd_auto_open==="true" ? 0 : 61)
+				})
+				if(r.crowd_auto_open)
+				{
+					brws.storage.sync.remove("crowd_auto_open")
+				}
+			})
+		}
 	}
 })
 brws.storage.local.get(["userscript"],res=>{
@@ -118,10 +138,6 @@ brws.storage.onChanged.addListener(changes=>{
 	{
 		crowdEnabled=(changes.crowd_bypass_opt_out.newValue!=="true")
 	}
-	if(changes.crowd_auto_open)
-	{
-		crowdAutoOpen=(changes.crowd_auto_open.newValue==="true")
-	}
 	if(changes.userscript)
 	{
 		userscript=changes.userscript.newValue
@@ -138,7 +154,13 @@ brws.runtime.onMessage.addListener((req, sender, respond) => {
 			crowdEnabled: crowdEnabled,
 			userscript: userscript
 		})
-		break
+		break;
+
+		case "open-tab":
+		brws.tabs.create({
+			url: req.url
+		})
+		break;
 
 		case "crowd-contribute":
 		if(crowdEnabled)
@@ -152,7 +174,7 @@ brws.runtime.onMessage.addListener((req, sender, respond) => {
 		{
 			console.warn("Unexpected message:", req)
 		}
-		break
+		break;
 
 		default:
 		console.warn("Invalid message:", req)
@@ -199,14 +221,6 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	return encodedRedirect(details.url.substr(52))
 },{types:["main_frame"],urls:["https://universal-bypass.org/before-navigate?target=*"]},["blocking"])
 brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(crowdAutoOpen)
-	{
-		const args=new URLSearchParams(details.url.substr(43))
-		if(args.has("target")&&args.has("back"))
-		{
-			brws.tabs.create({url:args.get("target")})
-		}
-	}
 	return {redirectUrl:brws.runtime.getURL("html/crowd-bypassed.html")+details.url.substr(43)}
 },{types:["main_frame"],urls:["https://universal-bypass.org/crowd-bypassed?*"]},["blocking"])
 brws.webRequest.onBeforeRequest.addListener(details=>{

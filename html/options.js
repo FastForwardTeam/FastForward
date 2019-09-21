@@ -1,5 +1,6 @@
 //Options
 document.querySelector("[for='option-navigation-delay']").innerHTML=document.querySelector("[for='option-navigation-delay']").innerHTML.replace("%",'<input id="option-navigation-delay" type="number" min="0" max="60" skip="1" style="width:34px">')
+document.querySelector("[for='option-crowd-open-delay']").innerHTML=document.querySelector("[for='option-crowd-open-delay']").innerHTML.replace("%",'<input id="option-crowd-open-delay" type="number" min="0" max="60" skip="1" style="width:34px">')
 const enabledCheckbox=document.getElementById("option-enabled"),
 enabledLabel=document.querySelector("label[for='option-enabled']"),
 navigationDelayInput=document.getElementById("option-navigation-delay"),
@@ -8,9 +9,10 @@ trackerBypassCheckbox=document.getElementById("option-tracker-bypass"),
 instantNavigationTrackersCheckbox=document.getElementById("option-instant-navigation-trackers"),
 blockIPLoggersCheckbox=document.getElementById("option-block-ip-loggers"),
 crowdBypassCheckbox=document.getElementById("option-crowd-bypass"),
-crowdAutoOpenCheckbox=document.getElementById("option-crowd-auto-open")
-var navigationDelayInputTimer
-brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_instant_navigation_trackers","allow_ip_loggers","crowd_bypass_opt_out","crowd_auto_open"],res=>{
+crowdOpenDelayInput=document.getElementById("option-crowd-open-delay"),
+crowdOpenDelayCheckbox=document.getElementById("option-crowd-open-delay-toggle")
+let navigationDelayInputTimer,crowdOpenDelayInputTimer
+brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_instant_navigation_trackers","allow_ip_loggers","crowd_bypass_opt_out","crowd_open_delay"],res=>{
 	if(res==undefined)
 	{
 		res={}
@@ -49,9 +51,15 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 	{
 		crowdBypassCheckbox.setAttribute("checked","checked")
 	}
-	if(res.crowd_auto_open==="true")
+	if(res.crowd_open_delay>60)
 	{
-		crowdAutoOpenCheckbox.setAttribute("checked","checked")
+		crowdOpenDelayInput.value=0
+		crowdOpenDelayInput.setAttribute("disabled","disabled")
+	}
+	else
+	{
+		crowdOpenDelayInput.value=res.crowd_open_delay
+		crowdOpenDelayCheckbox.setAttribute("checked","checked")
 	}
 	instantNavigationTrackersLogic()
 	enabledCheckbox.onchange=function()
@@ -62,7 +70,7 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 		})
 	}
 	navigationDelayInput.oninput=()=>{
-		window.clearTimeout(navigationDelayInputTimer)
+		clearTimeout(navigationDelayInputTimer)
 		navigationDelayInputTimer=setTimeout(()=>{
 			brws.storage.sync.set({
 				navigation_delay:navigationDelayInput.value
@@ -72,7 +80,9 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 	}
 	navigationDelayCheckbox.onchange=function()
 	{
-		brws.storage.sync.set({navigation_delay:(this.checked?navigationDelayInput.value:61)})
+		brws.storage.sync.set({
+			navigation_delay:(this.checked?navigationDelayInput.value:61)
+		})
 		if(this.checked)
 		{
 			navigationDelayInput.removeAttribute("disabled")
@@ -106,12 +116,32 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 		brws.storage.sync.set({
 			crowd_bypass_opt_out:(!this.checked).toString()
 		})
+		if(this.checked)
+		{
+			crowdOpenDelayCheckbox.removeAttribute("disabled")
+			crowdOpenDelayLogic()
+		}
+		else
+		{
+			crowdOpenDelayCheckbox.setAttribute("disabled","disabled")
+			crowdOpenDelayInput.setAttribute("disabled","disabled")
+		}
 	}
-	crowdAutoOpenCheckbox.onchange=function()
+	crowdOpenDelayCheckbox.onchange=function()
 	{
 		brws.storage.sync.set({
-			crowd_auto_open:this.checked.toString()
+			crowd_open_delay:(this.checked?crowdOpenDelayInput.value:61)
 		})
+		crowdOpenDelayLogic()
+	}
+	crowdOpenDelayInput.oninput=function()
+	{
+		clearTimeout(crowdOpenDelayInputTimer)
+		crowdOpenDelayInputTimer=setTimeout(()=>{
+			brws.storage.sync.set({
+				crowd_open_delay:crowdOpenDelayInput.value
+			})
+		},300)
 	}
 })
 function instantNavigationTrackersLogic()
@@ -125,6 +155,17 @@ function instantNavigationTrackersLogic()
 		instantNavigationTrackersCheckbox.removeAttribute("disabled")
 	}
 }
+function crowdOpenDelayLogic()
+{
+	if(crowdOpenDelayCheckbox.checked)
+	{
+		crowdOpenDelayInput.removeAttribute("disabled")
+	}
+	else
+	{
+		crowdOpenDelayInput.setAttribute("disabled","disabled")
+	}
+}
 
 //Highlight option from hash
 let hash=location.hash.toString().replace("#","")
@@ -135,11 +176,9 @@ if(hash)
 
 //Custom Bypasses
 var example=`// Some examples of what you can do with custom bypasses:
-domainBypass("example.com", function()
-{
+domainBypass("example.com", () => {
 	// Triggered on example.com and subdomains (e.g. www.example.com)
-	ensureDomLoaded(function()
-	{
+	ensureDomLoaded(() => {
 		// Triggered as soon as the DOM is ready
 		// You can use ifElement to check if an element is available via document.querySelector:
 		ifElement("a#skip_button[href]", a => {
@@ -150,16 +189,14 @@ domainBypass("example.com", function()
 		})
 	})
 	// You can also use awaitElement to wait until an element is available via a query selector:
-	awaitElement("a#skip_button[href]", a=> {
+	awaitElement("a#skip_button[href]", a => {
 		safelyNavigate(a.href)
 	})
 })
-domainBypass(/example\\.(com|org)/, function()
-{
+domainBypass(/example\\.(com|org)/, () => {
 	// Triggered if the regex matches any part of the hostname
 })
-hrefBypass(/example\\.(com|org)/, function()
-{
+hrefBypass(/example\\.(com|org)/, () => {
 	// Triggered if the regex matches any part of the URL
 })
 // Enjoy! Your changes will be saved automatically.

@@ -42,7 +42,7 @@
 		"message": "Give and take the destinations of unbypassable shorteners."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Automatically open crowd-sourced destinations in a new tab."
+		"message": "Open crowd-sourced destinations in a new tab after % second(s). (0 = instant.)"
 	},
 	"privacyPolicy": {
 		"message": "Privacy Policy"
@@ -60,10 +60,10 @@
 		"message": "Your destination is %"
 	},
 	"beforeNavigateTimer": {
-		"message": "You will be automatically redirected in % seconds."
+		"message": "You will be redirected automatically in % seconds."
 	},
 	"beforeNavigateTimerSingular": {
-		"message": "You will be automatically redirected in 1 second."
+		"message": "You will be redirected automatically in 1 second."
 	},
 	"beforeNavigateOptions": {
 		"message": "Do you want to be redirected instantly or in x seconds?"
@@ -80,7 +80,16 @@
 	"crowdBypassedInfo": {
 		"message": "Other Universal Bypass users have already waited for you and reported that this leads to %"
 	},
+	"crowdBypassedTimer": {
+		"message": "This will be opened in a new tab in % seconds."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "This will be opened in a new tab in 1 second."
+	},
 	"crowdBypassedIgnore": {
 		"message": "Was this not correct?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Do you want this to be opened in a new tab instantly or in x seconds?"
 	}
 }
