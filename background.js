@@ -462,10 +462,18 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		let url=new URL(details.url)
 		if(url.searchParams.has("id"))
 		{
-			return getRedirect(atob(url.searchParams.get("id").split("").reverse().join("")))
+			let t=atob(url.searchParams.get("id").split("").reverse().join(""))
+			if(t.substr(t.length-16)=='" target="_blank')
+			{
+				t=t.substr(0,t.length-16)
+			}
+			return getRedirect(t)
 		}
 	}
-},{types:["main_frame"],urls:["*://*.masterads.info/instagram/campanha.php?*"]},["blocking"])
+},{types:["main_frame"],urls:[
+"*://*.masterads.info/instagram/campanha.php?*",
+"*://*.adssuper.com/instagram/campanha.php?*"
+]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
