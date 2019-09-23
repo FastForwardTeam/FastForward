@@ -339,6 +339,19 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
+		let i=details.url.indexOf("cr=")
+		if(i>0)
+		{
+			return getRedirect(atob(details.url.substr(i+3)))
+		}
+	}
+},{types:["main_frame"],urls:[
+"*://*.ouo.today/?*"
+]},["blocking"])
+
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
 		return getRedirect(atob(details.url.substr(details.url.indexOf("?a=")+3).split("#",1)[0]))
 	}
 },{types:["main_frame"],urls:[
