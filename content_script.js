@@ -679,7 +679,7 @@ if(document instanceof HTMLDocument)
 						ifElement("#download",b=>safelyNavigate(b.href))
 					}
 				})
-				hrefBypass(/4snip\\.pw\\/out\\//,()=>{
+				hrefBypass(/4snip\\.pw\\/(out|decode)\\//,()=>{
 					let f=document.querySelector("form[action^='../out2/']")
 					f.setAttribute("action",f.getAttribute("action").replace("../out2/","../outlink/"))
 					f.submit()
