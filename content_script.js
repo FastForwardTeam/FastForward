@@ -760,9 +760,6 @@ if(document instanceof HTMLDocument)
 				domainBypass("daunshorte.teknologilink.com",()=>{
 					location.href=document.querySelector("a[href^='https://teknosafe.teknologilink.com/linkteknolink/safelinkscript.php?']").href
 				})
-				domainBypass("teknosafe.teknologilink.com",()=>{
-					safelyNavigate(document.querySelector("#templatemo_content > div > a[href]").href)
-				})
 				domainBypass("imgtaxi.com",()=>{
 					document.querySelector("a.overlay_ad_link").click()
 				})
@@ -1152,6 +1149,11 @@ if(document instanceof HTMLDocument)
 				{
 					$=()=>({attr:(n,v)=>safelyNavigate(atob(v))})
 					goto()
+				}
+				if(document.querySelector("#templatemo_footer > a[href='http://teknosafe.kertashitam.com/']")&&document.querySelector("#templatemo_content > div > a[href]"))//teknosafe.kertashitam.com,teknosafe.teknologilink.com
+				{
+					safelyNavigate(document.querySelector("#templatemo_content > div > a[href]").href)
+					return
 				}
 				let t=document.querySelector("title")
 				if(t)
