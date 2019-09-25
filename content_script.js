@@ -724,7 +724,7 @@ if(document instanceof HTMLDocument)
 					let xhr=new XMLHttpRequest()
 					xhr.onload=()=>{
 						let json=JSON.parse(xhr.responseText)
-						if(json.paste)
+						if(json&&json.paste)
 						{
 							safelyNavigate(json.paste.url)
 						}
@@ -1112,13 +1112,21 @@ if(document instanceof HTMLDocument)
 						s.style.display="block"
 					}
 				}
-				if(document.querySelector(".top-bar a[href='https://linkvertise.net']")&&typeof app!="undefined"&&app.handleRedirect)//Linkvertise.net
+				if(document.querySelector("lv-linkvertise"))//Link-to.net
 				{
-					app.countdown=0
-					$.post=(u,c)=>c()
-					app.handleRedirect()
+					console.log("Linkvertise")
+					let xhr=new XMLHttpRequest()
+					xhr.onload=()=>{
+						let json=JSON.parse(xhr.responseText)
+						if(json&&json.data&&json.data.link)
+						{
+							safelyNavigate(json.data.link.target)
+						}
+					}
+					xhr.open("GET","https://linkvertise.net/api/v1/redirect/link/static"+location.pathname)
+					xhr.send()
 				}
-				if(document.querySelectorAll("img[src='/assets/img/logo.png'][alt='Openload']").length)//OpenLoad
+				if(document.querySelectorAll("img[src='/assets/img/logo.png'][alt='Openload']").length)
 				{
 					if(typeof secondsdl!="undefined")
 					{
