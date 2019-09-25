@@ -42,7 +42,7 @@
 		"message": "Menehi lan entuk tujuan saka pemendek link sing ora bisa ditrabas."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Mbukak kanthi otomatis tujuan crowd-sourced ing tab anyar."
+		"message": "Mbukak tujuan crowd-sourced ing tab anyar sawise % detik. (0 = langsung.)"
 	},
 	"privacyPolicy": {
 		"message": "Kebijakan Privasi"
@@ -80,7 +80,16 @@
 	"crowdBypassedInfo": {
 		"message": "Pangguna Universal Bypass liyane wis ngenteni kanggo sampeyan lan nglaporake yen link iki tujuane yaiku %"
 	},
+	"crowdBypassedTimer": {
+		"message": "Iki bakal di bukak ndek tab anyar ing % detik."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Iki bakal di bukak ndek tab anyar ing 1 detik."
+	},
 	"crowdBypassedIgnore": {
 		"message": "Opo iki ora bener?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Opo sampeyan pingin iki di bukak ndek tab anyar langsung utawa ing x detik?"
 	}
 }

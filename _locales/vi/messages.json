@@ -74,7 +74,16 @@
 	"crowdBypassedInfo": {
 		"message": "Người dùng Universal Bypass khác hiện đang chờ bạn và được báo cáo rằng điều này dẫn đến %"
 	},
+	"crowdBypassedTimer": {
+		"message": "Sẽ được mở trong tab mới sau % giây."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Sẽ được mở trong tab mới sau 1 giây."
+	},
 	"crowdBypassedIgnore": {
 		"message": "Điều này chưa chính xác?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Bạn có muốn cái này được mở trong tab mới tức thì hoặc trong x giây?"
 	}
 }

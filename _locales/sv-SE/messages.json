@@ -42,7 +42,7 @@
 		"message": "Ge och ta målen för icke förbikopplade länkförkortare."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Öppna automatiskt crowdsourced mål i en ny flik."
+		"message": "Öppna crowd-sourced mål i en ny flik efter % sekund(er). (0 = omedelbart)"
 	},
 	"privacyPolicy": {
 		"message": "Integritetspolicy"
@@ -80,7 +80,16 @@
 	"crowdBypassedInfo": {
 		"message": "Andra användare av Universal Bypass har redan väntat på dig och rapporterat att denna leder till %"
 	},
+	"crowdBypassedTimer": {
+		"message": "Detta öppnas i en ny flik om % sekunder."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Detta öppnas i en ny flik om 1 sekund."
+	},
 	"crowdBypassedIgnore": {
 		"message": "Var detta inte korrekt?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Vill du att detta ska öppnas i en ny flik direkt eller om x antal sekunder?"
 	}
 }

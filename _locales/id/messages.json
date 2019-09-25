@@ -42,7 +42,7 @@
 		"message": "Memberi dan mendapatkan tujuan dari pemendek link yang tidak dapat dilewati."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Secara otomatis membuka halaman tujuan crowd-sourced pada tab baru."
+		"message": "Buka halaman tujuan crowd-sourced di tab baru setelah % detik. (0 = instan.)"
 	},
 	"privacyPolicy": {
 		"message": "Kebijakan Pribadi"
@@ -80,7 +80,16 @@
 	"crowdBypassedInfo": {
 		"message": "Pengguna Universal Bypass lainnya sudah menunggu untuk anda dan melaporkan bahwa tautan ini menuju ke %"
 	},
+	"crowdBypassedTimer": {
+		"message": "Ini akan dibuka di tab baru dalam % detik."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Ini akan dibuka di tab baru dalam 1 detik."
+	},
 	"crowdBypassedIgnore": {
 		"message": "Apakah ini tidak benar ?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Apakah Anda ingin ini dibuka di tab baru secara langsung atau dalam x detik?"
 	}
 }

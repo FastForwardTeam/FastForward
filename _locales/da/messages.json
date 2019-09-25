@@ -42,7 +42,7 @@
 		"message": "Giv og tag destinationerne for afkortere, som ikke kan omgås."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Åbn automatisk crowd-sourced destinationer i en ny fane."
+		"message": "Åbn crowd-sourced destinationer i en ny fane efter % sekund(-er) (0 = straks)."
 	},
 	"privacyPolicy": {
 		"message": "Fortrolighedspolitik"
@@ -80,7 +80,16 @@
 	"crowdBypassedInfo": {
 		"message": "Andre Universal Bypass-brugere har allerede ventet på dig og rapporteret, at dette fører til %"
 	},
+	"crowdBypassedTimer": {
+		"message": "Dette åbnes i en ny fane om % sekunder."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Dette åbnes i en ny fane om 1 sekund."
+	},
 	"crowdBypassedIgnore": {
 		"message": "Var dette ukorrekt?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Skal dette åbnes i en ny fane straks eller om x sekunder?"
 	}
 }

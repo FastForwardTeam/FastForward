@@ -42,7 +42,7 @@
 		"message": "Dar y tomar los destinos de los acortadores que no se pueden anular."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Abrir automáticamente destinos de Crowd-Sourced en una nueva pestaña."
+		"message": "Abrir los destinos que ya fueron descubiertos en una nueva pestaña después de % segundo(s). (0 = instantáneo)"
 	},
 	"privacyPolicy": {
 		"message": "Política de privacidad"
@@ -80,7 +80,16 @@
 	"crowdBypassedInfo": {
 		"message": "Otros usuarios de Universal Bypass ya han esperado por ti y han informado que esto lleva a %"
 	},
+	"crowdBypassedTimer": {
+		"message": "Esto se abrirá en una nueva pestaña en % segundos."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Esto se abrirá en una nueva pestaña en 1 segundo."
+	},
 	"crowdBypassedIgnore": {
 		"message": "¿No era eso correcto?"
+	},
+	"crowdBypassedOptions": {
+		"message": "¿Desea que esto se abra en una nueva pestaña al instante o en x segundos?"
 	}
 }

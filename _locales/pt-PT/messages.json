@@ -6,7 +6,7 @@
 		"message": "Obrigado por instalar o Universal Bypass!"
 	},
 	"firstrunSubtitle": {
-		"message": "Você é demais!"
+		"message": "Você é incrível!"
 	},
 	"firstrunNoScript": {
 		"message": "No entanto, parece que você está usando o NoScript ou similar, com o qual o Universal Bypass não é compatível."
@@ -15,22 +15,22 @@
 		"message": "Perguntas Frequentes (FAQ)"
 	},
 	"support": {
-		"message": "Suporte Universal Bypass"
+		"message": "Suporte do Universal Bypass"
 	},
 	"options": {
 		"message": "Opções"
 	},
 	"optionsLink": {
-		"message": "Altere as opções do Universal Bypass."
+		"message": "Alterar as opções do Universal Bypass."
 	},
 	"optionsEnabled": {
-		"message": "Habilite bypasses de websites."
+		"message": "Ativar bypasses de websites."
 	},
 	"optionsNavigationDelay": {
-		"message": "Leve-me para destinos após % segundo(s). (Use 0 para ser navegado instantaneamente.)"
+		"message": "Leve-me para destinos após % segundo(s). (Use 0 para ser ir instantaneamente.)"
 	},
 	"optionsTrackerBypass": {
-		"message": "Ignorar rastreadores usando Apimon.de."
+		"message": "Ignorar rastreadores usando Apimon.de"
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Leve-me instantaneamente para destinos de rastreadores."
@@ -40,6 +40,9 @@
 	},
 	"optionsCrowdBypass": {
 		"message": "Dê e pegue o destino de encurtadores não-passáveis."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Abrir destinos de colaboração coletiva em uma nova aba após % segundo(s). (0 = instantâneo)"
 	},
 	"privacyPolicy": {
 		"message": "Política de Privacidade"
@@ -77,7 +80,16 @@
 	"crowdBypassedInfo": {
 		"message": "Outros usuários do Universal Bypass já esperaram para você e reportaram que isto leva para %"
 	},
+	"crowdBypassedTimer": {
+		"message": "Isto vai ser aberto numa nova janela em % segundos."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Isto vai ser aberto numa nova janela em 1 segundo."
+	},
 	"crowdBypassedIgnore": {
 		"message": "Isto não estava correto?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Quer que isto seja aberto numa nova janela instantaneamente ou em x segundos?"
 	}
 }

@@ -42,7 +42,7 @@
 		"message": "Give and take the destinations of unbypassable shorteners."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Automatski otvori crowd-sourced odredišta u novoj kartici."
+		"message": "Otvori crowd-sourced odredište u novoj kartici nakon % sekund(a). (0 = odmah.)"
 	},
 	"privacyPolicy": {
 		"message": "Pravila privatnosti"

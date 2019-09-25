@@ -42,7 +42,7 @@
 		"message": "Gebe und nehme die Ziel-Urls von unumgänglichen Linkkürzern."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Nutzer-geteilte Ziele automatisch in einem neuen Tab öffnen."
+		"message": "Nutzer-geteilte Ziele nach % Sekunde(n) in einem neuen Tab öffnen. (0 = sofort)"
 	},
 	"privacyPolicy": {
 		"message": "Datenschutzerklärung"
@@ -80,7 +80,16 @@
 	"crowdBypassedInfo": {
 		"message": "Andere Universal Bypass-Nutzer haben bereits für dich gewartet und gemeldet, dass das zu % führt."
 	},
+	"crowdBypassedTimer": {
+		"message": "Dies wird in % Sekunden in einem neuen Tab geöffnet."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Dies wird in einer Sekunde in einem neuen Tab geöffnet."
+	},
 	"crowdBypassedIgnore": {
 		"message": "War das nicht richtig?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Möchtest du, dass dies in einem neuen Tab sofort oder in x Sekunden geöffnet wird?"
 	}
 }

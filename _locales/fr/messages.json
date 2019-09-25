@@ -36,13 +36,13 @@
 		"message": "Me rediriger instantanément vers les destinations des traqueurs."
 	},
 	"optionsBlockIPLoggers": {
-		"message": "Bloquer les enregistreurs d'IP si ils ne peuvent pas être contournés."
+		"message": "Bloquer les enregistreurs d'adresse IP s'ils ne peuvent pas être contournés."
 	},
 	"optionsCrowdBypass": {
 		"message": "Obtenir les cibles des raccourcisseurs incontournables."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Ouvrir automatiquement les destinations partagées par les utilisateurs dans un nouvel onglet."
+		"message": "Ouvrir les destinations partagées par les utilisateurs dans un nouvel onglet après % seconde(s). (0 = ouverture instantanée.)"
 	},
 	"privacyPolicy": {
 		"message": "Politique de confidentialité"
@@ -80,7 +80,16 @@
 	"crowdBypassedInfo": {
 		"message": "D'autres utilisateurs de Universal Bypass ont déjà utilisé ce lien et ont rapporté que cela mène à %"
 	},
+	"crowdBypassedTimer": {
+		"message": "Ce lien sera ouvert dans un nouvel onglet dans % secondes."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Ce lien sera ouvert dans un nouvel onglet dans 1 seconde."
+	},
 	"crowdBypassedIgnore": {
 		"message": "Cela n'était-il pas exact ?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Voulez-vous que ce lien soit ouvert instantanément dans un nouvel onglet ou après x secondes ?"
 	}
 }

@@ -14,6 +14,9 @@
 	"faq": {
 		"message": "Domande frequenti (FAQ)"
 	},
+	"support": {
+		"message": "Supporto - Questo collegamento è per gli utenti che vogliono supportare Universal Bypass"
+	},
 	"options": {
 		"message": "Opzioni"
 	},
@@ -22,6 +25,9 @@
 	},
 	"optionsEnabled": {
 		"message": "Attiva i bypass dei siti web."
+	},
+	"optionsNavigationDelay": {
+		"message": "Portami alla destinazione dopo% secondi. (Usa 0 per navigare istantaneamente.)"
 	},
 	"optionsTrackerBypass": {
 		"message": "Bypass tracker utilizzando Apimon.de."
@@ -35,17 +41,32 @@
 	"optionsCrowdBypass": {
 		"message": "Dai e ottieni le destinazioni degli shorteners non bypassati."
 	},
+	"optionsCrowdAutoOpen": {
+		"message": "Apri le destinazioni di crowdfunding in una nuova scheda dopo% secondi. (0 = istantaneo.)"
+	},
 	"privacyPolicy": {
 		"message": "Informativa sulla privacy"
 	},
 	"optionsUserscripts": {
 		"message": "Bypass personalizzati"
 	},
+	"optionsUserscriptsDescription": {
+		"message": "Questa è una funzionalità avanzata per gli sviluppatori per creare i propri script per bypassare i siti. Una volta perfezionati, possono poi essere inviati su GitHub per essere aggiunti a Universal Bypass, in modo che siani disponibili per tutti."
+	},
 	"beforeNavigate": {
 		"message": "Sei quasi a destinazione."
 	},
 	"beforeNavigateDestination": {
 		"message": "La tua destinazione è %"
+	},
+	"beforeNavigateTimer": {
+		"message": "Verrai reindirizzato automaticamente tra% secondi."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Verrai reindirizzato automaticamente in 1 secondo."
+	},
+	"beforeNavigateOptions": {
+		"message": "Vuoi essere reindirizzato all'istante o in x secondi?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass ha impedito la registrazione del tuo IP."
@@ -59,7 +80,16 @@
 	"crowdBypassedInfo": {
 		"message": "Altri utenti di Universal Bypass hanno già aspettato e hanno riferito che questo porta a%"
 	},
+	"crowdBypassedTimer": {
+		"message": "Questo verrà aperto in una nuova scheda in % secondi."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Questo verrà aperto in una nuova scheda in 1 secondo."
+	},
 	"crowdBypassedIgnore": {
 		"message": "Non era corretto?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Vuoi che questo sia aperto in una nuova scheda all'istante o in x secondi?"
 	}
 }
