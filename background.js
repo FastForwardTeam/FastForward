@@ -333,7 +333,8 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 "*://*.otoponsel.com/?r=*",
 "*://*.kepoow.me/?r=*",
 "*://*.dlbatch.com/?r=*",
-"*://*.bolaoke.club/?r=*"
+"*://*.bolaoke.club/?r=*",
+"*://*.menantisenja.com/?r=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
