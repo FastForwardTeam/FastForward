@@ -520,7 +520,10 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 			return getRedirect(url.searchParams.get("href"))
 		}
 	}
-},{types:["main_frame"],urls:["*://*.maranhesduve.club/?*"]},["blocking"])
+},{types:["main_frame"],urls:[
+"*://*.maranhesduve.club/?*",
+"*://*.sparbuttantowa.pro/*?*"
+]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
