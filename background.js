@@ -343,7 +343,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		let i=details.url.indexOf("cr=")
 		if(i>0)
 		{
-			return getRedirect(atob(details.url.substr(i+3)))
+			return getRedirect(atob(details.url.substr(i+3).split("&")[0]))
 		}
 	}
 },{types:["main_frame"],urls:[
