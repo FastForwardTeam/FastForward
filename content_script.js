@@ -907,6 +907,31 @@ if(document instanceof HTMLDocument)
 					}
 					awaitElement("a[onclick='changeLink()']",changeLink)
 				})
+				domainBypass("toneden.io",()=>{
+					awaitElement(".post-gate-btn",b=>{
+						b.click()
+						if(location.hash=="#done")
+						{
+							return
+						}
+						awaitElement(".post-support-footer",()=>{
+							window.open=()=>{}
+							document.querySelectorAll(".post-support-options > .gate-btn-box > span > a").forEach(a=>{
+								a.href="#"
+								a.target=""
+								a.click()
+							})
+							let dT=setInterval(()=>{
+								if(!b.classList.contains("disabled"))
+								{
+									clearInterval(dT)
+									location.hash="#done"
+									location.reload()
+								}
+							},100)
+						})
+					})
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
