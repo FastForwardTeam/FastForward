@@ -171,7 +171,7 @@ function crowdOpenDelayLogic()
 let hash=location.hash.toString().replace("#","")
 if(hash)
 {
-	document.querySelector("[for='"+hash+"']").style.background="yellow"
+	document.querySelector("[for='"+hash+"']").className="highlight"
 }
 
 //Custom Bypasses

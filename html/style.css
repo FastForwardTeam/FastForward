@@ -67,6 +67,12 @@ input[disabled]
 	cursor: not-allowed;
 }
 
+.highlight
+{
+	background: yellow;
+	color: #000;
+}
+
 @media(prefers-color-scheme: dark)
 {
 	body, input
