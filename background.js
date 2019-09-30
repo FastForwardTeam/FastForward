@@ -1,4 +1,5 @@
 const brws=(typeof browser=="undefined"?chrome:browser),
+firefox=(brws.runtime.getURL("").substr(0,4)=="moz-"),
 getRedirectUrl=(url,referer)=>{
 	let instant=instantNavigation
 	if(referer=="tracker")
@@ -225,6 +226,11 @@ brws.webRequest.onBeforeRedirect.addListener(details=>{
 	}
 },{types:["main_frame"],urls:["<all_urls>"]})
 
+let infoSpec=["blocking","requestHeaders"]
+if(!firefox)
+{
+	infoSpec.push("extraHeaders")
+}
 brws.webRequest.onBeforeSendHeaders.addListener(details=>{
 	if(enabled&&details.url in refererCache)
 	{
@@ -235,7 +241,7 @@ brws.webRequest.onBeforeSendHeaders.addListener(details=>{
 		delete refererCache[details.url]
 		return {requestHeaders: details.requestHeaders}
 	}
-},{types:["main_frame"],urls:["<all_urls>"]},["blocking","requestHeaders","extraHeaders"])
+},{types:["main_frame"],urls:["<all_urls>"]},infoSpec)
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	let arr=details.url.substr(45).split("&referer=")
@@ -710,7 +716,7 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 ]},["blocking","responseHeaders"])
 
 //Fixing Content-Security-Policy on Firefox because apparently extensions have no special privileges there
-if(brws.runtime.getURL("").substr(0,4)=="moz-")
+if(firefox)
 {
 	brws.webRequest.onHeadersReceived.addListener(details=>{
 		if(enabled)
