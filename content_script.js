@@ -1230,6 +1230,10 @@ if(document instanceof HTMLDocument)
 						})
 						break;
 
+						case "AdFly - Click Allow to continue":
+						safelyNavigate((new URLSearchParams(location.search)).get("dest"))
+						break;
+
 						default:
 						{
 							ifElement("a#makingdifferenttimer[href]",b=>{
