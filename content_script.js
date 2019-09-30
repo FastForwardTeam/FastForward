@@ -55,7 +55,7 @@ if(document instanceof HTMLDocument)
 				}
 				navigated=true
 				window.onbeforeunload=null
-				location.href="https://universal-bypass.org/before-navigate?target="+encodeURIComponent(target)
+				location.href="https://universal-bypass.org/bypassed?target="+encodeURIComponent(target)+"&referer="+encodeURIComponent(location.href)
 				//The background script will intercept the request and redirect to html/before-navigate.html or to the target depending on the user's settings.
 			},
 			safelyNavigate=target=>{
@@ -64,8 +64,7 @@ if(document instanceof HTMLDocument)
 					return false
 				}
 				bypassed=true
-				let url
-				try{url=new URL(target)}catch(e){}
+				let url=new URL(target)
 				if(!url||!url.hash)
 				{
 					target+=location.hash
@@ -1381,7 +1380,7 @@ if(document instanceof HTMLDocument)
 				xhr.onreadystatechange=()=>{
 					if(xhr.readyState==4&&xhr.status==200&&xhr.responseText!="")
 					{
-						location.href="https://universal-bypass.org/crowd-bypassed?target="+encodeURIComponent(xhr.responseText)+"&back="+encodeURIComponent(location.href)
+						location.href="https://universal-bypass.org/crowd-bypassed?target="+encodeURIComponent(xhr.responseText)+"&referer="+encodeURIComponent(location.href)
 						//The background script will intercept the request and redirect to html/crowd-bypassed.html
 					}
 					else

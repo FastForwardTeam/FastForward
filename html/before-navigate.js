@@ -3,8 +3,9 @@ if(args.has("target"))
 {
 	let span=document.querySelector("[data-message='beforeNavigateDestination']")
 	span.innerHTML=span.innerHTML.replace("%",'<a></a>')
-	let a=span.querySelector("a")
-	a.textContent=a.href=args.get("target")
+	const a=span.querySelector("a")
+	a.textContent=args.get("target")
+	a.href="https://universal-bypass.org/navigate"+location.search
 	brws.storage.sync.get(["navigation_delay"],res=>{
 		let secondsLeft=res.navigation_delay
 		if(secondsLeft<61)
@@ -18,7 +19,7 @@ if(args.has("target"))
 			tick=()=>{
 				if(secondsLeft<=0)
 				{
-					location.href=args.get("target")
+					location.href=a.href
 					clearInterval(timer)
 				}
 				if(secondsLeft==1)

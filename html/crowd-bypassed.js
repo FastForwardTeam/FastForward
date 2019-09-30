@@ -1,11 +1,12 @@
 const args=new URLSearchParams(location.search)
-if(args.has("target")&&args.has("back"))
+if(args.has("target")&&args.has("referer"))
 {
 	let span=document.querySelector('[data-message="crowdBypassedInfo"]')
 	span.innerHTML=span.innerHTML.replace("%",'<a target="_blank"></a>')
-	let a=span.querySelector("a")
-	a.textContent=a.href=args.get("target")
-	document.getElementById("ignore").href=args.get("back")+"#ignoreCrowdBypass"
+	const a=span.querySelector("a")
+	a.textContent=args.get("target")
+	a.href="https://universal-bypass.org/navigate"+location.search
+	document.getElementById("ignore").href=args.get("referer")+"#ignoreCrowdBypass"
 	brws.storage.sync.get(["crowd_open_delay"],res=>{
 		let secondsLeft=res.crowd_open_delay
 		if(secondsLeft<61)
@@ -24,7 +25,7 @@ if(args.has("target")&&args.has("back"))
 					{
 						brws.runtime.sendMessage({
 							type: "open-tab",
-							url: args.get("target")
+							url: a.href
 						})
 					}
 					else
