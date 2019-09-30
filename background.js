@@ -43,7 +43,7 @@ brws.runtime.onInstalled.addListener(details=>{
 })
 
 //Keeping track of options
-var enabled=true,instantNavigation=false,trackerBypassEnabled=true,instantNavigationTrackers=false,blockIPLoggers=true,crowdEnabled=true,userscript="",refererCache={}
+var enabled=true,instantNavigation=true,trackerBypassEnabled=true,instantNavigationTrackers=false,blockIPLoggers=true,crowdEnabled=true,userscript="",refererCache={}
 brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_instant_navigation_trackers","allow_ip_loggers","crowd_bypass_opt_out","crowd_open_delay"],res=>{
 	if(res)
 	{
@@ -61,26 +61,14 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 		}
 		if(res.navigation_delay)
 		{
-			if(res.navigation_delay==0)
+			if(res.navigation_delay>0)
 			{
-				instantNavigation=true
+				instantNavigation=false
 			}
 		}
 		else
 		{
-			brws.storage.sync.get(["instant_navigation"],r=>{
-				if(r.instant_navigation)
-				{
-					if(r.instant_navigation==="true")
-					{
-						instantNavigation=true
-					}
-					brws.storage.sync.remove("instant_navigation")
-				}
-				brws.storage.sync.set({
-					navigation_delay: (instantNavigation ? 0 : 10)
-				})
-			})
+			brws.storage.sync.set({navigation_delay:0})
 		}
 		trackerBypassEnabled=(res.no_tracker_bypass!=="true")
 		instantNavigationTrackers=(res.no_instant_navigation_trackers!=="true")
@@ -88,15 +76,7 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 		crowdEnabled=(res.crowd_bypass_opt_out!=="true")
 		if(!res.crowd_open_delay)
 		{
-			brws.storage.sync.get(["crowd_auto_open"],r=>{
-				brws.storage.sync.set({
-					crowd_open_delay: (r.crowd_auto_open==="true" ? 0 : 61)
-				})
-				if(r.crowd_auto_open)
-				{
-					brws.storage.sync.remove("crowd_auto_open")
-				}
-			})
+			brws.storage.sync.set({crowd_open_delay:61})
 		}
 	}
 })
