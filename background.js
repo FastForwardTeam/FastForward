@@ -1,24 +1,29 @@
 const brws=(typeof browser=="undefined"?chrome:browser),
 firefox=(brws.runtime.getURL("").substr(0,4)=="moz-"),
-getRedirectUrl=(url,referer)=>{
-	let instant=instantNavigation
+getRedirect=(url,referer)=>{
 	if(referer=="tracker")
 	{
-		if(instantNavigationTrackers)
-		{
-			instant=true
-		}
-		referer=null
+		return {redirectUrl:(instantNavigation||instantNavigationTrackers?url:brws.runtime.getURL("html/before-navigate.html")+"?target="+encodeURIComponent(url))}
 	}
-	let redir=(instant?"https://universal-bypass.org/navigate?target=":brws.runtime.getURL("html/before-navigate.html")+"?target=")+url
+	let redir=(instantNavigation?"https://universal-bypass.org/navigate?target=":brws.runtime.getURL("html/before-navigate.html")+"?target=")+encodeURIComponent(url)
 	if(referer)
 	{
 		redir+="&referer="+referer
 	}
-	return redir
+	return {redirectUrl:redir}
 },
-getRedirect=(url,referer)=>({redirectUrl:getRedirectUrl(encodeURIComponent(url),referer)}),
-encodedRedirect=(url,referer)=>({redirectUrl:getRedirectUrl(url,referer)}),
+encodedRedirect=(url,referer)=>{
+	if(referer=="tracker")
+	{
+		return {redirectUrl:(instantNavigation||instantNavigationTrackers?decodeURIComponent(url):brws.runtime.getURL("html/before-navigate.html")+"?target="+url)}
+	}
+	let redir=(instantNavigation?"https://universal-bypass.org/navigate?target=":brws.runtime.getURL("html/before-navigate.html")+"?target=")+url
+	if(referer)
+	{
+		redir+="&referer="+referer
+	}
+	return {redirectUrl:redir}
+},
 isGoodLink=link=>{
 	if(!link||link.substr(0,6)=="about:"||link.substr(0,11)=="javascript:")
 	{
