@@ -18,12 +18,12 @@ function recursivelyDelete($file)
 	}
 }
 
-if(!file_exists("bypass.zip"))
+if(!file_exists("Universal Bypass.zip"))
 {
-	die("bypass.zip not found.\n");
+	die("Universal Bypass.zip not found.\n");
 }
 $zip = new ZipArchive();
-$zip->open("bypass.zip") or die("Failed to open bypass.zip\n");
+$zip->open("Universal Bypass.zip") or die("Failed to open Universal Bypass.zip\n");
 rename("_locales/en/messages.json", "messages.json");
 recursivelyDelete("_locales");
 $zip->extractTo("_locales");
@@ -45,6 +45,6 @@ foreach(scandir("_locales") as $locale)
 	}
 }
 $zip->close();
-unlink("bypass.zip");
+unlink("Universal Bypass.zip");
 mkdir("_locales/en");
 rename("messages.json", "_locales/en/messages.json");
