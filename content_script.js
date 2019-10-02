@@ -19,13 +19,10 @@ if(document instanceof HTMLDocument)
 			adlinkfly_target:gen_chan()
 		}
 		script.innerHTML=`(()=>{
-			//Prevent uBlockOrigin from blocking our access to window.eval
-			let _test=RegExp.prototype.test
-			RegExp.prototype.test=function(s){return s===document.currentScript.textContent?0:_test.call(this,s)}
 			const crowdEnabled=`+(res.crowdEnabled?"true":"false")+`,
 			ODP=(t,p,o)=>{try{Object.defineProperty(t,p,o)}catch(e){console.trace("[Universal Bypass] Couldn't define",p)}},
 			//Copying important functions to aovid interference from other extensions or the page
-			setTimeout=window.setTimeout,setInterval=window.setInterval,eval=window.eval,
+			setTimeout=window.setTimeout,setInterval=window.setInterval,
 			transparentProperty=(name,valFunc)=>{
 				let real
 				ODP(window,name,{
@@ -197,7 +194,6 @@ if(document instanceof HTMLDocument)
 					}
 				}
 			}
-			RegExp.prototype.test=_test
 			let navigated=false,
 			bypassed=false,
 			ignoreCrowdBypass=false,
