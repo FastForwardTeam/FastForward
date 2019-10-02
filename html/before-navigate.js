@@ -5,7 +5,7 @@ if(args.has("target"))
 	span.innerHTML=span.innerHTML.replace("%",'<a></a>')
 	const a=span.querySelector("a")
 	a.textContent=args.get("target")
-	a.href="https://universal-bypass.org/navigate"+location.search
+	a.href=args.has("referer")?"https://universal-bypass.org/navigate"+location.search:args.get("target")
 	brws.storage.sync.get(["navigation_delay"],res=>{
 		let secondsLeft=res.navigation_delay
 		if(secondsLeft<61)

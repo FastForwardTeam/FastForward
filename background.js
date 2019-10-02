@@ -1,28 +1,48 @@
 const brws=(typeof browser=="undefined"?chrome:browser),
 firefox=(brws.runtime.getURL("").substr(0,4)=="moz-"),
 getRedirect=(url,referer)=>{
-	if(referer=="tracker")
-	{
-		return {redirectUrl:(instantNavigation||instantNavigationTrackers?url:brws.runtime.getURL("html/before-navigate.html")+"?target="+encodeURIComponent(url))}
-	}
-	let redir=(instantNavigation?"https://universal-bypass.org/navigate?target=":brws.runtime.getURL("html/before-navigate.html")+"?target=")+encodeURIComponent(url)
+	let r
 	if(referer)
 	{
-		redir+="&referer="+referer
+		if(referer=="tracker")
+		{
+			r=(instantNavigation||instantNavigationTrackers?url:brws.runtime.getURL("html/before-navigate.html")+"?target="+encodeURIComponent(url))
+		}
+		else if(instantNavigation)
+		{
+			r=(new URL(url)).toString()
+			refererCache[r]=referer
+		}
+		else
+		{
+			r=brws.runtime.getURL("html/before-navigate.html")+"?target="+encodeURIComponent(url)+"&referer="+referer
+		}
 	}
-	return {redirectUrl:redir}
+	else
+	{
+		r=(instantNavigation?url:brws.runtime.getURL("html/before-navigate.html")+"?target="+encodeURIComponent(url))
+	}
+	return {redirectUrl:r}
 },
 encodedRedirect=(url,referer)=>{
-	if(referer=="tracker")
-	{
-		return {redirectUrl:(instantNavigation||instantNavigationTrackers?decodeURIComponent(url):brws.runtime.getURL("html/before-navigate.html")+"?target="+url)}
-	}
-	let redir=(instantNavigation?"https://universal-bypass.org/navigate?target=":brws.runtime.getURL("html/before-navigate.html")+"?target=")+url
+	let r
 	if(referer)
 	{
-		redir+="&referer="+referer
+		if(instantNavigation)
+		{
+			r=(new URL(decodeURIComponent(url))).toString()
+			refererCache[r]=referer
+		}
+		else
+		{
+			r=brws.runtime.getURL("html/before-navigate.html")+"?target="+url+"&referer="+referer
+		}
 	}
-	return {redirectUrl:redir}
+	else
+	{
+		r=(instantNavigation?decodeURIComponent(url):brws.runtime.getURL("html/before-navigate.html")+"?target="+url)
+	}
+	return {redirectUrl:r}
 },
 isGoodLink=link=>{
 	if(!link||link.substr(0,6)=="about:"||link.substr(0,11)=="javascript:")
@@ -241,7 +261,7 @@ brws.webRequest.onBeforeSendHeaders.addListener(details=>{
 	{
 		details.requestHeaders.push({
 			name: "Referer",
-			value: refererCache[details.url]
+			value: decodeURIComponent(refererCache[details.url])
 		})
 		delete refererCache[details.url]
 		return {requestHeaders: details.requestHeaders}
@@ -253,7 +273,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	arr[0]=(new URL(decodeURIComponent(arr[0]))).toString()
 	if(arr.length>1)
 	{
-		refererCache[arr[0]]=decodeURIComponent(arr[1])
+		refererCache[arr[0]]=arr[1]
 	}
 	return {redirectUrl:arr[0]}
 },{types:["main_frame"],urls:["https://universal-bypass.org/navigate?target=*"]},["blocking"])

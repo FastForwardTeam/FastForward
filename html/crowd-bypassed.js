@@ -5,7 +5,7 @@ if(args.has("target")&&args.has("referer"))
 	span.innerHTML=span.innerHTML.replace("%",'<a target="_blank"></a>')
 	const a=span.querySelector("a")
 	a.textContent=args.get("target")
-	a.href="https://universal-bypass.org/navigate"+location.search
+	a.href=args.has("referer")?"https://universal-bypass.org/navigate"+location.search:args.get("target")
 	document.getElementById("ignore").href=args.get("referer")+"#ignoreCrowdBypass"
 	brws.storage.sync.get(["crowd_open_delay"],res=>{
 		let secondsLeft=res.crowd_open_delay
