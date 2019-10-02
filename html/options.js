@@ -91,6 +91,7 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 		{
 			navigationDelayInput.setAttribute("disabled","disabled")
 		}
+		instantNavigationTrackersLogic()
 	}
 	trackerBypassCheckbox.onchange=function()
 	{
@@ -146,7 +147,7 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 })
 function instantNavigationTrackersLogic()
 {
-	if(!trackerBypassCheckbox.checked||navigationDelayInput.value==0)
+	if(!trackerBypassCheckbox.checked||(navigationDelayCheckbox.checked&&navigationDelayInput.value==0))
 	{
 		instantNavigationTrackersCheckbox.setAttribute("disabled","disabled")
 	}
