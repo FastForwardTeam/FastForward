@@ -27,7 +27,7 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 	}
 	if(res.navigation_delay>60)
 	{
-		navigationDelayInput.value=10
+		navigationDelayInput.value=0
 		navigationDelayInput.setAttribute("disabled","disabled")
 	}
 	else
