@@ -1220,7 +1220,12 @@ if(document instanceof HTMLDocument)
 						break;
 
 						case "Glinks!":
-						ifElement("form[method='POST'] > input[type='submit'][name='btn'].btn",i=>i.click(),()=>{
+						ifElement("form[method='POST'] > input[type='submit'][name='btn'].btn",i=>{
+							if(i.parentNode.querySelector(".g-recaptcha")==null)
+							{
+								i.click()
+							}
+						},()=>{
 							ifElement(".btnx",a=>a.click())
 						})
 						break;
