@@ -394,7 +394,8 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 "*://*.dlbatch.com/?r=*",
 "*://*.bolaoke.club/?r=*",
 "*://*.menantisenja.com/?r=*",
-"*://*.motorbalap.id/?r=*"
+"*://*.motorbalap.id/?r=*",
+"*://*.link-to.net/*/*?r=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
