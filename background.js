@@ -393,7 +393,8 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 "*://*.kepoow.me/?r=*",
 "*://*.dlbatch.com/?r=*",
 "*://*.bolaoke.club/?r=*",
-"*://*.menantisenja.com/?r=*"
+"*://*.menantisenja.com/?r=*",
+"*://*.motorbalap.id/?r=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
