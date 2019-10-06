@@ -1084,7 +1084,11 @@ if(document instanceof HTMLDocument)
 					})
 					finish()
 				})
-				if(document.getElementById("getlink")&&document.getElementById("gotolink")&&document.getElementById("timer"))//tetewlink.me,vehicle-techno.cf
+				if(
+					document.getElementById("getlink")&&document.getElementById("gotolink")&&(
+					document.getElementById("timer")//tetewlink.me,vehicle-techno.cf#86
+					||document.getElementById("count")//keisekaikuy.blogspot.com#493
+					))
 				{
 					document.getElementById("gotolink").removeAttribute("disabled")
 					document.getElementById("gotolink").click()
