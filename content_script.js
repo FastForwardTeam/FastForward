@@ -927,6 +927,9 @@ if(document instanceof HTMLDocument)
 						})
 					})
 				})
+				domainBypass("st.flashsubs.web.id",()=>{
+					safelyNavigate(document.querySelector("a#proceed").href)
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
