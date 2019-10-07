@@ -52,19 +52,7 @@ if(document instanceof HTMLDocument)
 				}
 				navigated=true
 				window.onbeforeunload=null
-				const url="https://universal-bypass.org/bypassed?target="+encodeURIComponent(target)+"&referer="+encodeURIComponent(location.href)
-				if(!Object.isFrozen(location.href))
-				{
-					location.href=url
-				}
-				else if(!Object.isFrozen(location))
-				{
-					location=url
-				}
-				else
-				{
-					location.assign(url)
-				}
+				location.assign("https://universal-bypass.org/bypassed?target="+encodeURIComponent(target)+"&referer="+encodeURIComponent(location.href))
 				//The background script will intercept the request and redirect to html/before-navigate.html or to the target depending on the user's settings.
 			},
 			safelyNavigate=target=>{
