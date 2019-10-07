@@ -52,7 +52,19 @@ if(document instanceof HTMLDocument)
 				}
 				navigated=true
 				window.onbeforeunload=null
-				location.href="https://universal-bypass.org/bypassed?target="+encodeURIComponent(target)+"&referer="+encodeURIComponent(location.href)
+				const url="https://universal-bypass.org/bypassed?target="+encodeURIComponent(target)+"&referer="+encodeURIComponent(location.href)
+				if(!Object.isFrozen(location.href))
+				{
+					location.href=url
+				}
+				else if(!Object.isFrozen(location))
+				{
+					location=url
+				}
+				else
+				{
+					location.assign(url)
+				}
 				//The background script will intercept the request and redirect to html/before-navigate.html or to the target depending on the user's settings.
 			},
 			safelyNavigate=target=>{
@@ -456,6 +468,19 @@ if(document instanceof HTMLDocument)
 				{
 					location.host="lt10.link.tl"
 				}
+			})
+			hrefBypass(/uiz\\.io\\/go/,()=>{
+				Object.freeze(location)
+				const regex=/.*window\\.location\\.href = "(http[^"]+)";.*/
+				document.querySelectorAll("script").forEach(script=>{
+					let matches=regex.exec(script.textContent)
+					console.log(matches)
+					if(matches&&matches[1])
+					{
+						crowdPath(location.hash.substr(1))
+						contributeAndNavigate(matches[1])
+					}
+				})
 			})
 			//Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
 			hrefBypass(/njiir\\.com|linkduit\\.net|k2s\\.cc|muhammadyoga\\.me|u\\.to|skiplink\\.io|healthykk\\.com|punchsubs\\.net|linkasm\\.com|firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php|2speed\\.net\\/file\\//,()=>{
@@ -872,7 +897,10 @@ if(document instanceof HTMLDocument)
 					ifElement("a.btn-primary[href]",a=>safelyNavigate(a.href))
 				})
 				domainBypass("uiz.io",()=>{
-					ifElement("#go-adsredirect",f=>f.submit())
+					ifElement("#go-adsredirect",f=>{
+						f.action+="#"+location.pathname.substr(1)
+						f.submit()
+					})
 				})
 				hrefBypass(/mirrored\\.to\\/files\\//,()=>{
 					ifElement("#dl_form button",b=>b.click())
