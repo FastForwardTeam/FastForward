@@ -946,6 +946,9 @@ if(document instanceof HTMLDocument)
 				domainBypass("st.flashsubs.web.id",()=>{
 					safelyNavigate(document.querySelector("a#proceed").href)
 				})
+				domainBypass("short-url.link",()=>{
+					safelyNavigate(document.querySelector("div[align=center] > strong").textContent)
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
