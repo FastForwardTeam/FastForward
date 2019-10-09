@@ -41,6 +41,9 @@
 	"optionsCrowdBypass": {
 		"message": "Gửi và lấy đích đến của rút gọn chưa thế bypass."
 	},
+	"optionsCrowdAutoOpen": {
+		"message": "Mở các điểm đến có cộng đồng đóng góp trong một tab mới sau % giây(s). (0 = tức thì.)"
+	},
 	"privacyPolicy": {
 		"message": "Chính sách bảo mật"
 	},
@@ -58,6 +61,9 @@
 	},
 	"beforeNavigateTimer": {
 		"message": "Bạn sẽ được điều hướng trong % giây."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Bạn sẽ được chuyển hướng tự động trong 1 giây."
 	},
 	"beforeNavigateOptions": {
 		"message": "Bạn có muốn điều hướng nhanh hoặc trong x giây?"

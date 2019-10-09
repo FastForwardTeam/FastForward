@@ -14,6 +14,9 @@
 	"faq": {
 		"message": "Najczęściej zadawane pytania (FAQ)"
 	},
+	"support": {
+		"message": "Wspieraj Uniwersalne Obejście"
+	},
 	"options": {
 		"message": "Opcje"
 	},
@@ -22,6 +25,9 @@
 	},
 	"optionsEnabled": {
 		"message": "Włącz obejścia stron."
+	},
+	"optionsNavigationDelay": {
+		"message": "Zabierz mnie do miejsc docelowych po % sekund. (Wpisz 0 aby być zabieranym od razu.))("
 	},
 	"optionsTrackerBypass": {
 		"message": "Omijaj namierzanie, używając Apimon.de."
