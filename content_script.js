@@ -474,7 +474,7 @@ if(document instanceof HTMLDocument)
 			hrefBypass(/njiir\\.com|linkduit\\.net|k2s\\.cc|muhammadyoga\\.me|u\\.to|skiplink\\.io|healthykk\\.com|punchsubs\\.net|linkasm\\.com|firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php|2speed\\.net\\/file\\//,()=>{
 				window.setInterval=f=>setInterval(f,1)
 			})
-			domainBypass(/indishare\\.org|uploadrar\\.com|longfiles\\.com|datei\\.to|id-share19\\.com/,()=>{
+			domainBypass(/indishare\\.org|longfiles\\.com|datei\\.to|id-share19\\.com/,()=>{
 				window.setTimeout=f=>setTimeout(f,1)
 			})
 			if(bypassed)
@@ -948,6 +948,15 @@ if(document instanceof HTMLDocument)
 				})
 				domainBypass("short-url.link",()=>{
 					safelyNavigate(document.querySelector("div[align=center] > strong").textContent)
+				})
+				domainBypass("uploadrar.net",()=>{
+					ifElement("#downloadbtn",()=>{
+						let f=document.createElement("form")
+						f.method="POST"
+						f.innerHTML='<input name="op" value="download2"><input name="id" value="'+location.pathname.substr(1)+'">'
+						document.body.appendChild(f)
+						f.submit()
+					})
 				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
