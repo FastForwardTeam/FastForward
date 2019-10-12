@@ -470,6 +470,9 @@ if(document instanceof HTMLDocument)
 					}
 				})
 			})
+			hrefBypass(/prox77\\.com\\/analyze\\/(.+)/,m=>{
+				location.pathname="/result/"+m[1]
+			})
 			//Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
 			hrefBypass(/njiir\\.com|linkduit\\.net|k2s\\.cc|muhammadyoga\\.me|u\\.to|skiplink\\.io|healthykk\\.com|punchsubs\\.net|linkasm\\.com|firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php|2speed\\.net\\/file\\//,()=>{
 				window.setInterval=f=>setInterval(f,1)
@@ -957,6 +960,9 @@ if(document instanceof HTMLDocument)
 						document.body.appendChild(f)
 						f.submit()
 					})
+				})
+				domainBypass("prox77.com",()=>{
+					document.querySelector("#Sbutton").click()
 				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
