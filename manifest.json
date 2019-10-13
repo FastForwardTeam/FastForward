@@ -1,7 +1,6 @@
 {
 	"manifest_version": 2,
 	"icons": {
-		"40": "icon/40.png",
 		"48": "icon/48.png",
 		"128": "icon/128.png",
 		"150": "icon/150.png",
@@ -26,7 +25,6 @@
 	},
 	"browser_action": {
 		"default_icon": {
-			"40": "icon/40.png",
 			"48": "icon/48.png",
 			"128": "icon/128.png",
 			"150": "icon/150.png",
