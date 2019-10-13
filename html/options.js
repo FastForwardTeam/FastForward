@@ -1,6 +1,16 @@
+//Bypass counter
+brws.storage.local.get(["bypass_counter"],res=>{
+	if(res.bypass_counter>1)
+	{
+		const p=document.querySelector("[data-message='bypassCounter']")
+		p.innerHTML=p.innerHTML.replace("%","<b>"+res.bypass_counter+"</b>")
+		p.style.display="block"
+	}
+})
+
 //Options
-document.querySelector("[for='option-navigation-delay']").innerHTML=document.querySelector("[for='option-navigation-delay']").innerHTML.replace("%",'<input id="option-navigation-delay" type="number" min="0" max="60" skip="1" style="width:34px">')
-document.querySelector("[for='option-crowd-open-delay']").innerHTML=document.querySelector("[for='option-crowd-open-delay']").innerHTML.replace("%",'<input id="option-crowd-open-delay" type="number" min="0" max="60" skip="1" style="width:34px">')
+document.querySelector("[data-message='optionsNavigationDelay']").innerHTML=document.querySelector("[data-message='optionsNavigationDelay']").innerHTML.replace("%",'<input id="option-navigation-delay" type="number" min="0" max="60" skip="1" style="width:34px">')
+document.querySelector("[data-message='optionsCrowdAutoOpen']").innerHTML=document.querySelector("[data-message='optionsCrowdAutoOpen']").innerHTML.replace("%",'<input id="option-crowd-open-delay" type="number" min="0" max="60" skip="1" style="width:34px">')
 const enabledCheckbox=document.getElementById("option-enabled"),
 enabledLabel=document.querySelector("label[for='option-enabled']"),
 navigationDelayInput=document.getElementById("option-navigation-delay"),
@@ -10,9 +20,10 @@ instantNavigationTrackersCheckbox=document.getElementById("option-instant-naviga
 blockIPLoggersCheckbox=document.getElementById("option-block-ip-loggers"),
 crowdBypassCheckbox=document.getElementById("option-crowd-bypass"),
 crowdOpenDelayInput=document.getElementById("option-crowd-open-delay"),
-crowdOpenDelayCheckbox=document.getElementById("option-crowd-open-delay-toggle")
+crowdOpenDelayCheckbox=document.getElementById("option-crowd-open-delay-toggle"),
+infoBoxCheckbox=document.getElementById("option-info-box")
 let navigationDelayInputTimer,crowdOpenDelayInputTimer
-brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_instant_navigation_trackers","allow_ip_loggers","crowd_bypass_opt_out","crowd_open_delay"],res=>{
+brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_instant_navigation_trackers","allow_ip_loggers","crowd_bypass_opt_out","crowd_open_delay","no_info_box"],res=>{
 	if(res==undefined)
 	{
 		res={}
@@ -60,6 +71,10 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 	{
 		crowdOpenDelayInput.value=res.crowd_open_delay
 		crowdOpenDelayCheckbox.setAttribute("checked","checked")
+	}
+	if(res.no_info_box!=="true")
+	{
+		infoBoxCheckbox.setAttribute("checked","checked")
 	}
 	instantNavigationTrackersLogic()
 	enabledCheckbox.onchange=function()
@@ -143,6 +158,12 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 				crowd_open_delay:crowdOpenDelayInput.value
 			})
 		},300)
+	}
+	infoBoxCheckbox.onchange=function()
+	{
+		brws.storage.sync.set({
+			no_info_box:(!this.checked).toString()
+		})
 	}
 })
 function instantNavigationTrackersLogic()

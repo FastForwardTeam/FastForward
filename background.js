@@ -22,6 +22,7 @@ getRedirect=(url,referer)=>{
 	{
 		r=(instantNavigation?url:brws.runtime.getURL("html/before-navigate.html")+"?target="+encodeURIComponent(url))
 	}
+	countIt()
 	return {redirectUrl:r}
 },
 encodedRedirect=(url,referer)=>{
@@ -42,6 +43,7 @@ encodedRedirect=(url,referer)=>{
 	{
 		r=(instantNavigation?decodeURIComponent(url):brws.runtime.getURL("html/before-navigate.html")+"?target="+url)
 	}
+	countIt()
 	return {redirectUrl:r}
 },
 isGoodLink=link=>{
@@ -58,7 +60,8 @@ isGoodLink=link=>{
 		return false
 	}
 	return true
-}
+},
+countIt=()=>brws.storage.local.set({bypass_counter:++bypassCounter})
 
 //Install handler
 brws.runtime.onInstalled.addListener(details=>{
@@ -69,8 +72,8 @@ brws.runtime.onInstalled.addListener(details=>{
 })
 
 //Keeping track of options
-var enabled=true,instantNavigation=true,trackerBypassEnabled=true,instantNavigationTrackers=false,blockIPLoggers=true,crowdEnabled=true,userscript="",refererCache={}
-brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_instant_navigation_trackers","allow_ip_loggers","crowd_bypass_opt_out","crowd_open_delay"],res=>{
+var enabled=true,instantNavigation=true,trackerBypassEnabled=true,instantNavigationTrackers=false,blockIPLoggers=true,crowdEnabled=true,infoBoxEnabled=true,userscript="",bypassCounter=0,refererCache={}
+brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_instant_navigation_trackers","allow_ip_loggers","crowd_bypass_opt_out","crowd_open_delay","no_info_box"],res=>{
 	if(res)
 	{
 		enabled=(!res.disable||res.disable!=="true")
@@ -104,12 +107,20 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 		{
 			brws.storage.sync.set({crowd_open_delay:61})
 		}
+		infoBoxEnabled=(res.no_info_box!=="true")
 	}
 })
-brws.storage.local.get(["userscript"],res=>{
-	if(res&&res.userscript)
+brws.storage.local.get(["userscript","bypass_counter"],res=>{
+	if(res)
 	{
-		userscript=res.userscript
+		if(res.userscript)
+		{
+			userscript=res.userscript
+		}
+		if(res.bypass_counter)
+		{
+			bypassCounter=res.bypass_counter
+		}
 	}
 })
 brws.storage.onChanged.addListener(changes=>{
@@ -159,6 +170,10 @@ brws.storage.onChanged.addListener(changes=>{
 	{
 		crowdEnabled=(changes.crowd_bypass_opt_out.newValue!=="true")
 	}
+	if(changes.no_info_box)
+	{
+		infoBoxEnabled=(changes.no_info_box.newValue!=="true")
+	}
 	if(changes.userscript)
 	{
 		userscript=changes.userscript.newValue
@@ -170,11 +185,7 @@ brws.runtime.onMessage.addListener((req, sender, respond) => {
 	switch(req.type)
 	{
 		case "can-run":
-		respond({
-			enabled: enabled,
-			crowdEnabled: crowdEnabled,
-			userscript: userscript
-		})
+		respond({enabled, crowdEnabled, infoBoxEnabled, userscript})
 		break;
 
 		case "open-tab":
@@ -279,6 +290,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 },{types:["main_frame"],urls:["https://universal-bypass.org/navigate?target=*"]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
+	countIt()
 	return {redirectUrl:brws.runtime.getURL("html/crowd-bypassed.html")+details.url.substr(43)}
 },{types:["main_frame"],urls:["https://universal-bypass.org/crowd-bypassed?*"]},["blocking"])
 

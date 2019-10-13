@@ -14,6 +14,9 @@
 	"faq": {
 		"message": "Frequently Asked Questions (FAQ)"
 	},
+	"bypassCounter": {
+		"message": "Universal Bypass has already bypassed % sites for you."
+	},
 	"support": {
 		"message": "Support Universal Bypass"
 	},
@@ -44,6 +47,9 @@
 	"optionsCrowdAutoOpen": {
 		"message": "Open crowd-sourced destinations in a new tab after % second(s). (0 = instant.)"
 	},
+	"optionsInfoBox": {
+		"message": "Show informational messages on some sites."
+	},
 	"privacyPolicy": {
 		"message": "Privacy Policy"
 	},
@@ -68,11 +74,14 @@
 	"beforeNavigateOptions": {
 		"message": "Do you want to be redirected instantly or in x seconds?"
 	},
-	"blockedTitle": {
-		"message": "Universal Bypass prevented your IP from being logged."
+	"infoBoxHide": {
+		"message": "Click this box to hide it. You can disable the info box feature in Universal Bypass' options."
 	},
-	"blockedSubtitle": {
-		"message": "Don't want Universal Bypass to prevent bad actors from getting your IP?"
+	"crowdWait": {
+		"message": "Unfortunately, you're the first to encounter this link, but after you've waited, other Universal Bypass users will no longer have to."
+	},
+	"crowdDisabled": {
+		"message": "This website is bypassed by crowd bypass, which you have disabled in the options."
 	},
 	"crowdBypassed": {
 		"message": "You might not have to wait!"
@@ -91,5 +100,11 @@
 	},
 	"crowdBypassedOptions": {
 		"message": "Do you want this to be opened in a new tab instantly or in x seconds?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass prevented your IP from being logged."
+	},
+	"blockedSubtitle": {
+		"message": "Don't want Universal Bypass to prevent bad actors from getting your IP?"
 	}
 }
