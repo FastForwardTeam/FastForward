@@ -203,7 +203,7 @@ if(document instanceof HTMLDocument)
 				if(`+(res.infoBoxEnabled?"true":"false")+`&&window.innerWidth>800&window.innerHeight>400)
 				{
 					const div=document.createElement("div")
-					div.style='border-radius:10px;padding:28px;position:fixed;right:30px;bottom:30px;background:#eee;color:#111;font-size:21px;box-shadow:#111 0px 5px 40px;max-width:500px;font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol'
+					div.style='z-index:999999;border-radius:10px;padding:28px;position:fixed;right:30px;bottom:30px;background:#eee;color:#111;font-size:21px;box-shadow:#111 0px 5px 40px;max-width:500px;font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol'
 					div.innerHTML='<img src="`+brws.runtime.getURL("icon/48.png")+`" style="width:24px;height:24px;margin-right:8px"><span></span>'
 					div.setAttribute("tabindex","-1")
 					div.setAttribute("aria-hidden","true")
