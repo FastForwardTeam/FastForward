@@ -404,8 +404,9 @@ if(document instanceof HTMLDocument)
 			})
 			domainBypass("bc.vc",()=>{
 				crowdBypass(()=>{
+					const _eval=window.eval
 					window.eval=c=>{
-						let j=eval(c)
+						let j=_eval(c)
 						if(j.message&&j.message.url)
 						{
 							contributeAndNavigate(j.message.url)
