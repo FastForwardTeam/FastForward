@@ -199,7 +199,7 @@ if(document instanceof HTMLDocument)
 					}
 				}
 			},
-			insertInfoBox=text=>{
+			insertInfoBox=text=>ensureDomLoaded(()=>{
 				if(`+(res.infoBoxEnabled?"true":"false")+`&&window.innerWidth>800&window.innerHeight>400)
 				{
 					const div=document.createElement("div")
@@ -217,7 +217,7 @@ if(document instanceof HTMLDocument)
 					div.onclick=()=>document.body.removeChild(div)
 					document.body.appendChild(div)
 				}
-			}
+			})
 			let navigated=false,
 			bypassed=false,
 			ignoreCrowdBypass=false,
