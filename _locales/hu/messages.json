@@ -20,9 +20,6 @@
 	"optionsUserscripts": {
 		"message": "Egyéni kikerülések"
 	},
-	"blockedTitle": {
-		"message": "A Universal Bypass megtiltotta, hogy az IP-t naplózható legyen."
-	},
 	"crowdBypassed": {
 		"message": "Talán nem kell várakoznod!"
 	},
@@ -31,5 +28,8 @@
 	},
 	"crowdBypassedIgnore": {
 		"message": "Ez helytelen?"
+	},
+	"blockedTitle": {
+		"message": "A Universal Bypass megtiltotta, hogy az IP-t naplózható legyen."
 	}
 }

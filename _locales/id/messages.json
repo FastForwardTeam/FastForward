@@ -14,11 +14,14 @@
 	"faq": {
 		"message": "Pertanyaan yang Sering Diajukan\n(FAQ)"
 	},
+	"bypassCounter": {
+		"message": "Universal Bypass sudah membypass % situs untuk anda."
+	},
 	"support": {
 		"message": "Dukungan untuk Universal Bypass"
 	},
 	"options": {
-		"message": "Pilihan"
+		"message": "Opsi"
 	},
 	"optionsLink": {
 		"message": "Ganti pengaturan Universal Bypass."
@@ -39,10 +42,13 @@
 		"message": "Memblokir IP Logger jika tidak dapat dilewati."
 	},
 	"optionsCrowdBypass": {
-		"message": "Memberi dan mendapatkan tujuan dari pemendek link yang tidak dapat dilewati."
+		"message": "Memberi dan mendapatkan tujuan dari pemendek link yang tidak dapat dibypass. (Crowd bypass)"
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Buka halaman tujuan crowd-sourced di tab baru setelah % detik. (0 = instan.)"
+		"message": "Membuka halaman tujuan crowd bypass di tab baru setelah % detik. (0 = instan.)"
+	},
+	"optionsInfoBox": {
+		"message": "Menampilkan pesan informasi di beberapa situs."
 	},
 	"privacyPolicy": {
 		"message": "Kebijakan Pribadi"
@@ -66,19 +72,22 @@
 		"message": "Anda akan dialihkan secara otomatis dalam 1 detik."
 	},
 	"beforeNavigateOptions": {
-		"message": "Apakah Anda ingin dialihkan secara langsung atau dalam x detik?"
+		"message": "Apakah anda ingin dialihkan secara langsung atau dalam x detik?"
 	},
-	"blockedTitle": {
-		"message": "Universal Bypass mencegah IP anda terlog."
+	"infoBoxHide": {
+		"message": "Klik kotak pesan ini untuk menyembunyikannya. Anda dapat menonaktifkan fitur kotak pesan informasi di pengaturan Universal Bypass."
 	},
-	"blockedSubtitle": {
-		"message": "Tidak ingin Universal Bypass untuk mencegah situs buruk dari mendapatkan IP Anda?"
+	"crowdWait": {
+		"message": "Sayangnya, anda adalah orang yang pertama kali mengakses tautan ini, akan tetapi setelah anda melewatinya, pengguna Universal Bypass lainnya tidak perlu lagi melakukannya."
+	},
+	"crowdDisabled": {
+		"message": "Situs web ini telah ter-bypass oleh fitur crowd bypass, yang mana telah anda nonaktifkan fiturnya didalam opsi pengaturan."
 	},
 	"crowdBypassed": {
-		"message": "Anda mungkin tidak perlu menunggu !"
+		"message": "Anda mungkin tidak perlu melewati !"
 	},
 	"crowdBypassedInfo": {
-		"message": "Pengguna Universal Bypass lainnya sudah menunggu untuk anda dan melaporkan bahwa tautan ini menuju ke %"
+		"message": "Pengguna Universal Bypass lainnya sudah melewatinya untuk anda dan melaporkan bahwa tautan ini menuju ke %"
 	},
 	"crowdBypassedTimer": {
 		"message": "Ini akan dibuka di tab baru dalam % detik."
@@ -90,6 +99,12 @@
 		"message": "Apakah ini tidak benar ?"
 	},
 	"crowdBypassedOptions": {
-		"message": "Apakah Anda ingin ini dibuka di tab baru secara langsung atau dalam x detik?"
+		"message": "Apakah anda ingin ini dibuka di tab baru secara langsung atau dalam x detik?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass mencegah IP anda supaya tidak terlog."
+	},
+	"blockedSubtitle": {
+		"message": "Tidak ingin Universal Bypass untuk mencegah situs berbahaya dari mendapatkan IP Anda?"
 	}
 }

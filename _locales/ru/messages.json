@@ -14,6 +14,9 @@
 	"faq": {
 		"message": "Часто задаваемые вопросы (FAQ)"
 	},
+	"bypassCounter": {
+		"message": "Universal Bypass обошел % сайтов для вас."
+	},
 	"support": {
 		"message": "Поддержать Universal Bypass"
 	},
@@ -68,12 +71,6 @@
 	"beforeNavigateOptions": {
 		"message": "Вы хотите переходить сразу или через несколько секунд?"
 	},
-	"blockedTitle": {
-		"message": "Universal Bypass предотвратил запись Вашего IP."
-	},
-	"blockedSubtitle": {
-		"message": "Не хотите, чтобы Universal Bypass предотвращал получение Вашего IP нежелательными лицами?"
-	},
 	"crowdBypassed": {
 		"message": "Вы можете не ждать!"
 	},
@@ -91,5 +88,11 @@
 	},
 	"crowdBypassedOptions": {
 		"message": "Вы хотите, чтобы это открывалось в новой вкладке сразу или через несколько секунд?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass предотвратил запись Вашего IP."
+	},
+	"blockedSubtitle": {
+		"message": "Не хотите, чтобы Universal Bypass предотвращал получение Вашего IP нежелательными лицами?"
 	}
 }

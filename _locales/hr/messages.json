@@ -14,6 +14,9 @@
 	"faq": {
 		"message": "Često Postavljena Pitanja (ČPP)"
 	},
+	"bypassCounter": {
+		"message": "Universal Bypass je već zaobišao % stranica za vas."
+	},
 	"support": {
 		"message": "Podržite Universal Bypass"
 	},
@@ -44,6 +47,9 @@
 	"optionsCrowdAutoOpen": {
 		"message": "Otvori crowd-sourced odredište u novoj kartici nakon % sekund(a). (0 = odmah.)"
 	},
+	"optionsInfoBox": {
+		"message": "Prikaži informativne poruke na nekim stranicama."
+	},
 	"privacyPolicy": {
 		"message": "Pravila privatnosti"
 	},
@@ -68,11 +74,14 @@
 	"beforeNavigateOptions": {
 		"message": "Dali želite biti preusmjereni odmah ili za x sekundi?"
 	},
-	"blockedTitle": {
-		"message": "Universal Bypass spriječio je zapisivanje vaše IP adrese."
+	"infoBoxHide": {
+		"message": "Kliknite ovdje da biste sakrili prozor. Možete onemogućiti ovu opciju u postavkama Universal Bypass-a."
 	},
-	"blockedSubtitle": {
-		"message": "Ne želite da Universal Bypass spriječi loše aktere da dobiju vašu IP adresu?"
+	"crowdWait": {
+		"message": "Nažalost, vi ste prvi koji je naišao na ovaj link, ali nakon što ste čekali, ostali korisnici Universal Bypass-a više ne moraju čekati."
+	},
+	"crowdDisabled": {
+		"message": "Ova stranica je zaobiđena od stane drugih korisnika, no tu opciju ste onemogućili u postavkama."
 	},
 	"crowdBypassed": {
 		"message": "Možda ne morate čekati!"
@@ -80,7 +89,22 @@
 	"crowdBypassedInfo": {
 		"message": "Ostali Universal Bypass korisnici su već prijavili da ovo vodi prema %"
 	},
+	"crowdBypassedTimer": {
+		"message": "Ovo će biti otvoreno u novoj kartici za % sekundi."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Ove će biti otvoreno u novoj kartici za 1 sekundu."
+	},
 	"crowdBypassedIgnore": {
 		"message": "Da li je ovo nije točno?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Želite li da se ovo otvori u novoj kartici trenutačno ili za x sekundi?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass spriječio je zapisivanje vaše IP adrese."
+	},
+	"blockedSubtitle": {
+		"message": "Ne želite da Universal Bypass spriječi loše aktere da dobiju vašu IP adresu?"
 	}
 }

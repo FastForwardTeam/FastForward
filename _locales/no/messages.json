@@ -47,12 +47,6 @@
 	"beforeNavigateDestination": {
 		"message": "Destinasjonen din er %"
 	},
-	"blockedTitle": {
-		"message": "Universal Bypass hindret IP-adressen din fra å bli loggført."
-	},
-	"blockedSubtitle": {
-		"message": "Vil du at Universal Bypass skal stoppe dårlige folk fra å få IPen din?"
-	},
 	"crowdBypassed": {
 		"message": "Du vil kanskje ikke måtte vente!"
 	},
@@ -61,5 +55,11 @@
 	},
 	"crowdBypassedIgnore": {
 		"message": "Var ikke dette korrekt?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass hindret IP-adressen din fra å bli loggført."
+	},
+	"blockedSubtitle": {
+		"message": "Vil du at Universal Bypass skal stoppe dårlige folk fra å få IPen din?"
 	}
 }

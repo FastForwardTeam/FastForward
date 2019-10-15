@@ -41,9 +41,6 @@
 	"optionsUserscripts": {
 		"message": "Circumval·lacions personalitzades"
 	},
-	"blockedTitle": {
-		"message": "Universal Bypass ha impedit que la seva adreça IP es registrés."
-	},
 	"crowdBypassed": {
 		"message": "Potser que no hagis d'esperar!"
 	},
@@ -52,5 +49,8 @@
 	},
 	"crowdBypassedIgnore": {
 		"message": "Això no era correcte?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass ha impedit que la seva adreça IP es registrés."
 	}
 }

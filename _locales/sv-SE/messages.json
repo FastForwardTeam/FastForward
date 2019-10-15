@@ -14,6 +14,9 @@
 	"faq": {
 		"message": "Vanliga frågor (FAQ)"
 	},
+	"bypassCounter": {
+		"message": "Universal Bypass har redan förbikopplat % webbplaster för dig."
+	},
 	"support": {
 		"message": "Stöd Universal Bypass"
 	},
@@ -68,12 +71,6 @@
 	"beforeNavigateOptions": {
 		"message": "Vill du omdirigeras direkt eller om x antal sekunder?"
 	},
-	"blockedTitle": {
-		"message": "Universal Bypass förhindrade din IP-adress från att loggas."
-	},
-	"blockedSubtitle": {
-		"message": "Vill du inte att Universal Bypass ska förhindra skurkar från att få tag på din IP-adress?"
-	},
 	"crowdBypassed": {
 		"message": "Det är inte säkert du behöver vänta!"
 	},
@@ -91,5 +88,11 @@
 	},
 	"crowdBypassedOptions": {
 		"message": "Vill du att detta ska öppnas i en ny flik direkt eller om x antal sekunder?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass förhindrade din IP-adress från att loggas."
+	},
+	"blockedSubtitle": {
+		"message": "Vill du inte att Universal Bypass ska förhindra skurkar från att få tag på din IP-adress?"
 	}
 }

@@ -68,12 +68,6 @@
 	"beforeNavigateOptions": {
 		"message": "Wil je gelijk worden doorgestuurd of na x seconden?"
 	},
-	"blockedTitle": {
-		"message": "Universal Bypass voorkomt dat uw IP wordt geregistreerd."
-	},
-	"blockedSubtitle": {
-		"message": "Weet u zeker dat u IP-Logger bescherming wilt uitschakelen?"
-	},
 	"crowdBypassed": {
 		"message": "U hoeft misschien niet te wachten!"
 	},
@@ -91,5 +85,11 @@
 	},
 	"crowdBypassedOptions": {
 		"message": "Wilt je dat dit direct, of na x seconden wordt geopend in een nieuw tabblad?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass voorkomt dat uw IP wordt geregistreerd."
+	},
+	"blockedSubtitle": {
+		"message": "Weet u zeker dat u IP-Logger bescherming wilt uitschakelen?"
 	}
 }

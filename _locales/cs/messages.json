@@ -44,12 +44,6 @@
 	"beforeNavigateDestination": {
 		"message": "Vaše destinace tohoto zkráceného odkazu je"
 	},
-	"blockedTitle": {
-		"message": "Universal Bypass ochránil vaši IP před zaznamenáním."
-	},
-	"blockedSubtitle": {
-		"message": "Nechcete, aby Universal Bypass ochránil vaši IP?"
-	},
 	"crowdBypassed": {
 		"message": "Nemusel byste čekat!"
 	},
@@ -58,5 +52,11 @@
 	},
 	"crowdBypassedIgnore": {
 		"message": "Nebylo to správně?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass ochránil vaši IP před zaznamenáním."
+	},
+	"blockedSubtitle": {
+		"message": "Nechcete, aby Universal Bypass ochránil vaši IP?"
 	}
 }

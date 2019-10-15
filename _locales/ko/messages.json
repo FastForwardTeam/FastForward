@@ -47,12 +47,6 @@
 	"beforeNavigateDestination": {
 		"message": "목적지는 % 입니다."
 	},
-	"blockedTitle": {
-		"message": "Universal Bypass가 당신의 IP를 기록하지 못하게 막았습니다."
-	},
-	"blockedSubtitle": {
-		"message": "Universal Bypass가 그들이 당신의 IP를 기록하도록 허락하기를 바라나요?"
-	},
 	"crowdBypassed": {
 		"message": "이제 기다리지 않을 겁니다!"
 	},
@@ -61,5 +55,11 @@
 	},
 	"crowdBypassedIgnore": {
 		"message": "올바르지 않나요?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass가 당신의 IP를 기록하지 못하게 막았습니다."
+	},
+	"blockedSubtitle": {
+		"message": "Universal Bypass가 그들이 당신의 IP를 기록하도록 허락하기를 바라나요?"
 	}
 }

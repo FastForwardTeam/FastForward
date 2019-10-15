@@ -14,6 +14,9 @@
 	"faq": {
 		"message": "Pitakon Seng Umum (FAQ)"
 	},
+	"bypassCounter": {
+		"message": "Universal Bypass wis nrabas % situs kanggo sampeyan."
+	},
 	"support": {
 		"message": "Dhukungan kanggo Universal Bypass"
 	},
@@ -44,6 +47,9 @@
 	"optionsCrowdAutoOpen": {
 		"message": "Mbukak tujuan crowd-sourced ing tab anyar sawise % detik. (0 = langsung.)"
 	},
+	"optionsInfoBox": {
+		"message": "Tampilake pesen informasi ing sawetara situs."
+	},
 	"privacyPolicy": {
 		"message": "Kebijakan Privasi"
 	},
@@ -68,11 +74,14 @@
 	"beforeNavigateOptions": {
 		"message": "Opo sampeyan pingin dialihne langsung utawa ing x detik?"
 	},
-	"blockedTitle": {
-		"message": "Universal Bypass nyegah IP sampeyan supaya ora mlebu log."
+	"infoBoxHide": {
+		"message": "Klik kothak pesen iki kanggo ndhelikake. Sampeyan bisa mateni fitur kothak pesen informasi ing opsi Universal Bypass."
 	},
-	"blockedSubtitle": {
-		"message": "Ora pingin Universal Bypass nyegah situs kanggo njupuk IP ne sampeyan?"
+	"crowdWait": {
+		"message": "Sayange, sampeyan minangka wong sing pertama ngliwati link iki, nanging sawise sampeyan sampun ngliwati, pangguna Universal Bypass liyane ora perlu ngliwati maneh."
+	},
+	"crowdDisabled": {
+		"message": "Situs web iki wes iso ditrabas nganggo fitur crowd bypass, sing fiture ga sampeyan aktifake ndek opsi."
 	},
 	"crowdBypassed": {
 		"message": "Sampeyan mungkin ora butuh ngenteni!"
@@ -91,5 +100,11 @@
 	},
 	"crowdBypassedOptions": {
 		"message": "Opo sampeyan pingin iki di bukak ndek tab anyar langsung utawa ing x detik?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass nyegah IP sampeyan supaya ora mlebu log."
+	},
+	"blockedSubtitle": {
+		"message": "Ora pingin Universal Bypass nyegah situs kanggo njupuk IP ne sampeyan?"
 	}
 }

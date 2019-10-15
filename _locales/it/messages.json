@@ -14,6 +14,9 @@
 	"faq": {
 		"message": "Domande frequenti (FAQ)"
 	},
+	"bypassCounter": {
+		"message": "Universal Bypass ha già superato % siti per te."
+	},
 	"support": {
 		"message": "Supporto - Questo collegamento è per gli utenti che vogliono supportare Universal Bypass"
 	},
@@ -44,6 +47,9 @@
 	"optionsCrowdAutoOpen": {
 		"message": "Apri le destinazioni di crowdfunding in una nuova scheda dopo% secondi. (0 = istantaneo.)"
 	},
+	"optionsInfoBox": {
+		"message": "Mostra messaggi informativi su alcuni siti."
+	},
 	"privacyPolicy": {
 		"message": "Informativa sulla privacy"
 	},
@@ -68,11 +74,14 @@
 	"beforeNavigateOptions": {
 		"message": "Vuoi essere reindirizzato all'istante o in x secondi?"
 	},
-	"blockedTitle": {
-		"message": "Universal Bypass ha impedito la registrazione del tuo IP."
+	"infoBoxHide": {
+		"message": "Clicca questa casella per nasconderla. Puoi disabilitare la funzione info box nelle opzioni Universal Bypass'."
 	},
-	"blockedSubtitle": {
-		"message": "Non vuoi che Universal Bypass impedisca ai malintenzionati di ottenere il tuo IP?"
+	"crowdWait": {
+		"message": "Purtroppo, sei il primo ad incontrare questo link, ma dopo aver aspettato, altri utenti di Bypass universali non dovranno più farlo."
+	},
+	"crowdDisabled": {
+		"message": "Questo sito è bypassato da crowd bypass, che hai disabilitato nelle opzioni."
 	},
 	"crowdBypassed": {
 		"message": "Forse non dovrai aspettare!"
@@ -91,5 +100,11 @@
 	},
 	"crowdBypassedOptions": {
 		"message": "Vuoi che questo sia aperto in una nuova scheda all'istante o in x secondi?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass ha impedito la registrazione del tuo IP."
+	},
+	"blockedSubtitle": {
+		"message": "Non vuoi che Universal Bypass impedisca ai malintenzionati di ottenere il tuo IP?"
 	}
 }

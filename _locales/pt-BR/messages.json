@@ -68,12 +68,6 @@
 	"beforeNavigateOptions": {
 		"message": "Você quer ser redirecionado instantaneamente ou em x segundos?"
 	},
-	"blockedTitle": {
-		"message": "O Universal Bypass preveniu que seu IP fosse registrado."
-	},
-	"blockedSubtitle": {
-		"message": "Você quer que o Universal Bypass previna que pessoas mal intencionadas obtenham seu IP?"
-	},
 	"crowdBypassed": {
 		"message": "Talvez você não precise esperar!"
 	},
@@ -91,5 +85,11 @@
 	},
 	"crowdBypassedOptions": {
 		"message": "Quer que isto seja aberto numa nova janela instantaneamente ou em x segundos?"
+	},
+	"blockedTitle": {
+		"message": "O Universal Bypass preveniu que seu IP fosse registrado."
+	},
+	"blockedSubtitle": {
+		"message": "Você quer que o Universal Bypass previna que pessoas mal intencionadas obtenham seu IP?"
 	}
 }

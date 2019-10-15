@@ -47,12 +47,6 @@
 	"beforeNavigateDestination": {
 		"message": "Вашата дестинация е %"
 	},
-	"blockedTitle": {
-		"message": "Universal Bypass предотврати регистрирането на вашия IP адрес."
-	},
-	"blockedSubtitle": {
-		"message": "Не искате Universal Bypass да попречи на лошите хора да получат вашия IP адрес?"
-	},
 	"crowdBypassed": {
 		"message": "Може да не се наложи да чакате!"
 	},
@@ -61,5 +55,11 @@
 	},
 	"crowdBypassedIgnore": {
 		"message": "Не беше ли това правилно?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass предотврати регистрирането на вашия IP адрес."
+	},
+	"blockedSubtitle": {
+		"message": "Не искате Universal Bypass да попречи на лошите хора да получат вашия IP адрес?"
 	}
 }

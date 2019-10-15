@@ -14,6 +14,9 @@
 	"faq": {
 		"message": "Questions fréquemment posées (FAQ)"
 	},
+	"bypassCounter": {
+		"message": "Universal Bypass a déjà contourné % sites pour vous."
+	},
 	"support": {
 		"message": "Soutenir Universal Bypass"
 	},
@@ -27,7 +30,7 @@
 		"message": "Activer les contournements de sites Web."
 	},
 	"optionsNavigationDelay": {
-		"message": "M'envoyer à destination après % seconde(s). (Utilisez 0 pour être instantanément redirigé.)"
+		"message": "M'envoyer à destination après % seconde(s). (Utilisez le 0 pour être instantanément redirigé.)"
 	},
 	"optionsTrackerBypass": {
 		"message": "Contourner les traqueurs en utilisant Apimon.de."
@@ -42,7 +45,10 @@
 		"message": "Obtenir les cibles des raccourcisseurs incontournables."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Ouvrir les destinations partagées par les utilisateurs dans un nouvel onglet après % seconde(s). (0 = ouverture instantanée.)"
+		"message": "Ouvrir les destinations partagées par les utilisateurs dans un nouvel onglet après % seconde(s).  (0 = ouverture instantanée.)"
+	},
+	"optionsInfoBox": {
+		"message": "Afficher des messages d'information sur certains sites."
 	},
 	"privacyPolicy": {
 		"message": "Politique de confidentialité"
@@ -68,11 +74,14 @@
 	"beforeNavigateOptions": {
 		"message": "Voulez-vous être redirigé instantanément ou après x secondes ?"
 	},
-	"blockedTitle": {
-		"message": "Universal Bypass a empêché l’enregistrement de votre adresse IP."
+	"infoBoxHide": {
+		"message": "Cliquez sur cette case pour la masquer. Vous pouvez désactiver la fonction de boîte d’information dans les options de Universal Bypass."
 	},
-	"blockedSubtitle": {
-		"message": "Vous ne souhaitez pas que Universal Bypass empêche de mauvais acteurs d'obtenir votre IP ?"
+	"crowdWait": {
+		"message": "Malheureusement, vous êtes la première personne à utiliser ce lien, mais après avoir attendu, les autres utilisateurs de Universal Bypass n'auront plus à le faire."
+	},
+	"crowdDisabled": {
+		"message": "L'URL de destination de ce site Web pourrait être partagée avec les utilisateurs, mais vous avez désactivé cette fonctionnalité dans les options."
 	},
 	"crowdBypassed": {
 		"message": "Vous n'aurez peut-être pas à attendre !"
@@ -91,5 +100,11 @@
 	},
 	"crowdBypassedOptions": {
 		"message": "Voulez-vous que ce lien soit ouvert instantanément dans un nouvel onglet ou après x secondes ?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass a empêché l’enregistrement de votre adresse IP."
+	},
+	"blockedSubtitle": {
+		"message": "Vous ne souhaitez pas que Universal Bypass empêche de mauvais acteurs d'obtenir votre IP ?"
 	}
 }

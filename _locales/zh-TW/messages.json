@@ -50,12 +50,6 @@
 	"beforeNavigateDestination": {
 		"message": "您的目的地是 %"
 	},
-	"blockedTitle": {
-		"message": "Universal Bypass 防止您的IP被記錄。"
-	},
-	"blockedSubtitle": {
-		"message": "不希望Universal Bypass自動防止不法者獲取您的IP嗎?"
-	},
 	"crowdBypassed": {
 		"message": "或許您可以不用再等待了。"
 	},
@@ -64,5 +58,11 @@
 	},
 	"crowdBypassedIgnore": {
 		"message": "該回報資訊有誤嗎?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass 防止您的IP被記錄。"
+	},
+	"blockedSubtitle": {
+		"message": "不希望Universal Bypass自動防止不法者獲取您的IP嗎?"
 	}
 }

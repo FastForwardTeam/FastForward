@@ -14,6 +14,9 @@
 	"faq": {
 		"message": "Preguntas más frecuentes"
 	},
+	"bypassCounter": {
+		"message": "Universal Bypass ya ha descubierto % sitios para usted."
+	},
 	"support": {
 		"message": "Soporte de Universal Bypass"
 	},
@@ -44,6 +47,9 @@
 	"optionsCrowdAutoOpen": {
 		"message": "Abrir los destinos que ya fueron descubiertos en una nueva pestaña después de % segundo(s). (0 = instantáneo)"
 	},
+	"optionsInfoBox": {
+		"message": "Mostrar mensajes informativos en algunos sitios."
+	},
 	"privacyPolicy": {
 		"message": "Política de privacidad"
 	},
@@ -68,11 +74,14 @@
 	"beforeNavigateOptions": {
 		"message": "¿Quieres ser redirigido al instante o en x segundos?\n"
 	},
-	"blockedTitle": {
-		"message": "Universal Bypass evitó que su IP se registrara."
+	"infoBoxHide": {
+		"message": "Haga clic en esta casilla para ocultarla. Puede deshabilitar esta función en las opciones de Universal Bypass."
 	},
-	"blockedSubtitle": {
-		"message": "¿No quiere que Universal Bypass impida que los actores malos obtengan su IP?"
+	"crowdWait": {
+		"message": "Desafortunadamente, eres el primero en encontrar este enlace, pero después de haber esperado, otros usuarios de Universal Bypass ya no tendrán que hacerlo."
+	},
+	"crowdDisabled": {
+		"message": "Este sitio web ya fue descubierto, el cual has desactivado en las opciones."
 	},
 	"crowdBypassed": {
 		"message": "¡Puede que no tengas que esperar!"
@@ -91,5 +100,11 @@
 	},
 	"crowdBypassedOptions": {
 		"message": "¿Desea que esto se abra en una nueva pestaña al instante o en x segundos?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass evitó que su IP se registrara."
+	},
+	"blockedSubtitle": {
+		"message": "¿No quiere que Universal Bypass impida que los actores malos obtengan su IP?"
 	}
 }

@@ -32,9 +32,6 @@
 	"beforeNavigateDestination": {
 		"message": "Təyinat yeri %"
 	},
-	"blockedTitle": {
-		"message": "Universal Bypass, IP ünvanların qeydlərə əlavə edilməsinin qarşısı aldı."
-	},
 	"crowdBypassed": {
 		"message": "Gözləməyinizə ehtiyac yoxdur!"
 	},
@@ -43,5 +40,8 @@
 	},
 	"crowdBypassedIgnore": {
 		"message": "Bu doğru deyil?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass, IP ünvanların qeydlərə əlavə edilməsinin qarşısı aldı."
 	}
 }

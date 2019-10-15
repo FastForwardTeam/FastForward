@@ -14,6 +14,9 @@
 	"faq": {
 		"message": "Câu Hỏi Thường Gặp (FAQ)"
 	},
+	"bypassCounter": {
+		"message": "Universal Bypass đã bỏ qua % trang."
+	},
 	"support": {
 		"message": "Giúp đỡ Universal Bypass"
 	},
@@ -44,6 +47,9 @@
 	"optionsCrowdAutoOpen": {
 		"message": "Mở các điểm đến có cộng đồng đóng góp trong một tab mới sau % giây(s). (0 = tức thì.)"
 	},
+	"optionsInfoBox": {
+		"message": "Hiển thị tin nhắn thông tin trên một số trang."
+	},
 	"privacyPolicy": {
 		"message": "Chính sách bảo mật"
 	},
@@ -68,11 +74,14 @@
 	"beforeNavigateOptions": {
 		"message": "Bạn có muốn điều hướng nhanh hoặc trong x giây?"
 	},
-	"blockedTitle": {
-		"message": "Universal Bypass đã ngăn chặn IP của bạn bị ghi lại."
+	"infoBoxHide": {
+		"message": "Nhấn vào hộp này để ẩn. Bạn có thể tắt tính năng này trong tuỳ chọn. "
 	},
-	"blockedSubtitle": {
-		"message": "Không muốn Universal Bypass ngăn kẻ xấu lấy được IP của bạn?"
+	"crowdWait": {
+		"message": "Thật không may, bạn là người đầu tiên gặp phải liên kết này, nhưng sau khi bạn chờ đợi, những người dùng Universal Bypass khác sẽ không còn phải làm như vậy nữa."
+	},
+	"crowdDisabled": {
+		"message": "Trang web này được bỏ qua bởi cộng đồng, mà bạn đã vô hiệu hóa trong tùy chọn."
 	},
 	"crowdBypassed": {
 		"message": "Bạn không cần phải đợi!"
@@ -91,5 +100,11 @@
 	},
 	"crowdBypassedOptions": {
 		"message": "Bạn có muốn cái này được mở trong tab mới tức thì hoặc trong x giây?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass đã ngăn chặn IP của bạn bị ghi lại."
+	},
+	"blockedSubtitle": {
+		"message": "Không muốn Universal Bypass ngăn kẻ xấu lấy được IP của bạn?"
 	}
 }

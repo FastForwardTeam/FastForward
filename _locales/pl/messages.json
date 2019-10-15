@@ -53,12 +53,6 @@
 	"beforeNavigateDestination": {
 		"message": "Twoje miejsce docelowe jest %"
 	},
-	"blockedTitle": {
-		"message": "Uniwersalne obejście zapobiegło zarejestrowanie twojego IP."
-	},
-	"blockedSubtitle": {
-		"message": "Nie chcesz, aby Uniwersalne Obejście przeszkadzało złym aktorom uzyskanie twojego adresu IP?"
-	},
 	"crowdBypassed": {
 		"message": "Już nie musisz czekać!"
 	},
@@ -67,5 +61,11 @@
 	},
 	"crowdBypassedIgnore": {
 		"message": "Czy to było nieprawidłowe?"
+	},
+	"blockedTitle": {
+		"message": "Uniwersalne obejście zapobiegło zarejestrowanie twojego IP."
+	},
+	"blockedSubtitle": {
+		"message": "Nie chcesz, aby Uniwersalne Obejście przeszkadzało złym aktorom uzyskanie twojego adresu IP?"
 	}
 }

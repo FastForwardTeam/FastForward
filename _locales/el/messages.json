@@ -44,12 +44,6 @@
 	"beforeNavigateDestination": {
 		"message": "Ο προορισμός σας είναι %"
 	},
-	"blockedTitle": {
-		"message": "Το Universal Bypass εμπόδισε την IP σας από το να καταγραφεί."
-	},
-	"blockedSubtitle": {
-		"message": "Δεν θέλετε το Universal Bypass να αποτρέψει τους κακόβουλους φορείς από το να υποκλέψουν την IP σας;"
-	},
 	"crowdBypassed": {
 		"message": "Ίσως να μην χρειαστεί να περιμένετε!"
 	},
@@ -58,5 +52,11 @@
 	},
 	"crowdBypassedIgnore": {
 		"message": "Δεν ήταν αυτό σωστό;"
+	},
+	"blockedTitle": {
+		"message": "Το Universal Bypass εμπόδισε την IP σας από το να καταγραφεί."
+	},
+	"blockedSubtitle": {
+		"message": "Δεν θέλετε το Universal Bypass να αποτρέψει τους κακόβουλους φορείς από το να υποκλέψουν την IP σας;"
 	}
 }

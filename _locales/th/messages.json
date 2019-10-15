@@ -47,12 +47,6 @@
 	"beforeNavigateDestination": {
 		"message": "ปลายทางของคุณคือ %"
 	},
-	"blockedTitle": {
-		"message": "Universal Bypass ช่วยป้องกัน IP คุณจากการถูกเก็บประวัติ"
-	},
-	"blockedSubtitle": {
-		"message": "ไม่ต้องการ Universal Bypass ป้องกันผู้ที่ไม่ประสงดีรับ IP ของคุณใช่ไหม?"
-	},
 	"crowdBypassed": {
 		"message": "คุณอาจไม่ต้องรออีกต่อไป!"
 	},
@@ -61,5 +55,11 @@
 	},
 	"crowdBypassedIgnore": {
 		"message": "สิ่งนี้ไม่ถูกต้องหรือ?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass ช่วยป้องกัน IP คุณจากการถูกเก็บประวัติ"
+	},
+	"blockedSubtitle": {
+		"message": "ไม่ต้องการ Universal Bypass ป้องกันผู้ที่ไม่ประสงดีรับ IP ของคุณใช่ไหม?"
 	}
 }

@@ -14,6 +14,9 @@
 	"faq": {
 		"message": "Ofte stilte spørgsmål (FAQ)"
 	},
+	"bypassCounter": {
+		"message": "Universal Bypass har allerede omgået % websteder for dig."
+	},
 	"support": {
 		"message": "Støt Universal Bypass"
 	},
@@ -44,6 +47,9 @@
 	"optionsCrowdAutoOpen": {
 		"message": "Åbn crowd-sourced destinationer i en ny fane efter % sekund(-er) (0 = straks)."
 	},
+	"optionsInfoBox": {
+		"message": "Vis informationsmeddelelser på visse websteder."
+	},
 	"privacyPolicy": {
 		"message": "Fortrolighedspolitik"
 	},
@@ -68,11 +74,14 @@
 	"beforeNavigateOptions": {
 		"message": "Vil du omdirigeres straks eller om x sekunder?"
 	},
-	"blockedTitle": {
-		"message": "Universal Bypass forhindrede din IP i at blive logget."
+	"infoBoxHide": {
+		"message": "Klik på dette felt for at skjule det. Du kan deaktivere infoboksfunktionen i Universal Bypass-indstillingerne."
 	},
-	"blockedSubtitle": {
-		"message": "Ønsker ikke, at Universal Bypass skal forhindre dårlige udbydere i at få din IP?"
+	"crowdWait": {
+		"message": "Desværre er du den første, der støder på dette link, men efter at du har ventet, vil ingen andre Universal Bypass-brugere længere skulle det."
+	},
+	"crowdDisabled": {
+		"message": "Dette websted omgås via masseomgåelse, som du har deaktiveret i indstillingerne."
 	},
 	"crowdBypassed": {
 		"message": "Du behøver måske ikke at vente!"
@@ -91,5 +100,11 @@
 	},
 	"crowdBypassedOptions": {
 		"message": "Skal dette åbnes i en ny fane straks eller om x sekunder?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass forhindrede din IP i at blive logget."
+	},
+	"blockedSubtitle": {
+		"message": "Ønsker ikke, at Universal Bypass skal forhindre dårlige udbydere i at få din IP?"
 	}
 }

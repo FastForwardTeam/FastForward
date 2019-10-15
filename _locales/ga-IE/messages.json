@@ -65,12 +65,6 @@
 	"beforeNavigateOptions": {
 		"message": "Ar mhaith leat a bheith atreoraithe láithreach nó i x soicind?"
 	},
-	"blockedTitle": {
-		"message": "Chuir Seachbhóthar Uilíoch cosc ar do IP a bheith logáilte isteach."
-	},
-	"blockedSubtitle": {
-		"message": "Ná bí ag iarraidh Seachbhóthar Uilíoch chun droch-ghníomhaithe a chosc ar do IP a fháil?"
-	},
 	"crowdBypassed": {
 		"message": "B'fhéidir nach mbeidh ort fanacht!"
 	},
@@ -79,5 +73,11 @@
 	},
 	"crowdBypassedIgnore": {
 		"message": "Nach raibh sé séo i gceart?"
+	},
+	"blockedTitle": {
+		"message": "Chuir Seachbhóthar Uilíoch cosc ar do IP a bheith logáilte isteach."
+	},
+	"blockedSubtitle": {
+		"message": "Ná bí ag iarraidh Seachbhóthar Uilíoch chun droch-ghníomhaithe a chosc ar do IP a fháil?"
 	}
 }

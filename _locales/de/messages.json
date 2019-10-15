@@ -14,6 +14,9 @@
 	"faq": {
 		"message": "Häufig gestellte Fragen (FAQ)"
 	},
+	"bypassCounter": {
+		"message": "Universal Bypass hat bereits % Seiten für dich umgangen."
+	},
 	"support": {
 		"message": "Unterstütze Universal Bypass"
 	},
@@ -44,6 +47,9 @@
 	"optionsCrowdAutoOpen": {
 		"message": "Nutzer-geteilte Ziele nach % Sekunde(n) in einem neuen Tab öffnen. (0 = sofort)"
 	},
+	"optionsInfoBox": {
+		"message": "Zeige informative Nachrichten auf einigen Seiten an."
+	},
 	"privacyPolicy": {
 		"message": "Datenschutzerklärung"
 	},
@@ -68,11 +74,14 @@
 	"beforeNavigateOptions": {
 		"message": "Möchtest du sofort oder in x Sekunden weitergeleitet werden?"
 	},
-	"blockedTitle": {
-		"message": "Universal Bypass hat dich vor einem IP-Logger geschützt."
+	"infoBoxHide": {
+		"message": "Klicke auf diese Box, um sie zu verstecken. Du kannst die Info-Box-Funktion in Universal Bypass Optionen deaktivieren."
 	},
-	"blockedSubtitle": {
-		"message": "Möchtest du nicht, dass Universal Bypass deine IP vor bösen Leuten schützt?"
+	"crowdWait": {
+		"message": "Leider bist du der erste, der auf diesen Link trifft, aber nachdem du gewartet hast, müssen andere Universal Bypass Nutzer es nicht mehr tun."
+	},
+	"crowdDisabled": {
+		"message": "Die Ziel-URL dieser Webseite könnte durch Crowd Bypass geteilt werden, aber das hast du in den Optionen deaktiviert."
 	},
 	"crowdBypassed": {
 		"message": "Du musst vielleicht nicht warten!"
@@ -91,5 +100,11 @@
 	},
 	"crowdBypassedOptions": {
 		"message": "Möchtest du, dass dies in einem neuen Tab sofort oder in x Sekunden geöffnet wird?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass hat dich vor einem IP-Logger geschützt."
+	},
+	"blockedSubtitle": {
+		"message": "Möchtest du nicht, dass Universal Bypass deine IP vor bösen Leuten schützt?"
 	}
 }
