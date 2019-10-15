@@ -989,6 +989,9 @@ if(document instanceof HTMLDocument)
 				domainBypass("prox77.com",()=>{
 					document.querySelector("#Sbutton").click()
 				})
+				domainBypass("kuliahmatematika.my.id",()=>{
+					safelyNavigate(atob(document.querySelector("input[name='data']").value))
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
