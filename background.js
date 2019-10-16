@@ -80,7 +80,6 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 		if(!enabled)
 		{
 			brws.browserAction.setIcon({path: {
-				"40": "icon_disabled/40.png",
 				"48": "icon_disabled/48.png",
 				"128": "icon_disabled/128.png",
 				"150": "icon_disabled/150.png",
@@ -130,7 +129,6 @@ brws.storage.onChanged.addListener(changes=>{
 		if(enabled)
 		{
 			brws.browserAction.setIcon({path: {
-				"40": "icon/40.png",
 				"48": "icon/48.png",
 				"128": "icon/128.png",
 				"150": "icon/150.png",
@@ -141,7 +139,6 @@ brws.storage.onChanged.addListener(changes=>{
 		else
 		{
 			brws.browserAction.setIcon({path: {
-				"40": "icon_disabled/40.png",
 				"48": "icon_disabled/48.png",
 				"128": "icon_disabled/128.png",
 				"150": "icon_disabled/150.png",
