@@ -992,6 +992,9 @@ if(document instanceof HTMLDocument)
 				domainBypass("kuliahmatematika.my.id",()=>{
 					safelyNavigate(atob(document.querySelector("input[name='data']").value))
 				})
+				domainBypass("shortconnect.com",()=>{
+					safelyNavigate(document.querySelector("#loader-link").href)
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{

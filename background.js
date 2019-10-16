@@ -321,6 +321,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 "*://*.mobile01.com/redirect.php?*",
 "*://*.nurhamka.com/*?url=*",
 "*://*.linepc.site/*?url=*",
+"*://*.adobedownload.org/redirect/?url=*"
 ]},["blocking"])
 
 
