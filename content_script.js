@@ -210,7 +210,10 @@ if(document instanceof HTMLDocument)
 					const span=div.querySelector("span")
 					span.textContent=text
 					div.onmouseover=()=>{
-						div.style.height=div.clientHeight+"px"
+						if(div.style.height=="")
+						{
+							div.style.height=div.clientHeight+"px"
+						}
 						span.textContent="`+brws.i18n.getMessage("infoBoxHide")+`"
 					}
 					div.onmouseout=()=>span.textContent=text
