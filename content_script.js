@@ -998,6 +998,10 @@ if(document instanceof HTMLDocument)
 				domainBypass("shortconnect.com",()=>{
 					safelyNavigate(document.querySelector("#loader-link").href)
 				})
+				domainBypass("elil.cc",()=>{
+					crowdBypass()
+					awaitElement(".navbar-custom > .container > ul.not-nav > li:not(.d-none) > a.page-scroll[href]:not([href^='javascript:'])",a=>contributeAndNavigate(a.href))
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
