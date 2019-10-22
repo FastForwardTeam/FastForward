@@ -772,7 +772,7 @@ if(document instanceof HTMLDocument)
 					document.cookie="referrer=1"
 					xhr.send()
 				})
-				domainBypass(/ouo\\.(io|press)/,()=>{
+				domainBypass(/lnk2\\.cc|ouo\\.(io|press)/,()=>{
 					if(location.pathname.substr(0,4)=="/go/")
 					{
 						document.querySelector("form").submit()

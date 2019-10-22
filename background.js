@@ -667,7 +667,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	}
 },{types:["main_frame"],urls:["*://*.ecleneue.com/pushredirect/?*"]},["blocking"])
 
-//Ouo.io/press Crowd Bypass
+//Ouo.io/press & lnk2.cc Crowd Bypass
 brws.webRequest.onHeadersReceived.addListener(details=>{
 	if(enabled&&crowdEnabled)
 	{
@@ -680,14 +680,15 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 				let xhr=new XMLHttpRequest()
 				xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
 				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
-				xhr.send("domain=ouo.io&path="+encodeURIComponent(url.pathname.split("/")[2])+"&target="+encodeURIComponent(header.value))
+				xhr.send("domain="+url.hostname+"&path="+encodeURIComponent(url.pathname.split("/")[2])+"&target="+encodeURIComponent(header.value))
 				break
 			}
 		}
 	}
 },{types:["main_frame"],urls:[
 "*://*.ouo.io/*/*",
-"*://*.ouo.press/*/*"
+"*://*.ouo.press/*/*",
+"*://*.lnk2.cc/*/*"
 ]},["blocking","responseHeaders"])
 
 //SafelinkU Crowd Bypass
