@@ -1413,11 +1413,12 @@ if(document instanceof HTMLDocument)
 					if(typeof appurl=="string"&&typeof token=="string")
 					{
 						const regex=/var count = [0-9]*;var countdown = setInterval\\\(function\\\(\\\){\\\$\\\("[a-z\\\-.# ]+"\\\)(\\\.attr\\\("href","#pleasewait"\\\))?(\\\.attr\\\("disabled",""\\\))?\\\.html\\\(count( \\\+ ".+")?\\\);if \\\(count < 1\\\) {clearInterval\\\(countdown\\\);(\\\$\\\("[a-z\\\-.# ]+"\\\)\\\.attr\\\("href",|window\\\.location=)"(https?:\\\/\\\/[^"]+)"( \\\+ hash)?\\\)?(\\\.removeAttr\\\("disabled"\\\)\\\.removeClass\\\("disabled"\\\))?(\\\.html\\\(".+"\\\))?;}count--;}, 1000\\\);/
+						let contribute=false
 						document.querySelectorAll("script").forEach(script=>{
 							let matches=regex.exec(script.textContent)
 							if(matches&&matches[5])
 							{
-								if(domain.match(/al\\.ly|ally\\.sh|dausel\\.co/))
+								if(contribute)
 								{
 									contributeAndNavigate(matches[5])
 								}
@@ -1431,6 +1432,7 @@ if(document instanceof HTMLDocument)
 						{
 							domainBypass(/al\\.ly|ally\\.sh|dausel\\.co/,()=>{
 								crowdBypass()
+								contribute=true
 								let e=document.getElementById("html_element")
 								if(e)
 								{
