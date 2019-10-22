@@ -498,6 +498,14 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
+		return getRedirect(details.url.substr(details.url.substr(16).indexOf("/")+17))
+	}
+},{types:["main_frame"],urls:["http://sh.st/st/*/*"]},["blocking"])
+
+
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
 		return encodedRedirect(details.url.substr(details.url.indexOf("/s/")+3))
 	}
 },{types:["main_frame"],urls:["*://*.gslink.co/e/*/s/*"]},["blocking"])
