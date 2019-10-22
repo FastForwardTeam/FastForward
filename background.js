@@ -303,8 +303,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	}
 },{types:["main_frame"],urls:[
 "*://*/st?api=*&url=*",
-"*://*.zxro.com/u/*?url=*",
-"*://*.leechall.com/redirect.php?url=*"
+"*://*.zxro.com/u/*?url=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
@@ -317,6 +316,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		}
 	}
 },{types:["main_frame"],urls:[
+"*://*.leechall.com/redirect.php?url=*",
 "*://*.news-gg.com/l/?*",
 "*://*.mobile01.com/redirect.php?*",
 "*://*.nurhamka.com/*?url=*",
