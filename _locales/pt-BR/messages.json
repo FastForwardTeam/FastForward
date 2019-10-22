@@ -44,6 +44,9 @@
 	"optionsCrowdAutoOpen": {
 		"message": "Abrir destinos de colaboração coletiva em uma nova aba após % segundo(s). (0 = instantâneo)"
 	},
+	"optionsInfoBox": {
+		"message": "Mostrar mensagens com informações em alguns sites."
+	},
 	"privacyPolicy": {
 		"message": "Política de Privacidade"
 	},
@@ -67,6 +70,12 @@
 	},
 	"beforeNavigateOptions": {
 		"message": "Você quer ser redirecionado instantaneamente ou em x segundos?"
+	},
+	"infoBoxHide": {
+		"message": "Clique nesta caixa para escondê-la. Você pode desativar a função da caixa de informações nas opções do Universal Bypass."
+	},
+	"crowdWait": {
+		"message": "Infelizmente, você é o primeiro a encontrar este link, mas depois de esperar, outros usuários do Universal Bypass não precisarão."
 	},
 	"crowdBypassed": {
 		"message": "Talvez você não precise esperar!"

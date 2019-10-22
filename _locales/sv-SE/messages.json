@@ -47,6 +47,9 @@
 	"optionsCrowdAutoOpen": {
 		"message": "Öppna crowd-sourced mål i en ny flik efter % sekund(er). (0 = omedelbart)"
 	},
+	"optionsInfoBox": {
+		"message": "Visa informationsmeddelanden på vissa webbplatser."
+	},
 	"privacyPolicy": {
 		"message": "Integritetspolicy"
 	},
@@ -70,6 +73,15 @@
 	},
 	"beforeNavigateOptions": {
 		"message": "Vill du omdirigeras direkt eller om x antal sekunder?"
+	},
+	"infoBoxHide": {
+		"message": "Dölj denna ruta genom att klicka på den. Du kan inaktivera informationsrutefunktionen i Universal Bypass-alternativen."
+	},
+	"crowdWait": {
+		"message": "Vilken otur du har som är den första som stöter på den här länken, men efter att du har väntat kommer andra Universal Bypass-användare inte längre att behöva vänta."
+	},
+	"crowdDisabled": {
+		"message": "Den här webbplatsen förbigås av crowd-bypass, som du har inaktiverat i alternativen."
 	},
 	"crowdBypassed": {
 		"message": "Det är inte säkert du behöver vänta!"

@@ -15,7 +15,7 @@
 		"message": "Sıkça Sorulan Sorular (SSS)"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass sizin için şimdiye kadar % siteyi bypassladı."
+		"message": "Universal Bypass sizin için şimdiye kadar % siteyi es geçti."
 	},
 	"support": {
 		"message": "Universal Bypass'ı Destekleyin"
@@ -30,7 +30,7 @@
 		"message": "Web sayfalarını es geçmeyi etkinleştir."
 	},
 	"optionsNavigationDelay": {
-		"message": "Beni % saniye sonra yönlendir. ( Hemen yönlendirilmek için 0 yazın)"
+		"message": "Beni hedeflere % saniye sonra yönlendir. (Hemen yönlendirilmek için 0 yazın.)"
 	},
 	"optionsTrackerBypass": {
 		"message": "Apimon.de kullanarak izleyicileri es geçin."
@@ -42,16 +42,16 @@
 		"message": "Eğer es geçilemezse IP kayıtçılarını engelle."
 	},
 	"optionsCrowdBypass": {
-		"message": "Es geçilemeyen link kısaltıcıların hedeflerini geliştiriciyle paylaş."
+		"message": "Es geçilemeyen adres kısaltıcıların hedeflerini geliştiriciyle paylaş."
 	},
 	"optionsCrowdAutoOpen": {
 		"message": "Kitle kaynaklı hedefleri % saniye sonra yeni bir sekmede aç. (0 = hemen.)"
 	},
 	"optionsInfoBox": {
-		"message": "Bazı sitelerde bilgi mesajlarını göster."
+		"message": "Bazı sitelerde bilgilendirme mesajlarını göster."
 	},
 	"privacyPolicy": {
-		"message": "Gizlilik Sözleşmesi"
+		"message": "Gizlilik Politikası"
 	},
 	"optionsUserscripts": {
 		"message": "Özel Es Geçmeler"
@@ -63,7 +63,7 @@
 		"message": "Neredeyse vardınız."
 	},
 	"beforeNavigateDestination": {
-		"message": "Hedefiniz: %"
+		"message": "Hedefiniz %"
 	},
 	"beforeNavigateTimer": {
 		"message": "% saniye içinde otomatik olarak yönlendirileceksiniz."
@@ -72,10 +72,10 @@
 		"message": "1 saniye içinde otomatik olarak yönlendirileceksiniz."
 	},
 	"beforeNavigateOptions": {
-		"message": "Hemen mi x saniye içinde mi yönlendirilmek istersiniz?"
+		"message": "Hemen mi yönlendirilmek istersiniz ya da x saniye içinde mi?"
 	},
 	"infoBoxHide": {
-		"message": "Gizlemek için bu kutuyu tıklayın. Bilgi kutusu özelliğini Universal Bypass seçeneklerinde devre dışı bırakabilirsiniz."
+		"message": "Gizlemek için bu kutuyu tıklayın. Bilgi kutusu özelliğini Universal Bypass'ın seçeneklerinden devre dışı bırakabilirsiniz."
 	},
 	"crowdWait": {
 		"message": "Maalesef, bu bağlantıyla ilk karşılaşan sizsiniz, ancak siz bekledikten sonra, diğer Universal Bypass kullanıcılarının artık buna ihtiyacı kalmayacak."
@@ -87,7 +87,7 @@
 		"message": "Beklemeniz gerekmeyebilir!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Diğer Universal Baypass kullanıcıları sizin yerinize beklediler ve bunun % 'e gittiğini bildirdiler."
+		"message": "Diğer Universal Bypass kullanıcıları sizin yerinize zaten beklediler ve bunun şuraya yönlendiğini bildirdiler: %"
 	},
 	"crowdBypassedTimer": {
 		"message": "Bu, % saniye içinde yeni bir sekmede açılacaktır."
@@ -99,7 +99,7 @@
 		"message": "Bu doğru değil miydi?"
 	},
 	"crowdBypassedOptions": {
-		"message": "Bunun anında veya x saniye içinde yeni bir sekmede açılmasını mı istiyorsunuz?"
+		"message": "Bunun anında yeni bir sekmede açılmasını mı istersin ya da x saniye sonra mı?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass, IP adresinizin kayıtlara eklenmesini engelledi."

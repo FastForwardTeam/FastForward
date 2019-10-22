@@ -14,6 +14,9 @@
 	"faq": {
 		"message": "Najczęściej zadawane pytania (FAQ)"
 	},
+	"bypassCounter": {
+		"message": "Universal Bypass ominął dla ciebie % stron."
+	},
 	"support": {
 		"message": "Wspieraj Uniwersalne Obejście"
 	},
@@ -52,6 +55,15 @@
 	},
 	"beforeNavigateDestination": {
 		"message": "Twoje miejsce docelowe jest %"
+	},
+	"beforeNavigateTimer": {
+		"message": "Zostaniesz automatycznie przekierowany za % sekund."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Zostaniesz przekierowany automatycznie za 1 sekundę."
+	},
+	"crowdWait": {
+		"message": "Niestety, jesteś pierwszym który wchodzi w ten link, ale po tym jak ty poczekałeś, inni użytkownicy Universal bypass nie będą musieli już czekać."
 	},
 	"crowdBypassed": {
 		"message": "Już nie musisz czekać!"
