@@ -677,10 +677,15 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 			let header=details.responseHeaders[i]
 			if(header.name.toLowerCase()=="location"&&isGoodLink(header.value))
 			{
-				let xhr=new XMLHttpRequest()
+				let xhr=new XMLHttpRequest(),
+				domain=url.hostname
+				if(domain=="ouo.press")
+				{
+					domain="ouo.io"
+				}
 				xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
 				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
-				xhr.send("domain="+url.hostname+"&path="+encodeURIComponent(url.pathname.split("/")[2])+"&target="+encodeURIComponent(header.value))
+				xhr.send("domain="+domain+"&path="+encodeURIComponent(url.pathname.split("/")[2])+"&target="+encodeURIComponent(header.value))
 				break
 			}
 		}
