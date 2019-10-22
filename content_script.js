@@ -1417,12 +1417,20 @@ if(document instanceof HTMLDocument)
 							let matches=regex.exec(script.textContent)
 							if(matches&&matches[5])
 							{
-								safelyNavigate(matches[5])
+								if(domain.match(/al\\.ly|ally\\.sh|dausel\\.co/))
+								{
+									contributeAndNavigate(matches[5])
+								}
+								else
+								{
+									safelyNavigate(matches[5])
+								}
 							}
 						})
 						if(!bypassed)
 						{
 							domainBypass(/al\\.ly|ally\\.sh|dausel\\.co/,()=>{
+								crowdBypass()
 								let e=document.getElementById("html_element")
 								if(e)
 								{
