@@ -1252,10 +1252,14 @@ if(document instanceof HTMLDocument)
 				if(document.querySelector("#templatemo_footer > a[href='http://teknosafe.kertashitam.com/']")&&document.querySelector("#templatemo_content > div > a[href]"))//teknosafe.kertashitam.com,teknosafe.teknologilink.com
 				{
 					safelyNavigate(document.querySelector("#templatemo_content > div > a[href]").href)
-					return
+					return finish()
 				}
+				ifElement("button#makingdifferenttimer[onclick^='window.location.replace']",b=>{//#522
+					b.click()
+					finish()
+				})
 				let t=document.querySelector("title")
-				if(t)
+				if(!bypassed&&t)
 				{
 					t=t.textContent.trim()
 					switch(t)
@@ -1314,18 +1318,16 @@ if(document instanceof HTMLDocument)
 						break;
 
 						default:
-						{
-							ifElement("a#makingdifferenttimer[href]",b=>{
-								if(isGoodLink(t))
-								{
-									unsafelyNavigate(t)
-								}
-								else
-								{
-									safelyNavigate(b.href)
-								}
-							})
-						}
+						ifElement("a#makingdifferenttimer[href]",b=>{
+							if(isGoodLink(t))
+							{
+								unsafelyNavigate(t)
+							}
+							else
+							{
+								safelyNavigate(b.href)
+							}
+						})
 					}
 				}
 				//Monitor DOM for disturbances for 10 seconds.
