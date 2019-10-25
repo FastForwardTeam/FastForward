@@ -148,7 +148,7 @@ if(document instanceof HTMLDocument)
 				setInterval(()=>clearInterval(t),30000)
 			}),
 			crowdPath=p=>{
-				if(crowdEnabled)
+				if(crowdEnabled&&p)
 				{
 					document.documentElement.setAttribute("`+message_channel.crowd_path+`",p)
 				}
@@ -937,7 +937,7 @@ if(document instanceof HTMLDocument)
 				domainBypass("xxx.lewd.ninja",()=>{
 					safelyNavigate(document.body.textContent)
 				})
-				domainBypass(/tr\\.link|movienear\\.me/,()=>{
+				domainBypass(/tr\\.link|movienear\\.me|lewat\\.club/,()=>{
 					if(typeof app_vars=="undefined")
 					{
 						app_vars={}
@@ -1363,7 +1363,7 @@ if(document instanceof HTMLDocument)
 						domainBypass(/(semawur|bercara)\\.com|in11\\.site/,()=>{
 							ifElement("input[type='hidden'][name='alias'][value]",i=>crowdPath(i.value),()=>crowdPath(location.hash.substr(1)))
 						})
-						domainBypass("movienear.me",()=>{
+						domainBypass(/movienear\\.me|lewat\\.club/,()=>{
 							ifElement("input[type='hidden'][name='alias'][value]",i=>{
 								i.parentNode.action+="#"+i.value+(ignoreCrowdBypass?"#ignoreCrowdBypass":"")
 								crowdPath(i.value)
