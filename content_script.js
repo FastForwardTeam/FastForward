@@ -937,8 +937,11 @@ if(document instanceof HTMLDocument)
 				domainBypass("xxx.lewd.ninja",()=>{
 					safelyNavigate(document.body.textContent)
 				})
-				domainBypass("tr.link",()=>{
-					app_vars={}
+				domainBypass(/tr\\.link|movienear\\.me/,()=>{
+					if(typeof app_vars=="undefined")
+					{
+						app_vars={}
+					}
 				})
 				domainBypass("lompat.in",()=>{
 					window.open=u=>{
@@ -1356,6 +1359,14 @@ if(document instanceof HTMLDocument)
 						})
 						domainBypass(/(semawur|bercara)\\.com|in11\\.site/,()=>{
 							ifElement("input[type='hidden'][name='alias'][value]",i=>crowdPath(i.value),()=>crowdPath(location.hash.substr(1)))
+						})
+						domainBypass("movienear.me",()=>{
+							ifElement("input[type='hidden'][name='alias'][value]",i=>{
+								i.parentNode.action+="#"+i.value+(ignoreCrowdBypass?"#ignoreCrowdBypass":"")
+								crowdPath(i.value)
+							},()=>{
+								crowdPath(location.hash.substr(1))
+							})
 						})
 						domainBypass(/(atv|adlink)\\.pw|safe\\.mirrordown\\.com|kabarviral\\.blog|lewat\\.club/,()=>{
 							crowdPath(location.search.substr(1).split("=")[0])
