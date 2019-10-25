@@ -1009,11 +1009,12 @@ if(document instanceof HTMLDocument)
 					ifElement("#download > a[href]",a=>location.href=a.href)
 				})
 				domainBypass("go.indonesia-publisher.id",()=>{
-					ifElement("form#link-view",()=>{
+					if(typeof disqus_config=="function"&&document.querySelector("form#link-view"))
+					{
 						let o={page:{}}
 						disqus_config.call(o)
 						safelyNavigate(o.page.url)
-					})
+					}
 				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
