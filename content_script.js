@@ -1371,6 +1371,16 @@ if(document instanceof HTMLDocument)
 								crowdPath(location.hash.substr(1))
 							})
 						})
+						domainBypass("go.indonesia-publisher.id",()=>{
+							ifElement("form#link-view",f=>{
+								let o={page:{}}
+								disqus_config.call(o)
+								crowdPath(o.page.title)
+								f.action+="#"+o.page.title
+							},()=>{
+								crowdPath(location.hash.substr(1))
+							})
+						})
 						domainBypass(/(atv|adlink)\\.pw|safe\\.mirrordown\\.com|kabarviral\\.blog|lewat\\.club/,()=>{
 							crowdPath(location.search.substr(1).split("=")[0])
 						})
