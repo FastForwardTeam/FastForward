@@ -1008,6 +1008,13 @@ if(document instanceof HTMLDocument)
 				domainBypass("transmediakreatif.com",()=>{
 					ifElement("#download > a[href]",a=>location.href=a.href)
 				})
+				domainBypass("go.indonesia-publisher.id",()=>{
+					ifElement("form#link-view",()=>{
+						let o={page:{}}
+						disqus_config.call(o)
+						safelyNavigate(o.page.url)
+					})
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
@@ -1367,16 +1374,6 @@ if(document instanceof HTMLDocument)
 							ifElement("input[type='hidden'][name='alias'][value]",i=>{
 								i.parentNode.action+="#"+i.value+(ignoreCrowdBypass?"#ignoreCrowdBypass":"")
 								crowdPath(i.value)
-							},()=>{
-								crowdPath(location.hash.substr(1))
-							})
-						})
-						domainBypass("go.indonesia-publisher.id",()=>{
-							ifElement("form#link-view",f=>{
-								let o={page:{}}
-								disqus_config.call(o)
-								crowdPath(o.page.title)
-								f.action+="#"+o.page.title
 							},()=>{
 								crowdPath(location.hash.substr(1))
 							})
