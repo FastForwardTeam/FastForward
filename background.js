@@ -443,6 +443,16 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
+		let arg=details.url.substr(details.url.indexOf("?get=")+5)
+		return getRedirect(atob(arg.substr(0,arg.length-1)))
+	}
+},{types:["main_frame"],urls:[
+"*://*.safelink.hargawebsite.com/out/?get=*",
+]},["blocking"])
+
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
 		return getRedirect(atob(details.url.substr(details.url.indexOf("?u=")+3)))
 	}
 },{types:["main_frame"],urls:[
