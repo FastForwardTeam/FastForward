@@ -456,7 +456,8 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	}
 },{types:["main_frame"],urls:[
 "*://*.hightech.web.id/*?site=*",
-"*://*.masreyhan.com/*?site=*"
+"*://*.masreyhan.com/*?site=*",
+"*://*.pasardownload.com/*?site=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
