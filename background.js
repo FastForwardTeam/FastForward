@@ -409,7 +409,8 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 "*://*.motorbalap.id/?r=*",
 "*://*.travellinginfos.com/?r=*",
 "*://*.bungmiyana.me/?r=*",
-"*://*.tuser.id/?r=*"
+"*://*.tuser.id/?r=*",
+"*://*.kangpost.com/?r=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
