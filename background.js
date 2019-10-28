@@ -464,6 +464,20 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
+		let b64=details.url.substr(details.url.indexOf("?go=")+4).split("&")[0]
+		if(b64.substr(0,5)=="0OoL1")
+		{
+			b64="aHR0c"+b64.substr(5)
+		}
+		return getRedirect(atob(b64))
+	}
+},{types:["main_frame"],urls:[
+"*://*.lompat.in/?go=*"
+]},["blocking"])
+
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
 		return getRedirect(atob(details.url.substr(details.url.indexOf("?site=")+6).split("&")[0]))
 	}
 },{types:["main_frame"],urls:[
