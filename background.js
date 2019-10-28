@@ -385,6 +385,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		return getRedirect(atob(details.url.substr(details.url.indexOf("?r=")+3)))
 	}
 },{types:["main_frame"],urls:[
+"*://*.link-to.net/*/*?r=*",
 "*://*.yumechan.club/?r=*",
 "*://*.celeclub.org/?r=*",
 "*://*.duniaislamku.com/?r=*",
@@ -406,8 +407,8 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 "*://*.bolaoke.club/?r=*",
 "*://*.menantisenja.com/?r=*",
 "*://*.motorbalap.id/?r=*",
-"*://*.link-to.net/*/*?r=*",
-"*://*.travellinginfos.com/?r=*"
+"*://*.travellinginfos.com/?r=*",
+"*://*.bungmiyana.me/?r=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
