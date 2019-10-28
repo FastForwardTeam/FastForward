@@ -496,7 +496,8 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		return getRedirect(atob(details.url.substr(details.url.indexOf("?reff=")+6)))
 	}
 },{types:["main_frame"],urls:[
-"*://*.remiyu.me/?reff=*"
+"*://*.remiyu.me/?reff=*",
+"*://*.ceksite.id/?reff=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
