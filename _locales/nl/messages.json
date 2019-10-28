@@ -14,6 +14,9 @@
 	"faq": {
 		"message": "Veelgestelde Vragen (FAQ)"
 	},
+	"bypassCounter": {
+		"message": "Universal Bypass heeft al % sites voor je overgeslagen."
+	},
 	"support": {
 		"message": "Ondersteun Universal Bypass"
 	},
@@ -44,6 +47,9 @@
 	"optionsCrowdAutoOpen": {
 		"message": "Open crowd-sourced bestemmingen in een nieuw tabblad na % seconde(s). (0 = direct.)"
 	},
+	"optionsInfoBox": {
+		"message": "Toon informatieve berichten op sommige sites."
+	},
 	"privacyPolicy": {
 		"message": "Privacy Verklaring"
 	},
@@ -67,6 +73,15 @@
 	},
 	"beforeNavigateOptions": {
 		"message": "Wil je gelijk worden doorgestuurd of na x seconden?"
+	},
+	"infoBoxHide": {
+		"message": "Klik op deze box om hem te verbergen. Je kan de info box uitzetten in de Universal Bypass opties."
+	},
+	"crowdWait": {
+		"message": "Helaas ben je de eerste die deze link tegenkomt, maar nadat je hebt gewacht hoeven anderen dat niet meer."
+	},
+	"crowdDisabled": {
+		"message": "Deze website wordt omzeild door crowd bypass, dit heb je uitgeschakeld in de opties."
 	},
 	"crowdBypassed": {
 		"message": "U hoeft misschien niet te wachten!"
