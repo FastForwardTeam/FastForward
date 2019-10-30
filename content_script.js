@@ -1007,6 +1007,9 @@ if(document instanceof HTMLDocument)
 				domainBypass("realsht.mobi",()=>{
 					ifElement("input[type='hidden'][name='mylink'][value^='http']",i=>safelyNavigate(i.value))
 				})
+				hrefBypass(/mirrorace\\.com\\/m\\/[a-zA-Z0-9]+\\/[0-9]+/,()=>{
+					ifElement("a.uk-button.uk-button-primary[href]",a=>location.href=a.href)
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
