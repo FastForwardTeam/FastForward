@@ -327,18 +327,6 @@ if(document instanceof HTMLDocument)
 					value:forced_safelink[key]
 				})
 			}
-			//YetiShare
-			let actual_web_root
-			ODP(window,"WEB_ROOT",{
-				set:v=>{
-					ODP(window,"seconds",{
-						value:0,
-						writable:false
-					})
-					actual_web_root=v
-				},
-				get:()=>actual_web_root
-			})
 			//Shorte.st
 			transparentProperty("reqwest",r=>(typeof app!="undefined"&&document.querySelector(".skip-add-container .first-img[alt='Shorte.st']"))?a=>{
 				if(a.type==="jsonp")
