@@ -1004,6 +1004,9 @@ if(document instanceof HTMLDocument)
 						safelyNavigate(o.page.url)
 					}
 				})
+				domainBypass("realsht.mobi",()=>{
+					ifElement("input[type='hidden'][name='mylink'][value^='http']",i=>safelyNavigate(i.value))
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
