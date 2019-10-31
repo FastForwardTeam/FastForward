@@ -489,6 +489,16 @@ if(document instanceof HTMLDocument)
 			hrefBypass(/prox77\\.com\\/analyze\\/(.+)/,m=>{
 				location.pathname="/result/"+m[1]
 			})
+			hrefBypass(/sfile\\.(mobi|xyz)/,()=>{
+				ODP(window,"downloadButton",{
+					set:a=>{
+						if(a&&a.href)
+						{
+							safelyNavigate(a.href)
+						}
+					}
+				})
+			})
 			//Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
 			hrefBypass(/njiir\\.com|linkduit\\.net|k2s\\.cc|muhammadyoga\\.me|u\\.to|skiplink\\.io|healthykk\\.com|punchsubs\\.net|linkasm\\.com|firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php|2speed\\.net\\/file\\//,()=>{
 				window.setInterval=f=>setInterval(f,1)
