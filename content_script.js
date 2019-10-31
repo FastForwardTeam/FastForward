@@ -610,7 +610,7 @@ if(document instanceof HTMLDocument)
 				domainBypass("mazika2day.com",()=>{
 					ifElement(".linkbtn[href]",b=>safelyNavigate(b.href))
 				})
-				domainBypass(/ux9\\.de|pucuktranslation\\.pw/,()=>{
+				domainBypass("ux9.de",()=>{
 					ifElement("meta[http-equiv='refresh'][content]",m=>{
 						let c=m.content.replace("; url=",";url=")
 						if(c.indexOf(";url=") > -1)
@@ -1019,6 +1019,9 @@ if(document instanceof HTMLDocument)
 				})
 				hrefBypass(/mirrorace\\.com\\/m\\/[a-zA-Z0-9]+\\/[0-9]+/,()=>{
 					ifElement("a.uk-button.uk-button-primary[href]",a=>location.href=a.href)
+				})
+				domainBypass("pucuktranslation.pw",()=>{
+					ifElement("a.button.primary[href]",a=>safelyNavigate(a.href))
 				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
