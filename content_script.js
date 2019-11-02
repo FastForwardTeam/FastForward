@@ -1122,6 +1122,15 @@ if(document instanceof HTMLDocument)
 					safelyNavigate(new URL(a.href).searchParams.get("safelink_redirect"))
 					finish()
 				})
+				ifElement("form[action*='?safelink_redirect=']",f=>{//#557
+					let url=new URL(f.action).searchParams.get("safelink_redirect")
+					if(url.substr(0,23)=="http://blankrefer.com/?")
+					{
+						url=url.substr(23)
+					}
+					safelyNavigate(url)
+					finish()
+				})
 				if(document.querySelector(".wp-safelink-button"))
 				{
 					window.setInterval=f=>setInterval(f,1)
