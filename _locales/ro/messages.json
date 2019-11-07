@@ -14,6 +14,9 @@
 	"faq": {
 		"message": "Întrebări populare"
 	},
+	"bypassCounter": {
+		"message": "Universal Bypass a evitat deja % site-uri pentru tine."
+	},
 	"support": {
 		"message": "Ajută Universal Bypass"
 	},

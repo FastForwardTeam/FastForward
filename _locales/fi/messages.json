@@ -1,0 +1,29 @@
+{
+	"appDesc": {
+		"message": "Älä hukkaa aikaa noudattamiseen! Universal Bypass automaattisesti skippaa ärsyttävät linkin lyhentäjiä."
+	},
+	"firstrunTitle": {
+		"message": "Kiitos kun asensit Universal Bypassin!"
+	},
+	"firstrunSubtitle": {
+		"message": "Olet hämmästtyvä!"
+	},
+	"firstrunNoScript": {
+		"message": "Vaikuttaa kuitenkin siltä, että käytät NoScriptiä tai vastaavaa, jonka kanssa Universal Bypass ei ole yhteensopiva."
+	},
+	"faq": {
+		"message": "Usein Kysytyt Kysymykset (UKK)"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass on ohittanut % sivuja sinulle."
+	},
+	"support": {
+		"message": "Tue Universal Bypassia"
+	},
+	"options": {
+		"message": "Asetukset"
+	},
+	"optionsLink": {
+		"message": "Vaihda Universal Bypassin asetuksia."
+	}
+}

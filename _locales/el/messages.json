@@ -14,6 +14,9 @@
 	"faq": {
 		"message": "Συχνές Ερωτήσεις (FAQ)"
 	},
+	"bypassCounter": {
+		"message": "Το Universal Bypass εχει ηδη παρακαμψει % ιστοσελιδες για εσενα."
+	},
 	"options": {
 		"message": "Επιλογές"
 	},

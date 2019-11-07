@@ -27,10 +27,10 @@
 		"message": "Cambiar las opciones de Universal Bypass."
 	},
 	"optionsEnabled": {
-		"message": "Habilitar las bypasses del sitio web."
+		"message": "Habilitar los bypasses del sitio web."
 	},
 	"optionsNavigationDelay": {
-		"message": "Llevame a mi destino después de % segundo(s). (Use 0 para navegar al instante.)"
+		"message": "Llévame a mi destino después de % segundo(s). (Use 0 para navegar al instante.)"
 	},
 	"optionsTrackerBypass": {
 		"message": "Evita rastreadores usando Apimon.de."
@@ -39,7 +39,7 @@
 		"message": "Llevarme instantáneamente a los destinos de los rastreadores."
 	},
 	"optionsBlockIPLoggers": {
-		"message": "Bloquea los registradores IP si no pueden ser saltados."
+		"message": "Bloquear los registradores IP si no pueden ser omitidos."
 	},
 	"optionsCrowdBypass": {
 		"message": "Dar y tomar los destinos de los acortadores que no se pueden anular."
@@ -57,7 +57,7 @@
 		"message": "Bypasses personalizadas"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "Esta es una característica avanzada para que los desarrolladores creen sus propios scripts para evitar sitios. Una vez perfeccionados, se pueden enviar en GitHub para agregarlos a Universal Bypass, de modo que estén disponibles para todos."
+		"message": "Esta es una característica avanzada para que los desarrolladores creen sus propios scripts para evitar sitios. Una vez perfeccionados, se pueden enviar en GitHub para añadirlos a Universal Bypass, de modo que estén disponibles para todos."
 	},
 	"beforeNavigate": {
 		"message": "Ya casi estas en tu destino."
@@ -66,10 +66,10 @@
 		"message": "Tu dirección de destino es %"
 	},
 	"beforeNavigateTimer": {
-		"message": "Serás redirigido automáticamente en % segundo(s)."
+		"message": "Serás redirigido automáticamente en % segundos."
 	},
 	"beforeNavigateTimerSingular": {
-		"message": "Serás redirigido automáticamente en % segundo(s).\n"
+		"message": "Serás redirigido automáticamente en 1 segundo."
 	},
 	"beforeNavigateOptions": {
 		"message": "¿Quieres ser redirigido al instante o en x segundos?\n"
@@ -81,7 +81,7 @@
 		"message": "Desafortunadamente, eres el primero en encontrar este enlace, pero después de haber esperado, otros usuarios de Universal Bypass ya no tendrán que hacerlo."
 	},
 	"crowdDisabled": {
-		"message": "Este sitio web ya fue descubierto, el cual has desactivado en las opciones."
+		"message": "Este sitio web ya fue descubierto, el cual has deshabilitado en las opciones."
 	},
 	"crowdBypassed": {
 		"message": "¡Puede que no tengas que esperar!"
