@@ -1023,6 +1023,18 @@ if(document instanceof HTMLDocument)
 				domainBypass("pucuktranslation.pw",()=>{
 					ifElement("a.button.primary[href]",a=>safelyNavigate(a.href))
 				})
+				domainBypass(/linkvertise\\.(com|net)|link-to\\.net/,()=>{
+					let xhr=new XMLHttpRequest()
+					xhr.onload=()=>{
+						let json=JSON.parse(xhr.responseText)
+						if(json&&json.data&&json.data.link)
+						{
+							safelyNavigate(json.data.link.target)
+						}
+					}
+					xhr.open("GET","https://linkvertise.net/api/v1/redirect/link/static"+location.pathname)
+					xhr.send()
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{

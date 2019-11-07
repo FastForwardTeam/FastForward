@@ -385,7 +385,9 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		return getRedirect(atob(details.url.substr(details.url.indexOf("?r=")+3)))
 	}
 },{types:["main_frame"],urls:[
-"*://*.link-to.net/*/*?r=*",
+"*://*.linkvertise.com/*?r=*",
+"*://*.linkvertise.net/*?r=*",
+"*://*.link-to.net/*?r=*",
 "*://*.yumechan.club/?r=*",
 "*://*.celeclub.org/?r=*",
 "*://*.duniaislamku.com/?r=*",
