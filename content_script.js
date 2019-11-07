@@ -486,8 +486,8 @@ if(document instanceof HTMLDocument)
 					}
 				})
 			})
-			hrefBypass(/prox77\\.com\\/analyze\\/(.+)/,m=>{
-				location.pathname="/result/"+m[1]
+			hrefBypass(/(prox77|agdd5br)\\.com\\/analyze\\/(.+)/,m=>{
+				location.pathname="/result/"+m[2]
 			})
 			hrefBypass(/sfile\\.(mobi|xyz)/,()=>{
 				ODP(window,"downloadButton",{
@@ -990,7 +990,7 @@ if(document instanceof HTMLDocument)
 						f.submit()
 					})
 				})
-				domainBypass("prox77.com",()=>{
+				domainBypass(/(prox77|agdd5br)\\.com/,()=>{
 					document.querySelector("#Sbutton").click()
 				})
 				domainBypass("kuliahmatematika.my.id",()=>{
