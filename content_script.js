@@ -1026,7 +1026,7 @@ if(document instanceof HTMLDocument)
 						safelyNavigate(o.page.url)
 					}
 				})
-				domainBypass("realsht.mobi",()=>{
+				domainBypass(/realsht\\.mobi|sairman\\.com/,()=>{
 					ifElement("a#hapus",a=>location.href=a.href,()=>{
 						ifElement("input[type='hidden'][name='mylink'][value^='http']",i=>safelyNavigate(i.value))
 					})
