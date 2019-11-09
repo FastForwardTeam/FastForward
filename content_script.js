@@ -499,6 +499,19 @@ if(document instanceof HTMLDocument)
 					}
 				})
 			})
+			hrefBypass(/gixen\.com\/home_1\.php/, function()
+			{
+				sessionid = document.cookie.match(/sessionid=(\d+)/)[1]
+				if (sessionid)
+				{
+					let f = document.createElement("form")
+					f.method = "POST"
+					f.action = "home_2.php?sessionid=" + sessionid
+					f.innerHTML = '<input type="hidden" name="gixenlinkcontinue" value="1">'
+					document.documentElement.appendChild(f)
+					f.submit()
+				}
+			})
 			//Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
 			hrefBypass(/(njiir|healthykk|linkasm)\\.com|(linkduit|punchsubs)\\.net|k2s\\.cc|muhammadyoga\\.me|u\\.to|skiplink\\.io|firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php|2speed\\.net\\/file\\//,()=>{
 				window.setInterval=f=>setInterval(f,1)
