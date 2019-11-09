@@ -1027,7 +1027,9 @@ if(document instanceof HTMLDocument)
 					}
 				})
 				domainBypass("realsht.mobi",()=>{
-					ifElement("input[type='hidden'][name='mylink'][value^='http']",i=>safelyNavigate(i.value))
+					ifElement("a#hapus",a=>location.href=a.href,()=>{
+						ifElement("input[type='hidden'][name='mylink'][value^='http']",i=>safelyNavigate(i.value))
+					})
 				})
 				hrefBypass(/mirrorace\\.com\\/m\\/[a-zA-Z0-9]+\\/[0-9]+/,()=>{
 					ifElement("a.uk-button[href]",a=>location.href=a.href)
@@ -1212,9 +1214,9 @@ if(document instanceof HTMLDocument)
 				})
 				if(
 					document.getElementById("getlink")&&document.getElementById("gotolink")&&(
-					document.getElementById("timer")//tetewlink.me,vehicle-techno.cf#86
-					||document.getElementById("count")//keisekaikuy.blogspot.com#493
-					))
+				document.getElementById("timer")//tetewlink.me,vehicle-techno.cf#86
+				||document.getElementById("count")//keisekaikuy.blogspot.com#493
+				))
 				{
 					document.getElementById("gotolink").removeAttribute("disabled")
 					document.getElementById("gotolink").click()
