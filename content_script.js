@@ -922,8 +922,8 @@ if(document instanceof HTMLDocument)
 						$(window).on("focus")
 					})
 				})
-				domainBypass("spacetica.com",()=>{
-					ifElement("a.btn-primary[href]",a=>safelyNavigate(a.href))
+				domainBypass(/spacetica\\.com|linkpoi\\.in/,()=>{
+					ifElement("a.btn.btn-primary[href]",a=>safelyNavigate(a.href))
 				})
 				domainBypass("uiz.io",()=>{
 					ifElement("#go-adsredirect",f=>{

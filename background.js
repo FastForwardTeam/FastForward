@@ -549,20 +549,6 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
-		let xhr=new XMLHttpRequest(details.url+"/i"),destination
-		xhr.onload=()=>destination=new URL(xhr.responseURL).searchParams.get("url")
-		xhr.open("GET",details.url+"/i",false)
-		xhr.send()
-		if(destination)
-		{
-			return getRedirect(destination)
-		}
-	}
-},{types:["main_frame"],urls:["*://*.linkpoi.in/*"]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
 		let url=details.url
 		do
 		{
