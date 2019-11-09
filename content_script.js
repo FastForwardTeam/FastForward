@@ -1030,7 +1030,7 @@ if(document instanceof HTMLDocument)
 					ifElement("input[type='hidden'][name='mylink'][value^='http']",i=>safelyNavigate(i.value))
 				})
 				hrefBypass(/mirrorace\\.com\\/m\\/[a-zA-Z0-9]+\\/[0-9]+/,()=>{
-					ifElement("a.uk-button.uk-button-primary[href]",a=>location.href=a.href)
+					ifElement("a.uk-button[href]",a=>location.href=a.href)
 				})
 				domainBypass("pucuktranslation.pw",()=>{
 					ifElement("a.button.primary[href]",a=>safelyNavigate(a.href))
