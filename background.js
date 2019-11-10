@@ -455,7 +455,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		return getRedirect(atob(arg.substr(0,arg.length-1)))
 	}
 },{types:["main_frame"],urls:[
-"*://*.safelink.hargawebsite.com/out/?get=*",
+"*://safelink.hargawebsite.com/*/?get=*",
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
