@@ -451,6 +451,15 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
+		return getRedirect(atob(details.url.substr(details.url.indexOf("?id=")+4)))
+	}
+},{types:["main_frame"],urls:[
+"*://*.yametesenpai.xyz/p/convert.html?id=*"
+]},["blocking"])
+
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
 		let arg=details.url.substr(details.url.indexOf("?get=")+5)
 		return getRedirect(atob(arg.substr(0,arg.length-1)))
 	}
