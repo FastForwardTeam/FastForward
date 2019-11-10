@@ -1,0 +1,53 @@
+{
+	"appDesc": {
+		"message": "Non perdas o teu tempo! Universal Bypass salta automáticamente os acortadores molestos."
+	},
+	"firstrunTitle": {
+		"message": "Grazas por instalar Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "Molas!"
+	},
+	"faq": {
+		"message": "Preguntas Frecuentes (PF)"
+	},
+	"support": {
+		"message": "Axudar a Universal Bypass"
+	},
+	"options": {
+		"message": "Axustes"
+	},
+	"optionsInfoBox": {
+		"message": "Mostrar mensaxes informativos nalgunas páxinas"
+	},
+	"privacyPolicy": {
+		"message": "Política de privacidade"
+	},
+	"beforeNavigate": {
+		"message": "Xa casi estás!"
+	},
+	"beforeNavigateDestination": {
+		"message": "O teu destino é %s"
+	},
+	"beforeNavigateTimer": {
+		"message": "Serás enviado automáticamente en % segundos."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Serás enviado automáticamente en 1 segundo."
+	},
+	"crowdBypassed": {
+		"message": "Pode que non teñas que esperar!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Outros usuarios de Universal Bypass xa esperaron por ti e notificaron que dirixe a %"
+	},
+	"crowdBypassedTimer": {
+		"message": "Será aberto nunha nova pestaña en % segundos."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Será aberto nunha nova pestaña en 1 segundo."
+	},
+	"crowdBypassedIgnore": {
+		"message": "Destino erróneo?"
+	}
+}

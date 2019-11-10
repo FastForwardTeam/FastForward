@@ -44,6 +44,9 @@
 	"optionsCrowdBypass": {
 		"message": "Podaj i wykorzystaj miejsca, do których nie można przejść."
 	},
+	"optionsInfoBox": {
+		"message": "Pokaż wiadomości informacyjne na niektórych stronach."
+	},
 	"privacyPolicy": {
 		"message": "Polityka prywatności"
 	},
@@ -62,6 +65,9 @@
 	"beforeNavigateTimerSingular": {
 		"message": "Zostaniesz przekierowany automatycznie za 1 sekundę."
 	},
+	"beforeNavigateOptions": {
+		"message": "Chcesz być przekierowywany natychmiastowo, czy za x sekund?"
+	},
 	"crowdWait": {
 		"message": "Niestety, jesteś pierwszym który wchodzi w ten link, ale po tym jak ty poczekałeś, inni użytkownicy Universal bypass nie będą musieli już czekać."
 	},
@@ -71,8 +77,14 @@
 	"crowdBypassedInfo": {
 		"message": "Inni użytkownicy Uniwersalnego obejścia czekali na ciebie i zgłosili, że prowadzi to do %"
 	},
+	"crowdBypassedTimerSingular": {
+		"message": "To będzie otwarte w nowym oknie za 1 sekundę."
+	},
 	"crowdBypassedIgnore": {
 		"message": "Czy to było nieprawidłowe?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Czy chcesz to otworzyć w nowej karcie natychmiast, czy w ciągu x sekund?"
 	},
 	"blockedTitle": {
 		"message": "Uniwersalne obejście zapobiegło zarejestrowanie twojego IP."
