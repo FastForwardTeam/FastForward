@@ -8,6 +8,7 @@ if(document instanceof HTMLDocument)
 			return
 		}
 		let script=document.createElement("script"),
+		getMessage=k=>brws.i18n.getMessage(k).split("\\").join("\\\\").split("\"").join("\\\""),
 		gen_chan=()=>"data-"+Math.random().toString().substr(2),
 		message_channel={
 			stop_watching:gen_chan(),
@@ -172,7 +173,7 @@ if(document instanceof HTMLDocument)
 							{
 								clearInterval(iT)
 								document.documentElement.removeAttribute("`+message_channel.crowd_queried+`")
-								insertInfoBox("`+brws.i18n.getMessage("crowdWait")+`")
+								insertInfoBox("`+getMessage("crowdWait")+`")
 								f()
 							}
 						},20)
@@ -180,7 +181,7 @@ if(document instanceof HTMLDocument)
 				}
 				else
 				{
-					insertInfoBox("`+brws.i18n.getMessage("crowdDisabled")+`")
+					insertInfoBox("`+getMessage("crowdDisabled")+`")
 				}
 			},
 			contributeAndNavigate=target=>{
@@ -214,7 +215,7 @@ if(document instanceof HTMLDocument)
 						{
 							div.style.height=div.clientHeight+"px"
 						}
-						span.textContent="`+brws.i18n.getMessage("infoBoxHide")+`"
+						span.textContent="`+getMessage("infoBoxHide")+`"
 					}
 					div.onmouseout=()=>span.textContent=text
 					div.onclick=()=>document.body.removeChild(div)
