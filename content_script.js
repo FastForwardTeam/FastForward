@@ -1050,6 +1050,9 @@ if(document instanceof HTMLDocument)
 					xhr.open("GET","https://linkvertise.net/api/v1/redirect/link/static"+location.pathname)
 					xhr.send()
 				})
+				domainBypass("gsu.st",()=>{
+					ifElement("#Subform input[type='submit'][name='btn'].btn",b=>b.click())
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
