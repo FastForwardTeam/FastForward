@@ -9,6 +9,7 @@ brws.storage.local.get(["bypass_counter"],res=>{
 })
 
 //Options
+document.getElementById("version").textContent=brws.runtime.getManifest().version
 document.querySelector("[data-message='optionsNavigationDelay']").innerHTML=document.querySelector("[data-message='optionsNavigationDelay']").innerHTML.replace("%",'<input id="option-navigation-delay" type="number" min="0" max="60" skip="1" style="width:34px">')
 document.querySelector("[data-message='optionsCrowdAutoOpen']").innerHTML=document.querySelector("[data-message='optionsCrowdAutoOpen']").innerHTML.replace("%",'<input id="option-crowd-open-delay" type="number" min="0" max="60" skip="1" style="width:34px">')
 const enabledCheckbox=document.getElementById("option-enabled"),
