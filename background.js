@@ -252,12 +252,15 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	return encodedRedirect(arr[0],arr[1])
 },{types:["main_frame"],urls:["https://universal-bypass.org/bypassed?target=*&referer=*"]},["blocking"])
 
-brws.webRequest.onBeforeRedirect.addListener(details=>{
-	if(enabled&&details.url in refererCache)
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	let arr=details.url.substr(45).split("&referer=")
+	arr[0]=(new URL(decodeURIComponent(arr[0]))).toString()
+	if(arr.length>1)
 	{
-		delete refererCache[details.url]
+		refererCache[arr[0]]=arr[1]
 	}
-},{types:["main_frame"],urls:["<all_urls>"]})
+	return {redirectUrl:arr[0]}
+},{types:["main_frame"],urls:["https://universal-bypass.org/navigate?target=*"]},["blocking"])
 
 let infoSpec=["blocking","requestHeaders"]
 if(!firefox)
@@ -271,20 +274,27 @@ brws.webRequest.onBeforeSendHeaders.addListener(details=>{
 			name: "Referer",
 			value: decodeURIComponent(refererCache[details.url])
 		})
-		delete refererCache[details.url]
 		return {requestHeaders: details.requestHeaders}
 	}
 },{types:["main_frame"],urls:["<all_urls>"]},infoSpec)
 
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	let arr=details.url.substr(45).split("&referer=")
-	arr[0]=(new URL(decodeURIComponent(arr[0]))).toString()
-	if(arr.length>1)
+brws.webRequest.onBeforeRedirect.addListener(details=>{
+	if(enabled&&details.url in refererCache)
 	{
-		refererCache[arr[0]]=arr[1]
+		if(details.redirectUrl == details.url + "/")
+		{
+			refererCache[details.redirectUrl] = refererCache[details.url]
+		}
+		delete refererCache[details.url]
 	}
-	return {redirectUrl:arr[0]}
-},{types:["main_frame"],urls:["https://universal-bypass.org/navigate?target=*"]},["blocking"])
+},{types:["main_frame"],urls:["<all_urls>"]})
+
+brws.webRequest.onCompleted.addListener(details=>{
+	if(enabled&&details.url in refererCache)
+	{
+		delete refererCache[details.url]
+	}
+},{types:["main_frame"],urls:["<all_urls>"]})
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	countIt()
