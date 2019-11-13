@@ -1033,7 +1033,7 @@ if(document instanceof HTMLDocument)
 					})
 				})
 				hrefBypass(/mirrorace\\.com\\/m\\/[a-zA-Z0-9]+\\/[0-9]+/,()=>{
-					ifElement("a.uk-button[href]",a=>location.href=a.href)
+					location.href=document.querySelector("a[href*='"+location.search+"']").href
 				})
 				domainBypass("pucuktranslation.pw",()=>{
 					ifElement("a.button.primary[href]",a=>safelyNavigate(a.href))
