@@ -796,7 +796,7 @@ if(document instanceof HTMLDocument)
 				domainBypass("drivehub.link",()=>{
 					ifElement("a#proceed[href]",a=>safelyNavigate(a.href))
 				})
-				domainBypass("oxy.cloud",()=>{
+				domainBypass(/oxy\\.(cloud|st)/,()=>{
 					let params=new URL(document.querySelector("#divdownload > a[href]").href).searchParams
 					if(params.has("predirect"))
 					{
