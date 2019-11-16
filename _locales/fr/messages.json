@@ -11,6 +11,12 @@
 	"firstrunNoScript": {
 		"message": "Cependant, il semble que vous utilisez le module NoScript ou quelque chose de similaire, avec lequel Universal Bypass n'est pas compatible."
 	},
+	"version": {
+		"message": "Version"
+	},
+	"changelog": {
+		"message": "Journal des modifications"
+	},
 	"faq": {
 		"message": "Questions fréquemment posées (FAQ)"
 	},

@@ -11,6 +11,12 @@
 	"firstrunNoScript": {
 		"message": "Dog ser det ud til, at du benytter NoScript el.lign., hvilket Universal Bypass ikke understøtter."
 	},
+	"version": {
+		"message": "Version"
+	},
+	"changelog": {
+		"message": "Ændringslog"
+	},
 	"faq": {
 		"message": "Ofte stilte spørgsmål (FAQ)"
 	},

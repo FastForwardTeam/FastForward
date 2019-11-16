@@ -1,5 +1,20 @@
 {
+	"firstrunTitle": {
+		"message": "Täname, et installisid rakenduse Universal Bypass!"
+	},
+	"version": {
+		"message": "Versioon"
+	},
+	"changelog": {
+		"message": "Muudatuste logi"
+	},
+	"faq": {
+		"message": "Korduma Kippuvad Küsimused"
+	},
 	"options": {
 		"message": "Seaded"
+	},
+	"privacyPolicy": {
+		"message": "Privaatsusreeglid"
 	}
 }

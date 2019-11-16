@@ -11,6 +11,12 @@
 	"firstrunNoScript": {
 		"message": "Tuy nhiên, bạn dường như sử dụng NoScript hoặc tương tự, mà Universal Bypass không tương thích với."
 	},
+	"version": {
+		"message": "Phiên bản"
+	},
+	"changelog": {
+		"message": "Thay đổi"
+	},
 	"faq": {
 		"message": "Câu Hỏi Thường Gặp (FAQ)"
 	},

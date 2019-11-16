@@ -11,6 +11,12 @@
 	"firstrunNoScript": {
 		"message": "Wydaje się, że używasz „NoScript” lub czegoś podobnego co powoduje, że Uniwersalne Obejście nie jest kompatybilne."
 	},
+	"version": {
+		"message": "Wersja"
+	},
+	"changelog": {
+		"message": "Dziennik zmian"
+	},
 	"faq": {
 		"message": "Najczęściej zadawane pytania (FAQ)"
 	},

@@ -11,6 +11,12 @@
 	"firstrunNoScript": {
 		"message": "Međutim, čini se da koristiš NoScript ili slično, sa čime Universal Bypass nije kompatibilan."
 	},
+	"version": {
+		"message": "Verzija"
+	},
+	"changelog": {
+		"message": "Promjene"
+	},
 	"faq": {
 		"message": "Često Postavljena Pitanja (ČPP)"
 	},

@@ -11,6 +11,12 @@
 	"firstrunNoScript": {
 		"message": "Akan tetapi, anda sepertinya menggunakan ekstensi NoScript atau yang menyerupai itu, Karena itu Universal Bypass tidak kompatibel dengannya."
 	},
+	"version": {
+		"message": "Versi"
+	},
+	"changelog": {
+		"message": "Catatan perubahan"
+	},
 	"faq": {
 		"message": "Pertanyaan yang Sering Diajukan\n(FAQ)"
 	},

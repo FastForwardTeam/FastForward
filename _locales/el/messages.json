@@ -11,11 +11,20 @@
 	"firstrunNoScript": {
 		"message": "Ωστόσο, φαίνεται να χρησιμοποιείτε NoScript ή παρόμοιο, με τα οποία το Universal Bypass δεν είναι συμβατό."
 	},
+	"version": {
+		"message": "Έκδοση"
+	},
+	"changelog": {
+		"message": "Αλλαγές"
+	},
 	"faq": {
 		"message": "Συχνές Ερωτήσεις (FAQ)"
 	},
 	"bypassCounter": {
 		"message": "Το Universal Bypass εχει ηδη παρακαμψει % ιστοσελιδες για εσενα."
+	},
+	"support": {
+		"message": "Υποστήριξη Universal Bypass"
 	},
 	"options": {
 		"message": "Επιλογές"

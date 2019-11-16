@@ -11,6 +11,12 @@
 	"firstrunNoScript": {
 		"message": "Nanging, kayane sampeyan nggunakake ekstensi NoScript utawa seng meh padha, mulane Universal Bypass ora kompatibel karo iku."
 	},
+	"version": {
+		"message": "Versi"
+	},
+	"changelog": {
+		"message": "Cathetan perubahan"
+	},
 	"faq": {
 		"message": "Pitakon Seng Umum (FAQ)"
 	},
