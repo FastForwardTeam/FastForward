@@ -971,12 +971,14 @@ if(document instanceof HTMLDocument)
 							return
 						}
 						awaitElement(".post-support-footer",()=>{
+							let _open=window.open
 							window.open=()=>{}
 							document.querySelectorAll(".post-support-options > .gate-btn-box > span > a").forEach(a=>{
 								a.href="#"
 								a.target=""
 								a.click()
 							})
+							window.open=_open
 							let dT=setInterval(()=>{
 								if(!b.classList.contains("disabled"))
 								{
