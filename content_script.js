@@ -1035,7 +1035,15 @@ if(document instanceof HTMLDocument)
 					})
 				})
 				hrefBypass(/mirrorace\\.com\\/m\\/[a-zA-Z0-9]+\\/[0-9]+/,()=>{
-					location.href=document.querySelector("a[href*='"+location.search+"']").href
+					location.href=document.querySelector("a[href*='"+location.search+"']:not([hidden])").href
+				})
+				domainBypass("mirrorace.com",()=>{
+					ifElement(".uk-modal-close",b=>{
+						if(b.textContent=="I have a VPN already")
+						{
+							b.click()
+						}
+					})
 				})
 				domainBypass("pucuktranslation.pw",()=>{
 					ifElement("a.button.primary[href]",a=>safelyNavigate(a.href))
