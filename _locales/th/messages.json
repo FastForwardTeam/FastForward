@@ -1,27 +1,42 @@
 {
 	"appDesc": {
-		"message": "อย่าไปเสียเวลากับสิ่งที่ต้องทำตามมัน Universal Bypass ช่วยให้คุณข้ามพวกตัวย่อลิงค์ที่โครตน่ารำคาญให้อัตโนมัติ"
+		"message": "อย่าไปเสียเวลากับสิ่งที่ต้องทำตาม Universal Bypass ช่วยให้คุณข้ามพวกตัวย่อลิงค์ที่โครตน่ารำคาญให้อัตโนมัติ"
 	},
 	"firstrunTitle": {
-		"message": "ขอขอบคุณที่ติดตั้ง Universal Bypass!"
+		"message": "ขอขอบคุณสำหรับการติดตั้ง Universal Bypass!"
 	},
 	"firstrunSubtitle": {
 		"message": "คุณนี้มันเจ๋งจริงๆเลยแหะ!"
 	},
 	"firstrunNoScript": {
-		"message": "แต่อย่างไรก็ตาม ดูเหมือนคุณกำลังใช้ NoScript หรืออะไรที่มันคล้ายๆกัน ซึ่ง Universal Bypass นั้นไม่เข้ากันกับพวกนี้"
+		"message": "แต่อย่างไรก็ตาม ดูเหมือนคุณกำลังใช้ NoScript หรืออะไรที่คล้ายกัน ซึ่ง Universal Bypass นั้นไม่เข้ากันกับพวกนี้"
+	},
+	"version": {
+		"message": "เวอร์ชัน"
+	},
+	"changelog": {
+		"message": "บันทึกการเปลี่ยนแปลง"
 	},
 	"faq": {
 		"message": "คำถามที่พบบ่อย"
 	},
+	"bypassCounter": {
+		"message": "Universal Bypass ได้ข้ามเว็บไซต์ % สำหรับคุณเรียบร้อยแล้ว"
+	},
+	"support": {
+		"message": "สนับสนุน Universal Bypass"
+	},
 	"options": {
-		"message": "ตัวเลือก"
+		"message": "ตัวเลือก."
 	},
 	"optionsLink": {
 		"message": "เปลี่ยนการตั้งค่า Universal Bypass"
 	},
 	"optionsEnabled": {
-		"message": "เปิกใช้งาน website bypasses"
+		"message": "เปิดใช้งาน website bypasses"
+	},
+	"optionsNavigationDelay": {
+		"message": "พาฉันไปยังจุดหมายปลายทางหลังจาก % วินาที (ใช้ 0 เพื่อสำรวจได้ทันที)"
 	},
 	"optionsTrackerBypass": {
 		"message": "บายพาสแทร็กเกอร์ที่ใช้ Apimon.de"
@@ -30,16 +45,25 @@
 		"message": "พาฉันไปที่ปลายทางของเครื่องมือติดตามทันที"
 	},
 	"optionsBlockIPLoggers": {
-		"message": "หยุดตัวบันทึก IP ถ้าเขาไม่สามารถให้ผ่านไปได้"
+		"message": "บล็อคตัวบันทึก IP หากการไม่สามารถบาสพาสได้"
 	},
 	"optionsCrowdBypass": {
 		"message": "การรับและการให้จุดหมายปลายทางของ shorteners ที่ไม่มีใครเทียบได้"
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "เปิดปลายทาง crowd-sourced ในแท็บใหม่หลังจาก % วินาที (0 = ทันที)"
+	},
+	"optionsInfoBox": {
+		"message": "แสดงข้อความเกี่ยวกับข้อมูลกับบางเว็บไซต์"
 	},
 	"privacyPolicy": {
 		"message": "นโยบายความเป็นส่วนตัว"
 	},
 	"optionsUserscripts": {
-		"message": "สร้างตัวข้ามเอง"
+		"message": "บายพาสแบบกำหนดเอง"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "นี่คือฟีเจอร์ขั้นสูงสำหรับนักพัฒนาเพื่อสร้างสคริปต์ของตนเองเพื่อบาสพาสเว็ฐไซต์ เมื่อสมบูรณ์แล้วพวกเขาสามารถส่งไปที่ GitHub เพื่อเพิ่มใน Universal Bypass สำหรับให้ทุกคนๆสามารถใช้งานได้"
 	},
 	"beforeNavigate": {
 		"message": "คุณใกล้ถึงจุดหมายปลายทางแล้ว"
@@ -47,14 +71,41 @@
 	"beforeNavigateDestination": {
 		"message": "ปลายทางของคุณคือ %"
 	},
+	"beforeNavigateTimer": {
+		"message": "คุณจะถูกเปลี่ยนเส้นทางโดยอัตโนมัติใน % วินาที"
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "คุณจะถูกเปลี่ยนเส้นทางโดยอัตโนมัติใน 1 วินาที"
+	},
+	"beforeNavigateOptions": {
+		"message": "คุณต้องการที่จะเปลี่ยนเส้นทางทันทีหรือใน x วินาที?"
+	},
+	"infoBoxHide": {
+		"message": "คลิกที่กล่องนี้เพื่อซ่อน คุณสามารถปิดใช้งานคุณสมบัติกล่องข้อมูลในตัวเลือก Universal Bypass"
+	},
+	"crowdWait": {
+		"message": "ขออภัย คุณเป็นคนแรกที่ได้พบกับลิงค์นี้ แต่หลังจากที่คุณรอลิ้งนี้นั้น ผู้ใช้ Universal Bypass คนอื่นๆ จะไม่ต้องรอกับลิ้งนี้อีกต่อไป"
+	},
+	"crowdDisabled": {
+		"message": "เว็บไซต์นี้ถูกบายพาสด้วยการบายพาสฝูงชนซึ่งคุณได้ปิดการใช้งานในตัวเลือก"
+	},
 	"crowdBypassed": {
 		"message": "คุณอาจไม่ต้องรออีกต่อไป!"
 	},
 	"crowdBypassedInfo": {
-		"message": "ผู้ใช้ Universal Bypass รายรอคุณแล้วและรายงานว่าสิ่งนี้นำไปสู่ %"
+		"message": "ผู้ใช้ Universal Bypass รายอื่นกำลังรอคุณอยู่และได้รายงานว่าสิ่งนี้นำไปสู่ %"
+	},
+	"crowdBypassedTimer": {
+		"message": "สิ่งนี้จะเปิดบนแท็บใหม่ใน % วินาที"
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "สิ่งนี้จะถูกเปิดในแท็บใหม่ใน 1 วินาที"
 	},
 	"crowdBypassedIgnore": {
-		"message": "สิ่งนี้ไม่ถูกต้องหรือ?"
+		"message": "สิ่งนี้ไม่ถูกต้องหรือไม่?"
+	},
+	"crowdBypassedOptions": {
+		"message": "คุณต้องการที่จะเปิด ในแท็บใหม่ ทันทีหรือใน x วินาทีมั้ย?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass ช่วยป้องกัน IP คุณจากการถูกเก็บประวัติ"

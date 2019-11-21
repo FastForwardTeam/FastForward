@@ -9,7 +9,7 @@
 		"message": "Vous êtes fantastique !"
 	},
 	"firstrunNoScript": {
-		"message": "Cependant, il semble que vous utilisez le module NoScript ou quelque chose de similaire, avec lequel Universal Bypass n'est pas compatible."
+		"message": "Cependant, il semblerait que vous utilisiez le module NoScript ou quelque chose de similaire, avec lequel Universal Bypass n'est pas compatible."
 	},
 	"version": {
 		"message": "Version"
@@ -36,13 +36,13 @@
 		"message": "Activer les contournements de sites Web."
 	},
 	"optionsNavigationDelay": {
-		"message": "M'envoyer à destination après % seconde(s). (Utilisez le 0 pour être instantanément redirigé.)"
+		"message": "M'envoyer à destination après % seconde(s). (Utilisez le 0 pour être automatiquement redirigé.)"
 	},
 	"optionsTrackerBypass": {
 		"message": "Contourner les traqueurs en utilisant Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
-		"message": "Me rediriger automatiquement vers les destinations des traqueurs."
+		"message": "Me rediriger instantanément vers les destinations des traqueurs."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Bloquer les enregistreurs d'adresse IP s'ils ne peuvent pas être contournés."

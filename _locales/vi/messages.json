@@ -18,16 +18,16 @@
 		"message": "Thay đổi"
 	},
 	"faq": {
-		"message": "Câu Hỏi Thường Gặp (FAQ)"
+		"message": "Câu hỏi thường gặp (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass đã bỏ qua % trang."
+		"message": "Universal Bypass đã bỏ qua % trang cho bạn."
 	},
 	"support": {
 		"message": "Giúp đỡ Universal Bypass"
 	},
 	"options": {
-		"message": "Tùy chỉnh"
+		"message": "Tùy chọn"
 	},
 	"optionsLink": {
 		"message": "Thay đổi tùy chọn Universal Bypass."
@@ -36,13 +36,13 @@
 		"message": "Bật bỏ qua website."
 	},
 	"optionsNavigationDelay": {
-		"message": "Đưa tôi đến đích sau % giây. (Sử dụng 0 để điều hướng nhanh.)"
+		"message": "Đưa tôi đến đích sau % giây. (Sử dụng 0 để được chuyển hướng ngay lập tức.)"
 	},
 	"optionsTrackerBypass": {
-		"message": "Bỏ qua trackers bằng cách sử dụng Apimon.de."
+		"message": "Bỏ qua các mã theo dõi bằng Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
-		"message": "Ngay lập tức đưa tôi đến đích của trình theo dõi."
+		"message": "Lập tức đưa tôi đến đích của các mã theo dõi."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Chặn IP Logger nếu nó không thể bỏ qua."
@@ -51,7 +51,7 @@
 		"message": "Gửi và lấy đích đến của rút gọn chưa thế bypass."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Mở các điểm đến có cộng đồng đóng góp trong một tab mới sau % giây(s). (0 = tức thì.)"
+		"message": "Mở các điểm đến có cộng đồng đóng góp trong một tab mới sau % giây. (0 = lập tức.)"
 	},
 	"optionsInfoBox": {
 		"message": "Hiển thị tin nhắn thông tin trên một số trang."
@@ -102,7 +102,7 @@
 		"message": "Sẽ được mở trong tab mới sau 1 giây."
 	},
 	"crowdBypassedIgnore": {
-		"message": "Điều này chưa chính xác?"
+		"message": "Điều này chưa chính xác ư?"
 	},
 	"crowdBypassedOptions": {
 		"message": "Bạn có muốn cái này được mở trong tab mới tức thì hoặc trong x giây?"

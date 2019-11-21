@@ -34,7 +34,7 @@ foreach(scandir("_locales") as $locale)
 		continue;
 	}
 	unlink("_locales/{$locale}/marketing.json");
-	if(file_get_contents("_locales/{$locale}/messages.json") == "{}")
+	if(rtrim(file_get_contents("_locales/{$locale}/messages.json")) == "{}")
 	{
 		recursivelyDelete("_locales/{$locale}");
 		continue;
