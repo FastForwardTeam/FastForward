@@ -512,8 +512,18 @@ if(document instanceof HTMLDocument)
 					f.submit()
 				}
 			})
+			domainBypass("linkduit.net",()=>{
+				window.setInterval=f=>setInterval(f,1)
+				awaitElement("a#download[itemlink]",a=>{
+					if(isGoodLink(a.getAttribute("itemlink")))
+					{
+						location.href=a.getAttribute("itemlink")
+					}
+				})
+				awaitElement("a.mirror_link[href]",a=>safelyNavigate(a.href))
+			})
 			//Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
-			hrefBypass(/(njiir|healthykk|linkasm)\\.com|(linkduit|punchsubs)\\.net|k2s\\.cc|muhammadyoga\\.me|u\\.to|skiplink\\.io|firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php|2speed\\.net\\/file\\//,()=>{
+			hrefBypass(/(njiir|healthykk|linkasm)\\.com|punchsubs\\.net|k2s\\.cc|muhammadyoga\\.me|u\\.to|skiplink\\.io|firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php|2speed\\.net\\/file\\//,()=>{
 				window.setInterval=f=>setInterval(f,1)
 			})
 			domainBypass(/(racaty|longfiles|id-share19)\\.com|indishare\\.org|datei\\.to/,()=>{
