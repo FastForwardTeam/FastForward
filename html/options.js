@@ -4,7 +4,7 @@ brws.storage.local.get(["bypass_counter"],res=>{
 	{
 		const p=document.querySelector("[data-message='bypassCounter']")
 		p.innerHTML=p.innerHTML.replace("%","<b>"+res.bypass_counter+"</b>")
-		p.style.display="block"
+		document.getElementById("counter").style.display="block"
 	}
 })
 
