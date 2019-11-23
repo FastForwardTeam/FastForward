@@ -351,14 +351,6 @@ if(document instanceof HTMLDocument)
 				awaitElement(".download_button[href]",a=>safelyNavigate(a.href))
 			})
 			hrefBypass(/1v\\.to\\/t\\/.*/,()=>location.pathname=location.pathname.split("/t/").join("/saliendo/"))
-			domainBypass("share-online.biz",()=>{
-				ODP(window,"wait",{
-					set:s=>0,
-					get:()=>{
-						return 2
-					}
-				})
-			})
 			hrefBypass(/sourceforge\\.net\\/projects\\/.+\\/files\\/.+\\/download/,()=>{
 				var b=document.createElement("button"),d=false
 				b.className="direct-download"
@@ -510,14 +502,13 @@ if(document instanceof HTMLDocument)
 				awaitElement("a.mirror_link[href]",a=>safelyNavigate(a.href))
 			})
 			//Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
-			hrefBypass(/(njiir|healthykk|linkasm)\\.com|punchsubs\\.net|k2s\\.cc|muhammadyoga\\.me|u\\.to|skiplink\\.io|firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php|2speed\\.net\\/file\\//,()=>window.setInterval=f=>setInterval(f,1))
-			domainBypass(/(racaty|longfiles|id-share19)\\.com|indishare\\.org|datei\\.to/,()=>window.setTimeout=f=>setTimeout(f,1))
+			hrefBypass(/(njiir|healthykk|linkasm)\\.com|punchsubs\\.net|k2s\\.cc|muhammadyoga\\.me|u\\.to|skiplink\\.io|firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php/,()=>window.setInterval=f=>setInterval(f,1))
+			domainBypass(/(racaty|longfiles)\\.com|indishare\\.org|datei\\.to/,()=>window.setTimeout=f=>setTimeout(f,1))
 			if(bypassed)
 			{
 				return
 			}
 			ensureDomLoaded(()=>{
-				domainBypass("adfoc.us",()=>ifElement(".skip[href]",b=>safelyNavigate(b.href)))
 				domainBypass("srt.am",()=>{
 					if(document.querySelector(".skip-container"))
 					{
@@ -527,23 +518,6 @@ if(document instanceof HTMLDocument)
 						f=document.documentElement.appendChild(f)
 						f.submit()
 					}
-				})
-				domainBypass("admy.link",()=>ifElement(".edit_link",f=>f.submit()))
-				domainBypass("ysear.ch",()=>ifElement("#NextVideo[href]",b=>safelyNavigate(b.href)))
-				domainBypass(/1ink\\.(cc|live)/,()=>{
-					if(typeof SkipAd=="function")
-					{
-						SkipAd()
-					}
-				})
-				domainBypass("dwindly.io",()=>{
-					ifElement("#btd1",b=>{
-						window.open=()=>{}
-						b.click()
-					},()=>ifElement("#btd",b=>{
-						window.open=safelyNavigate
-						eval("("+b.onclick.toString().split(";")[0]+"})()")
-					}))
 				})
 				domainBypass("bluemediafiles.com",()=>{
 					if(typeof FinishMessage=="string"&&FinishMessage.indexOf("<a href=")>-1)
@@ -571,22 +545,10 @@ if(document instanceof HTMLDocument)
 					},300)
 					setInterval(()=>clearInterval(bT),30000)
 				})
-				domainBypass("hidelink.club",()=>{
-					if(hash)
-					{
-						safelyNavigate(decodeURIComponent(atob(hash)).replace("%23", "#"))
-					}
-				})
 				domainBypass("won.pe",()=>ifElement("#progress",p=>{
 					p.setAttribute("aria-valuenow","100")
 					awaitElement("#skip_button[href]:not([href=''])",b=>safelyNavigate(window.longURL))
 				}))
-				domainBypass("stealive.club",()=>{
-					if(document.getElementById("counter"))
-					{
-						document.getElementById("counter").innerHTML="0"
-					}
-				})
 				domainBypass("gotoo.loncat.in",()=>ifElement("a[href^='http://gotoo.loncat.in/go.php?open=']",a=>safelyNavigate(a.href)))
 				domainBypass("idnation.net",()=>ifElement("#linko[href]",b=>safelyNavigate(b.href)))
 				domainBypass("mazika2day.com",()=>ifElement(".linkbtn[href]",b=>safelyNavigate(b.href)))
@@ -608,23 +570,7 @@ if(document instanceof HTMLDocument)
 						}
 					})
 				})
-				domainBypass("vipdirect.cc",()=>{
-					if(typeof ab=="number"&&typeof asdf=="function")
-					{
-						ab=5
-						window.open=safelyNavigate
-						asdf()
-					}
-				})
 				domainBypass("rapidcrypt.net",()=>ifElement(".push_button.blue[href]",b=>safelyNavigate(b.href)))
-				domainBypass("shrink-service.it",()=>{
-					if(typeof $=="function"&&typeof $.ajax=="function"&&typeof screenApi=="function")
-					{
-						let _a=$.ajax
-						$.ajax=a=>(a.data&&a.data.set_one?safelyNavigate(atob(a.data.set_one)):_a(a))
-						screenApi()
-					}
-				})
 				domainBypass("rom.io",()=>crowdBypass(()=>awaitElement("a.final-button[href]",a=>{
 					if(isGoodLink(a.href))
 					{
@@ -1162,7 +1108,7 @@ if(document instanceof HTMLDocument)
 					safelyNavigate(document.querySelector("#yangDihilangkan > a").href)
 					return finish()
 				}
-				if(document.querySelector("a#btn-main.disabled")&&typeof Countdown=="function")//Croco,CPMLink,Sloomp.space
+				if(document.querySelector("a#btn-main.disabled")&&typeof Countdown=="function")//cpmlink.net
 				{
 					safelyNavigate(document.querySelector("a#btn-main.disabled").href)
 					return finish()
@@ -1180,16 +1126,6 @@ if(document instanceof HTMLDocument)
 				{
 					safelyNavigate(document.querySelector(".shortened_link a[href][ng-href][target='_blank']").href)
 				}
-				if(document.querySelector("a[href^='https://linkshrink.net/homepage'] > img.lgo"))//LinkShrink.net
-				{
-					let p=document.getElementById("pause"),s=document.getElementById("skip")
-					if(p&&s)
-					{
-						//Automating the click seems to not always work due to ads so we're only skipping the timer
-						p.style.display="none"
-						s.style.display="block"
-					}
-				}
 				if(document.querySelector("lv-linkvertise"))//Link-to.net
 				{
 					console.log("Linkvertise")
@@ -1203,14 +1139,6 @@ if(document instanceof HTMLDocument)
 					}
 					xhr.open("GET","https://linkvertise.net/api/v1/redirect/link/static"+location.pathname)
 					xhr.send()
-				}
-				if(document.querySelectorAll("img[src='/assets/img/logo.png'][alt='Openload']").length)
-				{
-					if(typeof secondsdl!="undefined")
-					{
-						secondsdl=0
-					}
-					return finish()
 				}
 				if(location.search.startsWith("?n="))//viralking.xyz,indian4uh.com
 				{
