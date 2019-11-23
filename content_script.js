@@ -935,6 +935,7 @@ if(document instanceof HTMLDocument)
 						safelyNavigate(_bh.decode(location.href.substr(location.href.indexOf("?go=")+4)))
 					}
 				})
+				domainBypass("felanovia.com",()=>ifElement("form",f=>f.submit()))
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
