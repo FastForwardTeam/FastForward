@@ -332,7 +332,8 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 "*://*.mobile01.com/redirect.php?*",
 "*://*.nurhamka.com/*?url=*",
 "*://*.linepc.site/*?url=*",
-"*://*.adobedownload.org/redirect/?url=*"
+"*://*.adobedownload.org/redirect/?url=*",
+"*://*.sopasti.com/anime.php?*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
