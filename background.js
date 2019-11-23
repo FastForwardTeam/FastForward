@@ -386,7 +386,8 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 },{types:["main_frame"],urls:[
 "*://*.pafpaf.info/?*=*",
 "*://*.binerfile.info/?*=*",
-"*://kurosafety.menantisenja.com/?*=*"
+"*://kurosafety.menantisenja.com/?*=*",
+"*://hightech.web.id/*?*=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
@@ -506,7 +507,6 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		return getRedirect(atob(details.url.substr(details.url.indexOf("?site=")+6).split("&")[0]))
 	}
 },{types:["main_frame"],urls:[
-"*://*.hightech.web.id/*?site=*",
 "*://*.masreyhan.com/*?site=*",
 "*://*.pasardownload.com/*?site=*",
 "*://*.vius.info/*?site=*"
