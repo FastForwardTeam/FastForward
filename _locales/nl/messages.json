@@ -11,11 +11,17 @@
 	"firstrunNoScript": {
 		"message": "U lijkt NoScript of dergelijke te gebruiken, daarmee werkt Universal Bypass niet."
 	},
+	"version": {
+		"message": "Versie"
+	},
+	"changelog": {
+		"message": "Wijzigingslogboek"
+	},
 	"faq": {
 		"message": "Veelgestelde Vragen (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass heeft al % sites voor je overgeslagen."
+		"message": "Universal Bypass heeft al % sites voor je omzeild."
 	},
 	"support": {
 		"message": "Ondersteun Universal Bypass"
@@ -54,7 +60,7 @@
 		"message": "Privacy Verklaring"
 	},
 	"optionsUserscripts": {
-		"message": "Aangepaste bypasses"
+		"message": "Aangepaste omzeilingen"
 	},
 	"optionsUserscriptsDescription": {
 		"message": "Dit is een geavanceerde functie voor ontwikkelaars om hun eigen scripts te maken om sites te omzeilen. Eenmaal geperfectioneerd, kunnen ze deze vervolgens indienen op GitHub om toe te voegen aan Universele Bypass, zodat ze voor iedereen beschikbaar zijn."
@@ -69,7 +75,7 @@
 		"message": "Je wordt automatisch doorgestuurd in % seconden."
 	},
 	"beforeNavigateTimerSingular": {
-		"message": "U wordt automatisch over 1 seconde doorgestuurd."
+		"message": "U wordt over 1 seconde automatisch doorgestuurd."
 	},
 	"beforeNavigateOptions": {
 		"message": "Wil je gelijk worden doorgestuurd of na x seconden?"
@@ -102,7 +108,7 @@
 		"message": "Wilt je dat dit direct, of na x seconden wordt geopend in een nieuw tabblad?"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass voorkomt dat uw IP wordt geregistreerd."
+		"message": "Universal Bypass voorkwam dat uw IP werdt geregistreerd."
 	},
 	"blockedSubtitle": {
 		"message": "Weet u zeker dat u IP-Logger bescherming wilt uitschakelen?"
