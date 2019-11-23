@@ -608,17 +608,6 @@ if(document instanceof HTMLDocument)
 						}
 					})
 				})
-				domainBypass("telolet.in",()=>{
-					let b=document.querySelector("a#skip[href]")
-					if(!b)
-					{
-						b=document.querySelector(".redirect_url > a[href]")
-					}
-					if(b)
-					{
-						safelyNavigate(b.href)
-					}
-				})
 				domainBypass("vipdirect.cc",()=>{
 					if(typeof ab=="number"&&typeof asdf=="function")
 					{
