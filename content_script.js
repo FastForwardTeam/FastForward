@@ -525,16 +525,6 @@ if(document instanceof HTMLDocument)
 			}
 			ensureDomLoaded(()=>{
 				domainBypass("adfoc.us",()=>ifElement(".skip[href]",b=>safelyNavigate(b.href)))
-				domainBypass("sub2unlock.com",()=>{
-					if(location.pathname.substr(0,10)=="/link/get/")
-					{
-						safelyNavigate(document.getElementById("link").href)
-					}
-					else
-					{
-						ifElement("#getLinkNow",f=>f.submit())
-					}
-				})
 				domainBypass("srt.am",()=>{
 					if(document.querySelector(".skip-container"))
 					{
@@ -807,9 +797,7 @@ if(document instanceof HTMLDocument)
 						safelyNavigate(a.href)
 					}
 				})
-				domainBypass("sub2unlock.net",()=>{
-					safelyNavigate(document.getElementById("theLinkID").textContent)
-				})
+				domainBypass(/sub2unlock\\.(com|net)/,()=>safelyNavigate(document.getElementById("theGetLink").textContent))
 				domainBypass("haaretz.co.il",()=>{
 					if(location.href.indexOf(".premium")>-1)
 					{
