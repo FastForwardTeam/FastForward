@@ -937,6 +937,16 @@ if(document instanceof HTMLDocument)
 				})
 				domainBypass("felanovia.com",()=>ifElement("form",f=>f.submit()))
 				domainBypass("redir.animenine.net",()=>ifElement("a#lanjutkeun[href]",a=>safelyNavigate(a.href)))
+				hrefBypass(/download\\.id\\/downloadfile\\//,()=>{
+					if(typeof download=="function")
+					{
+						let div=document.createElement("div")
+						div.id="link"
+						div=document.body.appendChild(div)
+						download()
+						safelyNavigate(div.querySelector("a").href)
+					}
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
