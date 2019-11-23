@@ -458,7 +458,8 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		return getRedirect(atob(details.url.substr(details.url.indexOf("?id=")+4)))
 	}
 },{types:["main_frame"],urls:[
-"*://*/p/*.html?id=*"
+"*://*/p/*.html?id=*",
+"*://*.newsdecorate.com/?id=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
