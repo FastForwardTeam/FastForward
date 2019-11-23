@@ -936,6 +936,7 @@ if(document instanceof HTMLDocument)
 					}
 				})
 				domainBypass("felanovia.com",()=>ifElement("form",f=>f.submit()))
+				domainBypass("redir.animenine.net",()=>ifElement("a#lanjutkeun[href]",a=>safelyNavigate(a.href)))
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
