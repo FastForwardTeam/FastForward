@@ -327,6 +327,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	}
 },{types:["main_frame"],urls:[
 "*://*/safeme/?*",
+"*://*/full/?api=*&url=*",
 "*://*.leechall.com/redirect.php?url=*",
 "*://*.news-gg.com/l/?*",
 "*://*.mobile01.com/redirect.php?*",
