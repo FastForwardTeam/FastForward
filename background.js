@@ -407,38 +407,17 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
-		return getRedirect(atob(details.url.substr(details.url.indexOf("?r=")+3)))
+		let r=atob(details.url.substr(details.url.indexOf("?r=")+3))
+		if(isGoodLink(r))
+		{
+			return getRedirect(r)
+		}
 	}
 },{types:["main_frame"],urls:[
 "*://*.linkvertise.com/*?r=*",
 "*://*.linkvertise.net/*?r=*",
 "*://*.link-to.net/*?r=*",
-"*://*.yumechan.club/?r=*",
-"*://*.celeclub.org/?r=*",
-"*://*.duniaislamku.com/?r=*",
-"*://*.situsbaru.me/?r=*",
-"*://*.polrec.site/?r=*",
-"*://*.space.tribuntekno.com/?r=*",
-"*://*.jossbingit.xyz/?r=*",
-"*://*.starzone.cc/?r=*",
-"*://*.gomentod.com/?r=*",
-"*://*.lifeasurance.com/?r=*",
-"*://*.ceklinku.xyz/?r=*",
-"*://*.xneet.id/?r=*",
-"*://*.uxglow.com/?r=*",
-"*://*.infokesehatan.club/?r=*",
-"*://*.wanhealth.me/?r=*",
-"*://*.otoponsel.com/?r=*",
-"*://*.kepoow.me/?r=*",
-"*://*.dlbatch.com/?r=*",
-"*://*.bolaoke.club/?r=*",
-"*://*.menantisenja.com/?r=*",
-"*://*.motorbalap.id/?r=*",
-"*://*.travellinginfos.com/?r=*",
-"*://*.bungmiyana.me/?r=*",
-"*://*.tuser.id/?r=*",
-"*://*.kangpost.com/?r=*",
-"*://*.apamanfaat.id/?r=*"
+"*://*/?r=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
