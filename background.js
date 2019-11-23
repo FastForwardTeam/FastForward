@@ -327,13 +327,30 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	}
 },{types:["main_frame"],urls:[
 "*://*/safeme/?*",
-"*://*/full/?api=*&url=*",
 "*://*.leechall.com/redirect.php?url=*",
 "*://*.news-gg.com/l/?*",
 "*://*.mobile01.com/redirect.php?*",
 "*://*.nurhamka.com/*?url=*",
 "*://*.linepc.site/*?url=*",
 "*://*.adobedownload.org/redirect/?url=*"
+]},["blocking"])
+
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
+		let url=new URL(details.url).searchParams.get("url")
+		if(isGoodLink(url))
+		{
+			return getRedirect(url)
+		}
+		url=atob(url)
+		if(isGoodLink(url))
+		{
+			return getRedirect(url)
+		}
+	}
+},{types:["main_frame"],urls:[
+"*://*/full/?api=*&url=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
