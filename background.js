@@ -350,6 +350,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		}
 	}
 },{types:["main_frame"],urls:[
+"*://*/full?api=*&url=*",
 "*://*/full/?api=*&url=*"
 ]},["blocking"])
 
