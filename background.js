@@ -509,7 +509,8 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 },{types:["main_frame"],urls:[
 "*://*.masreyhan.com/*?site=*",
 "*://*.pasardownload.com/*?site=*",
-"*://*.vius.info/*?site=*"
+"*://*.vius.info/*?site=*",
+"*://*.cariskuy.com/*?site=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
