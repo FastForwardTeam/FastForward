@@ -336,6 +336,19 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 "*://*.adobedownload.org/redirect/?url=*"
 ]},["blocking"])
 
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
+		let url=new URL(details.url)
+		if(url.searchParams.has("URL"))
+		{
+			return getRedirect(url.searchParams.get("URL"))
+		}
+	}
+},{types:["main_frame"],urls:[
+"*://*.unlockapk.com/dl/mirror.php?*"
+]},["blocking"])
+
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
