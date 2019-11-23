@@ -380,6 +380,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 },{types:["main_frame"],urls:[
 "*://*.anonym.to/?*",
 "*://*.anonymz.com/?*",
+"*://*.hidereferrer.com/?*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
