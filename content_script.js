@@ -543,12 +543,6 @@ if(document instanceof HTMLDocument)
 						SkipAd()
 					}
 				})
-				domainBypass("losstor.com",()=>{
-					ifElement("#re_link",b=>{
-						window.open=safelyNavigate
-						b.click()
-					})
-				})
 				domainBypass("dwindly.io",()=>{
 					ifElement("#btd1",b=>{
 						window.open=()=>{}

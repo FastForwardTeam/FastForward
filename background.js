@@ -504,7 +504,8 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 "*://*.masreyhan.com/*?site=*",
 "*://*.pasardownload.com/*?site=*",
 "*://*.vius.info/*?site=*",
-"*://*.cariskuy.com/*?site=*"
+"*://*.cariskuy.com/*?site=*",
+"*://*.losstor.com/ini/?site=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
