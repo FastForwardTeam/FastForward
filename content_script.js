@@ -12,6 +12,7 @@ if(document instanceof HTMLDocument)
 		gen_chan=()=>"data-"+Math.random().toString().substr(2),
 		message_channel={
 			stop_watching:gen_chan(),
+			crowd_domain:gen_chan(),
 			crowd_path:gen_chan(),
 			crowd_query:gen_chan(),
 			crowd_queried:gen_chan(),
@@ -148,6 +149,12 @@ if(document instanceof HTMLDocument)
 				},10)
 				setInterval(()=>clearInterval(t),30000)
 			}),
+			crowdDomain=d=>{
+				if(crowdEnabled&&d)
+				{
+					document.documentElement.setAttribute("`+message_channel.crowd_domain+`",d)
+				}
+			},
 			crowdPath=p=>{
 				if(crowdEnabled&&p)
 				{
@@ -234,7 +241,7 @@ if(document instanceof HTMLDocument)
 			{
 				ignoreCrowdBypass=true
 				history.pushState({},document.querySelector("title").textContent,location.href.substr(0,location.href.length-18))
-				if(domain!="bc.vc")
+				if(["bc.vc","bcvc.live"].indexOf(domain)<0)
 				{
 					ensureDomLoaded(()=>{
 						document.querySelectorAll("form[action]").forEach(e=>e.action+="#ignoreCrowdBypass")
@@ -377,7 +384,8 @@ if(document instanceof HTMLDocument)
 					},100)
 				})
 			})
-			domainBypass("bc.vc",()=>{
+			domainBypass(/bc\\.vc|bcvc\\.live/,()=>{
+				crowdDomain("bc.vc")
 				crowdBypass(()=>{
 					const _eval=window.eval
 					window.eval=c=>{
@@ -1369,6 +1377,11 @@ if(document instanceof HTMLDocument)
 			{
 				document.documentElement.removeAttribute(message_channel.stop_watching)
 				dO.disconnect()
+			}
+			else if(document.documentElement.hasAttribute(message_channel.crowd_domain))
+			{
+				domain=document.documentElement.getAttribute(message_channel.crowd_domain)
+				document.documentElement.removeAttribute(message_channel.crowd_domain)
 			}
 			else if(document.documentElement.hasAttribute(message_channel.crowd_path))
 			{
