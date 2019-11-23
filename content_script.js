@@ -343,13 +343,6 @@ if(document instanceof HTMLDocument)
 				}
 			})
 			hrefBypass(/universal-bypass\\.org\\/firstrun/,()=>location.href="https://universal-bypass.org/firstrun?1")
-			domainBypass("onepiece-ex.com.br",()=>{
-				ODP(window,"seconds",{
-					value:1,
-					writable:false
-				})
-				awaitElement("#continuar[href]",a=>safelyNavigate(a.href))
-			})
 			domainBypass("akoam.net",()=>{
 				ODP(window,"timer",{
 					value:0,
@@ -993,6 +986,7 @@ if(document instanceof HTMLDocument)
 					})
 				})
 				domainBypass("terbit21.club",()=>ifElement("a#downloadbutton[href]",a=>location.href=a.href))
+				domainBypass("onepieceex.net",()=>ifElement("noscript",n=>safelyNavigate(n.textContent)))
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
