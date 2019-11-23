@@ -546,6 +546,15 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
+		return encodedRedirect(atob(details.url.substr(details.url.indexOf("?health=")+8)))
+	}
+},{types:["main_frame"],urls:[
+"*://*.newhealthblog.com/?health=*"
+]},["blocking"])
+
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
 		return encodedRedirect(details.url.substr(details.url.indexOf("/12/1/")+6))
 	}
 },{types:["main_frame"],urls:["*://*.sh.st/r/*/12/1/*"]},["blocking"])
