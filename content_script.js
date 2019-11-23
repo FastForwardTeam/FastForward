@@ -987,6 +987,12 @@ if(document instanceof HTMLDocument)
 				})
 				domainBypass("terbit21.club",()=>ifElement("a#downloadbutton[href]",a=>location.href=a.href))
 				domainBypass("onepieceex.net",()=>ifElement("noscript",n=>safelyNavigate(n.textContent)))
+				domainBypass("zflas.com",()=>{
+					if(typeof _bh.decode=="function")
+					{
+						safelyNavigate(_bh.decode(location.href.substr(location.href.indexOf("?go=")+4)))
+					}
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
