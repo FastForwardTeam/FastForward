@@ -1073,6 +1073,12 @@ if(document instanceof HTMLDocument)
 				domainBypass("gsu.st",()=>{
 					ifElement("#Subform input[type='submit'][name='btn'].btn",b=>b.click())
 				})
+				domainBypass("mangalist.org",()=>{
+					awaitElement("#btt > button.btn.btn-primary.text-center[onclick^='window.location.assign(']",b=>{
+						let o=b.getAttribute("onclick")
+						safelyNavigate(o.substr(24,o.length-3))
+					})
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
