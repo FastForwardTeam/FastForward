@@ -548,9 +548,8 @@ if(document instanceof HTMLDocument)
 				domainBypass("bluemediafiles.com",()=>{
 					if(typeof FinishMessage=="string"&&FinishMessage.indexOf("<a href=")>-1)
 					{
-						//The FinishMessage string contains the HTML anchor element needed to get to the destination so we just replace the entire website with it because we don't need any of the other content anymore.
 						document.write(FinishMessage)
-						document.querySelector("a").click()
+						safelyNavigate(document.querySelector("a").href)
 					}
 				})
 				domainBypass("complete2unlock.com",()=>{
