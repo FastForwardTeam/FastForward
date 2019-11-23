@@ -1285,14 +1285,10 @@ if(document instanceof HTMLDocument)
 					switch(t)
 					{
 						case"Viid.su":
-						{
-							let b=document.querySelector("#link-success-button[data-url]")
-							if(b)
-							{
-								safelyNavigate(b.getAttribute("data-url"))
-								return finish()
-							}
-						}
+						ifElement("button#link-success-button[data-url]",b=>{
+							location.href=b.getAttribute("data-url")
+							finish()
+						})
 						break;
 
 						case"shortadd : 302 Moved":
