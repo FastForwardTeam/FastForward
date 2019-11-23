@@ -1079,6 +1079,7 @@ if(document instanceof HTMLDocument)
 						safelyNavigate(o.substr(24,o.length-3))
 					})
 				})
+				domainBypass("terbit21.club",()=>ifElement("a#downloadbutton[href]",a=>location.href=a.href))
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
