@@ -591,12 +591,10 @@ if(document instanceof HTMLDocument)
 						safelyNavigate(decodeURIComponent(atob(hash)).replace("%23", "#"))
 					}
 				})
-				domainBypass("won.pe",()=>{
-					if(document.querySelector(".captcha_loader .progress-bar"))
-					{
-						document.querySelector(".captcha_loader .progress-bar").setAttribute("aria-valuenow","100")
-					}
-				})
+				domainBypass("won.pe",()=>ifElement("#progress",p=>{
+					p.setAttribute("aria-valuenow","100")
+					awaitElement("#skip_button[href]:not([href=''])",b=>safelyNavigate(window.longURL))
+				}))
 				domainBypass("stealive.club",()=>{
 					if(document.getElementById("counter"))
 					{
