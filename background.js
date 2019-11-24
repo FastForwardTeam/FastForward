@@ -309,10 +309,22 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
-		return getRedirect(details.url.substr(details.url.indexOf("url=")+4))
+		let url=new URL(details.url).searchParams.get("url")
+		if(isGoodLink(url))
+		{
+			return getRedirect(url)
+		}
+		url=atob(url)
+		if(isGoodLink(url))
+		{
+			return getRedirect(url)
+		}
 	}
 },{types:["main_frame"],urls:[
+"*://*/full?api=*&url=*",
+"*://*/full/?api=*&url=*",
 "*://*/st?api=*&url=*",
+"*://*/st/?api=*&url=*",
 "*://*.zxro.com/u/*?url=*"
 ]},["blocking"])
 
@@ -334,25 +346,6 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 "*://*.linepc.site/*?url=*",
 "*://*.adobedownload.org/redirect/?url=*",
 "*://*.sopasti.com/anime.php?*"
-]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		let url=new URL(details.url).searchParams.get("url")
-		if(isGoodLink(url))
-		{
-			return getRedirect(url)
-		}
-		url=atob(url)
-		if(isGoodLink(url))
-		{
-			return getRedirect(url)
-		}
-	}
-},{types:["main_frame"],urls:[
-"*://*/full?api=*&url=*",
-"*://*/full/?api=*&url=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
