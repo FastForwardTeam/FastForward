@@ -310,11 +310,14 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
 		let url=new URL(details.url).searchParams.get("url")
-		if(isGoodLink(url))
+		if(url.substr(0,5)=="aHR0c")
 		{
-			return getRedirect(url)
+			url=atob(url)
 		}
-		url=atob(url)
+		else if(url.substr(0,7)!="http://"&&url.substr(0,8)!="http://")
+		{
+			url="http://"+url
+		}
 		if(isGoodLink(url))
 		{
 			return getRedirect(url)
