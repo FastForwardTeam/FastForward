@@ -509,6 +509,10 @@ if(document instanceof HTMLDocument)
 				})
 				awaitElement("a.mirror_link[href]",a=>safelyNavigate(a.href))
 			})
+			domainBypass("mispuani.xyz",()=>{
+				window.setInterval=f=>setInterval(f,1)
+				awaitElement("button#buttondewa.mispuanibuttonlink",b=>b.onclick())
+			})
 			//Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
 			hrefBypass(/(njiir|healthykk|linkasm|dxdrive)\\.com|punchsubs\\.net|k2s\\.cc|muhammadyoga\\.me|u\\.to|skiplink\\.io|firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php/,()=>window.setInterval=f=>setInterval(f,1))
 			domainBypass(/(racaty|longfiles)\\.com|indishare\\.org|datei\\.to/,()=>window.setTimeout=f=>setTimeout(f,1))
