@@ -1,6 +1,6 @@
 {
 	"appDesc": {
-		"message": "Verschwende deine Zeit nicht mit Unterwerfung. Universal Bypass überspringt automatisch nervige Linkkürzer."
+		"message": "Verschwende deine Zeit nicht mit Unterwerfung. Universal Bypass umgeht nervige Linkkürzer."
 	},
 	"firstrunTitle": {
 		"message": "Danke, dass du Universal Bypass installiert hast!"
@@ -24,7 +24,7 @@
 		"message": "Universal Bypass hat bereits % Seiten für dich umgangen."
 	},
 	"support": {
-		"message": "Unterstütze Universal Bypass"
+		"message": "Unterstütze Universal Bypass."
 	},
 	"options": {
 		"message": "Optionen"
