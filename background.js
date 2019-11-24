@@ -436,7 +436,9 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 "*://*.linkvertise.com/*?r=*",
 "*://*.linkvertise.net/*?r=*",
 "*://*.link-to.net/*?r=*",
-"*://*/?r=*"
+"*://*/?r=*",
+"*://*/api?r=*",
+"*://*/api/?r=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
