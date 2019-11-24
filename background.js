@@ -314,7 +314,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		{
 			url=atob(url)
 		}
-		else if(url.substr(0,7)!="http://"&&url.substr(0,8)!="http://")
+		else if(url.substr(0,7)!="http://"&&url.substr(0,8)!="https://")
 		{
 			url="http://"+url
 		}
