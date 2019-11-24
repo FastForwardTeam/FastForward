@@ -389,7 +389,10 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	{
 		return getRedirect(atob(details.url.substr(details.url.indexOf("?rel=")+5)))
 	}
-},{types:["main_frame"],urls:["*://*.kharismanews.com/?rel=*"]},["blocking"])
+},{types:["main_frame"],urls:[
+"*://*.kharismanews.com/?rel=*",
+"*://out.x-forex.site/?rel=*"
+]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
@@ -572,6 +575,15 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
+		return encodedRedirect(atob(details.url.substr(details.url.indexOf("?dl=")+4).split("&")[0]))
+	}
+},{types:["main_frame"],urls:[
+"*://*.nimebatch.net/download/?dl=*"
+]},["blocking"])
+
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
 		return encodedRedirect(atob(details.url.substr(details.url.indexOf("?health=")+8)))
 	}
 },{types:["main_frame"],urls:[
@@ -637,7 +649,10 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	{
 		return getRedirect(atob(details.url.substr(details.url.indexOf("/dl/")+4)))
 	}
-},{types:["main_frame"],urls:["*://*.k2nblog.com/dl/*"]},["blocking"])
+},{types:["main_frame"],urls:[
+"*://*.k2nblog.com/dl/*",
+"*://*.filekita.me/page/dl/*"
+]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
