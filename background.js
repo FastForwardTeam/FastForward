@@ -867,6 +867,28 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 "*://*.liputannubi.net/*"
 ]},["blocking","responseHeaders"])
 
+//SoraLink Crowd Bypass
+brws.webRequest.onHeadersReceived.addListener(details=>{
+	if(enabled&&crowdEnabled)
+	{
+		let url=new URL(details.url)
+		for(let i in details.responseHeaders)
+		{
+			let header=details.responseHeaders[i]
+			if(header.name.toLowerCase()=="location"&&isGoodLink(header.value))
+			{
+				let xhr=new XMLHttpRequest()
+				xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
+				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+				xhr.send("domain="+url.host+"&path="+encodeURIComponent(url.searchParams.get("soralink_contribute"))+"&target="+encodeURIComponent(header.value))
+				break
+			}
+		}
+	}
+},{types:["main_frame"],urls:[
+"*://*/?*=*&soralink_contribute=*"
+]},["blocking","responseHeaders"])
+
 //Fixing Content-Security-Policy on Firefox because apparently extensions have no special privileges there
 if(firefox)
 {
