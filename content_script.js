@@ -294,7 +294,8 @@ if(document instanceof HTMLDocument)
 					r=r.substring(r.length-(r.length-16))
 					r=r.substring(0,r.length-16)
 					safelyNavigate(r)
-				}
+				},
+				get:()=>"undefined"
 			})
 			//LinkBucks
 			var actualInitLbjs
