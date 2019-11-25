@@ -564,8 +564,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		return encodedRedirect(details.url.substr(details.url.indexOf("?s=")+3))
 	}
 },{types:["main_frame"],urls:[
-"*://*.ouo.io/s/*?s=*",
-"*://*.ouo.io/qs/*?s=*",
+"*://*.ouo.io/*?s=*",
 "*://*.cpmlink.net/s/*?s=*"
 ]},["blocking"])
 
