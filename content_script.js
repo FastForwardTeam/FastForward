@@ -956,6 +956,11 @@ if(document instanceof HTMLDocument)
 						safelyNavigate(div.querySelector("a").href)
 					}
 				})
+				hrefBypass(/squidssh\\.com\\/url\\/go\\.php/,()=>{
+					const p=atob((new URLSearchParams(location.search)).get("short"))
+					crowdPath(p)
+					crowdBypass(()=>ifElement("form[action='/user/links']",f=>f.action+="#"+p))
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{

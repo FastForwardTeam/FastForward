@@ -797,7 +797,7 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 "*://*.lnk2.cc/*/*"
 ]},["blocking","responseHeaders"])
 
-//SafelinkU Crowd Bypass
+//SafelinkU & squidssh.com Crowd Bypass
 brws.webRequest.onHeadersReceived.addListener(details=>{
 	if(enabled)
 	{
@@ -818,6 +818,7 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 "*://*.semawur.com/*",
 "*://*.in11.site/*"
 ]},["blocking","responseHeaders"])
+
 brws.webRequest.onHeadersReceived.addListener(details=>{
 	if(enabled)
 	{
@@ -864,7 +865,8 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 "*://*.wadooo.com/*",
 "*://*.gotravelgo.space/*",
 "*://*.pantauterus.me/*",
-"*://*.liputannubi.net/*"
+"*://*.liputannubi.net/*",
+"*://*.squidssh.com/user/links"
 ]},["blocking","responseHeaders"])
 
 //SoraLink Crowd Bypass
