@@ -1225,6 +1225,10 @@ if(document instanceof HTMLDocument)
 					})
 				}
 				//Safelink Wordpress Plugin
+				ifElement(".wpsafe-top > form > input.btn.btn-primary[type='submit'][value]",i=>{
+					i.click()
+					finish()
+				})
 				ifElement(".wpsafe-bottom > [id^='wpsafe-lin'] > a[href]",a=>{
 					safelyNavigate(a.href)
 					finish()
