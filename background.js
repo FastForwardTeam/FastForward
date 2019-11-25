@@ -444,6 +444,15 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
+		return getRedirect(atob(details.url.substr(details.url.indexOf("?kareeI=")+8)).split("||")[0])
+	}
+},{types:["main_frame"],urls:[
+"*://*.blogspot.com/?kareeI=*"
+]},["blocking"])
+
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
 		let i=details.url.indexOf("cr=")
 		if(i>0)
 		{
@@ -547,16 +556,6 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 },{types:["main_frame"],urls:[
 "*://*.remiyu.me/?reff=*",
 "*://*.ceksite.id/?reff=*"
-]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		return getRedirect(atob(details.url.substr(details.url.indexOf("?kareeI=")+8)).split("||")[0])
-	}
-},{types:["main_frame"],urls:[
-"*://idalponse.blogspot.com/?kareeI=*",
-"*://omahsafe.blogspot.com/?kareeI=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
