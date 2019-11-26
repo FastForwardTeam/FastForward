@@ -903,11 +903,7 @@ if(document instanceof HTMLDocument)
 						safelyNavigate(o.page.url)
 					}
 				})
-				domainBypass(/realsht\\.mobi|sairman\\.com/,()=>{
-					ifElement("a#hapus",a=>location.href=a.href,()=>{
-						ifElement("input[type='hidden'][name='mylink'][value^='http']",i=>safelyNavigate(i.value))
-					})
-				})
+				domainBypass("seputarinfomenarik.com",()=>ifElement("a#hapus",a=>location.href=a.href))
 				hrefBypass(/mirrorace\\.com\\/m\\/[a-zA-Z0-9]+\\/[0-9]+/,()=>location.href=document.querySelector("a[href*='"+location.search+"']:not([hidden])").href)
 				domainBypass("mirrorace.com",()=>{
 					ifElement(".uk-modal-close",b=>{
@@ -1047,10 +1043,6 @@ if(document instanceof HTMLDocument)
 							}
 						},100)
 					})
-				}
-				if(document.querySelector("form#show > [type='submit']") && document.getElementById("tunggu") && document.getElementById("hapus") && typeof counter != "undefined" && typeof countDown != "undefined" && typeof download != "undefined")//realsht.mobi,namiyt.com
-				{
-					document.querySelector("form#show > [type='submit']").click()
 				}
 				if(document.querySelector("form#landing"))
 				{
@@ -1389,6 +1381,10 @@ if(document instanceof HTMLDocument)
 				}
 				ifElement("button#makingdifferenttimer[onclick^='window.location.replace']",b=>{//#522
 					b.click()
+					finish()
+				})
+				ifElement("input[type='hidden'][name='mylink'][value^='http']",i=>{//#549
+					safelyNavigate(i.value)
 					finish()
 				})
 				let t=document.querySelector("title")
