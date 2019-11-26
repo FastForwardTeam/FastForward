@@ -526,6 +526,7 @@ if(document instanceof HTMLDocument)
 				return
 			}
 			ensureDomLoaded(()=>{
+				domainBypass("adfoc.us",()=>ifElement(".skip[href]",b=>safelyNavigate(b.href)))
 				domainBypass("srt.am",()=>{
 					if(document.querySelector(".skip-container"))
 					{
