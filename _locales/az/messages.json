@@ -11,6 +11,21 @@
 	"firstrunNoScript": {
 		"message": "Buna baxmayaraq, Universal Bypass ilə uyğunlaşmayan NoScript və ya oxşarını istifadə edirsiniz."
 	},
+	"version": {
+		"message": "Versiya"
+	},
+	"changelog": {
+		"message": "Dəyişiklik qeydi"
+	},
+	"faq": {
+		"message": "Tez-tez Soruşulan Suallar (FAQ)"
+	},
+	"options": {
+		"message": "Seçimlər"
+	},
+	"optionsLink": {
+		"message": "Universal Bypass seçimlərini dəyişdirin."
+	},
 	"optionsTrackerBypass": {
 		"message": "Apimon.de istifadə edən Bypass izləyiciləri."
 	},

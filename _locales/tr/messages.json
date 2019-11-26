@@ -11,6 +11,12 @@
 	"firstrunNoScript": {
 		"message": "Ancak görünen o ki Universal Baypass'in uyumlu olmadığı NoScript veya benzeri bir betik kullanıyorsunuz."
 	},
+	"version": {
+		"message": "Sürüm"
+	},
+	"changelog": {
+		"message": "Değişiklik kütüğü"
+	},
 	"faq": {
 		"message": "Sıkça Sorulan Sorular (SSS)"
 	},
@@ -72,7 +78,7 @@
 		"message": "1 saniye içinde otomatik olarak yönlendirileceksiniz."
 	},
 	"beforeNavigateOptions": {
-		"message": "Hemen mi yönlendirilmek istersiniz ya da x saniye içinde mi?"
+		"message": "Hemen mi yoksa x saniye içinde mi yönlendirilmek istersiniz?"
 	},
 	"infoBoxHide": {
 		"message": "Gizlemek için bu kutuyu tıklayın. Bilgi kutusu özelliğini Universal Bypass'ın seçeneklerinden devre dışı bırakabilirsiniz."
@@ -99,7 +105,7 @@
 		"message": "Bu doğru değil miydi?"
 	},
 	"crowdBypassedOptions": {
-		"message": "Bunun anında yeni bir sekmede açılmasını mı istersin ya da x saniye sonra mı?"
+		"message": "Bu adresin hemen mi yoksa x saniye sonra mı yeni bir sekmede açılmasını istersiniz?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass, IP adresinizin kayıtlara eklenmesini engelledi."
