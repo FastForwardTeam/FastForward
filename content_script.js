@@ -895,7 +895,7 @@ if(document instanceof HTMLDocument)
 					awaitElement(".navbar-custom > .container > ul.not-nav > li:not(.d-none) > a.page-scroll[href]:not([href^='javascript:'])",a=>contributeAndNavigate(a.href))
 				})
 				domainBypass("transmediakreatif.com",()=>ifElement("#download > a[href]",a=>location.href=a.href))
-				domainBypass("go.indonesia-publisher.id",()=>{
+				domainBypass(/go\\.indonesia-publisher\\.id|ciustekno\\.me/,()=>{
 					if(typeof disqus_config=="function"&&document.querySelector("form#link-view"))
 					{
 						let o={page:{}}
