@@ -247,6 +247,10 @@ if(document instanceof HTMLDocument)
 				value:false,
 				writable:false
 			})
+			ODP(window,"window_focus",{
+				value:true,
+				writable:false
+			})
 			//adf.ly
 			ODP(window,"ysmm",{
 				set:r=>{
@@ -305,10 +309,6 @@ if(document instanceof HTMLDocument)
 			ODP(window,"safelink",
 			{
 				set:_=>{
-					ODP(window,"blurred",{
-						value:false,
-						writable:false
-					})
 					for(let k in _)
 					{
 						if(forced_safelink[k]===undefined)
@@ -1475,32 +1475,24 @@ if(document instanceof HTMLDocument)
 								{
 									crowdBypass(()=>{
 										let cT=setInterval(()=>{
-											let a=document.querySelector("a.get-link:not(.disabled)")
-											if(!a)
-											{
-												a=document.querySelector(".skip-ad a[href]")
-												if(!a)
-												{
-													a=document.querySelector("[enlace]")//adigp.com
-												}
-											}
+											let a=document.querySelector("a.get-link[href]:not([href='']):not(.disabled), .skip-ad a[href]:not([href=''])"),h
 											if(a)
 											{
 												h=a.href
-												if(!isGoodLink(h)&&a.hasAttribute("data-href"))//cuio.io
+											}
+											else
+											{
+												a=document.querySelector("[enlace]")//adigp.com
+												if(a)
 												{
-													h=a.getAttribute("data-href")
+													h=a.getAttribute("enlance")
 												}
-												if(!isGoodLink(h)&&a.hasAttribute("enlace"))
-												{
-													h=a.getAttribute("enlace")
-												}
-												if(isGoodLink(h))
-												{
-													clearInterval(cT)
-													a.parentNode.removeChild(a)
-													contributeAndNavigate(h)
-												}
+											}
+											if(isGoodLink(h))
+											{
+												clearInterval(cT)
+												a.parentNode.removeChild(a)
+												contributeAndNavigate(h)
 											}
 										},20)
 									})
@@ -1511,7 +1503,7 @@ if(document instanceof HTMLDocument)
 								}
 							}
 						},50)
-						domainBypass(/123l\\.pw|123link|oke\\.io/,()=>window.setInterval=f=>setInterval(f,1))
+						domainBypass(/123l\\.pw|123link|oke\\.io|linksht\\.com/,()=>window.setInterval=f=>setInterval(f,1))
 						clearInterval(dT)
 					}
 					//GemPixel/KBRMedia Premium URL Shortener
