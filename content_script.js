@@ -882,7 +882,7 @@ if(document instanceof HTMLDocument)
 					}
 				})
 				domainBypass("seputarinfomenarik.com",()=>ifElement("a#hapus",a=>location.href=a.href))
-				hrefBypass(/mirrorace\\.com\\/m\\/[a-zA-Z0-9]+\\/[0-9]+/,()=>location.href=document.querySelector("a[href*='"+location.search+"']:not([hidden])").href)
+				hrefBypass(/mirrorace\\.com\\/m\\/[a-zA-Z0-9]+\\/[0-9]+/,()=>location.href=document.querySelector("a[href*='"+location.search+"']:not([hidden]):not(.uk-hidden)").href)
 				domainBypass("mirrorace.com",()=>{
 					ifElement(".uk-modal-close",b=>{
 						if(b.textContent=="I have a VPN already")
