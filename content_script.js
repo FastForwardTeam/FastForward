@@ -245,13 +245,10 @@ if(document instanceof HTMLDocument)
 			{
 				ignoreCrowdBypass=true
 				history.pushState({},document.querySelector("title").textContent,location.href.substr(0,location.href.length-18))
-				if(["bc.vc","bcvc.live"].indexOf(domain)<0)
-				{
-					ensureDomLoaded(()=>{
-						document.querySelectorAll("form[action]").forEach(e=>e.action+="#ignoreCrowdBypass")
-						document.querySelectorAll("a[href]").forEach(e=>e.href+="#ignoreCrowdBypass")
-					})
-				}
+				ensureDomLoaded(()=>{
+					document.querySelectorAll("form[action]").forEach(e=>e.action+="#ignoreCrowdBypass")
+					document.querySelectorAll("a[href]").forEach(e=>e.href+="#ignoreCrowdBypass")
+				})
 			}
 			ODP(window,"blurred",{
 				value:false,
@@ -390,20 +387,8 @@ if(document instanceof HTMLDocument)
 				})
 			})
 			domainBypass(/bc\\.vc|bcvc\\.live/,()=>{
-				crowdDomain("bc.vc")
-				crowdBypass(()=>{
-					const _eval=window.eval
-					window.eval=c=>{
-						let j=_eval(c)
-						if(j.message&&j.message.url)
-						{
-							contributeAndNavigate(j.message.url)
-							return{}
-						}
-						return j
-					}
-				})
-				awaitElement(".skip_btt > #skip_btt",a=>a.click())
+				window.setInterval=f=>setInterval(f,1)
+				awaitElement("a#getLink:not([style^='display'])",a=>a.click())
 			})
 			domainBypass("shortly.xyz",()=>{
 				if(location.pathname.substr(0,3)=="/r/")
