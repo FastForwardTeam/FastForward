@@ -293,14 +293,18 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
-		let url=new URL(details.url).searchParams.get("url")
+		let req_url=new URL(details.url),url=req_url.searchParams.get("url")
 		if(url.substr(0,5)=="aHR0c")
 		{
 			url=atob(url)
 		}
-		else if(url.substr(0,7)!="http://"&&url.substr(0,8)!="https://")
+		else
 		{
-			url="http://"+url
+			if(url.substr(0,7)!="http://"&&url.substr(0,8)!="https://")
+			{
+				url="http://"+url+details.url.hash
+			}
+			url+=req_url.hash
 		}
 		return getRedirect(url)
 	}
