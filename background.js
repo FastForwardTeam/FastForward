@@ -1,6 +1,10 @@
 const brws=(typeof browser=="undefined"?chrome:browser),
 firefox=(brws.runtime.getURL("").substr(0,4)=="moz-"),
 getRedirect=(url,referer)=>{
+	if(!isGoodLink(url))
+	{
+		return
+	}
 	let r
 	if(referer)
 	{
@@ -25,27 +29,7 @@ getRedirect=(url,referer)=>{
 	countIt()
 	return {redirectUrl:r}
 },
-encodedRedirect=(url,referer)=>{
-	let r
-	if(referer)
-	{
-		if(instantNavigation)
-		{
-			r=(new URL(decodeURIComponent(url))).toString()
-			refererCache[r]=referer
-		}
-		else
-		{
-			r=brws.runtime.getURL("html/before-navigate.html")+"?target="+url+"&referer="+referer
-		}
-	}
-	else
-	{
-		r=(instantNavigation?decodeURIComponent(url):brws.runtime.getURL("html/before-navigate.html")+"?target="+url)
-	}
-	countIt()
-	return {redirectUrl:r}
-},
+encodedRedirect=(url,referer)=>getRedirect(decodeURIComponent(url)),
 isGoodLink=link=>{
 	if(!link||link.substr(0,6)=="about:"||link.substr(0,11)=="javascript:")
 	{
@@ -318,10 +302,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		{
 			url="http://"+url
 		}
-		if(isGoodLink(url))
-		{
-			return getRedirect(url)
-		}
+		return getRedirect(url)
 	}
 },{types:["main_frame"],urls:[
 "*://*/full?api=*&url=*",
@@ -426,11 +407,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
-		let r=atob(details.url.substr(details.url.indexOf("?r=")+3))
-		if(isGoodLink(r))
-		{
-			return getRedirect(r)
-		}
+		return getRedirect(atob(details.url.substr(details.url.indexOf("?r=")+3)))
 	}
 },{types:["main_frame"],urls:[
 "*://*.linkvertise.com/*?r=*",
@@ -622,7 +599,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 			url=atob(arr[1])
 		}
 		while(url.length>=19&&url.substr(0,19)=="http://gslink.co/a/");
-		if(url!=details.url&&isGoodLink(url))
+		if(url!=details.url)
 		{
 			return getRedirect(url)
 		}
