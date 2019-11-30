@@ -11,8 +11,17 @@
 	"firstrunNoScript": {
 		"message": "ככול הנראה אתה עושה שימוש ב-NoScript ודומיו, מה שלא מאפשר את פעולת Universal Bypass."
 	},
+	"version": {
+		"message": "גרסה"
+	},
+	"changelog": {
+		"message": "רשימת שינויים"
+	},
 	"faq": {
 		"message": "שאלות נפוצות (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "מעקף אוניברסלי כבר עקף % אתרים בשבילך."
 	},
 	"support": {
 		"message": "תמוך ב-Universal Bypass"
@@ -26,8 +35,17 @@
 	"optionsEnabled": {
 		"message": "הפעל מעקף לאתר."
 	},
+	"optionsNavigationDelay": {
+		"message": "קח אותי ליעד אחרי % שני(ות). (השתמש ב0 על מנת לנווט במיידי)"
+	},
 	"optionsTrackerBypass": {
 		"message": "הפעל מעקף על ידי Apimon.de."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "העבר אותי למקור אוטומטית."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "חסום אוספי IP אם אי אפשר לעקוף אותם."
 	},
 	"privacyPolicy": {
 		"message": "מדיניות פרטיות"

@@ -84,7 +84,7 @@
 		"message": "Cliquez sur cette fenêtre pour la masquer. Vous pouvez désactiver la fonction de message d’information dans les options de Universal Bypass."
 	},
 	"crowdWait": {
-		"message": "Malheureusement, vous êtes la première personne à rencontrer ce lien, mais après avoir attendu, les autres utilisateurs de Universal Bypass n'auront plus à le faire."
+		"message": "Malheureusement, vous êtes la première personne à cliquer sur ce lien, mais après avoir attendu, les autres utilisateurs de Universal Bypass n'auront plus à le faire."
 	},
 	"crowdDisabled": {
 		"message": "L'URL de destination de ce site Web pourrait être partagée avec d'autres utilisateurs, mais vous avez désactivé cette fonctionnalité dans les options."
@@ -93,7 +93,7 @@
 		"message": "Vous n'aurez peut-être pas à attendre !"
 	},
 	"crowdBypassedInfo": {
-		"message": "D'autres utilisateurs de Universal Bypass ont déjà utilisé ce lien et ont rapporté que cela mène à %"
+		"message": "D'autres utilisateurs de Universal Bypass ont déjà cliqué sur ce lien et ont rapporté que cela mène à %"
 	},
 	"crowdBypassedTimer": {
 		"message": "Ce lien sera ouvert dans un nouvel onglet dans % secondes."
