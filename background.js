@@ -210,7 +210,7 @@ brws.runtime.onConnect.addListener(port => {
 			port.postMessage(t)
 		}
 		xhr.onerror=()=>port.postMessage(t)
-		if(iu.substr(iu.length - 1) != "/")
+		if(iu.substr(-1) != "/")
 		{
 			iu += "/"
 		}
@@ -229,12 +229,12 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	{
 		return {redirectUrl:brws.runtime.getURL("html/firstrun-noscript.html")}
 	}
-},{types:["main_frame"],urls:["https://universal-bypass.org/firstrun?*"]},["blocking"])
+},{types:["main_frame"],urls:["*://universal-bypass.org/firstrun?*"]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	let arr=details.url.substr(45).split("&referer=")
 	return encodedRedirect(arr[0],arr[1])
-},{types:["main_frame"],urls:["https://universal-bypass.org/bypassed?target=*&referer=*"]},["blocking"])
+},{types:["main_frame"],urls:["*://universal-bypass.org/bypassed?target=*&referer=*"]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	let arr=details.url.substr(45).split("&referer=")
@@ -244,7 +244,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		refererCache[arr[0]]=arr[1]
 	}
 	return {redirectUrl:arr[0]}
-},{types:["main_frame"],urls:["https://universal-bypass.org/navigate?target=*"]},["blocking"])
+},{types:["main_frame"],urls:["*://universal-bypass.org/navigate?target=*"]},["blocking"])
 
 let infoSpec=["blocking","requestHeaders"]
 if(!firefox)
@@ -638,7 +638,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		if(url.searchParams.has("id"))
 		{
 			let t=atob(url.searchParams.get("id").split("").reverse().join(""))
-			if(t.substr(t.length-16)=='" target="_blank')
+			if(t.substr(-16)=='" target="_blank')
 			{
 				t=t.substr(0,t.length-16)
 			}
@@ -851,32 +851,37 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 ]},["blocking","responseHeaders"])
 
 //SoraLink Crowd Bypass
-brws.webRequest.onHeadersReceived.addListener(details=>{
+let soralink_contribute={}
+brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled&&crowdEnabled)
 	{
-		let url=new URL(details.url)
-		for(let i in details.responseHeaders)
-		{
-			let header=details.responseHeaders[i]
-			if(header.name.toLowerCase()=="location"&&isGoodLink(header.value))
-			{
-				let xhr=new XMLHttpRequest()
-				xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
-				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
-				xhr.send("domain="+url.host+"&path="+encodeURIComponent(url.searchParams.get("soralink_contribute"))+"&target="+encodeURIComponent(header.value))
-				break
-			}
-		}
+		const arg_index=details.url.indexOf("&soralink_contribute="),url=details.url.substr(0,arg_index)
+		soralink_contribute[url]=details.url.substr(arg_index+21)
+		return{redirectUrl:url}
 	}
-},{types:["main_frame"],urls:[
-"*://*/?*=*&soralink_contribute=*"
-]},["blocking","responseHeaders"])
+},{types:["main_frame"],urls:["*://*/?*=*&soralink_contribute=*"]},["blocking"])
 
-//Fixing Content-Security-Policy on Firefox because apparently extensions have no special privileges there
-if(firefox)
-{
-	brws.webRequest.onHeadersReceived.addListener(details=>{
-		if(enabled)
+brws.webRequest.onHeadersReceived.addListener(details=>{
+	if(enabled)
+	{
+		if(crowdEnabled && details.url in soralink_contribute)
+		{
+			let url=new URL(details.url)
+			for(let i in details.responseHeaders)
+			{
+				let header=details.responseHeaders[i]
+				if(header.name.toLowerCase()=="location"&&isGoodLink(header.value))
+				{
+					let xhr=new XMLHttpRequest()
+					xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
+					xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+					xhr.send("domain="+url.host+"&path="+encodeURIComponent(soralink_contribute[details.url])+"&target="+encodeURIComponent(header.value))
+					break
+				}
+			}
+			delete soralink_contribute[details.url]
+		}
+		if(firefox)//Fixing Content-Security-Policy on Firefox because apparently extensions have no special privileges there
 		{
 			let csp = false
 			for(let i in details.responseHeaders)
@@ -906,14 +911,10 @@ if(firefox)
 						{
 							policies["script-src"].push("'unsafe-inline'")
 						}
-						if(policies["script-src"].indexOf("'unsafe-eval'")==-1)
-						{
-							policies["script-src"].push("'unsafe-eval'")
-						}
 					}
 					else
 					{
-						policies["script-src"]=["*","blob:","data:","'unsafe-inline'","'unsafe-eval'"]
+						policies["script-src"]=["*","blob:","data:","'unsafe-inline'"]
 					}
 					let value=""
 					for(let name in policies)
@@ -933,8 +934,8 @@ if(firefox)
 				return{responseHeaders:details.responseHeaders}
 			}
 		}
-	},{types:["main_frame"],urls:["<all_urls>"]},["blocking","responseHeaders"])
-}
+	}
+},{types:["main_frame"],urls:["<all_urls>"]},["blocking","responseHeaders"])
 
 //Tracker Bypass using Apimon.de
 function resolveRedirect(url)

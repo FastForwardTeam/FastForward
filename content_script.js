@@ -1,6 +1,17 @@
 //If you want to insert your own bypass, please search for "Insertion point"
 if(document instanceof HTMLDocument)
 {
+	let clipboardIndex=location.hash.indexOf("#bypassClipboard="),ignoreCrowdBypass=false,bypassClipboard=""
+	if(location.hash.substr(-18)=="#ignoreCrowdBypass")
+	{
+		ignoreCrowdBypass=true
+		location.hash=location.hash.substr(0,location.hash.length-18)
+	}
+	if(clipboardIndex!=-1)
+	{
+		bypassClipboard=location.hash.substr(clipboardIndex+17)
+		location.hash=location.hash.substr(0,location.hash.length-bypassClipboard.length-17)
+	}
 	const brws=(typeof browser=="undefined"?chrome:browser)
 	brws.runtime.sendMessage({type: "can-run"}, res => {
 		if(!res.enabled)
@@ -8,19 +19,22 @@ if(document instanceof HTMLDocument)
 			return
 		}
 		let script=document.createElement("script"),
-		getMessage=k=>brws.i18n.getMessage(k).split("\\").join("\\\\").split("\"").join("\\\""),
-		gen_chan=()=>"data-"+Math.random().toString().substr(2),
+		stringEscape=s=>s.split("\\").join("\\\\").split("\"").join("\\\""),
+		getMessage=k=>stringEscape(brws.i18n.getMessage(k)),
+		genChan=()=>"data-"+Math.random().toString().substr(2),
 		message_channel={
-			stop_watching:gen_chan(),
-			crowd_path:gen_chan(),
-			crowd_query:gen_chan(),
-			crowd_queried:gen_chan(),
-			crowd_contribute:gen_chan(),
-			adlinkfly_info:gen_chan(),
-			adlinkfly_target:gen_chan()
+			stop_watching:genChan(),
+			crowd_path:genChan(),
+			crowd_query:genChan(),
+			crowd_queried:genChan(),
+			crowd_contribute:genChan(),
+			adlinkfly_info:genChan(),
+			adlinkfly_target:genChan()
 		}
 		script.innerHTML=`(()=>{
 			const crowdEnabled=`+(res.crowdEnabled?"true":"false")+`,
+			ignoreCrowdBypass=`+(ignoreCrowdBypass?"true":"false")+`,
+			bypassClipboard="`+stringEscape(bypassClipboard)+`",
 			ODP=(t,p,o)=>{try{Object.defineProperty(t,p,o)}catch(e){console.trace("[Universal Bypass] Couldn't define",p)}},
 			//Copying important functions to aovid interference from other extensions or the page
 			setTimeout=window.setTimeout,setInterval=window.setInterval,
@@ -228,20 +242,10 @@ if(document instanceof HTMLDocument)
 			})
 			let navigated=false,
 			bypassed=false,
-			ignoreCrowdBypass=false,
 			domain=location.hostname
 			if(domain.substr(0,4)=="www.")
 			{
 				domain=domain.substr(4)
-			}
-			if(location.href.substr(location.href.length-18)=="#ignoreCrowdBypass")
-			{
-				ignoreCrowdBypass=true
-				history.pushState({},document.querySelector("title").textContent,location.href.substr(0,location.href.length-18))
-				ensureDomLoaded(()=>{
-					document.querySelectorAll("form[action]").forEach(e=>e.action+="#ignoreCrowdBypass")
-					document.querySelectorAll("a[href]").forEach(e=>e.href+="#ignoreCrowdBypass")
-				})
 			}
 			ODP(window,"blurred",{
 				value:false,
@@ -504,6 +508,11 @@ if(document instanceof HTMLDocument)
 				return
 			}
 			ensureDomLoaded(()=>{
+				if(ignoreCrowdBypass)
+				{
+					document.querySelectorAll("form[action]").forEach(e=>e.action+="#ignoreCrowdBypass")
+					document.querySelectorAll("a[href]").forEach(e=>e.href+="#ignoreCrowdBypass")
+				}
 				domainBypass("adfoc.us",()=>ifElement(".skip[href]",b=>safelyNavigate(b.href)))
 				domainBypass("srt.am",()=>{
 					if(document.querySelector(".skip-container"))
@@ -820,7 +829,7 @@ if(document instanceof HTMLDocument)
 				})
 				domainBypass("lompat.in",()=>{
 					window.open=u=>{
-						if(u.substr(0,28)=="http://henpoi.lompat.in/?go="&&u.substr(u.length-4)=="&s=1")
+						if(u.substr(0,28)=="http://henpoi.lompat.in/?go="&&u.substr(-4)=="&s=1")
 						{
 							safelyNavigate(atob(u.substr(28,u.length-32)))
 						}
@@ -1030,7 +1039,7 @@ if(document instanceof HTMLDocument)
 						i=location.hash.substr(1)
 						if(i.substr(0,18)=="ignoreCrowdBypass#")
 						{
-							i=i.substr(18)+"#ignoreCrowdBypass"
+							i=i.substr(18)
 						}
 					}
 					else
@@ -1038,167 +1047,182 @@ if(document instanceof HTMLDocument)
 						i=location.search.split("?id=")[1]
 					}
 					f.id=""
-					crowdPath(i)
-					crowdBypass(()=>{
-						if(f.action.substr(f.action.length-18)=="#ignoreCrowdBypass")
+					const callback=()=>{
+						f.action+="#bypassClipboard="+i
+						if(ignoreCrowdBypass)
 						{
-							f.action=f.action.substr(0,f.action.length-18)+"#"+i+"#ignoreCrowdBypass"
-						}
-						else
-						{
-							f.action+="#"+i
+							f.action+="#ignoreCrowdBypass"
 						}
 						f.submit()
-					},true)
+					}
+					if(i)
+					{
+						crowdPath(i)
+						crowdBypass(callback,true)
+					}
+					else
+					{
+						i=bypassClipboard
+						callback()
+					}
 				}
-				if(document.querySelector("img.spoint#showlink")&&document.querySelector(".soractrl"))
+				if(bypassClipboard&&document.querySelector("img.spoint#showlink")&&document.querySelector(".soractrl"))
 				{
 					if(!ignoreCrowdBypass)
 					{
 						insertInfoBox(crowdEnabled?"`+getMessage("crowdWait")+`":"`+getMessage("crowdDisabled")+`")
 					}
-					const hash=location.hash.substr(1)
-					history.pushState({},document.querySelector("title").textContent,location.href.split("#")[0])
-					ensureDomLoaded(()=>{
-						(function($){
-							let defaults={
-								url:null,
-								values:null,
-								method:"POST",
-								target:null,
-								traditional:false,
-								redirectTop:false
+					const _ce=document.createElement
+					document.createElement=(t,o)=>{
+						let e=_ce.call(document,t,o)
+						if(t=="form")
+						{
+							const _submit=e.submit
+							e.submit=()=>{
+								e.action+="&soralink_contribute="+bypassClipboard
+								_submit.call(e)
 							}
-							$.redirect=(url,values,method,target,traditional,redirectTop)=>{
-								let opts=url
-								if(typeof url!="object")
-								{
-									opts={
-										url:url+"&soralink_contribute="+hash,
-										values:values,
-										method:method,
-										target:"_self",
-										traditional:traditional,
-										redirectTop:redirectTop
-									}
+						}
+						return e
+					}
+					(function($){
+						let defaults={
+							url:null,
+							values:null,
+							method:"POST",
+							target:null,
+							traditional:false,
+							redirectTop:false
+						}
+						$.redirect=(url,values,method,target,traditional,redirectTop)=>{
+							let opts=url
+							if(typeof url!="object")
+							{
+								opts={
+									url:url+"&soralink_contribute="+bypassClipboard,
+									values:values,
+									method:method,
+									target:"_self",
+									traditional:traditional,
+									redirectTop:redirectTop
 								}
-								let config=$.extend({},defaults,opts)
-								let generatedForm=$.redirect.getForm(config.url,config.values,config.method,config.target,config.traditional)
-								$("body",config.redirectTop?window.top.document:undefined).append(generatedForm.form)
-								generatedForm.submit()
-								generatedForm.form.remove()
 							}
-							$.redirect.getForm=(url,values,method,target,traditional)=>{
-								method =(method&&["GET","POST","PUT","DELETE"].indexOf(method.toUpperCase())!==-1)? method.toUpperCase():'POST'
-								url=url.split("#")
-								let hash=url[1]?("#"+url[1]):""
-								url=url[0]
-								if(!values)
-								{
-									let obj=$.parseUrl(url)
-									url=obj.url
-									values=obj.params
-								}
-								values=removeNulls(values)
-								let form=$("<form>").attr("method",method).attr("action",url+hash)
-								if(target)
-								{
-									form.attr("target",target)
-								}
-								let submit=form[0].submit
-								iterateValues(values,[],form,null,traditional)
+							let config=$.extend({},defaults,opts)
+							let generatedForm=$.redirect.getForm(config.url,config.values,config.method,config.target,config.traditional)
+							$("body",config.redirectTop?window.top.document:undefined).append(generatedForm.form)
+							generatedForm.submit()
+							generatedForm.form.remove()
+						}
+						$.redirect.getForm=(url,values,method,target,traditional)=>{
+							method =(method&&["GET","POST","PUT","DELETE"].indexOf(method.toUpperCase())!==-1)? method.toUpperCase():'POST'
+							url=url.split("#")
+							let hash=url[1]?("#"+url[1]):""
+							url=url[0]
+							if(!values)
+							{
+								let obj=$.parseUrl(url)
+								url=obj.url
+								values=obj.params
+							}
+							values=removeNulls(values)
+							let form=$("<form>").attr("method",method).attr("action",url+hash)
+							if(target)
+							{
+								form.attr("target",target)
+							}
+							let submit=form[0].submit
+							iterateValues(values,[],form,null,traditional)
+							return {
+								form:form,
+								submit:()=>submit.call(form[0])
+							}
+						}
+						$.parseUrl=url=>{
+							if(url.indexOf("?")<0)
+							{
 								return {
-									form:form,
-									submit:()=>submit.call(form[0])
-								}
-							}
-							$.parseUrl=url=>{
-								if(url.indexOf("?")<0)
-								{
-									return {
-										url:url,
-										params:{}
-									}
-								}
-								let parts=url.split("?"),
-								query_string=parts[1],
-								elems=query_string.split("&")
-								url=parts[0]
-								let i,pair,obj={}
-								for(i=0;i<elems.length;i+=1){
-									pair=elems[i].split('=')
-									obj[pair[0]]=pair[1]
-								}
-								return{
 									url:url,
-									params:obj
+									params:{}
 								}
 							}
-							let getInput=(name,value,parent,array,traditional)=>{
-								let parentString
-								if(parent.length>0)
+							let parts=url.split("?"),
+							query_string=parts[1],
+							elems=query_string.split("&")
+							url=parts[0]
+							let i,pair,obj={}
+							for(i=0;i<elems.length;i+=1){
+								pair=elems[i].split('=')
+								obj[pair[0]]=pair[1]
+							}
+							return{
+								url:url,
+								params:obj
+							}
+						}
+						let getInput=(name,value,parent,array,traditional)=>{
+							let parentString
+							if(parent.length>0)
+							{
+								parentString=parent[0]
+								let i
+								for(i=1;i<parent.length;i+=1)
 								{
-									parentString=parent[0]
-									let i
-									for(i=1;i<parent.length;i+=1)
+									parentString+="["+parent[i]+"]"
+								}
+								if(array)
+								{
+									if(traditional)
 									{
-										parentString+="["+parent[i]+"]"
-									}
-									if(array)
-									{
-										if(traditional)
-										{
-											name=parentString
-										}
-										else
-										{
-											name=parentString+"["+name+"]"
-										}
+										name=parentString
 									}
 									else
 									{
 										name=parentString+"["+name+"]"
 									}
 								}
-								return $("<input>").attr("type","hidden").attr("name",name).attr("value",value)
-							}
-							const iterateValues=(values,parent,form,isArray,traditional)=>{
-								let i,iterateParent=[]
-								Object.keys(values).forEach(i=>{
-									if(typeof values[i]=="object")
-									{
-										iterateParent=parent.slice()
-										iterateParent.push(i)
-										iterateValues(values[i],iterateParent,form,Array.isArray(values[i]),traditional)
-									}
-									else
-									{
-										form.append(getInput(i,values[i],parent,isArray,traditional))
-									}
-								})
-							},
-							removeNulls=values=>{
-								const propNames=Object.getOwnPropertyNames(values)
-								for(let i=0;i<propNames.length;i++)
+								else
 								{
-									let propName=propNames[i]
-									if(values[propName]===null||values[propName]===undefined)
-									{
-										delete values[propName]
-									}
-									else if(typeof values[propName]=="object")
-									{
-										values[propName]=removeNulls(values[propName])
-									}
-									else if(values[propName].length<1)
-									{
-										delete values[propName]
-									}
+									name=parentString+"["+name+"]"
 								}
-								return values
 							}
-						}(window.jQuery||window.Zepto||window.jqlite))
-					})
+							return $("<input>").attr("type","hidden").attr("name",name).attr("value",value)
+						}
+						const iterateValues=(values,parent,form,isArray,traditional)=>{
+							let i,iterateParent=[]
+							Object.keys(values).forEach(i=>{
+								if(typeof values[i]=="object")
+								{
+									iterateParent=parent.slice()
+									iterateParent.push(i)
+									iterateValues(values[i],iterateParent,form,Array.isArray(values[i]),traditional)
+								}
+								else
+								{
+									form.append(getInput(i,values[i],parent,isArray,traditional))
+								}
+							})
+						},
+						removeNulls=values=>{
+							const propNames=Object.getOwnPropertyNames(values)
+							for(let i=0;i<propNames.length;i++)
+							{
+								let propName=propNames[i]
+								if(values[propName]===null||values[propName]===undefined)
+								{
+									delete values[propName]
+								}
+								else if(typeof values[propName]=="object")
+								{
+									values[propName]=removeNulls(values[propName])
+								}
+								else if(values[propName].length<1)
+								{
+									delete values[propName]
+								}
+							}
+							return values
+						}
+					}(window.jQuery||window.Zepto||window.jqlite))
 				}
 				//Safelink Wordpress Plugin
 				ifElement(".wpsafe-top > form > input.btn.btn-primary[type='submit'][value]",i=>{
@@ -1321,7 +1345,6 @@ if(document instanceof HTMLDocument)
 				}
 				if(document.querySelector("lv-linkvertise"))//Link-to.net
 				{
-					console.log("Linkvertise")
 					let xhr=new XMLHttpRequest()
 					xhr.onload=()=>{
 						let json=JSON.parse(xhr.responseText)
@@ -1386,7 +1409,7 @@ if(document instanceof HTMLDocument)
 								clearInterval(lT)
 								let _ajax=$.ajax,req=0
 								$.ajax=d=>{
-									if(typeof d=="object"&&"success"in d&&"dataType"in d&&d.dataType=="json"&&"url" in d&&d.url.length>15&&d.url.substr(d.url.length-11)=="/skip_timer")
+									if(typeof d=="object"&&"success"in d&&"dataType"in d&&d.dataType=="json"&&"url" in d&&d.url.length>15&&d.url.substr(-11)=="/skip_timer")
 									{
 										if("data"in d&&"adblock"in d.data)
 										{
