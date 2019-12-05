@@ -832,6 +832,7 @@ if(document instanceof HTMLDocument)
 					if(typeof app_vars=="undefined")
 					{
 						app_vars={}
+						bypassed=false
 					}
 				})
 				domainBypass("lompat.in",()=>{
