@@ -302,7 +302,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		{
 			if(url.substr(0,7)!="http://"&&url.substr(0,8)!="https://")
 			{
-				url="http://"+url+details.url.hash
+				url="http://"+url
 			}
 			url+=req_url.hash
 		}
