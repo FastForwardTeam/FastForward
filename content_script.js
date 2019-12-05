@@ -97,6 +97,7 @@ if(document instanceof HTMLDocument)
 				{
 					if(location.hostname==domain||location.hostname.substr(location.hostname.length-(domain.length+1))=="."+domain)
 					{
+						bypassed=true
 						f()
 					}
 				}
@@ -104,6 +105,7 @@ if(document instanceof HTMLDocument)
 				{
 					if(domain.test(location.hostname))
 					{
+						bypassed=true
 						f()
 					}
 				}
@@ -120,6 +122,7 @@ if(document instanceof HTMLDocument)
 				let res=regex.exec(location.href)
 				if(res)
 				{
+					bypassed=true
 					f(res)
 				}
 			},
