@@ -851,6 +851,22 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 ]},["blocking","responseHeaders"])
 
 //SoraLink Crowd Bypass
+brws.webRequest.onHeadersReceived.addListener(details=>{
+	if(enabled&&crowdEnabled)
+	{
+		for(let i in details.responseHeaders)
+		{
+			if(details.responseHeaders[i].name.toLowerCase()=="location")
+			{
+				details.responseHeaders[i].value+="#bypassClipboard="+details.url.substr(details.url.indexOf("?dd1fa7bc42=")+12)
+				return {responseHeaders: details.responseHeaders}
+			}
+		}
+	}
+},{types:["main_frame"],urls:[
+"*://*/?dd1fa7bc42=*"//pahe.in
+]},["blocking","responseHeaders"])
+
 let soralink_contribute={}
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled&&crowdEnabled)
@@ -866,17 +882,19 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 	{
 		if(crowdEnabled && details.url in soralink_contribute)
 		{
-			let url=new URL(details.url)
-			for(let i in details.responseHeaders)
+			if(details.method=="POST")
 			{
-				let header=details.responseHeaders[i]
-				if(header.name.toLowerCase()=="location"&&isGoodLink(header.value))
+				for(let i in details.responseHeaders)
 				{
-					let xhr=new XMLHttpRequest()
-					xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
-					xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
-					xhr.send("domain="+url.host+"&path="+encodeURIComponent(soralink_contribute[details.url])+"&target="+encodeURIComponent(header.value))
-					break
+					let header=details.responseHeaders[i]
+					if(header.name.toLowerCase()=="location"&&isGoodLink(header.value))
+					{
+						let xhr=new XMLHttpRequest()
+						xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
+						xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+						xhr.send("domain="+(new URL(details.url)).host+"&path="+encodeURIComponent(soralink_contribute[details.url])+"&target="+encodeURIComponent(header.value))
+						break
+					}
 				}
 			}
 			delete soralink_contribute[details.url]

@@ -1041,7 +1041,11 @@ if(document instanceof HTMLDocument)
 				if(document.querySelector("form#landing"))
 				{
 					let f=document.querySelector("form#landing"),i
-					if(document.querySelector("form#landing > div#landing")&&document.querySelector(".soractrl"))
+					if(bypassClipboard)
+					{
+						i=bypassClipboard
+					}
+					else if(document.querySelector("form#landing > div#landing")&&document.querySelector(".soractrl"))
 					{
 						i=location.hash.substr(1)
 						if(i.substr(0,18)=="ignoreCrowdBypass#")
