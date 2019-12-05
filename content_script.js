@@ -503,7 +503,7 @@ if(document instanceof HTMLDocument)
 				window.setInterval=f=>setInterval(f,1)
 				awaitElement("button#buttondewa.mispuanibuttonlink",b=>b.onclick())
 			})
-			domainBypass(/donia2link\\.net|elnurtech\\.com/,()=>{
+			domainBypass(/donia2link\\.net|elnurtech\\.com|sqrible\\.com/,()=>{
 				window.setInterval=f=>setInterval(f,1)
 				awaitElement("#place > a[href]",a=>safelyNavigate(a.href))
 			})
