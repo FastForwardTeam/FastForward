@@ -340,6 +340,17 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
 		let url=new URL(details.url)
+		if(url.searchParams.has("aurl"))
+		{
+			return getRedirect(url.searchParams.get("aurl"))
+		}
+	}
+},{types:["main_frame"],urls:["*://*.folderenius.com/*/*?*"]},["blocking"])
+
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
+		let url=new URL(details.url)
 		if(url.searchParams.has("URL"))
 		{
 			return getRedirect(url.searchParams.get("URL"))
