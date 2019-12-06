@@ -932,7 +932,7 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 					}
 					else
 					{
-						policies["script-src"]=["*","blob:","data:","'unsafe-inline'"]
+						policies["script-src"]=["*","blob:","data:","'unsafe-inline'","'unsafe-eval'"]
 					}
 					let value=""
 					for(let name in policies)
