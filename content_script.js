@@ -12,6 +12,11 @@ if(document instanceof HTMLDocument)
 		bypassClipboard=location.hash.substr(clipboardIndex+17)
 		location.hash=location.hash.substr(0,location.hash.length-bypassClipboard.length-17)
 	}
+	if(location.hash.substr(-18)=="#ignoreCrowdBypass")
+	{
+		ignoreCrowdBypass=true
+		location.hash=location.hash.substr(0,location.hash.length-18)
+	}
 	const brws=(typeof browser=="undefined"?chrome:browser)
 	brws.runtime.sendMessage({type: "can-run"}, res => {
 		if(!res.enabled)
@@ -1457,7 +1462,7 @@ if(document instanceof HTMLDocument)
 					{
 						if(xhr.status==200&&xhr.responseText!="")
 						{
-							location.assign("https://universal-bypass.org/crowd-bypassed?target="+encodeURIComponent(xhr.responseText)+"&referer="+encodeURIComponent(location.href))
+							location.assign("https://universal-bypass.org/crowd-bypassed?target="+encodeURIComponent(xhr.responseText)+"&referer="+encodeURIComponent(!bypassClipboard||["linegee.net", "sweetlantern.com", "intercelestial.com"].indexOf(domain)<0?location.href:"https://pahe.in/?dd1fa7bc42="+bypassClipboard))
 							//The background script will intercept the request and redirect to html/crowd-bypassed.html
 						}
 						else
