@@ -828,8 +828,8 @@ if(document instanceof HTMLDocument)
 					if(typeof app_vars=="undefined")
 					{
 						app_vars={}
-						bypassed=false
 					}
+					bypassed=false
 				})
 				domainBypass("lompat.in",()=>{
 					window.open=u=>{
@@ -1346,11 +1346,7 @@ if(document instanceof HTMLDocument)
 							}
 							crowdPath(location.search.substr(3))
 						}
-						domainBypass("adcoinfly.com",()=>{
-							document.querySelectorAll("a.btn[href=''], a.btn[href*='clickme']").forEach(e=>{
-								e.parentNode.removeChild(e)
-							})
-						})
+						domainBypass("adcoinfly.com",()=>document.querySelectorAll("a.btn[href=''], a.btn[href*='clickme']").forEach(e=>e.parentNode.removeChild(e)))
 						domainBypass(/(semawur|bercara)\\.com|in11\\.site/,()=>ifElement("input[type='hidden'][name='alias'][value]",i=>crowdPath(i.value),()=>crowdPath(location.hash.substr(1))))
 						domainBypass(/movienear\\.me|lewat\\.club/,()=>{
 							ifElement("input[type='hidden'][name='alias'][value]",i=>{
@@ -1358,7 +1354,7 @@ if(document instanceof HTMLDocument)
 								crowdPath(i.value)
 							},()=>crowdPath(location.hash.substr(1)))
 						})
-						domainBypass(/(atv|adlink)\\.pw|safe\\.mirrordown\\.com|kabarviral\\.blog|lewat\\.club/,()=>crowdPath(location.search.substr(1).split("=")[0]))
+						domainBypass(/(atv|adlink)\\.pw|safe\\.mirrordown\\.com|kabarviral\\.blog/,()=>crowdPath(location.search.substr(1).split("=")[0]))
 						document.documentElement.setAttribute("`+message_channel.adlinkfly_info+`","")
 						let iT=setInterval(()=>{
 							if(document.documentElement.hasAttribute("`+message_channel.adlinkfly_target+`"))
