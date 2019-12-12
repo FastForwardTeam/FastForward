@@ -313,7 +313,8 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 "*://*/full/?api=*&url=*",
 "*://*/st?api=*&url=*",
 "*://*/st/?api=*&url=*",
-"*://*.zxro.com/u/*?url=*"
+"*://*.zxro.com/u/*?url=*",
+"*://macdownload.org/redirect/?url=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
