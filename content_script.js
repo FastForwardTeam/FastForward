@@ -512,6 +512,26 @@ if(document instanceof HTMLDocument)
 				window.setInterval=f=>setInterval(f,1)
 				awaitElement(".skip > .wait > .skip > .btn > a[href]",a=>safelyNavigate(a.href))
 			})
+			domainBypass(/linkvertise\\.(com|net)|link-to\\.net/,()=>{
+				window.setInterval=f=>setInterval(f,1)
+				window.videojs={getAllPlayers:()=>[{
+					on:(e,f)=>f(),
+					controlBar:{
+						progressControl:{
+							disable:()=>{}
+						}
+					},
+					pause:()=>{}
+				}]}
+				ensureDomLoaded(()=>{
+					setInterval(()=>{
+						ifElement(".modal.show .web-close-btn",b=>b.click())
+					},1000)
+					setTimeout(()=>{
+						document.querySelectorAll(".todo-block .todo").forEach(d=>d.click())
+					},1000)
+				})
+			})
 			//Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
 			hrefBypass(/(njiir|healthykk|linkasm|dxdrive|getwallpapers)\\.com|punchsubs\\.net|k2s\\.cc|muhammadyoga\\.me|u\\.to|skiplink\\.io|firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php/,()=>window.setInterval=f=>setInterval(f,1))
 			domainBypass(/(racaty|longfiles|filepuma|filehorse|portableapps)\\.com|indishare\\.org|datei\\.to/,()=>window.setTimeout=f=>setTimeout(f,1))
@@ -913,18 +933,6 @@ if(document instanceof HTMLDocument)
 					})
 				})
 				domainBypass("pucuktranslation.pw",()=>ifElement("a.button.primary[href]",a=>safelyNavigate(a.href)))
-				domainBypass(/linkvertise\\.(com|net)|link-to\\.net/,()=>{
-					let xhr=new XMLHttpRequest()
-					xhr.onload=()=>{
-						let json=JSON.parse(xhr.responseText)
-						if(json&&json.data&&json.data.link)
-						{
-							safelyNavigate(json.data.link.target)
-						}
-					}
-					xhr.open("GET","https://linkvertise.net/api/v1/redirect/link/static"+location.pathname)
-					xhr.send()
-				})
 				domainBypass("gsu.st",()=>ifElement("#Subform input[type='submit'][name='btn'].btn",b=>b.click()))
 				domainBypass("mangalist.org",()=>{
 					awaitElement("#btt > button.btn.btn-primary.text-center[onclick^='window.location.assign(']",b=>{
@@ -1221,19 +1229,6 @@ if(document instanceof HTMLDocument)
 				if(document.querySelector(".shortened_link a[href][ng-href][target='_blank']"))//Go2to.com,Go2too.com,Golink.to
 				{
 					safelyNavigate(document.querySelector(".shortened_link a[href][ng-href][target='_blank']").href)
-				}
-				if(document.querySelector("lv-linkvertise"))//Link-to.net
-				{
-					let xhr=new XMLHttpRequest()
-					xhr.onload=()=>{
-						let json=JSON.parse(xhr.responseText)
-						if(json&&json.data&&json.data.link)
-						{
-							safelyNavigate(json.data.link.target)
-						}
-					}
-					xhr.open("GET","https://linkvertise.net/api/v1/redirect/link/static"+location.pathname)
-					xhr.send()
 				}
 				if(location.search.startsWith("?n="))//viralking.xyz,indian4uh.com
 				{
