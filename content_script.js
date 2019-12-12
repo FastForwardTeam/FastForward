@@ -899,7 +899,6 @@ if(document instanceof HTMLDocument)
 						safelyNavigate(o.page.url)
 					}
 				})
-				domainBypass("seputarinfomenarik.com",()=>ifElement("a#hapus",a=>location.href=a.href))
 				hrefBypass(/mirrorace\\.com\\/m\\/[a-zA-Z0-9]+\\/[0-9]+/,()=>location.href=document.querySelector("a[href*='"+location.search+"']:not([hidden]):not(.uk-hidden)").href)
 				domainBypass("mirrorace.com",()=>{
 					ifElement(".uk-modal-close",b=>{
@@ -1263,7 +1262,7 @@ if(document instanceof HTMLDocument)
 				ifElement("input[type='hidden'][name='mylink'][value^='http']",i=>{//#549
 					safelyNavigate(i.value)
 					finish()
-				})
+				},()=>domainBypass("seputarinfomenarik.com",()=>ifElement("a#hapus",a=>location.href=a.href)))
 				let t=document.querySelector("title")
 				if(!bypassed&&t)
 				{
