@@ -510,7 +510,7 @@ if(document instanceof HTMLDocument)
 			})
 			//Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
 			hrefBypass(/(njiir|healthykk|linkasm|dxdrive|getwallpapers)\\.com|punchsubs\\.net|k2s\\.cc|muhammadyoga\\.me|u\\.to|skiplink\\.io|firefaucet\\.win\\/l\\/|emulator\\.games\\/download\\.php/,()=>window.setInterval=f=>setInterval(f,1))
-			domainBypass(/(racaty|longfiles|filepuma|filehorse)\\.com|indishare\\.org|datei\\.to/,()=>window.setTimeout=f=>setTimeout(f,1))
+			domainBypass(/(racaty|longfiles|filepuma|filehorse|portableapps)\\.com|indishare\\.org|datei\\.to/,()=>window.setTimeout=f=>setTimeout(f,1))
 			if(bypassed)
 			{
 				return
