@@ -874,22 +874,6 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 ]},["blocking","responseHeaders"])
 
 //SoraLink Crowd Bypass
-brws.webRequest.onHeadersReceived.addListener(details=>{
-	if(enabled&&crowdEnabled)
-	{
-		for(let i in details.responseHeaders)
-		{
-			if(details.responseHeaders[i].name.toLowerCase()=="location")
-			{
-				details.responseHeaders[i].value+="#bypassClipboard="+details.url.substr(details.url.indexOf("?dd1fa7bc42=")+12)
-				return {responseHeaders: details.responseHeaders}
-			}
-		}
-	}
-},{types:["main_frame"],urls:[
-"*://*/?dd1fa7bc42=*"//pahe.in
-]},["blocking","responseHeaders"])
-
 let soralink_contribute={}
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled&&crowdEnabled)
