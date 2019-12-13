@@ -293,10 +293,14 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
-		let req_url=new URL(details.url),url=req_url.searchParams.get("url")
+		let url=details.url.substr(details.url.indexOf("&url=")+5)
 		if(url.substr(0,5)=="aHR0c")
 		{
 			url=atob(url)
+		}
+		else if(url.substr(0,13)=="http%3A%2F%2F"||url.substr(0,14)=="https%3A%2F%2F")
+		{
+			url=decodeURIComponent(url)
 		}
 		else
 		{
@@ -304,7 +308,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 			{
 				url="http://"+url
 			}
-			url+=req_url.hash
+			url+=(new URL(details.url)).hash
 		}
 		return getRedirect(url)
 	}
@@ -312,9 +316,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 "*://*/full?api=*&url=*",
 "*://*/full/?api=*&url=*",
 "*://*/st?api=*&url=*",
-"*://*/st/?api=*&url=*",
-"*://*.zxro.com/u/*?url=*",
-"*://macdownload.org/redirect/?url=*"
+"*://*/st/?api=*&url=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
@@ -334,7 +336,9 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 "*://*.nurhamka.com/*?url=*",
 "*://*.linepc.site/*?url=*",
 "*://*.adobedownload.org/redirect/?url=*",
-"*://*.sopasti.com/anime.php?*"
+"*://*.sopasti.com/anime.php?*",
+"*://*.zxro.com/u/*?url=*",
+"*://*.macdownload.org/redirect/?url=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
