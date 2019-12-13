@@ -789,7 +789,7 @@ if(document instanceof HTMLDocument)
 						}, 200)
 					}, 200)
 				})
-				domainBypass(/get-click2\\.blogspot\\.com|pastikan\\.me|informations-library\\.blogspot\\.com/,()=>{
+				domainBypass(/((get-click2||informations-library)\\.blogspot|business\\.ominfoupdate)\\.com|pastikan\\.me/,()=>{
 					let u=aesCrypto.decrypt(convertstr(location.href.substr(location.href.indexOf("?o=")+3)),convertstr("root"))
 					if(isGoodLink(u))
 					{
