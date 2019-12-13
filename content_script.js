@@ -966,6 +966,13 @@ if(document instanceof HTMLDocument)
 					crowdBypass(()=>ifElement("form[action='/user/links']",f=>f.action+="#"+p))
 				})
 				domainBypass(/l\\.ndoqp\\.com|elnurtech\\.com|jo2win\\.com/,()=>ifElement("input#real_url",i=>safelyNavigate(i.value)))
+				domainBypass("lin-ks.net",()=>{
+					if(typeof secondpage=="function")
+					{
+						secondpage()
+					}
+					awaitElement("a#skip_button[href]",a=>safelyNavigate(a.href))
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
