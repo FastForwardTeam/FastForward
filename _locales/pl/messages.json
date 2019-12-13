@@ -59,6 +59,9 @@
 	"optionsUserscripts": {
 		"message": "Niestandardowe obejścia"
 	},
+	"optionsUserscriptsDescription": {
+		"message": "Jest to zaawansowana funkcja dla programistów do tworzenia własnych skryptów, które omijają witryny. Po udoskonaleniu można je przesłać na GitHub'a i dodać do Uniwersalnego Obejścia, więc są one dostępne dla wszystkich."
+	},
 	"beforeNavigate": {
 		"message": "Jesteś prawie w miejscu docelowym."
 	},
@@ -74,14 +77,23 @@
 	"beforeNavigateOptions": {
 		"message": "Chcesz być przekierowywany natychmiastowo, czy za x sekund?"
 	},
+	"infoBoxHide": {
+		"message": "Kliknij to pole, aby je ukryć. Jeśli chcesz może wyłączyć funkcję pola informacyjnego w opcjach Uniwersalnego Obejścia."
+	},
 	"crowdWait": {
 		"message": "Niestety, jesteś pierwszym który wchodzi w ten link, ale po tym jak ty poczekałeś, inni użytkownicy Universal bypass nie będą musieli już czekać."
+	},
+	"crowdDisabled": {
+		"message": "Ta strona jest ominięta przez crowd bypass, którą masz wyłączoną w ustawieniach."
 	},
 	"crowdBypassed": {
 		"message": "Już nie musisz czekać!"
 	},
 	"crowdBypassedInfo": {
 		"message": "Inni użytkownicy Uniwersalnego obejścia czekali na ciebie i zgłosili, że prowadzi to do %"
+	},
+	"crowdBypassedTimer": {
+		"message": "To będzie otwarte w nowym oknie za % sekund."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "To będzie otwarte w nowym oknie za 1 sekundę."

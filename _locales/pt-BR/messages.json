@@ -11,8 +11,17 @@
 	"firstrunNoScript": {
 		"message": "No entanto, parece que você está usando o NoScript ou similar, com o qual o Universal Bypass não é compatível."
 	},
+	"version": {
+		"message": "Versão"
+	},
+	"changelog": {
+		"message": "Lista de mudanças"
+	},
 	"faq": {
 		"message": "Perguntas Frequentes (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "O Universal Bypass já liberou % sites para você."
 	},
 	"support": {
 		"message": "Apoie o Universal Bypass"
@@ -76,6 +85,9 @@
 	},
 	"crowdWait": {
 		"message": "Infelizmente, você é o primeiro a encontrar este link, mas depois de esperar, outros usuários do Universal Bypass não precisarão."
+	},
+	"crowdDisabled": {
+		"message": "Este site foi liberado por bypass em grupo, que está desabilitado nas opções."
 	},
 	"crowdBypassed": {
 		"message": "Talvez você não precise esperar!"

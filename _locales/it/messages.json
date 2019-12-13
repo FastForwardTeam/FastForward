@@ -24,7 +24,7 @@
 		"message": "Universal Bypass ha già superato % siti per te."
 	},
 	"support": {
-		"message": "Supporto - Questo collegamento è per gli utenti che vogliono supportare Universal Bypass"
+		"message": "Aiuta Universal Bypass ad essere migliore"
 	},
 	"options": {
 		"message": "Opzioni"
@@ -36,7 +36,7 @@
 		"message": "Attiva i bypass dei siti web."
 	},
 	"optionsNavigationDelay": {
-		"message": "Portami alla destinazione dopo% secondi. (Usa 0 per navigare istantaneamente.)"
+		"message": "Portami alla destinazione dopo % secondi. (Usa 0 per navigare istantaneamente.)"
 	},
 	"optionsTrackerBypass": {
 		"message": "Bypass tracker utilizzando Apimon.de."
@@ -51,7 +51,7 @@
 		"message": "Dai e ottieni le destinazioni degli shorteners non bypassati."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Apri le destinazioni di crowdfunding in una nuova scheda dopo% secondi. (0 = istantaneo.)"
+		"message": "Apri le destinazioni di crowdfunding in una nuova scheda dopo % secondi. (0 = istantaneo.)"
 	},
 	"optionsInfoBox": {
 		"message": "Mostra messaggi informativi su alcuni siti."
@@ -72,7 +72,7 @@
 		"message": "La tua destinazione è %"
 	},
 	"beforeNavigateTimer": {
-		"message": "Verrai reindirizzato automaticamente tra% secondi."
+		"message": "Verrai reindirizzato automaticamente tra % secondi."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Verrai reindirizzato automaticamente in 1 secondo."
@@ -93,7 +93,7 @@
 		"message": "Forse non dovrai aspettare!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Altri utenti di Universal Bypass hanno già aspettato e hanno riferito che questo porta a%"
+		"message": "Altri utenti di Universal Bypass hanno già aspettato e hanno riferito che questo porta a %"
 	},
 	"crowdBypassedTimer": {
 		"message": "Questo verrà aperto in una nuova scheda in % secondi."

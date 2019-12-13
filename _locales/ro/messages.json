@@ -11,6 +11,9 @@
 	"firstrunNoScript": {
 		"message": "Totuși, se pare că folosești NoScript, care interferează cu Universal Bypass."
 	},
+	"version": {
+		"message": "Versiunea"
+	},
 	"faq": {
 		"message": "Întrebări populare"
 	},
@@ -41,6 +44,9 @@
 	"optionsCrowdBypass": {
 		"message": "Arată destinațiile scurtăturilor ce nu pot fi păcălite."
 	},
+	"optionsInfoBox": {
+		"message": "Arată mesaje informative pe unele site-uri."
+	},
 	"privacyPolicy": {
 		"message": "Politică de confidențialitate"
 	},
@@ -52,5 +58,20 @@
 	},
 	"beforeNavigateDestination": {
 		"message": "Mai sunt doar %"
+	},
+	"beforeNavigateTimer": {
+		"message": "Vei fi redirectionat automat in % secunde."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Vei fi redirectionat automat in 1 secundă."
+	},
+	"beforeNavigateOptions": {
+		"message": "Vrei sa fi redirecționat instantaneu sau in x secunde?"
+	},
+	"crowdBypassedTimer": {
+		"message": "Aceasta va fi deschisă într-o nouă fila in % secunde."
+	},
+	"crowdBypassedIgnore": {
+		"message": "Asta nu a fost corect?"
 	}
 }
