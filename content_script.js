@@ -981,6 +981,13 @@ if(document instanceof HTMLDocument)
 					}
 					a.href+="#bypassClipboard="+location.pathname.split("/").join("").split("-").join("")+a.parentNode.querySelector("span[style] > b").textContent.split(" ").join("").toLowerCase()+qe.textContent+a.textContent.toLowerCase()
 				}))
+				domainBypass("1shortlink.com", () => {
+					console.log("abc1");
+					awaitElement("#redirect-link[data-href]", a => {
+						console.log("abc2");
+						safelyNavigate(a.getAttribute("data-href"))
+					})
+				})	
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
