@@ -524,6 +524,9 @@ if(document instanceof HTMLDocument)
 					pause:()=>{}
 				}]}
 				ensureDomLoaded(()=>{
+					var div = document.createElement('div');
+					div.id = "ogxzi8ZzrLy8S4zhUwyc3jPMlXi1h91bA0bASIiZtyT6cOTlX78HtEyXTK0WUGCY3CO8E4hBYI02ZD9mr7jit7R1YqPdkllJ";
+					document.body.appendChild(div);
 					setInterval(()=>{
 						ifElement(".modal.show .web-close-btn",b=>b.click())
 					},1000)
