@@ -971,6 +971,12 @@ if(document instanceof HTMLDocument)
 					a.href+="#bypassClipboard="+location.pathname.split("/").join("").split("-").join("")+a.parentNode.querySelector("span[style] > b").textContent.split(" ").join("").toLowerCase()+qe.textContent+a.textContent.toLowerCase()
 				}))
 				hrefBypass(/stayonline\\.pro\\/l\\/(.*)\\//,m=>$.post(endpoint,{id:m[1],ref:""},r=>safelyNavigate(r.data.value)))
+				domainBypass("cpmlink.net",()=>{
+					if(typeof Countdown=="function")
+					{
+						ifElement("a#btn-main.disabled[href]",a=>safelyNavigate(a.href))
+					}
+				})
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
@@ -1215,11 +1221,6 @@ if(document instanceof HTMLDocument)
 				if(document.querySelector("#yangDihilangkan > a")&&document.querySelector("#downloadArea > .text-center"))//rathestation.bid
 				{
 					safelyNavigate(document.querySelector("#yangDihilangkan > a").href)
-					return finish()
-				}
-				if(document.querySelector("a#btn-main.disabled")&&typeof Countdown=="function")//cpmlink.net
-				{
-					safelyNavigate(document.querySelector("a#btn-main.disabled").href)
 					return finish()
 				}
 				if(document.querySelector("a.redirectBTN.disabled")&&document.querySelector(".timer"))//Arablionz.online
