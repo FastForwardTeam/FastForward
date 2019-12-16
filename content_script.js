@@ -977,6 +977,7 @@ if(document instanceof HTMLDocument)
 						ifElement("a#btn-main.disabled[href]",a=>safelyNavigate(a.href))
 					}
 				})
+				hrefBypass(/nexusmods\\.com\\/.*\\/mods\\/[0-9]*\\?tab=files&file_id=[0-9]*/,()=>ifElement("button#slowDownloadButton[data-download-url]",b=>safelyNavigate(b.getAttribute("data-download-url"))))
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
