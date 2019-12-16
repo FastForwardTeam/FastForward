@@ -984,6 +984,7 @@ if(document instanceof HTMLDocument)
 					}
 					a.href+="#bypassClipboard="+location.pathname.split("/").join("").split("-").join("")+a.parentNode.querySelector("span[style] > b").textContent.split(" ").join("").toLowerCase()+qe.textContent+a.textContent.toLowerCase()
 				}))
+				hrefBypass(/stayonline\\.pro\\/l\\/(.*)\\//,m=>$.post(endpoint,{id:m[1],ref:""},r=>safelyNavigate(r.data.value)))
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
