@@ -979,11 +979,7 @@ if(document instanceof HTMLDocument)
 				})
 				hrefBypass(/nexusmods\\.com\\/.*\\/mods\\/[0-9]*\\?tab=files&file_id=[0-9]*/,()=>ifElement("button#slowDownloadButton[data-download-url]",b=>safelyNavigate(b.getAttribute("data-download-url"))))
 				domainBypass("xlink.cc",()=>safelyNavigate(JSON.parse(atob(window.bootstrapData)).linkResponse.link.long_url))
-				domainBypass("1shortlink.com", () => {
-					awaitElement("#redirect-link[data-href]", a => {
-						safelyNavigate(a.getAttribute("data-href"))
-					})
-				})	
+				domainBypass("1shortlink.com",()=>awaitElement("#redirect-link[data-href]",a=>safelyNavigate(a.getAttribute("data-href"))))
 				//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 				if(bypassed)
 				{
