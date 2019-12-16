@@ -75,14 +75,14 @@ if(document instanceof HTMLDocument)
 				location.assign("https://universal-bypass.org/bypassed?target="+encodeURIComponent(target)+"&referer="+encodeURIComponent(location.href))
 				//The background script will intercept the request and redirect to html/before-navigate.html or to the target depending on the user's settings.
 			},
-			safelyNavigate=target=>{
+			safelyNavigate=(target,drophash)=>{
 				if(navigated||!isGoodLink(target))
 				{
 					return false
 				}
 				bypassed=true
 				let url=new URL(target)
-				if(!url||!url.hash)
+				if(!drophash&&(!url||!url.hash))
 				{
 					target+=location.hash
 				}
@@ -527,7 +527,7 @@ if(document instanceof HTMLDocument)
 					const _ce=document.createElement
 					document.createElement=t=>{
 						let e=_ce.call(document,t)
-						e.submit=()=>safelyNavigate(data)
+						e.submit=()=>safelyNavigate(data,true)
 						return e
 					}
 				}
