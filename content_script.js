@@ -443,21 +443,7 @@ if(document instanceof HTMLDocument)
 				crowdPath(location.hash.substr(1))
 				crowdBypass()
 			})
-			domainBypass("link.tl",()=>{
-				if(location.host=="lt10.link.tl")
-				{
-					ensureDomLoaded(()=>{
-						if(typeof goToUrl=="function")
-						{
-							goToUrl()
-						}
-					})
-				}
-				else
-				{
-					location.host="lt10.link.tl"
-				}
-			})
+			domainBypass("lnk.news",()=>ifElement("#skip_form",f=>goToUrl(),ifElement("#display_go_form",f=>f.submit())))
 			hrefBypass(/uiz\\.io\\/go/,()=>{
 				Object.freeze(location)
 				const regex=/.*window\\.location\\.href = "(http[^"]+)";.*/
