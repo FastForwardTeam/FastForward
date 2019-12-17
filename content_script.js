@@ -499,27 +499,25 @@ if(document instanceof HTMLDocument)
 				awaitElement(".skip > .wait > .skip > .btn > a[href]",a=>safelyNavigate(a.href))
 			})
 			domainBypass(/linkvertise\\.(com|net)|link-to\\.net/,()=>{
-				window.setInterval=f=>setInterval(f,1)
-				window.videojs={getAllPlayers:()=>[{
-					on:(e,f)=>f(),
-					controlBar:{
-						progressControl:{
-							disable:()=>{}
-						}
-					},
-					pause:()=>{}
-				}]}
-				ensureDomLoaded(()=>{
-					var div = document.createElement('div');
-					div.id = "ogxzi8ZzrLy8S4zhUwyc3jPMlXi1h91bA0bASIiZtyT6cOTlX78HtEyXTK0WUGCY3CO8E4hBYI02ZD9mr7jit7R1YqPdkllJ";
-					document.body.appendChild(div);
-					setInterval(()=>{
-						ifElement(".modal.show .web-close-btn",b=>b.click())
-					},1000)
-					setTimeout(()=>{
-						document.querySelectorAll(".todo-block .todo").forEach(d=>d.click())
-					},1000)
-				})
+				let o={},
+				url="https://linkvertise.net/api/v1/redirect/link/static"+location.pathname,
+				xhr=new XMLHttpRequest()
+				o.timestamp=new Date().getTime()
+				o.random="45401"
+				xhr.onload=()=>{
+					o.link_id=JSON.parse(xhr.responseText).data.link.id
+					url="https://linkvertise.net/api/v1/redirect/link"+location.pathname+"/target?serial="+btoa(JSON.stringify(o))
+					again()
+				}
+				xhr.open("GET",url)
+				xhr.send()
+				const again=()=>{
+					xhr.onload=()=>{
+						safelyNavigate(JSON.parse(xhr.responseText).data.target)
+					}
+					xhr.open("GET",url)
+					xhr.send()
+				}
 			})
 			domainBypass(/acortalo\\.(live|xyz)/,()=>{
 				if(document.referrer.indexOf("megawarez")>-1)
