@@ -480,7 +480,8 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 },{types:["main_frame"],urls:[
 "*://*/p/*.html?url=*",
 "*://*.mispuani.xyz/*?url=*",
-"*://*.ad4msan.win/safe?url=*"
+"*://*.ad4msan.win/safe?url=*",
+"*://*.infotekno.net/vga?url=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
