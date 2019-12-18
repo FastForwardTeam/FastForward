@@ -509,25 +509,39 @@ if(document instanceof HTMLDocument)
 					},
 					pause:()=>{}
 				}]}
-				let o={},
-				url="https://linkvertise.net/api/v1/redirect/link/static"+location.pathname,
-				xhr=new XMLHttpRequest()
-				o.timestamp=new Date().getTime()
-				o.random="45401"
-				xhr.onload=()=>{
-					o.link_id=JSON.parse(xhr.responseText).data.link.id
-					url="https://linkvertise.net/api/v1/redirect/link"+location.pathname+"/target?serial="+btoa(JSON.stringify(o))
-					again()
-				}
-				xhr.open("GET",url)
-				xhr.send()
-				const again=()=>{
-					xhr.onload=()=>{
-						safelyNavigate(JSON.parse(xhr.responseText).data.target)
-					}
+				const xhrget=f=>{
+					xhr.onload=f
 					xhr.open("GET",url)
 					xhr.send()
 				}
+				let o={},
+				url="/main-es5.f1fb1c6609d5e9bbcd58.js",
+				xhr=new XMLHttpRequest()
+				o.timestamp=new Date().getTime()
+				xhrget(()=>{
+					const regex=/random\\:"([^"]+)"/
+					let matches=regex.exec(xhr.responseText)
+					if(matches&&matches[1])
+					{
+						o.random=matches[1]
+						url="https://linkvertise.net/api/v1/redirect/link/static"+location.pathname
+					}
+					xhrget(()=>{
+						let json=JSON.parse(xhr.responseText)
+						if(json&&json.data.link.id)
+						{
+							o.link_id=json.data.link.id
+							url="https://linkvertise.net/api/v1/redirect/link"+location.pathname+"/target?serial="+btoa(JSON.stringify(o))
+						}
+						xhrget(()=>{
+							let json=JSON.parse(xhr.responseText)
+							if(json&&json.data.target)
+							{
+								safelyNavigate(json.data.target)
+							}
+						})
+					})
+				})
 				ensureDomLoaded(()=>{
 					var div = document.createElement('div');
 					div.id = "ogxzi8ZzrLy8S4zhUwyc3jPMlXi1h91bA0bASIiZtyT6cOTlX78HtEyXTK0WUGCY3CO8E4hBYI02ZD9mr7jit7R1YqPdkllJ";
