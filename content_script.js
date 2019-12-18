@@ -1011,7 +1011,13 @@ if(document instanceof HTMLDocument)
 					{
 						qe=qe.previousElementSibling
 					}
-					a.href+="#bypassClipboard="+location.pathname.split("/").join("").split("-").join("")+a.parentNode.querySelector("span[style] > b").textContent.split(" ").join("").toLowerCase()+qe.textContent+a.textContent.toLowerCase()
+					a.href+="#bypassClipboard="+location.pathname.split("/").join("").split("-").join("")
+					let ep=a.parentNode.querySelector("span[style] > b")
+					if(ep!==null)
+					{
+						a.href+=ep.textContent.split(" ").join("").toLowerCase()
+					}
+					a.href+=qe.textContent+a.textContent.toLowerCase()
 				}))
 				hrefBypass(/stayonline\\.pro\\/l\\/(.*)\\//,m=>$.post(endpoint,{id:m[1],ref:""},r=>safelyNavigate(r.data.value)))
 				hrefBypass(/nexusmods\\.com\\/.*\\/mods\\/[0-9]*\\?tab=files&file_id=[0-9]*/,()=>ifElement("button#slowDownloadButton[data-download-url]",b=>safelyNavigate(b.getAttribute("data-download-url"))))
