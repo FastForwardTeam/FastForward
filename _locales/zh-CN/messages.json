@@ -1,0 +1,41 @@
+{
+	"appDesc": {
+		"message": "不要循规蹈矩，Universal Bypass可以帮你避免犯人短连接网站。"
+	},
+	"firstrunTitle": {
+		"message": "感谢您安装 Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "你棒极了！"
+	},
+	"firstrunNoScript": {
+		"message": "看起来您正在使用NoScript或者类似的工具，Universal Bypass并不与这些兼容。"
+	},
+	"version": {
+		"message": "版本"
+	},
+	"changelog": {
+		"message": "更新日志"
+	},
+	"faq": {
+		"message": "常见问题(FAQ)"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass已经帮你绕过了%的网站"
+	},
+	"support": {
+		"message": "支持Universal Bypass."
+	},
+	"options": {
+		"message": "选项"
+	},
+	"optionsLink": {
+		"message": "更改Universal Bypass的设置"
+	},
+	"optionsEnabled": {
+		"message": "启用网站绕过"
+	},
+	"optionsNavigationDelay": {
+		"message": "在%秒后转到目标网站.(0 为立刻跳转.)"
+	}
+}
