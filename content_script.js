@@ -509,15 +509,14 @@ if(document instanceof HTMLDocument)
 					},
 					pause:()=>{}
 				}]}
+				let xhr=new XMLHttpRequest(),
+				url="/main-es5.f1fb1c6609d5e9bbcd58.js",
+				o={timestamp:new Date().getTime()}
 				const xhrget=f=>{
 					xhr.onload=f
 					xhr.open("GET",url)
 					xhr.send()
 				}
-				let o={},
-				url="/main-es5.f1fb1c6609d5e9bbcd58.js",
-				xhr=new XMLHttpRequest()
-				o.timestamp=new Date().getTime()
 				xhrget(()=>{
 					const regex=/random\\:"([^"]+)"/
 					let matches=regex.exec(xhr.responseText)
