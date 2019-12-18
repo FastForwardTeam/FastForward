@@ -403,7 +403,10 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	{
 		return getRedirect(atob(details.url.substr(details.url.indexOf("?link=")+6)))
 	}
-},{types:["main_frame"],urls:["*://*.leechpremium.link/cheat/?link=*"]},["blocking"])
+},{types:["main_frame"],urls:[
+"*://*.leechpremium.link/cheat/?link=*",
+"*://*.bdzone.xyz/cheat.php?link=*"
+]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)

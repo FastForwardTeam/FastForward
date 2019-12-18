@@ -982,12 +982,6 @@ if(document instanceof HTMLDocument)
 					a.href+="#bypassClipboard="+location.pathname.split("/").join("").split("-").join("")+a.parentNode.querySelector("span[style] > b").textContent.split(" ").join("").toLowerCase()+qe.textContent+a.textContent.toLowerCase()
 				}))
 				hrefBypass(/stayonline\\.pro\\/l\\/(.*)\\//,m=>$.post(endpoint,{id:m[1],ref:""},r=>safelyNavigate(r.data.value)))
-				domainBypass("cpmlink.net",()=>{
-					if(typeof Countdown=="function")
-					{
-						ifElement("a#btn-main.disabled[href]",a=>safelyNavigate(a.href))
-					}
-				})
 				hrefBypass(/nexusmods\\.com\\/.*\\/mods\\/[0-9]*\\?tab=files&file_id=[0-9]*/,()=>ifElement("button#slowDownloadButton[data-download-url]",b=>safelyNavigate(b.getAttribute("data-download-url"))))
 				domainBypass("xlink.cc",()=>safelyNavigate(JSON.parse(atob(window.bootstrapData)).linkResponse.link.long_url))
 				domainBypass("1shortlink.com",()=>awaitElement("#redirect-link[data-href]",a=>safelyNavigate(a.getAttribute("data-href"))))
@@ -1235,6 +1229,11 @@ if(document instanceof HTMLDocument)
 				if(document.querySelector("#yangDihilangkan > a")&&document.querySelector("#downloadArea > .text-center"))//rathestation.bid
 				{
 					safelyNavigate(document.querySelector("#yangDihilangkan > a").href)
+					return finish()
+				}
+				if(document.querySelector("a#btn-main.disabled")&&typeof Countdown=="function")//cpmlink.net
+				{
+					safelyNavigate(document.querySelector("a#btn-main.disabled").href)
 					return finish()
 				}
 				if(document.querySelector("a.redirectBTN.disabled")&&document.querySelector(".timer"))//Arablionz.online
