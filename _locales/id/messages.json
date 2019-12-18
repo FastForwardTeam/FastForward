@@ -24,7 +24,7 @@
 		"message": "Universal Bypass sudah membypass % situs untuk anda."
 	},
 	"support": {
-		"message": "Dukungan untuk Universal Bypass."
+		"message": "Dukung Universal Bypass."
 	},
 	"options": {
 		"message": "Opsi"
@@ -45,7 +45,7 @@
 		"message": "Langsung arahkan ke halaman tujuan pelacak."
 	},
 	"optionsBlockIPLoggers": {
-		"message": "Memblokir IP Logger jika tidak dapat dilewati."
+		"message": "Blokir IP logger jika tidak dapat dilewati."
 	},
 	"optionsCrowdBypass": {
 		"message": "Memberi dan mendapatkan tujuan dari pemendek link yang tidak dapat dibypass. (Crowd bypass)"
@@ -90,7 +90,7 @@
 		"message": "Situs web ini telah ter-bypass oleh fitur crowd bypass, yang mana telah anda nonaktifkan fiturnya didalam opsi pengaturan."
 	},
 	"crowdBypassed": {
-		"message": "Anda mungkin tidak perlu melewati !"
+		"message": "Anda mungkin tidak perlu menunggu!"
 	},
 	"crowdBypassedInfo": {
 		"message": "Pengguna Universal Bypass lainnya sudah melewatinya untuk anda dan melaporkan bahwa tautan ini menuju ke %"
