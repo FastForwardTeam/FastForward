@@ -538,7 +538,7 @@ if(document instanceof HTMLDocument)
 								let json=JSON.parse(xhr.responseText)
 								if(json&&json.data.target)
 								{
-									location.assign(json.data.target)
+									safelyNavigate(json.data.target)
 								}
 							})
 						})
