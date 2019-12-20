@@ -47,7 +47,7 @@ isGoodLink=link=>{
 },
 countIt=()=>brws.storage.local.set({bypass_counter:++bypassCounter})
 
-//Install handler
+// Install handler
 brws.runtime.onInstalled.addListener(details=>{
 	if(details.reason=="install")
 	{
@@ -55,8 +55,8 @@ brws.runtime.onInstalled.addListener(details=>{
 	}
 })
 
-//Keeping track of options
-var enabled=true,instantNavigation=true,trackerBypassEnabled=true,instantNavigationTrackers=false,blockIPLoggers=true,crowdEnabled=true,infoBoxEnabled=true,userscript="",bypassCounter=0,refererCache={}
+// Keeping track of options
+var bypassCounter=0,enabled=true,instantNavigation=true,trackerBypassEnabled=true,instantNavigationTrackers=false,blockIPLoggers=true,crowdEnabled=true,infoBoxEnabled=true,userScript=""
 brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_instant_navigation_trackers","allow_ip_loggers","crowd_bypass_opt_out","crowd_open_delay","no_info_box"],res=>{
 	if(res)
 	{
@@ -98,7 +98,8 @@ brws.storage.local.get(["userscript","bypass_counter"],res=>{
 	{
 		if(res.userscript)
 		{
-			userscript=res.userscript
+			userScript=res.userscript
+			refreshInjectionScript()
 		}
 		if(res.bypass_counter)
 		{
@@ -157,16 +158,88 @@ brws.storage.onChanged.addListener(changes=>{
 	}
 	if(changes.userscript)
 	{
-		userscript=changes.userscript.newValue
+		userScript=changes.userscript.newValue
+		refreshInjectionScript()
 	}
 })
 
-//Messaging
+// Injection Script Management
+let injectionScript = "", upstreamInjectionScript = "", upstreamCommit, channel = {}
+const downloadInjectionScript = () => new Promise(callback => {
+	const finishDownload = () => {
+		channel = {}
+		;["stop_watching","crowd_path","crowd_query","crowd_queried","crowd_contribute","adlinkfly_info","adlinkfly_target"].forEach(name => {
+			upstreamInjectionScript = upstreamInjectionScript.split("{{channel."+name+"}}").join(channel[name] = "data-"+Math.random().toString().substr(2))
+		})
+		;["crowdWait","crowdDisabled","infoBoxHide"].forEach(name => {
+			upstreamInjectionScript = upstreamInjectionScript.split("{{msg."+name+"}}").join(brws.i18n.getMessage(name).split("\\").join("\\\\").split("\"").join("\\\""))
+		})
+		upstreamInjectionScript = upstreamInjectionScript.split("{{icon/48.png}}").join(brws.runtime.getURL("icon/48.png"))
+		refreshInjectionScript()
+		callback(true)
+	}
+	chrome.runtime.getPackageDirectoryEntry(root => root.createReader().readEntries(res => {
+		let found = false
+		res.forEach(file => {
+			if(file.name == "injection_script.js")
+			{
+				found = true
+				file.file(file => {
+					const reader = new FileReader()
+					reader.onloadend = () => {
+						upstreamInjectionScript = reader.result
+						finishDownload()
+					}
+					reader.readAsText(file)
+				})
+			}
+		})
+		if(!found)
+		{
+			let xhr = new XMLHttpRequest()
+			xhr.onload = () => {
+				const latestCommit = JSON.parse(xhr.responseText).sha
+				if(latestCommit == upstreamCommit)
+				{
+					callback(false)
+				}
+				else
+				{
+					upstreamCommit = latestCommit
+					xhr = new XMLHttpRequest()
+					xhr.onload = () => {
+						upstreamInjectionScript = xhr.responseText
+						finishDownload()
+					}
+					xhr.open("GET", "https://raw.githubusercontent.com/timmyRS/Universal-Bypass/" + upstreamCommit + "/injection_script.js", true)
+					xhr.send()
+				}
+			}
+			xhr.open("GET", "https://api.github.com/repos/timmyRS/Universal-Bypass/commits/master", true)
+			xhr.send()
+		}
+	}))
+}),
+refreshInjectionScript = () => {
+	injectionScript = upstreamInjectionScript + "\n" + userScript
+}
+downloadInjectionScript()
+brws.alarms.create("update-injection-script", {periodInMinutes: 60})
+brws.alarms.onAlarm.addListener(alert => {
+	console.assert(alert.name == "update-injection-script")
+	downloadInjectionScript()
+})
+
+// Messaging
 brws.runtime.onMessage.addListener((req, sender, respond) => {
 	switch(req.type)
 	{
-		case "can-run":
-		respond({enabled, crowdEnabled, infoBoxEnabled, userscript})
+		case "content":
+		respond({enabled, channel, crowdEnabled, infoBoxEnabled, injectionScript})
+		break;
+
+		case "options":
+		respond({upstreamCommit, bypassCounter, userScript})
 		break;
 
 		case "open-tab":
@@ -194,32 +267,43 @@ brws.runtime.onMessage.addListener((req, sender, respond) => {
 	}
 })
 brws.runtime.onConnect.addListener(port => {
-	console.assert(port.name == "adlinkfly-info")
-	port.onMessage.addListener(msg => {
-		let xhr=new XMLHttpRequest(),t="",iu=msg
-		xhr.onload=()=>{
-			let i=new DOMParser().parseFromString(xhr.responseText,"text/html").querySelector("img[src^='//api.miniature.io']")
-			if(i)
-			{
-				let url=new URL(i.src)
-				if(url.search&&url.search.indexOf("url="))
+	switch(port.name)
+	{
+		case "update":
+		downloadInjectionScript().then(success => port.postMessage({success, upstreamCommit}))
+		break;
+
+		case "adlinkfly-info":
+		port.onMessage.addListener(msg => {
+			let xhr=new XMLHttpRequest(),t="",iu=msg
+			xhr.onload=()=>{
+				let i=new DOMParser().parseFromString(xhr.responseText,"text/html").querySelector("img[src^='//api.miniature.io']")
+				if(i)
 				{
-					t=decodeURIComponent(url.search.split("url=")[1].split("&")[0])
+					let url=new URL(i.src)
+					if(url.search&&url.search.indexOf("url="))
+					{
+						t=decodeURIComponent(url.search.split("url=")[1].split("&")[0])
+					}
 				}
+				port.postMessage(t)
 			}
-			port.postMessage(t)
-		}
-		xhr.onerror=()=>port.postMessage(t)
-		if(iu.substr(-1) != "/")
-		{
-			iu += "/"
-		}
-		xhr.open("GET", iu+"info", true)
-		xhr.send()
-	})
+			xhr.onerror=()=>port.postMessage(t)
+			if(iu.substr(-1) != "/")
+			{
+				iu += "/"
+			}
+			xhr.open("GET", iu+"info", true)
+			xhr.send()
+		})
+		break;
+
+		default:
+		console.warn("Invalid connection:", port)
+	}
 })
 
-//Internal redirects to extension URLs to bypass content script limitations
+// Internal redirects to extension URLs to bypass content script limitations
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(details.url.substr(38)=="1")
 	{
@@ -236,6 +320,17 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	return encodedRedirect(arr[0],arr[1])
 },{types:["main_frame"],urls:["*://universal-bypass.org/bypassed?target=*&referer=*"]},["blocking"])
 
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	countIt()
+	return {redirectUrl:brws.runtime.getURL("html/crowd-bypassed.html")+details.url.substr(43)}
+},{types:["main_frame"],urls:["https://universal-bypass.org/crowd-bypassed?*"]},["blocking"])
+
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	return {redirectUrl:brws.runtime.getURL("html/options.html")+details.url.substr(36)}
+},{types:["main_frame"],urls:["https://universal-bypass.org/options"]},["blocking"])
+
+// Navigation handling including presenting referer header to destinations
+var refererCache={}
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	let arr=details.url.substr(45).split("&referer=")
 	arr[0]=(new URL(decodeURIComponent(arr[0]))).toString()
@@ -280,16 +375,7 @@ brws.webRequest.onCompleted.addListener(details=>{
 	}
 },{types:["main_frame"],urls:["<all_urls>"]})
 
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	countIt()
-	return {redirectUrl:brws.runtime.getURL("html/crowd-bypassed.html")+details.url.substr(43)}
-},{types:["main_frame"],urls:["https://universal-bypass.org/crowd-bypassed?*"]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	return {redirectUrl:brws.runtime.getURL("html/options.html")+details.url.substr(36)}
-},{types:["main_frame"],urls:["https://universal-bypass.org/options"]},["blocking"])
-
-//Preflight Bypasses
+// Preflight Bypasses
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{

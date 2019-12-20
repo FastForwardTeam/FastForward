@@ -17,6 +17,15 @@
 	"changelog": {
 		"message": "Changelog"
 	},
+	"update": {
+		"message": "Check for updates"
+	},
+	"updateYes": {
+		"message": "Sucessfully updated injection script!"
+	},
+	"updateNo": {
+		"message": "Already up-to-date."
+	},
 	"faq": {
 		"message": "Frequently Asked Questions (FAQ)"
 	},

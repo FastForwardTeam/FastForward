@@ -42,7 +42,7 @@ $build = createZip("Universal Bypass.zip");
 $firefox = createZip("Universal Bypass for Firefox.zip");
 foreach($index as $fn)
 {
-	if($fn == "README.md")
+	if($fn == "README.md" || $fn == "injection_script.js")
 	{
 		continue;
 	}
