@@ -1039,6 +1039,11 @@ if(document instanceof HTMLDocument)
 						}
 					},100)
 				}
+				//Adf.ly Enable Notifications Page
+				if(document.getElementById("adfly_bar")!==null&&typeof urlb=="string")
+				{
+					safelyNavigate(urlb)
+				}
 				//Adf.ly Pre-Redirect Page
 				if(location.pathname.substr(0,13)=="/redirecting/"&&document.querySelector("p[style]").textContent=="For your safety, never enter your password unless you're on the real Adf.ly site.")
 				{
