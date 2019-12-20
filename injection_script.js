@@ -978,6 +978,9 @@ ensureDomLoaded(()=>{
 		}
 		a.href+=qe.textContent+a.textContent.toLowerCase()
 	}))
+	domainBypass("wizardsubs.com",()=>document.querySelectorAll("a[href^='https://wizardsubs.com?408631a1f0=']").forEach(a=>{
+		a.href+="#bypassClipboard="+location.pathname.split("/").join("").split("-").join("")+a.parentNode.textContent.split(":")[0].split(" ").join("").toLowerCase()
+	}))
 	hrefBypass(/stayonline\.pro\/l\/(.*)\//,m=>$.post(endpoint,{id:m[1],ref:""},r=>safelyNavigate(r.data.value)))
 	hrefBypass(/nexusmods\.com\/.*\/mods\/[0-9]*\?tab=files&file_id=[0-9]*/,()=>ifElement("button#slowDownloadButton[data-download-url]",b=>safelyNavigate(b.getAttribute("data-download-url"))))
 	domainBypass("xlink.cc",()=>safelyNavigate(JSON.parse(atob(window.bootstrapData)).linkResponse.link.long_url))

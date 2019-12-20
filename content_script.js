@@ -44,7 +44,26 @@ if(document instanceof HTMLDocument)
 					{
 						if(xhr.status==200&&xhr.responseText!="")
 						{
-							location.assign("https://universal-bypass.org/crowd-bypassed?target="+encodeURIComponent(xhr.responseText)+"&referer="+encodeURIComponent(!bypassClipboard||["linegee.net", "sweetlantern.com", "intercelestial.com"].indexOf(domain)<0?location.href:"https://pahe.in/?dd1fa7bc42="+bypassClipboard))
+							let referer=location.href
+							if(bypassClipboard&&location.href.indexOf("?id=")>-1)
+							{
+								switch(domain)
+								{
+									case "pahe.in":
+									case "linegee.net":
+									case "sweetlantern.com":
+									case "intercelestial.com":
+									referer="https://pahe.in/?dd1fa7bc42="+location.href.split("?id=")[1]
+									break;
+
+									case "wizardsubs.com":
+									case "zaqe.xyz":
+									referer="https://wizardsubs.com/?408631a1f0="+location.href.split("?id=")[1]
+									break;
+								}
+								referer+="#bypassClipboard="+bypassClipboard
+							}
+							location.assign("https://universal-bypass.org/crowd-bypassed?target="+encodeURIComponent(xhr.responseText)+"&referer="+encodeURIComponent(referer))
 							//The background script will intercept the request and redirect to html/crowd-bypassed.html
 						}
 						else
