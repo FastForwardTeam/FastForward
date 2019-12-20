@@ -404,7 +404,7 @@ domainBypass(/wadooo\.com|gotravelgo\.space|pantauterus\.me|liputannubi\.net/,()
 domainBypass("lnk.news",()=>ifElement("#skip_form",f=>goToUrl(),ifElement("#display_go_form",f=>f.submit())))
 hrefBypass(/uiz\.io\/go/,()=>{
 	Object.freeze(location)
-	const regex=/.*window\\.location\\.href = "(http[^"]+)";.*/
+	const regex=/.*window\.location\.href = "(http[^"]+)";.*/
 	document.querySelectorAll("script").forEach(script=>{
 		let matches=regex.exec(script.textContent)
 		console.log(matches)
@@ -478,7 +478,7 @@ domainBypass(/linkvertise\.(com|net)|link-to\.net/,()=>{
 			xhr.send()
 		}
 		xhrget(()=>{
-			const regex=/random\\:"([^"]+)"/
+			const regex=/random\:"([^"]+)"/
 			let matches=regex.exec(xhr.responseText)
 			if(matches&&matches[1])
 			{
@@ -1426,7 +1426,7 @@ ensureDomLoaded(()=>{
 		//GemPixel/KBRMedia Premium URL Shortener
 		if(typeof appurl=="string"&&typeof token=="string")
 		{
-			const regex=/var count = [0-9]*;var countdown = setInterval\\\(function\\\(\\\){\\\$\\\("[a-z\\\-.# ]+"\\\)(\\\.attr\\\("href","#pleasewait"\\\))?(\\\.attr\\\("disabled",""\\\))?\\\.html\\\(count( \\\+ ".+")?\\\);if \\\(count < 1\\\) {clearInterval\\\(countdown\\\);(\\\$\\\("[a-z\\\-.# ]+"\\\)\\\.attr\\\("href",|window\\\.location=)"(https?:\\\/\\\/[^"]+)"( \\\+ hash)?\\\)?(\\\.removeAttr\\\("disabled"\\\)\\\.removeClass\\\("disabled"\\\))?(\\\.html\\\(".+"\\\))?;}count--;}, 1000\\\);/
+			const regex=/var count = [0-9]*;var countdown = setInterval\(function\(\){\$\("[a-z\-.# ]+"\)(\.attr\("href","#pleasewait"\))?(\.attr\("disabled",""\))?\.html\(count( \+ ".+")?\);if \(count < 1\) {clearInterval\(countdown\);(\$\("[a-z\-.# ]+"\)\.attr\("href",|window\.location=)"(https?:\/\/[^"]+)"( \+ hash)?\)?(\.removeAttr\("disabled"\)\.removeClass\("disabled"\))?(\.html\(".+"\))?;}count--;}, 1000\);/
 			let contribute=false
 			document.querySelectorAll("script").forEach(script=>{
 				let matches=regex.exec(script.textContent)
