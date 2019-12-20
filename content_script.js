@@ -509,39 +509,40 @@ if(document instanceof HTMLDocument)
 					},
 					pause:()=>{}
 				}]}
-				let xhr=new XMLHttpRequest(),
-				url="/main-es5.f1fb1c6609d5e9bbcd58.js",
-				o={timestamp:new Date().getTime()}
-				const xhrget=f=>{
-					xhr.onload=f
-					xhr.open("GET",url)
-					xhr.send()
-				}
-				xhrget(()=>{
-					const regex=/random\\:"([^"]+)"/
-					let matches=regex.exec(xhr.responseText)
-					if(matches&&matches[1])
-					{
-						o.random=matches[1]
-						url="https://linkvertise.net/api/v1/redirect/link/static"+location.pathname
+				ensureDomLoaded(()=>{
+					let xhr=new XMLHttpRequest(),
+					script=document.querySelectorAll("script[src]"),
+					url=script[script.length-1].src,
+					o={timestamp:new Date().getTime()}
+					const xhrget=f=>{
+						xhr.onload=f
+						xhr.open("GET",url)
+						xhr.send()
 					}
 					xhrget(()=>{
-						let json=JSON.parse(xhr.responseText)
-						if(json&&json.data.link.id)
+						const regex=/random\\:"([^"]+)"/
+						let matches=regex.exec(xhr.responseText)
+						if(matches&&matches[1])
 						{
-							o.link_id=json.data.link.id
-							url="https://linkvertise.net/api/v1/redirect/link"+location.pathname+"/target?serial="+btoa(JSON.stringify(o))
+							o.random=matches[1]
+							url="https://linkvertise.net/api/v1/redirect/link/static"+location.pathname
 						}
 						xhrget(()=>{
 							let json=JSON.parse(xhr.responseText)
-							if(json&&json.data.target)
+							if(json&&json.data.link.id)
 							{
-								safelyNavigate(json.data.target)
+								o.link_id=json.data.link.id
+								url="https://linkvertise.net/api/v1/redirect/link"+location.pathname+"/target?serial="+btoa(JSON.stringify(o))
 							}
+							xhrget(()=>{
+								let json=JSON.parse(xhr.responseText)
+								if(json&&json.data.target)
+								{
+									safelyNavigate(json.data.target)
+								}
+							})
 						})
 					})
-				})
-				ensureDomLoaded(()=>{
 					var div = document.createElement('div');
 					div.id = "ogxzi8ZzrLy8S4zhUwyc3jPMlXi1h91bA0bASIiZtyT6cOTlX78HtEyXTK0WUGCY3CO8E4hBYI02ZD9mr7jit7R1YqPdkllJ";
 					document.body.appendChild(div);
