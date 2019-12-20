@@ -1,4 +1,4 @@
-//If you want to insert your own bypass, please search for "Insertion point"
+//If you want to add your own bypass, go to injection_script.js
 if(document instanceof HTMLDocument)
 {
 	let clipboardIndex=location.hash.indexOf("#bypassClipboard="),ignoreCrowdBypass=false,bypassClipboard=""
