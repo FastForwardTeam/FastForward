@@ -693,7 +693,15 @@ ensureDomLoaded(()=>{
 			a.onclick()
 		})
 	})
-	domainBypass("shirosafe.web.id",()=>safelyNavigate(document.querySelector("#generate > center > a[style]").href))
+	domainBypass("shirosafe.my.id",()=>{
+		ifElement("meta[http-equiv='refresh'][content]",m=>{
+			let c=m.content.replace(/'/g,"")
+			if(c.indexOf(";url=")>-1)
+			{
+				safelyNavigate(c.split(";url=")[1])
+			}
+		})
+	})
 	domainBypass("binbox.io",()=>{
 		let xhr=new XMLHttpRequest()
 		xhr.onload=()=>{
