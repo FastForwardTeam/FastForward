@@ -178,47 +178,36 @@ const downloadInjectionScript = () => new Promise(callback => {
 		refreshInjectionScript()
 		callback(true)
 	}
-	chrome.runtime.getPackageDirectoryEntry(root => root.createReader().readEntries(res => {
-		let found = false
-		res.forEach(file => {
-			if(file.name == "injection_script.js")
+	let xhr = new XMLHttpRequest()
+	xhr.onload = () => {
+		upstreamInjectionScript = xhr.responseText
+		finishDownload()
+	}
+	xhr.onerror = () => {
+		let xhr = new XMLHttpRequest()
+		xhr.onload = () => {
+			const latestCommit = JSON.parse(xhr.responseText).sha
+			if(latestCommit == upstreamCommit)
 			{
-				found = true
-				file.file(file => {
-					const reader = new FileReader()
-					reader.onloadend = () => {
-						upstreamInjectionScript = reader.result
-						finishDownload()
-					}
-					reader.readAsText(file)
-				})
+				callback(false)
 			}
-		})
-		if(!found)
-		{
-			let xhr = new XMLHttpRequest()
-			xhr.onload = () => {
-				const latestCommit = JSON.parse(xhr.responseText).sha
-				if(latestCommit == upstreamCommit)
-				{
-					callback(false)
+			else
+			{
+				upstreamCommit = latestCommit
+				xhr = new XMLHttpRequest()
+				xhr.onload = () => {
+					upstreamInjectionScript = xhr.responseText
+					finishDownload()
 				}
-				else
-				{
-					upstreamCommit = latestCommit
-					xhr = new XMLHttpRequest()
-					xhr.onload = () => {
-						upstreamInjectionScript = xhr.responseText
-						finishDownload()
-					}
-					xhr.open("GET", "https://raw.githubusercontent.com/timmyRS/Universal-Bypass/" + upstreamCommit + "/injection_script.js", true)
-					xhr.send()
-				}
+				xhr.open("GET", "https://raw.githubusercontent.com/timmyRS/Universal-Bypass/" + upstreamCommit + "/injection_script.js", true)
+				xhr.send()
 			}
-			xhr.open("GET", "https://api.github.com/repos/timmyRS/Universal-Bypass/commits/master", true)
-			xhr.send()
 		}
-	}))
+		xhr.open("GET", "https://api.github.com/repos/timmyRS/Universal-Bypass/commits/master", true)
+		xhr.send()
+	}
+	xhr.open("GET", brws.runtime.getURL("injection_script.js"), true)
+	xhr.send()
 }),
 refreshInjectionScript = () => {
 	injectionScript = upstreamInjectionScript + "\n" + userScript
