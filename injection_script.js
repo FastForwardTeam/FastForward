@@ -981,6 +981,14 @@ ensureDomLoaded(()=>{
 	domainBypass("wizardsubs.com",()=>document.querySelectorAll("a[href^='https://wizardsubs.com?408631a1f0=']").forEach(a=>{
 		a.href+="#bypassClipboard="+location.pathname.split("/").join("").split("-").join("")+a.parentNode.textContent.split(":")[0].split(" ").join("").toLowerCase()
 	}))
+	domainBypass("channelmyanmar.org",()=>document.querySelectorAll("a[href^='https://channelmyanmar.org?1c17f28bf0=']").forEach(a=>{
+		let qe=a.previousElementSibling
+		while(qe&&qe.tagName!="H2")
+		{
+			qe=qe.previousElementSibling
+		}
+		a.href+="#bypassClipboard="+location.pathname.split("/").join("").split("-").join("")+qe.textContent.split(" ").join("").split("(").join("-").split(")").join("-").toLowerCase()
+	}))
 	hrefBypass(/stayonline\.pro\/l\/(.*)\//,m=>$.post(endpoint,{id:m[1],ref:""},r=>safelyNavigate(r.data.value)))
 	hrefBypass(/nexusmods\.com\/.*\/mods\/[0-9]*\?tab=files&file_id=[0-9]*/,()=>ifElement("button#slowDownloadButton[data-download-url]",b=>safelyNavigate(b.getAttribute("data-download-url"))))
 	domainBypass("xlink.cc",()=>safelyNavigate(JSON.parse(atob(window.bootstrapData)).linkResponse.link.long_url))

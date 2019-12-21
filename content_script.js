@@ -60,6 +60,11 @@ if(document instanceof HTMLDocument)
 									case "zaqe.xyz":
 									referer="https://wizardsubs.com/?408631a1f0="+location.href.split("?id=")[1]
 									break;
+
+									case "channelmyanmar.org":
+									case "roda.site":
+									referer="https://channelmyanmar.org?1c17f28bf0="+location.href.split("?id=")[1]
+									break;
 								}
 								referer+="#bypassClipboard="+bypassClipboard
 							}
