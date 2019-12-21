@@ -21,7 +21,7 @@
 		"message": "Check for updates"
 	},
 	"updateYes": {
-		"message": "Successfully updated injection script!"
+		"message": "Successfully updated the injection script!"
 	},
 	"updateNo": {
 		"message": "Already up-to-date."
