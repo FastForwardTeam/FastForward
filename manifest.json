@@ -12,7 +12,6 @@
 	"description": "__MSG_appDesc__",
 	"homepage_url": "https://universal-bypass.org/",
 	"version": "12.0",
-	"version_name": "12.0-dev",
 	"author": "Tim \"timmyRS\" Speckhals",
 	"permissions": [
 		"alarms",
