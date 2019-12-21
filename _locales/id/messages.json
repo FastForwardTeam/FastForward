@@ -6,16 +6,25 @@
 		"message": "Terima kasih anda sudah menginstal Universal Bypass!"
 	},
 	"firstrunSubtitle": {
-		"message": "Anda benar-benar luar biasa !"
+		"message": "Anda luar biasa!"
 	},
 	"firstrunNoScript": {
-		"message": "Akan tetapi, anda sepertinya menggunakan ekstensi NoScript atau yang menyerupai itu, Karena itu Universal Bypass tidak kompatibel dengannya."
+		"message": "Akan tetapi, anda sepertinya menggunakan ekstensi NoScript atau yang menyerupai itu, karena itu Universal Bypass tidak kompatibel dengannya."
 	},
 	"version": {
 		"message": "Versi"
 	},
 	"changelog": {
 		"message": "Catatan perubahan"
+	},
+	"update": {
+		"message": "Periksa pembaruan"
+	},
+	"updateYes": {
+		"message": "Skrip injeksi berhasil diperbarui!"
+	},
+	"updateNo": {
+		"message": "Sudah paling terbaru."
 	},
 	"faq": {
 		"message": "Pertanyaan yang Sering Diajukan\n(FAQ)"
@@ -27,7 +36,7 @@
 		"message": "Dukung Universal Bypass."
 	},
 	"options": {
-		"message": "Opsi"
+		"message": "Pilihan"
 	},
 	"optionsLink": {
 		"message": "Ganti pengaturan Universal Bypass."
@@ -51,10 +60,10 @@
 		"message": "Memberi dan mendapatkan tujuan dari pemendek link yang tidak dapat dibypass. (Crowd bypass)"
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Membuka halaman tujuan crowd bypass di tab baru setelah % detik. (0 = instan.)"
+		"message": "Buka halaman tujuan crowd bypass di tab baru setelah % detik. (0 = instan.)"
 	},
 	"optionsInfoBox": {
-		"message": "Menampilkan pesan informasi di beberapa situs."
+		"message": "Tampilkan pesan informasi di beberapa situs."
 	},
 	"privacyPolicy": {
 		"message": "Kebijakan Pribadi"
@@ -90,7 +99,7 @@
 		"message": "Situs web ini telah ter-bypass oleh fitur crowd bypass, yang mana telah anda nonaktifkan fiturnya didalam opsi pengaturan."
 	},
 	"crowdBypassed": {
-		"message": "Anda mungkin tidak perlu menunggu!"
+		"message": "Anda mungkin tidak perlu melewati!"
 	},
 	"crowdBypassedInfo": {
 		"message": "Pengguna Universal Bypass lainnya sudah melewatinya untuk anda dan melaporkan bahwa tautan ini menuju ke %"

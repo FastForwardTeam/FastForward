@@ -17,6 +17,15 @@
 	"changelog": {
 		"message": "Cathetan perubahan"
 	},
+	"update": {
+		"message": "Priksa gawe nganyari"
+	},
+	"updateYes": {
+		"message": "Skrip injeksi berhasil dianyari!"
+	},
+	"updateNo": {
+		"message": "wis sing paling anyar."
+	},
 	"faq": {
 		"message": "Pitakon Seng Umum (FAQ)"
 	},

@@ -17,6 +17,15 @@
 	"changelog": {
 		"message": "Ændringslog"
 	},
+	"update": {
+		"message": "Se efter opdateringer"
+	},
+	"updateYes": {
+		"message": "Injektions-script opdateret!"
+	},
+	"updateNo": {
+		"message": "Allerede opdateret."
+	},
 	"faq": {
 		"message": "Ofte stilte spørgsmål (FAQ)"
 	},

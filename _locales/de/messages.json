@@ -17,6 +17,15 @@
 	"changelog": {
 		"message": "Änderungsverlauf"
 	},
+	"update": {
+		"message": "Nach Updates suchen"
+	},
+	"updateYes": {
+		"message": "Das Injektion-Skript wurde erfolgreich aktualisiert!"
+	},
+	"updateNo": {
+		"message": "Bereits auf dem neuesten Stand."
+	},
 	"faq": {
 		"message": "Häufig gestellte Fragen (FAQ)"
 	},

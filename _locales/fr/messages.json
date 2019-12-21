@@ -17,6 +17,15 @@
 	"changelog": {
 		"message": "Notes de version"
 	},
+	"update": {
+		"message": "Vérifier les mises à jour"
+	},
+	"updateYes": {
+		"message": "Script d'injection mis à jour avec succès !"
+	},
+	"updateNo": {
+		"message": "Universal Bypass est déjà à jour."
+	},
 	"faq": {
 		"message": "Questions fréquemment posées (FAQ)"
 	},

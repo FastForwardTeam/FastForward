@@ -17,6 +17,15 @@
 	"changelog": {
 		"message": "Değişiklik kütüğü"
 	},
+	"update": {
+		"message": "Güncellemeleri kontrol et"
+	},
+	"updateYes": {
+		"message": "Enjeksiyon scripti başarıyla güncellendi!"
+	},
+	"updateNo": {
+		"message": "Zaten güncel."
+	},
 	"faq": {
 		"message": "Sıkça Sorulan Sorular (SSS)"
 	},

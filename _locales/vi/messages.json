@@ -17,6 +17,15 @@
 	"changelog": {
 		"message": "Thay đổi"
 	},
+	"update": {
+		"message": "Kiểm tra cập nhật"
+	},
+	"updateYes": {
+		"message": "Đã cập nhật đoạn mã ảnh hưởng!"
+	},
+	"updateNo": {
+		"message": "Đã cập nhật rồi."
+	},
 	"faq": {
 		"message": "Câu hỏi thường gặp (FAQ)"
 	},

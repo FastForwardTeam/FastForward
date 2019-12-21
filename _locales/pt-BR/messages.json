@@ -17,6 +17,15 @@
 	"changelog": {
 		"message": "Lista de mudanças"
 	},
+	"update": {
+		"message": "Verificar atualizações"
+	},
+	"updateYes": {
+		"message": "Script de injeção atualizado com sucesso!"
+	},
+	"updateNo": {
+		"message": "Já está atualizado."
+	},
 	"faq": {
 		"message": "Perguntas Frequentes (FAQ)"
 	},
