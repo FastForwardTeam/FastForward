@@ -262,8 +262,23 @@ brws.runtime.onConnect.addListener(port => {
 		downloadInjectionScript().then(success => port.postMessage({success, upstreamCommit}))
 		break;
 
+		case "crowd-query":
+		port.onMessage.addListener(msg=>{
+			let xhr=new XMLHttpRequest()
+			xhr.onreadystatechange=()=>{
+				if(xhr.readyState==4)
+				{
+					port.postMessage(xhr.status==200&&xhr.responseText!=""?xhr.responseText:"")
+				}
+			}
+			xhr.open("POST","https://universal-bypass.org/crowd/query_v1",true)
+			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+			xhr.send("domain="+encodeURIComponent(msg.domain)+"&path="+encodeURIComponent(msg.crowdPath))
+		})
+		break;
+
 		case "adlinkfly-info":
-		port.onMessage.addListener(msg => {
+		port.onMessage.addListener(msg=>{
 			let xhr=new XMLHttpRequest(),t="",iu=msg
 			xhr.onload=()=>{
 				let i=new DOMParser().parseFromString(xhr.responseText,"text/html").querySelector("img[src^='//api.miniature.io']")

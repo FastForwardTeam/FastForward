@@ -38,48 +38,44 @@ if(document instanceof HTMLDocument)
 			else if(document.documentElement.hasAttribute(channel.crowd_query))
 			{
 				document.documentElement.removeAttribute(channel.crowd_query)
-				let xhr=new XMLHttpRequest()
-				xhr.onreadystatechange=()=>{
-					if(xhr.readyState==4)
+				let port=brws.runtime.connect({name: "crowd-query"})
+				port.onMessage.addListener(msg=>{
+					if(msg=="")
 					{
-						if(xhr.status==200&&xhr.responseText!="")
-						{
-							let referer=location.href
-							if(bypassClipboard&&location.href.indexOf("?id=")>-1)
-							{
-								switch(domain)
-								{
-									case "pahe.in":
-									case "linegee.net":
-									case "sweetlantern.com":
-									case "intercelestial.com":
-									referer="https://pahe.in/?dd1fa7bc42="+location.href.split("?id=")[1]
-									break;
-
-									case "wizardsubs.com":
-									case "zaqe.xyz":
-									referer="https://wizardsubs.com/?408631a1f0="+location.href.split("?id=")[1]
-									break;
-
-									case "channelmyanmar.org":
-									case "roda.site":
-									referer="https://channelmyanmar.org?1c17f28bf0="+location.href.split("?id=")[1]
-									break;
-								}
-								referer+="#bypassClipboard="+bypassClipboard
-							}
-							location.assign("https://universal-bypass.org/crowd-bypassed?target="+encodeURIComponent(xhr.responseText)+"&referer="+encodeURIComponent(referer))
-							//The background script will intercept the request and redirect to html/crowd-bypassed.html
-						}
-						else
-						{
-							document.documentElement.setAttribute(channel.crowd_queried,"")
-						}
+						document.documentElement.setAttribute(channel.crowd_queried, "")
 					}
-				}
-				xhr.open("POST","https://universal-bypass.org/crowd/query_v1",true)
-				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
-				xhr.send("domain="+encodeURIComponent(domain)+"&path="+encodeURIComponent(crowdPath))
+					else
+					{
+						let referer=location.href
+						if(bypassClipboard&&location.href.indexOf("?id=")>-1)
+						{
+							switch(domain)
+							{
+								case "pahe.in":
+								case "linegee.net":
+								case "sweetlantern.com":
+								case "intercelestial.com":
+								referer="https://pahe.in/?dd1fa7bc42="+location.href.split("?id=")[1]
+								break;
+
+								case "wizardsubs.com":
+								case "zaqe.xyz":
+								referer="https://wizardsubs.com/?408631a1f0="+location.href.split("?id=")[1]
+								break;
+
+								case "channelmyanmar.org":
+								case "roda.site":
+								referer="https://channelmyanmar.org?1c17f28bf0="+location.href.split("?id=")[1]
+								break;
+							}
+							referer+="#bypassClipboard="+bypassClipboard
+						}
+						location.assign("https://universal-bypass.org/crowd-bypassed?target="+encodeURIComponent(msg)+"&referer="+encodeURIComponent(referer))
+						//The background script will intercept the request and redirect to html/crowd-bypassed.html
+					}
+					port.disconnect()
+				})
+				port.postMessage({domain, crowdPath})
 			}
 			else if(document.documentElement.hasAttribute(channel.crowd_contribute))
 			{
@@ -96,7 +92,7 @@ if(document instanceof HTMLDocument)
 				if(crowdPath==location.pathname.substr(1))
 				{
 					let port=brws.runtime.connect({name: "adlinkfly-info"})
-					port.onMessage.addListener(msg => {
+					port.onMessage.addListener(msg=>{
 						document.documentElement.setAttribute(channel.adlinkfly_target, msg)
 						port.disconnect()
 					})
