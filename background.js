@@ -382,11 +382,11 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		let url=details.url.substr(details.url.indexOf("&url=")+5)
 		if(url.substr(0,5)=="aHR0c")
 		{
-			url=atob(url)
+			url=atob(url.split("&")[0])
 		}
 		else if(url.substr(0,13)=="http%3A%2F%2F"||url.substr(0,14)=="https%3A%2F%2F")
 		{
-			url=decodeURIComponent(url)
+			url=decodeURIComponent(url.split("&")[0])
 		}
 		else
 		{
