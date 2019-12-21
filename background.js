@@ -556,7 +556,8 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 "*://*/p/*.html?url=*",
 "*://*.mispuani.xyz/*?url=*",
 "*://*.ad4msan.win/safe?url=*",
-"*://*.infotekno.net/vga?url=*"
+"*://*.infotekno.net/vga?url=*",
+"*://*.sehuruf.com/linkku/?url=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
