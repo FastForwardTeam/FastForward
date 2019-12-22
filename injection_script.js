@@ -853,10 +853,11 @@ ensureDomLoaded(()=>{
 	})
 	domainBypass(/spacetica\.com|linkpoi\.in/,()=>ifElement("a.btn.btn-primary[href]",a=>safelyNavigate(a.href)))
 	domainBypass("uiz.io",()=>{
-		ifElement("#go-adsredirect",f=>{
+		awaitElement("#go-adsredirect",f=>{
 			f.action+="#"+location.pathname.substr(1)
 			f.submit()
 		})
+		bypassed=false
 	})
 	hrefBypass(/mirrored\.to\/files\//,()=>ifElement("#dl_form button",b=>b.click()))
 	hrefBypass(/mirrored\.to\/downlink\//,()=>ifElement(".centered.highlight a[href]",a=>safelyNavigate(a.href)))
