@@ -289,7 +289,18 @@ ODP(window,"safelink",
 		}
 	},
 	get:()=>{
-		awaitElement(".bagi .link > .result > a[href]",a=>safelyNavigate(a.href))
+		ensureDomLoaded(()=>{
+			awaitElement(".bagi .link > .result > a[href]",a=>{
+				if(isGoodLink(a.href))
+				{
+					safelyNavigate(a.href)
+				}
+				else
+				{
+					a.click()
+				}
+			})
+		})
 		return actual_safelink
 	}
 })
@@ -788,7 +799,7 @@ ensureDomLoaded(()=>{
 			}, 200)
 		}, 200)
 	})
-	domainBypass(/((get-click2||informations-library)\.blogspot|business\.ominfoupdate)\.com|pastikan\.me/,()=>{
+	domainBypass(/((get-click2|informations-library)\.blogspot|business\.ominfoupdate)\.com|pastikan\.me/,()=>{
 		let u=aesCrypto.decrypt(convertstr(location.href.substr(location.href.indexOf("?o=")+3)),convertstr("root"))
 		if(isGoodLink(u))
 		{
