@@ -1016,13 +1016,18 @@ ensureDomLoaded(()=>{
 	hrefBypass(/nexusmods\.com\/.*\/mods\/[0-9]*\?tab=files&file_id=[0-9]*/,()=>ifElement("button#slowDownloadButton[data-download-url]",b=>safelyNavigate(b.getAttribute("data-download-url"))))
 	domainBypass("xlink.cc",()=>safelyNavigate(JSON.parse(atob(window.bootstrapData)).linkResponse.link.long_url))
 	domainBypass("1shortlink.com",()=>awaitElement("#redirect-link[data-href]",a=>safelyNavigate(a.getAttribute("data-href"))))
-	domainBypass("multiup.org",()=>document.querySelectorAll("form > button[namehost]").forEach(e=>{
+	domainBypass("multiup.org",()=>ifElement("form[target][onsubmit] button[type='submit']",b=>{
+		const f=document.querySelector("form[target][onsubmit]")
+		f.target="_self"
+		f.onsubmit=""
+		b.click()
+	},()=>document.querySelectorAll("form > button[namehost]").forEach(e=>{
 		let a=document.createElement("a")
 		a.href=e.getAttribute("link")
 		a.setAttribute("class",e.getAttribute("class"))
 		a.innerHTML='<i class="fa fa-fw fa-download"></i>'+e.textContent
 		e.closest("footer").replaceChild(a,e.parentNode)
-	}))
+	})))
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
