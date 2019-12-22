@@ -61,7 +61,6 @@ domainBypass=(domain,f)=>{
 	{
 		if(location.hostname==domain||location.hostname.substr(location.hostname.length-(domain.length+1))=="."+domain)
 		{
-			bypassed=true
 			f()
 		}
 	}
