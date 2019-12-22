@@ -425,6 +425,7 @@ hrefBypass(/uiz\.io\/go/,()=>{
 			contributeAndNavigate(matches[1])
 		}
 	})
+	bypassed=false
 })
 hrefBypass(/(prox77|agdd5br)\.com\/analyze\/(.+)/,m=>location.pathname="/result/"+m[2])
 hrefBypass(/sfile\.(mobi|xyz)/,()=>{
