@@ -421,11 +421,10 @@ hrefBypass(/uiz\.io\/go/,()=>{
 		console.log(matches)
 		if(matches&&matches[1])
 		{
-			crowdPath(location.hash.substr(1))
+			crowdPath(bypassClipboard)
 			contributeAndNavigate(matches[1])
 		}
 	})
-	bypassed=false
 })
 hrefBypass(/(prox77|agdd5br)\.com\/analyze\/(.+)/,m=>location.pathname="/result/"+m[2])
 hrefBypass(/sfile\.(mobi|xyz)/,()=>{
@@ -852,16 +851,11 @@ ensureDomLoaded(()=>{
 		})
 	})
 	domainBypass(/spacetica\.com|linkpoi\.in/,()=>ifElement("a.btn.btn-primary[href]",a=>safelyNavigate(a.href)))
-	domainBypass("uiz.io",()=>{
+	domainBypass("uiz.io",()=>crowdBypass(()=>{
 		awaitElement("#go-adsredirect",f=>{
-			ifElement("#go-adsredirect button",b=>{
-				f.action+="#"+location.pathname.substr(1)
-				f.innerHTML+='<input name="go-adsredirect-submits" value="'+b.value+'">'
-				f.submit()
-			})
+			f.action+="#bypassClipboard="+location.pathname.substr(1)
 		})
-		bypassed=false
-	})
+	}))
 	hrefBypass(/mirrored\.to\/files\//,()=>ifElement("#dl_form button",b=>b.click()))
 	hrefBypass(/mirrored\.to\/downlink\//,()=>ifElement(".centered.highlight a[href]",a=>safelyNavigate(a.href)))
 	hrefBypass(/new\.lewd\.ninja\/external\/game\/([0-9]+)\/([a-z0-9]{64})/,m=>{
