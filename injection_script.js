@@ -433,7 +433,7 @@ hrefBypass(/sfile\.(mobi|xyz)/,()=>{
 		set:a=>{
 			if(a&&a.href)
 			{
-				safelyNavigate(a.href)
+				location.href=a.href
 			}
 		}
 	})
