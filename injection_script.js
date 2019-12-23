@@ -855,6 +855,7 @@ ensureDomLoaded(()=>{
 	domainBypass("uiz.io",()=>{
 		awaitElement("#go-adsredirect",f=>{
 			f.action+="#"+location.pathname.substr(1)
+			f.innerHTML+='<input name="go-adsredirect-submit">'
 			f.submit()
 		})
 		bypassed=false
