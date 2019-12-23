@@ -854,8 +854,9 @@ ensureDomLoaded(()=>{
 	domainBypass(/spacetica\.com|linkpoi\.in/,()=>ifElement("a.btn.btn-primary[href]",a=>safelyNavigate(a.href)))
 	domainBypass("uiz.io",()=>{
 		awaitElement("#go-adsredirect",f=>{
+			let v=document.querySelector("#go-adsredirect > button[name='go-adsredirect-submit']").value
 			f.action+="#"+location.pathname.substr(1)
-			f.innerHTML+='<input name="go-adsredirect-submit">'
+			f.innerHTML+='<input name="go-adsredirect-submit" value="'+v+'">'
 			f.submit()
 		})
 		bypassed=false
