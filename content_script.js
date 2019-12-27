@@ -67,6 +67,11 @@ if(document instanceof HTMLDocument)
 								case "roda.site":
 								referer="https://channelmyanmar.org?1c17f28bf0="+location.href.split("?id=")[1]
 								break;
+
+								case "ad4msan.com":
+								case "infotekno.net":
+								referer="https://ad4msan.com?9c2a6bf968="+location.href.split("?id=")[1]
+								break;
 							}
 							referer+="#bypassClipboard="+bypassClipboard
 						}
