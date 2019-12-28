@@ -1000,12 +1000,19 @@ ensureDomLoaded(()=>{
 		a.href+="#bypassClipboard="+location.pathname.split("/").join("").split("-").join("")+a.parentNode.textContent.split(":")[0].split(" ").join("").toLowerCase()
 	}))
 	domainBypass("channelmyanmar.org",()=>document.querySelectorAll("a[href^='https://channelmyanmar.org?1c17f28bf0=']").forEach(a=>{
-		let qe=a.previousElementSibling
-		while(qe&&qe.tagName!="H2")
+		if(a.classList.contains("FLMBTN-Btn"))
 		{
-			qe=qe.previousElementSibling
+			let qe=a.previousElementSibling
+			while(qe&&qe.tagName!="H2")
+			{
+				qe=qe.previousElementSibling
+			}
+			a.href+="#bypassClipboard="+location.pathname.split("/").join("").split("-").join("")+qe.textContent.split(" ").join("").split("(").join("-").split(")").join("-").toLowerCase()+a.textContent.split(" ").join("").split("(").join("").split(")").join("").toLowerCase()
 		}
-		a.href+="#bypassClipboard="+location.pathname.split("/").join("").split("-").join("")+qe.textContent.split(" ").join("").split("(").join("-").split(")").join("-").toLowerCase()+a.textContent.split(" ").join("").split("(").join("").split(")").join("").toLowerCase()
+		else
+		{
+			a.href+="#bypassClipboard="+location.pathname.split("/").join("").split("-").join("")+a.parentNode.firstChild.textContent.toLocaleLowerCase().split(" ").join("").split("–").join("")+a.textContent.trim().toLowerCase()
+		}
 	}))
 	domainBypass("ad4msan.com",()=>document.querySelectorAll("a[href^='https://ad4msan.com?9c2a6bf968=']").forEach(a=>{
 		a.href+="#bypassClipboard="+a.parentNode.textContent.split("|")[0].split(" ").join("").split(".").join("").split("(").join("").split(")").join("").toLowerCase()+a.firstChild.src.split("https://ad4msan.com/")[1].split(".")[0].toLowerCase()
