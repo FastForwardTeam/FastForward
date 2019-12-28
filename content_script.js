@@ -72,6 +72,10 @@ if(document instanceof HTMLDocument)
 								case "infotekno.net":
 								referer="https://ad4msan.com?9c2a6bf968="+location.href.split("?id=")[1]
 								break;
+
+								case "oppa.kdramaindo.tv":
+								referer="https://oppa.kdramaindo.tv?38971fecb6="+location.href.split("?id=")[1]
+								break;
 							}
 							referer+="#bypassClipboard="+bypassClipboard
 						}
