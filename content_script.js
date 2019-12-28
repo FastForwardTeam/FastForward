@@ -49,32 +49,37 @@ if(document instanceof HTMLDocument)
 						let referer=location.href
 						if(bypassClipboard&&location.href.indexOf("?id=")>-1)
 						{
+							let id=location.href.split("?id=")[1]
 							switch(domain)
 							{
 								case "pahe.in":
 								case "linegee.net":
 								case "sweetlantern.com":
 								case "intercelestial.com":
-								referer="https://pahe.in/?dd1fa7bc42="+location.href.split("?id=")[1]
+								referer="https://pahe.in/?dd1fa7bc42="+id
 								break;
 
 								case "wizardsubs.com":
 								case "zaqe.xyz":
-								referer="https://wizardsubs.com/?408631a1f0="+location.href.split("?id=")[1]
+								referer="https://wizardsubs.com/?408631a1f0="+id
 								break;
 
 								case "channelmyanmar.org":
 								case "roda.site":
-								referer="https://channelmyanmar.org?1c17f28bf0="+location.href.split("?id=")[1]
+								referer="https://channelmyanmar.org?1c17f28bf0="+id
 								break;
 
 								case "ad4msan.com":
 								case "infotekno.net":
-								referer="https://ad4msan.com?9c2a6bf968="+location.href.split("?id=")[1]
+								referer="https://ad4msan.com?9c2a6bf968="+id
 								break;
 
 								case "oppa.kdramaindo.tv":
-								referer="https://oppa.kdramaindo.tv?38971fecb6="+location.href.split("?id=")[1]
+								referer="https://oppa.kdramaindo.tv?38971fecb6="+id
+								break;
+
+								case "mkvking.com":
+								referer="https://mkvking.com?c17421bdaf="+id
 								break;
 							}
 							referer+="#bypassClipboard="+bypassClipboard

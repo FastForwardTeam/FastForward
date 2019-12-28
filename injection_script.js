@@ -1020,6 +1020,9 @@ ensureDomLoaded(()=>{
 	domainBypass("oppa.kdramaindo.tv",()=>document.querySelectorAll("a[href^='https://oppa.kdramaindo.tv?38971fecb6=']").forEach(a=>{
 		a.href+="#bypassClipboard="+location.pathname.split("/").join("").split("-").join("")+a.parentNode.firstChild.textContent.toLowerCase().split(" ").join("").split("–").join("")+a.textContent.trim().toLowerCase()
 	}))
+	domainBypass("mkvking.com",()=>document.querySelectorAll("a[href^='https://mkvking.com?c17421bdaf=']").forEach(a=>{
+		a.href+="#bypassClipboard="+a.getAttribute("title").split("Download ").join("").split("(").join("").split(")").join("").split(" ").join("").toLowerCase()
+	}))
 	hrefBypass(/stayonline\.pro\/l\/(.*)\//,m=>$.post(endpoint,{id:m[1],ref:""},r=>safelyNavigate(r.data.value)))
 	hrefBypass(/nexusmods\.com\/.*\/mods\/[0-9]*\?tab=files&file_id=[0-9]*/,()=>ifElement("button#slowDownloadButton[data-download-url]",b=>safelyNavigate(b.getAttribute("data-download-url"))))
 	domainBypass("xlink.cc",()=>safelyNavigate(JSON.parse(atob(window.bootstrapData)).linkResponse.link.long_url))
