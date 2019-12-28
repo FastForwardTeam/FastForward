@@ -459,10 +459,6 @@ domainBypass("linkduit.net",()=>{
 	})
 	awaitElement("a.mirror_link[href]",a=>safelyNavigate(a.href))
 })
-domainBypass("mispuani.xyz",()=>{
-	window.setInterval=f=>setInterval(f,1)
-	awaitElement("button#buttondewa.mispuanibuttonlink",b=>b.onclick())
-})
 domainBypass("tik.lat",()=>{
 	window.setInterval=f=>setInterval(f,1)
 	awaitElement(".skip > .wait > .skip > .btn > a[href]",a=>safelyNavigate(a.href))
@@ -1030,6 +1026,11 @@ ensureDomLoaded(()=>{
 		a.innerHTML='<i class="fa fa-fw fa-download"></i>'+e.textContent
 		e.closest("footer").replaceChild(a,e.parentNode)
 	})))
+	domainBypass("mispuani.xyz",()=>{
+		let u=decodeURIComponent(location.href.substr(location.href.indexOf("?u=")+3)),
+		o=JSON.parse(CryptoJS.AES.decrypt(u,"MispuaniDewaGanteng").toString(CryptoJS.enc.Utf8))
+		safelyNavigate(o.url)
+	})
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
