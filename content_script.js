@@ -56,7 +56,7 @@ if(document instanceof HTMLDocument)
 								case "linegee.net":
 								case "sweetlantern.com":
 								case "intercelestial.com":
-								referer="https://pahe.in/?dd1fa7bc42="+id
+								referer="https://pahe.in?73e659772d="+id
 								break;
 
 								case "wizardsubs.com":
