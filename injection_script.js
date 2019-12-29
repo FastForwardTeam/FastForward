@@ -531,8 +531,16 @@ domainBypass(/acortalo\.(live|xyz)/,()=>{
 	}
 })
 domainBypass("apkpsp.com",()=>{
+	ODP(window,"downloadButton",{
+		set:a=>{
+			if(a&&a.href)
+			{
+				safelyNavigate(a.href)
+			}
+		}
+	})
 	window.setInterval=f=>setInterval(f,1)
-	awaitElement("a#download[href]",a=>safelyNavigate(a.href))
+	awaitElement("form[action^='/blog/golink.php']",f=>f.submit())
 })
 //Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
 hrefBypass(/(njiir|healthykk|linkasm|dxdrive|getwallpapers)\.com|punchsubs\.net|k2s\.cc|muhammadyoga\.me|u\.to|skiplink\.io|firefaucet\.win\/l\/|emulator\.games\/download\.php/,()=>window.setInterval=f=>setInterval(f,1))
