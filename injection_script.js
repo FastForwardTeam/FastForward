@@ -990,7 +990,7 @@ ensureDomLoaded(()=>{
 		}
 		awaitElement("a#skip_button[href]",a=>safelyNavigate(a.href))
 	})
-	domainBypass("pahe.in",()=>document.querySelectorAll("a.shortc-button.small[href^='https://pahe.in?dd1fa7bc42=']").forEach(a=>{
+	domainBypass("pahe.in",()=>document.querySelectorAll("a.shortc-button.small[href^='https://pahe.in?73e659772d=']").forEach(a=>{
 		let qe=a.previousElementSibling
 		while(qe&&qe.tagName!="B")
 		{
