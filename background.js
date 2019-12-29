@@ -210,7 +210,7 @@ const downloadInjectionScript = () => new Promise(callback => {
 	xhr.send()
 }),
 refreshInjectionScript = () => {
-	injectionScript = upstreamInjectionScript + "\n" + userScript
+	injectionScript = (upstreamInjectionScript + "\n" + userScript).split("UNIVERSAL_BYPASS_INTERNAL_VERSION").join("1")
 }
 downloadInjectionScript()
 brws.alarms.create("update-injection-script", {periodInMinutes: 60})
