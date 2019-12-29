@@ -9,7 +9,7 @@
 		"message": "Bạn thật tuyệt vời!"
 	},
 	"firstrunNoScript": {
-		"message": "Tuy nhiên, bạn dường như sử dụng NoScript hoặc tương tự, mà Universal Bypass không tương thích với."
+		"message": "Tuy nhiên, bạn dường như sử dụng NoScript hoặc tương tự, mà Universal Bypass không tương thích."
 	},
 	"version": {
 		"message": "Phiên bản"
@@ -102,7 +102,7 @@
 		"message": "Bạn không cần phải đợi!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Người dùng Universal Bypass khác hiện đang chờ bạn và được báo cáo rằng điều này dẫn đến %"
+		"message": "Người dùng Universal Bypass đã từng chờ như bạn và phản hồi rằng liên liên kết này sẽ dẫn tới"
 	},
 	"crowdBypassedTimer": {
 		"message": "Sẽ được mở trong tab mới sau % giây."

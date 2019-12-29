@@ -17,6 +17,15 @@
 	"changelog": {
 		"message": "Registro de cambios"
 	},
+	"update": {
+		"message": "Buscar actualizaciones"
+	},
+	"updateYes": {
+		"message": "¡El script de inyección se actualizó correctamente!"
+	},
+	"updateNo": {
+		"message": "Ya está actualizado."
+	},
 	"faq": {
 		"message": "Preguntas más frecuentes"
 	},
@@ -51,7 +60,7 @@
 		"message": "Dar y tomar los destinos de los acortadores que no se pueden anular."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Abrir los destinos que ya fueron descubiertos en una nueva pestaña después de % segundo(s). (0 = instantáneo)"
+		"message": "Abrir los destinos que ya fueron descubiertos en una pestaña nueva después de % segundo(s). (0 = instantáneo)"
 	},
 	"optionsInfoBox": {
 		"message": "Mostrar mensajes informativos en algunos sitios."
@@ -78,7 +87,7 @@
 		"message": "Serás redirigido automáticamente en 1 segundo."
 	},
 	"beforeNavigateOptions": {
-		"message": "¿Quieres ser redirigido al instante o en x segundos?\n"
+		"message": "¿Quieres ser redirigido al instante, o en x segundos?"
 	},
 	"infoBoxHide": {
 		"message": "Haga clic en esta casilla para ocultarla. Puede deshabilitar esta función en las opciones de Universal Bypass."
@@ -96,16 +105,16 @@
 		"message": "Otros usuarios de Universal Bypass ya han esperado por ti y han informado que esto lleva a %"
 	},
 	"crowdBypassedTimer": {
-		"message": "Esto se abrirá en una nueva pestaña en % segundos."
+		"message": "Esto se abrirá en una pestaña nueva en % segundos."
 	},
 	"crowdBypassedTimerSingular": {
-		"message": "Esto se abrirá en una nueva pestaña en 1 segundo."
+		"message": "Esto se abrirá en una pestaña nueva en 1 segundo."
 	},
 	"crowdBypassedIgnore": {
 		"message": "¿No era eso correcto?"
 	},
 	"crowdBypassedOptions": {
-		"message": "¿Desea que esto se abra en una nueva pestaña al instante o en x segundos?"
+		"message": "¿Quieres que esto se abra en una pestaña nueva al instante, o en x segundos?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass evitó que su IP se registrara."

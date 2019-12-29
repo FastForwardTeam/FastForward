@@ -17,6 +17,15 @@
 	"changelog": {
 		"message": "Wijzigingslogboek"
 	},
+	"update": {
+		"message": "Controleren op updates"
+	},
+	"updateYes": {
+		"message": "Injectie script succesvol bijgewerkt!"
+	},
+	"updateNo": {
+		"message": "Al bijgewerkt."
+	},
 	"faq": {
 		"message": "Veelgestelde Vragen (FAQ)"
 	},

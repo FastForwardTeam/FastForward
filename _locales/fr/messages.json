@@ -102,7 +102,7 @@
 		"message": "Vous n'aurez peut-être pas à attendre !"
 	},
 	"crowdBypassedInfo": {
-		"message": "D'autres utilisateurs de Universal Bypass ont déjà cliqué sur ce lien et ont rapporté que cela mène à %"
+		"message": "D'autres utilisateurs de Universal Bypass ont déjà cliqué sur ce lien et ont indiqué que cela mène à %"
 	},
 	"crowdBypassedTimer": {
 		"message": "Ce lien sera ouvert dans un nouvel onglet dans % secondes."
