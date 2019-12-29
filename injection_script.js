@@ -1052,6 +1052,7 @@ ensureDomLoaded(()=>{
 		o=JSON.parse(CryptoJS.AES.decrypt(u,"MispuaniDewaGanteng").toString(CryptoJS.enc.Utf8))
 		safelyNavigate(o.url)
 	})
+	domainBypass("dl.blackmod.net",()=>ifElement("a.button.fa-download[href]",a=>safelyNavigate(a.href)))
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
