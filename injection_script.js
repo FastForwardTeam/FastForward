@@ -807,11 +807,16 @@ ensureDomLoaded(()=>{
 			}, 200)
 		}, 200)
 	})
-	domainBypass(/((get-click2|informations-library|media-blue|akashirohige)\.blogspot|business\.ominfoupdate)\.com|pastikan\.me/,()=>{
+	domainBypass(/((get-click2|informations-library|media-blue|akashirohige)\.blogspot|business\.ominfoupdate)\.com|pastikan\.me|blog\.infolanjutan\.xyz/,()=>{
 		let u=aesCrypto.decrypt(convertstr(location.href.substr(location.href.indexOf("?o=")+3)),convertstr("root"))
 		if(isGoodLink(u))
 		{
 			location.hash=""
+			safelyNavigate(u)
+		}
+		else if(typeof uri=="string")
+		{
+			u=aesCrypto.decrypt(convertstr(uri.substr(uri.indexOf("?o=")+3)),convertstr("root"))
 			safelyNavigate(u)
 		}
 	})
