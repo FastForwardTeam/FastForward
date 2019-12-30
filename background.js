@@ -631,7 +631,8 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 "*://*.pasardownload.com/*?site=*",
 "*://*.vius.info/*?site=*",
 "*://*.cariskuy.com/*?site=*",
-"*://*.losstor.com/ini/?site=*"
+"*://*.losstor.com/ini/?site=*",
+"*://go.giga74.com/*?site=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
