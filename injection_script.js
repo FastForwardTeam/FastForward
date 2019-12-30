@@ -1028,7 +1028,14 @@ ensureDomLoaded(()=>{
 		}
 	}))
 	domainBypass("ad4msan.com",()=>document.querySelectorAll("a[href^='https://ad4msan.com?9c2a6bf968=']").forEach(a=>{
-		a.href+="#bypassClipboard="+a.parentNode.textContent.split("|")[0].split(" ").join("").split(".").join("").split("(").join("").split(")").join("").toLowerCase()+a.firstChild.src.split("https://ad4msan.com/")[1].split(".")[0].toLowerCase()
+		if(a.firstChild.tagName=="IMG")
+		{
+			a.href+="#bypassClipboard="+a.parentNode.textContent.split("|")[0].split(" ").join("").split(".").join("").split("(").join("").split(")").join("").toLowerCase()+a.firstChild.src.split("https://ad4msan.com/")[1].split(".")[0].toLowerCase()
+		}
+		else
+		{
+			a.href+="#bypassClipboard="+a.parentNode.textContent.split("|")[0].split(" ").join("").split(".").join("").split("(").join("").split(")").join("").toLowerCase()+a.textContent.split(" ").join("").toLowerCase()
+		}
 	}))
 	domainBypass("oppa.kdramaindo.tv",()=>document.querySelectorAll("a[href^='https://oppa.kdramaindo.tv?38971fecb6=']").forEach(a=>{
 		a.href+="#bypassClipboard="+location.pathname.split("/").join("").split("-").join("")+a.parentNode.firstChild.textContent.toLowerCase().split(" ").join("").split("–").join("")+a.textContent.trim().toLowerCase()
