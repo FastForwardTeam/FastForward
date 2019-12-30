@@ -1010,7 +1010,7 @@ ensureDomLoaded(()=>{
 		a.href+=qe.textContent+a.textContent.toLowerCase()
 	}))
 	domainBypass("wizardsubs.com",()=>document.querySelectorAll("a[href^='https://wizardsubs.com?408631a1f0=']").forEach(a=>{
-		a.href+="#bypassClipboard="+location.pathname.split("/").join("").split("-").join("")+a.parentNode.textContent.split(":")[0].split(" ").join("").toLowerCase()
+		a.href+="#bypassClipboard="+a.href.split("?408631a1f0=")[1]
 	}))
 	domainBypass("channelmyanmar.org",()=>document.querySelectorAll("a[href^='https://channelmyanmar.org?1c17f28bf0=']").forEach(a=>{
 		if(a.classList.contains("FLMBTN-Btn"))
