@@ -501,6 +501,16 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
+		console.log(details)
+		return getRedirect(decodeURIComponent(atob(details.url.substr(details.url.indexOf("?link=")+6))))
+	}
+},{types:["main_frame"],urls:[
+"*://*.safelinkgratis.info/*?link=*"
+]},["blocking"])
+
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
 		return getRedirect(atob(details.url.substr(details.url.indexOf("?kesehatan=")+11)))
 	}
 },{types:["main_frame"],urls:["*://*.infosia.xyz/?kesehatan=*"]},["blocking"])
