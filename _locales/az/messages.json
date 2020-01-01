@@ -17,14 +17,26 @@
 	"changelog": {
 		"message": "Dəyişiklik qeydi"
 	},
+	"update": {
+		"message": "Yeniləmələri yoxla"
+	},
+	"updateNo": {
+		"message": "Artıq yenilənib."
+	},
 	"faq": {
 		"message": "Tez-tez Soruşulan Suallar (FAQ)"
+	},
+	"support": {
+		"message": "Universal Bypass-ı Dəstəkləyin."
 	},
 	"options": {
 		"message": "Seçimlər"
 	},
 	"optionsLink": {
 		"message": "Universal Bypass seçimlərini dəyişdirin."
+	},
+	"optionsEnabled": {
+		"message": "Veb saytlarının ötürülməsini fəallaşdır."
 	},
 	"optionsTrackerBypass": {
 		"message": "Apimon.de istifadə edən Bypass izləyiciləri."
@@ -34,6 +46,9 @@
 	},
 	"optionsCrowdBypass": {
 		"message": "Ötürülə bilməyən qısaldıcıların yerlərini verin və aparın."
+	},
+	"optionsInfoBox": {
+		"message": "Bəzi saytlarda məlumatlandırma mesajlarını göstər."
 	},
 	"privacyPolicy": {
 		"message": "Gizlilik Siyasəti"
@@ -47,16 +62,40 @@
 	"beforeNavigateDestination": {
 		"message": "Təyinat yeri %"
 	},
+	"beforeNavigateTimer": {
+		"message": "% saniyə ərzində avtomatik yönləndiriləcəksiniz."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "1 saniyə ərzində avtomatik yönləndiriləcəksiniz."
+	},
+	"infoBoxHide": {
+		"message": "Gizlətmək üçün bu qutuya klikləyin. Məlumat qutu özəlliyini Universal Bypass seçimlərindən sıradan çıxara bilərsiniz."
+	},
+	"crowdWait": {
+		"message": "Təəssüf ki, bu bağlantı ilə qarşılaşan ilk sizsiniz, ancaq siz gözlədikdən sonra, digər Universal Bypass istifadəçilərinin buna ehtiyacı olmayacaq."
+	},
 	"crowdBypassed": {
 		"message": "Gözləməyinizə ehtiyac yoxdur!"
 	},
 	"crowdBypassedInfo": {
 		"message": "Digər Universal Bypass istifadəçiləri artıq sizi gözlədilər və bunun % a çatdığı bildirildi"
 	},
+	"crowdBypassedTimer": {
+		"message": "Bu, % saniyə ərzində yeni bir vərəqdə açılacaq."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Bu, 1 saniyə ərzində yeni bir vərəq açılacaq."
+	},
 	"crowdBypassedIgnore": {
 		"message": "Bu doğru deyil?"
 	},
+	"crowdBypassedOptions": {
+		"message": "Bunun indi ya x saniyə sonra yeni bir vərəqdə açılmasını istəyirsiniz?"
+	},
 	"blockedTitle": {
 		"message": "Universal Bypass, IP ünvanların qeydlərə əlavə edilməsinin qarşısı aldı."
+	},
+	"blockedSubtitle": {
+		"message": "Universal Bypass-ın, pisniyyətli insanların IP ünvanınızı oğurlamasının qarşısını almasını istəmirsiniz?"
 	}
 }

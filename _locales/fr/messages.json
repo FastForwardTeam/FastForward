@@ -21,7 +21,7 @@
 		"message": "Vérifier les mises à jour"
 	},
 	"updateYes": {
-		"message": "Script d'injection mis à jour avec succès !"
+		"message": "Mise à jour du script d'injection réussie !"
 	},
 	"updateNo": {
 		"message": "Universal Bypass est déjà à jour."
