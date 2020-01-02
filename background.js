@@ -906,13 +906,16 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 	if(enabled)
 	{
 		let url = new URL(details.url)
-		for(let i in details.responseHeaders)
+		if(url.pathname.substr(0,6)!="/post/")
 		{
-			let header = details.responseHeaders[i]
-			if(header.name.toLowerCase() == "location")
+			for(let i in details.responseHeaders)
 			{
-				details.responseHeaders[i].value += "#" + url.pathname.substr(1)
-				break
+				let header = details.responseHeaders[i]
+				if(header.name.toLowerCase() == "location")
+				{
+					details.responseHeaders[i].value += "#" + url.pathname.substr(1)
+					break
+				}
 			}
 		}
 		return{responseHeaders:details.responseHeaders}
@@ -920,7 +923,8 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 },{types:["main_frame"],urls:[
 "*://*.bercara.com/*",
 "*://*.semawur.com/*",
-"*://*.in11.site/*"
+"*://*.in11.site/*",
+"*://*.droidtamvan.me/*"
 ]},["blocking","responseHeaders"])
 
 brws.webRequest.onHeadersReceived.addListener(details=>{
