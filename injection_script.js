@@ -1062,6 +1062,13 @@ ensureDomLoaded(()=>{
 		safelyNavigate(o.url)
 	})
 	domainBypass("dl.blackmod.net",()=>ifElement("a.button.fa-download[href]",a=>safelyNavigate(a.href)))
+	domainBypass("bladesalvador.com",()=>ifElement(".icon > img[src^='https://api.miniature.io/?']",i=>{
+		let url=new URL(i.src)
+		if(url.search.indexOf("url="))
+		{
+			safelyNavigate(decodeURIComponent(url.search.split("url=")[1].split("&")[0]))
+		}
+	}))
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
