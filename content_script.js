@@ -59,11 +59,6 @@ if(document instanceof HTMLDocument)
 								referer="https://pahe.in?73e659772d="+id
 								break;
 
-								case "wizardsubs.com":
-								case "zaqe.xyz":
-								referer="https://wizardsubs.com/?408631a1f0="+id
-								break;
-
 								case "channelmyanmar.org":
 								case "roda.site":
 								referer="https://channelmyanmar.org?1c17f28bf0="+id
@@ -81,6 +76,16 @@ if(document instanceof HTMLDocument)
 								case "mkvking.com":
 								referer="https://mkvking.com?c17421bdaf="+id
 								break;
+
+								case "wizardsubs.com":
+								case "zaqe.xyz":
+								referer="https://wizardsubs.com/?408631a1f0="+id
+								break;
+
+								case "www.zonangopi.com":
+								referer="https://www.zonangopi.com/?407ea19f7e="+id
+								break;
+
 							}
 							referer+="#bypassClipboard="+bypassClipboard
 						}

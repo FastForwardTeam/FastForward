@@ -1009,9 +1009,6 @@ ensureDomLoaded(()=>{
 		}
 		a.href+=qe.textContent+a.textContent.toLowerCase()
 	}))
-	domainBypass("wizardsubs.com",()=>document.querySelectorAll("a[href^='https://wizardsubs.com?408631a1f0=']").forEach(a=>{
-		a.href+="#bypassClipboard="+a.href.split("?408631a1f0=")[1]
-	}))
 	domainBypass("channelmyanmar.org",()=>document.querySelectorAll("a[href^='https://channelmyanmar.org?1c17f28bf0=']").forEach(a=>{
 		if(a.classList.contains("FLMBTN-Btn"))
 		{
@@ -1097,6 +1094,16 @@ ensureDomLoaded(()=>{
 		}
 	}
 	//Soralink Wordpress Plugin
+	const soralink_data={
+		"wizardsubs.com":"408631a1f0",
+		"www.zonangopi.com":"407ea19f7e"
+	}
+	for(let domain in soralink_data)
+	{
+		domainBypass(domain,()=>document.querySelectorAll("a[href^='https://"+domain+"?"+soralink_data[domain]+"=']").forEach(a=>{
+			a.href+="#bypassClipboard="+a.href.split("?"+soralink_data[domain]+"=")[1]
+		}))
+	}
 	if(document.querySelector(".sorasubmit"))
 	{
 		document.querySelector(".sorasubmit").click()
