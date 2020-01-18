@@ -17,6 +17,15 @@
 	"changelog": {
 		"message": "Modifiche del nuovo aggiornamento"
 	},
+	"update": {
+		"message": "Controlla gli aggiornamenti"
+	},
+	"updateYes": {
+		"message": "Aggiornato con successo lo script di injection!"
+	},
+	"updateNo": {
+		"message": "Già aggiornato."
+	},
 	"faq": {
 		"message": "Domande frequenti (FAQ)"
 	},
