@@ -544,7 +544,7 @@ domainBypass("apkpsp.com",()=>{
 })
 //Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
 hrefBypass(/(njiir|healthykk|linkasm|dxdrive|getwallpapers)\.com|punchsubs\.net|k2s\.cc|muhammadyoga\.me|u\.to|skiplink\.io|firefaucet\.win\/l\/|emulator\.games\/download\.php/,()=>window.setInterval=f=>setInterval(f,1))
-domainBypass(/(racaty|longfiles|filepuma|filehorse|portableapps)\.com|indishare\.org|datei\.to|keisekai\.fun/,()=>window.setTimeout=f=>setTimeout(f,1))
+domainBypass(/(racaty|longfiles|filepuma|filehorse|portableapps|nexusmods)\.com|indishare\.org|datei\.to|keisekai\.fun/,()=>window.setTimeout=f=>setTimeout(f,1))
 if(bypassed)
 {
 	return
@@ -1041,7 +1041,6 @@ ensureDomLoaded(()=>{
 		a.href+="#bypassClipboard="+a.getAttribute("title").split("Download ").join("").split("(").join("").split(")").join("").split(" ").join("").toLowerCase()
 	}))
 	hrefBypass(/stayonline\.pro\/l\/(.*)\//,m=>$.post(endpoint,{id:m[1],ref:""},r=>safelyNavigate(r.data.value)))
-	hrefBypass(/nexusmods\.com\/.*\/mods\/[0-9]*\?tab=files&file_id=[0-9]*/,()=>ifElement("button#slowDownloadButton[data-download-url]",b=>safelyNavigate(b.getAttribute("data-download-url"))))
 	domainBypass("xlink.cc",()=>safelyNavigate(JSON.parse(atob(window.bootstrapData)).linkResponse.link.long_url))
 	domainBypass("1shortlink.com",()=>awaitElement("#redirect-link[data-href]",a=>safelyNavigate(a.getAttribute("data-href"))))
 	domainBypass("multiup.org",()=>ifElement("form[target][onsubmit] button[type='submit']",b=>{
