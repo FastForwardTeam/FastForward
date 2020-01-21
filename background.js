@@ -924,7 +924,9 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 "*://*.bercara.com/*",
 "*://*.semawur.com/*",
 "*://*.in11.site/*",
-"*://*.droidtamvan.me/*"
+"*://*.droidtamvan.me/*",
+"*://*.haipedia.com/*",
+"*://*.shrinkads.com/*"
 ]},["blocking","responseHeaders"])
 
 brws.webRequest.onHeadersReceived.addListener(details=>{
