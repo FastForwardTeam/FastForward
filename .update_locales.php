@@ -34,10 +34,19 @@ foreach(scandir("_locales") as $locale)
 		continue;
 	}
 	unlink("_locales/{$locale}/marketing.json");
-	if(rtrim(file_get_contents("_locales/{$locale}/messages.json")) == "{}")
+	$cont = file_get_contents("_locales/{$locale}/messages.json");
+	if(rtrim($cont) == "{}")
 	{
 		recursivelyDelete("_locales/{$locale}");
 		continue;
+	}
+	$json = json_decode($cont, true);
+	foreach(["bypassCounter", "optionsNavigationDelay", "optionsCrowdAutoOpen", "beforeNavigateDestination", "beforeNavigateTimer", "crowdBypassedInfo", "crowdBypassedTimer"] as $key)
+	{
+		if(array_key_exists($key, $json) && strpos($json[$key]["message"], "%") === false)
+		{
+			echo "$key in $locale is missing %\n";
+		}
 	}
 	if(in_array($locale, ["es-ES", "br-FR"]))
 	{

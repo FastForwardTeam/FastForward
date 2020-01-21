@@ -42,7 +42,7 @@
 		"message": "Jste téměř na destinaci."
 	},
 	"beforeNavigateDestination": {
-		"message": "Vaše destinace tohoto zkráceného odkazu je"
+		"message": "Vaše destinace tohoto zkráceného odkazu je %"
 	},
 	"crowdBypassed": {
 		"message": "Nemusel byste čekat!"
