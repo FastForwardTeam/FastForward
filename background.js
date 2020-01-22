@@ -901,7 +901,7 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 "*://*.lnk2.cc/*/*"
 ]},["blocking","responseHeaders"])
 
-//SafelinkU & squidssh.com Crowd Bypass
+//Various Crowd Bypasses
 brws.webRequest.onHeadersReceived.addListener(details=>{
 	if(enabled)
 	{
