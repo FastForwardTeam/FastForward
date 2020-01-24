@@ -875,7 +875,7 @@ ensureDomLoaded(()=>{
 		f.submit()
 	})
 	domainBypass("xxx.lewd.ninja",()=>safelyNavigate(document.body.textContent))
-	domainBypass(/tr\.link|movienear\.me|lewat\.club|droidtamvan\.me/,()=>{
+	domainBypass(/tr\.link|movienear\.me|lewat\.club|droidtamvan\.me|(liveshootv|modebaca)\.com/,()=>{
 		if(typeof app_vars=="undefined")
 		{
 			app_vars={}

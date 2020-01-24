@@ -929,7 +929,10 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 "*://*.in11.site/*",
 "*://*.droidtamvan.me/*",
 "*://*.haipedia.com/*",
-"*://*.shrinkads.com/*"
+"*://*.shrinkads.com/*",
+"*://*.modebaca.com/*",
+"*://*.liveshootv.com/*",
+"*://*.shrink.world/*"
 ]},["blocking","responseHeaders"])
 
 brws.webRequest.onHeadersReceived.addListener(details=>{
