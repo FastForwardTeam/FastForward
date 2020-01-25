@@ -1,0 +1,23 @@
+{
+	"appDesc": {
+		"message": "Не си го трошете времето со согласување. Universal Bypass ги прескокнува веб скратувачите."
+	},
+	"firstrunTitle": {
+		"message": "Ви благодарам што го инсталиравте Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "Неверојатни сте!"
+	},
+	"firstrunNoScript": {
+		"message": "Но, изгледа дека користите NoScript или нешто слично, која ја попречува работата на Universal Bypass."
+	},
+	"version": {
+		"message": "Верзија"
+	},
+	"changelog": {
+		"message": "Историја на промени"
+	},
+	"update": {
+		"message": "Провери за нова верзија"
+	}
+}
