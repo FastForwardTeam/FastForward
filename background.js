@@ -983,7 +983,8 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 "*://*.gotravelgo.space/*",
 "*://*.pantauterus.me/*",
 "*://*.liputannubi.net/*",
-"*://*.squidssh.com/user/links"
+"*://*.squidssh.com/user/links",
+"*://*.goodssh.com/user/links"
 ]},["blocking","responseHeaders"])
 
 //SoraLink Crowd Bypass

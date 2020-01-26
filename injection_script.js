@@ -427,7 +427,7 @@ hrefBypass(/uiz\.io\/go/,()=>{
 	})
 })
 hrefBypass(/(prox77|agdd5br)\.com\/analyze\/(.+)/,m=>location.pathname="/result/"+m[2])
-hrefBypass(/sfile\.(mobi|xyz)/,()=>{
+hrefBypass(/sfile\.(mobi|xyz)|apkmos\.com/,()=>{
 	ODP(window,"downloadButton",{
 		set:a=>{
 			if(a&&a.href)
@@ -542,8 +542,16 @@ domainBypass("apkpsp.com",()=>{
 	window.setInterval=f=>setInterval(f,1)
 	awaitElement("form[action^='/blog/golink.php']",f=>f.submit())
 })
+domainBypass("ipeenk.id",()=>{
+	ODP(window,"url_page",{
+		get:()=>{
+			safelyNavigate(Aes.Ctr.decrypt(location.href.substr(location.href.indexOf("?hash=")+6).split("&")[0],"-encrypt download@ip3enk",256))
+		}
+	})
+})
+domainBypass("lkc21.net",()=>window.setTimeout=f=>setTimeout(f,100))
 //Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
-hrefBypass(/(njiir|healthykk|linkasm|dxdrive|getwallpapers)\.com|punchsubs\.net|k2s\.cc|muhammadyoga\.me|u\.to|skiplink\.io|firefaucet\.win\/l\/|emulator\.games\/download\.php/,()=>window.setInterval=f=>setInterval(f,1))
+hrefBypass(/(njiir|healthykk|linkasm|dxdrive|getwallpapers|mi-globe)\.com|punchsubs\.net|k2s\.cc|muhammadyoga\.me|u\.to|skiplink\.io|firefaucet\.win\/l\/|emulator\.games\/download\.php/,()=>window.setInterval=f=>setInterval(f,1))
 hrefBypass(/(racaty|longfiles|filepuma|filehorse|portableapps)\.com|indishare\.org|datei\.to|keisekai\.fun|nexusmods\.com\/.*\/mods\/[0-9]*\?tab=files&file_id=[0-9]*/,()=>window.setTimeout=f=>setTimeout(f,1))
 domainBypass("universal-bypass.org",()=>{
 	window.universalBypassInstalled=true
@@ -779,7 +787,7 @@ ensureDomLoaded(()=>{
 		}
 	})
 	domainBypass("boostme.gg",()=>safelyNavigate(document.querySelector("a[href]#go").href))
-	domainBypass("driverays.com",()=>safelyNavigate(document.querySelector("a#link[href]").href))
+	domainBypass(/(driverays|bioskopgo|01nonton)\.com|cinema21\.tv/,()=>ifElement("a#link[href]",a=>safelyNavigate(a.href)))
 	domainBypass("wikitrik.com",()=>document.querySelector("#download > form[action='/getlink.php'] > input[type='submit'].button").click())
 	domainBypass("dawnstation.com",()=>safelyNavigate(document.querySelector("#tidakakanselamanya.hiddenPlace > a").href))
 	domainBypass("hokiwikiped.net",()=>ifElement("a#DrRO[href]",a=>safelyNavigate(a.href)))
@@ -807,7 +815,7 @@ ensureDomLoaded(()=>{
 			}, 200)
 		}, 200)
 	})
-	domainBypass(/((get-click2|informations-library|media-blue|akashirohige)\.blogspot|business\.ominfoupdate|majidzhacker)\.com|pastikan\.me|blog\.infolanjutan\.xyz/,()=>{
+	domainBypass(/((get-click2|informations-library|media-blue|akashirohige)\.blogspot|business\.ominfoupdate|majidzhacker|citgratis)\.com|pastikan\.me|blog\.infolanjutan\.xyz/,()=>{
 		let u=aesCrypto.decrypt(convertstr(location.href.substr(location.href.indexOf("?o=")+3)),convertstr("root"))
 		if(isGoodLink(u))
 		{
@@ -962,7 +970,7 @@ ensureDomLoaded(()=>{
 			safelyNavigate(o.substr(24,o.length-3))
 		})
 	})
-	domainBypass(/terbit21\.(club|online)/,()=>ifElement("a#downloadbutton[href]",a=>location.href=a.href))
+	domainBypass(/terbit21\.(club|online|host)/,()=>ifElement("a#downloadbutton[href]",a=>location.href=a.href))
 	domainBypass("onepieceex.net",()=>ifElement("noscript",n=>safelyNavigate(n.textContent)))
 	domainBypass("zflas.com",()=>{
 		if(typeof _bh.decode=="function")
@@ -982,7 +990,7 @@ ensureDomLoaded(()=>{
 			safelyNavigate(div.querySelector("a").href)
 		}
 	})
-	hrefBypass(/squidssh\.com\/url\/go\.php/,()=>{
+	hrefBypass(/(squidssh|goodssh)\.com\/li\/go\.php/,()=>{
 		const p=atob((new URLSearchParams(location.search)).get("short"))
 		crowdPath(p)
 		crowdBypass(()=>ifElement("form[action='/user/links']",f=>f.action+="#"+p))
@@ -1075,6 +1083,46 @@ ensureDomLoaded(()=>{
 		f.querySelector("input[name='il']").value="false"
 		f.submit()
 	}))
+	domainBypass("bebasdownloadfilm.com",()=>ifElement("frame[src^='http://bebasdownloadfilm.com/iframe/top.php?xds=']",f=>{
+		f.onload=()=>safelyNavigate(f.contentDocument.querySelector("p#skip a").href)
+	}))
+	domainBypass("midvip.xyz",()=>ensureDomLoaded(()=>{
+		if(typeof PathSet=="function")
+		{
+			PathSet()
+		}
+	}))
+	domainBypass("midiavip.com",()=>ifElement("a#link[disabled]",()=>{
+		let u="/url2.php",
+		forms=document.querySelectorAll("form#formID")
+		const _post=(a,f)=>{
+			fetch(u,{
+				method:"POST",
+				headers:{"Content-Type":"application/x-www-form-urlencoded"},
+				body:new URLSearchParams(new FormData(forms[a])).toString()
+			}).then(f)
+		}
+		document.querySelectorAll("input[name='urlopen']").forEach(i=>{
+			i.value=location.origin+u
+		})
+		_post(0,()=>_post(1,()=>_post(2,()=>{
+			fetch(location.href).then(r=>r.text()).then(r=>{
+				safelyNavigate(/&u=([^']+)/.exec(r)[1])
+			})
+		})))
+	},()=>{
+		let _open=window.open
+		window.open=u=>_open(u,"_self")
+		document.querySelector("a#link").onclick()
+	}))
+	domainBypass("1ink.cc",()=>ifElement("a#countingbtn[href]",a=>safelyNavigate(a.href)))
+	domainBypass("cuturl.cc",()=>{
+		if(typeof PushLink=="function")
+		{
+			PushLink()
+		}
+	})
+	domainBypass("intifada1453.team",()=>ifElement("a.short-button[href]",a=>safelyNavigate(a.href)))
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
