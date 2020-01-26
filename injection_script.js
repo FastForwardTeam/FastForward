@@ -807,7 +807,7 @@ ensureDomLoaded(()=>{
 			}, 200)
 		}, 200)
 	})
-	domainBypass(/((get-click2|informations-library|media-blue|akashirohige)\.blogspot|business\.ominfoupdate)\.com|pastikan\.me|blog\.infolanjutan\.xyz/,()=>{
+	domainBypass(/((get-click2|informations-library|media-blue|akashirohige)\.blogspot|business\.ominfoupdate|tinyurl\.majidzhacker)\.com|pastikan\.me|blog\.infolanjutan\.xyz/,()=>{
 		let u=aesCrypto.decrypt(convertstr(location.href.substr(location.href.indexOf("?o=")+3)),convertstr("root"))
 		if(isGoodLink(u))
 		{
