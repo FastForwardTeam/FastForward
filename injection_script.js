@@ -982,7 +982,7 @@ ensureDomLoaded(()=>{
 			safelyNavigate(div.querySelector("a").href)
 		}
 	})
-	hrefBypass(/squidssh\.com\/url\/go\.php/,()=>{
+	hrefBypass(/(squidssh|goodssh)\.com\/li\/go\.php/,()=>{
 		const p=atob((new URLSearchParams(location.search)).get("short"))
 		crowdPath(p)
 		crowdBypass(()=>ifElement("form[action='/user/links']",f=>f.action+="#"+p))
