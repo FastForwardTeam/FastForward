@@ -46,7 +46,7 @@
 	],
 	"browser_specific_settings": {
 		"gecko": {
-			"id": "firefox@universal-bypass.org"
+			"id": "{529b261b-df0b-4e3b-bf42-07b462da0ee8}"
 		}
 	},
 	"web_accessible_resources": [
