@@ -970,7 +970,7 @@ ensureDomLoaded(()=>{
 			safelyNavigate(o.substr(24,o.length-3))
 		})
 	})
-	domainBypass(/terbit21\.(club|online)/,()=>ifElement("a#downloadbutton[href]",a=>location.href=a.href))
+	domainBypass(/terbit21\.(club|online|host)/,()=>ifElement("a#downloadbutton[href]",a=>location.href=a.href))
 	domainBypass("onepieceex.net",()=>ifElement("noscript",n=>safelyNavigate(n.textContent)))
 	domainBypass("zflas.com",()=>{
 		if(typeof _bh.decode=="function")
