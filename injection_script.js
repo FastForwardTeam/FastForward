@@ -1468,7 +1468,7 @@ ensureDomLoaded(()=>{
 			}
 			domainBypass("adcoinfly.com",()=>document.querySelectorAll("a.btn[href=''], a.btn[href*='clickme']").forEach(e=>e.parentNode.removeChild(e)))
 			domainBypass(/(semawur|bercara)\.com|in11\.site/,()=>ifElement("input[type='hidden'][name='alias'][value]",i=>crowdPath(i.value),()=>crowdPath(location.hash.substr(1))))
-			domainBypass(/movienear\.me|lewat\.club|droidtamvan\.me/,()=>{
+			domainBypass(/movienear\.me|lewat\.club|droidtamvan\.me|(liveshootv|modebaca)\.com/,()=>{
 				ifElement("input[type='hidden'][name='alias'][value]",i=>{
 					i.parentNode.action+="#"+i.value+(ignoreCrowdBypass?"#ignoreCrowdBypass":"")
 					crowdPath(i.value)
