@@ -1078,6 +1078,12 @@ ensureDomLoaded(()=>{
 	domainBypass("bebasdownloadfilm.com",()=>ifElement("frame[src^='http://bebasdownloadfilm.com/iframe/top.php?xds=']",f=>{
 		f.onload=()=>safelyNavigate(f.contentDocument.querySelector("p#skip a").href)
 	}))
+	domainBypass("midvip.xyz",()=>ensureDomLoaded(()=>{
+		if(typeof PathSet=="function")
+		{
+			PathSet()
+		}
+	}))
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
