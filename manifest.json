@@ -44,6 +44,11 @@
 			"run_at": "document_start"
 		}
 	],
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "firefox@universal-bypass.org"
+		}
+	},
 	"web_accessible_resources": [
 		"html/before-navigate.html",
 		"html/blocked.html",
