@@ -1122,6 +1122,7 @@ ensureDomLoaded(()=>{
 			PushLink()
 		}
 	})
+	domainBypass("intifada1453.team",()=>ifElement("a.short-button[href]",a=>safelyNavigate(a.href)))
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
