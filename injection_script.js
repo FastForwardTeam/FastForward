@@ -1084,6 +1084,29 @@ ensureDomLoaded(()=>{
 			PathSet()
 		}
 	}))
+	domainBypass("midiavip.com",()=>ifElement("a#link[disabled]",()=>{
+		let u="/url2.php",
+		forms=document.querySelectorAll("form#formID")
+		const _post=(a,f)=>{
+			fetch(u,{
+				method:"POST",
+				headers:{"Content-Type":"application/x-www-form-urlencoded"},
+				body:new URLSearchParams(new FormData(forms[a])).toString()
+			}).then(f)
+		}
+		document.querySelectorAll("input[name='urlopen']").forEach(i=>{
+			i.value=location.origin+u
+		})
+		_post(0,()=>_post(1,()=>_post(2,()=>{
+			fetch(location.href).then(r=>r.text()).then(r=>{
+				safelyNavigate(/&u=([^']+)/.exec(r)[1])
+			})
+		})))
+	},()=>{
+		let _open=window.open
+		window.open=u=>_open(u,"_self")
+		document.querySelector("a#link").onclick()
+	}))
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
