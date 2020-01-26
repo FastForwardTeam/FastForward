@@ -1075,6 +1075,9 @@ ensureDomLoaded(()=>{
 		f.querySelector("input[name='il']").value="false"
 		f.submit()
 	}))
+	domainBypass("bebasdownloadfilm.com",()=>ifElement("frame[src^='http://bebasdownloadfilm.com/iframe/top.php?xds=']",f=>{
+		f.onload=()=>safelyNavigate(f.contentDocument.querySelector("p#skip a").href)
+	}))
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
