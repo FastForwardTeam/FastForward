@@ -1077,12 +1077,6 @@ ensureDomLoaded(()=>{
 		}
 	}))
 	domainBypass("shirosafe.web.id",()=>ifElement("#generatem a[href]",a=>safelyNavigate(a.href)))
-	domainBypass("shon.xyz",()=>ifElement("form#skip",f=>{
-		f.action="/redirect/sgo"+location.pathname
-		f.innerHTML+='<input type="hidden" name="csr" value="c45a47f346f6fa5738b1731f35424e22">'
-		f.querySelector("input[name='il']").value="false"
-		f.submit()
-	}))
 	domainBypass("bebasdownloadfilm.com",()=>ifElement("frame[src^='http://bebasdownloadfilm.com/iframe/top.php?xds=']",f=>{
 		f.onload=()=>safelyNavigate(f.contentDocument.querySelector("p#skip a").href)
 	}))
