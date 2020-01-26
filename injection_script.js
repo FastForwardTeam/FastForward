@@ -427,7 +427,7 @@ hrefBypass(/uiz\.io\/go/,()=>{
 	})
 })
 hrefBypass(/(prox77|agdd5br)\.com\/analyze\/(.+)/,m=>location.pathname="/result/"+m[2])
-hrefBypass(/sfile\.(mobi|xyz)/,()=>{
+hrefBypass(/sfile\.(mobi|xyz)|apkmos\.com/,()=>{
 	ODP(window,"downloadButton",{
 		set:a=>{
 			if(a&&a.href)
