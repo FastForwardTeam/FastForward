@@ -57,7 +57,7 @@ brws.runtime.onInstalled.addListener(details=>{
 
 // Keeping track of options
 var bypassCounter=0,enabled=true,instantNavigation=true,trackerBypassEnabled=true,instantNavigationTrackers=false,blockIPLoggers=true,crowdEnabled=true,infoBoxEnabled=true,userScript=""
-brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_instant_navigation_trackers","allow_ip_loggers","crowd_bypass_opt_out","crowd_open_delay","no_info_box"],res=>{
+brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_instant_navigation_trackers","allow_ip_loggers","crowd_bypass_opt_out","crowd_open_delay","crowd_close_delay","no_info_box"],res=>{
 	if(res)
 	{
 		enabled=(!res.disable||res.disable!=="true")
@@ -89,6 +89,10 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 		if(!res.crowd_open_delay)
 		{
 			brws.storage.sync.set({crowd_open_delay:61})
+		}
+		if(!res.crowd_close_delay)
+		{
+			brws.storage.sync.set({crowd_close_delay:61})
 		}
 		infoBoxEnabled=(res.no_info_box!=="true")
 	}

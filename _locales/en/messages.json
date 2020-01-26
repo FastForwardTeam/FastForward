@@ -62,6 +62,9 @@
 	"optionsCrowdAutoOpen": {
 		"message": "Open crowd-sourced destinations in a new tab after % second(s). (0 = instant.)"
 	},
+	"optionsCrowdAutoClose": {
+		"message": "Close tab containing the crowd-sourced destination after % second(s) of visiting it."
+	},
 	"optionsInfoBox": {
 		"message": "Show informational messages on some sites."
 	},
@@ -109,6 +112,15 @@
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "This will be opened in a new tab in 1 second."
+	},
+	"crowdCloseTimer": {
+		"message": "This tab will close in % seconds."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "This tab will close in 1 second."
+	},
+	"cancel": {
+		"message": "Cancel"
 	},
 	"crowdBypassedIgnore": {
 		"message": "Was this not correct?"
