@@ -542,6 +542,13 @@ domainBypass("apkpsp.com",()=>{
 	window.setInterval=f=>setInterval(f,1)
 	awaitElement("form[action^='/blog/golink.php']",f=>f.submit())
 })
+domainBypass("ipeenk.id",()=>{
+	ODP(window,"url_page",{
+		get:()=>{
+			safelyNavigate(Aes.Ctr.decrypt(location.href.substr(location.href.indexOf("?hash=")+6).split("&")[0],"-encrypt download@ip3enk",256))
+		}
+	})
+})
 //Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
 hrefBypass(/(njiir|healthykk|linkasm|dxdrive|getwallpapers)\.com|punchsubs\.net|k2s\.cc|muhammadyoga\.me|u\.to|skiplink\.io|firefaucet\.win\/l\/|emulator\.games\/download\.php/,()=>window.setInterval=f=>setInterval(f,1))
 hrefBypass(/(racaty|longfiles|filepuma|filehorse|portableapps)\.com|indishare\.org|datei\.to|keisekai\.fun|nexusmods\.com\/.*\/mods\/[0-9]*\?tab=files&file_id=[0-9]*/,()=>window.setTimeout=f=>setTimeout(f,1))
