@@ -1107,6 +1107,7 @@ ensureDomLoaded(()=>{
 		window.open=u=>_open(u,"_self")
 		document.querySelector("a#link").onclick()
 	}))
+	domainBypass("1ink.cc",()=>ifElement("a#countingbtn[href]",a=>safelyNavigate(a.href)))
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
