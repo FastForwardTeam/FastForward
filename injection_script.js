@@ -1133,6 +1133,7 @@ ensureDomLoaded(()=>{
 		}
 	})
 	domainBypass("intifada1453.team",()=>ifElement("a.short-button[href]",a=>safelyNavigate(a.href)))
+	domainBypass("ahref.co",()=>ifElement(".download_button",a=>safelyAssign(a.parentNode.href)))
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
