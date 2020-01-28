@@ -1085,7 +1085,7 @@ ensureDomLoaded(()=>{
 		safelyNavigate(o.url)
 	})
 	domainBypass("dl.blackmod.net",()=>ifElement("a.button.fa-download[href]",a=>safelyNavigate(a.href)))
-	domainBypass("bladesalvador.com",()=>ifElement(".icon > img[src^='https://api.miniature.io/?']",i=>{
+	domainBypass(/(bladesalvador|invistaiptv)\.com/,()=>ifElement(".icon > img[src^='https://api.miniature.io/?']",i=>{
 		let url=new URL(i.src)
 		if(url.search.indexOf("url="))
 		{
