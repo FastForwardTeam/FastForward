@@ -51,17 +51,19 @@ domainBypass("example.com", () => {
 	// Triggered on example.com and subdomains (e.g. www.example.com)
 	ensureDomLoaded(() => {
 		// Triggered as soon as the DOM is ready
-		// You can use ifElement to check if an element is available via document.querySelector:
-		ifElement("a#skip_button[href]", a => {
-			safelyNavigate(a.href)
-			// safelyNavigate makes sure the given URL is valid
-		}, () => {
-			// Optional function to be called if the given element is not available
-		})
+	})
+	// You can use ifElement to check if an element is available via document.querySelector:
+	ifElement("a#skip_button[href]", a => {
+		safelyNavigate(a.href)
+		// safelyNavigate asserts that given URL is valid before navigating and returns false if not
+	}, () => {
+		// Optional function to be called if the given element is not available
 	})
 	// You can also use awaitElement to wait until an element is available via a query selector:
 	awaitElement("a#skip_button[href]", a => {
-		safelyNavigate(a.href)
+		safelyAssign(a.href)
+		// safelyAssign is the same as safelyNavigate but skips the
+		// "You're almost at your destination" page, should the user have it enabled
 	})
 })
 domainBypass(/example\\.(com|org)/, () => {
