@@ -1139,6 +1139,10 @@ ensureDomLoaded(()=>{
 		crowdPath(location.pathname.substr(4))
 		contributeAndNavigate(a.href)
 	},()=>crowdBypass()))
+	domainBypass("boomx5.com",()=>ifElement("#form",f=>{
+		f.action=location.href
+		f.innerHTML='<input type="hidden" name="s_goo" value="2">'
+	}))
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
