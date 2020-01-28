@@ -1135,6 +1135,10 @@ ensureDomLoaded(()=>{
 	domainBypass("intifada1453.team",()=>ifElement("a.short-button[href]",a=>safelyNavigate(a.href)))
 	domainBypass("ahref.co",()=>ifElement(".download_button",a=>safelyAssign(a.parentNode.href)))
 	hrefBypass(/mi-globe\.com\/download\//,()=>safelyAssign(dllink))
+	domainBypass("cpmlink.net",()=>ifElement("a#btn-main",a=>{
+		crowdPath(location.pathname.substr(4))
+		contributeAndNavigate(a.href)
+	},()=>crowdBypass()))
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
@@ -1394,11 +1398,6 @@ ensureDomLoaded(()=>{
 	if(document.querySelector("#yangDihilangkan > a")&&document.querySelector("#downloadArea > .text-center"))//rathestation.bid
 	{
 		safelyNavigate(document.querySelector("#yangDihilangkan > a").href)
-		return finish()
-	}
-	if(document.querySelector("a#btn-main.disabled")&&typeof Countdown=="function")//cpmlink.net
-	{
-		safelyNavigate(document.querySelector("a#btn-main.disabled").href)
 		return finish()
 	}
 	if(document.querySelector("a.redirectBTN.disabled")&&document.querySelector(".timer"))//Arablionz.online
