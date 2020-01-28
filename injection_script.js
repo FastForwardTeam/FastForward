@@ -567,7 +567,7 @@ domainBypass("ipeenk.id",()=>{
 })
 domainBypass("lkc21.net",()=>window.setTimeout=f=>setTimeout(f,100))
 //Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
-hrefBypass(/(njiir|healthykk|linkasm|dxdrive|getwallpapers|mi-globe)\.com|punchsubs\.net|k2s\.cc|muhammadyoga\.me|u\.to|skiplink\.io|firefaucet\.win\/l\/|emulator\.games\/download\.php/,()=>window.setInterval=f=>setInterval(f,1))
+hrefBypass(/(njiir|healthykk|linkasm|dxdrive|getwallpapers)\.com|punchsubs\.net|k2s\.cc|muhammadyoga\.me|u\.to|skiplink\.io|firefaucet\.win\/l\/|emulator\.games\/download\.php/,()=>window.setInterval=f=>setInterval(f,1))
 hrefBypass(/(racaty|longfiles|filepuma|filehorse|portableapps)\.com|indishare\.org|datei\.to|keisekai\.fun|nexusmods\.com\/.*\/mods\/[0-9]*\?tab=files&file_id=[0-9]*/,()=>window.setTimeout=f=>setTimeout(f,1))
 domainBypass("universal-bypass.org",()=>{
 	window.universalBypassInstalled=true
@@ -1134,6 +1134,7 @@ ensureDomLoaded(()=>{
 	})
 	domainBypass("intifada1453.team",()=>ifElement("a.short-button[href]",a=>safelyNavigate(a.href)))
 	domainBypass("ahref.co",()=>ifElement(".download_button",a=>safelyAssign(a.parentNode.href)))
+	hrefBypass(/mi-globe\.com\/download\//,()=>safelyAssign(dllink))
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
