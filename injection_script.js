@@ -1268,7 +1268,6 @@ ensureDomLoaded(()=>{
 		else
 		{
 			i=location.search.split("?id=")[1]
-			i=i.substr(Math.floor(i.length/2),10)
 		}
 		f.id=""
 		const callback=()=>{
