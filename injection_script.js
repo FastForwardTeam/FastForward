@@ -1143,6 +1143,12 @@ ensureDomLoaded(()=>{
 		f.action=location.href
 		f.innerHTML='<input type="hidden" name="s_goo" value="2">'
 	}))
+	domainBypass("subsvip.com",()=>{
+		if(typeof link=="function")
+		{
+			link()
+		}
+	})
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
