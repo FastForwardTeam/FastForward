@@ -1093,7 +1093,7 @@ ensureDomLoaded(()=>{
 		}
 	}))
 	domainBypass("shirosafe.web.id",()=>ifElement("#generatem a[href]",a=>safelyNavigate(a.href)))
-	domainBypass("bebasdownloadfilm.com",()=>ifElement("frame[src^='http://bebasdownloadfilm.com/iframe/top.php?xds=']",f=>{
+	domainBypass(/bebasdownloadfilm\.com|dl\.sharemydrive\.xyz/,()=>ifElement("frame[src*='/iframe/top.php?']",f=>{
 		f.onload=()=>safelyNavigate(f.contentDocument.querySelector("p#skip a").href)
 	}))
 	domainBypass("midvip.xyz",()=>ensureDomLoaded(()=>{
