@@ -62,6 +62,9 @@
 	"optionsCrowdAutoOpen": {
 		"message": "Abrir destinos de colaboração coletiva em uma nova aba após % segundo(s). (0 = instantâneo)"
 	},
+	"optionsCrowdAutoClose": {
+		"message": "Fechar aba contendo destino de colaboração coletiva após visitá-lo por % segundo(s)."
+	},
 	"optionsInfoBox": {
 		"message": "Mostrar mensagens com informações em alguns sites."
 	},
@@ -109,6 +112,15 @@
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Isto vai ser aberto numa nova janela em 1 segundo."
+	},
+	"crowdCloseTimer": {
+		"message": "Esta aba fechará em % segundos."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Esta aba fechará em 1 segundo."
+	},
+	"cancel": {
+		"message": "Cancelar"
 	},
 	"crowdBypassedIgnore": {
 		"message": "Isto não estava correto?"

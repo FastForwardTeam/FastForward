@@ -62,6 +62,9 @@
 	"optionsCrowdAutoOpen": {
 		"message": "Nutzer-geteilte Ziele nach % Sekunde(n) in einem neuen Tab öffnen. (0 = sofort)"
 	},
+	"optionsCrowdAutoClose": {
+		"message": "Schließe den Tab, der das Nuzer-geteilte Ziel beinhaltet % Sekunde(n) nachdem das Ziel geöffnet wurde."
+	},
 	"optionsInfoBox": {
 		"message": "Zeige informative Nachrichten auf einigen Seiten an."
 	},
@@ -109,6 +112,15 @@
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Dies wird in einer Sekunde in einem neuen Tab geöffnet."
+	},
+	"crowdCloseTimer": {
+		"message": "Dieser Tab wird in % Sekunden geschlossen."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Dieser Tab wird in einer Sekunde geschlossen."
+	},
+	"cancel": {
+		"message": "Abbrechen"
 	},
 	"crowdBypassedIgnore": {
 		"message": "War das nicht richtig?"

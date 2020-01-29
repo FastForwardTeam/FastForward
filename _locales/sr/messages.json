@@ -62,6 +62,9 @@
 	"optionsCrowdAutoOpen": {
 		"message": "Отвори дестинације ка заједницама у новом табу након % секунде(и). (0 = одмах.)"
 	},
+	"optionsCrowdAutoClose": {
+		"message": "Затворите картицу која садржи дестинацију ка заједницама након % секунд(и) посете."
+	},
 	"optionsInfoBox": {
 		"message": "Прикажи информативне поруке на неким сајтовима."
 	},
@@ -109,6 +112,15 @@
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Ово ће бити отворено у новој картици за 1 секунд."
+	},
+	"crowdCloseTimer": {
+		"message": "Ова картица ће се затворити за % секунди."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Ова картица ће се затворити за 1 секунд."
+	},
+	"cancel": {
+		"message": "Отказати"
 	},
 	"crowdBypassedIgnore": {
 		"message": "Није ли ово било у реду?"

@@ -9,7 +9,7 @@
 		"message": "Du er fantastisk!"
 	},
 	"firstrunNoScript": {
-		"message": "Dog ser det ud til, at du benytter NoScript el.lign., hvilket Universal Bypass ikke understøtter."
+		"message": "Dog ser det ud til, at du benytter f.eks. NoScript, hvilket Universal Bypass ikke understøtter."
 	},
 	"version": {
 		"message": "Version"
@@ -51,16 +51,19 @@
 		"message": "Omgå trackers vha. Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
-		"message": "Bring mig direkte til trackers-destinationer."
+		"message": "Bring mig straks til trackers-destinationer."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Blokér IP-loggere, hvis de ikke kan omgås."
 	},
 	"optionsCrowdBypass": {
-		"message": "Giv og tag destinationerne for afkortere, som ikke kan omgås."
+		"message": "Giv og tag destinationerne fra uomgåelige afkortere."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Åbn crowd-sourced destinationer i en ny fane efter % sekund(-er) (0 = straks)."
+		"message": "Åbn crowd-sourced destinationer i en ny fane efter % sekund(er) (0 = straks)."
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Luk fanen med den crowd-sourced destination efter % sekund(er)s besøg."
 	},
 	"optionsInfoBox": {
 		"message": "Vis informationsmeddelelser på visse websteder."
@@ -72,7 +75,7 @@
 		"message": "Tilpassede Omgåelser"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "Dette er en avanceret funktion, så udviklere kan oprette deres egne scripts til at omgå websteder. Når de er finpudsede, kan de derefter indsendes på GitHub for at blive føjet til Universal Bypass, og blive tilgængelige for alle."
+		"message": "Dette er en avanceret funktion, så udviklere kan oprette deres egne scripts til webstedsomgåelse. Når de er finpudsede, kan de derefter indsendes på GitHub for at blive føjet til Universal Bypass, og blive tilgængelige for alle."
 	},
 	"beforeNavigate": {
 		"message": "Du er næsten på din destination."
@@ -102,7 +105,7 @@
 		"message": "Du behøver måske ikke at vente!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Andre Universal Bypass-brugere har allerede ventet på dig og rapporteret, at dette fører til %"
+		"message": "Andre Universal Bypass-brugere har allerede ventet for dig og rapporteret, at dette fører til %"
 	},
 	"crowdBypassedTimer": {
 		"message": "Dette åbnes i en ny fane om % sekunder."
@@ -110,8 +113,17 @@
 	"crowdBypassedTimerSingular": {
 		"message": "Dette åbnes i en ny fane om 1 sekund."
 	},
+	"crowdCloseTimer": {
+		"message": "Denne fane lukkes om % sekunder."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Denne fane lukkes om 1 sekund."
+	},
+	"cancel": {
+		"message": "Annullér"
+	},
 	"crowdBypassedIgnore": {
-		"message": "Var dette ukorrekt?"
+		"message": "Var dette forkert?"
 	},
 	"crowdBypassedOptions": {
 		"message": "Skal dette åbnes i en ny fane straks eller om x sekunder?"

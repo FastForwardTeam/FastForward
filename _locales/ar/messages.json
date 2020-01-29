@@ -45,7 +45,7 @@
 		"message": "تمكين تجاوز مواقع الويب."
 	},
 	"optionsNavigationDelay": {
-		"message": "خذنى للوجهة بعد % ثانية. (استخدم 0 للذهاب مباشرة.)"
+		"message": "خذنى للوجهة بعد % ثوان. (استخدم 0 للذهاب مباشرة.)"
 	},
 	"optionsTrackerBypass": {
 		"message": "تجاوز المتتبعين بإستخدام Apimon.de."
@@ -60,7 +60,10 @@
 		"message": "إعطاء وأخذ وجهات الروابط المختصرة الغير قابلة للتجاوز."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "فتح وجهة حشد المصادر في علامة تبويب جديدة بعد % ثانية. (0 للذهاب مباشرة.)"
+		"message": "فتح وجهة حشد المصادر في علامة تبويب جديدة بعد % ثوان. (0 للذهاب مباشرة.)"
+	},
+	"optionsCrowdAutoClose": {
+		"message": "إغلاق علامة التبويب التي تحتوي على مصادر الحشود للوجهة بعد زيارتها بـ % ثوان."
 	},
 	"optionsInfoBox": {
 		"message": "عرض رسائل معلومات في بعض المواقع."
@@ -81,10 +84,10 @@
 		"message": "وجهتك هي %"
 	},
 	"beforeNavigateTimer": {
-		"message": "سيتم تحويلك تلقائيا بعد % ثانية."
+		"message": "سيتم تحويلك تلقائيا بعد % ثوان."
 	},
 	"beforeNavigateTimerSingular": {
-		"message": "سيتم تحويلك تلقائيا بعد % ثانية."
+		"message": "سيتم تحويلك تلقائيا بعد % ثوان."
 	},
 	"beforeNavigateOptions": {
 		"message": "هل تريد ان يتم تحويلك تلقائيا او بعدد ثوانى محددة؟"
@@ -109,6 +112,15 @@
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "سوف يفتح في علامة تبويب جديدة بعد ثانية واحدة."
+	},
+	"crowdCloseTimer": {
+		"message": "علامة التبويب هذه سيتم إغلاقها بعد % ثوان."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "علامة التبويب هذه سيتم إغلاقها بعد ثانية واحده."
+	},
+	"cancel": {
+		"message": "إلغاء"
 	},
 	"crowdBypassedIgnore": {
 		"message": "ليس هذا صحيحًا؟"

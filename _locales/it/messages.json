@@ -15,10 +15,10 @@
 		"message": "Versione"
 	},
 	"changelog": {
-		"message": "Modifiche del nuovo aggiornamento"
+		"message": "Changelog"
 	},
 	"update": {
-		"message": "Controlla gli aggiornamenti"
+		"message": "Controlla per nuovi aggiornamenti"
 	},
 	"updateYes": {
 		"message": "Aggiornato con successo lo script di injection!"
@@ -61,6 +61,9 @@
 	},
 	"optionsCrowdAutoOpen": {
 		"message": "Apri le destinazioni di crowdfunding in una nuova scheda dopo % secondi. (0 = istantaneo.)"
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Chiudi la scheda contenente la destinazione di crowd-source dopo averla visitata per % secondo(i)."
 	},
 	"optionsInfoBox": {
 		"message": "Mostra messaggi informativi su alcuni siti."
@@ -109,6 +112,15 @@
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Questo verrà aperto in una nuova scheda in 1 secondo."
+	},
+	"crowdCloseTimer": {
+		"message": "Questa scheda si chiuderà in % secondi."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Questa scheda si chiuderà tra 1 secondo."
+	},
+	"cancel": {
+		"message": "Annulla"
 	},
 	"crowdBypassedIgnore": {
 		"message": "Non era corretto?"

@@ -27,7 +27,7 @@
 		"message": "Ya está actualizado."
 	},
 	"faq": {
-		"message": "Preguntas más frecuentes"
+		"message": "Preguntas frecuentes"
 	},
 	"bypassCounter": {
 		"message": "Universal Bypass ya ha descubierto % sitios para usted."
@@ -61,6 +61,9 @@
 	},
 	"optionsCrowdAutoOpen": {
 		"message": "Abrir los destinos que ya fueron descubiertos en una pestaña nueva después de % segundo(s). (0 = instantáneo)"
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Cerrar la pestaña que contiene el destino descubierto después de % segundo(s) de haberlo visitado."
 	},
 	"optionsInfoBox": {
 		"message": "Mostrar mensajes informativos en algunos sitios."
@@ -109,6 +112,15 @@
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Esto se abrirá en una pestaña nueva en 1 segundo."
+	},
+	"crowdCloseTimer": {
+		"message": "Esta pestaña se cerrará en % segundos."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Esta pestaña se cerrará en 1 segundo."
+	},
+	"cancel": {
+		"message": "Cancelar"
 	},
 	"crowdBypassedIgnore": {
 		"message": "¿No era eso correcto?"

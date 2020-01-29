@@ -62,6 +62,9 @@
 	"optionsCrowdAutoOpen": {
 		"message": "Open crowd-sourced bestemmingen in een nieuw tabblad na % seconde(s). (0 = direct.)"
 	},
+	"optionsCrowdAutoClose": {
+		"message": "Sluit tabblad met crowd-bestemmingen na % seconde(n) na het bezoeken."
+	},
 	"optionsInfoBox": {
 		"message": "Toon informatieve berichten op sommige sites."
 	},
@@ -109,6 +112,15 @@
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Dit zal in 1 seconde worden geopend in een nieuw tabblad."
+	},
+	"crowdCloseTimer": {
+		"message": "Dit tabblad wordt over % seconden gesloten."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Dit tabblad wordt over 1 seconde gesloten."
+	},
+	"cancel": {
+		"message": "Annuleren"
 	},
 	"crowdBypassedIgnore": {
 		"message": "Klopt dit niet?"

@@ -11,6 +11,21 @@
 	"firstrunNoScript": {
 		"message": "Тем не менее, похоже, что Вы используете NoScript или что-то подобное, с чем Universal Bypass несовместим."
 	},
+	"version": {
+		"message": "Версия"
+	},
+	"changelog": {
+		"message": "Список изменений"
+	},
+	"update": {
+		"message": "Проверить обновления"
+	},
+	"updateYes": {
+		"message": "Скрипт вставки успешно обновлён!"
+	},
+	"updateNo": {
+		"message": "Уже актуально."
+	},
 	"faq": {
 		"message": "Часто задаваемые вопросы (FAQ)"
 	},
@@ -46,6 +61,9 @@
 	},
 	"optionsCrowdAutoOpen": {
 		"message": "Открывать добавленные пользователями адреса назначения в новой вкладке через % сек. (0 = сразу)"
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Закрывать вкладку добавленного пользователями адреса назначения через % сек. после перехода по нему."
 	},
 	"optionsInfoBox": {
 		"message": "Показывать на некоторых сайтах информационные сообщения."
@@ -94,6 +112,15 @@
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Это будет открыто в новой вкладке через 1 секунду."
+	},
+	"crowdCloseTimer": {
+		"message": "Эта вкладка закроется через % сек."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Эта вкладка закроется через 1 секунду."
+	},
+	"cancel": {
+		"message": "Отмена"
 	},
 	"crowdBypassedIgnore": {
 		"message": "Это было неправильно?"

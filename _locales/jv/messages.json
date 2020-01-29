@@ -62,6 +62,9 @@
 	"optionsCrowdAutoOpen": {
 		"message": "Mbukak tujuan crowd-sourced ing tab anyar sawise % detik. (0 = langsung.)"
 	},
+	"optionsCrowdAutoClose": {
+		"message": "Tutup tab seng isine tujuan soko crowd bypass ing % detik sak wise ngunjungi."
+	},
 	"optionsInfoBox": {
 		"message": "Tampilake pesen informasi ing sawetara situs."
 	},
@@ -109,6 +112,15 @@
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Iki bakal di bukak ndek tab anyar ing 1 detik."
+	},
+	"crowdCloseTimer": {
+		"message": "Tab iki bakal ditutup ing % detik."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Tab iki bakal ditutup ing 1 detik."
+	},
+	"cancel": {
+		"message": "Batalne"
 	},
 	"crowdBypassedIgnore": {
 		"message": "Opo iki ora bener?"

@@ -17,6 +17,15 @@
 	"changelog": {
 		"message": "Dziennik zmian"
 	},
+	"update": {
+		"message": "Sprawdź dostępność aktualizacji"
+	},
+	"updateYes": {
+		"message": "Pomyślnie zaktualizowano skrypt wstrzyknięcia!"
+	},
+	"updateNo": {
+		"message": "Już masz najnowszą wersję."
+	},
 	"faq": {
 		"message": "Najczęściej zadawane pytania (FAQ)"
 	},
@@ -49,6 +58,12 @@
 	},
 	"optionsCrowdBypass": {
 		"message": "Podaj i wykorzystaj miejsca, do których nie można przejść."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Otwórz crowd-sourcing w nowej karcie po % sekundach. (0 = natychmiast.)"
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Zamknij zakładkę zawierająca crowd-sourcing miejsca docelowego po % sekundach jej wizyty."
 	},
 	"optionsInfoBox": {
 		"message": "Pokaż wiadomości informacyjne na niektórych stronach."
@@ -97,6 +112,15 @@
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "To będzie otwarte w nowym oknie za 1 sekundę."
+	},
+	"crowdCloseTimer": {
+		"message": "Ta karta zostanie zamknięta za % sekund."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Ta karta zostanie zamknięta za 1 sekundę."
+	},
+	"cancel": {
+		"message": "Anuluj"
 	},
 	"crowdBypassedIgnore": {
 		"message": "Czy to było nieprawidłowe?"

@@ -62,6 +62,9 @@
 	"optionsCrowdAutoOpen": {
 		"message": "Ouvrir les destinations partagées par les utilisateurs dans un nouvel onglet après % seconde(s). (0 = ouverture instantanée.)"
 	},
+	"optionsCrowdAutoClose": {
+		"message": "Fermer les onglets contenant une destination partagée par les utilisateurs après % seconde(s) de visite."
+	},
 	"optionsInfoBox": {
 		"message": "Afficher des messages d'information sur certains sites."
 	},
@@ -110,8 +113,17 @@
 	"crowdBypassedTimerSingular": {
 		"message": "Ce lien sera ouvert dans un nouvel onglet dans 1 seconde."
 	},
+	"crowdCloseTimer": {
+		"message": "Cet onglet se fermera dans % secondes."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Cet onglet se fermera dans 1 seconde."
+	},
+	"cancel": {
+		"message": "Annuler"
+	},
 	"crowdBypassedIgnore": {
-		"message": "Cela n'était-il pas exact ?"
+		"message": "Cela n'était-il pas correct ?"
 	},
 	"crowdBypassedOptions": {
 		"message": "Voulez-vous que ce lien soit ouvert instantanément dans un nouvel onglet ou après x secondes ?"

@@ -62,6 +62,9 @@
 	"optionsCrowdAutoOpen": {
 		"message": "Buka halaman tujuan crowd bypass di tab baru setelah % detik. (0 = instan.)"
 	},
+	"optionsCrowdAutoClose": {
+		"message": "Tutup tab yang memuat halaman tujuan crowd bypass setelah % detik mengunjunginya."
+	},
 	"optionsInfoBox": {
 		"message": "Tampilkan pesan informasi di beberapa situs."
 	},
@@ -109,6 +112,15 @@
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Ini akan dibuka di tab baru dalam 1 detik."
+	},
+	"crowdCloseTimer": {
+		"message": "Tab ini akan ditutup dalam % detik."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Tab ini akan ditutup dalam 1 detik."
+	},
+	"cancel": {
+		"message": "Batalkan"
 	},
 	"crowdBypassedIgnore": {
 		"message": "Apakah ini tidak benar ?"

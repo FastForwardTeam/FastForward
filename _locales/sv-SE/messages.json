@@ -62,6 +62,9 @@
 	"optionsCrowdAutoOpen": {
 		"message": "Öppna crowd-sourced mål i en ny flik efter % sekund(er). (0 = omedelbart)"
 	},
+	"optionsCrowdAutoClose": {
+		"message": "Stäng fliken som innehåller crowdsourced-målet efter % sekund(er) efter du besökt den."
+	},
 	"optionsInfoBox": {
 		"message": "Visa informationsmeddelanden på vissa webbplatser."
 	},
@@ -109,6 +112,15 @@
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Detta öppnas i en ny flik om 1 sekund."
+	},
+	"crowdCloseTimer": {
+		"message": "Den här fliken stängs om % sekunder."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Den här fliken stängs om 1 sekund."
+	},
+	"cancel": {
+		"message": "Avbryt"
 	},
 	"crowdBypassedIgnore": {
 		"message": "Var detta inte korrekt?"
