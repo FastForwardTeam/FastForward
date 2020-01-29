@@ -1149,6 +1149,13 @@ ensureDomLoaded(()=>{
 			link()
 		}
 	})
+	domainBypass("shon.xyz",()=>ifElement("form[action*='/redirect/sgo/']",f=>{
+		fetch(f.action,{
+			method:"POST",
+			headers:{"Content-Type":"application/x-www-form-urlencoded"},
+			body:new URLSearchParams(new FormData(f)).toString()
+		}).then(r=>contributeAndNavigate(r.headers.get("refresh").split("0;url=")[1]))
+	},()=>crowdBypass()))
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
