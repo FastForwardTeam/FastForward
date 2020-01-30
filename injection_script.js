@@ -1064,6 +1064,12 @@ ensureDomLoaded(()=>{
 	domainBypass("mkvking.com",()=>document.querySelectorAll("a[href^='https://mkvking.com?c17421bdaf=']").forEach(a=>{
 		a.href+="#bypassClipboard="+a.getAttribute("title").split("Download ").join("").split("(").join("").split(")").join("").split(" ").join("").toLowerCase()
 	}))
+	domainBypass("oploverz.in",()=>document.querySelectorAll("a[href^='https://kontenajaib.xyz/?id=']").forEach(a=>{
+		if(a.closest(".list-download"))
+		{
+			a.href+="#bypassClipboard="+a.closest(".list-download").previousSibling.previousElementSibling.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
+		}
+	}))
 	hrefBypass(/stayonline\.pro\/l\/(.*)\//,m=>$.post(endpoint,{id:m[1],ref:""},r=>safelyNavigate(r.data.value)))
 	domainBypass("xlink.cc",()=>safelyNavigate(JSON.parse(atob(window.bootstrapData)).linkResponse.link.long_url))
 	domainBypass("1shortlink.com",()=>awaitElement("#redirect-link[data-href]",a=>safelyNavigate(a.getAttribute("data-href"))))
