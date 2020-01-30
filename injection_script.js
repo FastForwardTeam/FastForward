@@ -1190,11 +1190,19 @@ ensureDomLoaded(()=>{
 	//Soralink Wordpress Plugin
 	const soralink_data={
 		"wizardsubs.com":"408631a1f0",
-		"www.zonangopi.com":"407ea19f7e"
+		"www.zonangopi.com":"407ea19f7e",
+		"www.conan.id":"e7fc10d9e3",
+		"katmoviehd.nl":"6de4d3b1de",
+		"pusatfilm21.biz":"bd943a6562",
+		"drivenime.com":"a82ad005b1",
+		"myonime.com":"3766dd8efb",
+		"animersindo.net":"3766dd8efb",
+		"animebukatsu.net":"3766dd8efb",
+		"kordramas.co":"13a9748daa"
 	}
 	for(let domain in soralink_data)
 	{
-		domainBypass(domain,()=>document.querySelectorAll("a[href^='https://"+domain+"?"+soralink_data[domain]+"=']").forEach(a=>{
+		domainBypass(domain,()=>document.querySelectorAll("a[href^='"+location.origin+"?"+soralink_data[domain]+"=']").forEach(a=>{
 			a.href+="#bypassClipboard="+a.href.split("?"+soralink_data[domain]+"=")[1]
 		}))
 	}
