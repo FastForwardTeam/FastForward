@@ -1162,6 +1162,7 @@ ensureDomLoaded(()=>{
 			body:new URLSearchParams(new FormData(f)).toString()
 		}).then(r=>contributeAndNavigate(r.headers.get("refresh").split("0;url=")[1]))
 	},()=>crowdBypass()))
+	domainBypass("brpaper.com", () => safelyNavigate(window.location.href.replace("downloads","downloader")))
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
