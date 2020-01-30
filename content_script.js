@@ -118,6 +118,10 @@ if(document instanceof HTMLDocument)
 								referer="http://kordramas.co/?13a9748daa="+id
 								break;
 
+								case "oploverz.in":
+								referer="https://kontenajaib.xyz/?id="+id
+								break;
+
 							}
 							referer+="#bypassClipboard="+bypassClipboard
 						}
