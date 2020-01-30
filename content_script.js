@@ -86,6 +86,38 @@ if(document instanceof HTMLDocument)
 								referer="https://www.zonangopi.com/?407ea19f7e="+id
 								break;
 
+								case "www.conan.id":
+								referer="https://www.conan.id/?e7fc10d9e3="+id
+								break;
+								
+								case "katmoviehd.nl":
+								referer="https://katmoviehd.nl/?6de4d3b1de="+id
+								break;
+								
+								case "pusatfilm21.biz":
+								referer="https://pusatfilm21.biz/?bd943a6562="+id
+								break;
+								
+								case "drivenime.com":
+								referer="https://drivenime.com/?a82ad005b1="+id
+								break;
+								
+								case "myonime.com":
+								referer="https://myonime.com/?3766dd8efb="+id
+								break;
+								
+								case "animersindo.net":
+								referer="https://animersindo.net/?3766dd8efb="+id
+								break;
+								
+								case "animebukatsu.net":
+								referer="https://animebukatsu.net/?3766dd8efb="+id
+								break;
+								
+								case "kordramas.co":
+								referer="http://kordramas.co/?13a9748daa="+id
+								break;
+
 							}
 							referer+="#bypassClipboard="+bypassClipboard
 						}
