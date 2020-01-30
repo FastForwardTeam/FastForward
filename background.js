@@ -650,7 +650,8 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 "*://*.cariskuy.com/*?site=*",
 "*://*.losstor.com/ini/?site=*",
 "*://*.giga74.com/*?site=*",
-"*://*.hfiz.site/?site=*"
+"*://*.hfiz.site/?site=*",
+"*://*.cemiw.net/*?site=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
