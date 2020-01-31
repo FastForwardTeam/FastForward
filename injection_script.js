@@ -1147,7 +1147,7 @@ ensureDomLoaded(()=>{
 	},()=>crowdBypass()))
 	domainBypass("boomx5.com",()=>ifElement("#form",f=>{
 		f.action=location.href
-		f.innerHTML='<input type="hidden" name="s_goo" value="2">'
+		f.innerHTML='<input type="hidden" name="session_id" value="">'
 	}))
 	domainBypass("subsvip.com",()=>{
 		if(typeof link=="function")
