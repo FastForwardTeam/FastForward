@@ -9,12 +9,15 @@ timer=(message,secondsLeft,callback)=>{
 		},1000),
 		p=div.querySelector("p"),
 		brws=(typeof browser=="undefined"?chrome:browser),
+		cancel=()=>{
+			clearInterval(tid)
+			div.style.display="none"
+		},
 		tick=()=>{
 			if(secondsLeft<=0)
 			{
-				clearInterval(tid)
+				cancel()
 				callback()
-				div.style.display="none"
 			}
 			if(secondsLeft==1)
 			{
@@ -24,6 +27,13 @@ timer=(message,secondsLeft,callback)=>{
 			{
 				p.textContent=brws.i18n.getMessage(message).replace("%",secondsLeft)
 			}
+			p.textContent+=" [ "
+			let a=document.createElement("a")
+			a.href="#"
+			a.textContent=brws.i18n.getMessage("cancel")
+			p.appendChild(a)
+			p.innerHTML+=" ]"
+			p.querySelector("a").onclick=cancel
 		}
 		div.style.display="block"
 		tick()
