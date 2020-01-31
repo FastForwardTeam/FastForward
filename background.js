@@ -441,6 +441,15 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
+		return getRedirect(atob(details.url.substr(details.url.indexOf("/protect-link/")+14)))
+	}
+},{types:["main_frame"],urls:[
+"*://*.bursadrakor.com/protect-link/*"
+]},["blocking"])
+
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
 		let url=new URL(details.url)
 		if(url.searchParams.has("aurl"))
 		{
