@@ -71,6 +71,9 @@
 	"privacyPolicy": {
 		"message": "Политика конфиденциальности"
 	},
+	"contributors": {
+		"message": "Участники"
+	},
 	"optionsUserscripts": {
 		"message": "Пользовательские обходы"
 	},

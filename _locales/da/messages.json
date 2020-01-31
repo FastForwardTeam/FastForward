@@ -71,6 +71,9 @@
 	"privacyPolicy": {
 		"message": "Fortrolighedspolitik"
 	},
+	"contributors": {
+		"message": "Bidragsydere"
+	},
 	"optionsUserscripts": {
 		"message": "Tilpassede Omgåelser"
 	},

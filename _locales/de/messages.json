@@ -71,6 +71,9 @@
 	"privacyPolicy": {
 		"message": "Datenschutzerklärung"
 	},
+	"contributors": {
+		"message": "Mitwirkende"
+	},
 	"optionsUserscripts": {
 		"message": "Eigene Umgehungen"
 	},

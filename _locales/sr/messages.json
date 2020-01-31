@@ -71,6 +71,9 @@
 	"privacyPolicy": {
 		"message": "Полиса приватности"
 	},
+	"contributors": {
+		"message": "Сарадници"
+	},
 	"optionsUserscripts": {
 		"message": "Ручно урађене обилазнице"
 	},

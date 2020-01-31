@@ -21,7 +21,7 @@
 		"message": "Periksa pembaruan"
 	},
 	"updateYes": {
-		"message": "Skrip injeksi berhasil diperbarui!"
+		"message": "Berhasil memperbarui skrip injeksi!"
 	},
 	"updateNo": {
 		"message": "Sudah paling terbaru."
@@ -33,7 +33,7 @@
 		"message": "Universal Bypass sudah membypass % situs untuk anda."
 	},
 	"support": {
-		"message": "Dukung Universal Bypass."
+		"message": "Berkontribusi ke Universal Bypass."
 	},
 	"options": {
 		"message": "Pilihan"
@@ -70,6 +70,9 @@
 	},
 	"privacyPolicy": {
 		"message": "Kebijakan Pribadi"
+	},
+	"contributors": {
+		"message": "Kontributor"
 	},
 	"optionsUserscripts": {
 		"message": "Atur Bypass sesuai keinginan"

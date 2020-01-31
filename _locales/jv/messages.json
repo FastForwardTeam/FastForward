@@ -21,7 +21,7 @@
 		"message": "Priksa gawe nganyari"
 	},
 	"updateYes": {
-		"message": "Skrip injeksi berhasil dianyari!"
+		"message": "Sukses nganyari skrip injeksi!"
 	},
 	"updateNo": {
 		"message": "wis sing paling anyar."
@@ -33,7 +33,7 @@
 		"message": "Universal Bypass wis nrabas % situs kanggo sampeyan."
 	},
 	"support": {
-		"message": "Dhukungan kanggo Universal Bypass."
+		"message": "Maringi kontribusi kangge Universal Bypass."
 	},
 	"options": {
 		"message": "Pilihan"
@@ -70,6 +70,9 @@
 	},
 	"privacyPolicy": {
 		"message": "Kebijakan Privasi"
+	},
+	"contributors": {
+		"message": "Penyumbang"
 	},
 	"optionsUserscripts": {
 		"message": "Setel Trabasan kaya sing dikarepake"

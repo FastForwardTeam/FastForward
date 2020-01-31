@@ -71,6 +71,9 @@
 	"privacyPolicy": {
 		"message": "Politique de confidentialité"
 	},
+	"contributors": {
+		"message": "Contributeurs"
+	},
 	"optionsUserscripts": {
 		"message": "Contournements personnalisés"
 	},

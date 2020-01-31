@@ -1,0 +1,59 @@
+{
+	"appDesc": {
+		"message": "Nestrácajte svoj drahocenný čas so súhlasom. Universal Bypass obchádza otravné funkcie skracovania linkov."
+	},
+	"firstrunTitle": {
+		"message": "Ďakujeme za inštaláciu Universal Bypass!"
+	},
+	"firstrunSubtitle": {
+		"message": "Si úžasný!"
+	},
+	"firstrunNoScript": {
+		"message": "Vyzerá to ale tak, že používate NoScript alebo podobnú funkciu, ktorá nie je s Universal Bypass kompatibilná."
+	},
+	"version": {
+		"message": "Verzia"
+	},
+	"changelog": {
+		"message": "Zoznam zmien"
+	},
+	"update": {
+		"message": "Skontrolovať aktualizácie"
+	},
+	"updateYes": {
+		"message": "Úspešne si updatoval injekčný skript!"
+	},
+	"updateNo": {
+		"message": "Už je aktualizované."
+	},
+	"faq": {
+		"message": "Často kladené otázky"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass pre Vás úspešne obišiel už % stránok."
+	},
+	"support": {
+		"message": "Podieľajte sa na Universal Bypass."
+	},
+	"options": {
+		"message": "Možnosti"
+	},
+	"optionsLink": {
+		"message": "Zmeniť nastavenia Universal Bypass."
+	},
+	"optionsEnabled": {
+		"message": "Povoliť obchádzanie webstránok."
+	},
+	"optionsNavigationDelay": {
+		"message": "Dostaň ma do cieľa za % sek. (Pre okamžitú navigáciu použite 0.)"
+	},
+	"optionsTrackerBypass": {
+		"message": "Obíďte sledovanie pomocou servera Apimon.de."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Okamžite ma dostaňte do cieľa sledovateľov."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Blokuj IP adresy prihlasovateľov, ktoré nemôžu byť obídené."
+	}
+}

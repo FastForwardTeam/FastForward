@@ -71,6 +71,9 @@
 	"privacyPolicy": {
 		"message": "Privacy Verklaring"
 	},
+	"contributors": {
+		"message": "Bijdrragers"
+	},
 	"optionsUserscripts": {
 		"message": "Aangepaste omzeilingen"
 	},

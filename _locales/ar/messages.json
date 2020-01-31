@@ -71,6 +71,9 @@
 	"privacyPolicy": {
 		"message": "سياسة الخصوصية"
 	},
+	"contributors": {
+		"message": "المُساهمون"
+	},
 	"optionsUserscripts": {
 		"message": "عمليات التجاوز المخصصة"
 	},

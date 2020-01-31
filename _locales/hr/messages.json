@@ -65,6 +65,9 @@
 	"privacyPolicy": {
 		"message": "Pravila privatnosti"
 	},
+	"contributors": {
+		"message": "Suradnici"
+	},
 	"optionsUserscripts": {
 		"message": "Prilagođeno zaobilaženje"
 	},

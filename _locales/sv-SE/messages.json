@@ -71,6 +71,9 @@
 	"privacyPolicy": {
 		"message": "Integritetspolicy"
 	},
+	"contributors": {
+		"message": "Medverkande"
+	},
 	"optionsUserscripts": {
 		"message": "Anpassade förbikopplingar"
 	},
