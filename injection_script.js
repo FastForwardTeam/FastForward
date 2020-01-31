@@ -1163,6 +1163,15 @@ ensureDomLoaded(()=>{
 		}).then(r=>contributeAndNavigate(r.headers.get("refresh").split("0;url=")[1]))
 	},()=>crowdBypass()))
 	domainBypass("brpaper.com",()=>safelyNavigate(location.href.replace("downloads","downloader")))
+	domainBypass("boo.tw",()=>ifElement("div#shorturl-go",d=>{
+		let pp=document.querySelector("#pp").getAttribute("value"),
+		kd=document.querySelector("#kd").getAttribute("value"),
+		x=d.getAttribute("x"),
+		k=(kd-1)/10,
+		p=(pp-5)/12,
+		kp=k+p
+		safelyAssign(location.protocol+"//"+x.substring(4,x.length-kp))
+	}))
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
