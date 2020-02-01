@@ -1098,7 +1098,15 @@ ensureDomLoaded(()=>{
 			safelyNavigate(decodeURIComponent(url.search.split("url=")[1].split("&")[0]))
 		}
 	}))
-	domainBypass("shirosafe.web.id",()=>ifElement("#generatem img:not([style='display: none;'])",a=>safelyAssign(a.parentNode.href)))
+	domainBypass("shirosafe.web.id",()=>ifElement("#generatem",d=>{
+		d.style=""
+		document.querySelectorAll("#generatem a[href^='https://shirosafe.web.id/r=']").forEach(a=>{
+			if(a.offsetWidth>0&&a.offsetHeight>0)
+			{
+				safelyAssign(a.href)
+			}
+		})
+	}))
 	domainBypass(/bebasdownloadfilm\.com|dl\.sharemydrive\.xyz/,()=>ifElement("frame[src*='/iframe/top.php?']",f=>{
 		f.onload=()=>safelyNavigate(f.contentDocument.querySelector("p#skip a").href)
 	}))
