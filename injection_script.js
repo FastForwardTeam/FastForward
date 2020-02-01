@@ -1098,9 +1098,10 @@ ensureDomLoaded(()=>{
 			safelyNavigate(decodeURIComponent(url.search.split("url=")[1].split("&")[0]))
 		}
 	}))
-	domainBypass("shirosafe.web.id",()=>ifElement("a[href^='https://shirosafe.web.id/r=']",a=>{
-		a.closest("div[style^='display:none']").style=""
-		document.querySelectorAll("a[href^='https://shirosafe.web.id/r=']").forEach(a=>{
+	domainBypass("shirosafe.web.id",()=>ifElement("img[src='https://shirosafe.web.id/images/end.png']",i=>{
+		i.closest("div[id][style^='display:none']").style=""
+		document.querySelectorAll("img[src='https://shirosafe.web.id/images/end.png']").forEach(i=>{
+			let a=i.closest("a[href^='https://shirosafe.web.id/']")
 			if(a.offsetWidth>0&&a.offsetHeight>0)
 			{
 				safelyAssign(a.href)
