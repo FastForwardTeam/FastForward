@@ -1098,9 +1098,9 @@ ensureDomLoaded(()=>{
 			safelyNavigate(decodeURIComponent(url.search.split("url=")[1].split("&")[0]))
 		}
 	}))
-	domainBypass("shirosafe.web.id",()=>ifElement("#generatem",d=>{
-		d.style=""
-		document.querySelectorAll("#generatem a[href^='https://shirosafe.web.id/r=']").forEach(a=>{
+	domainBypass("shirosafe.web.id",()=>ifElement("a[href^='https://shirosafe.web.id/r=']",a=>{
+		a.closest("div[style^='display:none']").style=""
+		document.querySelectorAll("a[href^='https://shirosafe.web.id/r=']").forEach(a=>{
 			if(a.offsetWidth>0&&a.offsetHeight>0)
 			{
 				safelyAssign(a.href)
