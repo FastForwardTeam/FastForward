@@ -1170,7 +1170,8 @@ ensureDomLoaded(()=>{
 		k=(kd-1)/10,
 		p=(pp-5)/12,
 		kp=k+p
-		safelyAssign(location.protocol+"//"+x.substring(4,x.length-kp))
+		x=x.substring(4,x.length-kp)
+		safelyAssign(isSSL?"https://"+x:"http://"+x)
 	}))
 	domainBypass("kora4top.com",()=>ifElement("div#m1x2 a",a=>safelyNavigate(a.href)))
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
