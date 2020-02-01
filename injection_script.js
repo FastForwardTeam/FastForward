@@ -292,7 +292,7 @@ ODP(window,"initLbjs",{
 	}
 })
 //Safelink
-let actual_safelink=forced_safelink={counter:0,adblock:false}
+let actual_safelink=forced_safelink={counter:0,adblock:false,click2x:false}
 ODP(window,"safelink",
 {
 	set:_=>{
