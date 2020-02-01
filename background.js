@@ -441,10 +441,11 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
-		return getRedirect(atob(details.url.substr(details.url.indexOf("/protect-link/")+14)))
+		return getRedirect(atob(details.url.substr(details.url.indexOf("aHR0c"))))
 	}
 },{types:["main_frame"],urls:[
-"*://*.bursadrakor.com/protect-link/*"
+"*://*.bursadrakor.com/protect-link/*",
+"*://*.getfile.mobi/get/files/*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
