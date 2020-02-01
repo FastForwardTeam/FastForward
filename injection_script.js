@@ -429,7 +429,7 @@ domainBypass(/wadooo\.com|gotravelgo\.space|pantauterus\.me|liputannubi\.net/,()
 	crowdBypass()
 })
 domainBypass("lnk.news",()=>ifElement("#skip_form",f=>goToUrl(),ifElement("#display_go_form",f=>f.submit())))
-hrefBypass(/uiz\.io\/go/,()=>{
+hrefBypass(/uiz\.(io|app)\/go/,()=>{
 	Object.freeze(location)
 	const regex=/.*window\.location\.href = "(http[^"]+)";.*/
 	document.querySelectorAll("script").forEach(script=>{
@@ -884,7 +884,7 @@ ensureDomLoaded(()=>{
 		})
 	})
 	domainBypass(/spacetica\.com|linkpoi\.in/,()=>ifElement("a.btn.btn-primary[href]",a=>safelyNavigate(a.href)))
-	domainBypass("uiz.io",()=>crowdBypass(()=>{
+	domainBypass(/uiz\.(io|app)/,()=>crowdBypass(()=>{
 		awaitElement("#go-adsredirect",f=>{
 			f.action+="#bypassClipboard="+location.pathname.substr(1)
 		})
