@@ -33,7 +33,7 @@
 		"message": "Universal Bypass a déjà contourné % sites pour vous."
 	},
 	"support": {
-		"message": "Soutenir Universal Bypass."
+		"message": "Contribuer à Universal Bypass."
 	},
 	"options": {
 		"message": "Options"
@@ -126,7 +126,7 @@
 		"message": "Annuler"
 	},
 	"crowdBypassedIgnore": {
-		"message": "Cela n'était-il pas correct ?"
+		"message": "Cela n'était-il pas exact ?"
 	},
 	"crowdBypassedOptions": {
 		"message": "Voulez-vous que ce lien soit ouvert instantanément dans un nouvel onglet ou après x secondes ?"

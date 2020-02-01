@@ -62,11 +62,17 @@
 	"optionsCrowdAutoOpen": {
 		"message": "Mở các điểm đến có cộng đồng đóng góp trong một tab mới sau % giây. (0 = lập tức.)"
 	},
+	"optionsCrowdAutoClose": {
+		"message": "Đóng tab chứa địa điểm có cộng đồng đóng góp sau % giây truy cập."
+	},
 	"optionsInfoBox": {
 		"message": "Hiển thị tin nhắn thông tin trên một số trang."
 	},
 	"privacyPolicy": {
 		"message": "Chính sách bảo mật"
+	},
+	"contributors": {
+		"message": "Người đóng góp"
 	},
 	"optionsUserscripts": {
 		"message": "Bypasses tùy chỉnh"
@@ -109,6 +115,15 @@
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Sẽ được mở trong tab mới sau 1 giây."
+	},
+	"crowdCloseTimer": {
+		"message": "Tab này sẽ đóng lại sau % giây."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Tab này sẽ đóng lại sau 1 giây."
+	},
+	"cancel": {
+		"message": "Huỷ bỏ"
 	},
 	"crowdBypassedIgnore": {
 		"message": "Điều này chưa chính xác ư?"
