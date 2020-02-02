@@ -24,7 +24,7 @@
 		"message": "Successfully updated the injection script!"
 	},
 	"updateNo": {
-		"message": "Already up-to-date."
+		"message": "The injection script is already up-to-date."
 	},
 	"faq": {
 		"message": "Frequently Asked Questions (FAQ)"
