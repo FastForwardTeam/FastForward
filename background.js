@@ -451,6 +451,13 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
+		return getRedirect("http"+details.url.substr(details.url.indexOf("?xurl=")+6))
+	}
+},{types:["main_frame"],urls:["*://bluemediafiles.com/*?xurl=*"]},["blocking"])
+
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	if(enabled)
+	{
 		let url=new URL(details.url)
 		if(url.searchParams.has("aurl"))
 		{

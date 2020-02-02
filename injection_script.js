@@ -599,7 +599,7 @@ ensureDomLoaded(()=>{
 			f.submit()
 		}
 	})
-	domainBypass("bluemediafiles.com",()=>{
+	domainBypass("bluemediafiles.com",()=>{//deprecated: bypassed by background.js after 12.9
 		if(typeof FinishMessage=="string"&&FinishMessage.indexOf("<a href=")>-1)
 		{
 			document.write(FinishMessage)
