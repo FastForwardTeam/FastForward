@@ -290,9 +290,9 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 	crowdCloseDelayInput.oninput=function()
 	{
 		clearTimeout(crowdCloseDelayInputTimer)
-		crowdOpenDelayInputTimer=setTimeout(()=>{
+		crowdCloseDelayInputTimer=setTimeout(()=>{
 			brws.storage.sync.set({
-				crowd_open_delay:crowdOpenDelayInput.value
+				crowd_close_delay:crowdCloseDelayInput.value
 			})
 		},300)
 	}
