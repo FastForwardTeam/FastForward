@@ -24,7 +24,7 @@
 		"message": "¡El script de inyección se actualizó correctamente!"
 	},
 	"updateNo": {
-		"message": "Ya está actualizado."
+		"message": "El script de inyección ya está actualizado."
 	},
 	"faq": {
 		"message": "Preguntas frecuentes"
@@ -54,7 +54,7 @@
 		"message": "Llevarme instantáneamente a los destinos de los rastreadores."
 	},
 	"optionsBlockIPLoggers": {
-		"message": "Bloquear los registradores IP si no pueden ser omitidos."
+		"message": "Bloquear registradores de IP si no pueden ser omitidos."
 	},
 	"optionsCrowdBypass": {
 		"message": "Dar y tomar los destinos de los acortadores que no se pueden anular."

@@ -24,7 +24,7 @@
 		"message": "Berhasil memperbarui skrip injeksi!"
 	},
 	"updateNo": {
-		"message": "Sudah paling terbaru."
+		"message": "Skrip injeksinya sudah paling yang terbaru."
 	},
 	"faq": {
 		"message": "Pertanyaan yang Sering Diajukan\n(FAQ)"
@@ -33,7 +33,7 @@
 		"message": "Universal Bypass sudah membypass % situs untuk anda."
 	},
 	"support": {
-		"message": "Berkontribusi ke Universal Bypass."
+		"message": "Berkontribusi untuk Universal Bypass."
 	},
 	"options": {
 		"message": "Pilihan"
@@ -135,6 +135,6 @@
 		"message": "Universal Bypass mencegah IP anda supaya tidak terlog."
 	},
 	"blockedSubtitle": {
-		"message": "Tidak ingin Universal Bypass untuk mencegah situs berbahaya dari mendapatkan IP Anda?"
+		"message": "Tidak ingin Universal Bypass untuk mencegah bad actors (Peretas) dari mendapatkan IP Anda?"
 	}
 }

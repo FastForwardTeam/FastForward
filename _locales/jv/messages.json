@@ -24,7 +24,7 @@
 		"message": "Sukses nganyari skrip injeksi!"
 	},
 	"updateNo": {
-		"message": "wis sing paling anyar."
+		"message": "Skrip injeksine sampun seng paling anyar."
 	},
 	"faq": {
 		"message": "Pitakon Seng Umum (FAQ)"
@@ -135,6 +135,6 @@
 		"message": "Universal Bypass nyegah IP sampeyan supaya ora mlebu log."
 	},
 	"blockedSubtitle": {
-		"message": "Ora pingin Universal Bypass nyegah situs kanggo njupuk IP ne sampeyan?"
+		"message": "Ora pingin Universal Bypass nyegah bad actors (Peretas) kanggo njupuk IP ne sampeyan?"
 	}
 }

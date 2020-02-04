@@ -24,7 +24,7 @@
 		"message": "Mise à jour du script d'injection réussie !"
 	},
 	"updateNo": {
-		"message": "Universal Bypass est déjà à jour."
+		"message": "Le script d'injection est déjà à jour."
 	},
 	"faq": {
 		"message": "Questions fréquemment posées (FAQ)"
@@ -78,7 +78,7 @@
 		"message": "Contournements personnalisés"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "Il s'agit d'une fonctionnalité avancée permettant aux développeurs de créer leurs propres scripts pour contourner des sites Web. Une fois mis au point, ils peuvent ensuite être soumis sur GitHub pour être ajoutés à Universal Bypass, afin qu'ils soient accessibles à tous."
+		"message": "Il s'agit d'une fonctionnalité avancée permettant aux développeurs de créer leurs propres scripts pour contourner des sites. Une fois perfectionnés, ils peuvent ensuite être soumis sur GitHub pour être ajoutés à Universal Bypass, afin qu'ils soient accessibles à tous."
 	},
 	"beforeNavigate": {
 		"message": "Vous y êtes presque !"
@@ -108,7 +108,7 @@
 		"message": "Vous n'aurez peut-être pas à attendre !"
 	},
 	"crowdBypassedInfo": {
-		"message": "D'autres utilisateurs de Universal Bypass ont déjà cliqué sur ce lien et ont indiqué que cela mène à %"
+		"message": "D'autres utilisateurs de Universal Bypass ont déjà cliqué sur ce lien et ont indiqué que cela conduit à cette adresse : %"
 	},
 	"crowdBypassedTimer": {
 		"message": "Ce lien sera ouvert dans un nouvel onglet dans % secondes."
