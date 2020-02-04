@@ -1180,6 +1180,7 @@ ensureDomLoaded(()=>{
 			count=1
 		}
 	})
+	domainBypass("flarefiles.com",()=>ifElement("div.fadeInDown button",b=>b.onclick()))
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
