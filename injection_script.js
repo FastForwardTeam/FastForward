@@ -697,7 +697,7 @@ ensureDomLoaded(()=>{
 			document.querySelector("form").submit()
 		}
 	})
-	domainBypass("1link.club",()=>{
+	domainBypass(/1link\.club|bomurl\.com/,()=>{
 		window.setInterval=f=>setInterval(f,1)
 		let b=document.getElementById("go_next")
 		if(b&&isGoodLink(b.href))
