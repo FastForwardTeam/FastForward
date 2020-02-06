@@ -1180,7 +1180,7 @@ ensureDomLoaded(()=>{
 			count=1
 		}
 	})
-	domainBypass("flarefiles.com",()=>ifElement("div.fadeInDown button",b=>b.onclick()))
+	hrefBypass(/flarefiles\.com\/drive\/[A-Za-z0-9]+\/genLink\.php/,()=>location.href="serveRequest.php")
 	domainBypass("mboost.me",()=>ifElement("#__NEXT_DATA__",s=>safelyNavigate(JSON.parse(s.textContent).props.initialProps.pageProps.data.targeturl)))
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
