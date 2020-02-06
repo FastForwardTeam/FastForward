@@ -1098,7 +1098,7 @@ ensureDomLoaded(()=>{
 			safelyNavigate(decodeURIComponent(url.search.split("url=")[1].split("&")[0]))
 		}
 	}))
-	domainBypass("shirosafe.web.id",()=>ifElement("center > a[href^='https://shirosafe.web.id/'] > div",a=>safelyAssign(a.parentNode.href)))
+	domainBypass("shirosafe.web.id",()=>ifElement("center > a[href^='https://shirosafe.web.id/']",a=>safelyAssign(a.href)))
 	domainBypass(/bebasdownloadfilm\.com|dl\.sharemydrive\.xyz/,()=>ifElement("frame[src*='/iframe/top.php?']",f=>{
 		f.onload=()=>safelyNavigate(f.contentDocument.querySelector("p#skip a").href)
 	}))
