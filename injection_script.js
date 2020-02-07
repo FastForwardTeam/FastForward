@@ -1186,6 +1186,13 @@ ensureDomLoaded(()=>{
 	hrefBypass(/flarefiles\.com\/drive\/[A-Za-z0-9]+\/genLink\.php/,()=>location.href="serveRequest.php")
 	domainBypass("mboost.me",()=>ifElement("#__NEXT_DATA__",s=>safelyNavigate(JSON.parse(s.textContent).props.initialProps.pageProps.data.targeturl)))
 	domainBypass("go.geghost.com",()=>ifElement("img[alt='Preview website'][src^='http://www.apercite.fr/api/apercite/320x200/oui/'",i=>safelyNavigate(i.src.substr(48))))
+	domainBypass("shorte-st.online",()=>ifElement("#cpt-form",f=>{
+		f.target="_self"
+		f.submit()
+	},()=>ifElement(".the-form",f=>{
+		f.target="_self"
+		f.submit()
+	})))
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
