@@ -1074,10 +1074,13 @@ ensureDomLoaded(()=>{
 	domainBypass("xlink.cc",()=>safelyNavigate(JSON.parse(atob(window.bootstrapData)).linkResponse.link.long_url))
 	domainBypass("1shortlink.com",()=>awaitElement("#redirect-link[data-href]",a=>safelyNavigate(a.getAttribute("data-href"))))
 	domainBypass("multiup.org",()=>ifElement("form[target][onsubmit] button[type='submit']",b=>{
-		const f=document.querySelector("form[target][onsubmit]")
-		f.target="_self"
-		f.onsubmit=""
-		b.click()
+		if(!document.querySelector(".g-recaptcha"))
+		{
+			const f=document.querySelector("form[target][onsubmit]")
+			f.target="_self"
+			f.onsubmit=""
+			b.click()
+		}
 	},()=>document.querySelectorAll("form > button[namehost]").forEach(e=>{
 		let a=document.createElement("a")
 		a.href=e.getAttribute("link")
