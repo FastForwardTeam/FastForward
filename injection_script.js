@@ -568,7 +568,7 @@ domainBypass("ipeenk.id",()=>{
 domainBypass("lkc21.net",()=>window.setTimeout=f=>setTimeout(f,100))
 //Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
 hrefBypass(/(njiir|healthykk|linkasm|dxdrive|getwallpapers|sammobile)\.com|punchsubs\.net|k2s\.cc|muhammadyoga\.me|u\.to|skiplink\.io|uploadfree\.info|firefaucet\.win\/l\/|emulator\.games\/download\.php/,()=>window.setInterval=f=>setInterval(f,1))
-hrefBypass(/(racaty|longfiles|filepuma|filehorse|portableapps)\.com|indishare\.org|datei\.to|keisekai\.fun|nexusmods\.com\/.*\/mods\/[0-9]*\?tab=files&file_id=[0-9]*/,()=>window.setTimeout=f=>setTimeout(f,1))
+hrefBypass(/(racaty|longfiles|filepuma|filehorse|portableapps)\.com|indishare\.org|datei\.to|keisekai\.fun|solvetube\.site|nexusmods\.com\/.*\/mods\/[0-9]*\?tab=files&file_id=[0-9]*/,()=>window.setTimeout=f=>setTimeout(f,1))
 domainBypass("universal-bypass.org",()=>{
 	window.universalBypassInstalled=true
 	window.universalBypassInternalVersion=UNIVERSAL_BYPASS_INTERNAL_VERSION
