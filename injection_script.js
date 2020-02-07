@@ -572,11 +572,8 @@ hrefBypass(/(racaty|longfiles|filepuma|filehorse|portableapps)\.com|indishare\.o
 domainBypass("universal-bypass.org",()=>{
 	window.universalBypassInstalled=true
 	window.universalBypassInternalVersion=UNIVERSAL_BYPASS_INTERNAL_VERSION
-	if(UNIVERSAL_BYPASS_INTERNAL_VERSION>=2)
-	{
-		window.universalBypassExternalVersion="UNIVERSAL_BYPASS_EXTERNAL_VERSION"
-		window.universalBypassInjectionVersion="UNIVERSAL_BYPASS_INJECTION_VERSION"
-	}
+	window.universalBypassExternalVersion="UNIVERSAL_BYPASS_EXTERNAL_VERSION"
+	window.universalBypassInjectionVersion="UNIVERSAL_BYPASS_INJECTION_VERSION"
 })
 if(bypassed)
 {
