@@ -71,6 +71,9 @@
 	"privacyPolicy": {
 		"message": "개인정보 취급방침"
 	},
+	"contributors": {
+		"message": "도와주신 분들"
+	},
 	"optionsUserscripts": {
 		"message": "사용자 지정 우회책"
 	},

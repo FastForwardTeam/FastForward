@@ -1,6 +1,6 @@
 {
 	"appDesc": {
-		"message": "Nie marnuj czasu na przestrzeganie przepisów, Uniwersalne Obejście automatycznie pomija irytujące skróty linkowe."
+		"message": "Nie marnuj czasu na przestrzeganie przepisów, Uniwersalny Bypass automatycznie pomija irytujące skróty linkowe."
 	},
 	"firstrunTitle": {
 		"message": "Dziękujemy za instalacje Uniwersalnego Obejścia!"
@@ -70,6 +70,9 @@
 	},
 	"privacyPolicy": {
 		"message": "Polityka prywatności"
+	},
+	"contributors": {
+		"message": "Twórcy"
 	},
 	"optionsUserscripts": {
 		"message": "Niestandardowe obejścia"
