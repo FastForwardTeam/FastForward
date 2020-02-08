@@ -804,7 +804,7 @@ ensureDomLoaded(()=>{
 	domainBypass("wikitrik.com",()=>document.querySelector("#download > form[action='/getlink.php'] > input[type='submit'].button").click())
 	domainBypass("dawnstation.com",()=>safelyNavigate(document.querySelector("#tidakakanselamanya.hiddenPlace > a").href))
 	domainBypass("hokiwikiped.net",()=>ifElement("a#DrRO[href]",a=>safelyNavigate(a.href)))
-	hrefBypass(/spaste\.com\/s\//,()=>{
+	hrefBypass(/spaste\.com\/(s\/|site\/checkPasteUrl\?c=)/,()=>{
 		let doTheThing=()=>{
 			let item=document.getElementById("currentCapQue").textContent,
 			as = document.querySelectorAll(".markAnswer")
@@ -824,6 +824,7 @@ ensureDomLoaded(()=>{
 				doTheThing()
 				setTimeout(()=>{
 					doTheThing()
+					setTimeout(()=>document.querySelector("#template-contactform-submit").click(),500)
 				}, 200)
 			}, 200)
 		}, 200)
