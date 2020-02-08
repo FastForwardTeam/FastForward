@@ -804,30 +804,19 @@ ensureDomLoaded(()=>{
 	domainBypass("wikitrik.com",()=>document.querySelector("#download > form[action='/getlink.php'] > input[type='submit'].button").click())
 	domainBypass("dawnstation.com",()=>safelyNavigate(document.querySelector("#tidakakanselamanya.hiddenPlace > a").href))
 	domainBypass("hokiwikiped.net",()=>ifElement("a#DrRO[href]",a=>safelyNavigate(a.href)))
-	hrefBypass(/spaste\.com\/(s\/|site\/checkPasteUrl\?c=)/,()=>{
-		let doTheThing=()=>{
-			let item=document.getElementById("currentCapQue").textContent,
-			as = document.querySelectorAll(".markAnswer")
-			for(let i = 0; i < as.length; i++)
-			{
-				if(as[i].querySelector("img").getAttribute("src").toLowerCase().indexOf(item)>-1)
+	hrefBypass(/spaste\.com\/(s|site)\//,()=>{
+		const doTheThing=f=>setTimeout(()=>{
+			let item=document.querySelector("#currentCapQue").textContent
+			document.querySelectorAll(".markAnswer").forEach(as=>{
+				if(as.querySelector("img").getAttribute("src").toLowerCase().indexOf(item)>-1)
 				{
-					as[i].click();
-					break;
+					as.click()
 				}
-			}
-		}
-		document.getElementById("captchaVerifiedStatus").click()
-		setTimeout(()=>{
-			doTheThing()
-			setTimeout(()=>{
-				doTheThing()
-				setTimeout(()=>{
-					doTheThing()
-					setTimeout(()=>document.querySelector("#template-contactform-submit").click(),500)
-				}, 200)
-			}, 200)
-		}, 200)
+			})
+			f()
+		},200)
+		document.querySelector("#captchaVerifiedStatus").click()
+		doTheThing(()=>doTheThing(()=>doTheThing(()=>document.querySelector("#template-contactform-submit").click())))
 	})
 	domainBypass(/((get-click2|informations-library|media-blue|akashirohige)\.blogspot|business\.ominfoupdate|majidzhacker|citgratis|tekloggers)\.com|pastikan\.me|blog\.infolanjutan\.xyz/,()=>{
 		let u=aesCrypto.decrypt(convertstr(location.href.substr(location.href.indexOf("?o=")+3)),convertstr("root"))
