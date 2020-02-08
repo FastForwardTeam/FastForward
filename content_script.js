@@ -122,6 +122,10 @@ if(document instanceof HTMLDocument)
 								referer="https://kontenajaib.xyz/?id="+id
 								break;
 
+								case "neonime.org":
+								referer="https://neonime.org/?fd3c883ce6="+id
+								break;
+
 							}
 							referer+="#bypassClipboard="+bypassClipboard
 						}
