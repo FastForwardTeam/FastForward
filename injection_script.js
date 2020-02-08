@@ -1183,6 +1183,7 @@ ensureDomLoaded(()=>{
 		f.target="_self"
 		f.submit()
 	})))
+	domainBypass("apunkasoftware.net",ifElement("a#dlink[href]",a=>safelyNavigate(a.href),()=>ifElement("form#gip_form[action='https://www.apunkasoftware.net/download-process.php']",f=>f.submit())))
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
