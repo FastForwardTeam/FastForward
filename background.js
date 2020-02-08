@@ -316,15 +316,11 @@ brws.runtime.onConnect.addListener(port => {
 
 // Internal redirects to extension URLs to bypass content script limitations
 brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(details.url.substr(38)=="1")
-	{
-		return {redirectUrl:brws.runtime.getURL("html/firstrun.html")}
-	}
-	else
-	{
-		return {redirectUrl:brws.runtime.getURL("html/firstrun-noscript.html")}
-	}
-},{types:["main_frame"],urls:["*://universal-bypass.org/firstrun?*"]},["blocking"])
+	return {redirectUrl:brws.runtime.getURL("html/noscript.html")}
+},{types:["main_frame"],urls:["*://universal-bypass.org/firstrun?0"]},["blocking"])
+brws.webRequest.onBeforeRequest.addListener(details=>{
+	return {redirectUrl:brws.runtime.getURL("html/options.html#firstrun")}
+},{types:["main_frame"],urls:["*://universal-bypass.org/firstrun?1"]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	let arr=details.url.substr(45).split("&referer=")

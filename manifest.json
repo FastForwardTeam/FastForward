@@ -32,7 +32,7 @@
 			"176": "icon/176.png",
 			"512": "icon/512.png"
 		},
-		"default_popup": "html/options.html"
+		"default_popup": "html/popup.html"
 	},
 	"background": {
 		"scripts": ["background.js"]

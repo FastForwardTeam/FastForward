@@ -4,35 +4,51 @@
 	<title>Universal Bypass</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="uikit/uikit.css" id="uikit-style">
+	<script src="base.js"></script>
 </head>
 <body>
-	<h1>Universal Bypass</h1>
-	<p><span data-message="version"></span> <span id="version"></span> &middot; <a href="#" data-message-nbsp="update"></a> &middot; <a href="https://universal-bypass.org/changelog" target="_blank" data-message-nbsp="changelog"></a> &middot; <a href="https://universal-bypass.org/faq" target="_blank" data-message-nbsp="faq"></a> &middot; <a href="https://github.com/timmyrs/Universal-Bypass/blob/master/PRIVACY.md" target="_blank" data-message-nbsp="privacyPolicy"></a></p>
-	<p data-message="updateYes" style="display:none;margin-top:15px"></p>
-	<p data-message="updateNo" style="display:none;margin-top:15px"></p>
-	<div id="counter" style="display:none;margin-top:15px">
-		<span data-message="bypassCounter"></span> <a href="https://universal-bypass.org/support" target="_blank" data-message="support"></a>
+	<nav class="uk-navbar-container uk-light" style="background:#1e87f0" uk-navbar>
+		<div class="uk-navbar-left">
+			<a class="uk-navbar-item uk-logo" href="#">Universal Bypass</a>
+			<ul class="uk-navbar-nav">
+				<li><a href="https://universal-bypass.org/changelog" target="_blank" data-message="changelog"></a></li>
+				<li><a href="https://universal-bypass.org/faq" target="_blank" data-message="faq"></a></li>
+				<li><a href="https://github.com/timmyrs/Universal-Bypass/blob/master/PRIVACY.md" target="_blank" data-message="privacyPolicy"></a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="uk-margin-top uk-margin-bottom uk-margin-left uk-margin-right">
+		<p><span data-message="version"></span> <span id="version"></span> <a href="#" class="uk-button uk-button-small uk-button-primary" data-message="update"></a></p>
+		<div id="firstrun-alert" uk-alert class="uk-alert-primary uk-hidden">
+    		<a class="uk-alert-close" uk-close></a>
+    		<h3 data-message="firstrunTitle"></h3>
+			<p data-message="firstrunSubtitle"></p>
+		</div>
+		<div id="counter" class="uk-alert uk-alert-primary uk-hidden">
+			<p><span data-message="bypassCounter"></span> <a href="https://universal-bypass.org/support" target="_blank" data-message="support"></a></p>
+		</div>
+		<h2 data-message="options"></h2>
+		<p>
+			<input type="checkbox" class="uk-checkbox" id="option-enabled"> <label style="cursor:pointer" for="option-enabled" data-message="optionsEnabled"></label><br>
+			<input type="checkbox" class="uk-checkbox" id="navigation-delay-toggle"> <span data-message="optionsNavigationDelay" for="option-navigation-delay"></span><br>
+			<input type="checkbox" class="uk-checkbox" id="option-tracker-bypass"> <label style="cursor:pointer" for="option-tracker-bypass"><span data-message="optionsTrackerBypass"></span> (Bit.ly, Goo.gl, T.co, ...)</label> (<a href="https://apimon.de/privacy" target="_blank" data-message="privacyPolicy"></a>)<br>
+			<input type="checkbox" class="uk-checkbox" id="option-instant-navigation-trackers"> <label style="cursor:pointer" for="option-instant-navigation-trackers" data-message="optionsInstantNavigationTrackers"></label><br>
+			<input type="checkbox" class="uk-checkbox" id="option-block-ip-loggers"> <label style="cursor:pointer" for="option-block-ip-loggers" data-message="optionsBlockIPLoggers"></label><br>
+			<input type="checkbox" class="uk-checkbox" id="option-crowd-bypass"> <label style="cursor:pointer" for="option-crowd-bypass" data-message="optionsCrowdBypass"></label><br>
+			<input type="checkbox" class="uk-checkbox" id="option-crowd-open-delay-toggle"> <span data-message="optionsCrowdAutoOpen" for="option-crowd-open-delay"></span><br>
+			<input type="checkbox" class="uk-checkbox" id="option-crowd-close-delay-toggle"> <span data-message="optionsCrowdAutoClose" for="option-crowd-close-delay"></span><br>
+			<input type="checkbox" class="uk-checkbox" id="option-info-box"> <label style="cursor:pointer" for="option-info-box" data-message="optionsInfoBox"></label>
+		</p>
+		<h2 data-message="optionsUserscripts"></h2>
+		<a name="userscripts"></a>
+		<p><span data-message="optionsUserscriptsDescription"></span></p>
+		<div id="userscript" style="font-family:'DejaVu Sans Mono',monospace;min-height:500px;height:calc(100vh - 200px)"></div>
+		<hr>
+		<p>Copyright (c) 2018-20 Tim "timmyRS" Speckhals &middot; <a href="https://universal-bypass.org/contributors" target="_blank" data-message="contributors"></a></p>
 	</div>
-	<h2 data-message="options"></h2>
-	<p>
-		<input type="checkbox" id="option-enabled"> <label for="option-enabled" data-message="optionsEnabled"></label><br>
-		<input type="checkbox" id="navigation-delay-toggle"> <span data-message="optionsNavigationDelay" for="option-navigation-delay"></span><br>
-		<input type="checkbox" id="option-tracker-bypass"> <label for="option-tracker-bypass"><span data-message="optionsTrackerBypass"></span> (Bit.ly, Goo.gl, T.co, ...)</label> (<a href="https://apimon.de/privacy" target="_blank" data-message="privacyPolicy"></a>)<br>
-		<input type="checkbox" id="option-instant-navigation-trackers"> <label for="option-instant-navigation-trackers" data-message="optionsInstantNavigationTrackers"></label><br>
-		<input type="checkbox" id="option-block-ip-loggers"> <label for="option-block-ip-loggers" data-message="optionsBlockIPLoggers"></label><br>
-		<input type="checkbox" id="option-crowd-bypass"> <label for="option-crowd-bypass" data-message="optionsCrowdBypass"></label><br>
-		<input type="checkbox" id="option-crowd-open-delay-toggle"> <span data-message="optionsCrowdAutoOpen" for="option-crowd-open-delay"></span><br>
-		<input type="checkbox" id="option-crowd-close-delay-toggle"> <span data-message="optionsCrowdAutoClose" for="option-crowd-close-delay"></span><br>
-		<input type="checkbox" id="option-info-box"> <label for="option-info-box" data-message="optionsInfoBox"></label>
-	</ul>
-	<h2 data-message="optionsUserscripts"></h2>
-	<a name="userscripts"></a>
-	<p><span data-message="optionsUserscriptsDescription"></span></p>
-	<div id="userscript" style="font-family:'DejaVu Sans Mono',monospace;height:calc(100vh - 165px)"></div>
-	<hr>
-	<p>Copyright (c) 2018-20 Tim "timmyRS" Speckhals &middot; <a href="https://universal-bypass.org/contributors" target="_blank" data-message="contributors"></a></p>
-	<script src="base.js"></script>
+	<script src="i18n.js"></script>
+	<script src="uikit/uikit.js"></script>
 	<script src="ace/ace.js"></script>
 	<script src="options.js"></script>
 </body>

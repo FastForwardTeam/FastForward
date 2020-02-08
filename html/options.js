@@ -81,12 +81,19 @@ editor=ace.edit("userscript",{mode:"ace/mode/javascript",theme:"ace/theme/monoka
 
 if(hash)
 {
-	document.querySelector("[for='"+hash+"']").className="highlight"
+	if(hash=="firstrun")
+	{
+		document.getElementById("firstrun-alert").classList.remove("uk-hidden")
+	}
+	else
+	{
+		document.querySelector("[for='"+hash+"']").classList.add("uk-text-warning")
+	}
 }
 
 brws.runtime.sendMessage({type: "options"}, res => {
 	document.getElementById("version").textContent=brws.runtime.getManifest().version+"-"+(res.upstreamCommit?res.upstreamCommit.substr(0,7):"dev")
-	document.querySelector("[data-message-nbsp='update']").onclick=()=>{
+	document.querySelector("[data-message='update']").onclick=()=>{
 		if(updating)
 		{
 			return
@@ -95,20 +102,20 @@ brws.runtime.sendMessage({type: "options"}, res => {
 		let port=brws.runtime.connect({name: "update"})
 		port.onMessage.addListener(res => {
 			document.getElementById("version").textContent=brws.runtime.getManifest().version+"-"+(res.upstreamCommit?res.upstreamCommit.substr(0,7):"dev")
-			let e=document.querySelector("[data-message='update"+(res.success?"Yes":"No")+"']")
-			e.style.display="block"
-			setTimeout(()=>{
-				e.style.display="none"
-				updating=false
-			},3000)
+			UIkit.notification({
+				message:brws.i18n.getMessage("update"+(res.success?"Yes":"No")),
+				status:(res.success?"success":"primary"),
+				timeout:3000
+			})
 			port.disconnect()
+			updating=false
 		})
 	}
 	if(res.bypassCounter > 1)
 	{
 		const p=document.querySelector("[data-message='bypassCounter']")
 		p.innerHTML=p.innerHTML.replace("%","<b>"+res.bypassCounter+"</b>")
-		document.getElementById("counter").style.display="block"
+		document.getElementById("counter").classList.remove("uk-hidden")
 	}
 	if(res.userScript)
 	{
@@ -141,7 +148,7 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 	}
 	else
 	{
-		enabledLabel.style.color="red"
+		enabledLabel.classList.add("uk-text-danger")
 	}
 	if(res.navigation_delay>60)
 	{
@@ -196,7 +203,7 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 	instantNavigationTrackersLogic()
 	enabledCheckbox.onchange=function()
 	{
-		enabledLabel.style.color=""
+		enabledLabel.classList.remove("uk-text-danger")
 		brws.storage.sync.set({
 			disable:(!this.checked).toString()
 		})
