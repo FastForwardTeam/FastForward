@@ -150,9 +150,9 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 	{
 		enabledLabel.classList.add("uk-text-danger")
 	}
-	if(res.navigation_delay>60)
+	if(res.navigation_delay<0)
 	{
-		navigationDelayInput.value=0
+		navigationDelayInput.value=(res.navigation_delay*-1)-1
 		navigationDelayInput.setAttribute("disabled","disabled")
 	}
 	else
@@ -176,9 +176,9 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 	{
 		crowdBypassCheckbox.setAttribute("checked","checked")
 	}
-	if(res.crowd_open_delay>60)
+	if(res.crowd_open_delay<0)
 	{
-		crowdOpenDelayInput.value=0
+		crowdOpenDelayInput.value=(res.crowd_open_delay*-1)-1
 		crowdOpenDelayInput.setAttribute("disabled","disabled")
 	}
 	else
@@ -186,9 +186,9 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 		crowdOpenDelayInput.value=res.crowd_open_delay
 		crowdOpenDelayCheckbox.setAttribute("checked","checked")
 	}
-	if(res.crowd_close_delay>60)
+	if(res.crowd_close_delay<0)
 	{
-		crowdCloseDelayInput.value=10
+		crowdCloseDelayInput.value=(res.crowd_close_delay*-1)-1
 		crowdCloseDelayInput.setAttribute("disabled","disabled")
 	}
 	else
@@ -219,9 +219,12 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 	}
 	navigationDelayCheckbox.onchange=function()
 	{
-		brws.storage.sync.set({
-			navigation_delay:(this.checked?navigationDelayInput.value:61)
-		})
+		let navigation_delay=parseInt(navigationDelayInput.value)
+		if(!this.checked)
+		{
+			navigation_delay=(navigation_delay+1)*-1
+		}
+		brws.storage.sync.set({navigation_delay})
 		if(this.checked)
 		{
 			navigationDelayInput.removeAttribute("disabled")
@@ -273,9 +276,12 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 	}
 	crowdOpenDelayCheckbox.onchange=function()
 	{
-		brws.storage.sync.set({
-			crowd_open_delay:(this.checked?crowdOpenDelayInput.value:61)
-		})
+		let crowd_open_delay=parseInt(crowdOpenDelayInput.value)
+		if(!this.checked)
+		{
+			crowd_open_delay=(crowd_open_delay+1)*-1
+		}
+		brws.storage.sync.set({crowd_open_delay})
 		crowdOpenDelayLogic()
 	}
 	crowdOpenDelayInput.oninput=function()
@@ -289,9 +295,12 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 	}
 	crowdCloseDelayCheckbox.onchange=function()
 	{
-		brws.storage.sync.set({
-			crowd_close_delay:(this.checked?crowdCloseDelayInput.value:61)
-		})
+		let crowd_close_delay=parseInt(crowdCloseDelayInput.value)
+		if(!this.checked)
+		{
+			crowd_close_delay=(crowd_close_delay+1)*-1
+		}
+		brws.storage.sync.set({crowd_close_delay})
 		crowdCloseDelayLogic()
 	}
 	crowdCloseDelayInput.oninput=function()

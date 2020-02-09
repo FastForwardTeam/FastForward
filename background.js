@@ -73,9 +73,10 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 		}
 		if(res.navigation_delay)
 		{
-			if(res.navigation_delay>0)
+			instantNavigation=(res.navigation_delay==0)
+			if(res.navigation_delay==61)
 			{
-				instantNavigation=false
+				brws.storage.sync.set({navigation_delay:-11})
 			}
 		}
 		else
@@ -86,13 +87,13 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 		instantNavigationTrackers=(res.no_instant_navigation_trackers!=="true")
 		blockIPLoggers=(res.allow_ip_loggers!=="true")
 		crowdEnabled=(res.crowd_bypass_opt_out!=="true")
-		if(!res.crowd_open_delay)
+		if(!res.crowd_open_delay||res.crowd_open_delay==61)
 		{
-			brws.storage.sync.set({crowd_open_delay:61})
+			brws.storage.sync.set({crowd_open_delay:-11})
 		}
-		if(!res.crowd_close_delay)
+		if(!res.crowd_close_delay||res.crowd_close_delay==61)
 		{
-			brws.storage.sync.set({crowd_close_delay:61})
+			brws.storage.sync.set({crowd_close_delay:-11})
 		}
 		infoBoxEnabled=(res.no_info_box!=="true")
 	}

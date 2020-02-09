@@ -12,7 +12,7 @@ let style=document.createElement("style")
 style.textContent="p{font-size:1rem}"
 document.head.appendChild(style)
 const timer=(message,secondsLeft,callback)=>{
-	if(secondsLeft<61)
+	if(secondsLeft>=0)
 	{
 		const div=document.getElementById("timer"),
 		tid=setInterval(()=>{
