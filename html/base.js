@@ -23,7 +23,7 @@ const timer=(message,secondsLeft,callback)=>{
 		brws=(typeof browser=="undefined"?chrome:browser),
 		cancel=()=>{
 			clearInterval(tid)
-			div.style.display="none"
+			div.classList.add("uk-hidden")
 		},
 		tick=()=>{
 			if(secondsLeft<=0)
@@ -33,21 +33,19 @@ const timer=(message,secondsLeft,callback)=>{
 			}
 			if(secondsLeft==1)
 			{
-				p.textContent=brws.i18n.getMessage(message+"Singular")
+				p.textContent=brws.i18n.getMessage(message+"Singular")+" "
 			}
 			else
 			{
-				p.textContent=brws.i18n.getMessage(message).replace("%",secondsLeft)
+				p.textContent=brws.i18n.getMessage(message).replace("%",secondsLeft)+" "
 			}
-			p.textContent+=" [ "
 			let a=document.createElement("a")
 			a.href="#"
+			a.onclick=cancel
 			a.textContent=brws.i18n.getMessage("cancel")
 			p.appendChild(a)
-			p.innerHTML+=" ]"
-			p.querySelector("a").onclick=cancel
 		}
-		div.style.display="block"
+		div.classList.remove("uk-hidden")
 		tick()
 		return tid
 	}
