@@ -1191,6 +1191,12 @@ ensureDomLoaded(()=>{
 			asdf()
 		}
 	}))
+	domainBypass("dl.filedownload.club",()=>{
+		if(typeof fileDownloadLoca=="string"&&fileDownloadLoca!="#")
+		{
+			safelyAssign(fileDownloadLoca)
+		}
+	})
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
