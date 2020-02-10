@@ -123,7 +123,7 @@ if(document instanceof HTMLDocument)
 								break;
 
 								case "neonime.org":
-								referer="https://neonime.org/?fd3c883ce6="+id
+								referer="https://neonime.org/?940caec1dc="+id
 								break;
 
 							}

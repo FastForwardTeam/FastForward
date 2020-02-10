@@ -1057,7 +1057,7 @@ ensureDomLoaded(()=>{
 			a.href+="#bypassClipboard="+a.closest(".list-download").previousSibling.previousElementSibling.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
 		}
 	}))
-	domainBypass("neonime.org",()=>document.querySelectorAll("a[href^='https://neonime.org?fd3c883ce6=']").forEach(a=>{
+	domainBypass("neonime.org",()=>document.querySelectorAll("a[href^='https://neonime.org?940caec1dc=']").forEach(a=>{
 		a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.parentNode.firstChild.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
 	}))
 	hrefBypass(/stayonline\.pro\/l\/(.*)\//,m=>$.post(endpoint,{id:m[1],ref:""},r=>safelyNavigate(r.data.value)))
