@@ -10,7 +10,7 @@ transparentProperty=(name,valFunc)=>{
 	})
 },
 isGoodLink=link=>{
-	if(!link||link.split("#")[0]==location.href.split("#")[0]||link.substr(0,6)=="about:"||link.substr(0,11)=="javascript:")
+	if(!link||link.split("#")[0]==location.href.split("#")[0]||link.substr(0,6)=="about:"||link.substr(0,11)=="javascript:")//jshint ignore:line
 	{
 		return false
 	}
@@ -292,7 +292,7 @@ ODP(window,"initLbjs",{
 	}
 })
 //Safelink
-let actual_safelink=forced_safelink={counter:0,adblock:false,click2x:false}
+let forced_safelink={counter:0,adblock:false,click2x:false},actual_safelink=forced_safelink
 ODP(window,"safelink",
 {
 	set:_=>{
@@ -1243,9 +1243,11 @@ ensureDomLoaded(()=>{
 	}
 	for(let domain in soralink_data)
 	{
+		/*jshint ignore:start*/
 		domainBypass(domain,()=>document.querySelectorAll("a[href^='"+location.origin+"?"+soralink_data[domain]+"=']").forEach(a=>{
 			a.href+="#bypassClipboard="+a.href.split("?"+soralink_data[domain]+"=")[1]
 		}))
+		/*jshint ignore:end*/
 	}
 	if(document.querySelector(".sorasubmit"))
 	{
@@ -1291,13 +1293,13 @@ ensureDomLoaded(()=>{
 			})
 		},()=>{
 			let cLT=setInterval(()=>{
-				if((document.querySelector("img#pleasewait")&&document.querySelector(".wait"))
-					||document.getElementById("download")
-					||document.getElementsByTagName("style='margin-top:").length
-				||document.querySelector(".Visit_Link")//yametesenpai.xyz
-				||document.getElementById("daplong")//converthinks.xyz
-				||document.querySelector(".eastsafelink")//anjay.info
-				)
+				if((document.querySelector("img#pleasewait")&&document.querySelector(".wait"))||
+					document.getElementById("download")||
+					document.getElementsByTagName("style='margin-top:").length||
+					document.querySelector(".Visit_Link")||//yametesenpai.xyz
+					document.getElementById("daplong")||//converthinks.xyz
+					document.querySelector(".eastsafelink")//anjay.info
+					)
 				{
 					clearInterval(cLT)
 					window.open=l=>safelyNavigate(l)
@@ -1442,11 +1444,10 @@ ensureDomLoaded(()=>{
 		})
 		finish()
 	})
-	if(
-		document.getElementById("getlink")&&document.getElementById("gotolink")&&(
-	document.getElementById("timer")//tetewlink.me,vehicle-techno.cf#86
-	||document.getElementById("count")//keisekaikuy.blogspot.com#493
-	))
+	if(document.getElementById("getlink")&&document.getElementById("gotolink")&&(
+		document.getElementById("timer")||//tetewlink.me,vehicle-techno.cf#86
+		document.getElementById("count")//keisekaikuy.blogspot.com#493
+		))
 	{
 		document.getElementById("gotolink").removeAttribute("disabled")
 		document.getElementById("gotolink").click()

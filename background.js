@@ -31,7 +31,7 @@ getRedirect=(url,referer)=>{
 },
 encodedRedirect=(url,referer)=>getRedirect(decodeURIComponent(url)),
 isGoodLink=link=>{
-	if(!link||link.substr(0,6)=="about:"||link.substr(0,11)=="javascript:")
+	if(!link||link.substr(0,6)=="about:"||link.substr(0,11)=="javascript:")//jshint ignore:line
 	{
 		return false
 	}
