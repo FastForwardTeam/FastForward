@@ -29,7 +29,7 @@ getRedirect=(url,referer)=>{
 	countIt()
 	return {redirectUrl:r}
 },
-encodedRedirect=(url,referer)=>getRedirect(decodeURIComponent(url)),
+encodedRedirect=(url,referer)=>getRedirect(decodeURIComponent(url),referer),
 isGoodLink=link=>{
 	if(!link||link.substr(0,6)=="about:"||link.substr(0,11)=="javascript:")//jshint ignore:line
 	{
@@ -681,7 +681,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
-		return encodedRedirect(details.url.substr(details.url.indexOf("?s=")+3))
+		return encodedRedirect(details.url.substr(details.url.indexOf("?s=")+3),details.url)
 	}
 },{types:["main_frame"],urls:[
 "*://*.ouo.io/*?s=*",
