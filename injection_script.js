@@ -152,7 +152,7 @@ crowdPath=p=>{
 	}
 },
 crowdReferer=r=>{
-	if(r&&UNIVERSAL_BYPASS_INTERNAL_VERSION>3)
+	if(r&&UNIVERSAL_BYPASS_INTERNAL_VERSION>=3)
 	{
 		document.documentElement.setAttribute("{{channel.crowd_referer}}",r)
 	}
@@ -1352,7 +1352,7 @@ ensureDomLoaded(()=>{
 		}
 		if(id)
 		{
-			if(UNIVERSAL_BYPASS_INTERNAL_VERSION > 3)
+			if(UNIVERSAL_BYPASS_INTERNAL_VERSION>=3)
 			{
 				switch(domain)
 				{
