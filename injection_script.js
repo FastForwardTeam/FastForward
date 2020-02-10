@@ -1310,6 +1310,7 @@ ensureDomLoaded(()=>{
 	}
 	if(document.querySelector("form#landing"))
 	{
+		window.stop()
 		let f=document.querySelector("form#landing"),i
 		if(bypassClipboard)
 		{
