@@ -173,8 +173,16 @@ let injectionScript = "", upstreamInjectionScript = "", upstreamCommit, channel 
 const downloadInjectionScript = () => new Promise(callback => {
 	const finishDownload = () => {
 		channel = {}
+		let uniqueness = []
 		;["stop_watching","crowd_referer","crowd_path","crowd_query","crowd_queried","crowd_contribute","adlinkfly_info","adlinkfly_target"].forEach(name => {
-			upstreamInjectionScript = upstreamInjectionScript.split("{{channel."+name+"}}").join(channel[name] = "data-"+Math.random().toString().substr(2))
+			let val
+			do
+			{
+				val = Math.random().toString().substr(2)
+			}
+			while(uniqueness.indexOf(val) != -1);
+			uniqueness.push(val)
+			upstreamInjectionScript = upstreamInjectionScript.split("{{channel."+name+"}}").join(channel[name] = "data-" + val)
 		})
 		;["crowdWait","crowdDisabled","infoBoxHide"].forEach(name => {
 			upstreamInjectionScript = upstreamInjectionScript.split("{{msg."+name+"}}").join(brws.i18n.getMessage(name).split("\\").join("\\\\").split("\"").join("\\\""))
