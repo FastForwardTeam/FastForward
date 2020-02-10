@@ -1012,11 +1012,11 @@ ensureDomLoaded(()=>{
 		{
 			qe=qe.previousElementSibling
 		}
-		a.href+="#bypassClipboard="+location.pathname.split("/").join("").split("-").join("")
+		a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"")
 		let ep=a.parentNode.querySelector("span[style] > b")
 		if(ep!==null)
 		{
-			a.href+=ep.textContent.split(" ").join("").toLowerCase()
+			a.href+=ep.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
 		}
 		a.href+=qe.textContent+a.textContent.toLowerCase()
 	}))
@@ -1028,28 +1028,28 @@ ensureDomLoaded(()=>{
 			{
 				qe=qe.previousElementSibling
 			}
-			a.href+="#bypassClipboard="+location.pathname.split("/").join("").split("-").join("")+qe.textContent.split(" ").join("").split("(").join("-").split(")").join("-").toLowerCase()+a.textContent.split(" ").join("").split("(").join("").split(")").join("").toLowerCase()
+			a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"")+qe.textContent.split(" ").join("").split("(").join("-").split(")").join("-").toLowerCase()+a.textContent.split(" ").join("").split("(").join("").split(")").join("").toLowerCase()
 		}
 		else
 		{
-			a.href+="#bypassClipboard="+location.pathname.split("/").join("").split("-").join("")+a.parentNode.firstChild.textContent.toLowerCase().split(" ").join("").split("–").join("")+a.textContent.trim().toLowerCase()
+			a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"")+a.parentNode.firstChild.textContent.toLowerCase().split(" ").join("").split("–").join("")+a.textContent.trim().toLowerCase()
 		}
 	}))
 	domainBypass("ad4msan.com",()=>document.querySelectorAll("a[href^='https://ad4msan.com?9c2a6bf968=']").forEach(a=>{
 		if(a.firstChild.tagName=="IMG")
 		{
-			a.href+="#bypassClipboard="+a.parentNode.textContent.split("|")[0].split(" ").join("").split(".").join("").split("(").join("").split(")").join("").toLowerCase()+a.firstChild.src.split("https://ad4msan.com/")[1].split(".")[0].toLowerCase()
+			a.href+="#bypassClipboard="+a.parentNode.textContent.split("|")[0].replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.firstChild.src.split("https://ad4msan.com/")[1].split(".")[0].toLowerCase()
 		}
 		else
 		{
-			a.href+="#bypassClipboard="+a.parentNode.textContent.split("|")[0].split(" ").join("").split(".").join("").split("(").join("").split(")").join("").toLowerCase()+a.textContent.split(" ").join("").toLowerCase()
+			a.href+="#bypassClipboard="+a.parentNode.textContent.split("|")[0].replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.split(" ").join("").toLowerCase()
 		}
 	}))
 	domainBypass("oppa.kdramaindo.tv",()=>document.querySelectorAll("a[href^='https://oppa.kdramaindo.tv?38971fecb6=']").forEach(a=>{
-		a.href+="#bypassClipboard="+location.pathname.split("/").join("").split("-").join("")+a.parentNode.firstChild.textContent.toLowerCase().split(" ").join("").split("–").join("")+a.textContent.trim().toLowerCase()
+		a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"")+a.parentNode.firstChild.textContent.toLowerCase().replace(/[^a-zA-Z0-9]/g,"")+a.textContent.trim().toLowerCase()
 	}))
 	domainBypass("mkvking.com",()=>document.querySelectorAll("a[href^='https://mkvking.com?c17421bdaf=']").forEach(a=>{
-		a.href+="#bypassClipboard="+a.getAttribute("title").split("Download ").join("").split("(").join("").split(")").join("").split(" ").join("").toLowerCase()
+		a.href+="#bypassClipboard="+a.getAttribute("title").split("Download ").join("").replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
 	}))
 	domainBypass("oploverz.in",()=>document.querySelectorAll("a[href^='https://kontenajaib.xyz/?id=']").forEach(a=>{
 		if(a.closest(".list-download"))
