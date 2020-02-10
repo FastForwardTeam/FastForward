@@ -1052,9 +1052,15 @@ ensureDomLoaded(()=>{
 		a.href+="#bypassClipboard="+a.getAttribute("title").split("Download ").join("").replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
 	}))
 	domainBypass("oploverz.in",()=>document.querySelectorAll("a[href^='https://kontenajaib.xyz/?id=']").forEach(a=>{
-		if(a.closest(".list-download"))
+		let ld=a.closest(".list-download")
+		if(ld)
 		{
-			a.href+="#bypassClipboard="+a.closest(".list-download").previousSibling.previousElementSibling.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
+			let qe=ld.previousElementSibling
+			while(qe&&!qe.classList.contains("title-download"))
+			{
+				qe=qe.previousElementSibling
+			}
+			a.href+="#bypassClipboard="+qe.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
 		}
 	}))
 	domainBypass("neonime.org",()=>document.querySelectorAll("a[href^='https://neonime.org?940caec1dc=']").forEach(a=>{
