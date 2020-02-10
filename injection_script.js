@@ -1210,7 +1210,7 @@ ensureDomLoaded(()=>{
 			safelyAssign(fileDownloadLoca)
 		}
 	})
-	domainBypass("shirosafe.web.id",()=>ifElement("a#klik[href^='#']",a=>ifElement("div"+a.getAttribute("href")+"[style='display:none;margin-top: 30px;'] > div[id] > center > a[href^='https://shirosafe.web.id/'][style='margin-bottom: 15px; width: 180px;']:not([href='https://shirosafe.web.id/18057d888094e505ZIAiaca0fb6244fb7a7ad'])",a=>safelyAssign(a.href))))
+	domainBypass("shirosafe.web.id",()=>ifElement("a#klik[href^='#']",a=>ifElement("div"+a.getAttribute("href")+"[style='display:none;margin-top: 30px;'] > div[id] > center:nth-of-type(2) > a[href^='https://shirosafe.web.id/'][style='margin-bottom: 15px; width: 180px;']",a=>safelyAssign(a.href))))
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
