@@ -30,6 +30,11 @@ if(document instanceof HTMLDocument)
 				document.documentElement.removeAttribute(channel.stop_watching)
 				observer.disconnect()
 			}
+			else if(document.documentElement.hasAttribute(channel.crowd_referer))
+			{
+				referer=document.documentElement.getAttribute(channel.crowd_referer)
+				document.documentElement.removeAttribute(channel.crowd_referer)
+			}
 			else if(document.documentElement.hasAttribute(channel.crowd_path))
 			{
 				crowdPath=document.documentElement.getAttribute(channel.crowd_path)
@@ -46,89 +51,6 @@ if(document instanceof HTMLDocument)
 					}
 					else
 					{
-						let referer=location.href
-						if(bypassClipboard&&location.href.indexOf("?id=")>-1)
-						{
-							let id=location.href.split("?id=")[1]
-							switch(domain)
-							{
-								case "pahe.in":
-								case "linegee.net":
-								case "sweetlantern.com":
-								case "intercelestial.com":
-								referer="https://pahe.in?73e659772d="+id
-								break;
-
-								case "channelmyanmar.org":
-								case "roda.site":
-								referer="https://channelmyanmar.org?1c17f28bf0="+id
-								break;
-
-								case "ad4msan.com":
-								case "infotekno.net":
-								referer="https://ad4msan.com?9c2a6bf968="+id
-								break;
-
-								case "oppa.kdramaindo.tv":
-								referer="https://oppa.kdramaindo.tv?38971fecb6="+id
-								break;
-
-								case "mkvking.com":
-								referer="https://mkvking.com?c17421bdaf="+id
-								break;
-
-								case "wizardsubs.com":
-								case "zaqe.xyz":
-								referer="https://wizardsubs.com/?408631a1f0="+id
-								break;
-
-								case "www.zonangopi.com":
-								referer="https://www.zonangopi.com/?407ea19f7e="+id
-								break;
-
-								case "www.conan.id":
-								referer="https://www.conan.id/?e7fc10d9e3="+id
-								break;
-								
-								case "katmoviehd.nl":
-								referer="https://katmoviehd.nl/?6de4d3b1de="+id
-								break;
-								
-								case "pusatfilm21.biz":
-								referer="https://pusatfilm21.biz/?bd943a6562="+id
-								break;
-								
-								case "drivenime.com":
-								referer="https://drivenime.com/?a82ad005b1="+id
-								break;
-								
-								case "myonime.com":
-								referer="https://myonime.com/?3766dd8efb="+id
-								break;
-								
-								case "animersindo.net":
-								referer="https://animersindo.net/?3766dd8efb="+id
-								break;
-								
-								case "animebukatsu.net":
-								referer="https://animebukatsu.net/?3766dd8efb="+id
-								break;
-								
-								case "kordramas.co":
-								referer="http://kordramas.co/?13a9748daa="+id
-								break;
-
-								case "oploverz.in":
-								referer="https://kontenajaib.xyz/?id="+id
-								break;
-
-								case "neonime.org":
-								referer="https://neonime.org/?940caec1dc="+id
-								break;
-
-							}
-							referer+="#bypassClipboard="+bypassClipboard
-						}
 						location.assign("https://universal-bypass.org/crowd-bypassed?target="+encodeURIComponent(msg)+"&referer="+encodeURIComponent(referer))
 						//The background script will intercept the request and redirect to html/crowd-bypassed.html
 					}
@@ -166,7 +88,8 @@ if(document instanceof HTMLDocument)
 		observer.observe(document.documentElement, {attributes: true})
 
 		let domain=location.hostname,
-		crowdPath=location.pathname.substr(1)
+		crowdPath=location.pathname.substr(1),
+		referer=location.href
 		if(domain.substr(0,4)=="www.")
 		{
 			domain=domain.substr(4)

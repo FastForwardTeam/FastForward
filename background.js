@@ -173,7 +173,7 @@ let injectionScript = "", upstreamInjectionScript = "", upstreamCommit, channel 
 const downloadInjectionScript = () => new Promise(callback => {
 	const finishDownload = () => {
 		channel = {}
-		;["stop_watching","crowd_path","crowd_query","crowd_queried","crowd_contribute","adlinkfly_info","adlinkfly_target"].forEach(name => {
+		;["stop_watching","crowd_referer","crowd_path","crowd_query","crowd_queried","crowd_contribute","adlinkfly_info","adlinkfly_target"].forEach(name => {
 			upstreamInjectionScript = upstreamInjectionScript.split("{{channel."+name+"}}").join(channel[name] = "data-"+Math.random().toString().substr(2))
 		})
 		;["crowdWait","crowdDisabled","infoBoxHide"].forEach(name => {
@@ -216,7 +216,7 @@ const downloadInjectionScript = () => new Promise(callback => {
 }),
 refreshInjectionScript = () => {
 	injectionScript = (upstreamInjectionScript + "\n" + userScript)
-	.split("UNIVERSAL_BYPASS_INTERNAL_VERSION").join("2")
+	.split("UNIVERSAL_BYPASS_INTERNAL_VERSION").join("3")
 	.split("UNIVERSAL_BYPASS_EXTERNAL_VERSION").join(brws.runtime.getManifest().version)
 	.split("UNIVERSAL_BYPASS_INJECTION_VERSION").join(upstreamCommit?upstreamCommit.substr(0,7):"dev")
 }

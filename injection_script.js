@@ -31,7 +31,7 @@ unsafelyNavigate=target=>{
 	}
 	navigated=true
 	window.onbeforeunload=null
-	location.assign("https://universal-bypass.org/bypassed?target="+encodeURIComponent(target)+"&referer="+encodeURIComponent(location.href))
+	location.assign("https://universal-bypass.org/bypassed?target="+encodeURIComponent(target)+"&referer="+encodeURIComponent(referer))
 	//The background script will intercept the request and redirect to html/before-navigate.html or to the target depending on the user's settings.
 },
 safelyNavigate=(target,drophash)=>{
@@ -151,6 +151,12 @@ crowdPath=p=>{
 		document.documentElement.setAttribute("{{channel.crowd_path}}",p)
 	}
 },
+crowdReferer=r=>{
+	if(r&&UNIVERSAL_BYPASS_INTERNAL_VERSION>3)
+	{
+		document.documentElement.setAttribute("{{channel.crowd_referer}}",r)
+	}
+},
 crowdBypass=(f,a)=>{
 	if(!f)
 	{
@@ -225,7 +231,8 @@ insertInfoBox=text=>ensureDomLoaded(()=>{
 })
 let navigated=false,
 bypassed=false,
-domain=location.hostname
+domain=location.hostname,
+referer=location.href
 if(domain.substr(0,4)=="www.")
 {
 	domain=domain.substr(4)
@@ -1310,40 +1317,113 @@ ensureDomLoaded(()=>{
 	}
 	if(document.querySelector("form#landing"))
 	{
-		let f=document.querySelector("form#landing"),i
+		let f=document.querySelector("form#landing"),id
 		if(bypassClipboard)
 		{
-			i=bypassClipboard
+			id=bypassClipboard
 		}
 		else if(document.querySelector("form#landing > div#landing")&&document.querySelector(".soractrl"))
 		{
-			i=location.hash.substr(1)
-			if(i.substr(0,18)=="ignoreCrowdBypass#")
+			id=location.hash.substr(1)
+			if(id.substr(0,18)=="ignoreCrowdBypass#")
 			{
-				i=i.substr(18)
+				id=id.substr(18)
 			}
 		}
 		else
 		{
-			i=location.search.split("?id=")[1]
+			id=location.search.split("?id=")[1]
 		}
 		f.id=""
 		const callback=()=>{
-			f.action+="#bypassClipboard="+i
+			f.action+="#bypassClipboard="+id
 			if(ignoreCrowdBypass)
 			{
 				f.action+="#ignoreCrowdBypass"
 			}
 			f.submit()
 		}
-		if(i)
+		if(id)
 		{
-			crowdPath(i)
+			if(UNIVERSAL_BYPASS_INTERNAL_VERSION > 3)
+			{
+				switch(domain)
+				{
+					case "pahe.in":
+					case "linegee.net":
+					case "sweetlantern.com":
+					case "intercelestial.com":
+					referer="https://pahe.in/?73e659772d="+id
+					break;
+
+					case "channelmyanmar.org":
+					case "roda.site":
+					referer="https://channelmyanmar.org/?1c17f28bf0="+id
+					break;
+
+					case "ad4msan.com":
+					case "infotekno.net":
+					referer="https://ad4msan.com/?9c2a6bf968="+id
+					break;
+
+					case "oppa.kdramaindo.tv":
+					referer="https://oppa.kdramaindo.tv/?38971fecb6="+id
+					break;
+
+					case "mkvking.com":
+					referer="https://mkvking.com/?c17421bdaf="+id
+					break;
+
+					case "wizardsubs.com":
+					case "zaqe.xyz":
+					referer="https://wizardsubs.com/?408631a1f0="+id
+					break;
+
+					case "www.zonangopi.com":
+					referer="https://www.zonangopi.com/?407ea19f7e="+id
+					break;
+
+					case "www.conan.id":
+					referer="https://www.conan.id/?e7fc10d9e3="+id
+					break;
+					
+					case "katmoviehd.nl":
+					referer="https://katmoviehd.nl/?6de4d3b1de="+id
+					break;
+					
+					case "pusatfilm21.biz":
+					referer="https://pusatfilm21.biz/?bd943a6562="+id
+					break;
+					
+					case "drivenime.com":
+					referer="https://drivenime.com/?a82ad005b1="+id
+					break;
+					
+					case "myonime.com":
+					referer="https://myonime.com/?3766dd8efb="+id
+					break;
+					
+					case "animersindo.net":
+					referer="https://animersindo.net/?3766dd8efb="+id
+					break;
+					
+					case "animebukatsu.net":
+					referer="https://animebukatsu.net/?3766dd8efb="+id
+					break;
+					
+					case "kordramas.co":
+					referer="http://kordramas.co/?13a9748daa="+id
+					break;
+				}
+				referer+="#bypassClipboard="+bypassClipboard
+				crowdReferer(referer)
+			}
+			crowdPath(id)
 			crowdBypass(callback,true)
 		}
 		else
 		{
-			i=bypassClipboard
+			id=bypassClipboard
 			callback()
 		}
 	}
