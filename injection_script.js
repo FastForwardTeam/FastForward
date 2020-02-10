@@ -980,7 +980,7 @@ ensureDomLoaded(()=>{
 			safelyNavigate(o.substr(24,o.length-3))
 		})
 	})
-	domainBypass(/terbit21\.(club|online|host)/,()=>ifElement("a#downloadbutton[href]",a=>safelyAssign(a.href)))
+	domainBypass(/terbit21\.(club|online|host|show)/,()=>ifElement("a#downloadbutton[href]",a=>safelyAssign(a.href)))
 	domainBypass("onepieceex.net",()=>ifElement("noscript",n=>safelyNavigate(n.textContent)))
 	domainBypass("zflas.com",()=>{
 		if(typeof _bh.decode=="function")
@@ -1059,9 +1059,15 @@ ensureDomLoaded(()=>{
 		a.href+="#bypassClipboard="+a.getAttribute("title").split("Download ").join("").replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
 	}))
 	domainBypass("oploverz.in",()=>document.querySelectorAll("a[href^='https://kontenajaib.xyz/?id=']").forEach(a=>{
-		if(a.closest(".list-download"))
+		let ld=a.closest(".list-download")
+		if(ld)
 		{
-			a.href+="#bypassClipboard="+a.closest(".list-download").previousSibling.previousElementSibling.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
+			let qe=ld.previousElementSibling
+			while(qe&&!qe.classList.contains("title-download"))
+			{
+				qe=qe.previousElementSibling
+			}
+			a.href+="#bypassClipboard="+qe.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
 		}
 	}))
 	domainBypass("neonime.org",()=>document.querySelectorAll("a[href^='https://neonime.org?940caec1dc=']").forEach(a=>{
@@ -1317,6 +1323,7 @@ ensureDomLoaded(()=>{
 	}
 	if(document.querySelector("form#landing"))
 	{
+		window.stop()
 		let f=document.querySelector("form#landing"),id
 		if(bypassClipboard)
 		{
