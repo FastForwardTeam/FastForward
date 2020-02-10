@@ -1253,7 +1253,8 @@ ensureDomLoaded(()=>{
 		"myonime.com":"3766dd8efb",
 		"animersindo.net":"3766dd8efb",
 		"animebukatsu.net":"3766dd8efb",
-		"kordramas.co":"13a9748daa"
+		"kordramas.co":"13a9748daa",
+		"koreaku.co":"91f79a3538"
 	}
 	for(let domain in soralink_data)
 	{
