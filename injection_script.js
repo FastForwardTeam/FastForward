@@ -438,15 +438,17 @@ domainBypass(/wadooo\.com|gotravelgo\.space|pantauterus\.me|liputannubi\.net/,()
 domainBypass("lnk.news",()=>ifElement("#skip_form",f=>goToUrl(),ifElement("#display_go_form",f=>f.submit())))
 hrefBypass(/uiz\.(io|app)\/go/,()=>{
 	Object.freeze(location)
-	const regex=/.*window\.location\.href = "(http[^"]+)";.*/
-	document.querySelectorAll("script").forEach(script=>{
-		let matches=regex.exec(script.textContent)
-		console.log(matches)
-		if(matches&&matches[1])
-		{
-			crowdPath(bypassClipboard)
-			contributeAndNavigate(matches[1])
-		}
+	ensureDomLoaded(()=>{
+		const regex=/.*window\.location\.href = "(http[^"]+)";.*/
+		document.querySelectorAll("script").forEach(script=>{
+			let matches=regex.exec(script.textContent)
+			console.log(matches)
+			if(matches&&matches[1])
+			{
+				crowdPath(bypassClipboard)
+				contributeAndNavigate(matches[1])
+			}
+		})
 	})
 })
 hrefBypass(/(prox77|agdd5br)\.com\/analyze\/(.+)/,m=>location.pathname="/result/"+m[2])
