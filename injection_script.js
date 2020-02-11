@@ -1423,6 +1423,18 @@ ensureDomLoaded(()=>{
 					case "kordramas.co":
 					referer="http://kordramas.co/?13a9748daa="+id
 					break;
+					
+					case "oploverz.in":
+					referer="https://kontenajaib.xyz/?id="+id
+					break;
+					
+					case "neonime.org":
+					referer="https://neonime.org/?fd3c883ce6="+id
+					break;
+					
+					case "koreaku.co":
+					referer="https://koreaku.co/?91f79a3538="+id
+					break;
 				}
 				referer+="#bypassClipboard="+bypassClipboard
 				crowdReferer(referer)
