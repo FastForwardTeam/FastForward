@@ -1358,35 +1358,35 @@ ensureDomLoaded(()=>{
 	if(document.querySelector("form#landing"))
 	{
 		window.stop()
-		let f=document.querySelector("form#landing"),id
+		let f=document.querySelector("form#landing"),id=location.search.split("?id=")[1],i
 		if(bypassClipboard)
 		{
-			id=bypassClipboard
+			i=bypassClipboard
 		}
 		else if(document.querySelector("form#landing > div#landing")&&document.querySelector(".soractrl"))
 		{
-			id=location.hash.substr(1)
-			if(id.substr(0,18)=="ignoreCrowdBypass#")
+			i=location.hash.substr(1)
+			if(i.substr(0,18)=="ignoreCrowdBypass#")
 			{
-				id=id.substr(18)
+				i=i.substr(18)
 			}
 		}
 		else
 		{
-			id=location.search.split("?id=")[1]
+			i=id
 		}
 		f.id=""
 		const callback=()=>{
-			f.action+="#bypassClipboard="+id
+			f.action+="#bypassClipboard="+i
 			if(ignoreCrowdBypass)
 			{
 				f.action+="#ignoreCrowdBypass"
 			}
 			f.submit()
 		}
-		if(id)
+		if(i)
 		{
-			if(UNIVERSAL_BYPASS_INTERNAL_VERSION>=3)
+			if(id&&UNIVERSAL_BYPASS_INTERNAL_VERSION>=3)
 			{
 				// Referers allow the "Was this not correct?" button at html/crowd-bypassed.html to repeat the process, on some sites it has to be changed for that:
 				switch(domain)
@@ -1424,12 +1424,12 @@ ensureDomLoaded(()=>{
 				referer+="#bypassClipboard="+bypassClipboard
 				crowdReferer(referer)
 			}
-			crowdPath(id)
+			crowdPath(i)
 			crowdBypass(callback,true)
 		}
 		else
 		{
-			id=bypassClipboard
+			i=bypassClipboard
 			callback()
 		}
 	}
