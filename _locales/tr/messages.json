@@ -24,7 +24,7 @@
 		"message": "Enjeksiyon scripti başarıyla güncellendi!"
 	},
 	"updateNo": {
-		"message": "Zaten güncel."
+		"message": "Enjeksiyon scripti zaten güncel."
 	},
 	"faq": {
 		"message": "Sıkça Sorulan Sorular (SSS)"
@@ -62,11 +62,17 @@
 	"optionsCrowdAutoOpen": {
 		"message": "Kitle kaynaklı hedefleri % saniye sonra yeni bir sekmede aç. (0 = hemen.)"
 	},
+	"optionsCrowdAutoClose": {
+		"message": "Ziyaretin % saniyesinden sonra kitle kaynaklı hedefi içeren sekmeyi kapat."
+	},
 	"optionsInfoBox": {
 		"message": "Bazı sitelerde bilgilendirme mesajlarını göster."
 	},
 	"privacyPolicy": {
 		"message": "Gizlilik Politikası"
+	},
+	"contributors": {
+		"message": "Katkıda bulunanlar"
 	},
 	"optionsUserscripts": {
 		"message": "Özel Es Geçmeler"
@@ -109,6 +115,15 @@
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Bu, 1 saniye içinde yeni bir sekmede açılacaktır."
+	},
+	"crowdCloseTimer": {
+		"message": "Bu sekme % saniye içinde kapanacak."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Bu sekme 1 saniye içinde kapanacak."
+	},
+	"cancel": {
+		"message": "Vazgeç."
 	},
 	"crowdBypassedIgnore": {
 		"message": "Bu doğru değil miydi?"

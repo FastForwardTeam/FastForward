@@ -23,9 +23,6 @@
 	"updateYes": {
 		"message": "成功更新注入腳本!"
 	},
-	"updateNo": {
-		"message": "已經為最新版本"
-	},
 	"faq": {
 		"message": "常見問答 (FAQ)"
 	},

@@ -1,6 +1,6 @@
 {
 	"appDesc": {
-		"message": "Não perca tempo com conformidades. O Universal Bypass automaticamente ignora encurtadores de links irritantes."
+		"message": "Não perca tempo com conformidades. O Universal Bypass automaticamente ultrapassa encurtadores de links irritantes."
 	},
 	"firstrunTitle": {
 		"message": "Obrigado por instalar o Universal Bypass!"
@@ -9,13 +9,13 @@
 		"message": "Você é incrível!"
 	},
 	"firstrunNoScript": {
-		"message": "No entanto, parece que você está usando o NoScript ou similar, com o qual o Universal Bypass não é compatível."
+		"message": "No entanto, parece que você está usando o NoScript ou algo similar, com o qual o Universal Bypass não é compatível."
 	},
 	"version": {
 		"message": "Versão"
 	},
 	"changelog": {
-		"message": "Lista de mudanças"
+		"message": "Registo de alterações"
 	},
 	"update": {
 		"message": "Verificar atualizações"
@@ -30,7 +30,7 @@
 		"message": "Perguntas Frequentes (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "O Universal Bypass já liberou % sites para você."
+		"message": "O Universal Bypass já bloqueou % sites para você."
 	},
 	"support": {
 		"message": "Apoie o Universal Bypass"
@@ -42,7 +42,7 @@
 		"message": "Alterar as opções do Universal Bypass."
 	},
 	"optionsEnabled": {
-		"message": "Ativar bypasses de websites."
+		"message": "Ativar bypass de websites."
 	},
 	"optionsNavigationDelay": {
 		"message": "Me leve aos destinos após % segundo(s). (Use 0 para ir instantaneamente.)"
@@ -78,7 +78,7 @@
 		"message": "Bypasses Personalizados"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "Este é um recurso avançado para que os desenvolvedores criam seus próprios scripts para ignorar sites. Uma vez aperfeiçoados, eles podem ser enviados no GitHub para serem adicionados ao Universal Bypass, então eles estarão disponíveis para todos."
+		"message": "Este é um recurso avançado para que os desenvolvedores criem seus próprios scripts para ignorar sites. Uma vez aperfeiçoados, eles podem ser enviados no GitHub para serem adicionados ao Universal Bypass, então eles estarão disponíveis para todos."
 	},
 	"beforeNavigate": {
 		"message": "Você está quase no seu destino."
@@ -99,10 +99,10 @@
 		"message": "Clique nesta caixa para escondê-la. Você pode desativar a função da caixa de informações nas opções do Universal Bypass."
 	},
 	"crowdWait": {
-		"message": "Infelizmente, você é o primeiro a encontrar este link, mas depois de esperar, outros usuários do Universal Bypass não precisarão."
+		"message": "Infelizmente, você é o primeiro a encontrar este link, mas depois de esperar, outros usuários do Universal Bypass não precisarão esperar também."
 	},
 	"crowdDisabled": {
-		"message": "Este site foi liberado por bypass em grupo, que está desabilitado nas opções."
+		"message": "Este site foi liberado por crowd bypass, que está desabilitado nas opções."
 	},
 	"crowdBypassed": {
 		"message": "Talvez você não precise esperar!"
@@ -123,13 +123,13 @@
 		"message": "Esta aba fechará em 1 segundo."
 	},
 	"cancel": {
-		"message": "Cancelar"
+		"message": "Cancelar."
 	},
 	"crowdBypassedIgnore": {
 		"message": "Isto não estava correto?"
 	},
 	"crowdBypassedOptions": {
-		"message": "Quer que isto seja aberto numa nova janela instantaneamente ou em x segundos?"
+		"message": "Você quer que isto seja aberto numa nova janela instantaneamente ou em x segundos?"
 	},
 	"blockedTitle": {
 		"message": "O Universal Bypass preveniu que seu IP fosse registrado."

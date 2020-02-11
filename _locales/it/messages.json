@@ -24,7 +24,7 @@
 		"message": "Aggiornato con successo lo script di injection!"
 	},
 	"updateNo": {
-		"message": "Già aggiornato."
+		"message": "Lo script di iniezione è già aggiornato."
 	},
 	"faq": {
 		"message": "Domande frequenti (FAQ)"
@@ -70,6 +70,9 @@
 	},
 	"privacyPolicy": {
 		"message": "Informativa sulla privacy"
+	},
+	"contributors": {
+		"message": "Contributori"
 	},
 	"optionsUserscripts": {
 		"message": "Bypass personalizzati"

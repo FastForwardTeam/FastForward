@@ -23,9 +23,6 @@
 	"updateYes": {
 		"message": "Úspešne si updatoval injekčný skript!"
 	},
-	"updateNo": {
-		"message": "Už je aktualizované."
-	},
 	"faq": {
 		"message": "Často kladené otázky"
 	},

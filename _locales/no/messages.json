@@ -23,9 +23,6 @@
 	"updateYes": {
 		"message": "Oppdateringsskriptet ble oppdatert!"
 	},
-	"updateNo": {
-		"message": "Allerede oppdatert."
-	},
 	"faq": {
 		"message": "Ofte Stilte Spørsmål (FAQ)"
 	},

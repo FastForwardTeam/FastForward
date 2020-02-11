@@ -23,9 +23,6 @@
 	"updateYes": {
 		"message": "인젝션 스크립트를 업데이트하는데 성공했습니다!"
 	},
-	"updateNo": {
-		"message": "이미 최신 버전입니다."
-	},
 	"faq": {
 		"message": "자주 묻는 질문"
 	},
