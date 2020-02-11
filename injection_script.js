@@ -1073,6 +1073,17 @@ ensureDomLoaded(()=>{
 	domainBypass("neonime.org",()=>document.querySelectorAll("a[href^='https://neonime.org?940caec1dc=']").forEach(a=>{
 		a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.parentNode.firstChild.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
 	}))
+	domainBypass("mmsubs.com",()=>document.querySelectorAll("a[href^='https://mmsubs.com?e75fad73d9=']").forEach(a=>{
+		let qe=a.parentNode.previousElementSibling
+		while(qe&&!qe.classList.contains("sorattl"))
+		{
+			qe=qe.previousElementSibling
+		}
+		if(qe!==null)
+		{
+			a.href+="#bypassClipboard="+qe.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.parentNode.previousElementSibling.textContent.toLowerCase()+a.textContent.toLowerCase()
+		}
+	}))
 	hrefBypass(/stayonline\.pro\/l\/(.*)\//,m=>$.post(endpoint,{id:m[1],ref:""},r=>safelyNavigate(r.data.value)))
 	domainBypass("xlink.cc",()=>safelyNavigate(JSON.parse(atob(window.bootstrapData)).linkResponse.link.long_url))
 	domainBypass("1shortlink.com",()=>awaitElement("#redirect-link[data-href]",a=>safelyNavigate(a.getAttribute("data-href"))))
@@ -1434,6 +1445,10 @@ ensureDomLoaded(()=>{
 					
 					case "koreaku.co":
 					referer="https://koreaku.co/?91f79a3538="+id
+					break;
+					
+					case "mmsubs.com":
+					referer="https://mmsubs.com/?e75fad73d9="+id
 					break;
 				}
 				referer+="#bypassClipboard="+bypassClipboard
