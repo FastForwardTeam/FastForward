@@ -1084,6 +1084,21 @@ ensureDomLoaded(()=>{
 			a.href+="#bypassClipboard="+qe.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.parentNode.previousElementSibling.textContent.toLowerCase()+a.textContent.toLowerCase()
 		}
 	}))
+	domainBypass("bakadame.com",()=>document.querySelectorAll("a[href^='https://bakadame.com?e41b7e5034=']").forEach(a=>{
+		let qe=a.previousElementSibling
+		while(qe&&qe.tagName!="STRONG")
+		{
+			qe=qe.previousElementSibling
+		}
+		if(qe!==null)
+		{
+			a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.closest("div").previousElementSibling.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+qe.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.toLowerCase()
+		}
+		else
+		{
+			a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.closest("ul").previousElementSibling.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.toLowerCase()
+		}
+	}))
 	hrefBypass(/stayonline\.pro\/l\/(.*)\//,m=>$.post(endpoint,{id:m[1],ref:""},r=>safelyNavigate(r.data.value)))
 	domainBypass("xlink.cc",()=>safelyNavigate(JSON.parse(atob(window.bootstrapData)).linkResponse.link.long_url))
 	domainBypass("1shortlink.com",()=>awaitElement("#redirect-link[data-href]",a=>safelyNavigate(a.getAttribute("data-href"))))
@@ -1449,6 +1464,10 @@ ensureDomLoaded(()=>{
 					
 					case "mmsubs.com":
 					referer="https://mmsubs.com/?e75fad73d9="+id
+					break;
+					
+					case "bakadame.com":
+					referer="https://bakadame.com/?e41b7e5034="+id
 					break;
 				}
 				referer+="#bypassClipboard="+bypassClipboard
