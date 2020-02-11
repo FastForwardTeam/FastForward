@@ -1240,9 +1240,7 @@ ensureDomLoaded(()=>{
 			safelyAssign(fileDownloadLoca)
 		}
 	})
-	domainBypass("shirosafe.web.id",()=>{
-		const _0xbb97=['\x65\x6c\x65\x6d\x65\x6e\x74\x46\x72\x6f\x6d\x50\x6f\x69\x6e\x74','\x63\x6c\x69\x63\x6b','[href^=\x27#\x27]','\x71\x75\x65\x72\x79\x53\x65\x6c\x65\x63\x74\x6f\x72'];(function(_0x336570,_0x28d039){let _0x543dd0=_0xdd03cf=>{while(--_0xdd03cf){_0x336570['\x70\x75\x73\x68'](_0x336570['\x73\x68\x69\x66\x74']())}};_0x543dd0(++_0x28d039)}(_0xbb97,0xb7));let _0x5848=(_0x336570,_0x28d039)=>{_0x336570=_0x336570-0x0;const _0x543dd0=_0xbb97[_0x336570];return _0x543dd0};if(document[_0x5848('0x0')]('[href^=\x27#\x27]')){document[_0x5848('0x0')](_0x5848('0x3'))[_0x5848('0x2')]();setTimeout(()=>document[_0x5848('0x1')](outerWidth/0x2,0x0)[_0x5848('0x2')](),0xfa)}
-	})
+	domainBypass("shirosafe.web.id",()=>ifElement("#klik > a[href^='#']",a=>ifElement(a.getAttribute("href")+"[style='display:none;margin-top: 30px;'] > div[id] > a[href^='https://shirosafe.web.id/'][style='margin-bottom: 15px; width: 180px;']",a=>safelyAssign(a.href))))
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
