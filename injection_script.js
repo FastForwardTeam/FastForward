@@ -1730,7 +1730,7 @@ ensureDomLoaded(()=>{
 					}
 				}
 			},50)
-			domainBypass(/123l\.pw|123link|oke\.io|linksht\.com/,()=>window.setInterval=f=>setInterval(f,1))
+			domainBypass(/123l\.pw|123link|linksht\.com/,()=>window.setInterval=f=>setInterval(f,1))
 			clearInterval(dT)
 		}
 		//GemPixel/KBRMedia Premium URL Shortener
