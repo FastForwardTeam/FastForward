@@ -1104,6 +1104,22 @@ ensureDomLoaded(()=>{
 			a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.closest("ul").previousElementSibling.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.toLowerCase()
 		}
 	}))
+	domainBypass("drivenime.com",()=>document.querySelectorAll("a[href^='https://drivenime.com?a82ad005b1=']").forEach(a=>{
+		let p=a.parentNode,qe=p.previousElementSibling
+		while(qe&&qe.tagName!="H2")
+		{
+			qe=qe.previousElementSibling
+		}
+		a.href+="#bypassClipboard="+p.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
+		if(p.parentNode.classList.contains("post-single-content"))
+		{
+			a.href+=qe.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
+		}
+		else if(p.parentNode.classList.contains("su-spoiler-content"))
+		{
+			a.href+=p.parentNode.previousElementSibling.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
+		}
+	}))
 	hrefBypass(/stayonline\.pro\/l\/(.*)\//,m=>$.post(endpoint,{id:m[1],ref:""},r=>safelyNavigate(r.data.value)))
 	domainBypass("xlink.cc",()=>safelyNavigate(JSON.parse(atob(window.bootstrapData)).linkResponse.link.long_url))
 	domainBypass("1shortlink.com",()=>awaitElement("#redirect-link[data-href]",a=>safelyNavigate(a.getAttribute("data-href"))))
@@ -1280,7 +1296,6 @@ ensureDomLoaded(()=>{
 		"www.conan.id":"e7fc10d9e3",
 		"katmoviehd.nl":"6de4d3b1de",
 		"pusatfilm21.biz":"bd943a6562",
-		"drivenime.com":"a82ad005b1",
 		"myonime.com":"3766dd8efb",
 		"animersindo.net":"3766dd8efb",
 		"animebukatsu.net":"3766dd8efb",
