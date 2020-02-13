@@ -896,13 +896,6 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	}
 },{types:["main_frame"],urls:["*://*.ecleneue.com/pushredirect/?*"]},["blocking"])
 
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled && details.url.substr(-2)!="/2")
-	{
-		return{redirectUrl:details.url+"/2"}
-	}
-},{types:["main_frame"],urls:["*://*.boomx5.com/*"]},["blocking"])
-
 //Ouo.io/press & lnk2.cc Crowd Bypass
 brws.webRequest.onHeadersReceived.addListener(details=>{
 	if(enabled&&crowdEnabled)
