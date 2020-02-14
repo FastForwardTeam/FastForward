@@ -1258,6 +1258,17 @@ ensureDomLoaded(()=>{
 		}
 	})
 	domainBypass("shirosafe.web.id",()=>ifElement("#klik > a[href^='#']",a=>ifElement(a.getAttribute("href")+"[style='display:none;margin-top: 30px;'] > div[id] > a[href^='https://shirosafe.web.id/'][style='margin-bottom: 15px; width: 180px;']",a=>safelyAssign(a.href))))
+	domainBypass("techoow.com",()=>{
+		window.setTimeout=f=>setTimeout(f,1)
+		window.setInterval=f=>setInterval(f,1)
+		ifElement("a.btn-success[href]",a=>safelyAssign(a.href),()=>ifElement("#count00",a=>{
+			a.removeAttribute("disabled")
+			typeof xlinkd=="string"?safelyAssign(xlinkd):a.click()
+		},()=>ifElement("#step1-cap",a=>{
+			a.removeAttribute("disabled")
+			a.click()
+		})))
+	})
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
