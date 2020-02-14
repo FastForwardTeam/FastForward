@@ -65,9 +65,6 @@
 	"optionsCrowdAutoClose": {
 		"message": "Luk fanen med den crowd-sourced destination efter % sekund(er)s besøg."
 	},
-	"optionsInfoBox": {
-		"message": "Vis informationsmeddelelser på visse websteder."
-	},
 	"privacyPolicy": {
 		"message": "Fortrolighedspolitik"
 	},
@@ -94,9 +91,6 @@
 	},
 	"beforeNavigateOptions": {
 		"message": "Vil du omdirigeres straks eller om x sekunder?"
-	},
-	"infoBoxHide": {
-		"message": "Klik på dette felt for at skjule det. Du kan deaktivere infoboksfunktionen i Universal Bypass-indstillingerne."
 	},
 	"crowdWait": {
 		"message": "Desværre er du den første, der støder på dette link, men efter at du har ventet, vil ingen andre Universal Bypass-brugere længere skulle det."

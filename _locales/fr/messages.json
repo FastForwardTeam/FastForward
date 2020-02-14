@@ -48,7 +48,7 @@
 		"message": "M'envoyer les destinations après % seconde(s). (Utilisez le chiffre 0 pour être automatiquement redirigé.)"
 	},
 	"optionsTrackerBypass": {
-		"message": "Contournez les traqueurs en utilisant Apimon.de."
+		"message": "Contourner les traqueurs en utilisant Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Me rediriger instantanément vers les destinations des traqueurs."
@@ -64,9 +64,6 @@
 	},
 	"optionsCrowdAutoClose": {
 		"message": "Fermer les onglets contenant une destination partagée par les utilisateurs après % seconde(s) de visite."
-	},
-	"optionsInfoBox": {
-		"message": "Afficher des messages d'information sur certains sites."
 	},
 	"privacyPolicy": {
 		"message": "Politique de confidentialité"
@@ -94,9 +91,6 @@
 	},
 	"beforeNavigateOptions": {
 		"message": "Voulez-vous être redirigé instantanément ou après x secondes ?"
-	},
-	"infoBoxHide": {
-		"message": "Cliquez sur cette fenêtre pour la masquer. Vous pouvez désactiver la fonction de message d’information dans les options de Universal Bypass."
 	},
 	"crowdWait": {
 		"message": "Malheureusement, vous êtes la première personne à visiter sur ce lien, mais après avoir attendu, les autres utilisateurs de Universal Bypass n'auront plus à le faire."

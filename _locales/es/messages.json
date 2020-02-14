@@ -65,9 +65,6 @@
 	"optionsCrowdAutoClose": {
 		"message": "Cerrar la pestaña que contiene el destino descubierto después de % segundo(s) de haberlo visitado."
 	},
-	"optionsInfoBox": {
-		"message": "Mostrar mensajes informativos en algunos sitios."
-	},
 	"privacyPolicy": {
 		"message": "Política de privacidad"
 	},
@@ -94,9 +91,6 @@
 	},
 	"beforeNavigateOptions": {
 		"message": "¿Quieres ser redirigido al instante, o en x segundos?"
-	},
-	"infoBoxHide": {
-		"message": "Haga clic en esta casilla para ocultarla. Puede deshabilitar esta función en las opciones de Universal Bypass."
 	},
 	"crowdWait": {
 		"message": "Desafortunadamente, eres el primero en encontrar este enlace, pero después de haber esperado, otros usuarios de Universal Bypass ya no tendrán que hacerlo."

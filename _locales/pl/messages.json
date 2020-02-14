@@ -65,9 +65,6 @@
 	"optionsCrowdAutoClose": {
 		"message": "Zamknij zakładkę zawierająca crowd-sourcing miejsca docelowego po % sekundach jej wizyty."
 	},
-	"optionsInfoBox": {
-		"message": "Pokaż wiadomości informacyjne na niektórych stronach."
-	},
 	"privacyPolicy": {
 		"message": "Polityka prywatności"
 	},
@@ -94,9 +91,6 @@
 	},
 	"beforeNavigateOptions": {
 		"message": "Chcesz być przekierowywany natychmiastowo, czy za x sekund?"
-	},
-	"infoBoxHide": {
-		"message": "Kliknij to pole, aby je ukryć. Jeśli chcesz może wyłączyć funkcję pola informacyjnego w opcjach Uniwersalnego Obejścia."
 	},
 	"crowdWait": {
 		"message": "Niestety, jesteś pierwszym który wchodzi w ten link, ale po tym jak ty poczekałeś, inni użytkownicy Universal bypass nie będą musieli już czekać."

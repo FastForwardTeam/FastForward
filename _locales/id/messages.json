@@ -65,9 +65,6 @@
 	"optionsCrowdAutoClose": {
 		"message": "Tutup tab yang memuat halaman tujuan crowd bypass setelah % detik mengunjunginya."
 	},
-	"optionsInfoBox": {
-		"message": "Tampilkan pesan informasi di beberapa situs."
-	},
 	"privacyPolicy": {
 		"message": "Kebijakan Pribadi"
 	},
@@ -94,9 +91,6 @@
 	},
 	"beforeNavigateOptions": {
 		"message": "Apakah anda ingin dialihkan secara langsung atau dalam x detik?"
-	},
-	"infoBoxHide": {
-		"message": "Klik kotak pesan ini untuk menyembunyikannya. Anda dapat menonaktifkan fitur kotak pesan informasi di pengaturan Universal Bypass."
 	},
 	"crowdWait": {
 		"message": "Sayangnya, anda adalah orang yang pertama kali mengakses tautan ini, akan tetapi setelah anda melewatinya, pengguna Universal Bypass lainnya tidak perlu lagi melakukannya."

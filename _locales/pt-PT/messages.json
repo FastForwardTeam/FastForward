@@ -59,9 +59,6 @@
 	"optionsCrowdAutoOpen": {
 		"message": "Abrir destinos de colaboração coletiva em uma nova aba após % segundo(s). (0 = instantâneo)"
 	},
-	"optionsInfoBox": {
-		"message": "Mostrar mensagens informativas em alguns sites."
-	},
 	"privacyPolicy": {
 		"message": "Política de Privacidade"
 	},
@@ -85,9 +82,6 @@
 	},
 	"beforeNavigateOptions": {
 		"message": "Você quer ser redirecionado instantaneamente ou em x segundos?"
-	},
-	"infoBoxHide": {
-		"message": "Clique nesta notificação para ocultá-la. Pode desativar esta notificação nas opções do Universal Bypass."
 	},
 	"crowdWait": {
 		"message": "Infelizmente, você é o(a) primeiro(a) a encontrar este link, mas após a espera, outros utilizadores Universal Bypass não terão de esperar mais."

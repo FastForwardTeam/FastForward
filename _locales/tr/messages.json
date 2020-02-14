@@ -65,9 +65,6 @@
 	"optionsCrowdAutoClose": {
 		"message": "Ziyaretin % saniyesinden sonra kitle kaynaklı hedefi içeren sekmeyi kapat."
 	},
-	"optionsInfoBox": {
-		"message": "Bazı sitelerde bilgilendirme mesajlarını göster."
-	},
 	"privacyPolicy": {
 		"message": "Gizlilik Politikası"
 	},
@@ -94,9 +91,6 @@
 	},
 	"beforeNavigateOptions": {
 		"message": "Hemen mi yoksa x saniye içinde mi yönlendirilmek istersiniz?"
-	},
-	"infoBoxHide": {
-		"message": "Gizlemek için bu kutuyu tıklayın. Bilgi kutusu özelliğini Universal Bypass'ın seçeneklerinden devre dışı bırakabilirsiniz."
 	},
 	"crowdWait": {
 		"message": "Maalesef, bu bağlantıyla ilk karşılaşan sizsiniz, ancak siz bekledikten sonra, diğer Universal Bypass kullanıcılarının artık buna ihtiyacı kalmayacak."

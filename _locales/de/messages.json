@@ -65,9 +65,6 @@
 	"optionsCrowdAutoClose": {
 		"message": "Schließe den Tab, der das Nuzer-geteilte Ziel beinhaltet % Sekunde(n) nachdem das Ziel geöffnet wurde."
 	},
-	"optionsInfoBox": {
-		"message": "Zeige informative Nachrichten auf einigen Seiten an."
-	},
 	"privacyPolicy": {
 		"message": "Datenschutzerklärung"
 	},
@@ -94,9 +91,6 @@
 	},
 	"beforeNavigateOptions": {
 		"message": "Möchtest du sofort oder in x Sekunden weitergeleitet werden?"
-	},
-	"infoBoxHide": {
-		"message": "Klicke auf diese Box, um sie zu verstecken. Du kannst die Info-Box-Funktion in Universal Bypass Optionen deaktivieren."
 	},
 	"crowdWait": {
 		"message": "Leider bist du der erste, der auf diesen Link trifft, aber nachdem du gewartet hast, müssen andere Universal Bypass Nutzer es nicht mehr tun."

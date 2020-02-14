@@ -65,9 +65,6 @@
 	"optionsCrowdAutoClose": {
 		"message": "Stäng fliken som innehåller crowdsourced-målet efter % sekund(er) efter du besökt den."
 	},
-	"optionsInfoBox": {
-		"message": "Visa informationsmeddelanden på vissa webbplatser."
-	},
 	"privacyPolicy": {
 		"message": "Integritetspolicy"
 	},
@@ -94,9 +91,6 @@
 	},
 	"beforeNavigateOptions": {
 		"message": "Vill du omdirigeras direkt eller om x antal sekunder?"
-	},
-	"infoBoxHide": {
-		"message": "Dölj denna ruta genom att klicka på den. Du kan inaktivera informationsrutefunktionen i Universal Bypass-alternativen."
 	},
 	"crowdWait": {
 		"message": "Vilken otur du har som är den första som stöter på den här länken, men efter att du har väntat kommer andra Universal Bypass-användare inte längre att behöva vänta."

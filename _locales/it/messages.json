@@ -65,9 +65,6 @@
 	"optionsCrowdAutoClose": {
 		"message": "Chiudi la scheda contenente la destinazione di crowd-source dopo averla visitata per % secondo(i)."
 	},
-	"optionsInfoBox": {
-		"message": "Mostra messaggi informativi su alcuni siti."
-	},
 	"privacyPolicy": {
 		"message": "Informativa sulla privacy"
 	},
@@ -94,9 +91,6 @@
 	},
 	"beforeNavigateOptions": {
 		"message": "Vuoi essere reindirizzato all'istante o in x secondi?"
-	},
-	"infoBoxHide": {
-		"message": "Clicca questa casella per nasconderla. Puoi disabilitare la funzione info box nelle opzioni Universal Bypass'."
 	},
 	"crowdWait": {
 		"message": "Purtroppo, sei il primo ad incontrare questo link, ma dopo aver aspettato, altri utenti di Bypass universali non dovranno più farlo."

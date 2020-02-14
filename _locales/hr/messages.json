@@ -56,9 +56,6 @@
 	"optionsCrowdAutoOpen": {
 		"message": "Otvori crowd-sourced odredište u novoj kartici nakon % sekund(a). (0 = odmah.)"
 	},
-	"optionsInfoBox": {
-		"message": "Prikaži informativne poruke na nekim stranicama."
-	},
 	"privacyPolicy": {
 		"message": "Pravila privatnosti"
 	},
@@ -85,9 +82,6 @@
 	},
 	"beforeNavigateOptions": {
 		"message": "Dali želite biti preusmjereni odmah ili za x sekundi?"
-	},
-	"infoBoxHide": {
-		"message": "Kliknite ovdje da biste sakrili prozor. Možete onemogućiti ovu opciju u postavkama Universal Bypass-a."
 	},
 	"crowdWait": {
 		"message": "Nažalost, vi ste prvi koji je naišao na ovaj link, ali nakon što ste čekali, ostali korisnici Universal Bypass-a više ne moraju čekati."

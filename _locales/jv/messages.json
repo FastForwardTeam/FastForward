@@ -65,9 +65,6 @@
 	"optionsCrowdAutoClose": {
 		"message": "Tutup tab seng isine tujuan soko crowd bypass ing % detik sak wise ngunjungi."
 	},
-	"optionsInfoBox": {
-		"message": "Tampilake pesen informasi ing sawetara situs."
-	},
 	"privacyPolicy": {
 		"message": "Kebijakan Privasi"
 	},
@@ -94,9 +91,6 @@
 	},
 	"beforeNavigateOptions": {
 		"message": "Opo sampeyan pingin dialihne langsung utawa ing x detik?"
-	},
-	"infoBoxHide": {
-		"message": "Klik kothak pesen iki kanggo ndhelikake. Sampeyan bisa mateni fitur kothak pesen informasi ing opsi Universal Bypass."
 	},
 	"crowdWait": {
 		"message": "Sayange, sampeyan minangka wong sing pertama ngliwati link iki, nanging sawise sampeyan sampun ngliwati, pangguna Universal Bypass liyane ora perlu ngliwati maneh."

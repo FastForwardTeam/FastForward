@@ -65,9 +65,6 @@
 	"optionsCrowdAutoClose": {
 		"message": "Đóng tab chứa địa điểm có cộng đồng đóng góp sau % giây truy cập."
 	},
-	"optionsInfoBox": {
-		"message": "Hiển thị tin nhắn thông tin trên một số trang."
-	},
 	"privacyPolicy": {
 		"message": "Chính sách bảo mật"
 	},
@@ -94,9 +91,6 @@
 	},
 	"beforeNavigateOptions": {
 		"message": "Bạn có muốn điều hướng nhanh hoặc trong x giây?"
-	},
-	"infoBoxHide": {
-		"message": "Nhấn vào hộp này để ẩn. Bạn có thể tắt tính năng này trong tuỳ chọn. "
 	},
 	"crowdWait": {
 		"message": "Thật không may, bạn là người đầu tiên gặp phải liên kết này, nhưng sau khi bạn chờ đợi, những người dùng Universal Bypass khác sẽ không còn phải làm như vậy nữa."

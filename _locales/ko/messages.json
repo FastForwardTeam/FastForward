@@ -62,9 +62,6 @@
 	"optionsCrowdAutoClose": {
 		"message": "크라우드소싱 대상 방문 %초 후 해당 탭 닫기."
 	},
-	"optionsInfoBox": {
-		"message": "몇몇 사이트에 관한 정보 알려주기"
-	},
 	"privacyPolicy": {
 		"message": "개인정보 취급방침"
 	},
@@ -91,9 +88,6 @@
 	},
 	"beforeNavigateOptions": {
 		"message": "자동으로 리다이렉트하고 싶나요?"
-	},
-	"infoBoxHide": {
-		"message": "이 창을 눌러서 지우실 수 있어요. Universal Bypass의 설정에서 이런 안내창을 끄실 수 있어요."
 	},
 	"crowdWait": {
 		"message": "안타깝게도 이 링크의 첫 발견자신 것 같군요. 기다려주신다면 다른 Universal Bypass 사용자 분들은 기다리지 않으실 수 있어요."

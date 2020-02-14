@@ -59,9 +59,6 @@
 	"optionsCrowdAutoOpen": {
 		"message": "在%秒後轉移到用戶提供的連結。 (0=立刻轉移)"
 	},
-	"optionsInfoBox": {
-		"message": "在某些網站上顯示資訊通知。"
-	},
 	"privacyPolicy": {
 		"message": "隱私權政策"
 	},
@@ -85,9 +82,6 @@
 	},
 	"beforeNavigateOptions": {
 		"message": "您希望立刻或是x秒後被重新導向嗎？"
-	},
-	"infoBoxHide": {
-		"message": "點擊這個訊息隱藏。你可以在Universal Bypass的設定中關閉顯示資訊通知的功能。"
 	},
 	"crowdWait": {
 		"message": "很遺憾的，您是第一個遇到這個連結的人，但在您等候了以後，其他 Universal Bypass 的用戶就不用受苦了。"

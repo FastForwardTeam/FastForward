@@ -44,9 +44,6 @@
 	"optionsCrowdBypass": {
 		"message": "Ötürülə bilməyən qısaldıcıların yerlərini verin və aparın."
 	},
-	"optionsInfoBox": {
-		"message": "Bəzi saytlarda məlumatlandırma mesajlarını göstər."
-	},
 	"privacyPolicy": {
 		"message": "Gizlilik Siyasəti"
 	},
@@ -64,9 +61,6 @@
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "1 saniyə ərzində avtomatik yönləndiriləcəksiniz."
-	},
-	"infoBoxHide": {
-		"message": "Gizlətmək üçün bu qutuya klikləyin. Məlumat qutu özəlliyini Universal Bypass seçimlərindən sıradan çıxara bilərsiniz."
 	},
 	"crowdWait": {
 		"message": "Təəssüf ki, bu bağlantı ilə qarşılaşan ilk sizsiniz, ancaq siz gözlədikdən sonra, digər Universal Bypass istifadəçilərinin buna ehtiyacı olmayacaq."

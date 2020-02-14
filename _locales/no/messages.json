@@ -59,9 +59,6 @@
 	"optionsCrowdAutoOpen": {
 		"message": "Åpne publikumsdestinasjoner i en ny fane etter % sekund(er). (0 = øyeblikkelig.)"
 	},
-	"optionsInfoBox": {
-		"message": "Vis informasjonsmeldinger på noen nettsteder."
-	},
 	"privacyPolicy": {
 		"message": "Privatlivsretningslinjer"
 	},
@@ -85,9 +82,6 @@
 	},
 	"beforeNavigateOptions": {
 		"message": "Vil du bli omdirigert øyeblikkelig eller om x sekunder?"
-	},
-	"infoBoxHide": {
-		"message": "Klikk denne ruten for å skjule den. Du kan deaktivere infoboksfunksjonen under Universal Bypass-alternativer."
 	},
 	"crowdWait": {
 		"message": "Dessverre er du den første som møter denne lenken, men etter at du har ventet, vil andre brukere av Universal Bypass ikke lenger behøve å gjøre det."
