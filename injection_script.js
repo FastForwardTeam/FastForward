@@ -208,23 +208,15 @@ contributeAndNavigate=target=>{
 	}
 },
 insertInfoBox=text=>ensureDomLoaded(()=>{
-	if(infoBoxEnabled&&window.innerWidth>800&window.innerHeight>400)
+	if((UNIVERSAL_BYPASS_INTERNAL_VERSION>=4||infoBoxEnabled)&&window.innerWidth>800&window.innerHeight>400)
 	{
 		const div=document.createElement("div")
-		div.style='z-index:999999;border-radius:10px;padding:28px;position:fixed;right:30px;bottom:30px;background:#eee;color:#111;font-size:21px;box-shadow:#111 0px 5px 40px;max-width:500px;font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol'
+		div.style='z-index:999999;border-radius:10px;padding:28px;position:fixed;right:30px;bottom:30px;background:#eee;color:#111;font-size:21px;box-shadow:#111 0px 5px 40px;max-width:500px;font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;cursor:pointer'
 		div.innerHTML='<img src="{{icon/48.png}}" style="width:24px;height:24px;margin-right:8px"><span style="display:inline"></span>'
 		div.setAttribute("tabindex","-1")
 		div.setAttribute("aria-hidden","true")
 		const span=div.querySelector("span")
 		span.textContent=text
-		div.onmouseover=()=>{
-			if(div.style.height=="")
-			{
-				div.style.height=div.clientHeight+"px"
-			}
-			span.textContent="{{msg.infoBoxHide}}"
-		}
-		div.onmouseout=()=>span.textContent=text
 		div.onclick=()=>document.body.removeChild(div)
 		document.body.appendChild(div)
 	}

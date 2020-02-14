@@ -102,7 +102,6 @@ if(document instanceof HTMLDocument)
 		let script=document.createElement("script")
 		script.innerHTML=`(()=>{
 			const crowdEnabled=`+(res.crowdEnabled?"true":"false")+`,
-			infoBoxEnabled=`+(res.infoBoxEnabled?"true":"false")+`,
 			ignoreCrowdBypass=`+(ignoreCrowdBypass?"true":"false")+`,
 			bypassClipboard="`+bypassClipboard.split("\\").join("\\\\").split("\"").join("\\\"")+`"
 			if(location.href=="https://universal-bypass.org/firstrun")

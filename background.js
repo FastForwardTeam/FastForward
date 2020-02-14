@@ -56,7 +56,7 @@ brws.runtime.onInstalled.addListener(details=>{
 })
 
 // Keeping track of options
-var bypassCounter=0,enabled=true,instantNavigation=true,trackerBypassEnabled=true,instantNavigationTrackers=false,blockIPLoggers=true,crowdEnabled=true,infoBoxEnabled=true,userScript=""
+var bypassCounter=0,enabled=true,instantNavigation=true,trackerBypassEnabled=true,instantNavigationTrackers=false,blockIPLoggers=true,crowdEnabled=true,userScript=""
 brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_instant_navigation_trackers","allow_ip_loggers","crowd_bypass_opt_out","crowd_open_delay","crowd_close_delay","no_info_box"],res=>{
 	if(res)
 	{
@@ -95,7 +95,10 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 		{
 			brws.storage.sync.set({crowd_close_delay:-11})
 		}
-		infoBoxEnabled=(res.no_info_box!=="true")
+		if(res.no_info_box)
+		{
+			brws.storage.sync.remove(["no_info_box"])
+		}
 	}
 })
 brws.storage.local.get(["userscript","bypass_counter"],res=>{
@@ -156,10 +159,6 @@ brws.storage.onChanged.addListener(changes=>{
 	if(changes.crowd_bypass_opt_out)
 	{
 		crowdEnabled=(changes.crowd_bypass_opt_out.newValue!=="true")
-	}
-	if(changes.no_info_box)
-	{
-		infoBoxEnabled=(changes.no_info_box.newValue!=="true")
 	}
 	if(changes.userscript)
 	{
@@ -224,7 +223,7 @@ const downloadInjectionScript = () => new Promise(callback => {
 }),
 refreshInjectionScript = () => {
 	injectionScript = (upstreamInjectionScript + "\n" + userScript)
-	.split("UNIVERSAL_BYPASS_INTERNAL_VERSION").join("3")
+	.split("UNIVERSAL_BYPASS_INTERNAL_VERSION").join("4")
 	.split("UNIVERSAL_BYPASS_EXTERNAL_VERSION").join(brws.runtime.getManifest().version)
 	.split("UNIVERSAL_BYPASS_INJECTION_VERSION").join(upstreamCommit?upstreamCommit.substr(0,7):"dev")
 }
@@ -240,7 +239,7 @@ brws.runtime.onMessage.addListener((req, sender, respond) => {
 	switch(req.type)
 	{
 		case "content":
-		respond({enabled, channel, crowdEnabled, infoBoxEnabled, injectionScript})
+		respond({enabled, channel, crowdEnabled, injectionScript})
 		break;
 
 		case "options":

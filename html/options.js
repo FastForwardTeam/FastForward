@@ -15,7 +15,6 @@ crowdOpenDelayInput=document.getElementById("option-crowd-open-delay"),
 crowdOpenDelayCheckbox=document.getElementById("option-crowd-open-delay-toggle"),
 crowdCloseDelayInput=document.getElementById("option-crowd-close-delay"),
 crowdCloseDelayCheckbox=document.getElementById("option-crowd-close-delay-toggle"),
-infoBoxCheckbox=document.getElementById("option-info-box"),
 instantNavigationTrackersLogic = () => {
 	if(!trackerBypassCheckbox.checked||(navigationDelayCheckbox.checked&&navigationDelayInput.value==0))
 	{
@@ -196,10 +195,6 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 		crowdCloseDelayInput.value=res.crowd_close_delay
 		crowdCloseDelayCheckbox.setAttribute("checked","checked")
 	}
-	if(res.no_info_box!=="true")
-	{
-		infoBoxCheckbox.setAttribute("checked","checked")
-	}
 	instantNavigationTrackersLogic()
 	enabledCheckbox.onchange=function()
 	{
@@ -311,11 +306,5 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 				crowd_close_delay:crowdCloseDelayInput.value
 			})
 		},300)
-	}
-	infoBoxCheckbox.onchange=function()
-	{
-		brws.storage.sync.set({
-			no_info_box:(!this.checked).toString()
-		})
 	}
 })
