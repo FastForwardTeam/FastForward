@@ -1112,6 +1112,9 @@ ensureDomLoaded(()=>{
 			a.href+=p.parentNode.previousElementSibling.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
 		}
 	}))
+	domainBypass("katmoviehd.nl",()=>document.querySelectorAll("a[href^='https://katmoviehd.nl?6de4d3b1de=']").forEach(a=>{
+		a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
+	}))
 	hrefBypass(/stayonline\.pro\/l\/(.*)\//,m=>$.post(endpoint,{id:m[1],ref:""},r=>safelyNavigate(r.data.value)))
 	domainBypass("xlink.cc",()=>safelyNavigate(JSON.parse(atob(window.bootstrapData)).linkResponse.link.long_url))
 	domainBypass("1shortlink.com",()=>awaitElement("#redirect-link[data-href]",a=>safelyNavigate(a.getAttribute("data-href"))))
@@ -1298,7 +1301,6 @@ ensureDomLoaded(()=>{
 		"wizardsubs.com":"408631a1f0",
 		"www.zonangopi.com":"407ea19f7e",
 		"www.conan.id":"e7fc10d9e3",
-		"katmoviehd.nl":"6de4d3b1de",
 		"pusatfilm21.biz":"bd943a6562",
 		"myonime.com":"3766dd8efb",
 		"animersindo.net":"3766dd8efb",
