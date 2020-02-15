@@ -41,7 +41,7 @@ foreach(scandir("_locales") as $locale)
 		continue;
 	}
 	$json = json_decode($cont, true);
-	foreach(["bypassCounter", "optionsNavigationDelay", "optionsCrowdAutoOpen", "optionsCrowdAutoClose", "beforeNavigateDestination", "beforeNavigateTimer", "crowdBypassedInfo", "crowdBypassedTimer"] as $key)
+	foreach(["bypassCounter", "optionsNavigationDelay", "optionsCrowdAutoOpen", "optionsCrowdAutoClose", "beforeNavigateDestination", "beforeNavigateTimer", "beforeNavigateUnsafeTimer", "crowdBypassedInfo", "crowdBypassedTimer"] as $key)
 	{
 		if(array_key_exists($key, $json) && strpos($json[$key]["message"], "%") === false)
 		{

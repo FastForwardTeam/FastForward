@@ -1,35 +1,35 @@
 const brws=(typeof browser=="undefined"?chrome:browser),
 firefox=(brws.runtime.getURL("").substr(0,4)=="moz-"),
-getRedirect=(url,referer)=>{
+getRedirect=(url,referer,safe_in)=>{
 	if(!isGoodLink(url))
 	{
 		return
 	}
-	let r
-	if(referer)
+	let redirectUrl
+	if(safe_in===undefined&&(instantNavigation||(referer=="tracker"&&instantNavigationTrackers)))
 	{
-		if(referer=="tracker")
+		redirectUrl=(new URL(url)).toString()
+		if(referer)
 		{
-			r=(instantNavigation||instantNavigationTrackers?url:brws.runtime.getURL("html/before-navigate.html")+"?target="+encodeURIComponent(url))
-		}
-		else if(instantNavigation)
-		{
-			r=(new URL(url)).toString()
-			refererCache[r]=referer
-		}
-		else
-		{
-			r=brws.runtime.getURL("html/before-navigate.html")+"?target="+encodeURIComponent(url)+"&referer="+referer
+			refererCache[redirectUrl]=referer
 		}
 	}
 	else
 	{
-		r=(instantNavigation?url:brws.runtime.getURL("html/before-navigate.html")+"?target="+encodeURIComponent(url))
+		redirectUrl=brws.runtime.getURL("html/before-navigate.html")+"?target="+encodeURIComponent(url)
+		if(referer)
+		{
+			redirectUrl+="&referer="+referer
+		}
+		if(safe_in!==undefined)
+		{
+			redirectUrl+="&safe_in="+safe_in
+		}
 	}
 	countIt()
-	return {redirectUrl:r}
+	return {redirectUrl}
 },
-encodedRedirect=(url,referer)=>getRedirect(decodeURIComponent(url),referer),
+encodedRedirect=(url,referer,safe_in)=>getRedirect(decodeURIComponent(url),referer,safe_in),
 isGoodLink=link=>{
 	if(!link||link.substr(0,6)=="about:"||link.substr(0,11)=="javascript:")//jshint ignore:line
 	{
@@ -183,7 +183,7 @@ const downloadInjectionScript = () => new Promise(callback => {
 			uniqueness.push(val)
 			upstreamInjectionScript = upstreamInjectionScript.split("{{channel."+name+"}}").join(channel[name] = "data-" + val)
 		})
-		;["crowdWait","crowdDisabled","infoBoxHide"].forEach(name => {
+		;["crowdWait","crowdDisabled"].forEach(name => {
 			upstreamInjectionScript = upstreamInjectionScript.split("{{msg."+name+"}}").join(brws.i18n.getMessage(name).split("\\").join("\\\\").split("\"").join("\\\""))
 		})
 		upstreamInjectionScript = upstreamInjectionScript.split("{{icon/48.png}}").join(brws.runtime.getURL("icon/48.png"))
@@ -223,7 +223,7 @@ const downloadInjectionScript = () => new Promise(callback => {
 }),
 refreshInjectionScript = () => {
 	injectionScript = (upstreamInjectionScript + "\n" + userScript)
-	.split("UNIVERSAL_BYPASS_INTERNAL_VERSION").join("4")
+	.split("UNIVERSAL_BYPASS_INTERNAL_VERSION").join("5")
 	.split("UNIVERSAL_BYPASS_EXTERNAL_VERSION").join(brws.runtime.getManifest().version)
 	.split("UNIVERSAL_BYPASS_INJECTION_VERSION").join(upstreamCommit?upstreamCommit.substr(0,7):"dev")
 }
@@ -331,8 +331,13 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 },{types:["main_frame"],urls:["*://universal-bypass.org/firstrun?1"]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
-	let arr=details.url.substr(45).split("&referer=")
-	return encodedRedirect(arr[0],arr[1])
+	let arr=details.url.substr(45).split("&referer="),url=arr[0],safe_in
+	arr=arr[1].split("&safe_in=")
+	if(arr.length>1)
+	{
+		safe_in=arr[1]
+	}
+	return encodedRedirect(url,arr[0],safe_in)
 },{types:["main_frame"],urls:["*://universal-bypass.org/bypassed?target=*&referer=*"]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{

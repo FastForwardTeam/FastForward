@@ -31,8 +31,22 @@ unsafelyNavigate=target=>{
 	}
 	navigated=true
 	window.onbeforeunload=null
-	location.assign("https://universal-bypass.org/bypassed?target="+encodeURIComponent(target)+"&referer="+encodeURIComponent(referer))
 	//The background script will intercept the request and redirect to html/before-navigate.html or to the target depending on the user's settings.
+	let url="https://universal-bypass.org/bypassed?target="+encodeURIComponent(target)+"&referer="+encodeURIComponent(referer)
+	if(UNIVERSAL_BYPASS_INTERNAL_VERSION>=5)
+	{
+		switch(target)//All values here have been tested using "Take me to destinations after 0 seconds."
+		{
+			case "https://proxoexploits.com/proxo/continue_two":
+			url+="&safe_in=11"
+			break;
+
+			case "https://proxoexploits.com/ProxoKeyKeyLol":
+			url+="&safe_in=23"
+			break;
+		}
+	}
+	location.assign(url)
 },
 safelyNavigate=(target,drophash)=>{
 	if(navigated||!isGoodLink(target))

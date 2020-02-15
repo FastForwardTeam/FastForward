@@ -11,7 +11,7 @@ document.head.appendChild(link)
 let style=document.createElement("style")
 style.textContent="p{font-size:1rem}"
 document.head.appendChild(style)
-const timer=(message,secondsLeft,callback)=>{
+const timer=(message,secondsLeft,cancelable,callback)=>{
 	if(secondsLeft>=0)
 	{
 		const div=document.getElementById("timer"),
@@ -39,11 +39,14 @@ const timer=(message,secondsLeft,callback)=>{
 			{
 				p.textContent=brws.i18n.getMessage(message).replace("%",secondsLeft)+" "
 			}
-			let a=document.createElement("a")
-			a.href="#"
-			a.onclick=cancel
-			a.textContent=brws.i18n.getMessage("cancel")
-			p.appendChild(a)
+			if(cancelable)
+			{
+				let a=document.createElement("a")
+				a.href="#"
+				a.onclick=cancel
+				a.textContent=brws.i18n.getMessage("cancel")
+				p.appendChild(a)
+			}
 		}
 		div.classList.remove("uk-hidden")
 		tick()
