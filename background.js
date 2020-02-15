@@ -399,21 +399,8 @@ brws.webRequest.onCompleted.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
-		let url=details.url.substr(details.url.indexOf("&url=")+5),
-		cheat=details.url.substr(details.url.indexOf("/cheat.php?link=")+16)
-		if(cheat.substr(0,5)=="aHR0c")
-		{
-			u=atob(cheat.split("&")[0])
-			if(u.substr(u.indexOf("?s=")+3,7)=="http://"||u.substr(u.indexOf("?s=")+3,8)=="https://")
-			{
-				url=u.substr(u.indexOf("?s=")+3)
-			}
-			else
-			{
-				url=u
-			}
-		}
-		else if(url.substr(0,5)=="aHR0c")
+		let url=details.url.substr(details.url.indexOf("&url=")+5)
+		if(url.substr(0,5)=="aHR0c")
 		{
 			url=atob(url.split("&")[0])
 		}
