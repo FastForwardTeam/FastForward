@@ -1261,7 +1261,7 @@ ensureDomLoaded(()=>{
 			a.click()
 		})))
 	})
-	domainBypass("filesupload.org",()=>ifElement(".download-timer",()=>awaitElement(".download-timer>form>input[name='link']",i=>safelyAssign(i.value))))
+	domainBypass("filesupload.org",()=>ifElement("a[href='?unlock']",a=>safelyAssign(a.href),()=>ifElement(".download-timer",()=>awaitElement(".download-timer>form>input[name='link']",i=>safelyAssign(i.value)))))
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
