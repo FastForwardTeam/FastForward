@@ -83,6 +83,15 @@
 	"beforeNavigateDestination": {
 		"message": "Tujuane sampeyan yaiku %"
 	},
+	"beforeNavigateUnsafe": {
+		"message": "Nanging, yen sampeyan langsung nglewati saiki, dekne kabeh bakal ndeteksi Universal Bypass."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Sampeyan ora bakal maneh dideteksi ing % detik."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Sampeyan ora bakal maneh dideteksi ing 1 detik."
+	},
 	"beforeNavigateTimer": {
 		"message": "Sampeyan bakal dialihne kanthi otomatis ing % detik."
 	},
@@ -117,7 +126,7 @@
 		"message": "Tab iki bakal ditutup ing 1 detik."
 	},
 	"cancel": {
-		"message": "Batalne"
+		"message": "Batalne."
 	},
 	"crowdBypassedIgnore": {
 		"message": "Opo iki ora bener?"

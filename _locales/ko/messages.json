@@ -23,6 +23,9 @@
 	"updateYes": {
 		"message": "인젝션 스크립트를 업데이트하는데 성공했습니다!"
 	},
+	"updateNo": {
+		"message": "인젝션 스크립트가 이미 최신입니다."
+	},
 	"faq": {
 		"message": "자주 묻는 질문"
 	},
@@ -79,6 +82,15 @@
 	},
 	"beforeNavigateDestination": {
 		"message": "목적지는 % 입니다."
+	},
+	"beforeNavigateUnsafe": {
+		"message": "잠깐, 지금 바로 간다면 Universal Bypass가 들통날 거에요."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "%초 후에 감지되지 않게 됩니다."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "1초 후에 감지되지 않게 됩니다."
 	},
 	"beforeNavigateTimer": {
 		"message": "페이지로 %초 안에 이동합니다."

@@ -84,7 +84,7 @@
 		"message": "Tu dirección de destino es %"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "Sin embargo, si navega ahora, detectarán Universal Bypass."
+		"message": "Sin embargo, si navega ahora, Universal Bypass será detectado."
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "Ya no serás detectado en % segundos."

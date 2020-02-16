@@ -83,6 +83,15 @@
 	"beforeNavigateDestination": {
 		"message": "Tujuan anda adalah %"
 	},
+	"beforeNavigateUnsafe": {
+		"message": "Namun, jika anda melewati secara langsung sekarang, mereka akan mendeteksi Universal Bypass."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Anda tidak akan lagi terdeteksi dalam % detik."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Anda tidak akan lagi terdeteksi dalam 1 detik."
+	},
 	"beforeNavigateTimer": {
 		"message": "Anda akan dialihkan secara otomatis dalam % detik."
 	},
@@ -117,7 +126,7 @@
 		"message": "Tab ini akan ditutup dalam 1 detik."
 	},
 	"cancel": {
-		"message": "Batalkan"
+		"message": "Batalkan."
 	},
 	"crowdBypassedIgnore": {
 		"message": "Apakah ini tidak benar ?"
