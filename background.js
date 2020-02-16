@@ -534,7 +534,6 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
-		console.log(details)
 		return getRedirect(decodeURIComponent(atob(details.url.substr(details.url.indexOf("?link=")+6))))
 	}
 },{types:["main_frame"],urls:[
