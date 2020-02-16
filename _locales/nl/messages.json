@@ -83,6 +83,15 @@
 	"beforeNavigateDestination": {
 		"message": "Uw bestemming is %"
 	},
+	"beforeNavigateUnsafe": {
+		"message": "Echter, als je nu navigeert, detecteren ze Universal Bypass."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Je wordt niet langer gedetecteerd over % seconden."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Je wordt niet langer gedetecteerd over 1 seconde."
+	},
 	"beforeNavigateTimer": {
 		"message": "Je wordt automatisch doorgestuurd in % seconden."
 	},
@@ -117,7 +126,7 @@
 		"message": "Dit tabblad wordt over 1 seconde gesloten."
 	},
 	"cancel": {
-		"message": "Annuleren"
+		"message": "Annuleren."
 	},
 	"crowdBypassedIgnore": {
 		"message": "Klopt dit niet?"

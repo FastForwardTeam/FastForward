@@ -9,13 +9,13 @@
 		"message": "Vous êtes fantastique !"
 	},
 	"firstrunNoScript": {
-		"message": "Cependant, il semblerait que vous utilisiez le module NoScript ou quelque chose de similaire, avec lequel Universal Bypass n'est pas compatible."
+		"message": "Cependant, il semble que vous utilisiez le module NoScript ou quelque chose de similaire, avec lequel Universal Bypass n'est pas compatible."
 	},
 	"version": {
 		"message": "Version"
 	},
 	"changelog": {
-		"message": "Notes de version"
+		"message": "Journal des modifications"
 	},
 	"update": {
 		"message": "Vérifier les mises à jour"
@@ -83,6 +83,15 @@
 	"beforeNavigateDestination": {
 		"message": "Votre destination est %"
 	},
+	"beforeNavigateUnsafe": {
+		"message": "Cependant, si vous naviguez maintenant, ils détecteront Universal Bypass."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Vous ne serez plus détecté dans % secondes."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Vous ne serez plus détecté dans une seconde."
+	},
 	"beforeNavigateTimer": {
 		"message": "Vous serez automatiquement redirigé dans % secondes."
 	},
@@ -102,7 +111,7 @@
 		"message": "Vous n'aurez peut-être pas à attendre !"
 	},
 	"crowdBypassedInfo": {
-		"message": "D'autres utilisateurs de Universal Bypass ont déjà visité ce lien et ont indiqué que cela conduit à cette adresse : %"
+		"message": "D'autres utilisateurs de Universal Bypass ont déjà visité ce lien et ont indiqué que cela mène à cette adresse : %"
 	},
 	"crowdBypassedTimer": {
 		"message": "Ce lien sera ouvert dans un nouvel onglet dans % secondes."

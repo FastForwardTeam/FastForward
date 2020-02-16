@@ -83,6 +83,15 @@
 	"beforeNavigateDestination": {
 		"message": "Ваше одредиште је %"
 	},
+	"beforeNavigateUnsafe": {
+		"message": "Ипак, ако будете сада отишли, они ће детектовати Universal Bypass."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Више нећете бити детектовани за % секунди."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Више нећете бити детектовани за 1 секунду."
+	},
 	"beforeNavigateTimer": {
 		"message": "Ускоро ћете бити аутоматски преусмерени за % секунде(и)."
 	},

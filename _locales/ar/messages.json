@@ -83,6 +83,15 @@
 	"beforeNavigateDestination": {
 		"message": "وجهتك هي %"
 	},
+	"beforeNavigateUnsafe": {
+		"message": "على أية حال، اذا انتقلت الان، سيكتشفون استخدامك لالمتجاوز الشامل."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "لن يتم اكتشافك بعد % ثوان."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "لن يتم اكتشافك بعد ثانية واحدة."
+	},
 	"beforeNavigateTimer": {
 		"message": "سيتم تحويلك تلقائيا بعد % ثوان."
 	},

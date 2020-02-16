@@ -83,6 +83,15 @@
 	"beforeNavigateDestination": {
 		"message": "Seu destino é %"
 	},
+	"beforeNavigateUnsafe": {
+		"message": "No entanto, se você navegar agora, eles detectarão o Universal Bypass."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Você não será mais detectado em % segundos."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Você não será mais detectado em 1 segundo."
+	},
 	"beforeNavigateTimer": {
 		"message": "Você será redirecionado automaticamente em % segundos."
 	},
