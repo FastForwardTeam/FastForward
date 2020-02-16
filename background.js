@@ -947,7 +947,8 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 "*://*.liveshootv.com/*",
 "*://*.shrink.world/*",
 "*://*.mymastah.xyz/*",
-"*://*.sportif.id/*"
+"*://*.sportif.id/*",
+"*://*.healthinsider.online/*"
 ]},["blocking","responseHeaders"])
 
 brws.webRequest.onHeadersReceived.addListener(details=>{
