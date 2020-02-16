@@ -16,6 +16,7 @@
 	"permissions": [
 		"alarms",
 		"storage",
+		"tabs",
 		"webRequest",
 		"webRequestBlocking",
 		"<all_urls>"
