@@ -151,11 +151,11 @@ brws.storage.onChanged.addListener(changes=>{
 	if(changes.userscript)
 	{
 		userScript=changes.userscript.newValue
-		refreshInjectionScript()
 	}
+	refreshInjectionScript()
 })
 
-// Injection Script Management
+// Bypass definition management
 let injectionScript = "", upstreamInjectionScript = "", upstreamCommit, channel = {}
 const downloadInjectionScript = () => new Promise(callback => {
 	const finishDownload = () => {
@@ -181,7 +181,13 @@ const downloadInjectionScript = () => new Promise(callback => {
 	let xhr = new XMLHttpRequest()
 	xhr.onload = () => {
 		upstreamInjectionScript = xhr.responseText
-		finishDownload()
+		xhr = new XMLHttpRequest()
+		xhr.open("GET", brws.runtime.getURL("rules.json"), true)
+		xhr.onload = () => {
+			preflightRules = JSON.parse(xhr.responseText)
+			finishDownload()
+		}
+		xhr.send()
 	}
 	xhr.onerror = () => {
 		let xhr = new XMLHttpRequest()
@@ -194,13 +200,27 @@ const downloadInjectionScript = () => new Promise(callback => {
 			else
 			{
 				upstreamCommit = latestCommit
+				let downloads = 0
 				xhr = new XMLHttpRequest()
 				xhr.onload = () => {
 					upstreamInjectionScript = xhr.responseText
-					finishDownload()
+					if(++downloads == 2)
+					{
+						finishDownload()
+					}
 				}
 				xhr.open("GET", "https://raw.githubusercontent.com/timmyRS/Universal-Bypass/" + upstreamCommit + "/injection_script.js", true)
 				xhr.send()
+				let xhr2 = new XMLHttpRequest()
+				xhr2.onload = () => {
+					preflightRules = JSON.parse(xhr2.responseText)
+					if(++downloads == 2)
+					{
+						finishDownload()
+					}
+				}
+				xhr2.open("GET", "https://raw.githubusercontent.com/timmyRS/Universal-Bypass/" + upstreamCommit + "/rules.json", true)
+				xhr2.send()
 			}
 		}
 		xhr.open("GET", "https://api.github.com/repos/timmyRS/Universal-Bypass/commits/master", true)
@@ -210,10 +230,25 @@ const downloadInjectionScript = () => new Promise(callback => {
 	xhr.send()
 }),
 refreshInjectionScript = () => {
-	injectionScript = (upstreamInjectionScript + "\n" + userScript)
-	.split("UNIVERSAL_BYPASS_INTERNAL_VERSION").join("5")
-	.split("UNIVERSAL_BYPASS_EXTERNAL_VERSION").join(brws.runtime.getManifest().version)
-	.split("UNIVERSAL_BYPASS_INJECTION_VERSION").join(upstreamCommit?upstreamCommit.substr(0,7):"dev")
+	Object.values(onBeforeRequest_rules).forEach(brws.webRequest.onBeforeRequest.removeListener)
+	Object.values(onHeadersReceived_rules).forEach(brws.webRequest.onHeadersReceived.removeListener)
+	if(enabled)
+	{
+		injectionScript = (upstreamInjectionScript + "\n" + userScript)
+		.split("UNIVERSAL_BYPASS_INTERNAL_VERSION").join("5")
+		.split("UNIVERSAL_BYPASS_EXTERNAL_VERSION").join(brws.runtime.getManifest().version)
+		.split("UNIVERSAL_BYPASS_INJECTION_VERSION").join(upstreamCommit?upstreamCommit.substr(0,7):"dev")
+		Object.keys(preflightRules).forEach(name=>{
+			if(name in onBeforeRequest_rules)
+			{
+				brws.webRequest.onBeforeRequest.addListener(onBeforeRequest_rules[name],{types:["main_frame"],urls:preflightRules[name]},["blocking"])
+			}
+			else if(name in onHeadersReceived_rules)
+			{
+				brws.webRequest.onHeadersReceived.addListener(onHeadersReceived_rules[name],{types:["main_frame"],urls:preflightRules[name]},["blocking","responseHeaders"])
+			}
+		})
+	}
 }
 downloadInjectionScript()
 brws.alarms.create("update-injection-script", {periodInMinutes: 60})
@@ -384,9 +419,26 @@ brws.webRequest.onCompleted.addListener(details=>{
 },{types:["main_frame"],urls:["<all_urls>"]})
 
 // Preflight Bypasses
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
+const onBeforeRequest_rules = {
+	path_base64: details => getRedirect(atob(details.url.substr(details.url.indexOf("aHR0c")))),
+	path_s_encoded: details => encodedRedirect(details.url.substr(details.url.indexOf("/s/")+3)),
+	path_dl_base64: details => getRedirect(atob(details.url.substr(details.url.indexOf("/dl/")+4))),
+	query_raw: details => {
+		let url=new URL(details.url)
+		if(url.search)
+		{
+			return getRedirect(url.search.substr(1)+url.hash)
+		}
+	},
+	query_base64: details => getRedirect(atob((new URL(details.url)).search.replace("?",""))),
+	hash_base64: details => {
+		let url=new URL(details.url)
+		if(url.hash)
+		{
+			return getRedirect(atob(url.hash.replace("#","")))
+		}
+	},
+	param_url_general: details => {
 		let url=details.url.substr(details.url.indexOf("&url=")+5)
 		if(url.substr(0,5)=="aHR0c")
 		{
@@ -405,307 +457,173 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 			url+=(new URL(details.url)).hash
 		}
 		return getRedirect(url)
-	}
-},{types:["main_frame"],urls:[
-"*://*/full?api=*&url=*",
-"*://*/full/?api=*&url=*",
-"*://*/st?api=*&url=*",
-"*://*/st/?api=*&url=*"
-]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
+	},
+	param_url_encoded: details => {
 		let url=new URL(details.url)
 		if(url.searchParams.has("url"))
 		{
 			return getRedirect(url.searchParams.get("url"))
 		}
-	}
-},{types:["main_frame"],urls:[
-"*://*/safeme/?*",
-"*://*.leechall.com/redirect.php?url=*",
-"*://*.news-gg.com/l/?*",
-"*://*.mobile01.com/redirect.php?*",
-"*://*.nurhamka.com/*?url=*",
-"*://*.linepc.site/*?url=*",
-"*://*.adobedownload.org/redirect/?url=*",
-"*://*.sopasti.com/anime.php?*",
-"*://*.zxro.com/u/*?url=*",
-"*://*.macdownload.org/redirect/?url=*"
-]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		return getRedirect(atob(details.url.substr(details.url.indexOf("aHR0c"))))
-	}
-},{types:["main_frame"],urls:[
-"*://*.bursadrakor.com/protect-link/*",
-"*://*.getfile.mobi/get/files/*"
-]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		return getRedirect("http"+details.url.substr(details.url.indexOf("?xurl=")+6))
-	}
-},{types:["main_frame"],urls:["*://bluemediafiles.com/*?xurl=*"]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
+	},
+	param_xurl_raw_http: details => getRedirect("http"+details.url.substr(details.url.indexOf("?xurl=")+6)),
+	param_aurl_encoded: details => {
 		let url=new URL(details.url)
 		if(url.searchParams.has("aurl"))
 		{
 			return getRedirect(url.searchParams.get("aurl"))
 		}
-	}
-},{types:["main_frame"],urls:["*://*.folderenius.com/*/*?*"]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
+	},
+	param_capital_url_encoded: details => {
 		let url=new URL(details.url)
 		if(url.searchParams.has("URL"))
 		{
 			return getRedirect(url.searchParams.get("URL"))
 		}
-	}
-},{types:["main_frame"],urls:[
-"*://*.unlockapk.com/dl/mirror.php?*"
-]},["blocking"])
-
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		let url=new URL(details.url)
-		if(url.search)
-		{
-			return getRedirect(url.search.substr(1)+url.hash)
-		}
-	}
-},{types:["main_frame"],urls:[
-"*://*.anonym.to/?*",
-"*://*.anonymz.com/?*",
-"*://*.hidereferrer.com/?*"
-]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		return getRedirect(atob(details.url.substr(details.url.indexOf("?rel=")+5)))
-	}
-},{types:["main_frame"],urls:[
-"*://*.kharismanews.com/?rel=*",
-"*://out.x-forex.site/?rel=*"
-]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		return encodedRedirect(details.url.substr(details.url.indexOf("link=")+5))
-	}
-},{types:["main_frame"],urls:["*://*.spaste.com/r/*link=*",]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		return getRedirect(atob(details.url.substr(details.url.indexOf("?link=")+6)))
-	}
-},{types:["main_frame"],urls:[
-"*://*.leechpremium.link/cheat/?link=*",
-"*://*.bdzone.xyz/cheat.php?link=*"
-]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		return getRedirect(decodeURIComponent(atob(details.url.substr(details.url.indexOf("?link=")+6))))
-	}
-},{types:["main_frame"],urls:[
-"*://*.safelinkgratis.info/*?link=*"
-]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		return getRedirect(atob(details.url.substr(details.url.indexOf("?kesehatan=")+11)))
-	}
-},{types:["main_frame"],urls:["*://*.infosia.xyz/?kesehatan=*"]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		return getRedirect(atob(new URL(details.url).searchParams.values().next().value))
-	}
-},{types:["main_frame"],urls:[
-"*://*.pafpaf.info/?*=*",
-"*://*.binerfile.info/?*=*",
-"*://kurosafety.menantisenja.com/?*=*",
-"*://hightech.web.id/*?*=*"
-]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		return getRedirect(atob(details.url.substr(details.url.indexOf("?r=")+3)))
-	}
-},{types:["main_frame"],urls:[
-"*://*.linkvertise.com/*?r=*",
-"*://*.linkvertise.net/*?r=*",
-"*://*.link-to.net/*?r=*",
-"*://*/?r=*",
-"*://*/api?r=*",
-"*://*/api/?r=*"
-]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		return getRedirect(atob(details.url.substr(details.url.indexOf("?kareeI=")+8)).split("||")[0])
-	}
-},{types:["main_frame"],urls:[
-"*://*.blogspot.com/?kareeI=*"
-]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
+	},
+	param_rel_base64: details => getRedirect(atob(details.url.substr(details.url.indexOf("?rel=")+5))),
+	param_link_encoded: details => encodedRedirect(details.url.substr(details.url.indexOf("link=")+5)),
+	param_link_base64: details => getRedirect(atob(details.url.substr(details.url.indexOf("?link=")+6))),
+	param_link_encoded_base64: details => getRedirect(decodeURIComponent(atob(details.url.substr(details.url.indexOf("?link=")+6)))),
+	param_kesehatan_base64: details => getRedirect(atob(details.url.substr(details.url.indexOf("?kesehatan=")+11))),
+	param_wildcard_base64: details => getRedirect(atob(new URL(details.url).searchParams.values().next().value)),
+	param_r_base64: details => getRedirect(atob(details.url.substr(details.url.indexOf("?r=")+3))),
+	param_kareeI_base64_pipes: details => getRedirect(atob(details.url.substr(details.url.indexOf("?kareeI=")+8)).split("||")[0]),
+	param_cr_base64: details => {
 		let i=details.url.indexOf("cr=")
 		if(i>0)
 		{
 			return getRedirect(atob(details.url.substr(i+3).split("&")[0]))
 		}
-	}
-},{types:["main_frame"],urls:[
-"*://*.ouo.today/?*"
-]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		return getRedirect(atob(details.url.substr(details.url.indexOf("?a=")+3).split("#",1)[0]))
-	}
-},{types:["main_frame"],urls:[
-"*://*.adsafelink.net/generate?a=*"
-]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		return getRedirect(atob(details.url.substr(details.url.indexOf("?url=")+5)))
-	}
-},{types:["main_frame"],urls:[
-"*://*/p/*.html?url=*",
-"*://*.mispuani.xyz/*?url=*",
-"*://*.ad4msan.win/safe?url=*",
-"*://*.infotekno.net/vga?url=*",
-"*://*.sehuruf.com/linkku/?url=*"
-]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		return getRedirect(atob(details.url.substr(details.url.indexOf("?id=")+4)))
-	}
-},{types:["main_frame"],urls:[
-"*://*/p/*.html?id=*",
-"*://*.newsdecorate.com/?id=*"
-]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
+	},
+	param_a_base64: details => getRedirect(atob(details.url.substr(details.url.indexOf("?a=")+3).split("#",1)[0])),
+	param_url_base64: details => getRedirect(atob(details.url.substr(details.url.indexOf("?url=")+5))),
+	param_id_base64: details => getRedirect(atob(details.url.substr(details.url.indexOf("?id=")+4))),
+	param_get_base64: details => {
 		let arg=details.url.substr(details.url.indexOf("?get=")+5)
 		return getRedirect(atob(arg.substr(0,arg.length-1)))
-	}
-},{types:["main_frame"],urls:[
-"*://safelink.hargawebsite.com/?get=*",
-"*://safelink.hargawebsite.com/*/?get=*"
-]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		return getRedirect(atob(details.url.substr(details.url.indexOf("?u=")+3)))
-	}
-},{types:["main_frame"],urls:[
-"*://*.rikucan.com/?u=*"
-]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
+	},
+	param_u_base64: details => {
+		let url=new URL(details.url)
+		if(url.searchParams.has("u"))
+		{
+			return getRedirect(atob(url.searchParams.get("u"))+url.hash)
+		}
+	},
+	param_go_base64: details => {
 		let b64=details.url.substr(details.url.indexOf("?go=")+4).split("&")[0]
 		if(b64.substr(0,5)=="0OoL1")
 		{
 			b64="aHR0c"+b64.substr(5)
 		}
 		return getRedirect(atob(b64))
+	},
+	param_site_base64: details => getRedirect(atob(details.url.substr(details.url.indexOf("?site=")+6).split("&")[0])),
+	param_reff_base64: details => getRedirect(atob(details.url.substr(details.url.indexOf("?reff=")+6))),
+	param_s_encoded: details => encodedRedirect(details.url.substr(details.url.indexOf("?s=")+3),details.url),
+	param_dl_encoded_base64: details => encodedRedirect(atob(details.url.substr(details.url.indexOf("?dl=")+4).split("&")[0])),
+	param_health_encoded_base64: details => encodedRedirect(atob(details.url.substr(details.url.indexOf("?health=")+8))),
+	param_id_reverse_base64: details => {
+		let url=new URL(details.url)
+		if(url.searchParams.has("id"))
+		{
+			let t=atob(url.searchParams.get("id").split("").reverse().join(""))
+			if(t.substr(-16)=='" target="_blank')
+			{
+				t=t.substr(0,t.length-16)
+			}
+			return getRedirect(t)
+		}
+	},
+	param_token_base64: details => {
+		let url=new URL(details.url)
+		if(url.searchParams.has("token"))
+		{
+			return getRedirect(atob(url.searchParams.get("token")))
+		}
+	},
+	param_href_encoded: details => {
+		let url=new URL(details.url)
+		if(url.searchParams.has("href"))
+		{
+			return getRedirect(url.searchParams.get("href"))
+		}
+	},
+	param_short_encoded: details => {
+		let url=new URL(details.url)
+		if(url.searchParams.has("short"))
+		{
+			return getRedirect(url.searchParams.get("short"))
+		}
+	},
+	param_id_base64_replacements: details => {
+		let url=new URL(details.url)
+		if(url.searchParams.has("id"))
+		{
+			return getRedirect(atob(url.searchParams.get("id")).split("!").join("a").split(")").join("e").split("_").join("i").split("(").join("o").split("*").join("u"))
+		}
+	},
+	param_dest_encoded: details => {
+		let url=new URL(details.url)
+		if(url.searchParams.has("dest"))
+		{
+			return getRedirect(url.searchParams.get("dest"))
+		}
 	}
-},{types:["main_frame"],urls:[
-"*://*.telolet.in/?go=*",
-"*://*.lompat.in/?go=*",
-"*://safelink.grandmovie21.com/?go=*"
-]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		return getRedirect(atob(details.url.substr(details.url.indexOf("?site=")+6).split("&")[0]))
+},
+onHeadersReceived_rules = {
+	redirect_to_post: details => {
+		let url = new URL(details.url)
+		if(url.pathname.substr(0,6)!="/post/")
+		{
+			for(let i in details.responseHeaders)
+			{
+				let header = details.responseHeaders[i]
+				if(header.name.toLowerCase() == "location")
+				{
+					details.responseHeaders[i].value += "#" + url.pathname.substr(1)
+					break
+				}
+			}
+		}
+		return {responseHeaders: details.responseHeaders}
+	},
+	redirect_path_single_letter: details => {
+		let url = new URL(details.url)
+		for(let i in details.responseHeaders)
+		{
+			let header = details.responseHeaders[i]
+			if(header.name.toLowerCase() == "location")
+			{
+				details.responseHeaders[i].value += "#" + url.pathname.substr(3).split("/")[0]
+				break
+			}
+		}
+		return {responseHeaders: details.responseHeaders}
+	},
+	contribute_hash: details => {
+		if(crowdEnabled&&details.method=="POST")
+		{
+			let url=new URL(details.url)
+			if(url.hash.length>1)
+			{
+				for(let i in details.responseHeaders)
+				{
+					let header=details.responseHeaders[i]
+					if(header.name.toLowerCase()=="location"&&isGoodLink(header.value))
+					{
+						let xhr=new XMLHttpRequest()
+						xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
+						xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+						xhr.send("domain="+url.host+"&path="+encodeURIComponent(url.hash.substr(1))+"&target="+encodeURIComponent(header.value))
+						break
+					}
+				}
+			}
+		}
 	}
-},{types:["main_frame"],urls:[
-"*://*.masreyhan.com/*?site=*",
-"*://*.pasardownload.com/*?site=*",
-"*://*.vius.info/*?site=*",
-"*://*.cariskuy.com/*?site=*",
-"*://*.losstor.com/ini/?site=*",
-"*://*.giga74.com/*?site=*",
-"*://*.hfiz.site/?site=*",
-"*://*.cemiw.net/*?site=*"
-]},["blocking"])
+}
 
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		return getRedirect(atob(details.url.substr(details.url.indexOf("?reff=")+6)))
-	}
-},{types:["main_frame"],urls:[
-"*://*.remiyu.me/?reff=*",
-"*://*.ceksite.id/?reff=*"
-]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		return encodedRedirect(details.url.substr(details.url.indexOf("?s=")+3),details.url)
-	}
-},{types:["main_frame"],urls:[
-"*://*.ouo.io/*?s=*",
-"*://*.cpmlink.net/s/*?s=*",
-"*://*.shon.xyz/s/*?s=*"
-]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		return encodedRedirect(atob(details.url.substr(details.url.indexOf("?dl=")+4).split("&")[0]))
-	}
-},{types:["main_frame"],urls:[
-"*://*.nimebatch.net/download/?dl=*"
-]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		return encodedRedirect(atob(details.url.substr(details.url.indexOf("?health=")+8)))
-	}
-},{types:["main_frame"],urls:[
-"*://*.newhealthblog.com/?health=*"
-]},["blocking"])
-
+// Very Specific Preflight Bypasses
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
@@ -719,14 +637,6 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		return getRedirect(details.url.substr(details.url.substr(16).indexOf("/")+17))
 	}
 },{types:["main_frame"],urls:["http://sh.st/st/*/*"]},["blocking"])
-
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		return encodedRedirect(details.url.substr(details.url.indexOf("/s/")+3))
-	}
-},{types:["main_frame"],urls:["*://*.gslink.co/e/*/s/*"]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
@@ -753,57 +663,6 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled)
 	{
 		let url=new URL(details.url)
-		if(url.searchParams.has("u"))
-		{
-			return getRedirect(atob(url.searchParams.get("u"))+url.hash)
-		}
-	}
-},{types:["main_frame"],urls:["*://*.noriskdomain.com/*/analyze?*"]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		return getRedirect(atob(details.url.substr(details.url.indexOf("/dl/")+4)))
-	}
-},{types:["main_frame"],urls:[
-"*://*.k2nblog.com/dl/*",
-"*://*.filekita.me/page/dl/*"
-]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		let url=new URL(details.url)
-		if(url.searchParams.has("id"))
-		{
-			let t=atob(url.searchParams.get("id").split("").reverse().join(""))
-			if(t.substr(-16)=='" target="_blank')
-			{
-				t=t.substr(0,t.length-16)
-			}
-			return getRedirect(t)
-		}
-	}
-},{types:["main_frame"],urls:[
-"*://*.masterads.info/instagram/campanha.php?*",
-"*://*.adssuper.com/instagram/campanha.php?*"
-]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		let url=new URL(details.url)
-		if(url.searchParams.has("token"))
-		{
-			return getRedirect(atob(url.searchParams.get("token")))
-		}
-	}
-},{types:["main_frame"],urls:["*://*.mundodocinema.ga/redirecionamento_final?*"]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		let url=new URL(details.url)
 		if(url.searchParams.has("go"))
 		{
 			return getRedirect("https://clickar.net/"+url.searchParams.get("go"))
@@ -811,84 +670,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	}
 },{types:["main_frame"],urls:["*://*.surfsees.com/?*"]},["blocking"])
 
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		let url=new URL(details.url)
-		if(url.searchParams.has("href"))
-		{
-			return getRedirect(url.searchParams.get("href"))
-		}
-	}
-},{types:["main_frame"],urls:[
-"*://*.maranhesduve.club/?*",
-"*://*.sparbuttantowa.pro/*?*"
-]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		let url=new URL(details.url)
-		if(url.searchParams.has("short"))
-		{
-			return getRedirect(url.searchParams.get("short"))
-		}
-	}
-},{types:["main_frame"],urls:["*://*.duit.cc/*?*"]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		let url=new URL(details.url)
-		if(url.searchParams.has("id"))
-		{
-			return getRedirect(atob(url.searchParams.get("id")).split("!").join("a").split(")").join("e").split("_").join("i").split("(").join("o").split("*").join("u"))
-		}
-	}
-},{types:["main_frame"],urls:[
-"*://*.safelinkconverter.com/*?*",
-"*://*.safelinkreview.com/*?*",
-"*://*.safelinkreviewx.com/*?*",
-"*://*.safelinkreview.co/*?*",
-"*://*.awsubsco.ml/*?*",
-"*://*.awsubsco.cf/*?*"
-]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		let url=new URL(details.url)
-		return getRedirect(atob(url.search.replace("?","")))
-	}
-},{types:["main_frame"],urls:[
-"*://*.hikarinoakariost.info/out/?*",
-]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		let url=new URL(details.url)
-		if(url.hash)
-		{
-			return getRedirect(atob(url.hash.replace("#","")))
-		}
-	}
-},{types:["main_frame"],urls:[
-"*://*.acorme.com/*",
-]},["blocking"])
-
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled)
-	{
-		let url=new URL(details.url)
-		if(url.searchParams.has("dest"))
-		{
-			return getRedirect(url.searchParams.get("dest"))
-		}
-	}
-},{types:["main_frame"],urls:["*://*.ecleneue.com/pushredirect/?*"]},["blocking"])
-
-//Ouo.io/press & lnk2.cc Crowd Bypass
+// Ouo.io/press & lnk2.cc Crowd Bypass
 brws.webRequest.onHeadersReceived.addListener(details=>{
 	if(enabled&&crowdEnabled)
 	{
@@ -917,92 +699,7 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 "*://*.lnk2.cc/*/*"
 ]},["blocking","responseHeaders"])
 
-//Various Crowd Bypasses
-brws.webRequest.onHeadersReceived.addListener(details=>{
-	if(enabled)
-	{
-		let url = new URL(details.url)
-		if(url.pathname.substr(0,6)!="/post/")
-		{
-			for(let i in details.responseHeaders)
-			{
-				let header = details.responseHeaders[i]
-				if(header.name.toLowerCase() == "location")
-				{
-					details.responseHeaders[i].value += "#" + url.pathname.substr(1)
-					break
-				}
-			}
-		}
-		return{responseHeaders:details.responseHeaders}
-	}
-},{types:["main_frame"],urls:[
-"*://*.bercara.com/*",
-"*://*.semawur.com/*",
-"*://*.in11.site/*",
-"*://*.droidtamvan.me/*",
-"*://*.haipedia.com/*",
-"*://*.shrinkads.com/*",
-"*://*.modebaca.com/*",
-"*://*.liveshootv.com/*",
-"*://*.shrink.world/*",
-"*://*.mymastah.xyz/*",
-"*://*.sportif.id/*",
-"*://*.healthinsider.online/*"
-]},["blocking","responseHeaders"])
-
-brws.webRequest.onHeadersReceived.addListener(details=>{
-	if(enabled)
-	{
-		let url = new URL(details.url)
-		for(let i in details.responseHeaders)
-		{
-			let header = details.responseHeaders[i]
-			if(header.name.toLowerCase() == "location")
-			{
-				details.responseHeaders[i].value += "#" + url.pathname.substr(3).split("/")[0]
-				break
-			}
-		}
-		return{responseHeaders:details.responseHeaders}
-	}
-},{types:["main_frame"],urls:[
-"*://*.wadooo.com/g/*",
-"*://*.gotravelgo.space/g/*",
-"*://*.pantauterus.me/g/*",
-"*://*.liputannubi.net/g/*"
-]},["blocking","responseHeaders"])
-
-brws.webRequest.onHeadersReceived.addListener(details=>{
-	if(enabled&&crowdEnabled&&details.method=="POST")
-	{
-		let url=new URL(details.url)
-		if(url.hash.length>1)
-		{
-			for(let i in details.responseHeaders)
-			{
-				let header=details.responseHeaders[i]
-				if(header.name.toLowerCase()=="location"&&isGoodLink(header.value))
-				{
-					let xhr=new XMLHttpRequest()
-					xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
-					xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
-					xhr.send("domain="+url.host+"&path="+encodeURIComponent(url.hash.substr(1))+"&target="+encodeURIComponent(header.value))
-					break
-				}
-			}
-		}
-	}
-},{types:["main_frame"],urls:[
-"*://*.wadooo.com/*",
-"*://*.gotravelgo.space/*",
-"*://*.pantauterus.me/*",
-"*://*.liputannubi.net/*",
-"*://*.squidssh.com/user/links",
-"*://*.goodssh.com/user/links"
-]},["blocking","responseHeaders"])
-
-//SoraLink Crowd Bypass
+// SoraLink Crowd Bypass
 let soralink_contribute={}
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	if(enabled&&crowdEnabled)
@@ -1091,7 +788,7 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 	}
 },{types:["main_frame"],urls:["<all_urls>"]},["blocking","responseHeaders"])
 
-//Tracker Bypass using Apimon.de
+// Tracker Bypass using Apimon.de
 function resolveRedirect(url)
 {
 	let xhr=new XMLHttpRequest(),destination
