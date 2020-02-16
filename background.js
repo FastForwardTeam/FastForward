@@ -697,7 +697,8 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	}
 },{types:["main_frame"],urls:[
 "*://*.ouo.io/*?s=*",
-"*://*.cpmlink.net/s/*?s=*"
+"*://*.cpmlink.net/s/*?s=*",
+"*://*.shon.xyz/s/*?s=*"
 ]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
