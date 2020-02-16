@@ -1272,7 +1272,14 @@ ensureDomLoaded(()=>{
 		window.setInterval=f=>setInterval(f,1)
 		ifElement("a.btn-success[href]",a=>safelyAssign(a.href),()=>ifElement("#count00",a=>{
 			a.removeAttribute("disabled")
-			typeof xlinkd=="string"?safelyAssign(xlinkd):a.click()
+			if(typeof xlinkd=="string")
+			{
+				safelyAssign(xlinkd)
+			}
+			else
+			{
+				a.click()
+			}
 		},()=>ifElement("#step1-cap",a=>{
 			a.removeAttribute("disabled")
 			a.click()
