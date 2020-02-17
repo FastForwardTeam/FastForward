@@ -21,10 +21,10 @@
 		"message": "Nach Updates suchen"
 	},
 	"updateYes": {
-		"message": "Das Injektion-Skript wurde erfolgreich aktualisiert!"
+		"message": "Umgehungsdefinitionen wurden erfolgreich aktualisiert."
 	},
 	"updateNo": {
-		"message": "Das Injektion-Skript ist bereits auf dem neusten Stand."
+		"message": "Umgehungsdefinitionen sind bereits aktuell."
 	},
 	"faq": {
 		"message": "Häufig gestellte Fragen (FAQ)"
@@ -45,7 +45,7 @@
 		"message": "Aktiviere Webseiten-Umgehungen."
 	},
 	"optionsNavigationDelay": {
-		"message": "Bring mich nach % Sekunde(n) ans Ziel. (Nutze 0 um direkt navigiert zu werden.)"
+		"message": "Bring mich nach % Sekunde(n) ans Ziel."
 	},
 	"optionsTrackerBypass": {
 		"message": "Umgehe Tracker mit Apimon.de."
@@ -60,7 +60,7 @@
 		"message": "Gebe und nehme die Ziel-Urls von unumgänglichen Linkkürzern."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Nutzer-geteilte Ziele nach % Sekunde(n) in einem neuen Tab öffnen. (0 = sofort)"
+		"message": "Nutzer-geteilte Ziele nach % Sekunde(n) in einem neuen Tab öffnen."
 	},
 	"optionsCrowdAutoClose": {
 		"message": "Schließe den Tab, der das Nuzer-geteilte Ziel beinhaltet % Sekunde(n) nachdem das Ziel geöffnet wurde."

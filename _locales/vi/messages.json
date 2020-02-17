@@ -83,6 +83,15 @@
 	"beforeNavigateDestination": {
 		"message": "Điểm đến của bạn là %"
 	},
+	"beforeNavigateUnsafe": {
+		"message": "Tuy nhiên, nếu bạn chọn chuyển hướng ngay bây giờ, trang web sẽ phát hiện được Universal Bypass."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Bạn sẽ không còn bị phát hiện sau % giây."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Bạn sẽ không còn bị phát hiện sau 1 giây."
+	},
 	"beforeNavigateTimer": {
 		"message": "Bạn sẽ được điều hướng trong % giây."
 	},

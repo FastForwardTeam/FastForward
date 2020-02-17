@@ -83,6 +83,15 @@
 	"beforeNavigateDestination": {
 		"message": "Ваш адрес назначения - %"
 	},
+	"beforeNavigateUnsafe": {
+		"message": "Тем не менее, если Вы перейдёте сейчас, то они обнаружат Universal Bypass."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Вас перестанут обнаруживать через % сек."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Вас перестанут обнаруживать через 1 секунду."
+	},
 	"beforeNavigateTimer": {
 		"message": "Вы будете автоматически перенаправлены через % сек."
 	},
@@ -117,7 +126,7 @@
 		"message": "Эта вкладка закроется через 1 секунду."
 	},
 	"cancel": {
-		"message": "Отмена"
+		"message": "Отменить."
 	},
 	"crowdBypassedIgnore": {
 		"message": "Это было неправильно?"

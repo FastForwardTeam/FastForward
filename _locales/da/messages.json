@@ -83,6 +83,15 @@
 	"beforeNavigateDestination": {
 		"message": "Din destination er %"
 	},
+	"beforeNavigateUnsafe": {
+		"message": "Hvis du imidlertid navigerer videre nu, vil de registrere Universal Bypass."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Om % sekunder, vil du ikke længere blive opdaget."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Om 1 sekund, vil du ikke længere blive opdaget."
+	},
 	"beforeNavigateTimer": {
 		"message": "Du omdirigeres automatisk om % sekunder."
 	},
