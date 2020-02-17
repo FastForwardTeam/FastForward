@@ -45,7 +45,7 @@
 		"message": "Enable website bypasses."
 	},
 	"optionsNavigationDelay": {
-		"message": "Take me to destinations after % second(s). (Use 0 to be navigated instantly.)"
+		"message": "Take me to destinations after % second(s)."
 	},
 	"optionsTrackerBypass": {
 		"message": "Bypass trackers using Apimon.de."
@@ -60,7 +60,7 @@
 		"message": "Give and take the destinations of unbypassable shorteners."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Open crowd-sourced destinations in a new tab after % second(s). (0 = instant.)"
+		"message": "Open crowd-sourced destinations in a new tab after % second(s)."
 	},
 	"optionsCrowdAutoClose": {
 		"message": "Close tab containing the crowd-sourced destination after % second(s) of visiting it."

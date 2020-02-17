@@ -64,7 +64,7 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 			instantNavigation=(res.navigation_delay==0)
 			if(res.navigation_delay==61)
 			{
-				brws.storage.sync.set({navigation_delay:-11})
+				brws.storage.sync.set({navigation_delay:-1})
 			}
 		}
 		else
@@ -77,7 +77,7 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 		crowdEnabled=(res.crowd_bypass_opt_out!=="true")
 		if(!res.crowd_open_delay||res.crowd_open_delay==61)
 		{
-			brws.storage.sync.set({crowd_open_delay:-11})
+			brws.storage.sync.set({crowd_open_delay:-6})
 		}
 		if(!res.crowd_close_delay||res.crowd_close_delay==61)
 		{
