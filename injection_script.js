@@ -1309,6 +1309,8 @@ ensureDomLoaded(()=>{
 		window.setTimeout=f=>setTimeout(f,1)
 		ifElement("#slowDownloadButton",a=>a.click())
 	})
+	domainBypass("myotto.online",()=>ifElement("button#makingdifferenttimer > a[href]",a=>safelyAssign(a.href)))
+	domainBypass("disiniaja.site",()=>ifElement("button > a.button[href]",a=>safelyAssign(a.href)))
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
