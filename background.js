@@ -230,8 +230,8 @@ const downloadInjectionScript = () => new Promise(callback => {
 	xhr.send()
 }),
 refreshInjectionScript = () => {
-	Object.values(onBeforeRequest_rules).forEach(brws.webRequest.onBeforeRequest.removeListener)
-	Object.values(onHeadersReceived_rules).forEach(brws.webRequest.onHeadersReceived.removeListener)
+	Object.values(onBeforeRequest_rules).forEach(func => brws.webRequest.onBeforeRequest.removeListener(func))
+	Object.values(onHeadersReceived_rules).forEach(func => brws.webRequest.onHeadersReceived.removeListener(func))
 	if(enabled)
 	{
 		injectionScript = (upstreamInjectionScript + "\n" + userScript)
