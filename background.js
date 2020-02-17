@@ -275,6 +275,10 @@ brws.runtime.onMessage.addListener((req, sender, respond) => {
 		})
 		break;
 
+		case "close-tab":
+		brws.tabs.remove(sender.tab.id)
+		break;
+
 		case "crowd-contribute":
 		if(crowdEnabled)
 		{

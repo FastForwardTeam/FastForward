@@ -5,7 +5,7 @@ if(args.has("target")&&args.has("referer"))
 	span.innerHTML=span.innerHTML.replace("%",'<a target="_blank"></a>')
 	const a=span.querySelector("a"),
 	closetimer=()=>brws.storage.sync.get(["crowd_close_delay"],res=>timer("crowdCloseTimer",res.crowd_close_delay,true,()=>{
-		brws.tabs.getCurrent(t=>brws.tabs.remove(t.id))
+		brws.runtime.sendMessage({type: "close-tab"})
 	}))
 	a.textContent=args.get("target")
 	a.href=args.has("referer")?"https://universal-bypass.org/navigate"+location.search:args.get("target")
