@@ -575,7 +575,7 @@ const onBeforeRequest_rules = {
 	}
 },
 onHeadersReceived_rules = {
-	redirect_to_post: details => {
+	redirect_persist_id_path: details => {
 		let url = new URL(details.url)
 		if(url.pathname.substr(0,6)!="/post/")
 		{
@@ -591,7 +591,7 @@ onHeadersReceived_rules = {
 		}
 		return {responseHeaders: details.responseHeaders}
 	},
-	redirect_path_single_letter: details => {
+	redirect_persist_id_path_1_letter: details => {
 		let url = new URL(details.url)
 		for(let i in details.responseHeaders)
 		{

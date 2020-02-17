@@ -161,7 +161,7 @@
 	"param_dest_encoded": [
 		"*://*.ecleneue.com/pushredirect/?*"
 	],
-	"redirect_to_post": [
+	"redirect_persist_id_path": [
 		"*://*.bercara.com/*",
 		"*://*.semawur.com/*",
 		"*://*.in11.site/*",
@@ -175,7 +175,7 @@
 		"*://*.sportif.id/*",
 		"*://*.healthinsider.online/*"
 	],
-	"redirect_path_single_letter": [
+	"redirect_persist_id_path_1_letter": [
 		"*://*.wadooo.com/g/*",
 		"*://*.gotravelgo.space/g/*",
 		"*://*.pantauterus.me/g/*",
