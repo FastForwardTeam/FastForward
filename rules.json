@@ -24,6 +24,8 @@
 	"param_url_general": [
 		"*://*/full?api=*&url=*",
 		"*://*/full/?api=*&url=*",
+		"*://*/full?api=*&url=*&type=*",
+		"*://*/full/?api=*&url=*&type=*",
 		"*://*/st?api=*&url=*",
 		"*://*/st/?api=*&url=*"
 	],
