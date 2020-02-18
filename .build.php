@@ -42,7 +42,7 @@ $raw_build = createZip("Universal Bypass for Firefox.zip");
 $chromium_build = createZip("Universal Bypass for Chromium-based browsers.zip");
 foreach($index as $fn)
 {
-	if($fn == "README.md" || $fn == "injection_script.js")
+	if($fn == "README.md" || $fn == "injection_script.js" || $fn == "rules.json")
 	{
 		continue;
 	}
