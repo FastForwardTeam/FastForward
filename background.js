@@ -157,7 +157,7 @@ brws.storage.onChanged.addListener(changes=>{
 
 // Bypass definition management
 let injectionScript = "", upstreamInjectionScript = "", upstreamCommit, channel = {}
-const downloadInjectionScript = () => new Promise(callback => {
+const updateBypassDefinitions = () => new Promise(callback => {
 	const finishDownload = () => {
 		channel = {}
 		let uniqueness = []
@@ -250,11 +250,11 @@ refreshInjectionScript = () => {
 		})
 	}
 }
-downloadInjectionScript()
-brws.alarms.create("update-injection-script", {periodInMinutes: 60})
+updateBypassDefinitions()
+brws.alarms.create("update-bypass-definitions", {periodInMinutes: 60})
 brws.alarms.onAlarm.addListener(alert => {
-	console.assert(alert.name == "update-injection-script")
-	downloadInjectionScript()
+	console.assert(alert.name == "update-bypass-definitions")
+	updateBypassDefinitions()
 })
 
 // Messaging
@@ -301,7 +301,7 @@ brws.runtime.onConnect.addListener(port => {
 	switch(port.name)
 	{
 		case "update":
-		downloadInjectionScript().then(success => port.postMessage({success, upstreamCommit}))
+		updateBypassDefinitions().then(success => port.postMessage({success, upstreamCommit}))
 		break;
 
 		case "crowd-query":
