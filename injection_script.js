@@ -1266,7 +1266,7 @@ ensureDomLoaded(()=>{
 			safelyAssign(fileDownloadLoca)
 		}
 	})
-	domainBypass("shirosafe.web.id",()=>ifElement("a#cus[href^='https://shirosafe.web.id/']",a=>$("#tokenns").load("/hajime.php",()=>$("#tokenns").load("/sessionpunten.php",()=>safelyAssign(a.href)))))
+	domainBypass("shirosafe.web.id",()=>ifElement("#cus>a[href^='https://shirosafe.web.id/']",a=>$("#tokenns").load("/hajime.php",()=>$("#tokenns").load("/sessionpunten.php",()=>safelyAssign(a.href)))))
 	domainBypass("techoow.com",()=>{
 		window.setTimeout=f=>setTimeout(f,1)
 		window.setInterval=f=>setInterval(f,1)
