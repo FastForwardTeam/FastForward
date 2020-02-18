@@ -1737,7 +1737,10 @@ ensureDomLoaded(()=>{
 				ifElement("input[type='hidden'][name='alias'][value]",i=>{
 					i.parentNode.action+="#"+i.value+(ignoreCrowdBypass?"#ignoreCrowdBypass":"")
 					crowdPath(i.value)
-				},()=>crowdPath(location.hash.substr(1)))
+				},()=>ifElement("form#link-view",f=>{
+					f.action+="#"+location.hash.substr(1)+(ignoreCrowdBypass?"#ignoreCrowdBypass":"")
+					crowdPath(location.hash.substr(1))
+				},()=>crowdPath(location.hash.substr(1))))
 			})
 			domainBypass(/(atv|adlink)\.pw|safe\.mirrordown\.com|kabarviral\.blog/,()=>crowdPath(location.search.substr(1).split("=")[0]))
 			document.documentElement.setAttribute("{{channel.adlinkfly_info}}","")
