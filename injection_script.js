@@ -1023,19 +1023,20 @@ ensureDomLoaded(()=>{
 		}
 		awaitElement("a#skip_button[href]",a=>safelyNavigate(a.href))
 	})
-	domainBypass("pahe.in",()=>document.querySelectorAll("a.shortc-button.small[href^='https://pahe.in?73e659772d=']").forEach(a=>{
+	domainBypass(/pahe\.(in|me)/,()=>document.querySelectorAll("a.shortc-button.small[href*='?id=']").forEach(a=>{
 		let qe=a.previousElementSibling
 		while(qe&&qe.tagName!="B")
 		{
 			qe=qe.previousElementSibling
 		}
+		a.href=a.href.replace("intercelestial","sweetlantern")
 		a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"")
 		let ep=a.parentNode.querySelector("span[style] > b")
 		if(ep!==null)
 		{
 			a.href+=ep.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
 		}
-		a.href+=qe.textContent+a.textContent.toLowerCase()
+		a.href+=qe.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.toLowerCase()
 	}))
 	domainBypass("channelmyanmar.org",()=>document.querySelectorAll("a[href^='https://channelmyanmar.org?1c17f28bf0=']").forEach(a=>{
 		if(a.classList.contains("FLMBTN-Btn"))
@@ -1437,12 +1438,6 @@ ensureDomLoaded(()=>{
 				// Referers allow the "Was this not correct?" button at html/crowd-bypassed.html to repeat the process, on some sites it has to be changed for that:
 				switch(domain)
 				{
-					case "linegee.net":
-					case "sweetlantern.com":
-					case "intercelestial.com":
-					referer="https://pahe.in/?73e659772d="+id
-					break;
-
 					case "channelmyanmar.org":
 					referer="https://channelmyanmar.org/?1c17f28bf0="+id
 					break;
