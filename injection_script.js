@@ -1265,27 +1265,7 @@ ensureDomLoaded(()=>{
 			safelyAssign(fileDownloadLoca)
 		}
 	})
-	domainBypass("shirosafe.web.id",()=>{
-		ifElement("meta[http-equiv='refresh'][content^=\"0;url='\"]",m=>{
-			const id=location.hash.replace("#","")
-			if(id)
-			{
-				window.stop()
-				crowdPath(id)
-				let url=m.content.split("url='")[1]
-				contributeAndNavigate(url.substr(0,url.length-1))
-			}
-		},()=>ifElement("form[name='myForm']",f=>{
-			f.name=""
-			f.action+="#"+location.pathname.substr(4)
-			f.submit()
-		},()=>{
-			const id=location.hash.replace("#","")
-			crowdPath(id)
-			crowdReferer("https://shirosafe.web.id/id/"+id)
-			crowdBypass(()=>awaitElement("a#cus[href^='https://shirosafe.web.id/']",a=>a.href+="#"+id))
-		}))
-	})
+	domainBypass("shirosafe.web.id",()=>ifElement("a#cus[href^='https://shirosafe.web.id/']",a=>$("#tokenns").load("/mulaisession.php",()=>safelyAssign(a.href))))
 	domainBypass("techoow.com",()=>{
 		window.setTimeout=f=>setTimeout(f,1)
 		window.setInterval=f=>setInterval(f,1)
