@@ -1750,7 +1750,7 @@ ensureDomLoaded(()=>{
 					{
 						crowdBypass(()=>{
 							let cT=setInterval(()=>{
-								let a=document.querySelector("a.get-link[href]:not([href='']):not([href*='ads']):not(.disabled), .skip-ad a[href]:not([href='']):not([href*='ads'])"),h
+								let a=document.querySelector("a.get-link[href]:not([href='']):not([href*='.ads.']):not(.disabled), .skip-ad a[href]:not([href='']):not([href*='.ads.'])"),h
 								if(a)
 								{
 									h=a.href
