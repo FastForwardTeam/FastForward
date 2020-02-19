@@ -8,7 +8,17 @@ if(args.has("target"))
 	const when_safe=()=>{
 		document.getElementById("unsafe").classList.add("uk-hidden")
 		a.href=args.has("referer")?"https://universal-bypass.org/navigate"+location.search:args.get("target")
-		brws.storage.sync.get(["navigation_delay"],res=>timer("beforeNavigateTimer",res.navigation_delay,true,()=>location.href=a.href))
+		brws.storage.sync.get(["navigation_delay"],res=>{
+			if(res.navigation_delay==0)
+			{
+				document.write("")
+				location.href=a.href
+			}
+			else
+			{
+				timer("beforeNavigateTimer",res.navigation_delay,true,()=>location.href=a.href)
+			}
+		})
 	}
 	if(args.has("safe_in"))
 	{
