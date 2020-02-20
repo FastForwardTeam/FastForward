@@ -1292,6 +1292,12 @@ ensureDomLoaded(()=>{
 	})
 	domainBypass("myotto.online",()=>ifElement("button#makingdifferenttimer > a[href]",a=>safelyAssign(a.href)))
 	domainBypass("disiniaja.site",()=>ifElement("button > a.button[href]",a=>safelyAssign(a.href)))
+	domainBypass("gsmusbdrivers.com",()=>{
+		if(typeof wt=="number")
+		{
+			wt=0
+		}
+	})
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
