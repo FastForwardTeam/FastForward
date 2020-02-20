@@ -3,7 +3,8 @@ document.querySelector("[data-message='optionsCrowdAutoOpen']").innerHTML=docume
 document.querySelector("[data-message='optionsCrowdAutoClose']").innerHTML=document.querySelector("[data-message='optionsCrowdAutoClose']").innerHTML.replace("%",'<input id="option-crowd-close-delay" type="number" min="3" max="60" skip="1" style="width:34px">')
 document.querySelector("[data-message='optionsUserscriptsDescription']").innerHTML=document.querySelector("[data-message='optionsUserscriptsDescription']").textContent.replace("GitHub","<a href='https://github.com/timmyrs/Universal-Bypass/blob/master/injection_script.js' target='_blank'>GitHub</a>")
 
-const enabledCheckbox=document.getElementById("option-enabled"),
+const updateButton=document.querySelector("[data-message='update']"),
+enabledCheckbox=document.getElementById("option-enabled"),
 enabledLabel=document.querySelector("label[for='option-enabled']"),
 navigationDelayInput=document.getElementById("option-navigation-delay"),
 navigationDelayCheckbox=document.getElementById("navigation-delay-toggle"),
@@ -74,10 +75,9 @@ hrefBypass(/example\\.(com|org)/, () => {
 // Enjoy! Your changes will be saved automatically.
 `
 
-let navigationDelayInputTimer,crowdOpenDelayInputTimer,crowdCloseDelayInputTimer,saveTimer,updating=false,
-hash=location.hash.toString().replace("#","")
-editor=ace.edit("userscript",{mode:"ace/mode/javascript",theme:"ace/theme/monokai"})
+let navigationDelayInputTimer,crowdOpenDelayInputTimer,crowdCloseDelayInputTimer,saveTimer
 
+let hash=location.hash.toString().replace("#","")
 if(hash)
 {
 	if(hash=="firstrun")
@@ -90,51 +90,84 @@ if(hash)
 	}
 }
 
-brws.runtime.sendMessage({type: "options"}, res => {
-	document.getElementById("version").textContent=brws.runtime.getManifest().version+"-"+(res.upstreamCommit?res.upstreamCommit.substr(0,7):"dev")
-	document.querySelector("[data-message='update']").onclick=()=>{
-		if(updating)
+let editor=ace.edit("userscript",{mode:"ace/mode/javascript",theme:"ace/theme/monokai"})
+editor.on("change", ()=>{
+	clearInterval(saveTimer)
+	saveTimer=setTimeout(()=>{
+		brws.storage.local.set({
+			userscript: editor.getValue()
+		})
+	},500)
+})
+
+let port=brws.runtime.connect({name:"options"}),wasUpdating=false
+port.onMessage.addListener(data=>{
+	if("upstreamCommit" in data)
+	{
+		document.getElementById("version").textContent=brws.runtime.getManifest().version+"-"+(data.upstreamCommit?data.upstreamCommit.substr(0,7):"dev")
+	}
+	if("bypassCounter" in data && data.bypassCounter > 1)
+	{
+		const counter=document.getElementById("counter"),
+		span=counter.querySelector("span")
+		span.textContent=brws.i18n.getMessage("bypassCounter")
+		span.innerHTML=span.innerHTML.replace("%","<b>"+data.bypassCounter+"</b>")
+		counter.classList.remove("uk-hidden")
+	}
+	if("userScript" in data)
+	{
+		if(data.userScript)
 		{
-			return
+			editor.setValue(data.userScript)
 		}
-		updating=true
-		let port=brws.runtime.connect({name: "update"})
-		port.onMessage.addListener(res => {
-			document.getElementById("version").textContent=brws.runtime.getManifest().version+"-"+(res.upstreamCommit?res.upstreamCommit.substr(0,7):"dev")
-			UIkit.notification({
-				message:brws.i18n.getMessage("update"+(res.success?"Yes":"No")),
-				status:(res.success?"success":"primary"),
-				timeout:3000
-			})
-			port.disconnect()
-			updating=false
+		else
+		{
+			editor.setValue(defaultUserScript)
+		}
+		editor.resize()
+		editor.clearSelection()
+	}
+	if("updateSuccess" in data)
+	{
+		UIkit.notification({
+			message:brws.i18n.getMessage("updat"+(data.updateSuccess?"ing":"eNo")),
+			status:"primary",
+			timeout:3000
 		})
 	}
-	if(res.bypassCounter > 1)
+	if("updateStatus" in data)
 	{
-		const p=document.querySelector("[data-message='bypassCounter']")
-		p.innerHTML=p.innerHTML.replace("%","<b>"+res.bypassCounter+"</b>")
-		document.getElementById("counter").classList.remove("uk-hidden")
+		if(data.updateStatus)
+		{
+			updateButton.setAttribute("disabled","disabled")
+			if(data.updateStatus == "updating")
+			{
+				updateButton.textContent=brws.i18n.getMessage("updating")
+				wasUpdating=true
+			}
+		}
+		else
+		{
+			updateButton.textContent=brws.i18n.getMessage("update")
+			updateButton.removeAttribute("disabled")
+			if(wasUpdating)
+			{
+				UIkit.notification({
+					message:brws.i18n.getMessage("updateYes"),
+					status:"success",
+					timeout:3000
+				})
+				wasUpdating=false
+			}
+		}
 	}
-	if(res.userScript)
-	{
-		editor.setValue(res.userScript)
-	}
-	else
-	{
-		editor.setValue(defaultUserScript)
-	}
-	editor.resize()
-	editor.clearSelection()
-	editor.on("change", ()=>{
-		clearInterval(saveTimer)
-		saveTimer=setTimeout(()=>{
-			brws.storage.local.set({
-				userscript: editor.getValue()
-			})
-		},500)
-	})
 })
+updateButton.onclick=()=>{
+	if(!updateButton.hasAttribute("disabled"))
+	{
+		port.postMessage({type:"update"})
+	}
+}
 
 brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_instant_navigation_trackers","allow_ip_loggers","crowd_bypass_opt_out","crowd_open_delay","crowd_close_delay","no_info_box"],res=>{
 	if(res==undefined)

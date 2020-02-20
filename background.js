@@ -33,7 +33,10 @@ isGoodLink=link=>{
 	}
 	return true
 },
-countIt=()=>brws.storage.local.set({bypass_counter:++bypassCounter})
+countIt=()=>{
+	brws.storage.local.set({bypass_counter:++bypassCounter})
+	sendToOptions({bypassCounter})
+}
 
 // Install handler
 brws.runtime.onInstalled.addListener(details=>{
@@ -156,8 +159,18 @@ brws.storage.onChanged.addListener(changes=>{
 })
 
 // Bypass definition management
-let injectionScript = "", upstreamInjectionScript = "", upstreamCommit, channel = {}
-const updateBypassDefinitions = () => new Promise(callback => {
+let updateStatus = "", injectionScript = "", preflightRules = {}, upstreamInjectionScript = "", upstreamCommit, channel = {}, optionsTab, optionsPort
+const updateBypassDefinitions = callback => {
+	if(updateStatus != "")
+	{
+		return
+	}
+	if(typeof callback != "function")
+	{
+		callback = () => {}
+	}
+	updateStatus = "checking"
+	sendToOptions({updateStatus})
 	const finishDownload = () => {
 		channel = {}
 		let uniqueness = []
@@ -176,7 +189,8 @@ const updateBypassDefinitions = () => new Promise(callback => {
 		})
 		upstreamInjectionScript = upstreamInjectionScript.split("{{icon/48.png}}").join(brws.runtime.getURL("icon/48.png"))
 		refreshInjectionScript()
-		callback(true)
+		updateStatus = ""
+		sendToOptions({upstreamCommit, updateStatus})
 	}
 	let xhr = new XMLHttpRequest()
 	xhr.onload = () => {
@@ -195,15 +209,26 @@ const updateBypassDefinitions = () => new Promise(callback => {
 			const latestCommit = JSON.parse(xhr.responseText).sha
 			if(latestCommit == upstreamCommit)
 			{
+				updateStatus = ""
+				sendToOptions({updateStatus})
 				callback(false)
 			}
 			else
 			{
+				callback(true)
+				updateStatus = "updating"
+				sendToOptions({updateStatus})
 				upstreamCommit = latestCommit
 				let downloads = 0
 				xhr = new XMLHttpRequest()
 				xhr.onload = () => {
 					upstreamInjectionScript = xhr.responseText
+					if(++downloads == 2)
+					{
+						finishDownload()
+					}
+				}
+				xhr.onerror = () => {
 					if(++downloads == 2)
 					{
 						finishDownload()
@@ -219,16 +244,27 @@ const updateBypassDefinitions = () => new Promise(callback => {
 						finishDownload()
 					}
 				}
+				xhr2.onerror = () => {
+					if(++downloads == 2)
+					{
+						finishDownload()
+					}
+				}
 				xhr2.open("GET", "https://raw.githubusercontent.com/timmyRS/Universal-Bypass/" + upstreamCommit + "/rules.json", true)
 				xhr2.send()
 			}
+		}
+		xhr.onerror = () => {
+			updateStatus = ""
+			sendToOptions({updateStatus})
+			callback(false)
 		}
 		xhr.open("GET", "https://api.github.com/repos/timmyRS/Universal-Bypass/commits/master", true)
 		xhr.send()
 	}
 	xhr.open("GET", brws.runtime.getURL("injection_script.js"), true)
 	xhr.send()
-}),
+},
 refreshInjectionScript = () => {
 	Object.values(onBeforeRequest_rules).forEach(func => brws.webRequest.onBeforeRequest.removeListener(func))
 	Object.values(onHeadersReceived_rules).forEach(func => brws.webRequest.onHeadersReceived.removeListener(func))
@@ -249,6 +285,12 @@ refreshInjectionScript = () => {
 			}
 		})
 	}
+},
+sendToOptions = data => {
+	if(optionsPort)
+	{
+		optionsPort.postMessage(data)
+	}
 }
 updateBypassDefinitions()
 brws.alarms.create("update-bypass-definitions", {periodInMinutes: 60})
@@ -263,10 +305,6 @@ brws.runtime.onMessage.addListener((req, sender, respond) => {
 	{
 		case "content":
 		respond({enabled, channel, crowdEnabled, injectionScript})
-		break;
-
-		case "options":
-		respond({upstreamCommit, bypassCounter, userScript})
 		break;
 
 		case "open-tab":
@@ -300,8 +338,27 @@ brws.runtime.onMessage.addListener((req, sender, respond) => {
 brws.runtime.onConnect.addListener(port => {
 	switch(port.name)
 	{
-		case "update":
-		updateBypassDefinitions().then(success => port.postMessage({success, upstreamCommit}))
+		case "options":
+		if(optionsTab)
+		{
+			optionsPort.disconnect()
+			brws.tabs.remove(optionsTab)
+		}
+		optionsTab=port.sender.tab.id
+		optionsPort=port
+		port.onDisconnect.addListener(()=>{
+			optionsTab=undefined
+			optionsPort=undefined
+		})
+		port.onMessage.addListener(req=>{
+			switch(req.type)
+			{
+				case "update":
+				updateBypassDefinitions(updateSuccess => port.postMessage({updateSuccess}))
+				break;
+			}
+		})
+		port.postMessage({updateStatus, upstreamCommit, bypassCounter, userScript})
 		break;
 
 		case "crowd-query":

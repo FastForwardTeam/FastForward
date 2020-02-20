@@ -20,11 +20,14 @@
 	"update": {
 		"message": "Check for updates"
 	},
+	"updating": {
+		"message": "Downloading bypass definitions..."
+	},
 	"updateYes": {
-		"message": "Successfully updated bypass definitions."
+		"message": "Successfully downloaded bypass definitions."
 	},
 	"updateNo": {
-		"message": "Bypass definitions are already up-to-date."
+		"message": "Bypass definitions are up-to-date."
 	},
 	"faq": {
 		"message": "Frequently Asked Questions (FAQ)"
