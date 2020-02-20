@@ -484,6 +484,10 @@ const onBeforeRequest_rules = {
 	path_base64: details => getRedirect(atob(details.url.substr(details.url.indexOf("aHR0c")))),
 	path_s_encoded: details => encodedRedirect(details.url.substr(details.url.indexOf("/s/")+3)),
 	path_dl_base64: details => getRedirect(atob(details.url.substr(details.url.indexOf("/dl/")+4))),
+	path_u_id_base64: details => {
+		let data=details.url.substr(details.url.indexOf("/u/")+3)
+		return getRedirect(atob(data.substr(data.indexOf("/")+1)))
+	},
 	query_raw: details => {
 		let url=new URL(details.url)
 		if(url.search)

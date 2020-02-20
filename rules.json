@@ -10,6 +10,9 @@
 		"*://*.k2nblog.com/dl/*",
 		"*://*.filekita.me/page/dl/*"
 	],
+	"path_u_id_base64": [
+		"*://*.shrink-service.it/u/*/*"
+	],
 	"query_raw": [
 		"*://*.anonym.to/?*",
 		"*://*.anonymz.com/?*",
