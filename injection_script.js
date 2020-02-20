@@ -887,7 +887,7 @@ ensureDomLoaded(()=>{
 			$(window).on("focus")
 		})
 	})
-	domainBypass(/spacetica\.com|linkpoi\.in/,()=>ifElement("a.btn.btn-primary[href]",a=>safelyNavigate(a.href)))
+	domainBypass(/spacetica\.com|linkpoi\.(in|cc)/,()=>ifElement("a.btn.btn-primary[href]",a=>safelyNavigate(a.href)))
 	domainBypass(/uiz\.(io|app)/,()=>crowdBypass(()=>{
 		awaitElement("#go-adsredirect",f=>{
 			f.action+="#bypassClipboard="+location.pathname.substr(1)
