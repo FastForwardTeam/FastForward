@@ -767,10 +767,13 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 // SoraLink Crowd Bypass
 let soralink_contribute={}
 brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(enabled&&crowdEnabled)
+	if(enabled)
 	{
 		const arg_index=details.url.indexOf("&soralink_contribute="),url=details.url.substr(0,arg_index)
-		soralink_contribute[url]=details.url.substr(arg_index+21)
+		if(crowdEnabled)
+		{
+			soralink_contribute[url]=details.url.substr(arg_index+21)
+		}
 		return{redirectUrl:url}
 	}
 },{types:["main_frame"],urls:["*://*/?*=*&soralink_contribute=*"]},["blocking"])
