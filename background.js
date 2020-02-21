@@ -521,7 +521,7 @@ const onBeforeRequest_rules = {
 			}
 			url+=(new URL(details.url)).hash
 		}
-		return getRedirect(url)
+		return getRedirect(url,details.url)
 	},
 	param_url_encoded: details => {
 		let url=new URL(details.url)
