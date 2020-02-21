@@ -20,11 +20,14 @@
 	"update": {
 		"message": "Buscar actualizaciones"
 	},
+	"updating": {
+		"message": "Descargando definiciones de evasión..."
+	},
 	"updateYes": {
-		"message": "¡El script de inyección se actualizó correctamente!"
+		"message": "Definiciones de evasión actualizadas correctamente."
 	},
 	"updateNo": {
-		"message": "El script de inyección ya está actualizado."
+		"message": "Las definiciones de evasión están actualizadas."
 	},
 	"faq": {
 		"message": "Preguntas frecuentes"
@@ -45,7 +48,7 @@
 		"message": "Habilitar los bypasses del sitio web."
 	},
 	"optionsNavigationDelay": {
-		"message": "Llévame a mi destino después de % segundo(s). (Use 0 para navegar al instante.)"
+		"message": "Llévame a mi destino después de % segundo(s)."
 	},
 	"optionsTrackerBypass": {
 		"message": "Evita rastreadores usando Apimon.de."
@@ -60,7 +63,7 @@
 		"message": "Dar y tomar los destinos de los acortadores que no se pueden anular."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Abrir los destinos que ya fueron descubiertos en una pestaña nueva después de % segundo(s). (0 = instantáneo)"
+		"message": "Abrir los destinos que ya fueron descubiertos en una pestaña nueva después de % segundo(s)."
 	},
 	"optionsCrowdAutoClose": {
 		"message": "Cerrar la pestaña que contiene el destino descubierto después de % segundo(s) de haberlo visitado."

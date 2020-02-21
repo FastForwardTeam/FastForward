@@ -20,11 +20,14 @@
 	"update": {
 		"message": "Periksa pembaruan"
 	},
+	"updating": {
+		"message": "Mengunduh definisi bypass..."
+	},
 	"updateYes": {
-		"message": "Berhasil memperbarui skrip injeksi!"
+		"message": "Berhasil mengunduh definisi bypass."
 	},
 	"updateNo": {
-		"message": "Skrip injeksinya sudah paling yang terbaru."
+		"message": "Definisi bypassnya sudah paling terbaru."
 	},
 	"faq": {
 		"message": "Pertanyaan yang Sering Diajukan\n(FAQ)"
@@ -45,7 +48,7 @@
 		"message": "Aktifkan bypass website."
 	},
 	"optionsNavigationDelay": {
-		"message": "Arahkan ke halaman tujuan setelah % detik. (Gunakan 0 untuk diarahkan secara langsung.)"
+		"message": "Arahkan ke halaman tujuan setelah % detik."
 	},
 	"optionsTrackerBypass": {
 		"message": "Bypass pelacak menggunakan Apimon.de."
@@ -60,19 +63,19 @@
 		"message": "Memberi dan mendapatkan tujuan dari pemendek link yang tidak dapat dibypass. (Crowd bypass)"
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Buka halaman tujuan crowd bypass di tab baru setelah % detik. (0 = instan.)"
+		"message": "Buka halaman tujuan crowd bypass di tab baru setelah % detik."
 	},
 	"optionsCrowdAutoClose": {
 		"message": "Tutup tab yang memuat halaman tujuan crowd bypass setelah % detik mengunjunginya."
 	},
 	"privacyPolicy": {
-		"message": "Kebijakan Pribadi"
+		"message": "Kebijakan Privasi"
 	},
 	"contributors": {
 		"message": "Kontributor"
 	},
 	"optionsUserscripts": {
-		"message": "Atur Bypass sesuai keinginan"
+		"message": "Kustom Bypass"
 	},
 	"optionsUserscriptsDescription": {
 		"message": "Ini adalah fitur khusus bagi para pengembang untuk membuat skrip sendiri untuk mem-bypass situs. Setelah disempurnakan, dapat diajukan di GitHub untuk ditambahkan ke Universal Bypass, sehingga bypass tersebut tersedia untuk semua orang."

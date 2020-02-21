@@ -20,11 +20,14 @@
 	"update": {
 		"message": "Nach Updates suchen"
 	},
+	"updating": {
+		"message": "Umgehungsdefinitionen werden heruntergeladen..."
+	},
 	"updateYes": {
-		"message": "Umgehungsdefinitionen wurden erfolgreich aktualisiert."
+		"message": "Umgehungsdefinitionen wurden erfolgreich heruntergeladen."
 	},
 	"updateNo": {
-		"message": "Umgehungsdefinitionen sind bereits aktuell."
+		"message": "Umgehungsdefinitionen sind aktuell."
 	},
 	"faq": {
 		"message": "Häufig gestellte Fragen (FAQ)"

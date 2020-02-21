@@ -20,6 +20,9 @@
 	"update": {
 		"message": "Verificar atualizações"
 	},
+	"updating": {
+		"message": "Baixando definições de bypas..."
+	},
 	"updateYes": {
 		"message": "Script de injeção atualizado com sucesso!"
 	},

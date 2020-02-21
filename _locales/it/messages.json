@@ -83,6 +83,15 @@
 	"beforeNavigateDestination": {
 		"message": "La tua destinazione è %"
 	},
+	"beforeNavigateUnsafe": {
+		"message": "Comunque, se tu navighi ora, loro individueranno Universal Bypass."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Non sarai più rilevato in % secondi."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Tu non sarai più individuato in 1 secondo."
+	},
 	"beforeNavigateTimer": {
 		"message": "Verrai reindirizzato automaticamente tra % secondi."
 	},
@@ -129,6 +138,6 @@
 		"message": "Universal Bypass ha impedito la registrazione del tuo IP."
 	},
 	"blockedSubtitle": {
-		"message": "Non vuoi che Universal Bypass impedisca ai malintenzionati di ottenere il tuo IP?"
+		"message": "Non vuoi che Universal Bypass impedisca ai malintenzionati di ottenere il tuo indirizzo IP?"
 	}
 }

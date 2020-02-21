@@ -20,8 +20,11 @@
 	"update": {
 		"message": "Controleren op updates"
 	},
+	"updating": {
+		"message": "Omziel definities downloaden..."
+	},
 	"updateYes": {
-		"message": "Injectie script succesvol bijgewerkt!"
+		"message": "Omzeil definities succesvol gedownload."
 	},
 	"updateNo": {
 		"message": "Het injectiescript is al bijgewerkt."

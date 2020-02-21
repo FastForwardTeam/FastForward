@@ -20,11 +20,14 @@
 	"update": {
 		"message": "Vérifier les mises à jour"
 	},
+	"updating": {
+		"message": "Téléchargement des définitions de contournement en cours..."
+	},
 	"updateYes": {
-		"message": "Mise à jour du script d'injection réussie !"
+		"message": "Les définitions de contournement ont été téléchargées avec succès."
 	},
 	"updateNo": {
-		"message": "Le script d'injection est déjà à jour."
+		"message": "Les définitions de contournement sont à jour."
 	},
 	"faq": {
 		"message": "Foire aux questions (FAQ)"

@@ -1,9 +1,30 @@
 {
+	"appDesc": {
+		"message": "Huwag sayangin ang iyong oras nang may pagsunod. Ang Universal Bypass dinadaya ang nakakainis na mga shortener ng link."
+	},
 	"firstrunTitle": {
 		"message": "Salamat sa iyong pag i-install ng Universal Bypass!"
 	},
 	"firstrunSubtitle": {
 		"message": "Ikaw ay kamangha-manghang!"
+	},
+	"firstrunNoScript": {
+		"message": "Gayunpaman, mukhang gumagamit ka ng NoScript o katulad, na hindi katugma sa Universal Bypass."
+	},
+	"version": {
+		"message": "Bersyon"
+	},
+	"changelog": {
+		"message": "Mga Pagbabago"
+	},
+	"update": {
+		"message": "Suriin ang mga updates"
+	},
+	"updateYes": {
+		"message": "Updated na ang mga bypasses."
+	},
+	"updateNo": {
+		"message": "Bypasses ay updated."
 	},
 	"faq": {
 		"message": "Mga Madalas na Tanong"
@@ -19,6 +40,9 @@
 	},
 	"optionsEnabled": {
 		"message": "Paganahin ang website bypasses."
+	},
+	"optionsNavigationDelay": {
+		"message": "Ipunta mo ako sa destinasyon pagkatapos ng % segundo(s)."
 	},
 	"optionsTrackerBypass": {
 		"message": "I-bypass ang trackers gamit ang Apimon.de.\n"

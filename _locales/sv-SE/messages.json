@@ -20,11 +20,14 @@
 	"update": {
 		"message": "Sök efter uppdateringar"
 	},
+	"updating": {
+		"message": "Laddar ner förbikopplingsdefinitionerna..."
+	},
 	"updateYes": {
-		"message": "Injektionsskriptet är uppdaterat!"
+		"message": "Förbikopplinsdefinitioner är nerladdade."
 	},
 	"updateNo": {
-		"message": "Injektionsskriptet är redan uppdaterat."
+		"message": "Förbikopplingsdefinitioner är uppdaterade."
 	},
 	"faq": {
 		"message": "Vanliga frågor (FAQ)"
@@ -45,7 +48,7 @@
 		"message": "Aktivera förbikopplingar av webbplats."
 	},
 	"optionsNavigationDelay": {
-		"message": "Ta mig till målet efter % sekunder. (Ange 0 för att inaktivera fördröjningen.)"
+		"message": "Ta mig till målet efter % sekund(er)."
 	},
 	"optionsTrackerBypass": {
 		"message": "Förbikopplare som använder Apimon.de."
@@ -60,7 +63,7 @@
 		"message": "Ge och ta målen för icke förbikopplade länkförkortare."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Öppna crowd-sourced mål i en ny flik efter % sekund(er). (0 = omedelbart)"
+		"message": "Öppna crowd-sourced mål i en ny flik efter % sekund(er)."
 	},
 	"optionsCrowdAutoClose": {
 		"message": "Stäng fliken som innehåller crowdsourced-målet efter % sekund(er) efter du besökt den."
