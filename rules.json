@@ -179,7 +179,8 @@
 		"*://*.shrink.world/*",
 		"*://*.mymastah.xyz/*",
 		"*://*.sportif.id/*",
-		"*://*.healthinsider.online/*"
+		"*://*.healthinsider.online/*",
+		"*://*.cararoot.id/*"
 	],
 	"redirect_persist_id_path_1_letter": [
 		"*://*.wadooo.com/g/*",
