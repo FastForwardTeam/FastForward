@@ -338,6 +338,10 @@ for(let key in forced_safelink)
 		value:forced_safelink[key]
 	})
 }
+//Soralink Wordpress Plugin
+ODP(window,"soralink",{
+	get:()=>{}
+})
 //Shorte.st
 transparentProperty("reqwest",r=>(typeof app!="undefined"&&document.querySelector(".skip-add-container .first-img[alt='Shorte.st']"))?a=>{
 	if(a.type==="jsonp")
@@ -586,10 +590,6 @@ domainBypass("zt-protect.com",()=>{
 	{
 		ifElement("a[href] > .showURL",p=>safelyNavigate(p.parentNode.href))
 	}
-})
-//Soralink autoLink JS
-ODP(window,"soralink",{
-	get:()=>{}
 })
 //Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
 domainBypass(/^((www\.)?((njiir|healthykk|linkasm|dxdrive|getwallpapers|sammobile|ydfile)\.com|punchsubs\.net|k2s\.cc|muhammadyoga\.me|u\.to|skiplink\.io|uploadfree\.info))$/,()=>window.setInterval=f=>setInterval(f,1))
