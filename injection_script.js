@@ -33,18 +33,15 @@ unsafelyNavigate=target=>{
 	window.onbeforeunload=null
 	//The background script will intercept the request and redirect to html/before-navigate.html or to the target depending on the user's settings.
 	let url="https://universal-bypass.org/bypassed?target="+encodeURIComponent(target)+"&referer="+encodeURIComponent(referer)
-	if(UNIVERSAL_BYPASS_INTERNAL_VERSION>=5)
+	switch(target)//All values here have been tested using "Take me to destinations after 0 seconds."
 	{
-		switch(target)//All values here have been tested using "Take me to destinations after 0 seconds."
-		{
-			case "https://proxoexploits.com/proxo/continue_two":
-			url+="&safe_in=11"
-			break;
+		case "https://proxoexploits.com/proxo/continue_two":
+		url+="&safe_in=11"
+		break;
 
-			case "https://proxoexploits.com/ProxoKeyKeyLol":
-			url+="&safe_in=23"
-			break;
-		}
+		case "https://proxoexploits.com/ProxoKeyKeyLol":
+		url+="&safe_in=23"
+		break;
 	}
 	location.assign(url)
 },
@@ -166,7 +163,7 @@ crowdPath=p=>{
 	}
 },
 crowdReferer=r=>{
-	if(r&&UNIVERSAL_BYPASS_INTERNAL_VERSION>=3)
+	if(r)
 	{
 		document.documentElement.setAttribute("{{channel.crowd_referer}}",r)
 	}
@@ -222,7 +219,7 @@ contributeAndNavigate=target=>{
 	}
 },
 insertInfoBox=text=>ensureDomLoaded(()=>{
-	if((UNIVERSAL_BYPASS_INTERNAL_VERSION>=4||infoBoxEnabled)&&window.innerWidth>800&window.innerHeight>400)
+	if(window.innerWidth>800&window.innerHeight>400)
 	{
 		const div=document.createElement("div")
 		div.style='z-index:999999;border-radius:10px;padding:28px;position:fixed;right:30px;bottom:30px;background:#eee;color:#111;font-size:21px;box-shadow:#111 0px 5px 40px;max-width:500px;font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;cursor:pointer'
@@ -1456,7 +1453,7 @@ ensureDomLoaded(()=>{
 		}
 		if(i)
 		{
-			if(id&&UNIVERSAL_BYPASS_INTERNAL_VERSION>=3)
+			if(id)
 			{
 				// Referers allow the "Was this not correct?" button at html/crowd-bypassed.html to repeat the process, on some sites it has to be changed for that:
 				switch(domain)
