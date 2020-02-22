@@ -194,6 +194,9 @@ const updateBypassDefinitions = callback => {
 	}
 	let xhr = new XMLHttpRequest()
 	xhr.onload = () => {
+		callback(true)
+		updateStatus = "updating"
+		sendToOptions({updateStatus})
 		upstreamInjectionScript = xhr.responseText
 		xhr = new XMLHttpRequest()
 		xhr.open("GET", brws.runtime.getURL("rules.json"), true)
