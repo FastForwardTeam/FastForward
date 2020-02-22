@@ -505,7 +505,7 @@ const onBeforeRequest_rules = {
 	},
 	param_url_general: details => {
 		let url=details.url.substr(details.url.indexOf("&url=")+5)
-		if(url.substr(0,5)=="aHR0c")
+		if(url.substr(0,5)=="aHR0c"||url.substr(0,7)=="bWFnbmV")
 		{
 			url=atob(url.split("&")[0])
 		}
