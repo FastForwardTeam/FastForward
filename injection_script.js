@@ -1316,6 +1316,12 @@ ensureDomLoaded(()=>{
 		}
 		safelyAssign(a.href)
 	}))
+	domainBypass("cshort.org",()=>{
+		if(typeof x=="string")
+		{
+			safelyNavigate(atob(atob(x)))
+		}
+	})
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
