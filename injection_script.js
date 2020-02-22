@@ -587,6 +587,10 @@ domainBypass("zt-protect.com",()=>{
 		ifElement("a[href] > .showURL",p=>safelyNavigate(p.parentNode.href))
 	}
 })
+//Soralink autoLink JS
+ODP(window,"soralink",{
+	get:()=>{}
+})
 //Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
 domainBypass(/^((www\.)?((njiir|healthykk|linkasm|dxdrive|getwallpapers|sammobile|ydfile)\.com|punchsubs\.net|k2s\.cc|muhammadyoga\.me|u\.to|skiplink\.io|uploadfree\.info))$/,()=>window.setInterval=f=>setInterval(f,1))
 hrefBypass(/firefaucet\.win\/l\/|sfirmware\.com\/downloads-file\//,()=>window.setInterval=f=>setInterval(f,1))
