@@ -593,7 +593,7 @@ domainBypass("zt-protect.com",()=>{
 //Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
 domainBypass(/^((www\.)?((njiir|healthykk|linkasm|dxdrive|getwallpapers|sammobile|ydfile)\.com|punchsubs\.net|k2s\.cc|muhammadyoga\.me|u\.to|skiplink\.io|uploadfree\.info))$/,()=>window.setInterval=f=>setInterval(f,1))
 hrefBypass(/firefaucet\.win\/l\/|sfirmware\.com\/downloads-file\//,()=>window.setInterval=f=>setInterval(f,1))
-domainBypass(/^((www\.)?((racaty|longfiles|filepuma|filehorse|portableapps)\.com|indishare\.org|datei\.to|keisekai\.fun|solvetube\.site))$/,()=>window.setTimeout=f=>setTimeout(f,1))
+domainBypass(/^((www\.)?((racaty|longfiles|filepuma|portableapps)\.com|indishare\.org|datei\.to|keisekai\.fun|solvetube\.site))$/,()=>window.setTimeout=f=>setTimeout(f,1))
 domainBypass("lkc21.net",()=>window.setTimeout=f=>setTimeout(f,100))
 hrefBypass(/emulator\.games\/download\.php/,()=>window.setInterval=f=>setInterval(f,100))
 domainBypass("universal-bypass.org",()=>{
@@ -1308,6 +1308,13 @@ ensureDomLoaded(()=>{
 			wt=0
 		}
 	})
+	domainBypass("filehorse.com",()=>ifElement("a#download_url[href]",a=>{
+		if(typeof timerx=="number")
+		{
+			clearTimeout(timerx)
+		}
+		safelyAssign(a.href)
+	}))
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
