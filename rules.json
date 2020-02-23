@@ -167,7 +167,7 @@
 	"param_dest_encoded": [
 		"*://*.ecleneue.com/pushredirect/?*"
 	],
-	"param_go_encoded": [
+	"param_go_hex": [
 		"*://*.zflas.com/?go=*",
 		"*://*.365myoffice.com/?go=*",
 		"*://*.shiroyasha.me/?go=*"

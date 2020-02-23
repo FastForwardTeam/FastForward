@@ -637,7 +637,7 @@ const onBeforeRequest_rules = {
 			return getRedirect(url.searchParams.get("dest"))
 		}
 	},
-	param_go_encoded: details => {
+	param_go_hex: details => {
 		let url=new URL(details.url)
 		if(url.searchParams.has("go"))
 		{
