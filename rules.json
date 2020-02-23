@@ -167,6 +167,11 @@
 	"param_dest_encoded": [
 		"*://*.ecleneue.com/pushredirect/?*"
 	],
+	"param_go_encoded": [
+		"*://*.zflas.com/?go=*",
+		"*://*.365myoffice.com/?go=*",
+		"*://*.shiroyasha.me/?go=*"
+	],
 	"redirect_persist_id_path": [
 		"*://*.bercara.com/*",
 		"*://*.semawur.com/*",
