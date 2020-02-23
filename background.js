@@ -636,6 +636,18 @@ const onBeforeRequest_rules = {
 		{
 			return getRedirect(url.searchParams.get("dest"))
 		}
+	},
+	param_go_encoded: details => {
+		let url=new URL(details.url)
+		if(url.searchParams.has("go"))
+		{
+			let go=url.searchParams.get("go"),a=[]
+			for(let i=0;i<go.length-1;i+=2)
+			{
+				a.push(parseInt(go.substr(i,2),16))
+			}
+			return getRedirect(String.fromCharCode.apply(String,a))
+		}
 	}
 },
 onHeadersReceived_rules = {
