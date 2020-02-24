@@ -5,14 +5,26 @@ getRedirect=(url,referer,safe_in)=>{
 	{
 		return
 	}
-	let redirectUrl=brws.runtime.getURL("html/before-navigate.html")+"?target="+encodeURIComponent(url)
-	if(referer)
+	let redirectUrl
+	if(firefox&&safe_in===undefined&&(instantNavigation||(referer=="tracker"&&instantNavigationTrackers)))
 	{
-		redirectUrl+="&referer="+referer
+		redirectUrl=(new URL(url)).toString()
+		if(referer&&referer!="tracker")
+		{
+			refererCache[redirectUrl]=referer
+		}
 	}
-	if(safe_in!==undefined)
+	else
 	{
-		redirectUrl+="&safe_in="+safe_in
+		redirectUrl=brws.runtime.getURL("html/before-navigate.html")+"?target="+encodeURIComponent(url)
+		if(referer)
+		{
+			redirectUrl+="&referer="+referer
+		}
+		if(safe_in!==undefined)
+		{
+			redirectUrl+="&safe_in="+safe_in
+		}
 	}
 	countIt()
 	return {redirectUrl}
