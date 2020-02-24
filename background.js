@@ -92,20 +92,6 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 		}
 	}
 })
-brws.storage.local.get(["userscript","bypass_counter"],res=>{
-	if(res)
-	{
-		if(res.userscript)
-		{
-			userScript=res.userscript
-			refreshInjectionScript()
-		}
-		if(res.bypass_counter)
-		{
-			bypassCounter=res.bypass_counter
-		}
-	}
-})
 brws.storage.onChanged.addListener(changes=>{
 	if(changes.disable)
 	{
@@ -295,7 +281,6 @@ sendToOptions = data => {
 		optionsPort.postMessage(data)
 	}
 }
-updateBypassDefinitions()
 brws.alarms.create("update-bypass-definitions", {periodInMinutes: 60})
 brws.alarms.onAlarm.addListener(alert => {
 	console.assert(alert.name == "update-bypass-definitions")
@@ -449,7 +434,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 },{types:["main_frame"],urls:["*://universal-bypass.org/navigate?target=*"]},["blocking"])
 
 let infoSpec=["blocking","requestHeaders"]
-if(!firefox)
+if("EXTRA_HEADERS" in brws.webRequest.OnBeforeSendHeadersOptions)
 {
 	infoSpec.push("extraHeaders")
 }
@@ -702,6 +687,21 @@ onHeadersReceived_rules = {
 		}
 	}
 }
+
+brws.storage.local.get(["userscript","bypass_counter"],res=>{
+	if(res)
+	{
+		if(res.userscript)
+		{
+			userScript=res.userscript
+		}
+		if(res.bypass_counter)
+		{
+			bypassCounter=res.bypass_counter
+		}
+	}
+	updateBypassDefinitions()
+})
 
 // Very Specific Preflight Bypasses
 brws.webRequest.onBeforeRequest.addListener(details=>{
