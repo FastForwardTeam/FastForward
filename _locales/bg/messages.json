@@ -11,6 +11,9 @@
 	"firstrunNoScript": {
 		"message": "Въпреки това изглежда, че използвате NoScript или подобен, с който Universal Bypass не е съвместим."
 	},
+	"updating": {
+		"message": "Изтеглянето на байпас дефиниции..."
+	},
 	"faq": {
 		"message": "Често задавани въпроси (FAQ)"
 	},

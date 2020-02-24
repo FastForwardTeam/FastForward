@@ -1,15 +1,15 @@
 {
 	"appDesc": {
-		"message": "ユニバーサルバイパスは、迷惑な短縮URLを自動的にスキップします。コンプライアンスとあなたの時間を無駄にしません。"
+		"message": "Universal Bypassは、迷惑な短縮URLを自動的にスキップします。コンプライアンスとあなたの時間を無駄にしません。"
 	},
 	"firstrunTitle": {
-		"message": "ユニバーサルバイパスをインストールしていただきありがとうございます!"
+		"message": "Universal Bypassをインストールしていただき、ありがとうございます!"
 	},
 	"firstrunSubtitle": {
-		"message": "素晴らしいです！"
+		"message": "素晴らしいです!"
 	},
 	"firstrunNoScript": {
-		"message": "あなたはNoScriptなどを使用しているようですが、ユニバーサルバイパスとは互換性がありません。"
+		"message": "NoScriptなどを使用しているようですが、Universal Bypassとは互換性がありません。"
 	},
 	"version": {
 		"message": "バージョン"
@@ -20,11 +20,14 @@
 	"update": {
 		"message": "アップデートを確認"
 	},
+	"updating": {
+		"message": "バイパス定義をダウンロードしています..."
+	},
 	"updateYes": {
-		"message": "インジェクションスクリプトは正常にアップデートされました。"
+		"message": "バイパス定義は正常にダウンロードされました。"
 	},
 	"updateNo": {
-		"message": "インジェクションスクリプトはすでに最新です。"
+		"message": "バイパス定義はすでに最新です。"
 	},
 	"faq": {
 		"message": "よくある質問と回答(FAQ)"
@@ -39,13 +42,13 @@
 		"message": "オプション"
 	},
 	"optionsLink": {
-		"message": "Universal Bypassのオプションから変更できます。"
+		"message": "オプションから変更できます。"
 	},
 	"optionsEnabled": {
 		"message": "ウェブサイトのバイパスを有効化する"
 	},
 	"optionsNavigationDelay": {
-		"message": "%秒後に移動する (すぐに移動したい場合は0を入力)"
+		"message": "%秒後にリンク先へ移動する"
 	},
 	"optionsTrackerBypass": {
 		"message": "Apimon.deを使用してトラッカーをバイパスする"
@@ -54,13 +57,13 @@
 		"message": "すぐにトラッカーのリンク先へ移動する"
 	},
 	"optionsBlockIPLoggers": {
-		"message": "バイパスできない場合は、IPロガーをブロックする"
+		"message": "バイパスできない場合はIPロガーをブロックする"
 	},
 	"optionsCrowdBypass": {
-		"message": "バイパスできない短縮urlの行き先を設定する"
+		"message": "バイパスできない短縮URLへ移動したり提供できるようにする (Crowd Bypass)"
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "%秒後に新しいタブでクラウドソーシング先を開く (すぐに開きたい場合は0を入力)"
+		"message": "%秒後に新しいタブでクラウドソーシング先を開く"
 	},
 	"optionsCrowdAutoClose": {
 		"message": "%秒後にクラウドソーシング先を含むタブを閉じる"
@@ -81,7 +84,16 @@
 		"message": "リンク先まであと少しです。"
 	},
 	"beforeNavigateDestination": {
-		"message": "リンク先は %"
+		"message": "リンク先: %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "ただし、すぐに移動すると、サイトはUniversal Bypassを検出してしまいます。"
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "あと%秒で検出されなくなります。"
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "あと1秒で検出されなくなります。"
 	},
 	"beforeNavigateTimer": {
 		"message": "%秒後に自動的にリダイレクトされます。"
@@ -96,13 +108,13 @@
 		"message": "残念ながら、あなたはこのリンクの最初のアクセス者です。しばらくすれば、ほかのUniversal Bypassユーザーが待つ必要はなくなります。"
 	},
 	"crowdDisabled": {
-		"message": "このサイトは、crowd bypassを有効にしているときのみバイパスできます。設定からこのオプションをオンにすることができます。"
+		"message": "このサイトは、Crowd Bypassを有効にしているときのみバイパスできます。設定からこのオプションをオンにすることができます。"
 	},
 	"crowdBypassed": {
-		"message": "あなたは待つ必要はありません！"
+		"message": "もう待つ必要はありません!"
 	},
 	"crowdBypassedInfo": {
-		"message": "他のユニバーサルバイパスユーザーはすでにあなたを待っていて、これが % につながっていると報告しています。"
+		"message": "他のUniversal Bypassユーザーがこのページを訪れたことがあり、%に移動することを報告しています。"
 	},
 	"crowdBypassedTimer": {
 		"message": "%秒後に新しいタブで開きます。"
@@ -120,15 +132,15 @@
 		"message": "キャンセル"
 	},
 	"crowdBypassedIgnore": {
-		"message": "これは間違っていたのですか？"
+		"message": "正しくありませんか?"
 	},
 	"crowdBypassedOptions": {
 		"message": "すぐに、または数秒後に新しいタブで開かれるようにしたいですか?"
 	},
 	"blockedTitle": {
-		"message": "ユニバーサルバイパスにより、IPアドレスがログに記録されなくなりました。"
+		"message": "Universal BypassはあなたのIPアドレスがログに記録されないように阻止しました。"
 	},
 	"blockedSubtitle": {
-		"message": "ユニバーサルバイパスが、悪意のある人からあなたのIPアドレスを保護する機能を停止したいですか？"
+		"message": "Universal Bypassを使って、悪意のある人からIPアドレスが取得されるのを阻止しませんか?"
 	}
 }

@@ -9,7 +9,7 @@
 		"message": "¡Eres increíble!"
 	},
 	"firstrunNoScript": {
-		"message": "No obstante, parece que estés utilizando NoScript o similar, con la que Universal Bypass no es compatible."
+		"message": "No obstante, parece que estás utilizando NoScript o similar, con la que Universal Bypass no es compatible."
 	},
 	"version": {
 		"message": "Versión"
@@ -54,13 +54,13 @@
 		"message": "Evita rastreadores usando Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
-		"message": "Llevarme instantáneamente a los destinos de los rastreadores."
+		"message": "Llévame instantáneamente a los destinos de los rastreadores."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Bloquear registradores de IP si no pueden ser omitidos."
 	},
 	"optionsCrowdBypass": {
-		"message": "Dar y tomar los destinos de los acortadores que no se pueden anular."
+		"message": "Dar y tomar los destinos de los acortadores que no se pueden omitir."
 	},
 	"optionsCrowdAutoOpen": {
 		"message": "Abrir los destinos que ya fueron descubiertos en una pestaña nueva después de % segundo(s)."
@@ -75,7 +75,7 @@
 		"message": "Colaboradores"
 	},
 	"optionsUserscripts": {
-		"message": "Bypasses personalizadas"
+		"message": "Bypasses personalizados"
 	},
 	"optionsUserscriptsDescription": {
 		"message": "Esta es una característica avanzada para que los desarrolladores creen sus propios scripts para evitar sitios. Una vez perfeccionados, se pueden enviar en GitHub para añadirlos a Universal Bypass, de modo que estén disponibles para todos."
@@ -138,9 +138,9 @@
 		"message": "¿Quieres que esto se abra en una pestaña nueva al instante, o en x segundos?"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass evitó que su IP se registrara."
+		"message": "Universal Bypass impidió que tu IP se registrara."
 	},
 	"blockedSubtitle": {
-		"message": "¿No quiere que Universal Bypass impida que los actores malos obtengan su IP?"
+		"message": "¿No quieres que Universal Bypass impida que los actores malos obtengan tu IP?"
 	}
 }

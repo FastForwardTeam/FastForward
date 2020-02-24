@@ -105,7 +105,7 @@
 		"message": "Voulez-vous être redirigé instantanément ou après x secondes ?"
 	},
 	"crowdWait": {
-		"message": "Malheureusement, vous êtes la première personne à visiter sur ce lien, mais après avoir attendu, les autres utilisateurs de Universal Bypass n'auront plus à le faire."
+		"message": "Malheureusement, vous êtes la première personne à visiter ce lien, mais après avoir attendu, les autres utilisateurs de Universal Bypass n'auront plus à le faire."
 	},
 	"crowdDisabled": {
 		"message": "L'URL de destination de ce site Web pourrait être partagée avec d'autres utilisateurs, mais vous avez désactivé cette fonctionnalité dans les options."
