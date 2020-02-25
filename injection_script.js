@@ -827,12 +827,6 @@ ensureDomLoaded(()=>{
 		}
 	})
 	domainBypass(/sub2unlock\.(com|net)/,()=>safelyNavigate(document.getElementById("theGetLink").textContent))
-	domainBypass("haaretz.co.il",()=>{
-		if(location.href.indexOf(".premium")>-1)
-		{
-			safelyAssign(location.href.replace(".premium",""))
-		}
-	})
 	domainBypass("boostme.gg",()=>safelyNavigate(document.querySelector("a[href]#go").href))
 	domainBypass(/(driverays|bioskopgo|01nonton|thetecnostar)\.com|cinema21\.tv/,()=>ifElement("a#link[href]",a=>safelyAssign(a.href)))
 	domainBypass("wikitrik.com",()=>document.querySelector("#download > form[action='/getlink.php'] > input[type='submit'].button").click())
