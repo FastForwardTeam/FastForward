@@ -43,7 +43,8 @@
 		"*://*.sopasti.com/anime.php?*",
 		"*://*.zxro.com/u/*?url=*",
 		"*://*.macdownload.org/redirect/?url=*",
-		"*://*.forek.info/*?url=*"
+		"*://*.forek.info/*?url=*",
+		"*://*.steamcommunity.com/linkfilter/?url=*"
 	],
 	"param_xurl_raw_http": [
 		"*://bluemediafiles.com/*?xurl=*"
