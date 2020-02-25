@@ -1322,6 +1322,12 @@ ensureDomLoaded(()=>{
 			safelyNavigate(atob(atob(x)))
 		}
 	})
+	domainBypass("otewe.net",()=>ifElement("#form-human",f=>f.submit(),()=>{
+		if(typeof createurl=="function")
+		{
+			createurl()
+		}
+	}))
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
