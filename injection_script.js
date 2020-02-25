@@ -1,6 +1,9 @@
-//If you want to add your own bypass, search for "Insertion point"
-const ODP=(t,p,o)=>{try{Object.defineProperty(t,p,o)}catch(e){console.trace("[Universal Bypass] Couldn't define",p)}},
+  //////////////////////////////////////////////////////////////////////
+ // If you want to add your own bypass, search for "Insertion point" //
+//////////////////////////////////////////////////////////////////////
+
 //Copying important functions to avoid interference from other extensions or the page
+const ODP=(t,p,o)=>{try{Object.defineProperty(t,p,o)}catch(e){console.trace("[Universal Bypass] Couldn't define",p)}},
 setTimeout=window.setTimeout,setInterval=window.setInterval,
 transparentProperty=(name,valFunc)=>{
 	let real
