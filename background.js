@@ -268,6 +268,7 @@ const updateBypassDefinitions = callback => {
 },
 refreshInjectionScript = () => {
 	Object.values(onBeforeRequest_rules).forEach(func => brws.webRequest.onBeforeRequest.removeListener(func))
+	Object.values(onBeforeSendHeaders_rules).forEach(func => brws.webRequest.onBeforeSendHeaders.removeListener(func))
 	Object.values(onHeadersReceived_rules).forEach(func => brws.webRequest.onHeadersReceived.removeListener(func))
 	if(enabled)
 	{
@@ -279,6 +280,10 @@ refreshInjectionScript = () => {
 			if(name in onBeforeRequest_rules)
 			{
 				brws.webRequest.onBeforeRequest.addListener(onBeforeRequest_rules[name],{types:["main_frame"],urls:preflightRules[name]},["blocking"])
+			}
+			else if(name in onBeforeSendHeaders_rules)
+			{
+				brws.webRequest.onBeforeSendHeaders.addListener(onBeforeSendHeaders_rules[name],{types:["main_frame"],urls:preflightRules[name]},["blocking","requestHeaders"])
 			}
 			else if(name in onHeadersReceived_rules)
 			{
@@ -645,6 +650,15 @@ const onBeforeRequest_rules = {
 			}
 			return getRedirect(String.fromCharCode.apply(String,a))
 		}
+	}
+},
+onBeforeSendHeaders_rules = {
+	useragent_googlebot: details => {
+		details.requestHeaders.push({
+			name: "User-Agent",
+			value: "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+		})
+		return {requestHeaders: details.requestHeaders}
 	}
 },
 onHeadersReceived_rules = {

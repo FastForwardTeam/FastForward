@@ -174,6 +174,9 @@
 		"*://*.365myoffice.com/?go=*",
 		"*://*.shiroyasha.me/?go=*"
 	],
+	"useragent_googlebot": [
+		"*://*.haaretz.co.il/*"
+	],
 	"redirect_persist_id_path": [
 		"*://*.bercara.com/*",
 		"*://*.semawur.com/*",
