@@ -630,13 +630,6 @@ ensureDomLoaded(()=>{
 			f.submit()
 		}
 	})
-	domainBypass("bluemediafiles.com",()=>{//deprecated: bypassed by background.js after 12.9
-		if(typeof FinishMessage=="string"&&FinishMessage.indexOf("<a href=")>-1)
-		{
-			document.write(FinishMessage)
-			safelyNavigate(document.querySelector("a").href)
-		}
-	})
 	domainBypass("complete2unlock.com",()=>{
 		let bT=setInterval(()=>{
 			let b=document.getElementById("link-success-button"),es=document.querySelectorAll(".unlockpanel")
