@@ -600,7 +600,7 @@ domainBypass("nofil.net",()=>{
 		location.pathname="/get/"+location.pathname.substr(4)
 	}
 })
-domainBypass("uploadfree.info",()=>{
+domainBypass(/uploadfree\.info|fstore\.biz/,()=>{
 	if(location.pathname.substr(0,6)=="/file/")
 	{
 		location.pathname="/mirror/"+location.pathname.substr(6)
