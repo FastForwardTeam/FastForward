@@ -1219,9 +1219,10 @@ ensureDomLoaded(()=>{
 		crowdPath(location.pathname.substr(4))
 		contributeAndNavigate(a.href)
 	},()=>crowdBypass()))
-	domainBypass("boomx5.com",()=>ifElement("#form",f=>{
-		f.action=location.href
-		f.innerHTML='<input type="hidden" name="session_id" value="'+document.querySelector("input[name='session_id']").value+'">'
+	domainBypass("boomx5.com",()=>ifElement("input[value='1']",i=>{
+		i.parentNode.action=location.href
+		i.name="session_back"
+		i.parentNode.submit()
 	}))
 	domainBypass("subsvip.com",()=>{
 		if(typeof link=="function")
