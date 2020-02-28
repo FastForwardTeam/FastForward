@@ -1331,6 +1331,12 @@ ensureDomLoaded(()=>{
 			createurl()
 		}
 	}))
+	domainBypass("vexfile.com",()=>{
+		if(typeof levelF=="function")
+		{
+			levelF()
+		}
+	})
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
