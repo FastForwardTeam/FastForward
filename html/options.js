@@ -328,6 +328,10 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 		{
 			crowd_close_delay=(crowd_close_delay+1)*-1
 		}
+		else if(crowd_close_delay<3)
+		{
+			crowd_close_delay=3
+		}
 		brws.storage.sync.set({crowd_close_delay})
 		crowdCloseDelayLogic()
 	}
@@ -335,9 +339,12 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 	{
 		clearTimeout(crowdCloseDelayInputTimer)
 		crowdCloseDelayInputTimer=setTimeout(()=>{
-			brws.storage.sync.set({
-				crowd_close_delay:crowdCloseDelayInput.value
-			})
+			let crowd_close_delay=parseInt(crowdCloseDelayInput.value)
+			if(crowd_close_delay<3)
+			{
+				crowd_close_delay=3
+			}
+			brws.storage.sync.set({crowd_close_delay})
 		},300)
 	}
 })
