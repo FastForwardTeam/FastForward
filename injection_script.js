@@ -1337,6 +1337,7 @@ ensureDomLoaded(()=>{
 			levelF()
 		}
 	})
+	domainBypass("catcut.net",()=>safelyNavigate(atob((new URL(go_url)).searchParams.get("a"))))
 	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
 	if(bypassed)
 	{
