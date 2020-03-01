@@ -1217,7 +1217,7 @@ ensureDomLoaded(()=>{
 	},()=>crowdBypass()))
 	domainBypass("boomx5.com",()=>ifElement("input[value='1']",i=>{
 		i.parentNode.action=location.href
-		i.name="session_back"
+		i.name="sessionBack"
 		i.parentNode.submit()
 	}))
 	domainBypass("subsvip.com",()=>{
