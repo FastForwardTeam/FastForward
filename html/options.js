@@ -100,11 +100,21 @@ editor.on("change", ()=>{
 	},500)
 })
 
-let port=brws.runtime.connect({name:"options"}),wasUpdating=false
+let port=brws.runtime.connect({name:"options"}),wasUpdating=false,devMode=false
 port.onMessage.addListener(data=>{
 	if("upstreamCommit" in data)
 	{
-		document.getElementById("version").textContent=brws.runtime.getManifest().version+"-"+(data.upstreamCommit?data.upstreamCommit.substr(0,7):"dev")
+		if(data.upstreamCommit)
+		{
+			document.getElementById("version").textContent=brws.runtime.getManifest().version+"-"+data.upstreamCommit.substr(0,7)
+		}
+		else
+		{
+			devMode=true
+			document.querySelector("[data-message='version']").classList.add("uk-hidden")
+			document.getElementById("version").textContent="Development Mode"
+			document.getElementById("dev-alert").classList.remove("uk-hidden")
+		}
 	}
 	if("bypassCounter" in data && data.bypassCounter > 1)
 	{
@@ -127,7 +137,7 @@ port.onMessage.addListener(data=>{
 		editor.resize()
 		editor.clearSelection()
 	}
-	if("updateSuccess" in data)
+	if("updateSuccess" in data&&!devMode)
 	{
 		UIkit.notification({
 			message:brws.i18n.getMessage("updat"+(data.updateSuccess?"ing":"eNo")),
@@ -153,7 +163,7 @@ port.onMessage.addListener(data=>{
 			if(wasUpdating)
 			{
 				UIkit.notification({
-					message:brws.i18n.getMessage("updateYes"),
+					message:devMode?"Successfully reloaded local bypass definitions.":brws.i18n.getMessage("updateYes"),
 					status:"success",
 					timeout:3000
 				})
