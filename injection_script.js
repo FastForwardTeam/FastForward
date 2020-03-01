@@ -1013,7 +1013,7 @@ ensureDomLoaded(()=>{
 	})
 	domainBypass("felanovia.com",()=>ifElement("form",f=>f.submit()))
 	domainBypass("redir.animenine.net",()=>ifElement("a#lanjutkeun[href]",a=>safelyNavigate(a.href)))
-	hrefBypass(/download\.id\/downloadfile\//,()=>{
+	hrefBypass(/download\.id\/thank-you\//,()=>{
 		if(typeof download=="function")
 		{
 			let div=document.createElement("div")
