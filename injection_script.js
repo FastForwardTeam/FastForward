@@ -1230,7 +1230,11 @@ ensureDomLoaded(()=>{
 			link()
 		}
 	})
-	domainBypass(/(shon|likn)\.xyz/,()=>ifElement("form[action*='/redirect/sgo/']",f=>{
+	domainBypass(/(shon|likn)\.xyz|sloomp\.space/,()=>ifElement("form[action*='/redirect/sgo/']",f=>{
+		if(location.pathname.substr(0,4)=="/go/")
+		{
+			crowdPath(location.pathname.substr(4))
+		}
 		fetch(f.action,{
 			method:"POST",
 			headers:{"Content-Type":"application/x-www-form-urlencoded"},
