@@ -1469,6 +1469,11 @@ ensureDomLoaded(()=>{
 			},100)
 		})
 	}
+	domainBypass("securitystickers.info",()=>{})//This domain is used by soliddrive.co who have backend validation before downloading the file
+	if(bypassed)
+	{
+		return
+	}
 	if(document.querySelector("form#landing"))
 	{
 		window.stop()
