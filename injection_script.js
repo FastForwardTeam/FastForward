@@ -600,7 +600,7 @@ domainBypass("zt-protect.com",()=>{
 		ifElement("a[href] > .showURL",p=>safelyNavigate(p.parentNode.href))
 	}
 })
-domainBypass("nofil.net",()=>{
+domainBypass(/(nofil|onnime)\.net/,()=>{
 	if(location.pathname.substr(0,4)=="/dl/")
 	{
 		location.pathname="/get/"+location.pathname.substr(4)
