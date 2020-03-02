@@ -1760,11 +1760,7 @@ ensureDomLoaded(()=>{
 	//Monitor DOM for disturbances for 10 seconds.
 	let dT=setInterval(()=>{
 		//Shorte.st Embed
-		if(document.querySelector(".lay-sh.active-sh"))
-		{
-			let elm=document.querySelectorAll(".lay-sh.active-sh")[0]
-			elm.parentNode.removeChild(elm)
-		}
+		ifElement(".lay-sh.active-sh",elm=>elm.parentNode.removeChild(elm))
 		//AdLinkFly
 		if(typeof app_vars=="object")
 		{
