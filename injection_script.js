@@ -1042,112 +1042,6 @@ ensureDomLoaded(()=>{
 		}
 		awaitElement("a#skip_button[href]",a=>safelyNavigate(a.href))
 	})
-	domainBypass(/pahe\.(in|me)/,()=>document.querySelectorAll("a.shortc-button.small[href*='?id=']").forEach(a=>{
-		let qe=a.previousElementSibling
-		while(qe&&qe.tagName!="B")
-		{
-			qe=qe.previousElementSibling
-		}
-		a.href=a.href.replace("intercelestial","sweetlantern")
-		a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"")
-		let ep=a.parentNode.querySelector("span[style] > b")
-		if(ep!==null)
-		{
-			a.href+=ep.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
-		}
-		a.href+=qe.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.toLowerCase()
-	}))
-	domainBypass("channelmyanmar.org",()=>document.querySelectorAll("a[href^='https://channelmyanmar.org?1c17f28bf0=']").forEach(a=>{
-		if(a.classList.contains("FLMBTN-Btn"))
-		{
-			let qe=a.previousElementSibling
-			while(qe&&qe.tagName!="H2")
-			{
-				qe=qe.previousElementSibling
-			}
-			a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"")+qe.textContent.split(" ").join("").split("(").join("-").split(")").join("-").toLowerCase()+a.textContent.split(" ").join("").split("(").join("").split(")").join("").toLowerCase()
-		}
-		else
-		{
-			a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"")+a.parentNode.firstChild.textContent.toLowerCase().split(" ").join("").split("–").join("")+a.textContent.trim().toLowerCase()
-		}
-	}))
-	domainBypass("ad4msan.com",()=>document.querySelectorAll("a[href^='https://ad4msan.com?9c2a6bf968=']").forEach(a=>{
-		if(a.firstChild.tagName=="IMG")
-		{
-			a.href+="#bypassClipboard="+a.parentNode.textContent.split("|")[0].replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.firstChild.src.split("https://ad4msan.com/")[1].split(".")[0].toLowerCase()
-		}
-		else
-		{
-			a.href+="#bypassClipboard="+a.parentNode.textContent.split("|")[0].replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.split(" ").join("").toLowerCase()
-		}
-	}))
-	domainBypass("oppa.kdramaindo.tv",()=>document.querySelectorAll("a[href^='https://oppa.kdramaindo.tv?38971fecb6=']").forEach(a=>{
-		a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"")+a.parentNode.firstChild.textContent.toLowerCase().replace(/[^a-zA-Z0-9]/g,"")+a.textContent.trim().toLowerCase()
-	}))
-	domainBypass("mkvking.com",()=>document.querySelectorAll("a[href^='https://mkvking.com?c17421bdaf=']").forEach(a=>{
-		a.href+="#bypassClipboard="+a.getAttribute("title").split("Download ").join("").replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
-	}))
-	domainBypass("oploverz.in",()=>document.querySelectorAll("a[href^='https://travellinginfos.com/?id=']").forEach(a=>{
-		let ld=a.closest(".list-download")
-		if(ld)
-		{
-			let qe=ld.previousElementSibling
-			while(qe&&!qe.classList.contains("title-download"))
-			{
-				qe=qe.previousElementSibling
-			}
-			a.href+="#bypassClipboard="+qe.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
-		}
-	}))
-	domainBypass("neonime.org",()=>document.querySelectorAll("a[href^='https://neonime.org?700ef7c050=']").forEach(a=>{
-		a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.parentNode.firstChild.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
-	}))
-	domainBypass("mmsubs.com",()=>document.querySelectorAll("a[href^='https://mmsubs.com?e75fad73d9=']").forEach(a=>{
-		let qe=a.parentNode.previousElementSibling
-		while(qe&&!qe.classList.contains("sorattl"))
-		{
-			qe=qe.previousElementSibling
-		}
-		if(qe!==null)
-		{
-			a.href+="#bypassClipboard="+qe.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.parentNode.previousElementSibling.textContent.toLowerCase()+a.textContent.toLowerCase()
-		}
-	}))
-	domainBypass("bakadame.com",()=>document.querySelectorAll("a[href^='https://bakadame.com?e41b7e5034=']").forEach(a=>{
-		let qe=a.previousElementSibling
-		while(qe&&qe.tagName!="STRONG")
-		{
-			qe=qe.previousElementSibling
-		}
-		if(qe!==null)
-		{
-			a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.closest("div").previousElementSibling.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+qe.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.toLowerCase()
-		}
-		else
-		{
-			a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.closest("ul").previousElementSibling.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.toLowerCase()
-		}
-	}))
-	domainBypass("drivenime.com",()=>document.querySelectorAll("a[href^='https://drivenime.com?a82ad005b1=']").forEach(a=>{
-		let p=a.parentNode,qe=p.previousElementSibling
-		while(qe&&qe.tagName!="H2")
-		{
-			qe=qe.previousElementSibling
-		}
-		a.href+="#bypassClipboard="+p.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
-		if(p.parentNode.classList.contains("post-single-content"))
-		{
-			a.href+=qe.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
-		}
-		else if(p.parentNode.classList.contains("su-spoiler-content"))
-		{
-			a.href+=p.parentNode.previousElementSibling.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
-		}
-	}))
-	domainBypass("katmoviehd.nl",()=>document.querySelectorAll("a[href^='https://katmoviehd.nl?6de4d3b1de=']").forEach(a=>{
-		a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
-	}))
 	hrefBypass(/stayonline\.pro\/l\/(.*)\//,m=>$.post(endpoint,{id:m[1],ref:""},r=>safelyNavigate(r.data.value)))
 	domainBypass("xlink.cc",()=>safelyNavigate(JSON.parse(atob(window.bootstrapData)).linkResponse.link.long_url))
 	domainBypass("1shortlink.com",()=>awaitElement("#redirect-link[data-href]",a=>safelyNavigate(a.getAttribute("data-href"))))
@@ -1410,6 +1304,112 @@ ensureDomLoaded(()=>{
 		}))
 		/*jshint ignore:end*/
 	}
+	domainBypass(/pahe\.(in|me)/,()=>document.querySelectorAll("a.shortc-button.small[href*='?id=']").forEach(a=>{
+		let qe=a.previousElementSibling
+		while(qe&&qe.tagName!="B")
+		{
+			qe=qe.previousElementSibling
+		}
+		a.href=a.href.replace("intercelestial","sweetlantern")
+		a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"")
+		let ep=a.parentNode.querySelector("span[style] > b")
+		if(ep!==null)
+		{
+			a.href+=ep.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
+		}
+		a.href+=qe.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.toLowerCase()
+	}))
+	domainBypass("channelmyanmar.org",()=>document.querySelectorAll("a[href^='https://channelmyanmar.org?1c17f28bf0=']").forEach(a=>{
+		if(a.classList.contains("FLMBTN-Btn"))
+		{
+			let qe=a.previousElementSibling
+			while(qe&&qe.tagName!="H2")
+			{
+				qe=qe.previousElementSibling
+			}
+			a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"")+qe.textContent.split(" ").join("").split("(").join("-").split(")").join("-").toLowerCase()+a.textContent.split(" ").join("").split("(").join("").split(")").join("").toLowerCase()
+		}
+		else
+		{
+			a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"")+a.parentNode.firstChild.textContent.toLowerCase().split(" ").join("").split("–").join("")+a.textContent.trim().toLowerCase()
+		}
+	}))
+	domainBypass("ad4msan.com",()=>document.querySelectorAll("a[href^='https://ad4msan.com?9c2a6bf968=']").forEach(a=>{
+		if(a.firstChild.tagName=="IMG")
+		{
+			a.href+="#bypassClipboard="+a.parentNode.textContent.split("|")[0].replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.firstChild.src.split("https://ad4msan.com/")[1].split(".")[0].toLowerCase()
+		}
+		else
+		{
+			a.href+="#bypassClipboard="+a.parentNode.textContent.split("|")[0].replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.split(" ").join("").toLowerCase()
+		}
+	}))
+	domainBypass("oppa.kdramaindo.tv",()=>document.querySelectorAll("a[href^='https://oppa.kdramaindo.tv?38971fecb6=']").forEach(a=>{
+		a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"")+a.parentNode.firstChild.textContent.toLowerCase().replace(/[^a-zA-Z0-9]/g,"")+a.textContent.trim().toLowerCase()
+	}))
+	domainBypass("mkvking.com",()=>document.querySelectorAll("a[href^='https://mkvking.com?c17421bdaf=']").forEach(a=>{
+		a.href+="#bypassClipboard="+a.getAttribute("title").split("Download ").join("").replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
+	}))
+	domainBypass("oploverz.in",()=>document.querySelectorAll("a[href^='https://travellinginfos.com/?id=']").forEach(a=>{
+		let ld=a.closest(".list-download")
+		if(ld)
+		{
+			let qe=ld.previousElementSibling
+			while(qe&&!qe.classList.contains("title-download"))
+			{
+				qe=qe.previousElementSibling
+			}
+			a.href+="#bypassClipboard="+qe.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
+		}
+	}))
+	domainBypass("neonime.org",()=>document.querySelectorAll("a[href^='https://neonime.org?700ef7c050=']").forEach(a=>{
+		a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.parentNode.firstChild.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
+	}))
+	domainBypass("mmsubs.com",()=>document.querySelectorAll("a[href^='https://mmsubs.com?e75fad73d9=']").forEach(a=>{
+		let qe=a.parentNode.previousElementSibling
+		while(qe&&!qe.classList.contains("sorattl"))
+		{
+			qe=qe.previousElementSibling
+		}
+		if(qe!==null)
+		{
+			a.href+="#bypassClipboard="+qe.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.parentNode.previousElementSibling.textContent.toLowerCase()+a.textContent.toLowerCase()
+		}
+	}))
+	domainBypass("bakadame.com",()=>document.querySelectorAll("a[href^='https://bakadame.com?e41b7e5034=']").forEach(a=>{
+		let qe=a.previousElementSibling
+		while(qe&&qe.tagName!="STRONG")
+		{
+			qe=qe.previousElementSibling
+		}
+		if(qe!==null)
+		{
+			a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.closest("div").previousElementSibling.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+qe.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.toLowerCase()
+		}
+		else
+		{
+			a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.closest("ul").previousElementSibling.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.toLowerCase()
+		}
+	}))
+	domainBypass("drivenime.com",()=>document.querySelectorAll("a[href^='https://drivenime.com?a82ad005b1=']").forEach(a=>{
+		let p=a.parentNode,qe=p.previousElementSibling
+		while(qe&&qe.tagName!="H2")
+		{
+			qe=qe.previousElementSibling
+		}
+		a.href+="#bypassClipboard="+p.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
+		if(p.parentNode.classList.contains("post-single-content"))
+		{
+			a.href+=qe.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
+		}
+		else if(p.parentNode.classList.contains("su-spoiler-content"))
+		{
+			a.href+=p.parentNode.previousElementSibling.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
+		}
+	}))
+	domainBypass("katmoviehd.nl",()=>document.querySelectorAll("a[href^='https://katmoviehd.nl?6de4d3b1de=']").forEach(a=>{
+		a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
+	}))
 	if(document.querySelector(".sorasubmit"))
 	{
 		document.querySelector(".sorasubmit").click()
