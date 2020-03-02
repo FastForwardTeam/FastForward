@@ -177,7 +177,7 @@ crowdReferer=r=>{
 		document.documentElement.setAttribute("{{channel.crowd_referer}}",r)
 	}
 },
-crowdBypass=f=>{
+crowdBypass=(f,a)=>{
 	if(!f)
 	{
 		f=()=>{}
@@ -201,6 +201,10 @@ crowdBypass=f=>{
 				}
 			},20)
 		}
+	}
+	else if(a)
+	{
+		f()
 	}
 	else
 	{
@@ -1529,8 +1533,7 @@ ensureDomLoaded(()=>{
 				crowdReferer(referer)
 			}
 			crowdPath(i)
-			crowdBypass()
-			callback()
+			crowdBypass(callback,true)
 		}
 		else
 		{
