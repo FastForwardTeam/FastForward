@@ -13,7 +13,7 @@ transparentProperty=(name,valFunc)=>{
 	})
 },
 isGoodLink=link=>{
-	if(!link||link.split("#")[0]==location.href.split("#")[0]||link.substr(0,6)=="about:"||link.substr(0,11)=="javascript:")//jshint ignore:line
+	if(typeof link!="string"||link.split("#")[0]==location.href.split("#")[0]||link.substr(0,6)=="about:"||link.substr(0,11)=="javascript:")//jshint ignore:line
 	{
 		return false
 	}
@@ -1862,6 +1862,16 @@ ensureDomLoaded(()=>{
 				}
 			})
 			clearInterval(dT)
+		}
+		if(typeof redirectpage!="undefined"&&typeof CryptoJS!="undefined")
+		{
+			document.querySelectorAll("a[href^='"+redirectpage+"']").forEach(a=>{
+				let url=CryptoJS.AES.decrypt(atob(new URL(a.href).searchParams.get("token")),"391si8WU89ghkDB5").toString(CryptoJS.enc.Utf8)
+				if(isGoodLink(url))
+				{
+					a.href=url
+				}
+			})
 		}
 		//Insertion point for bypasses detecting certain DOM elements which may appear up to 10 seconds after page load. Bypasses here will no longer need to call ensureDOMLoaded.
 	},100)
