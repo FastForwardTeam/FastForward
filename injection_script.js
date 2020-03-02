@@ -1529,8 +1529,7 @@ ensureDomLoaded(()=>{
 				crowdReferer(referer)
 			}
 			crowdPath(i)
-			crowdBypass()
-			callback()
+			crowdBypass(callback)
 		}
 		else
 		{
