@@ -1344,6 +1344,17 @@ ensureDomLoaded(()=>{
 		}
 	})
 	domainBypass("catcut.net",()=>safelyNavigate(atob((new URL(go_url)).searchParams.get("a"))))
+	domainBypass("imgdrive.net",()=>ifElement("#redirect-wait",()=>{
+		$.post(location.href,{
+			cti:1,
+			ref:"-",
+			rc:0,
+			rp:0,
+			bt:0,
+			bw:"gecko",
+			ic:0
+		},()=>location.reload(),"text")
+	}))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDOMLoaded.
 	if(bypassed)
 	{
