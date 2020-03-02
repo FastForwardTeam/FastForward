@@ -5,9 +5,6 @@
 	"firstrunTitle": {
 		"message": "Universal Bypass quraşdırdığınız üçün təşəkkürlər!"
 	},
-	"firstrunSubtitle": {
-		"message": "Mükəmməlsiniz!"
-	},
 	"firstrunNoScript": {
 		"message": "Buna baxmayaraq, Universal Bypass ilə uyğunlaşmayan NoScript və ya oxşarını istifadə edirsiniz."
 	},
@@ -34,9 +31,6 @@
 	},
 	"optionsEnabled": {
 		"message": "Veb saytlarının ötürülməsini fəallaşdır."
-	},
-	"optionsTrackerBypass": {
-		"message": "Apimon.de istifadə edən Bypass izləyiciləri."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Ötürə bilməsə, IP qeydlərini əngəllə."

@@ -5,9 +5,6 @@
 	"firstrunTitle": {
 		"message": "Ďakujeme za inštaláciu Universal Bypass!"
 	},
-	"firstrunSubtitle": {
-		"message": "Si úžasný!"
-	},
 	"firstrunNoScript": {
 		"message": "Vyzerá to ale tak, že používate NoScript alebo podobnú funkciu, ktorá nie je s Universal Bypass kompatibilná."
 	},
@@ -43,9 +40,6 @@
 	},
 	"optionsNavigationDelay": {
 		"message": "Dostaň ma do cieľa za % sek. (Pre okamžitú navigáciu použite 0.)"
-	},
-	"optionsTrackerBypass": {
-		"message": "Obíďte sledovanie pomocou servera Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Okamžite ma dostaňte do cieľa sledovateľov."

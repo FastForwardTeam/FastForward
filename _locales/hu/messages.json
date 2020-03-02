@@ -5,12 +5,6 @@
 	"firstrunTitle": {
 		"message": "Köszönjük, hogy telepítetted a Universal Bypass-t!"
 	},
-	"firstrunSubtitle": {
-		"message": "Csodálatos vagy!"
-	},
-	"optionsTrackerBypass": {
-		"message": "Apimon.de-t használó trackerek kikerülése."
-	},
 	"optionsBlockIPLoggers": {
 		"message": "IP-loggerek blokkolása, ha nem kerülhetők ki."
 	},

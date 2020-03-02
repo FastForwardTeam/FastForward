@@ -5,9 +5,6 @@
 	"firstrunTitle": {
 		"message": "Tak fordi du installerede Universal Bypass!"
 	},
-	"firstrunSubtitle": {
-		"message": "Du er fantastisk!"
-	},
 	"firstrunNoScript": {
 		"message": "Dog ser det ud til, at du benytter f.eks. NoScript, hvilket Universal Bypass ikke understøtter."
 	},
@@ -20,11 +17,14 @@
 	"update": {
 		"message": "Se efter opdateringer"
 	},
+	"updating": {
+		"message": "Downloader omgåelsesdefinitioner..."
+	},
 	"updateYes": {
-		"message": "Injektions-script opdateret!"
+		"message": "Omgåelsesdefinitioner downloadet"
 	},
 	"updateNo": {
-		"message": "Injektionsskriptet er allerede opdateret."
+		"message": "Omgåelsesdefinitioner er opdaterede."
 	},
 	"faq": {
 		"message": "Ofte stilte spørgsmål (FAQ)"
@@ -45,10 +45,10 @@
 		"message": "Aktivér websteds-bypass."
 	},
 	"optionsNavigationDelay": {
-		"message": "Tag mig til destinationer efter % sekunder (benyt 0 for at blive navigeret straks)."
+		"message": "Tag mig til destinationer efter % sekund(er)."
 	},
 	"optionsTrackerBypass": {
-		"message": "Omgå trackers vha. Apimon.de."
+		"message": "Omgåelsessporere (såsom bit.ly og t.co), som benytter Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Bring mig straks til trackers-destinationer."
@@ -60,7 +60,7 @@
 		"message": "Giv og tag destinationerne fra uomgåelige afkortere."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Åbn crowd-sourced destinationer i en ny fane efter % sekund(er) (0 = straks)."
+		"message": "Åbn crowd-sourced destinationer i en ny fane efter % sekund(er)."
 	},
 	"optionsCrowdAutoClose": {
 		"message": "Luk fanen med den crowd-sourced destination efter % sekund(er)s besøg."
@@ -84,13 +84,13 @@
 		"message": "Din destination er %"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "Hvis du imidlertid navigerer videre nu, vil de registrere Universal Bypass."
+		"message": "Navigerer du videre nu, registrerer de Universal Bypass."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "Om % sekunder, vil du ikke længere blive opdaget."
+		"message": "Om % sekunder bliver du ikke længere opdaget."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
-		"message": "Om 1 sekund, vil du ikke længere blive opdaget."
+		"message": "Om 1 sekund bliver du ikke længere opdaget."
 	},
 	"beforeNavigateTimer": {
 		"message": "Du omdirigeres automatisk om % sekunder."

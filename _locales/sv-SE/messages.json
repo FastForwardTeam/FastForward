@@ -5,9 +5,6 @@
 	"firstrunTitle": {
 		"message": "Tack för att du installerat Universal Bypass!"
 	},
-	"firstrunSubtitle": {
-		"message": "Du är fantastisk!"
-	},
 	"firstrunNoScript": {
 		"message": "Det verkar som om du använder NoScript eller något liknande vilket Universal Bypass inte är kompatibel med."
 	},
@@ -33,7 +30,7 @@
 		"message": "Vanliga frågor (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass har redan förbikopplat % webbplaster för dig."
+		"message": "Universal Bypass har redan förbikopplat % webbplatser för dig."
 	},
 	"support": {
 		"message": "Stöd Universal Bypass."
@@ -51,7 +48,7 @@
 		"message": "Ta mig till målet efter % sekund(er)."
 	},
 	"optionsTrackerBypass": {
-		"message": "Förbikopplare som använder Apimon.de."
+		"message": "Gå förbi spårare (så som bit.ly och t.co) som använder sig av Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Ta mig omedelbart till målen av trackers."

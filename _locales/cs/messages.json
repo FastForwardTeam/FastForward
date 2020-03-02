@@ -5,9 +5,6 @@
 	"firstrunTitle": {
 		"message": "Děkujeme za instalaci Universal Bypass!"
 	},
-	"firstrunSubtitle": {
-		"message": "Jste úžasní!"
-	},
 	"firstrunNoScript": {
 		"message": "Niceméně, vypadá že používáte NoScript nebo něco podobného, s kterým Universal Bypass není kompatibilní."
 	},
@@ -22,9 +19,6 @@
 	},
 	"optionsEnabled": {
 		"message": "Povolit obcházení zkracovačů."
-	},
-	"optionsTrackerBypass": {
-		"message": "Blokovat sledovače procházení pomocí Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Okamžitě mě přesuňtě na destinaci sledovačů procházení."

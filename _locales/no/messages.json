@@ -5,9 +5,6 @@
 	"firstrunTitle": {
 		"message": "Takk for at du har installert Universal Bypass!"
 	},
-	"firstrunSubtitle": {
-		"message": "Du er fantastisk!"
-	},
 	"firstrunNoScript": {
 		"message": "Men du ser ut til å bruke NoScript eller noe lignende, som Universal Bypass ikke er kompatibel med."
 	},
@@ -43,9 +40,6 @@
 	},
 	"optionsNavigationDelay": {
 		"message": "Ta meg til destinasjoner etter % sekund(er). (Bruk 0 for å navigere øyeblikkelig.)"
-	},
-	"optionsTrackerBypass": {
-		"message": "Hopp forbi sporere ved hjelp av Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Ta meg til destinasjoner av trackere med en gang."

@@ -5,9 +5,6 @@
 	"firstrunTitle": {
 		"message": "Благодарим ви за инсталирането на Universal Bypass!"
 	},
-	"firstrunSubtitle": {
-		"message": "Ти си невероятен!"
-	},
 	"firstrunNoScript": {
 		"message": "Въпреки това изглежда, че използвате NoScript или подобен, с който Universal Bypass не е съвместим."
 	},
@@ -25,9 +22,6 @@
 	},
 	"optionsEnabled": {
 		"message": "Активирайте заобикалянето на уебсайтовете."
-	},
-	"optionsTrackerBypass": {
-		"message": "Заобиколете тракерите, използвайки Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Незабавно ме отведете до дестинациите на тракерите."

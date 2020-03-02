@@ -5,9 +5,6 @@
 	"firstrunTitle": {
 		"message": "Merci d'avoir installé Universal Bypass !"
 	},
-	"firstrunSubtitle": {
-		"message": "Vous êtes fantastique !"
-	},
 	"firstrunNoScript": {
 		"message": "Cependant, il semble que vous utilisiez le module NoScript ou quelque chose de similaire, avec lequel Universal Bypass n'est pas compatible."
 	},
@@ -51,7 +48,7 @@
 		"message": "M'envoyer les destinations après % seconde(s). (Utilisez le chiffre 0 pour être automatiquement redirigé.)"
 	},
 	"optionsTrackerBypass": {
-		"message": "Contourner les traqueurs en utilisant Apimon.de."
+		"message": "Contourner les traqueurs (comme bit.ly et t.co) en utilisant Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Me rediriger instantanément vers les destinations des traqueurs."

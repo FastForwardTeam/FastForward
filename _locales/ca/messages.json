@@ -5,9 +5,6 @@
 	"firstrunTitle": {
 		"message": "Gràcies per instal·lar Universal Bypass!"
 	},
-	"firstrunSubtitle": {
-		"message": "Ets fantàstic!"
-	},
 	"firstrunNoScript": {
 		"message": "Però, sembla que estàs utilitzant NoScript o similar, amb la qual Universal Bypass no és compatible."
 	},
@@ -22,9 +19,6 @@
 	},
 	"optionsEnabled": {
 		"message": "Activa omissió de pàgines web."
-	},
-	"optionsTrackerBypass": {
-		"message": "Circumval·la rastrejadors utilitzant Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Porta'm instantàniament a les destinacions dels seguidors."

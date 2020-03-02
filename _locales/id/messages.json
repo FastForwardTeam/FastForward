@@ -5,9 +5,6 @@
 	"firstrunTitle": {
 		"message": "Terima kasih anda sudah menginstal Universal Bypass!"
 	},
-	"firstrunSubtitle": {
-		"message": "Anda luar biasa!"
-	},
 	"firstrunNoScript": {
 		"message": "Akan tetapi, anda sepertinya menggunakan ekstensi NoScript atau yang menyerupai itu, karena itu Universal Bypass tidak kompatibel dengannya."
 	},
@@ -51,7 +48,7 @@
 		"message": "Arahkan ke halaman tujuan setelah % detik."
 	},
 	"optionsTrackerBypass": {
-		"message": "Bypass pelacak menggunakan Apimon.de."
+		"message": "Bypass pelacak (seperti bit.ly dan t.co) menggunakan Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Langsung arahkan ke halaman tujuan pelacak."

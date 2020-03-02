@@ -5,8 +5,8 @@
 	"firstrunTitle": {
 		"message": "Täname, et installisid rakenduse Universal Bypass!"
 	},
-	"firstrunSubtitle": {
-		"message": "Sa oled hämmastav!"
+	"firstrunNoScript": {
+		"message": "Siiski tundub, et kasutate Nocripti või midagi sarnast, millega Universal Bypass ei ühildu."
 	},
 	"version": {
 		"message": "Versioon"
@@ -17,6 +17,9 @@
 	"update": {
 		"message": "Uuenduste kontrollimine"
 	},
+	"updating": {
+		"message": "Indekseerimise määratluste laadimine..."
+	},
 	"updateYes": {
 		"message": "Süstimisskripti värskendamine õnnestus!"
 	},
@@ -25,6 +28,9 @@
 	},
 	"faq": {
 		"message": "Korduma Kippuvad Küsimused"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass-i välditud saidid: %."
 	},
 	"support": {
 		"message": "Panustage Universal Bypass-i."
@@ -38,14 +44,17 @@
 	"optionsEnabled": {
 		"message": "Veebisaidi möödasõitude lubamine."
 	},
-	"optionsTrackerBypass": {
-		"message": "Jälgimisvahendite vältimine kasutades Apimon.de."
+	"optionsNavigationDelay": {
+		"message": "Minge sihtkohta % sek pärast."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Viige mind kohe jälitajate sihtkohtadesse."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Blokeerige IP-logerid, kui neist ei saa mööda."
+	},
+	"optionsCrowdBypass": {
+		"message": "Saate saata ja vastu võtta sihtkohti, millest ei saa mööda minna."
 	},
 	"privacyPolicy": {
 		"message": "Privaatsusreeglid"
@@ -56,11 +65,17 @@
 	"optionsUserscripts": {
 		"message": "Kohandatud ümbersõidud"
 	},
+	"optionsUserscriptsDescription": {
+		"message": "See on täiustatud funktsioon, mille abil arendajad saavad luua oma skripte saitide indekseerimiseks. Kui silumine on lõpule jõudnud, saab nad saata GitHubisse, et lisada need Universal Bypassisse, nii et need oleksid kõigile kättesaadavad."
+	},
 	"beforeNavigate": {
 		"message": "Olete peaaegu sihtkohta jõudnud."
 	},
 	"beforeNavigateDestination": {
 		"message": "Sinu sihtkoht on %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "Kui aga nüüd lähete, avastavad nad Universal Bypass-i."
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "Teid ei tuvastata enam % sekundi jooksul."
@@ -73,6 +88,15 @@
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Teid suunatakse automaatselt ümber ühe sekundi jooksul."
+	},
+	"beforeNavigateOptions": {
+		"message": "Kas soovite, et teid suunataks kohe või mõne sekundi pärast?"
+	},
+	"crowdWait": {
+		"message": "Kahjuks olete selle lingi kaudu esimestena kokku puutunud, kuid pärast teie ootust ei pea teised Universal Bypass'i kasutajad enam ootama."
+	},
+	"crowdDisabled": {
+		"message": "Sellest saidist mööda saamiseks rakendatakse kohandatud meetodit, mille olete seadetes keelanud."
 	},
 	"crowdBypassed": {
 		"message": "Võimalik, et ei pea ootama!"

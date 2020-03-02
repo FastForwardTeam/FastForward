@@ -5,9 +5,6 @@
 	"firstrunTitle": {
 		"message": "Dziękujemy za instalacje Uniwersalnego Obejścia!"
 	},
-	"firstrunSubtitle": {
-		"message": "Jesteś niesamowity!"
-	},
 	"firstrunNoScript": {
 		"message": "Wydaje się, że używasz „NoScript” lub czegoś podobnego co powoduje, że Uniwersalne Obejście nie jest kompatybilne."
 	},
@@ -48,7 +45,7 @@
 		"message": "Zabierz mnie do miejsc docelowych po % sekund. (Wpisz 0 aby być zabieranym od razu.))("
 	},
 	"optionsTrackerBypass": {
-		"message": "Omijaj namierzanie, używając Apimon.de."
+		"message": "Omiń trackery (takie jak bit.ly i t.co) za pomocą Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Natychmiast zabieraj mnie do miejsc docelowych."

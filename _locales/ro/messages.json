@@ -5,14 +5,26 @@
 	"firstrunTitle": {
 		"message": "Vă mulțumim că ați instalat Universal Bypass!"
 	},
-	"firstrunSubtitle": {
-		"message": "Ești fantastic(ă)!"
-	},
 	"firstrunNoScript": {
 		"message": "Totuși, se pare că folosești NoScript, care interferează cu Universal Bypass."
 	},
 	"version": {
 		"message": "Versiunea"
+	},
+	"changelog": {
+		"message": "Schimbări"
+	},
+	"update": {
+		"message": "Verifică pentru update-uri"
+	},
+	"updating": {
+		"message": "Instalam definițile de bypass"
+	},
+	"updateYes": {
+		"message": "Instalarea definiților bypass a avut succes"
+	},
+	"updateNo": {
+		"message": "Definițile bypass sunt cele mai noi."
 	},
 	"faq": {
 		"message": "Întrebări populare"
@@ -32,8 +44,8 @@
 	"optionsEnabled": {
 		"message": "Pornește bypassul."
 	},
-	"optionsTrackerBypass": {
-		"message": "Scapă de urmăritori folosind Apimon.de."
+	"optionsNavigationDelay": {
+		"message": "Dute la destinație după % secund(e)"
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Du-mă instant la destinația urmăritorilor."
@@ -44,17 +56,38 @@
 	"optionsCrowdBypass": {
 		"message": "Arată destinațiile scurtăturilor ce nu pot fi păcălite."
 	},
+	"optionsCrowdAutoOpen": {
+		"message": "Deschide destinațile crowd-sourced intr-o altă pagina după % secund(e)"
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Închide pagina care conține destinații crowd-sourced după % secund(e) după vizitare "
+	},
 	"privacyPolicy": {
 		"message": "Politică de confidențialitate"
 	},
+	"contributors": {
+		"message": "Contributori"
+	},
 	"optionsUserscripts": {
 		"message": "Bypassuri personalizate"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Aceasta este o opțiune avansată pentru developeri care vor să creeze propriul lor coduri pentru sărirea site-urilor. Odată perfecționat, ele pot fi trimise pe GitHub unde pot fi adăugate in Universal Bypass, și vor fi disponibile pentru toată lumea."
 	},
 	"beforeNavigate": {
 		"message": "Sunteți aproape de destinație."
 	},
 	"beforeNavigateDestination": {
 		"message": "Mai sunt doar %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "Oricum, dacă navighezi acum, vor detecta Universal Bypass.\n"
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Nu vei mai fi detectat în % secunde"
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Nu vei mai fi detectat în o secundă"
 	},
 	"beforeNavigateTimer": {
 		"message": "Vei fi redirectionat automat in % secunde."
@@ -65,10 +98,43 @@
 	"beforeNavigateOptions": {
 		"message": "Vrei sa fi redirecționat instantaneu sau in x secunde?"
 	},
+	"crowdWait": {
+		"message": "Din păcăte, ești primul care să dea de acest link, dar după ce aștepți, alți utilizatori Universal Bypass nu vor mai trebuiască să aștepte."
+	},
+	"crowdDisabled": {
+		"message": "Acest site a fost pasat de alți oameni, această opțiune a fost dezactivată în setări"
+	},
+	"crowdBypassed": {
+		"message": "Sar putea sa nu aștepți!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Alți utilizatori Universal Bypass au așteptat deja și a fost raportat că duce la %"
+	},
 	"crowdBypassedTimer": {
 		"message": "Aceasta va fi deschisă într-o nouă fila in % secunde."
 	},
+	"crowdBypassedTimerSingular": {
+		"message": "Aceasta va fi deschisă în altă pagina în o secundă."
+	},
+	"crowdCloseTimer": {
+		"message": "Această pagină va fi închisă în % secunde."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Această pagină va fi închisă într-o secundă."
+	},
+	"cancel": {
+		"message": "Anulează."
+	},
 	"crowdBypassedIgnore": {
 		"message": "Asta nu a fost corect?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Vrei ca această pagină să fie deschisă instant sau în x secunde?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass a prevenit IP-ul tău din a fi înregistrat"
+	},
+	"blockedSubtitle": {
+		"message": "Nu vrei Universal Bypass să prevină actorii răi din ați lua IP-ul"
 	}
 }

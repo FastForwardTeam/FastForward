@@ -5,9 +5,6 @@
 	"firstrunTitle": {
 		"message": "Matur sembah nuwun kangge panjenengan sing sampun nginstal Universal Bypass!"
 	},
-	"firstrunSubtitle": {
-		"message": "Panjenengan pancen sae tenan!"
-	},
 	"firstrunNoScript": {
 		"message": "Nanging, kados'e panjenengan ngagem ekstensi NoScript utawi sing meh sami, mulane Universal Bypass mboten kompatibel kalih niku."
 	},
@@ -51,7 +48,7 @@
 		"message": "Arahne menyang tujuan sakwise % detik. "
 	},
 	"optionsTrackerBypass": {
-		"message": "Bypass pelacak ngangge Apimon.de."
+		"message": "Bypass pelacak (kados'e bit.ly lan t.co) ngagem Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Langsung arahne menyang tujuan pelacak."

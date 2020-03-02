@@ -5,9 +5,6 @@
 	"firstrunTitle": {
 		"message": "Спасибо за установку Universal Bypass!"
 	},
-	"firstrunSubtitle": {
-		"message": "Вы восхитительны!"
-	},
 	"firstrunNoScript": {
 		"message": "Тем не менее, похоже, что Вы используете NoScript или что-то подобное, с чем Universal Bypass несовместим."
 	},
@@ -49,9 +46,6 @@
 	},
 	"optionsNavigationDelay": {
 		"message": "Переходить по адресу назначения через % сек."
-	},
-	"optionsTrackerBypass": {
-		"message": "Обходить средства слежки, используя Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Сразу переходить по адресу средств слежки."

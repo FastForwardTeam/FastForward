@@ -5,9 +5,6 @@
 	"firstrunTitle": {
 		"message": ".با تشکر برای نصب میان بر جهانی"
 	},
-	"firstrunSubtitle": {
-		"message": "!تو فوق العاده هستی"
-	},
 	"firstrunNoScript": {
 		"message": ".به نظر می رسد شما از نو اسکریپت یا مشابه آن استفاده می کنید که با میان بر جهانی سازگار نیست"
 	},
@@ -19,9 +16,6 @@
 	},
 	"optionsEnabled": {
 		"message": ".میان بر های وب سایت را فعال سازید"
-	},
-	"optionsTrackerBypass": {
-		"message": " Apimon.de ردیاب ها را میان بر بزن با استفاده از"
 	},
 	"optionsBlockIPLoggers": {
 		"message": ".آی پی ورودگر ها که قابل به رد شدن نیستند را مسدود کن"

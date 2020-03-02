@@ -5,9 +5,6 @@
 	"firstrunTitle": {
 		"message": "شكرًا لتثبيتك المتجاوز الشامل!"
 	},
-	"firstrunSubtitle": {
-		"message": "أنت رائع!"
-	},
 	"firstrunNoScript": {
 		"message": "للاسف يبدو أنك تستخدم NoScript أو احد الاضافات المماثلة التي تكون غير متوافقة مع المتجاوز الشامل."
 	},
@@ -51,7 +48,7 @@
 		"message": "خذنى للوجهة بعد % ثوان. (استخدم 0 للذهاب مباشرة.)"
 	},
 	"optionsTrackerBypass": {
-		"message": "تجاوز المتتبعين بإستخدام Apimon.de."
+		"message": "تجاوز المتتبعات (مثل bit.ly و t.co) بإستخدام Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "قم بنقلي إلى الواجهات تلقائيًا."

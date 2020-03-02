@@ -5,9 +5,6 @@
 	"firstrunTitle": {
 		"message": "Go raibh maith agat chun Universal Bypass a shuiteáil!"
 	},
-	"firstrunSubtitle": {
-		"message": "Tá tú iontach!"
-	},
 	"firstrunNoScript": {
 		"message": "Ach, Tá tú ag usaíd NoScript ná rúd againn éile agus ní feidir le Universal Bypass in an obair lé sin."
 	},
@@ -28,9 +25,6 @@
 	},
 	"optionsNavigationDelay": {
 		"message": "Tuair me go cinn scríbe tar éis% an dara ceann. (Bain úsáid as 0 le nascleanúint a dhéanamh láithreach.)"
-	},
-	"optionsTrackerBypass": {
-		"message": "Lorgairí sheachbhóthar ag baint úsáide as Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Tóg mé chuig ceann scríbe na lorgairí láithreach."

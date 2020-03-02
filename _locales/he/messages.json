@@ -5,9 +5,6 @@
 	"firstrunTitle": {
 		"message": "תודה לך על כך שהתקנת את Universal Bypass!"
 	},
-	"firstrunSubtitle": {
-		"message": "אתה תותח!"
-	},
 	"firstrunNoScript": {
 		"message": "ככול הנראה אתה עושה שימוש ב-NoScript ודומיו, מה שלא מאפשר את פעולת Universal Bypass."
 	},
@@ -37,9 +34,6 @@
 	},
 	"optionsNavigationDelay": {
 		"message": "קח אותי ליעד אחרי % שני(ות). (השתמש ב0 על מנת לנווט במיידי)"
-	},
-	"optionsTrackerBypass": {
-		"message": "הפעל מעקף על ידי Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "העבר אותי למקור אוטומטית."

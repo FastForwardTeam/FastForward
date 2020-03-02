@@ -5,9 +5,6 @@
 	"firstrunTitle": {
 		"message": "Universal Bypassをインストールしていただき、ありがとうございます!"
 	},
-	"firstrunSubtitle": {
-		"message": "素晴らしいです!"
-	},
 	"firstrunNoScript": {
 		"message": "NoScriptなどを使用しているようですが、Universal Bypassとは互換性がありません。"
 	},
@@ -51,7 +48,7 @@
 		"message": "%秒後にリンク先へ移動する"
 	},
 	"optionsTrackerBypass": {
-		"message": "Apimon.deを使用してトラッカーをバイパスする"
+		"message": "Apimon.deを使ってトラッカー (bit.ly や t.coなど) をバイパスする"
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "すぐにトラッカーのリンク先へ移動する"

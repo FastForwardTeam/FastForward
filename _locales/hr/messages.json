@@ -5,9 +5,6 @@
 	"firstrunTitle": {
 		"message": "Hvala na instaliranju Universal Bypass!"
 	},
-	"firstrunSubtitle": {
-		"message": "Ti si nevjerojatan!"
-	},
 	"firstrunNoScript": {
 		"message": "Međutim, čini se da koristiš NoScript ili slično, sa čime Universal Bypass nije kompatibilan."
 	},
@@ -40,9 +37,6 @@
 	},
 	"optionsNavigationDelay": {
 		"message": "Odvedi me do odredišta nakon % sekundi. (Koristi 0 za ptebacivanje odmah.)"
-	},
-	"optionsTrackerBypass": {
-		"message": "Zaobiđi traker koristeći Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Odmah me odvedi na odredišta trakera."

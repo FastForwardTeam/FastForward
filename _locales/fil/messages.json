@@ -5,9 +5,6 @@
 	"firstrunTitle": {
 		"message": "Salamat sa iyong pag i-install ng Universal Bypass!"
 	},
-	"firstrunSubtitle": {
-		"message": "Ikaw ay kamangha-manghang!"
-	},
 	"firstrunNoScript": {
 		"message": "Gayunpaman, mukhang gumagamit ka ng NoScript o katulad, na hindi katugma sa Universal Bypass."
 	},
@@ -43,9 +40,6 @@
 	},
 	"optionsNavigationDelay": {
 		"message": "Ipunta mo ako sa destinasyon pagkatapos ng % segundo(s)."
-	},
-	"optionsTrackerBypass": {
-		"message": "I-bypass ang trackers gamit ang Apimon.de.\n"
 	},
 	"privacyPolicy": {
 		"message": "Patakaran sa Pagkapribado"

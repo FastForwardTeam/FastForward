@@ -5,9 +5,6 @@
 	"firstrunTitle": {
 		"message": "यूनिवर्सल बाईपास इनस्टॉल करने के लिए आपका धन्यवाद!"
 	},
-	"firstrunSubtitle": {
-		"message": "बहुत अच्छे!"
-	},
 	"firstrunNoScript": {
 		"message": "हालाँकि, आप नोस्क्रिप्ट या इसी की तरह कुछ उपयोग करते दिख रहे हैं, जिसके साथ यूनिवर्सल बाईपास काम नहीं कर सकता।"
 	},
@@ -22,9 +19,6 @@
 	},
 	"optionsEnabled": {
 		"message": "वेबसाइट बाइपास को चालू करें ।"
-	},
-	"optionsTrackerBypass": {
-		"message": "Apimon.de उपयोग करके ट्रैकर्स को बाईपास करे"
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "बिना रुके ट्रैकर्स को बाईपास करें"

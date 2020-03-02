@@ -5,9 +5,6 @@
 	"firstrunTitle": {
 		"message": "Universal Bypass를 설치해 주셔서 감사합니다!"
 	},
-	"firstrunSubtitle": {
-		"message": "당신은 멋쟁이에요!"
-	},
 	"firstrunNoScript": {
 		"message": "흠, NoScript나 그와 비슷한 걸 쓰는 것 같지만, Universal Bypass는 그런 것들과 호환되지 않습니다."
 	},
@@ -46,9 +43,6 @@
 	},
 	"optionsNavigationDelay": {
 		"message": "목적지로 %초 뒤에 이동하기 (0을 쓰면 즉시 이동)"
-	},
-	"optionsTrackerBypass": {
-		"message": "Apimon.de 로 추적 우회하기."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "즉시 추적기의 목적지로 보내기"

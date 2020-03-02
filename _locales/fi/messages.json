@@ -5,9 +5,6 @@
 	"firstrunTitle": {
 		"message": "Kiitos kun asensit Universal Bypassin!"
 	},
-	"firstrunSubtitle": {
-		"message": "Olet hämmästtyvä!"
-	},
 	"firstrunNoScript": {
 		"message": "Vaikuttaa kuitenkin siltä, että käytät NoScriptiä tai vastaavaa, jonka kanssa Universal Bypass ei ole yhteensopiva."
 	},

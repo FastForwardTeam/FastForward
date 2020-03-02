@@ -5,9 +5,6 @@
 	"firstrunTitle": {
 		"message": "感謝您安裝 Universal Bypass！"
 	},
-	"firstrunSubtitle": {
-		"message": "你實在是太棒了！"
-	},
 	"firstrunNoScript": {
 		"message": "然而，您似乎安裝了 NoScript 或類似的插件，導致與 Universal Bypass 造成衝突。"
 	},
@@ -43,9 +40,6 @@
 	},
 	"optionsNavigationDelay": {
 		"message": "在%秒後轉移到目標連結。 (輸入0可以瞬間轉移)"
-	},
-	"optionsTrackerBypass": {
-		"message": "利用 Apimon.de 繞過隱私追蹤器。"
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "跳過追蹤紀錄器，直接帶我到目的地。"

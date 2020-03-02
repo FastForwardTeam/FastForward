@@ -1,0 +1,35 @@
+{
+	"version": {
+		"message": "பதிப்பு"
+	},
+	"changelog": {
+		"message": "மாற்றங்கள்"
+	},
+	"update": {
+		"message": "புதுப்பிப்புகளைச் சரிபார்க்கவும்"
+	},
+	"faq": {
+		"message": "அடிக்கடி கேட்கப்படும் கேள்விகள் (FAQ)"
+	},
+	"options": {
+		"message": "விருப்பங்கள்"
+	},
+	"privacyPolicy": {
+		"message": "தனியுரிமை கொள்கை"
+	},
+	"contributors": {
+		"message": "பங்களிப்பாளர்கள்"
+	},
+	"crowdCloseTimer": {
+		"message": "இந்தத் தாவல் % நிமிடத்திற்குள் மூடப்படும்."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "இந்தத் தாவல் 1 நிமிடத்திற்குள் மூடப்படும்."
+	},
+	"cancel": {
+		"message": "இரத்து."
+	},
+	"crowdBypassedIgnore": {
+		"message": "இது சரி இல்லையா?"
+	}
+}

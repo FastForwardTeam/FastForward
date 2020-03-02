@@ -5,9 +5,6 @@
 	"firstrunTitle": {
 		"message": "Cảm ơn bạn đã cài đặt Universal Bypass!"
 	},
-	"firstrunSubtitle": {
-		"message": "Bạn thật tuyệt vời!"
-	},
 	"firstrunNoScript": {
 		"message": "Tuy nhiên, bạn dường như sử dụng NoScript hoặc tương tự, mà Universal Bypass không tương thích."
 	},
@@ -19,6 +16,9 @@
 	},
 	"update": {
 		"message": "Kiểm tra cập nhật"
+	},
+	"updating": {
+		"message": "Đang tải xuống các định nghĩa đoạn mã..."
 	},
 	"updateYes": {
 		"message": "Đã cập nhật đoạn mã ảnh hưởng!"
@@ -33,7 +33,7 @@
 		"message": "Universal Bypass đã bỏ qua % trang cho bạn."
 	},
 	"support": {
-		"message": "Giúp đỡ Universal Bypass"
+		"message": "Giúp đỡ Universal Bypass."
 	},
 	"options": {
 		"message": "Tùy chọn"
@@ -48,7 +48,7 @@
 		"message": "Đưa tôi đến đích sau % giây. (Sử dụng 0 để được chuyển hướng ngay lập tức.)"
 	},
 	"optionsTrackerBypass": {
-		"message": "Bỏ qua các mã theo dõi bằng Apimon.de."
+		"message": "Bỏ qua trình theo dõi (như bit.ly và t.co) bằng Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Lập tức đưa tôi đến đích của các mã theo dõi."
@@ -126,7 +126,7 @@
 		"message": "Tab này sẽ đóng lại sau 1 giây."
 	},
 	"cancel": {
-		"message": "Huỷ bỏ"
+		"message": "Huỷ bỏ."
 	},
 	"crowdBypassedIgnore": {
 		"message": "Điều này chưa chính xác ư?"

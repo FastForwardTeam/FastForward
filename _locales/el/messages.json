@@ -5,9 +5,6 @@
 	"firstrunTitle": {
 		"message": "Σε ευχαριστούμε για την εγκατάσταση του Universal Bypass!"
 	},
-	"firstrunSubtitle": {
-		"message": "Είσαι καταπληκτικός/ή!"
-	},
 	"firstrunNoScript": {
 		"message": "Ωστόσο, φαίνεται να χρησιμοποιείς NoScript ή παρόμοιο, με τα οποία το Universal Bypass δεν είναι συμβατό."
 	},
@@ -46,9 +43,6 @@
 	},
 	"optionsNavigationDelay": {
 		"message": "Πήγαινε με στον προορισμό μετά από % δευτερολεπτό/α. (πάτα 0 για να μεταφερθείς κατευθείαν)"
-	},
-	"optionsTrackerBypass": {
-		"message": "Παράκαμψη trackers χρησιμοποιώντας το Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Πήγαινε με αμέσως στους προορισμούς των trackers."
