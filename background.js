@@ -192,9 +192,10 @@ const updateBypassDefinitions = callback => {
 	}
 	let xhr = new XMLHttpRequest()
 	xhr.onload = () => {
-		callback(true)
 		updateStatus = "updating"
-		sendToOptions({updateStatus})
+		upstreamCommit = ""
+		sendToOptions({upstreamCommit, updateStatus})
+		callback(true)
 		upstreamInjectionScript = xhr.responseText
 		xhr = new XMLHttpRequest()
 		xhr.open("GET", brws.runtime.getURL("rules.json"), true)
@@ -216,9 +217,13 @@ const updateBypassDefinitions = callback => {
 			}
 			else
 			{
-				callback(true)
 				updateStatus = "updating"
+				if(upstreamCommit == "")
+				{
+					sendToOptions({upstreamCommit: latestCommit})
+				}
 				sendToOptions({updateStatus})
+				callback(true)
 				upstreamCommit = latestCommit
 				let downloads = 0
 				xhr = new XMLHttpRequest()

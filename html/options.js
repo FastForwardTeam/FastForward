@@ -106,13 +106,16 @@ port.onMessage.addListener(data=>{
 	{
 		if(data.upstreamCommit)
 		{
+			devMode=false
 			document.getElementById("version").textContent=brws.runtime.getManifest().version+"-"+data.upstreamCommit.substr(0,7)
+			document.querySelector("[data-message='version']").classList.remove("uk-hidden")
+			document.getElementById("dev-alert").classList.add("uk-hidden")
 		}
 		else
 		{
 			devMode=true
-			document.querySelector("[data-message='version']").classList.add("uk-hidden")
 			document.getElementById("version").textContent="Development Mode"
+			document.querySelector("[data-message='version']").classList.add("uk-hidden")
 			document.getElementById("dev-alert").classList.remove("uk-hidden")
 		}
 	}
@@ -163,7 +166,7 @@ port.onMessage.addListener(data=>{
 			if(wasUpdating)
 			{
 				UIkit.notification({
-					message:devMode?"Successfully reloaded local bypass definitions.":brws.i18n.getMessage("updateYes"),
+					message:devMode?"Successfully loaded local bypass definitions.":brws.i18n.getMessage("updateYes"),
 					status:"success",
 					timeout:3000
 				})
