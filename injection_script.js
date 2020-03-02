@@ -82,6 +82,12 @@ finish=()=>{
 	bypassed=true
 	document.documentElement.setAttribute("{{channel.stop_watching}}","")
 },
+countIt=()=>{
+	if(UNIVERSAL_BYPASS_INTERNAL_VERSION>=6)
+	{
+		document.documentElement.setAttribute("{{channel.count_it}}","")
+	}
+},
 domainBypass=(domain,f)=>{
 	if(bypassed)
 	{
@@ -1870,6 +1876,7 @@ ensureDomLoaded(()=>{
 				if(isGoodLink(url))
 				{
 					a.href=url
+					a.onclick=countIt
 				}
 			})
 		}

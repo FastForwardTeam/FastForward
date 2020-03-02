@@ -30,6 +30,11 @@ if(document instanceof HTMLDocument)
 				document.documentElement.removeAttribute(channel.stop_watching)
 				observer.disconnect()
 			}
+			else if(document.documentElement.hasAttribute(channel.count_it))
+			{
+				document.documentElement.removeAttribute(channel.count_it)
+				brws.runtime.sendMessage({type:"count-it"})
+			}
 			else if(document.documentElement.hasAttribute(channel.crowd_referer))
 			{
 				referer=document.documentElement.getAttribute(channel.crowd_referer)
