@@ -1,6 +1,6 @@
-  //////////////////////////////////////////////////////////////////////
- // If you want to add your own bypass, search for "Insertion point" //
-//////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////////////////////
+ // If you want to add your own bypass, add it above the relevant "Insertion point" comment //
+/////////////////////////////////////////////////////////////////////////////////////////////
 
 //Copying important functions to avoid interference from other extensions or the page
 const ODP=(t,p,o)=>{try{Object.defineProperty(t,p,o)}catch(e){console.trace("[Universal Bypass] Couldn't define",p)}},
@@ -602,7 +602,7 @@ domainBypass(/uploadfree\.info|fstore\.biz/,()=>{
 		location.pathname="/mirror/"+location.pathname.substr(6)
 	}
 })
-//Insertion point 1 — insert bypasses running before the DOM is loaded above this comment
+//Insertion point for bypasses running before the DOM is loaded.
 domainBypass(/^((www\.)?((njiir|healthykk|linkasm|dxdrive|getwallpapers|sammobile|ydfile)\.com|punchsubs\.net|k2s\.cc|muhammadyoga\.me|u\.to|skiplink\.io))$/,()=>window.setInterval=f=>setInterval(f,1))
 hrefBypass(/firefaucet\.win\/l\/|sfirmware\.com\/downloads-file\//,()=>window.setInterval=f=>setInterval(f,1))
 domainBypass(/^((www\.)?((racaty|longfiles|filepuma|portableapps)\.com|indishare\.org|datei\.to|keisekai\.fun|solvetube\.site))$/,()=>window.setTimeout=f=>setTimeout(f,1))
@@ -1338,7 +1338,7 @@ ensureDomLoaded(()=>{
 		}
 	})
 	domainBypass("catcut.net",()=>safelyNavigate(atob((new URL(go_url)).searchParams.get("a"))))
-	//Insertion point 2 — insert bypasses running after the DOM is loaded above this comment
+	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDOMLoaded.
 	if(bypassed)
 	{
 		return
@@ -1686,6 +1686,7 @@ ensureDomLoaded(()=>{
 		safelyNavigate(i.value)
 		finish()
 	},()=>domainBypass("seputarinfomenarik.com",()=>ifElement("a#hapus",a=>safelyAssign(a.href))))
+	//Insertion point for bypasses detecting certain DOM elements. Bypasses here will no longer need to call ensureDOMLoaded.
 	let t=document.querySelector("title")
 	if(!bypassed&&t)
 	{
@@ -1752,6 +1753,8 @@ ensureDomLoaded(()=>{
 					safelyNavigate(b.href)
 				}
 			})
+
+			//Insertion point for bypasses running for a specific site <title>. Please make it fit the switch structure. Bypasses here will no longer need to call ensureDOMLoaded.
 		}
 	}
 	//Monitor DOM for disturbances for 10 seconds.
@@ -1864,6 +1867,7 @@ ensureDomLoaded(()=>{
 			})
 			clearInterval(dT)
 		}
+		//Insertion point for bypasses detecting certain DOM elements which may appear up to 10 seconds after page load. Bypasses here will no longer need to call ensureDOMLoaded.
 	},100)
 	setTimeout(()=>clearInterval(dT),10000)
 })
