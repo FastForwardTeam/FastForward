@@ -785,6 +785,21 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	}
 },{types:["main_frame"],urls:["*://*.surfsees.com/?*"]},["blocking"])
 
+brws.webRequest.onHeadersReceived.addListener(details=>{
+	if(enabled)
+	{
+		let url=new URL(details.url)
+		for(let i in details.responseHeaders)
+		{
+			let header=details.responseHeaders[i]
+			if(header.name.toLowerCase()=="location"&&header.value.substr(0,30)=="https://h-gen.xyz/redirect?id=")
+			{
+				return {redirectUrl:brws.runtime.getURL("html/before-navigate.html")+"?target="+encodeURIComponent(header.value)+"&referer="+details.url+"&safe_in=90"}
+			}
+		}
+	}
+},{types:["main_frame"],urls:["*://*.tinyurl.com/*"]},["blocking","responseHeaders"])
+
 // Ouo.io/press & lnk2.cc Crowd Bypass
 brws.webRequest.onHeadersReceived.addListener(details=>{
 	if(enabled&&crowdEnabled)
