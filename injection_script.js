@@ -606,14 +606,8 @@ domainBypass(/(nofil|onnime)\.net/,()=>{
 		location.pathname="/get/"+location.pathname.substr(4)
 	}
 })
-domainBypass(/uploadfree\.info|fstore\.biz/,()=>{
-	if(location.pathname.substr(0,6)=="/file/")
-	{
-		location.pathname="/mirror/"+location.pathname.substr(6)
-	}
-})
 //Insertion point for bypasses running before the DOM is loaded.
-domainBypass(/^((www\.)?((njiir|healthykk|linkasm|dxdrive|getwallpapers|sammobile|ydfile)\.com|punchsubs\.net|k2s\.cc|muhammadyoga\.me|u\.to|skiplink\.io))$/,()=>window.setInterval=f=>setInterval(f,1))
+domainBypass(/^((www\.)?((njiir|healthykk|linkasm|dxdrive|getwallpapers|sammobile|ydfile)\.com|punchsubs\.net|k2s\.cc|muhammadyoga\.me|u\.to|skiplink\.io|uploadfree\.info|fstore\.biz))$/,()=>window.setInterval=f=>setInterval(f,1))
 hrefBypass(/firefaucet\.win\/l\/|sfirmware\.com\/downloads-file\//,()=>window.setInterval=f=>setInterval(f,1))
 domainBypass(/^((www\.)?((racaty|longfiles|filepuma|portableapps)\.com|indishare\.org|datei\.to|keisekai\.fun|solvetube\.site))$/,()=>window.setTimeout=f=>setTimeout(f,1))
 domainBypass("lkc21.net",()=>window.setTimeout=f=>setTimeout(f,100))
