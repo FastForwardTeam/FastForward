@@ -45,7 +45,8 @@
 		"*://*.macdownload.org/redirect/?url=*",
 		"*://*.forek.info/*?url=*",
 		"*://*.steamcommunity.com/linkfilter/?url=*",
-		"*://*.creditcable.info/*/*?*"
+		"*://*.creditcable.info/*/*?*",
+		"*://*.adfoc.us/serve/sitelinks/?*"
 	],
 	"param_xurl_raw_http": [
 		"*://bluemediafiles.com/*?xurl=*"
