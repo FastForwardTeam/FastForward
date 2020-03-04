@@ -634,7 +634,7 @@ ensureDomLoaded(()=>{
 		document.querySelectorAll("form[action]").forEach(e=>e.action+="#ignoreCrowdBypass")
 		document.querySelectorAll("a[href]").forEach(e=>e.href+="#ignoreCrowdBypass")
 	}
-	domainBypass("adfoc.us",()=>ifElement(".skip[href]",b=>safelyNavigate(b.href)))
+	domainBypass(/adfoc\.us|ads\.bdcraft\.net/,()=>ifElement(".skip[href]",b=>safelyNavigate(b.href)))
 	domainBypass("srt.am",()=>{
 		if(document.querySelector(".skip-container"))
 		{
