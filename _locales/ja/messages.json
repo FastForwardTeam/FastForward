@@ -54,7 +54,7 @@
 		"message": "すぐにトラッカーのリンク先へ移動する"
 	},
 	"optionsBlockIPLoggers": {
-		"message": "バイパスできない場合はIPロガーをブロックする"
+		"message": "バイパスできない場合はIPアドレスがログに記録されないように阻止する"
 	},
 	"optionsCrowdBypass": {
 		"message": "バイパスできない短縮URLへ移動したり提供できるようにする (Crowd Bypass)"
@@ -135,9 +135,9 @@
 		"message": "すぐに、または数秒後に新しいタブで開かれるようにしたいですか?"
 	},
 	"blockedTitle": {
-		"message": "Universal BypassはあなたのIPアドレスがログに記録されないように阻止しました。"
+		"message": "Universal Bypassは、あなたのIPアドレスがログに記録されないように阻止しました。"
 	},
 	"blockedSubtitle": {
-		"message": "Universal Bypassを使って、悪意のある人からIPアドレスが取得されるのを阻止しませんか?"
+		"message": "悪意のある人があなたのIPアドレスをログに記録できないようにする機能をオフにしたいですか?"
 	}
 }

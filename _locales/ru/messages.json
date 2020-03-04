@@ -47,6 +47,9 @@
 	"optionsNavigationDelay": {
 		"message": "Переходить по адресу назначения через % сек."
 	},
+	"optionsTrackerBypass": {
+		"message": "Обходить средства слежки (такие, как bit.ly и t.co), используя Apimon.de."
+	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Сразу переходить по адресу средств слежки."
 	},
