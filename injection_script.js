@@ -1199,7 +1199,7 @@ ensureDomLoaded(()=>{
 	domainBypass("cshort.org",()=>{
 		if(typeof x=="string")
 		{
-			safelyNavigate(atob(atob(x)))
+			safelyNavigate(atob(hs(atob(x))))
 		}
 	})
 	domainBypass("otewe.net",()=>ifElement("#form-human",f=>f.submit(),()=>{
