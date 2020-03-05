@@ -1226,6 +1226,12 @@ ensureDomLoaded(()=>{
 			ic:0
 		},()=>location.reload(),"text")
 	}))
+	domainBypass("theartistunion.com",()=>awaitElement(".modal--download",()=>{
+		let xhr=new XMLHttpRequest()
+		xhr.onload=()=>safelyNavigate(JSON.parse(xhr.responseText).audio_source)
+		xhr.open("GET","/api/v3"+location.pathname+".json",true)
+		xhr.send()
+	}))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDOMLoaded.
 	if(bypassed)
 	{
