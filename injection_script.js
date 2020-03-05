@@ -938,33 +938,6 @@ ensureDomLoaded(()=>{
 		}
 		awaitElement("a[onclick='changeLink()']",changeLink)
 	})
-	domainBypass("toneden.io",()=>{
-		awaitElement(".post-gate-btn",b=>{
-			b.click()
-			if(location.hash=="#done")
-			{
-				return
-			}
-			awaitElement(".post-support-footer",()=>{
-				let _open=window.open
-				window.open=()=>{}
-				document.querySelectorAll(".post-support-options > .gate-btn-box > span > a").forEach(a=>{
-					a.href="#"
-					a.target=""
-					a.click()
-				})
-				window.open=_open
-				let dT=setInterval(()=>{
-					if(!b.classList.contains("disabled"))
-					{
-						clearInterval(dT)
-						location.hash="#done"
-						location.reload()
-					}
-				},100)
-			})
-		})
-	})
 	domainBypass("st.flashsubs.web.id",()=>safelyNavigate(document.querySelector("a#proceed").href))
 	domainBypass("short-url.link",()=>safelyNavigate(document.querySelector("div[align=center] > strong").textContent))
 	domainBypass(/uploadrar\.(com|net)/,()=>{
