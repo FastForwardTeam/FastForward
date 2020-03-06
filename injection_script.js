@@ -612,6 +612,12 @@ domainBypass("biozkop21.my.id",()=>{
 		location.pathname=location.pathname.replace("/download.php","/download21.php")
 	}
 })
+domainBypass("4shared.com",()=>{
+	if(document.cookie.indexOf("exUserId=")==-1)
+	{
+		document.cookie="exUserId=0; domain=.4shared.com; path=/"
+	}
+})
 //Insertion point for bypasses running before the DOM is loaded.
 domainBypass(/^((www\.)?((njiir|healthykk|linkasm|dxdrive|getwallpapers|sammobile|ydfile)\.com|punchsubs\.net|k2s\.cc|muhammadyoga\.me|u\.to|skiplink\.io|uploadfree\.info|fstore\.biz))$/,()=>window.setInterval=f=>setInterval(f,1))
 hrefBypass(/firefaucet\.win\/l\/|sfirmware\.com\/downloads-file\//,()=>window.setInterval=f=>setInterval(f,1))
