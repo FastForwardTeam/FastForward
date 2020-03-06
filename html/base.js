@@ -23,6 +23,7 @@ const timer=(message,secondsLeft,cancelable,callback)=>{
 		brws=(typeof browser=="undefined"?chrome:browser),
 		cancel=()=>{
 			clearInterval(tid)
+			titleElm.textContent=title
 			div.classList.add("uk-hidden")
 		},
 		tick=()=>{
@@ -31,6 +32,7 @@ const timer=(message,secondsLeft,cancelable,callback)=>{
 				cancel()
 				callback()
 			}
+			titleElm.textContent="("+secondsLeft+") "+title
 			if(secondsLeft==1)
 			{
 				p.textContent=brws.i18n.getMessage(message+"Singular")+" "
