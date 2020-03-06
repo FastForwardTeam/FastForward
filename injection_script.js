@@ -1238,6 +1238,10 @@ ensureDomLoaded(()=>{
 		xhr.open("GET","/api/v3"+location.pathname+".json",true)
 		xhr.send()
 	}))
+	domainBypass("boomx5.com",()=>ifElement("#form",f=>{
+		f.action=location.href
+		f.innerHTML='<input type="hidden" name="s_s" value="2">'
+	}))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDOMLoaded.
 	if(bypassed)
 	{
