@@ -454,7 +454,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	arr[0]=(new URL(decodeURIComponent(arr[0]))).toString()
 	if(arr.length>1)
 	{
-		refererCache[arr[0]]=arr[1]
+		refererCache[arr[0]]=arr[1].split("&")[0]
 	}
 	return {redirectUrl:arr[0]}
 },{types:["main_frame"],urls:["*://universal-bypass.org/navigate?target=*"]},["blocking"])
