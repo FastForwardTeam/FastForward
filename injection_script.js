@@ -1677,7 +1677,7 @@ ensureDomLoaded(()=>{
 		$=()=>({attr:(n,v)=>safelyNavigate(atob(v))})
 		goto()
 	}
-	if(document.querySelector("#templatemo_footer > a[href='http://teknosafe.kertashitam.com/']")&&document.querySelector("#templatemo_content > div > a[href]"))//teknosafe.kertashitam.com,teknosafe.teknologilink.com
+	if(document.querySelector("#templatemo_footer > a[href*='teknosafe']")&&document.querySelector("#templatemo_content > div > a[href]"))//teknosafe.kertashitam.com,teknosafe.teknologilink.com
 	{
 		safelyNavigate(document.querySelector("#templatemo_content > div > a[href]").href)
 		return finish()
