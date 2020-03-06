@@ -1197,7 +1197,7 @@ ensureDomLoaded(()=>{
 		safelyAssign(a.href)
 	}))
 	domainBypass("cshort.org",()=>{
-		if(typeof x=="string")
+		if(typeof x=="string"&&typeof hs=="function")
 		{
 			safelyNavigate(atob(hs(atob(x))))
 		}
