@@ -45,6 +45,10 @@ unsafelyNavigate=target=>{
 		case "https://proxoexploits.com/ProxoKeyKeyLol":
 		url+="&safe_in=23"
 		break;
+
+		case "https://fluxteam.xyz/ks/checkpoint/index.php":
+		url+="&safe_in=130"
+		break;
 	}
 	location.assign(url)
 },
