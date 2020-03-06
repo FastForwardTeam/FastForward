@@ -34,6 +34,7 @@
 	],
 	"param_url_encoded": [
 		"*://*/safeme/?*",
+		"*://*/url/go.php?url=*",
 		"*://*.leechall.com/redirect.php?url=*",
 		"*://*.news-gg.com/l/?*",
 		"*://*.mobile01.com/redirect.php?*",

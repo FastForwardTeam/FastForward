@@ -1613,6 +1613,21 @@ ensureDomLoaded(()=>{
 		window.setInterval=f=>setInterval(f,800)
 		return crowdBypass()
 	}
+	//Duit.cc
+	if(document.querySelector("script[src='https://duit.cc/js/jquery.1.8.3.js']"))
+	{
+		ifElement("input[type='hidden'][name='geturl'][value^='http']",i=>{
+			safelyNavigate(i.value)
+			finish()
+		})
+	}
+	if(document.querySelector("amp-facebook-page[data-href='https://www.facebook.com/duit.cc']"))
+	{
+		ifElement("#main > #Blog1 a",a=>{
+			safelyAssign(a.href)
+			finish()
+		})
+	}
 	//Other Templates
 	ifElement(".timed-content-client_show_0_30_0",d=>{//technicoz.com
 		d.classList.remove("timed-content-client_show_0_30_0")
@@ -1662,13 +1677,6 @@ ensureDomLoaded(()=>{
 	{
 		ifElement("center a[name=a][href]",a=>{
 			safelyNavigate(a.href)
-			finish()
-		})
-	}
-	if(document.querySelector("script[src='https://duit.cc/js/jquery.1.8.3.js']"))
-	{
-		ifElement("input[type='hidden'][name='geturl'][value^='http']",i=>{
-			safelyNavigate(i.value)
 			finish()
 		})
 	}
