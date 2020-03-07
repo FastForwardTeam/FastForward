@@ -828,6 +828,10 @@ ensureDomLoaded(()=>{
 		{
 			safelyAssign(atob(params.get("bpredirect")))
 		}
+		else if(params.has("url"))
+		{
+			safelyAssign(params.get("url"))
+		}
 	})
 	domainBypass("daunshorte.teknologilink.com",()=>safelyAssign(document.querySelector("a[href^='https://teknosafe.teknologilink.com/linkteknolink/safelinkscript.php?']").href))
 	domainBypass("imgtaxi.com",()=>document.querySelector("a.overlay_ad_link").click())
