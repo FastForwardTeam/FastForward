@@ -1253,6 +1253,7 @@ ensureDomLoaded(()=>{
 			safelyNavigate(i.src)
 		}
 	}))
+	domainBypass("curimovie.com",ifElement("a#link[href]",a=>safelyNavigate(a.href)))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDOMLoaded.
 	if(bypassed)
 	{
