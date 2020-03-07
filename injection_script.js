@@ -1242,6 +1242,13 @@ ensureDomLoaded(()=>{
 		f.innerHTML='<input type="hidden" name="s_s" value="2">'
 		f.submit()
 	}))
+	domainBypass("cloudgallery.net",()=>ifElement("#soDaBug",i=>{
+		if(typeof wuLu=="function")
+		{
+			wuLu()
+			safelyNavigate(i.src)
+		}
+	}))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDOMLoaded.
 	if(bypassed)
 	{
