@@ -31,6 +31,7 @@ const timer=(message,secondsLeft,cancelable,callback)=>{
 			{
 				cancel()
 				callback()
+				return
 			}
 			titleElm.textContent="("+secondsLeft+") "+title
 			if(secondsLeft==1)
