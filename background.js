@@ -792,9 +792,13 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 		for(let i in details.responseHeaders)
 		{
 			let header=details.responseHeaders[i]
-			if(header.name.toLowerCase()=="location"&&header.value.substr(0,18)=="https://h-gen.xyz/"&&header.value!="https://h-gen.xyz/")
+			if(header.name.toLowerCase()=="location")
 			{
-				return {redirectUrl:brws.runtime.getURL("html/before-navigate.html")+"?target="+encodeURIComponent(header.value)+"&referer="+details.url+"&safe_in=90"}
+				let url=new URL(header.value)
+				if((url.hostname=="h-gen.xyz"||url.hostname.substr(-10)==".h-gen.xyz")&&header.value!="https://h-gen.xyz/")
+				{
+					return {redirectUrl:brws.runtime.getURL("html/before-navigate.html")+"?target="+encodeURIComponent(header.value)+"&referer="+details.url+"&safe_in=90"}
+				}
 			}
 		}
 	}
