@@ -1204,8 +1204,7 @@ ensureDomLoaded(()=>{
 	domainBypass("cshort.org",()=>{
 		if(typeof x=="string")
 		{
-			let hs=_0x4fad6d=>{var _0x2d52ff=_0x4fad6d[_0x5281('0xc')]();var _0x587cc6='';for(var _0x373749=0x0;_0x373749<_0x2d52ff[_0x5281('0xb')]&&_0x2d52ff[_0x5281('0x15')](_0x373749,0x2)!=='00';_0x373749+=0x2)_0x587cc6+=String['fromCharCode'](parseInt(_0x2d52ff[_0x5281('0x15')](_0x373749,0x2),0x10));return _0x587cc6;}
-			safelyNavigate(atob(hs(atob(x))))
+			safelyNavigate(atob(atob(atob(atob(atob(x))))))
 		}
 	})
 	domainBypass("otewe.net",()=>ifElement("#form-human",f=>f.submit(),()=>{
