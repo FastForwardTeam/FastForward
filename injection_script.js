@@ -850,7 +850,7 @@ ensureDomLoaded(()=>{
 	})
 	domainBypass(/sub2unlock\.(com|net)/,()=>safelyNavigate(document.getElementById("theGetLink").textContent))
 	domainBypass("boostme.gg",()=>safelyNavigate(document.querySelector("a[href]#go").href))
-	domainBypass(/(driverays|bioskopgo|01nonton|thetecnostar)\.com|cinema21\.tv/,()=>ifElement("a#link[href]",a=>safelyAssign(a.href)))
+	domainBypass(/(driverays|bioskopgo|01nonton|thetecnostar|curimovie)\.com|cinema21\.tv/,()=>ifElement("a#link[href]",a=>safelyAssign(a.href)))
 	domainBypass("wikitrik.com",()=>document.querySelector("#download > form[action='/getlink.php'] > input[type='submit'].button").click())
 	domainBypass("dawnstation.com",()=>safelyNavigate(document.querySelector("#tidakakanselamanya.hiddenPlace > a").href))
 	domainBypass("hokiwikiped.net",()=>ifElement("a#DrRO[href]",a=>safelyNavigate(a.href)))
@@ -1253,7 +1253,6 @@ ensureDomLoaded(()=>{
 			safelyNavigate(i.src)
 		}
 	}))
-	domainBypass("curimovie.com",ifElement("a#link[href]",a=>safelyNavigate(a.href)))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDOMLoaded.
 	if(bypassed)
 	{
