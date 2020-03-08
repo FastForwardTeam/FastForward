@@ -565,7 +565,18 @@ const onBeforeRequest_rules = {
 	param_link_encoded_base64: details => getRedirect(decodeURIComponent(atob(details.url.substr(details.url.indexOf("?link=")+6)))),
 	param_kesehatan_base64: details => getRedirect(atob(details.url.substr(details.url.indexOf("?kesehatan=")+11))),
 	param_wildcard_base64: details => getRedirect(atob(new URL(details.url).searchParams.values().next().value)),
-	param_r_base64: details => getRedirect(atob(details.url.substr(details.url.indexOf("?r=")+3))),
+	param_r_base64: details => {
+		let id=new URL(details.url).pathname.split("/")[1],safe_in
+		for(let i in preflightRules.linkvertise_safe_in)
+		{
+			if(id==i)
+			{
+				safe_in=preflightRules.linkvertise_safe_in[i]
+				break
+			}
+		}
+		return getRedirect(atob(details.url.substr(details.url.indexOf("?r=")+3)),details.url,safe_in)
+	},
 	param_kareeI_base64_pipes: details => getRedirect(atob(details.url.substr(details.url.indexOf("?kareeI=")+8)).split("||")[0]),
 	param_cr_base64: details => {
 		let i=details.url.indexOf("cr=")
@@ -784,25 +795,6 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		}
 	}
 },{types:["main_frame"],urls:["*://*.surfsees.com/?*"]},["blocking"])
-
-brws.webRequest.onHeadersReceived.addListener(details=>{
-	if(enabled)
-	{
-		let url=new URL(details.url)
-		for(let i in details.responseHeaders)
-		{
-			let header=details.responseHeaders[i]
-			if(header.name.toLowerCase()=="location")
-			{
-				let url=new URL(header.value)
-				if((url.hostname=="h-gen.xyz"||url.hostname.substr(-10)==".h-gen.xyz")&&header.value!="https://h-gen.xyz/")
-				{
-					return {redirectUrl:brws.runtime.getURL("html/before-navigate.html")+"?target="+encodeURIComponent(header.value)+"&referer="+details.url+"&safe_in=90"}
-				}
-			}
-		}
-	}
-},{types:["main_frame"],urls:["*://*.tinyurl.com/*"]},["blocking","responseHeaders"])
 
 // Ouo.io/press & lnk2.cc Crowd Bypass
 brws.webRequest.onHeadersReceived.addListener(details=>{

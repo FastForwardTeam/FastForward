@@ -209,5 +209,8 @@
 		"*://*.liputannubi.net/*",
 		"*://*.squidssh.com/user/links",
 		"*://*.goodssh.com/user/links"
-	]
+	],
+	"linkvertise_safe_in": {
+		"48331": 90
+	}
 }
