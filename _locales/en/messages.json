@@ -11,6 +11,9 @@
 	"version": {
 		"message": "Version"
 	},
+	"definitionsVersion": {
+		"message": "Bypass definitions"
+	},
 	"changelog": {
 		"message": "Changelog"
 	},
