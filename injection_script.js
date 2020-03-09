@@ -1206,9 +1206,17 @@ ensureDomLoaded(()=>{
 		safelyAssign(a.href)
 	}))
 	domainBypass("cshort.org",()=>{
-		if(typeof x=="string")
+		crowdBypass()
+		if(typeof getId=="function"&&typeof startTimer=="function"&&typeof $=="function")
 		{
-			safelyNavigate(atob(atob(atob(atob(atob(x))))))
+			getId()
+			startTimer()
+			setTimeout(()=>{
+				if(typeof id=="string")
+				{
+					$.get("/redirect.php?alias="+location.pathname.substr(1)+"&uuid="+id,contributeAndNavigate)
+				}
+			},30000)
 		}
 	})
 	domainBypass("otewe.net",()=>ifElement("#form-human",f=>f.submit(),()=>{
