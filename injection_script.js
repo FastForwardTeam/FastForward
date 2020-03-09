@@ -1253,7 +1253,7 @@ ensureDomLoaded(()=>{
 			safelyNavigate(i.src)
 		}
 	}))
-	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDOMLoaded.
+	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
 		return
@@ -1719,7 +1719,7 @@ ensureDomLoaded(()=>{
 		safelyNavigate(i.value)
 		finish()
 	},()=>domainBypass("seputarinfomenarik.com",()=>ifElement("a#hapus",a=>safelyAssign(a.href))))
-	//Insertion point for bypasses detecting certain DOM elements. Bypasses here will no longer need to call ensureDOMLoaded.
+	//Insertion point for bypasses detecting certain DOM elements. Bypasses here will no longer need to call ensureDomLoaded.
 	let t=document.querySelector("title")
 	if(!bypassed&&t)
 	{
@@ -1787,7 +1787,7 @@ ensureDomLoaded(()=>{
 				}
 			})
 
-			//Insertion point for bypasses running for a specific site <title>. Please make it fit the switch structure. Bypasses here will no longer need to call ensureDOMLoaded.
+			//Insertion point for bypasses running for a specific site <title>. Please make it fit the switch structure. Bypasses here will no longer need to call ensureDomLoaded.
 		}
 	}
 	//Monitor DOM for disturbances for 10 seconds.
@@ -1907,7 +1907,7 @@ ensureDomLoaded(()=>{
 				}
 			})
 		}
-		//Insertion point for bypasses detecting certain DOM elements which may appear up to 10 seconds after page load. Bypasses here will no longer need to call ensureDOMLoaded.
+		//Insertion point for bypasses detecting certain DOM elements which may appear up to 10 seconds after page load. Bypasses here will no longer need to call ensureDomLoaded.
 	},100)
 	setTimeout(()=>clearInterval(dT),10000)//
 })
