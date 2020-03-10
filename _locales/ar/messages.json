@@ -11,6 +11,9 @@
 	"version": {
 		"message": "الإصدار"
 	},
+	"definitionsVersion": {
+		"message": "تعريفات التجاوز"
+	},
 	"changelog": {
 		"message": "سجل التغييرات"
 	},

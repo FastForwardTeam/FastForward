@@ -11,6 +11,9 @@
 	"version": {
 		"message": "Верзија"
 	},
+	"definitionsVersion": {
+		"message": "Дефиниције обилазница"
+	},
 	"changelog": {
 		"message": "Измене"
 	},

@@ -3,13 +3,16 @@
 		"message": "Jangan habiskan waktu anda dengan menaati aturan. Universal Bypass secara otomatis akan melompati link pemendek yang menyebalkan."
 	},
 	"firstrunTitle": {
-		"message": "Terima kasih anda sudah menginstal Universal Bypass!"
+		"message": "Terima kasih anda telah memasang Universal Bypass!"
 	},
 	"firstrunNoScript": {
 		"message": "Akan tetapi, anda sepertinya menggunakan ekstensi NoScript atau yang menyerupai itu, karena itu Universal Bypass tidak kompatibel dengannya."
 	},
 	"version": {
 		"message": "Versi"
+	},
+	"definitionsVersion": {
+		"message": "Definisi Bypass"
 	},
 	"changelog": {
 		"message": "Catatan perubahan"

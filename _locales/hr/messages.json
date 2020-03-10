@@ -11,11 +11,23 @@
 	"version": {
 		"message": "Verzija"
 	},
+	"definitionsVersion": {
+		"message": "Zaobići definicije"
+	},
 	"changelog": {
 		"message": "Promjene"
 	},
 	"update": {
 		"message": "Potraži ažuriranja"
+	},
+	"updating": {
+		"message": "Preuzimanje definicija zaobilaznih prava ..."
+	},
+	"updateYes": {
+		"message": "Definicije zaobilaznog mjesta uspješno su preuzete."
+	},
+	"updateNo": {
+		"message": "Definicije obilaznice su ažurirane."
 	},
 	"faq": {
 		"message": "Često Postavljena Pitanja (ČPP)"
@@ -38,6 +50,9 @@
 	"optionsNavigationDelay": {
 		"message": "Odvedi me do odredišta nakon % sekundi. (Koristi 0 za ptebacivanje odmah.)"
 	},
+	"optionsTrackerBypass": {
+		"message": "Zaobiđite trackere (poput bit.ly i t.co) pomoću Apimon.de."
+	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Odmah me odvedi na odredišta trakera."
 	},
@@ -49,6 +64,9 @@
 	},
 	"optionsCrowdAutoOpen": {
 		"message": "Otvori crowd-sourced odredište u novoj kartici nakon % sekund(a). (0 = odmah.)"
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Zatvorite karticu koja sadrži crowd-sourced odredišta nakon % sekunde posjeta."
 	},
 	"privacyPolicy": {
 		"message": "Pravila privatnosti"
@@ -67,6 +85,15 @@
 	},
 	"beforeNavigateDestination": {
 		"message": "Vaše odredište je %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "Međutim, ako se sada krećete, otkrivat će Universal Bypass."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Više nećete biti otkriveni za % sekundi."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Više nećete biti otkriveni za 1 sekundu."
 	},
 	"beforeNavigateTimer": {
 		"message": "Biti ćete automatski preusmjereni za % sekundi."

@@ -11,6 +11,9 @@
 	"version": {
 		"message": "Versão"
 	},
+	"definitionsVersion": {
+		"message": "Definições do bypass"
+	},
 	"changelog": {
 		"message": "Registo de alterações"
 	},

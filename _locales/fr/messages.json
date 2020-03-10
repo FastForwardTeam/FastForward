@@ -11,6 +11,9 @@
 	"version": {
 		"message": "Version"
 	},
+	"definitionsVersion": {
+		"message": "Définitions de contournement"
+	},
 	"changelog": {
 		"message": "Journal des modifications"
 	},
@@ -45,7 +48,7 @@
 		"message": "Activer les contournements de sites Web."
 	},
 	"optionsNavigationDelay": {
-		"message": "M'envoyer les destinations après % seconde(s). (Utilisez le chiffre 0 pour être automatiquement redirigé.)"
+		"message": "Me rediriger vers les destinations après % seconde(s)."
 	},
 	"optionsTrackerBypass": {
 		"message": "Contourner les traqueurs (comme bit.ly et t.co) en utilisant Apimon.de."
@@ -60,7 +63,7 @@
 		"message": "Donner et obtenir les destinations des raccourcisseurs incontournables."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Ouvrir les destinations partagées par les utilisateurs dans un nouvel onglet après % seconde(s). (0 = ouverture instantanée.)"
+		"message": "Ouvrir les destinations partagées par les utilisateurs dans un nouvel onglet après % seconde(s)."
 	},
 	"optionsCrowdAutoClose": {
 		"message": "Fermer les onglets contenant une destination partagée par les utilisateurs après % seconde(s) de visite."

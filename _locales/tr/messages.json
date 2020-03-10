@@ -11,6 +11,9 @@
 	"version": {
 		"message": "Sürüm"
 	},
+	"definitionsVersion": {
+		"message": "Bypass tanımları"
+	},
 	"changelog": {
 		"message": "Değişiklik kütüğü"
 	},

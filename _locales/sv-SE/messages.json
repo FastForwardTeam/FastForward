@@ -11,6 +11,9 @@
 	"version": {
 		"message": "Version"
 	},
+	"definitionsVersion": {
+		"message": "Förbikopplingsdefinitioner"
+	},
 	"changelog": {
 		"message": "Ändringslogg"
 	},

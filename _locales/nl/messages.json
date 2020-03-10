@@ -11,6 +11,9 @@
 	"version": {
 		"message": "Versie"
 	},
+	"definitionsVersion": {
+		"message": "Omzeiling definities"
+	},
 	"changelog": {
 		"message": "Wijzigingslogboek"
 	},
@@ -46,6 +49,9 @@
 	},
 	"optionsNavigationDelay": {
 		"message": "Stuur me door naar de bestemming na % seconde(n). (Gebruik 0 om gelijk doorgestuurd te worden.)"
+	},
+	"optionsTrackerBypass": {
+		"message": "Omzeil trackers (zoals bit.ly en t.co) met behulp van Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Stuur me gelijk naar de bestemming van trackers."

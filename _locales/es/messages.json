@@ -11,6 +11,9 @@
 	"version": {
 		"message": "Versión"
 	},
+	"definitionsVersion": {
+		"message": "Definiciones de evasión"
+	},
 	"changelog": {
 		"message": "Registro de cambios"
 	},

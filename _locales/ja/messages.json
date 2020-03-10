@@ -11,6 +11,9 @@
 	"version": {
 		"message": "バージョン"
 	},
+	"definitionsVersion": {
+		"message": "バイパス定義"
+	},
 	"changelog": {
 		"message": "変更履歴"
 	},

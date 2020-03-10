@@ -1,6 +1,6 @@
 {
 	"appDesc": {
-		"message": "Nie marnuj czasu na przestrzeganie przepisów, Uniwersalny Bypass automatycznie pomija irytujące skróty linkowe."
+		"message": "Nie marnuj czasu na poświęcenia, Uniwersalny Bypass automatycznie pomija irytujące skróty linkowe."
 	},
 	"firstrunTitle": {
 		"message": "Dziękujemy za instalacje Uniwersalnego Obejścia!"
@@ -11,11 +11,17 @@
 	"version": {
 		"message": "Wersja"
 	},
+	"definitionsVersion": {
+		"message": "Obejście definicji"
+	},
 	"changelog": {
 		"message": "Dziennik zmian"
 	},
 	"update": {
 		"message": "Sprawdź dostępność aktualizacji"
+	},
+	"updating": {
+		"message": "Pobieranie definicji Universal Bypass..."
 	},
 	"updateYes": {
 		"message": "Pomyślnie zaktualizowano skrypt wstrzyknięcia!"
@@ -79,6 +85,12 @@
 	},
 	"beforeNavigateDestination": {
 		"message": "Twoje miejsce docelowe jest %"
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Nie będziesz wykrywany za % sekund."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Nie będziesz wykrywany za 1 sekundę."
 	},
 	"beforeNavigateTimer": {
 		"message": "Zostaniesz automatycznie przekierowany za % sekund."
