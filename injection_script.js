@@ -1134,7 +1134,7 @@ ensureDomLoaded(()=>{
 		x=x.substring(4,x.length-kp)
 		safelyAssign(isSSL?"https://"+x:"http://"+x)
 	}))
-	domainBypass("kora4top.com",()=>ifElement("div#m1x2 a",a=>safelyNavigate(a.href)))
+	domainBypass(/(kora4top|forexlap)\.com/,()=>ifElement("div#m1x2 a",a=>safelyNavigate(a.href)))
 	domainBypass("soft8ware.com",()=>{
 		if(typeof count=="number"&&typeof countdown=="function")
 		{
