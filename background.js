@@ -19,7 +19,7 @@ getRedirect=(url,referer,safe_in)=>{
 		redirectUrl=brws.runtime.getURL("html/before-navigate.html")+"?target="+encodeURIComponent(url)
 		if(referer)
 		{
-			redirectUrl+="&referer="+referer
+			redirectUrl+="&referer="+encodeURIComponent(referer)
 		}
 		if(safe_in!==undefined)
 		{
