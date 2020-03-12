@@ -435,7 +435,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	{
 		safe_in=arr[1]
 	}
-	return encodedRedirect(url,arr[0],safe_in)
+	return encodedRedirect(url,decodeURIComponent(arr[0]),safe_in)
 },{types:["main_frame"],urls:["*://universal-bypass.org/bypassed?target=*&referer=*"]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
@@ -454,7 +454,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	arr[0]=(new URL(decodeURIComponent(arr[0]))).toString()
 	if(arr.length>1)
 	{
-		refererCache[arr[0]]=arr[1].split("&")[0]
+		refererCache[arr[0]]=decodeURIComponent(arr[1].split("&")[0])
 	}
 	return {redirectUrl:arr[0]}
 },{types:["main_frame"],urls:["*://universal-bypass.org/navigate?target=*"]},["blocking"])
@@ -469,7 +469,7 @@ brws.webRequest.onBeforeSendHeaders.addListener(details=>{
 	{
 		details.requestHeaders.push({
 			name: "Referer",
-			value: decodeURIComponent(refererCache[details.url])
+			value: refererCache[details.url]
 		})
 		return {requestHeaders: details.requestHeaders}
 	}
