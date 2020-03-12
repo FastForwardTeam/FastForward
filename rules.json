@@ -196,7 +196,8 @@
 		"*://*.sportif.id/*",
 		"*://*.healthinsider.online/*",
 		"*://*.cararoot.id/*",
-		"*://*.gubukbisnis.me/*"
+		"*://*.gubukbisnis.me/*",
+		"*://*.sekilastekno.com/*"
 	],
 	"redirect_persist_id_path_1_letter": [
 		"*://*.wadooo.com/g/*",
