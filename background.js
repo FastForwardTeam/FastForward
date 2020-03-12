@@ -561,7 +561,13 @@ const onBeforeRequest_rules = {
 	},
 	param_rel_base64: details => getRedirect(atob(details.url.substr(details.url.indexOf("?rel=")+5))),
 	param_link_encoded: details => encodedRedirect(details.url.substr(details.url.indexOf("link=")+5)),
-	param_link_base64: details => getRedirect(atob(details.url.substr(details.url.indexOf("?link=")+6))),
+	param_link_base64: details => {
+		let url=new URL(details.url)
+		if(url.searchParams.has("link"))
+		{
+			return getRedirect(atob(url.searchParams.get("link")))
+		}
+	},
 	param_link_encoded_base64: details => getRedirect(decodeURIComponent(atob(details.url.substr(details.url.indexOf("?link=")+6)))),
 	param_kesehatan_base64: details => getRedirect(atob(details.url.substr(details.url.indexOf("?kesehatan=")+11))),
 	param_wildcard_base64: details => getRedirect(atob(new URL(details.url).searchParams.values().next().value)),
