@@ -11,6 +11,9 @@
 	"version": {
 		"message": "Versioon"
 	},
+	"definitionsVersion": {
+		"message": "Bypass definitsioon"
+	},
 	"changelog": {
 		"message": "Muudatuste logi"
 	},
@@ -46,6 +49,9 @@
 	},
 	"optionsNavigationDelay": {
 		"message": "Minge sihtkohta % sek pärast."
+	},
+	"optionsTrackerBypass": {
+		"message": "Bypass jälgijad (näiteks bit.ly ja t.co), kasutades Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Viige mind kohe jälitajate sihtkohtadesse."

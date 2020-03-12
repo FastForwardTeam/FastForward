@@ -11,11 +11,17 @@
 	"version": {
 		"message": "Versione"
 	},
+	"definitionsVersion": {
+		"message": "Definizioni bypass"
+	},
 	"changelog": {
 		"message": "Changelog"
 	},
 	"update": {
 		"message": "Controlla per nuovi aggiornamenti"
+	},
+	"updating": {
+		"message": "Download delle definizioni di bypass..."
 	},
 	"updateYes": {
 		"message": "Aggiornato con successo lo script di injection!"
@@ -43,6 +49,9 @@
 	},
 	"optionsNavigationDelay": {
 		"message": "Portami alla destinazione dopo % secondi. (Usa 0 per navigare istantaneamente.)"
+	},
+	"optionsTrackerBypass": {
+		"message": "Bypass tracker (come bit.ly e t.co) usando Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Portami instantaneamente alla destinazione dei tracciatori."

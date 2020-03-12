@@ -11,6 +11,9 @@
 	"version": {
 		"message": "Versi"
 	},
+	"definitionsVersion": {
+		"message": "Definisi bypass"
+	},
 	"changelog": {
 		"message": "Catetan perubahan"
 	},

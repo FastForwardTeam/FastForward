@@ -11,6 +11,9 @@
 	"version": {
 		"message": "Verzia"
 	},
+	"definitionsVersion": {
+		"message": "Definície obchádzky"
+	},
 	"changelog": {
 		"message": "Zoznam zmien"
 	},

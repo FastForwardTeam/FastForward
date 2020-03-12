@@ -11,6 +11,9 @@
 	"version": {
 		"message": "Версия"
 	},
+	"definitionsVersion": {
+		"message": "Определения обходов"
+	},
 	"changelog": {
 		"message": "Список изменений"
 	},
