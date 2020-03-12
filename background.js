@@ -493,7 +493,21 @@ brws.webRequest.onCompleted.addListener(details=>{
 	}
 },{types:["main_frame"],urls:["<all_urls>"]})
 
-// Preflight Bypasses
+// Preflight Bypasses including Tracker Bypass using Apimon.de
+function resolveRedirect(url)
+{
+	let xhr=new XMLHttpRequest(),destination
+	xhr.onload=()=>{
+		let json=JSON.parse(xhr.responseText)
+		if(json&&json.destination)
+		{
+			destination=json.destination
+		}
+	}
+	xhr.open("GET","https://apimon.de/redirect/"+encodeURIComponent(url),false)
+	xhr.send()
+	return destination
+}
 const onBeforeRequest_rules = {
 	path_base64: details => getRedirect(atob(details.url.substr(details.url.indexOf("aHR0c")))),
 	path_s_encoded: details => encodedRedirect(details.url.substr(details.url.indexOf("/s/")+3)),
@@ -675,6 +689,33 @@ const onBeforeRequest_rules = {
 				a.push(parseInt(go.substr(i,2),16))
 			}
 			return getRedirect(String.fromCharCode.apply(String,a))
+		}
+	},
+	tracker: details => {
+		if(trackerBypassEnabled&&new URL(details.url).pathname!="/")
+		{
+			let destination=resolveRedirect(details.url)
+			if(destination&&destination!=details.url)
+			{
+				return getRedirect(destination,"tracker")
+			}
+		}
+	},
+	ip_logger: details => {
+		if(new URL(details.url).pathname!="/")
+		{
+			if(trackerBypassEnabled)
+			{
+				let destination=resolveRedirect(details.url)
+				if(destination&&destination!=details.url)
+				{
+					return getRedirect(destination,"tracker")
+				}
+			}
+			if(blockIPLoggers)
+			{
+				return {redirectUrl:brws.runtime.getURL("html/blocked.html")}
+			}
 		}
 	}
 },
@@ -922,183 +963,3 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 		}
 	}
 },{types:["main_frame"],urls:["<all_urls>"]},["blocking","responseHeaders"])
-
-// Tracker Bypass using Apimon.de
-function resolveRedirect(url)
-{
-	let xhr=new XMLHttpRequest(),destination
-	xhr.onload=()=>{
-		let json=JSON.parse(xhr.responseText)
-		if(json&&json.destination)
-		{
-			destination=json.destination
-		}
-	}
-	xhr.open("GET","https://apimon.de/redirect/"+encodeURIComponent(url),false)
-	xhr.send()
-	return destination
-}
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(trackerBypassEnabled&&new URL(details.url).pathname!="/")
-	{
-		let destination=resolveRedirect(details.url)
-		if(destination&&destination!=details.url)
-		{
-			return getRedirect(destination,"tracker")
-		}
-	}
-},{
-	types:["main_frame"],
-	urls:[
-	"*://*.great.social/*",
-	"*://*.send.digital/*",
-	"*://*.snipli.com/*",
-	"*://*.shortcm.li/*",
-	"*://*.page.link/*",
-	"*://*.go2l.ink/*",
-	"*://*.buff.ly/*",
-	"*://*.snip.li/*",
-	"*://*.hive.am/*",
-	"*://*.cutt.ly/*",
-	"*://*.tiny.ie/*",
-	"*://*.bit.ly/*",
-	"*://*.goo.gl/*",
-	"*://*.bit.do/*",
-	"*://*.t2m.io/*",
-	"*://*.dis.gd/*",
-	"*://*.zii.bz/*",
-	"*://*.plu.sh/*",
-	"*://*.b.link/*",
-	"*://*.po.st/*",
-	"*://*.ow.ly/*",
-	"*://*.is.gd/*",
-	"*://*.1b.yt/*",
-	"*://*.1w.tf/*",
-	"*://*.t.co/*",
-	"*://*.x.co/*"
-	]
-},["blocking"])
-brws.webRequest.onBeforeRequest.addListener(details=>{
-	if(new URL(details.url).pathname!="/")
-	{
-		if(trackerBypassEnabled)
-		{
-			let destination=resolveRedirect(details.url)
-			if(destination&&destination!=details.url)
-			{
-				return getRedirect(destination,"tracker")
-			}
-		}
-		if(blockIPLoggers)
-		{
-			return {redirectUrl:brws.runtime.getURL("html/blocked.html")}
-		}
-	}
-},{types:["main_frame"],urls:getIPLoggerPatterns()},["blocking"])
-function getIPLoggerPatterns()
-{
-	let patterns=[],
-	//https://github.com/timmyrs/Evil-Domains/blob/master/lists/IP%20Loggers.txt
-	ipLoggers=`viral.over-blog.com
-	gyazo.in
-	ps3cfw.com
-	urlz.fr
-	webpanel.space
-	steamcommumity.com
-	i.imgur.com.de
-	www.fuglekos.com
-
-	# Grabify
-
-	grabify.link
-	bmwforum.co
-	leancoding.co
-	quickmessage.io
-	spottyfly.com
-	spötify.com
-	stopify.co
-	yoütu.be
-	yoütübe.co
-	yoütübe.com
-	xda-developers.io
-	starbucksiswrong.com
-	starbucksisbadforyou.com
-	bucks.as
-	discörd.com
-	minecräft.com
-	cyberh1.xyz
-	discördapp.com
-	freegiftcards.co
-	disçordapp.com
-	rëddït.com
-
-	# Cyberhub (formerly SkypeGrab)
-
-	ġooģle.com
-	drive.ġooģle.com
-	maps.ġooģle.com
-	disċordapp.com
-	ìṃgur.com
-	transferfiles.cloud
-	tvshare.co
-	publicwiki.me
-	hbotv.co
-	gameskeys.shop
-	videoblog.tech
-	twitch-stats.stream
-	anonfiles.download
-	bbcbloggers.co.uk
-
-	# Yip
-
-	yip.su
-	iplogger.com
-	iplogger.org
-	iplogger.ru
-	2no.co
-	02ip.ru
-	iplis.ru
-	iplo.ru
-	ezstat.ru
-
-	# What's their IP
-
-	www.whatstheirip.com
-	www.hondachat.com
-	www.bvog.com
-	www.youramonkey.com
-
-	# Pronosparadise
-
-	pronosparadise.com
-	freebooter.pro
-
-	# Blasze
-
-	blasze.com
-	blasze.tk
-
-	# IPGrab
-
-	ipgrab.org
-	i.gyazos.com`,
-	lines=ipLoggers.split("\n")
-	for(let i in lines)
-	{
-		let line=lines[i].trim()
-		if(line&&line.substr(0,1)!="#")
-		{
-			if(line.substr(0,4)=="www.")
-				line=line.substr(4)
-			else if(line.substr(0,2)=="i.")
-				line=line.substr(2)
-			else if(line.substr(0,6)=="drive.")
-				line=line.substr(6)
-			else if(line.substr(0,5)=="maps.")
-				line=line.substr(5)
-			if(patterns.indexOf(line)==-1)
-				patterns.push("*://*."+line+"/*")
-		}
-	}
-	return patterns
-}
