@@ -25,12 +25,14 @@
 		"*://*.acorme.com/*"
 	],
 	"param_url_general": [
+		"*://*/st?api=*&url=*",
+		"*://*/st/?api=*&url=*",
 		"*://*/full?api=*&url=*",
 		"*://*/full/?api=*&url=*",
 		"*://*/full?api=*&url=*&type=*",
 		"*://*/full/?api=*&url=*&type=*",
-		"*://*/st?api=*&url=*",
-		"*://*/st/?api=*&url=*"
+		"*://*/api/*/full-pages?api_key=*&url=*&type=*",
+		"*://*/api/*/full-pages?api_key=*&url=*&type=*"
 	],
 	"param_url_encoded": [
 		"*://*/safeme/?*",
