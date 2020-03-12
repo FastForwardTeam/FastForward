@@ -47,7 +47,7 @@ unsafelyNavigate=target=>{
 		break;
 
 		case "https://fluxteam.xyz/ks/checkpoint/index.php":
-		url+="&safe_in=130"
+		url+="&safe_in=60"
 		break;
 	}
 	location.assign(url)
