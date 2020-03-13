@@ -1419,6 +1419,9 @@ ensureDomLoaded(()=>{
 	domainBypass("katmoviehd.nl",()=>document.querySelectorAll("a[href^='https://katmoviehd.nl?6de4d3b1de=']").forEach(a=>{
 		a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
 	}))
+	domainBypass("hienzo.com",()=>document.querySelectorAll("a[href^='https://www.losstor.com/?id=']").forEach(a=>{
+		a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
+	}))
 	if(document.querySelector(".sorasubmit"))
 	{
 		document.querySelector(".sorasubmit").click()
