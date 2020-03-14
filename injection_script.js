@@ -591,15 +591,16 @@ domainBypass("ipeenk.id",()=>{
 		}
 	})
 })
-domainBypass("zt-protect.com",()=>{
-	if(location.pathname.substr(0,4)=="/to/")
-	{
-		location.pathname="/link/"+location.pathname.substr(4)
-	}
-	else
-	{
-		ifElement("a[href] > .showURL",p=>safelyNavigate(p.parentNode.href))
-	}
+domainBypass("zt-protect.com", () => {
+    if (location.pathname.substr(0, 4) == "/to/") {
+        location.pathname = "/link/" + location.pathname.substr(4)
+    }
+    else if (location.pathname.substr(0, 10) == "/voirlien/") {
+        location.pathname = "/telecharger/" + location.pathname.substr(10)
+    }
+    else {
+        ifElement("a[href] > .showURL", p => safelyNavigate(p.parentNode.href))
+    }
 })
 domainBypass(/(nofil|onnime)\.net/,()=>{
 	if(location.pathname.substr(0,4)=="/dl/")
