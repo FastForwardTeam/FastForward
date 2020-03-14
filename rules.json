@@ -139,9 +139,9 @@
 		"*://*.cemiw.net/*?site=*"
 	],
 	"param_reff_base64": [
-		"*://*.remiyu.me/?reff=*",
-		"*://*.ceksite.id/?reff=*",
-		"*://*.postku.org/?reff=*"
+		"*://*.remiyu.me/*?reff=*",
+		"*://*.ceksite.id/*?reff=*",
+		"*://*.postku.org/*?reff=*"
 	],
 	"param_s_encoded": [
 		"*://*.ouo.io/*?s=*",
