@@ -39,11 +39,8 @@ unsafelyNavigate=target=>{
 	switch(target)//All values here have been tested using "Take me to destinations after 0 seconds."
 	{
 		case "https://proxoexploits.com/proxo/continue_two":
-		url+="&safe_in=11"
-		break;
-
 		case "https://proxoexploits.com/ProxoKeyKeyLol":
-		url+="&safe_in=23"
+		url+="&safe_in=20"
 		break;
 
 		case "https://fluxteam.xyz/ks/checkpoint/index.php":
