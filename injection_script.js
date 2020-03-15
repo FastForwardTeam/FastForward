@@ -1420,6 +1420,18 @@ ensureDomLoaded(()=>{
 	domainBypass("hienzo.com",()=>document.querySelectorAll("a[href^='https://www.losstor.com/?id=']").forEach(a=>{
 		a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
 	}))
+	domainBypass("animebatch.id",()=>document.querySelectorAll("a[href^='https://tamatekno.net/?id=']").forEach(a=>{
+		let ver=a.closest("ul").previousElementSibling,qe=ver,res=a.previousElementSibling
+		while(qe&&qe.style.textAlign!="center")
+		{
+			qe=qe.previousElementSibling
+		}
+		while(res&&res.tagName!="STRONG")
+		{
+			res=res.previousElementSibling
+		}
+		a.href+="#bypassClipboard="+qe.textContent.replace(/[^\w]/g,"").toLowerCase()+res.textContent.replace(/[^\w]/g,"").toLowerCase()+ver.textContent.replace(/[^\w]/g,"").toLowerCase()+a.textContent.replace(/[^\w]/g,"").toLowerCase()
+	}))
 	if(document.querySelector(".sorasubmit"))
 	{
 		document.querySelector(".sorasubmit").click()
