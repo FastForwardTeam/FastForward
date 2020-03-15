@@ -628,7 +628,7 @@ domainBypass(/^((www\.)?((njiir|healthykk|linkasm|dxdrive|getwallpapers|sammobil
 hrefBypass(/firefaucet\.win\/l\/|sfirmware\.com\/downloads-file\//,()=>window.setInterval=f=>setInterval(f,1))
 domainBypass(/^((www\.)?((racaty|longfiles|filepuma|portableapps)\.com|indishare\.org|datei\.to|keisekai\.fun|solvetube\.site))$/,()=>window.setTimeout=f=>setTimeout(f,1))
 domainBypass("lkc21.net",()=>window.setTimeout=f=>setTimeout(f,100))
-hrefBypass(/emulator\.games\/download\.php/,()=>window.setInterval=f=>setInterval(f,100))
+hrefBypass(/emulator\.games\/download\.php|curseforge\.com\/.*\/download\/[0-9]*/,()=>window.setInterval=f=>setInterval(f,100))
 domainBypass("universal-bypass.org",()=>{
 	window.universalBypassInstalled=true
 	window.universalBypassInternalVersion=UNIVERSAL_BYPASS_INTERNAL_VERSION
