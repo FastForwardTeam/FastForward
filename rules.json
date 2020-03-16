@@ -93,7 +93,8 @@
 		"*://*/api/?r=*"
 	],
 	"linkvertise_safe_in": {
-		"48331": 90
+		"48331": 90,
+		"20540": 90
 	},
 	"param_kareeI_base64_pipes": [
 		"*://*.blogspot.com/?kareeI=*"
