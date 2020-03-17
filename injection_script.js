@@ -503,6 +503,22 @@ domainBypass("tik.lat",()=>{
 	awaitElement(".skip > .wait > .skip > .btn > a[href]",a=>safelyNavigate(a.href))
 })
 domainBypass(/linkvertise\.(com|net)|link-to\.net/,()=>{
+	let o={timestamp:new Date().getTime(),random:"375123"},
+	url="https://linkvertise.net/api/v1/redirect/link/static"+location.pathname
+	fetch(url).then(r=>r.text()).then(r=>{
+		let json=JSON.parse(r)
+		if(json&&json.data.link.id)
+		{
+			o.link_id=json.data.link.id
+			url="https://linkvertise.net/api/v1/redirect/link"+location.pathname+"/target?serial="+btoa(JSON.stringify(o))
+		}
+	}).then(()=>fetch(url)).then(r=>r.text()).then(r=>{
+		let json=JSON.parse(r)
+		if(json&&json.data.target)
+		{
+			safelyNavigate(json.data.target)
+		}
+	})
 	window.setTimeout=f=>setTimeout(f,1)
 	window.setInterval=f=>setInterval(f,1)
 	window.videojs={getAllPlayers:()=>[{
