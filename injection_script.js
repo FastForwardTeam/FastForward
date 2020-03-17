@@ -503,6 +503,7 @@ domainBypass("tik.lat",()=>{
 	awaitElement(".skip > .wait > .skip > .btn > a[href]",a=>safelyNavigate(a.href))
 })
 domainBypass(/linkvertise\.(com|net)|link-to\.net/,()=>{
+	window.setTimeout=f=>setTimeout(f,1)
 	window.setInterval=f=>setInterval(f,1)
 	window.videojs={getAllPlayers:()=>[{
 		on:(e,f)=>f(),
@@ -514,48 +515,19 @@ domainBypass(/linkvertise\.(com|net)|link-to\.net/,()=>{
 		pause:()=>{}
 	}]}
 	ensureDomLoaded(()=>{
-		let xhr=new XMLHttpRequest(),
-		script=document.querySelectorAll("script[src]"),
-		url=script[script.length-1].src,
-		o={timestamp:new Date().getTime()}
-		const xhrget=f=>{
-			xhr.onload=f
-			xhr.open("GET",url)
-			xhr.send()
-		}
-		xhrget(()=>{
-			const regex=/random\:"([^"]+)"/
-			let matches=regex.exec(xhr.responseText)
-			if(matches&&matches[1])
-			{
-				o.random=matches[1]
-				url="https://linkvertise.net/api/v1/redirect/link/static"+location.pathname
-			}
-			xhrget(()=>{
-				let json=JSON.parse(xhr.responseText)
-				if(json&&json.data.link.id)
-				{
-					o.link_id=json.data.link.id
-					url="https://linkvertise.net/api/v1/redirect/link"+location.pathname+"/target?serial="+btoa(JSON.stringify(o))
-				}
-				xhrget(()=>{
-					let json=JSON.parse(xhr.responseText)
-					if(json&&json.data.target)
-					{
-						safelyNavigate(json.data.target)
-					}
-				})
-			})
-		})
-		var div = document.createElement('div');
-		div.id = "ogxzi8ZzrLy8S4zhUwyc3jPMlXi1h91bA0bASIiZtyT6cOTlX78HtEyXTK0WUGCY3CO8E4hBYI02ZD9mr7jit7R1YqPdkllJ";
-		document.body.appendChild(div);
 		setInterval(()=>{
 			ifElement(".modal.show .web-close-btn",b=>b.click())
 		},1000)
 		setTimeout(()=>{
 			document.querySelectorAll(".todo-block .todo").forEach(d=>d.click())
-		},1000)
+			setTimeout(()=>ifElement(".todo-btn-nr",b=>{
+				b.click()
+				setTimeout(()=>ifElement(".btn.countdown-btn.first",a=>{
+					countIt()
+					a.click()
+				}),100)
+			}),2000)
+		},2000)
 	})
 })
 domainBypass(/acortalo\.(live|xyz)/,()=>{
