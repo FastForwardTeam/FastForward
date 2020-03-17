@@ -48,6 +48,11 @@ isGoodLink=link=>{
 countIt=()=>{
 	brws.storage.local.set({bypass_counter:++bypassCounter})
 	sendToOptions({bypassCounter})
+},
+resetCounter=()=>{
+	bypassCounter=0
+	brws.storage.local.set({bypass_counter:0})
+	sendToOptions({bypassCounter})
 }
 
 // Install handler
