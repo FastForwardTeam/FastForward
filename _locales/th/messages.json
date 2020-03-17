@@ -1,21 +1,36 @@
 {
 	"appDesc": {
-		"message": "อย่าไปเสียเวลากับสิ่งที่ต้องทำตาม Universal Bypass ช่วยให้คุณข้ามพวกตัวย่อลิงค์ที่โครตน่ารำคาญให้อัตโนมัติ"
+		"message": "ไม่ต้องเสียเวลากับขั้นตอนการข้ามลิ้งค์. Universal Bypass ช่วยคุณข้ามย่อลิงค์ที่โครตน่ารำคาญให้โดยอัตโนมัติ"
 	},
 	"firstrunTitle": {
 		"message": "ขอขอบคุณสำหรับการติดตั้ง Universal Bypass!"
 	},
 	"firstrunNoScript": {
-		"message": "แต่อย่างไรก็ตาม ดูเหมือนคุณกำลังใช้ NoScript หรืออะไรที่คล้ายกัน ซึ่ง Universal Bypass นั้นไม่เข้ากันกับพวกนี้"
+		"message": "แต่อย่างไรก็ตาม ดูเหมือนคุณกำลังใช้ NoScript หรืออะไรที่คล้ายกัน ซึ่ง Universal Bypass นั้นเข้ากันไม่ได้"
 	},
 	"version": {
 		"message": "เวอร์ชัน"
 	},
+	"definitionsVersion": {
+		"message": "คำจำกัดความของ Bypass "
+	},
 	"changelog": {
 		"message": "บันทึกการเปลี่ยนแปลง"
 	},
+	"update": {
+		"message": "ตรวจสอบการอัปเดต"
+	},
+	"updating": {
+		"message": "กำลังโหลด คำจำกัดความของ Bypass..."
+	},
+	"updateYes": {
+		"message": "ดาวน์โหลดคำจำกัดความ bypass สำเร็จแล้ว"
+	},
+	"updateNo": {
+		"message": "คำจำกัดความ bypass เป็นเวอชั่นล่าสุดแล้ว"
+	},
 	"faq": {
-		"message": "คำถามที่พบบ่อย"
+		"message": "คำถามที่พบบ่อย (FAQ)"
 	},
 	"bypassCounter": {
 		"message": "Universal Bypass ได้ข้ามเว็บไซต์ % สำหรับคุณเรียบร้อยแล้ว"
@@ -24,43 +39,61 @@
 		"message": "สนับสนุน Universal Bypass"
 	},
 	"options": {
-		"message": "ตัวเลือก."
+		"message": "การตั้งค่า"
 	},
 	"optionsLink": {
-		"message": "เปลี่ยนการตั้งค่า Universal Bypass"
+		"message": "เปลี่ยนการตั้งค่าของ Universal Bypass"
 	},
 	"optionsEnabled": {
 		"message": "เปิดใช้งาน website bypasses"
 	},
 	"optionsNavigationDelay": {
-		"message": "พาฉันไปยังจุดหมายปลายทางหลังจาก % วินาที (ใช้ 0 เพื่อสำรวจได้ทันที)"
+		"message": "พาไปยังจุดหมายปลายทางหลังจาก % วินาที (ใช้ 0 เพื่อข้ามทันที)"
+	},
+	"optionsTrackerBypass": {
+		"message": "บายพาสแทร็กเกอร์ (เช่น bit.ly และ t.co) โดยใช้ Apimon.de"
 	},
 	"optionsInstantNavigationTrackers": {
-		"message": "พาฉันไปที่ปลายทางของเครื่องมือติดตามทันที"
+		"message": "พาไปที่ปลายทางของเครื่องมือติดตามทันที"
 	},
 	"optionsBlockIPLoggers": {
-		"message": "บล็อคตัวบันทึก IP หากการไม่สามารถบาสพาสได้"
+		"message": "บล็อคตัวบันทึก IP หากการไม่สามารถบายพาสได้"
 	},
 	"optionsCrowdBypass": {
-		"message": "การรับและการให้จุดหมายปลายทางของ shorteners ที่ไม่มีใครเทียบได้"
+		"message": "การรับและการส่งจุดหมายปลายทางของ shorteners ที่ไม่มีใครเทียบได้"
 	},
 	"optionsCrowdAutoOpen": {
 		"message": "เปิดปลายทาง crowd-sourced ในแท็บใหม่หลังจาก % วินาที (0 = ทันที)"
 	},
+	"optionsCrowdAutoClose": {
+		"message": "แท็บปิดที่มีปลายทางที่ crowd-sourced มาเยี่ยมชมหลังจาก % วินาที (s) ของการเยี่ยมชม"
+	},
 	"privacyPolicy": {
 		"message": "นโยบายความเป็นส่วนตัว"
+	},
+	"contributors": {
+		"message": "ผู้มีส่วนร่วมต่างๆ"
 	},
 	"optionsUserscripts": {
 		"message": "บายพาสแบบกำหนดเอง"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "นี่คือฟีเจอร์ขั้นสูงสำหรับนักพัฒนาเพื่อสร้างสคริปต์ของตนเองเพื่อบาสพาสเว็ฐไซต์ เมื่อสมบูรณ์แล้วพวกเขาสามารถส่งไปที่ GitHub เพื่อเพิ่มใน Universal Bypass สำหรับให้ทุกคนๆสามารถใช้งานได้"
+		"message": "นี่คือฟีเจอร์ขั้นสูงสำหรับนักพัฒนาเพื่อสร้างสคริปต์ของตนเองเพื่อบาสพาสเว็บไซต์ เมื่อสมบูรณ์แล้ว สามารถส่งไปที่ GitHub เพื่อเพิ่มใน Universal Bypass สำเพื่อให้ทุกคนๆสามารถใช้งานได้"
 	},
 	"beforeNavigate": {
 		"message": "คุณใกล้ถึงจุดหมายปลายทางแล้ว"
 	},
 	"beforeNavigateDestination": {
 		"message": "ปลายทางของคุณคือ %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "อย่างไรก็ตาม หากคุณหาเส้นทางในตอนนี้  Universal Bypass จะถูกตรวจพบ"
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "คุณจะไม่ถูกตรวจพบในอีกต่อไปใน % วินาที"
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "คุณจะไม่ถูกตรวจพบในอีก 1 วินาที"
 	},
 	"beforeNavigateTimer": {
 		"message": "คุณจะถูกเปลี่ยนเส้นทางโดยอัตโนมัติใน % วินาที"
@@ -72,22 +105,31 @@
 		"message": "คุณต้องการที่จะเปลี่ยนเส้นทางทันทีหรือใน x วินาที?"
 	},
 	"crowdWait": {
-		"message": "ขออภัย คุณเป็นคนแรกที่ได้พบกับลิงค์นี้ แต่หลังจากที่คุณรอลิ้งนี้นั้น ผู้ใช้ Universal Bypass คนอื่นๆ จะไม่ต้องรอกับลิ้งนี้อีกต่อไป"
+		"message": "ขออภัยค่ะ ท่านเป็นคนแรกที่ได้พบกับลิงค์นี้ แต่หลังจากที่คุณข้ามลิ้งนี้แล้ว ผู้ใช้ Universal Bypass คนอื่นๆ จะไม่ต้องรอลิ้งนี้อีก"
 	},
 	"crowdDisabled": {
-		"message": "เว็บไซต์นี้ถูกบายพาสด้วยการบายพาสฝูงชนซึ่งคุณได้ปิดการใช้งานในตัวเลือก"
+		"message": "เว็บไซต์นี้ถูกบายพาสโดยกลุ่มนักบายพาส(crowd-sourced) ซึ่งคุณสามารถปิดการใช้งานได้ที่การตั้งค่า"
 	},
 	"crowdBypassed": {
 		"message": "คุณอาจไม่ต้องรออีกต่อไป!"
 	},
 	"crowdBypassedInfo": {
-		"message": "ผู้ใช้ Universal Bypass รายอื่นกำลังรอคุณอยู่และได้รายงานว่าสิ่งนี้นำไปสู่ %"
+		"message": "ผู้ใช้ Universal Bypass คนอื่น ๆ กำลังรอคุณอยู่และได้รายงานว่าสิ่งนี้นำไปสู่ %"
 	},
 	"crowdBypassedTimer": {
 		"message": "สิ่งนี้จะเปิดบนแท็บใหม่ใน % วินาที"
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "สิ่งนี้จะถูกเปิดในแท็บใหม่ใน 1 วินาที"
+	},
+	"crowdCloseTimer": {
+		"message": "แท็บนี้จะปิดใน % วินาที"
+	},
+	"crowdCloseTimerSingular": {
+		"message": "แท็บนี้จะปิดใน 1 วินาที"
+	},
+	"cancel": {
+		"message": "ยกเลิก"
 	},
 	"crowdBypassedIgnore": {
 		"message": "สิ่งนี้ไม่ถูกต้องหรือไม่?"
@@ -96,9 +138,9 @@
 		"message": "คุณต้องการที่จะเปิด ในแท็บใหม่ ทันทีหรือใน x วินาทีมั้ย?"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass ช่วยป้องกัน IP คุณจากการถูกเก็บประวัติ"
+		"message": "Universal Bypass ช่วยป้องกัน IP คุณจากการถูกเก็บประวัติ."
 	},
 	"blockedSubtitle": {
-		"message": "ไม่ต้องการ Universal Bypass ป้องกันผู้ที่ไม่ประสงดีรับ IP ของคุณใช่ไหม?"
+		"message": "ไม่ต้องการให้ Universal Bypass ป้องกันผู้ที่ไม่ประสงดีรับ IP ของคุณใช่ไหม?"
 	}
 }

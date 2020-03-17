@@ -1,30 +1,33 @@
 {
 	"appDesc": {
-		"message": "Nu-ți pierde timpul așteptând după ei. Universal Bypass te scapă de linkurile scurtate, ducându-te direct la destinație."
+		"message": "Nu-ți pierde timpul așteptând. Universal Bypass te scapă de linkurile scurtate, ducându-te direct la destinație."
 	},
 	"firstrunTitle": {
 		"message": "Vă mulțumim că ați instalat Universal Bypass!"
 	},
 	"firstrunNoScript": {
-		"message": "Totuși, se pare că folosești NoScript, care interferează cu Universal Bypass."
+		"message": "Totuși, se pare că folosești NoScript sau un program similar, care nu este compatibil cu Universal Bypass."
 	},
 	"version": {
 		"message": "Versiunea"
 	},
+	"definitionsVersion": {
+		"message": "Definitii pentru ocolire"
+	},
 	"changelog": {
-		"message": "Schimbări"
+		"message": "Istoricul modificărilor"
 	},
 	"update": {
-		"message": "Verifică pentru update-uri"
+		"message": "Verificați pentru actualizări"
 	},
 	"updating": {
-		"message": "Instalam definițile de bypass"
+		"message": "Descărcăm definițiile de ocolire..."
 	},
 	"updateYes": {
-		"message": "Instalarea definiților bypass a avut succes"
+		"message": "Instalarea definiților de ocolire a avut succes"
 	},
 	"updateNo": {
-		"message": "Definițile bypass sunt cele mai noi."
+		"message": "Definițiile de ocolire sunt cele mai noi."
 	},
 	"faq": {
 		"message": "Întrebări populare"
@@ -33,7 +36,7 @@
 		"message": "Universal Bypass a evitat deja % site-uri pentru tine."
 	},
 	"support": {
-		"message": "Ajută Universal Bypass"
+		"message": "Ajută Universal Bypass."
 	},
 	"options": {
 		"message": "Opțiuni"
@@ -42,10 +45,13 @@
 		"message": "Schimbă setările Universal Bypass."
 	},
 	"optionsEnabled": {
-		"message": "Pornește bypassul."
+		"message": "Pornește evitarea de site-uri scurtate."
 	},
 	"optionsNavigationDelay": {
-		"message": "Dute la destinație după % secund(e)"
+		"message": "Du-mă la destinație după % secund(e)"
+	},
+	"optionsTrackerBypass": {
+		"message": "Ocoleste urmaritori (cum ar fi bit.ly si t.co) folosind Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Du-mă instant la destinația urmăritorilor."
@@ -87,16 +93,16 @@
 		"message": "Nu vei mai fi detectat în % secunde"
 	},
 	"beforeNavigateUnsafeTimerSingular": {
-		"message": "Nu vei mai fi detectat în o secundă"
+		"message": "Nu vei mai fi detectat într-o secundă"
 	},
 	"beforeNavigateTimer": {
 		"message": "Vei fi redirectionat automat in % secunde."
 	},
 	"beforeNavigateTimerSingular": {
-		"message": "Vei fi redirectionat automat in 1 secundă."
+		"message": "Vei fi redirectionat automat intr-o secunda.\n"
 	},
 	"beforeNavigateOptions": {
-		"message": "Vrei sa fi redirecționat instantaneu sau in x secunde?"
+		"message": "Vrei sa fi redirecționat instant sau in x secunde?"
 	},
 	"crowdWait": {
 		"message": "Din păcăte, ești primul care să dea de acest link, dar după ce aștepți, alți utilizatori Universal Bypass nu vor mai trebuiască să aștepte."
@@ -120,7 +126,7 @@
 		"message": "Această pagină va fi închisă în % secunde."
 	},
 	"crowdCloseTimerSingular": {
-		"message": "Această pagină va fi închisă într-o secundă."
+		"message": "Această pagină se va inchide într-o secundă."
 	},
 	"cancel": {
 		"message": "Anulează."

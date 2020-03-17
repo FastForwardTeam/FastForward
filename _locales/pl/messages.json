@@ -1,6 +1,6 @@
 {
 	"appDesc": {
-		"message": "Nie marnuj czasu na poświęcenia, Uniwersalny Bypass automatycznie pomija irytujące skróty linkowe."
+		"message": "Nie marnuj czasu na przestrzeganie przepisów, Uniwersalny Bypass automatycznie pomija irytujące skróty linkowe."
 	},
 	"firstrunTitle": {
 		"message": "Dziękujemy za instalacje Uniwersalnego Obejścia!"
@@ -85,6 +85,9 @@
 	},
 	"beforeNavigateDestination": {
 		"message": "Twoje miejsce docelowe jest %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "على أية حال، اذا انتقلت الان، سيكتشفون استخدامك لالمتجاوز الشامل."
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "Nie będziesz wykrywany za % sekund."
