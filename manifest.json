@@ -11,7 +11,7 @@
 	"name": "Universal Bypass",
 	"description": "__MSG_appDesc__",
 	"homepage_url": "https://universal-bypass.org/",
-	"version": "13.8",
+	"version": "13.8.1",
 	"author": "Tim \"timmyRS\" Speckhals",
 	"permissions": [
 		"alarms",
