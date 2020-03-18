@@ -125,6 +125,7 @@
 		"*://*.noriskdomain.com/*/analyze?*"
 	],
 	"param_go_base64": [
+		"*://*/api/index.php?go=*",
 		"*://*.telolet.in/?go=*",
 		"*://*.lompat.in/?go=*",
 		"*://safelink.grandmovie21.com/?go=*"
