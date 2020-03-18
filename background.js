@@ -600,7 +600,7 @@ const onBeforeRequest_rules = {
 				break
 			}
 		}
-		return getRedirect(atob(details.url.substr(details.url.indexOf("?r=")+3)),details.url,safe_in)
+		return getRedirect(atob(decodeURIComponent(details.url.substr(details.url.indexOf("?r=")+3))),details.url,safe_in)
 	},
 	param_kareeI_base64_pipes: details => getRedirect(atob(details.url.substr(details.url.indexOf("?kareeI=")+8)).split("||")[0]),
 	param_cr_base64: details => {
