@@ -744,9 +744,10 @@ ensureDomLoaded(()=>{
 			ifElement("#download",b=>safelyNavigate(b.href))
 		}
 	})
-	hrefBypass(/4snip\.pw\/(out|decode)\//,()=>{
+	hrefBypass(/(4snip\.pw|flare\.icu)\/(out|decode)\//,()=>{
 		let f=document.querySelector("form[action^='../out2/']")
 		f.setAttribute("action",f.getAttribute("action").replace("../out2/","../outlink/"))
+		countIt()
 		f.submit()
 	})
 	domainBypass(/douploads\.(com|net)/,()=>{
