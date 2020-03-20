@@ -696,6 +696,13 @@ const onBeforeRequest_rules = {
 			return getRedirect(String.fromCharCode.apply(String,a))
 		}
 	},
+	param_to_base64: details => {
+		let url=new URL(details.url)
+		if(url.searchParams.has("to"))
+		{
+			return getRedirect(atob(url.searchParams.get("to")))
+		}
+	},
 	tracker: details => {
 		if(trackerBypassEnabled&&new URL(details.url).pathname!="/")
 		{

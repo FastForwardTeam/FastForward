@@ -185,6 +185,9 @@
 		"*://*.365myoffice.com/?go=*",
 		"*://*.shiroyasha.me/?go=*"
 	],
+	"param_to_base64": [
+		"*://*.beermoneyforum.com/redirect?*"
+	],
 	"useragent_googlebot": [
 		"*://*.haaretz.co.il/*"
 	],

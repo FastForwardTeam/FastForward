@@ -1241,6 +1241,13 @@ ensureDomLoaded(()=>{
 	}))
 	domainBypass("tricxbd.com",()=>ifElement("a#get_btn[href]",a=>safelyAssign(a.href)))
 	domainBypass("do.customercareal.com",()=>ifElement("a#locked_action_link[href]",a=>safelyAssign(a.href),()=>ifElement("div.links_actions > a.blue[href]",a=>safelyAssign(a.href),()=>ifElement("a#redirecting_counter[href]",a=>safelyNavigate(a.href)))))
+	hrefBypass(/beermoneyforum\.com\/redirect/,()=>{//deprecated: bypassed by background.js after 13.8.2
+		const s=new URLSearchParams(location.search)
+		if(s.has("to"))
+		{
+			safelyNavigate(atob(s.get("to")))
+		}
+	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
