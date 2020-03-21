@@ -446,7 +446,10 @@ domainBypass(/wadooo\.com|gotravelgo\.space|pantauterus\.me|liputannubi\.net/,()
 	crowdPath(location.hash.substr(1))
 	crowdBypass()
 })
-domainBypass("lnk.news",()=>ifElement("#skip_form",f=>goToUrl(),ifElement("#display_go_form",f=>f.submit())))
+domainBypass("lnk.news",()=>ifElement("#skip_form",f=>goToUrl(),ifElement("#display_go_form",f=>{
+	countIt()
+	f.submit()
+})))
 hrefBypass(/uiz\.(io|app)\/go/,()=>{
 	Object.freeze(location)
 	ensureDomLoaded(()=>{
@@ -482,6 +485,7 @@ hrefBypass(/gixen\.com\/home_1\.php/,()=>{
 		f.action="home_2.php?sessionid="+sid
 		f.innerHTML='<input type="hidden" name="gixenlinkcontinue" value="1">'
 		document.documentElement.appendChild(f)
+		countIt()
 		f.submit()
 	}
 })
@@ -635,6 +639,7 @@ ensureDomLoaded(()=>{
 			f.method="POST"
 			f.innerHTML='<input type="hidden" name="_image" value="Continue">'
 			f=document.documentElement.appendChild(f)
+			countIt()
 			f.submit()
 		}
 	})
@@ -760,8 +765,8 @@ ensureDomLoaded(()=>{
 		f.method="POST"
 		f.innerHTML='<input type="hidden" name="op" value="download1"><input type="hidden" name="usr_login" value="C"><input type="hidden" name="id" value="'+location.pathname.substr(1)+'"><input type="hidden" name="fname" value="'+document.querySelectorAll("div#container > div > div > table > tbody > tr > td")[2].textContent+'"><input type="hidden" name="referer" value="q"><input type="hidden" name="method_free" value="Free Download">'
 		f=document.documentElement.appendChild(f)
+		countIt()
 		f.submit()
-		return finish()
 	})
 	domainBypass("goou.in",()=>ifElement("div#download_link > a#download[href]",a=>a.href))
 	domainBypass("ryn.cc",()=>{
@@ -917,6 +922,7 @@ ensureDomLoaded(()=>{
 		f.method="POST"
 		f.action="https://xxx.lewd.ninja/game/"+m[1]+"/out/"+m[2]
 		f=document.body.appendChild(f)
+		countIt()
 		f.submit()
 	})
 	domainBypass("xxx.lewd.ninja",()=>safelyNavigate(document.body.textContent))
@@ -944,6 +950,7 @@ ensureDomLoaded(()=>{
 			f.method="POST"
 			f.innerHTML='<input name="op" value="download2"><input name="id" value="'+location.pathname.substr(1)+'">'
 			document.body.appendChild(f)
+			countIt()
 			f.submit()
 		})
 	})
@@ -982,7 +989,10 @@ ensureDomLoaded(()=>{
 	})
 	domainBypass(/terbit21\.(club|online|host|show)/,()=>ifElement("a#downloadbutton[href]",a=>safelyAssign(a.href)))
 	domainBypass("onepieceex.net",()=>ifElement("noscript",n=>safelyNavigate(n.textContent)))
-	domainBypass("felanovia.com",()=>ifElement("form",f=>f.submit()))
+	domainBypass("felanovia.com",()=>ifElement("form",f=>{
+		countIt()
+		f.submit()
+	}))
 	domainBypass("redir.animenine.net",()=>ifElement("a#lanjutkeun[href]",a=>safelyNavigate(a.href)))
 	hrefBypass(/download\.id\/thank-you\//,()=>{
 		if(typeof download=="function")
@@ -1074,6 +1084,7 @@ ensureDomLoaded(()=>{
 	domainBypass("cuturl.cc",()=>{
 		if(typeof PushLink=="function")
 		{
+			countIt()
 			PushLink()
 		}
 	})
@@ -1087,6 +1098,7 @@ ensureDomLoaded(()=>{
 	domainBypass("subsvip.com",()=>{
 		if(typeof link=="function")
 		{
+			countIt()
 			link()
 		}
 	})
@@ -1117,6 +1129,7 @@ ensureDomLoaded(()=>{
 		if(typeof count=="number"&&typeof countdown=="function")
 		{
 			count=1
+			countIt()
 		}
 	})
 	hrefBypass(/flarefiles\.com\/drive\/[A-Za-z0-9]+\/genLink\.php/,()=>location.href="serveRequest.php")
@@ -1127,6 +1140,7 @@ ensureDomLoaded(()=>{
 		f.submit()
 	},()=>ifElement(".the-form",f=>{
 		f.target="_self"
+		countIt()
 		f.submit()
 	})))
 	domainBypass("apunkasoftware.net",ifElement("a#dlink[href]",a=>safelyNavigate(a.href),()=>ifElement("form#gip_form[action='https://www.apunkasoftware.net/download-process.php']",f=>f.submit())))
@@ -1166,7 +1180,10 @@ ensureDomLoaded(()=>{
 	domainBypass("filesupload.org",()=>ifElement("a[href='?unlock']",a=>safelyAssign(a.href),()=>ifElement(".download-timer",()=>awaitElement(".download-timer>form>input[name='link']",i=>safelyAssign(i.value)))))
 	hrefBypass(/nexusmods\.com\/.*\/mods\/[0-9]*\?tab=files&file_id=[0-9]*$/,()=>{
 		window.setTimeout=f=>setTimeout(f,1)
-		ifElement("#slowDownloadButton",a=>a.click())
+		ifElement("#slowDownloadButton",a=>{
+			countIt()
+			a.click()
+		})
 	})
 	domainBypass("myotto.online",()=>ifElement("button#makingdifferenttimer > a[href]",a=>safelyAssign(a.href)))
 	domainBypass("disiniaja.site",()=>ifElement("button > a.button[href]",a=>safelyAssign(a.href)))
@@ -1174,6 +1191,7 @@ ensureDomLoaded(()=>{
 		if(typeof wt=="number")
 		{
 			wt=0
+			countIt()
 		}
 	})
 	domainBypass("filehorse.com",()=>ifElement("a#download_url[href]",a=>{
@@ -1200,12 +1218,14 @@ ensureDomLoaded(()=>{
 	domainBypass("otewe.net",()=>ifElement("#form-human",f=>f.submit(),()=>{
 		if(typeof createurl=="function")
 		{
+			countIt()
 			createurl()
 		}
 	}))
 	domainBypass("vexfile.com",()=>{
 		if(typeof levelF=="function")
 		{
+			countIt()
 			levelF()
 		}
 	})
@@ -1219,17 +1239,22 @@ ensureDomLoaded(()=>{
 			bt:0,
 			bw:"gecko",
 			ic:0
-		},()=>location.reload(),"text")
+		},()=>{
+			countIt()
+			location.reload()
+		},"text")
 	}))
 	domainBypass("theartistunion.com",()=>awaitElement(".modal--download",()=>{
 		let xhr=new XMLHttpRequest()
 		xhr.onload=()=>safelyNavigate(JSON.parse(xhr.responseText).audio_source)
 		xhr.open("GET","/api/v3"+location.pathname+".json",true)
+		countIt()
 		xhr.send()
 	}))
 	domainBypass("boomx5.com",()=>ifElement("#form",f=>{
 		f.action=location.href
 		f.innerHTML='<input type="hidden" name="s_s" value="2">'
+		countIt()
 		f.submit()
 	}))
 	domainBypass("cloudgallery.net",()=>ifElement("#soDaBug",i=>{
@@ -1253,6 +1278,7 @@ ensureDomLoaded(()=>{
 		f.method="POST"
 		f.innerHTML='<input type="hidden" name="r_clicked" value="1">'
 		document.body.appendChild(f)
+		countIt()
 		f.submit()
 	}))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
