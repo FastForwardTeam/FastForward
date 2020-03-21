@@ -1248,6 +1248,13 @@ ensureDomLoaded(()=>{
 			safelyNavigate(atob(s.get("to")))
 		}
 	})
+	domainBypass("iloadit11.info",()=>ifElement("button#timerbtn",()=>{
+		let f=document.createElement("form")
+		f.method="POST"
+		f.innerHTML='<input type="hidden" name="r_clicked" value="1">'
+		document.body.appendChild(f)
+		f.submit()
+	}))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
