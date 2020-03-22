@@ -1332,20 +1332,23 @@ ensureDomLoaded(()=>{
 		}))
 		/*jshint ignore:end*/
 	}
-	domainBypass(/pahe\.(in|me)/,()=>document.querySelectorAll("a.shortc-button.small[href*='?id=']").forEach(a=>{
+	domainBypass(/pahe\.(in|me)/,()=>document.querySelectorAll("a.shortc-button.small[href*='?c4871c3e35=']").forEach(a=>{
 		let qe=a.previousElementSibling
-		while(qe&&qe.tagName!="B")
+		while(qe&&qe.tagName!="B"&&qe.tagName!="STRONG")
 		{
 			qe=qe.previousElementSibling
 		}
-		a.href=a.href.replace("intercelestial","sweetlantern")
 		a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"")
 		let ep=a.parentNode.querySelector("span[style] > b")
 		if(ep!==null)
 		{
 			a.href+=ep.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
 		}
-		a.href+=qe.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.toLowerCase()
+		if(qe!==null)
+		{
+			a.href+=qe.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
+		}
+		a.href+=a.textContent.toLowerCase()
 	}))
 	domainBypass("channelmyanmar.org",()=>document.querySelectorAll("a[href^='https://channelmyanmar.org?1c17f28bf0=']").forEach(a=>{
 		if(a.classList.contains("FLMBTN-Btn"))
@@ -1575,6 +1578,11 @@ ensureDomLoaded(()=>{
 
 					case "intipanime.com":
 					referer="https://bakadame.com/?e41b7e5034="+id
+					break;
+
+					case "sweetlantern.com":
+					case "intercelestial.com":
+					referer="https://pahe.me/?c4871c3e35="+id
 					break;
 				}
 				referer+="#bypassClipboard="+bypassClipboard
