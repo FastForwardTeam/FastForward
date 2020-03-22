@@ -1381,7 +1381,7 @@ ensureDomLoaded(()=>{
 	domainBypass("mkvking.com",()=>document.querySelectorAll("a[href^='https://mkvking.com?c17421bdaf=']").forEach(a=>{
 		a.href+="#bypassClipboard="+a.getAttribute("title").split("Download ").join("").replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
 	}))
-	domainBypass("oploverz.in",()=>document.querySelectorAll("a[href^='https://travellinginfos.com/?id=']").forEach(a=>{
+	domainBypass("oploverz.in",()=>document.querySelectorAll("a[href*='?id=']").forEach(a=>{
 		let ld=a.closest(".list-download")
 		if(ld)
 		{
