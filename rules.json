@@ -110,7 +110,8 @@
 		"*://*.mispuani.xyz/*?url=*",
 		"*://*.ad4msan.win/safe?url=*",
 		"*://*.infotekno.net/vga?url=*",
-		"*://*.sehuruf.com/linkku/?url=*"
+		"*://*.sehuruf.com/linkku/?url=*",
+		"*://*.k2nblog.com/gotothedl.html?url=*"
 	],
 	"param_id_base64": [
 		"*://*/p/*.html?id=*",
