@@ -1333,7 +1333,7 @@ ensureDomLoaded(()=>{
 		}))
 		/*jshint ignore:end*/
 	}
-	domainBypass(/pahe\.(in|me)/,()=>document.querySelectorAll("a.shortc-button.small[href*='?c4871c3e35=']").forEach(a=>{
+	domainBypass(/pahe\.(in|me)/,()=>document.querySelectorAll("a.shortc-button.small[href*='?c4871c3e35='], a.shortc-button.small[href*='?id=']").forEach(a=>{
 		let qe=a.previousElementSibling
 		while(qe&&qe.tagName!="B"&&qe.tagName!="STRONG")
 		{
