@@ -450,7 +450,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	return {redirectUrl:brws.runtime.getURL("html/options.html")+details.url.substr(36)}
-},{types:["main_frame"],urls:["https://universal-bypass.org/options"]},["blocking"])
+},{types:["main_frame"],urls:["https://universal-bypass.org/options*"]},["blocking"])
 
 // Navigation handling including presenting referer header to destinations
 var refererCache={}
