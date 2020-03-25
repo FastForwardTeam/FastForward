@@ -4,7 +4,7 @@
 
 //Copying important functions to avoid interference from other extensions or the page
 const ODP=(t,p,o)=>{try{Object.defineProperty(t,p,o)}catch(e){console.trace("[Universal Bypass] Couldn't define",p)}},
-setTimeout=window.setTimeout,setInterval=window.setInterval,
+setTimeout=window.setTimeout,setInterval=window.setInterval,URL=window.URL,
 transparentProperty=(name,valFunc)=>{
 	let real
 	ODP(window,name,{
@@ -1282,6 +1282,7 @@ ensureDomLoaded(()=>{
 		f.submit()
 	}))
 	domainBypass("sorewa.net",()=>ifElement("p[style='text-align: center;'] > strong > a[href]",a=>safelyNavigate(a.href)))
+	domainBypass("akwam.net",()=>ifElement(".btn-loader > a.link.btn.btn-light[href][download]",a=>safelyNavigate(a.href)))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
