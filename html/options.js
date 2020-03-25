@@ -87,7 +87,11 @@ if(hash)
 	}
 	else
 	{
-		document.querySelector("[for='"+hash+"']").classList.add("uk-text-warning")
+		let elm=document.querySelector("[for='"+hash+"']")
+		if(elm)
+		{
+			elm.classList.add("uk-text-warning")
+		}
 	}
 }
 
