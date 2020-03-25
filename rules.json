@@ -133,7 +133,8 @@
 		"*://*/api/index.php?go=*",
 		"*://*.telolet.in/?go=*",
 		"*://*.lompat.in/?go=*",
-		"*://safelink.grandmovie21.com/?go=*"
+		"*://*.grandmovie21.com/?go=*",
+		"*://*.postku.org/?go=*"
 	],
 	"param_site_base64": [
 		"*://*.masreyhan.com/*?site=*",
