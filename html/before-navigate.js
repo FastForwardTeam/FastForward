@@ -11,7 +11,8 @@ if(args.has("target"))
 		brws.storage.sync.get(["navigation_delay","no_instant_navigation_trackers"],res=>{
 			if(res.navigation_delay==0||(referer=="tracker"&&res.no_instant_navigation_trackers!=="true"))
 			{
-				document.write("")
+				document.querySelector("div").innerHTML="<p></p>"
+				document.querySelector("p").textContent=brws.i18n.getMessage("beforeNavigateInstant").replace("%",args.get("target"))
 				location.href=a.href
 			}
 			else
