@@ -1300,6 +1300,7 @@ ensureDomLoaded(()=>{
 			}
 		}
 	})
+	domainBypass("lefturl.com",()=>ifElement("a.download-link[href]",a=>safelyNavigate(a.href)))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
