@@ -1484,6 +1484,23 @@ ensureDomLoaded(()=>{
 		let qe=a.closest("ul").previousElementSibling,ep=a.closest(".dlmn321").previousElementSibling
 		a.href+="#bypassClipboard="+location.pathname.replace(/[^\w]/g,"")+qe.textContent.replace(/[^\w]/g,"").toLowerCase()+ep.textContent.replace(/[^\w]/g,"").toLowerCase()+a.textContent.replace(/[^\w]/g,"").toLowerCase()
 	}))
+	domainBypass("bakacan.id",()=>document.querySelectorAll("a[href^='https://apasih.pw/?id=']").forEach(a=>{
+		let qe=a.previousElementSibling
+		while(qe&&qe.tagName!="B")
+		{
+			qe=qe.previousElementSibling
+		}
+		a.href+="#bypassClipboard="+location.pathname.replace(/[^\w]/g,"")
+		if(qe!==null)
+		{
+			a.href+=a.closest("ul").previousElementSibling.textContent.replace(/[^\w]/g,"").toLowerCase()+qe.textContent.replace(/[^\w]/g,"").toLowerCase()
+		}
+		else
+		{
+			a.href+=a.parentNode.previousElementSibling.textContent.replace(/[^\w]/g,"").toLowerCase()
+		}
+		a.href+=a.textContent.replace(/[^\w]/g,"").toLowerCase()
+	}))
 	if(document.querySelector(".sorasubmit"))
 	{
 		document.querySelector(".sorasubmit").click()
