@@ -104,6 +104,9 @@
 	"beforeNavigateOptions": {
 		"message": "Chcete byť presmerovaný okamžite alebo o X sekúnd?"
 	},
+	"beforeNavigateInstant": {
+		"message": "Budete premiestnený na %"
+	},
 	"crowdWait": {
 		"message": "Ste prvý/á, kto navštívil túto stránku, ale ako ste Vy čakalim iný používatelia Universal Bypassu by už nemuseli."
 	},

@@ -104,6 +104,9 @@
 	"beforeNavigateOptions": {
 		"message": "Bạn có muốn điều hướng nhanh hoặc trong x giây?"
 	},
+	"beforeNavigateInstant": {
+		"message": "Bạn đang được điều hướng đến %"
+	},
 	"crowdWait": {
 		"message": "Thật không may, bạn là người đầu tiên gặp phải liên kết này, nhưng sau khi bạn chờ đợi, những người dùng Universal Bypass khác sẽ không còn phải làm như vậy nữa."
 	},

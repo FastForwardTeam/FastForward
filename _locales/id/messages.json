@@ -104,6 +104,9 @@
 	"beforeNavigateOptions": {
 		"message": "Apakah anda ingin dialihkan secara langsung atau dalam x detik?"
 	},
+	"beforeNavigateInstant": {
+		"message": "Anda sedang diarahkan ke %"
+	},
 	"crowdWait": {
 		"message": "Sayangnya, anda adalah orang yang pertama kali mengakses tautan ini, akan tetapi setelah anda melewatinya, pengguna Universal Bypass lainnya tidak perlu lagi melakukannya."
 	},

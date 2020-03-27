@@ -8,8 +8,20 @@
 	"firstrunNoScript": {
 		"message": "Niceméně, vypadá že používáte NoScript nebo něco podobného, s kterým Universal Bypass není kompatibilní."
 	},
+	"version": {
+		"message": "Verze"
+	},
+	"changelog": {
+		"message": "Přehled změn"
+	},
+	"update": {
+		"message": "Zkontrolovat aktualizace"
+	},
 	"faq": {
 		"message": "Často kladené otázky (FAQ)"
+	},
+	"support": {
+		"message": "Přispějte k Universal Bypass."
 	},
 	"options": {
 		"message": "Možnosti"
@@ -29,6 +41,9 @@
 	"privacyPolicy": {
 		"message": "Zásady ochrany osobních údajů"
 	},
+	"contributors": {
+		"message": "Přispěvatelé"
+	},
 	"optionsUserscripts": {
 		"message": "Vlastní obcházení"
 	},
@@ -38,14 +53,38 @@
 	"beforeNavigateDestination": {
 		"message": "Vaše destinace tohoto zkráceného odkazu je %"
 	},
+	"beforeNavigateTimer": {
+		"message": "Budete automaticky přesměrováni za % sekund."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Budete automaticky přesměrováni za 1 sekundu."
+	},
 	"crowdBypassed": {
 		"message": "Nemusel byste čekat!"
 	},
 	"crowdBypassedInfo": {
 		"message": "Ostatní uživatelé Universal Bypass na vás čekali a náhlasit to vede k %"
 	},
+	"crowdBypassedTimer": {
+		"message": "Toto bude otevřeno na nové kartě za % sekund."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Toto bude otevřeno na nové kartě za 1 sekundu."
+	},
+	"crowdCloseTimer": {
+		"message": "Tato karta se uzavře za % sekund."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Tato karta se zavře za 1 sekundu."
+	},
+	"cancel": {
+		"message": "Zrušit."
+	},
 	"crowdBypassedIgnore": {
 		"message": "Nebylo to správně?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Přejete si, aby byla tato karta otevřena v nové kartě okamžitě nebo za x sekund?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass ochránil vaši IP před zaznamenáním."

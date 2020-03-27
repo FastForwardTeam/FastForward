@@ -104,6 +104,9 @@
 	"beforeNavigateOptions": {
 		"message": "Wil je gelijk worden doorgestuurd of na x seconden?"
 	},
+	"beforeNavigateInstant": {
+		"message": "Je wordt doorgestuurd naar %"
+	},
 	"crowdWait": {
 		"message": "Helaas ben je de eerste die deze link tegenkomt, maar nadat je hebt gewacht hoeven anderen dat niet meer."
 	},

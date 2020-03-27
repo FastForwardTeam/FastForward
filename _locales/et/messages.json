@@ -62,6 +62,9 @@
 	"optionsCrowdBypass": {
 		"message": "Saate saata ja vastu võtta sihtkohti, millest ei saa mööda minna."
 	},
+	"optionsCrowdAutoOpen": {
+		"message": "Pärast % sekundi möödumist avage uuel vahelehel rahvahulgaga sihtkohad."
+	},
 	"privacyPolicy": {
 		"message": "Privaatsusreeglid"
 	},
@@ -97,6 +100,9 @@
 	},
 	"beforeNavigateOptions": {
 		"message": "Kas soovite, et teid suunataks kohe või mõne sekundi pärast?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Sind suunatakse %"
 	},
 	"crowdWait": {
 		"message": "Kahjuks olete selle lingi kaudu esimestena kokku puutunud, kuid pärast teie ootust ei pea teised Universal Bypass'i kasutajad enam ootama."

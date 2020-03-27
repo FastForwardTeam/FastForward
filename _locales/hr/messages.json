@@ -104,6 +104,9 @@
 	"beforeNavigateOptions": {
 		"message": "Dali želite biti preusmjereni odmah ili za x sekundi?"
 	},
+	"beforeNavigateInstant": {
+		"message": "Navođenje do %"
+	},
 	"crowdWait": {
 		"message": "Nažalost, vi ste prvi koji je naišao na ovaj link, ali nakon što ste čekali, ostali korisnici Universal Bypass-a više ne moraju čekati."
 	},

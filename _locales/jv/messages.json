@@ -104,6 +104,9 @@
 	"beforeNavigateOptions": {
 		"message": "Menopo panjenengan pingin dialihne langsung utawi ing x detik?"
 	},
+	"beforeNavigateInstant": {
+		"message": "Panjenengan lagi diarahaken menyang %"
+	},
 	"crowdWait": {
 		"message": "Sayange, panjenengan minangka tiyang ingkang pertama ngliwati link niki, nanging sakwise panjenengan sampun ngliwati, pangguna Universal Bypass liyane mboten perlu ngliwati malih."
 	},

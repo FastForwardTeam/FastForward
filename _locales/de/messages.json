@@ -104,6 +104,9 @@
 	"beforeNavigateOptions": {
 		"message": "Möchtest du sofort oder in x Sekunden weitergeleitet werden?"
 	},
+	"beforeNavigateInstant": {
+		"message": "Du wirst navigiert zu %"
+	},
 	"crowdWait": {
 		"message": "Leider bist du der erste, der auf diesen Link trifft, aber nachdem du gewartet hast, müssen andere Universal Bypass Nutzer es nicht mehr tun."
 	},

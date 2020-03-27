@@ -11,6 +11,9 @@
 	"version": {
 		"message": "വേർഷൻ"
 	},
+	"definitionsVersion": {
+		"message": "ബൈപാസ് നിർവചനങ്ങൾ"
+	},
 	"changelog": {
 		"message": "പുതിയ മാറ്റങ്ങൾ"
 	},

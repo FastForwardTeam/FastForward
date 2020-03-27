@@ -104,6 +104,9 @@
 	"beforeNavigateOptions": {
 		"message": "すぐに、または数秒後にリダイレクトされるようにしたいですか?"
 	},
+	"beforeNavigateInstant": {
+		"message": "% に移動しています"
+	},
 	"crowdWait": {
 		"message": "残念ながら、あなたはこのリンクの最初のアクセス者です。しばらくすれば、ほかのUniversal Bypassユーザーが待つ必要はなくなります。"
 	},
