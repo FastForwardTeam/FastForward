@@ -1305,6 +1305,13 @@ ensureDomLoaded(()=>{
 		}
 	})
 	domainBypass("lefturl.com",()=>ifElement("a.download-link[href]",a=>safelyNavigate(a.href)))
+	domainBypass("worldofmods.com",()=>ifElement(".repost-button-twitter",b=>{
+		window.open=_=>{}
+		setTimeout(()=>{
+			b.click()
+			awaitElement("a#download-button[href]",a=>safelyNavigate(a.href))
+		},500)
+	}))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
