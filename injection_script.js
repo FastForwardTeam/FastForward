@@ -346,6 +346,10 @@ for(let key in forced_safelink)
 ODP(window,"soralink",{
 	get:()=>{}
 })
+//Adtival
+ODP(window,"adtival_base64_encode",{
+	get:()=>{}
+})
 //Shorte.st
 transparentProperty("reqwest",r=>(typeof app!="undefined"&&document.querySelector(".skip-add-container .first-img[alt='Shorte.st']"))?a=>{
 	if(a.type==="jsonp")
@@ -1475,6 +1479,10 @@ ensureDomLoaded(()=>{
 			res=res.previousElementSibling
 		}
 		a.href+="#bypassClipboard="+qe.textContent.replace(/[^\w]/g,"").toLowerCase()+res.textContent.replace(/[^\w]/g,"").toLowerCase()+ver.textContent.replace(/[^\w]/g,"").toLowerCase()+a.textContent.replace(/[^\w]/g,"").toLowerCase()
+	}))
+	domainBypass("koenime.com",()=>document.querySelectorAll("a[href^='https://apasih.pw/?id=']").forEach(a=>{
+		let qe=a.closest("ul").previousElementSibling,ep=a.closest(".dlmn321").previousElementSibling
+		a.href+="#bypassClipboard="+location.pathname.replace(/[^\w]/g,"")+qe.textContent.replace(/[^\w]/g,"").toLowerCase()+ep.textContent.replace(/[^\w]/g,"").toLowerCase()+a.textContent.replace(/[^\w]/g,"").toLowerCase()
 	}))
 	if(document.querySelector(".sorasubmit"))
 	{
