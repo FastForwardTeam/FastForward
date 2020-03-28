@@ -450,7 +450,7 @@ domainBypass(/wadooo\.com|gotravelgo\.space|pantauterus\.me|liputannubi\.net/,()
 	crowdPath(location.hash.substr(1))
 	crowdBypass()
 })
-domainBypass("lnk.news",()=>ifElement("#skip_form",f=>goToUrl(),ifElement("#display_go_form",f=>{
+domainBypass("lnk.news",()=>ifElement("#skip_form",f=>goToUrl(),()=>ifElement("#display_go_form",f=>{
 	countIt()
 	f.submit()
 })))
@@ -510,15 +510,13 @@ domainBypass("tik.lat",()=>{
 domainBypass(/linkvertise\.(com|net)|link-to\.net/,()=>{
 	let o={timestamp:new Date().getTime(),random:"375123"},
 	url="https://linkvertise.net/api/v1/redirect/link/static"+location.pathname
-	fetch(url).then(r=>r.text()).then(r=>{
-		let json=JSON.parse(r)
+	fetch(url).then(r=>r.json()).then(json=>{
 		if(json&&json.data.link.id)
 		{
 			o.link_id=json.data.link.id
 			url="https://linkvertise.net/api/v1/redirect/link"+location.pathname+"/target?serial="+btoa(JSON.stringify(o))
 		}
-	}).then(()=>fetch(url)).then(r=>r.text()).then(r=>{
-		let json=JSON.parse(r)
+	}).then(()=>fetch(url)).then(r=>r.json()).then(json=>{
 		if(json&&json.data.target)
 		{
 			safelyNavigate(json.data.target)
@@ -1147,7 +1145,7 @@ ensureDomLoaded(()=>{
 		countIt()
 		f.submit()
 	})))
-	domainBypass("apunkasoftware.net",ifElement("a#dlink[href]",a=>safelyNavigate(a.href),()=>ifElement("form#gip_form[action='https://www.apunkasoftware.net/download-process.php']",f=>f.submit())))
+	domainBypass("apunkasoftware.net",()=>ifElement("a#dlink[href]",a=>safelyNavigate(a.href),()=>ifElement("form#gip_form[action='https://www.apunkasoftware.net/download-process.php']",f=>f.submit())))
 	domainBypass("disingkat.in",()=>ifElement("a.redirect[href]",a=>safelyNavigate(a.href),()=>{
 		if(typeof ab=="number"&&typeof asdf=="function")
 		{
