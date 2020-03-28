@@ -1312,7 +1312,7 @@ ensureDomLoaded(()=>{
 			awaitElement("a#download-button[href]",a=>safelyNavigate(a.href))
 		},500)
 	}))
-	domainBypass("linkconfig.com",()=>ifElement("a#download[href]",a=>safelyAssign(a.href)))
+	domainBypass("linkconfig.com",()=>ifElement("a#download[href]",a=>safelyNavigate(a.href)))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
