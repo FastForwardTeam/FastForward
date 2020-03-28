@@ -109,6 +109,7 @@
 	],
 	"param_url_base64": [
 		"*://*/p/*.html?url=*",
+		"*://*.blogspot.com/*/*/*?url=*",
 		"*://*/descargar/index.php?url=*",
 		"*://*.mispuani.xyz/*?url=*",
 		"*://*.safelinku.icu/*?url=*",
