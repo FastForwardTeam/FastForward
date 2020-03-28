@@ -1313,6 +1313,8 @@ ensureDomLoaded(()=>{
 		},500)
 	}))
 	domainBypass("linkconfig.com",()=>ifElement("a#download[href]",a=>safelyNavigate(a.href)))
+	domainBypass("yourtechnology.online",()=>ifElement("#meio > a[href]",a=>safelyAssign(a.href)))
+	domainBypass("suanoticia.online",()=>ifElement("#meio > a[href]",a=>safelyNavigate(a.href)))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
