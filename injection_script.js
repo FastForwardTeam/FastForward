@@ -1163,7 +1163,7 @@ ensureDomLoaded(()=>{
 		}
 	})
 	domainBypass("shirosafe.web.id",()=>ifElement("#cus>a[href^='https://shirosafe.web.id/']",a=>$("#tokenns").load("/hajime.php",()=>$("#tokenns").load("/sessionpunten.php",()=>safelyAssign(a.href)))))
-	domainBypass("techoow.com",()=>{
+	domainBypass(/(techoow|histotechs)\.com/,()=>{
 		window.setTimeout=f=>setTimeout(f,1)
 		window.setInterval=f=>setInterval(f,1)
 		ifElement("a.btn-success[href]",a=>safelyAssign(a.href),()=>ifElement("#count00",a=>{
