@@ -31,7 +31,6 @@
 		"*://*/full/?api=*&url=*",
 		"*://*/full?api=*&url=*&type=*",
 		"*://*/full/?api=*&url=*&type=*",
-		"*://*/api/*/full-pages?api_key=*&url=*&type=*",
 		"*://*/api/*/full-pages?api_key=*&url=*&type=*"
 	],
 	"param_url_encoded": [
