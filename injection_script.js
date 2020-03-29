@@ -91,6 +91,10 @@ domainBypass=(domain,f)=>{
 	{
 		return
 	}
+	if(typeof f!="function")
+	{
+		alert("Universal Bypass: Bypass for "+domain+" is not a function")
+	}
 	if(typeof domain=="string")
 	{
 		if(location.hostname==domain||location.hostname.substr(location.hostname.length-(domain.length+1))=="."+domain)
@@ -116,6 +120,10 @@ hrefBypass=(regex,f)=>{
 	if(bypassed)
 	{
 		return
+	}
+	if(typeof f!="function")
+	{
+		alert("Universal Bypass: Bypass for "+domain+" is not a function")
 	}
 	let res=regex.exec(location.href)
 	if(res)
