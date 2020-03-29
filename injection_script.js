@@ -1339,6 +1339,7 @@ ensureDomLoaded(()=>{
 			safelyNavigate("https://shre.su/redirect")
 		}
 	})
+	domainBypass("easylinkref.com",()=>ifElement(".easylinkref-go > strong",s=>safelyNavigate(s.textContent)))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
