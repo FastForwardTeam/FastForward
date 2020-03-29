@@ -859,7 +859,7 @@ ensureDomLoaded(()=>{
 		document.querySelector("#captchaVerifiedStatus").click()
 		doTheThing(()=>doTheThing(()=>doTheThing(()=>document.querySelector("#template-contactform-submit").click())))
 	})
-	domainBypass(/((get-click2|informations-library|media-blue|akashirohige)\.blogspot|business\.ominfoupdate|majidzhacker|citgratis|tekloggers)\.com|pastikan\.me|blog\.infolanjutan\.xyz/,()=>{
+	domainBypass(/((get-click2|informations-library|media-blue|akashirohige)\.blogspot|business\.ominfoupdate|majidzhacker|citgratis|tekloggers)\.com|pastikan\.me|blog\.infolanjutan\.xyz|safe\.onbatch\.my\.id/,()=>{
 		let u=aesCrypto.decrypt(convertstr(location.href.substr(location.href.indexOf("?o=")+3)),convertstr("root"))
 		if(isGoodLink(u))
 		{
@@ -869,6 +869,11 @@ ensureDomLoaded(()=>{
 		else if(typeof uri=="string")
 		{
 			u=aesCrypto.decrypt(convertstr(uri.substr(uri.indexOf("?o=")+3)),convertstr("root"))
+			safelyNavigate(u)
+		}
+		else if(typeof get_link=="string")
+		{
+			u=aesCrypto.decrypt(convertstr(get_link),convertstr("root"))
 			safelyNavigate(u)
 		}
 	})
