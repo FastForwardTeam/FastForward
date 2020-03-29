@@ -1333,6 +1333,12 @@ ensureDomLoaded(()=>{
 	domainBypass("yourtechnology.online",()=>ifElement("#meio > a[href]",a=>safelyAssign(a.href)))
 	domainBypass("suanoticia.online",()=>ifElement("#meio > a[href]",a=>safelyNavigate(a.href)))
 	hrefBypass(/crxne\.de\/crxneunlock\/crxne\/download\//,()=>safelyNavigate("https://crxne.de/crxneunlock/crxne/download/links/downloadlinks.html"))
+	domainBypass("shre.su",()=>{
+		if(location.pathname!="/redirect")
+		{
+			safelyNavigate("https://shre.su/redirect")
+		}
+	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
