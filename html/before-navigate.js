@@ -13,7 +13,7 @@ if(args.has("target"))
 			{
 				document.querySelector("div").innerHTML="<p></p>"
 				document.querySelector("p").textContent=brws.i18n.getMessage("beforeNavigateInstant").replace("%",args.get("target"))
-				location.href=a.href
+				setTimeout(()=>location.href=a.href,10)
 			}
 			else
 			{
