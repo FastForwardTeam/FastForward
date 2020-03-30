@@ -11,11 +11,17 @@
 	"version": {
 		"message": "Bersyon"
 	},
+	"definitionsVersion": {
+		"message": "mga kahulugan para sa hakbangan"
+	},
 	"changelog": {
 		"message": "Mga Pagbabago"
 	},
 	"update": {
 		"message": "Suriin ang mga updates"
+	},
+	"updating": {
+		"message": "nag da-download ng mga kahulugan para sa hakbangan"
 	},
 	"updateYes": {
 		"message": "Updated na ang mga bypasses."
@@ -25,6 +31,9 @@
 	},
 	"faq": {
 		"message": "Mga Madalas na Tanong"
+	},
+	"bypassCounter": {
+		"message": "Ang Universal Bypass ay naka iwas ng % mga sites para lang sa iyo."
 	},
 	"support": {
 		"message": "Suportahan ang Universal Bypass"
@@ -41,14 +50,65 @@
 	"optionsNavigationDelay": {
 		"message": "Ipunta mo ako sa destinasyon pagkatapos ng % segundo(s)."
 	},
+	"optionsTrackerBypass": {
+		"message": "hakbangan na mga mangangaso (gaya ng bit.ly and t.co) gamit ng Apimon.de."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Kunin mo ko agad sa patutunguhan sa mga mangangaso."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Magharang ng IP loggers kung hindi ma iwasan."
+	},
+	"optionsCrowdBypass": {
+		"message": "Ibigay at kunin ang mga patutunguhan sa hindi ma iwasan na shorterners."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "bukas na crowd-sourced destination pakga bukas ng bagong tab pagkatapos ng % segundo."
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Isara ang tab na naglalaman ng crowd-sourced destination pagkatapos ng % segundo ng pagbisita ito."
+	},
 	"privacyPolicy": {
 		"message": "Patakaran sa Pagkapribado"
+	},
+	"contributors": {
+		"message": "Ang mga kontribyutor"
+	},
+	"optionsUserscripts": {
+		"message": "Pasadyang Mga Salamin"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Ito ay isang masulong na tampok para lang sa mga developers para makagawa ng sariling iskrip para ma liwasan ang mga sites. Kung perkpekto, puwde ipasa sa GitHub para idadagdag sa Universal Bypass. Para Magagamit sa lahat."
+	},
+	"beforeNavigate": {
+		"message": "malapit ka na sa iyong patutunguhan."
+	},
+	"beforeNavigateDestination": {
+		"message": "ang iyong destinasyon ay %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "gayunpaman, kung maglayag ka na, ma tiktikan nila ang Universal Bypass."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Hindi na ka makikita sa % segundo."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Hindi ka na makikita sa 1 segundo."
 	},
 	"beforeNavigateTimer": {
 		"message": "Ikaw ay ididirektang awtomatiko sa loob ng % segundo."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Ikaw ay ididirektang awtomatiko sa loob ng % segundo."
+	},
+	"beforeNavigateOptions": {
+		"message": "Nais mo bang mabuksan ito sa isang bagong tab kaagad o sa x segundo?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Naka-navigate ka sa%"
+	},
+	"crowdWait": {
+		"message": "Sa kasamaang palad, ikaw ang unang nakatagpo ng link na ito, ngunit pagkatapos mong maghintay, ang ibang mga gumagamit ng Universal Bypass ay hindi na magkakaroon."
 	},
 	"crowdBypassed": {
 		"message": "Maaaring hindi mo na kailangang maghintay!"
@@ -58,6 +118,9 @@
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Ito ay bubuksan sa isang bagong tab sa 1 segundo."
+	},
+	"cancel": {
+		"message": "I-cancel"
 	},
 	"crowdBypassedIgnore": {
 		"message": "Hindi ba ito tama?"

@@ -11,6 +11,9 @@
 	"version": {
 		"message": "Versiya"
 	},
+	"definitionsVersion": {
+		"message": "Bypass tərifləri"
+	},
 	"changelog": {
 		"message": "Dəyişiklik qeydi"
 	},

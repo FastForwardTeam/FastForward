@@ -104,6 +104,9 @@
 	"beforeNavigateOptions": {
 		"message": "Vrei sa fi redirecționat instant sau in x secunde?"
 	},
+	"beforeNavigateInstant": {
+		"message": "Sunteți navigat până la%"
+	},
 	"crowdWait": {
 		"message": "Din păcăte, ești primul care să dea de acest link, dar după ce aștepți, alți utilizatori Universal Bypass nu vor mai trebuiască să aștepte."
 	},

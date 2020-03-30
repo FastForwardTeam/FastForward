@@ -104,6 +104,9 @@
 	"beforeNavigateOptions": {
 		"message": "您想立刻重定向还是在x秒后？"
 	},
+	"beforeNavigateInstant": {
+		"message": "您正在导航到%"
+	},
 	"crowdWait": {
 		"message": "很抱歉您是第一个点击此链接的人，但您等待这段时间以后，其他Universal Bypass用户将不再需要等待。"
 	},

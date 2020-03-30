@@ -11,11 +11,17 @@
 	"version": {
 		"message": "버전"
 	},
+	"definitionsVersion": {
+		"message": "우회 정의"
+	},
 	"changelog": {
 		"message": "변경 사항"
 	},
 	"update": {
 		"message": "업데이트 확인"
+	},
+	"updating": {
+		"message": "바이 패스 정의 다운로드 중 ..."
 	},
 	"updateYes": {
 		"message": "인젝션 스크립트를 업데이트하는데 성공했습니다!"
@@ -43,6 +49,9 @@
 	},
 	"optionsNavigationDelay": {
 		"message": "목적지로 %초 뒤에 이동하기 (0을 쓰면 즉시 이동)"
+	},
+	"optionsTrackerBypass": {
+		"message": "Apimon.de를 사용하여 트래커 (예 : bit.ly 및 t.co)를 무시하십시오."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "즉시 추적기의 목적지로 보내기"
@@ -94,6 +103,9 @@
 	},
 	"beforeNavigateOptions": {
 		"message": "자동으로 리다이렉트하고 싶나요?"
+	},
+	"beforeNavigateInstant": {
+		"message": "% (으)로 이동 중입니다"
 	},
 	"crowdWait": {
 		"message": "안타깝게도 이 링크의 첫 발견자신 것 같군요. 기다려주신다면 다른 Universal Bypass 사용자 분들은 기다리지 않으실 수 있어요."

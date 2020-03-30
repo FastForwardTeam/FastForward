@@ -11,11 +11,20 @@
 	"version": {
 		"message": "Verze"
 	},
+	"definitionsVersion": {
+		"message": "Definice přemostění"
+	},
 	"changelog": {
 		"message": "Přehled změn"
 	},
 	"update": {
 		"message": "Zkontrolovat aktualizace"
+	},
+	"updating": {
+		"message": "Stahování definic obtoku ..."
+	},
+	"updateYes": {
+		"message": "Definice obtoku byly úspěšně staženy."
 	},
 	"faq": {
 		"message": "Často kladené otázky (FAQ)"
