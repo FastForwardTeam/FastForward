@@ -2,7 +2,6 @@ document.querySelector("[data-message='optionsNavigationDelay']").innerHTML=docu
 document.querySelector("[data-message='optionsCrowdAutoOpen']").innerHTML=document.querySelector("[data-message='optionsCrowdAutoOpen']").innerHTML.replace("%",'<input id="option-crowd-open-delay" type="number" min="0" skip="1" style="width:34px">')
 document.querySelector("[data-message='optionsCrowdAutoClose']").innerHTML=document.querySelector("[data-message='optionsCrowdAutoClose']").innerHTML.replace("%",'<input id="option-crowd-close-delay" type="number" min="3" skip="1" style="width:34px">')
 document.querySelector("[data-message='optionsUserscriptsDescription']").innerHTML=document.querySelector("[data-message='optionsUserscriptsDescription']").textContent.replace("GitHub","<a href='https://github.com/timmyrs/Universal-Bypass/blob/master/injection_script.js' target='_blank'>GitHub</a>")
-document.getElementById("version").textContent=brws.runtime.getManifest().version
 
 const updateButton=document.querySelector("[data-message='update']"),
 enabledCheckbox=document.getElementById("option-enabled"),
@@ -105,8 +104,20 @@ editor.on("change", ()=>{
 	},500)
 })
 
-let port=brws.runtime.connect({name:"options"}),wasUpdating=false,devMode=false
+let port=brws.runtime.connect({name:"options"}),wasUpdating=false,devMode=false,amoVersion=false
 port.onMessage.addListener(data=>{
+	if("extension_version" in data)
+	{
+		document.getElementById("version").textContent=data.extension_version
+	}
+	if("amo" in data)
+	{
+		if(data.amo)
+		{
+			updateButton.classList.add("uk-hidden")
+			amoVersion = true
+		}
+	}
 	if("upstreamCommit" in data)
 	{
 		if(data.upstreamCommit)
@@ -143,7 +154,7 @@ port.onMessage.addListener(data=>{
 		editor.resize()
 		editor.clearSelection()
 	}
-	if("updateSuccess" in data&&!devMode)
+	if("updateSuccess" in data&&!devMode&&!amoVersion)
 	{
 		UIkit.notification({
 			message:brws.i18n.getMessage("updat"+(data.updateSuccess?"ing":"eNo")),
@@ -151,7 +162,7 @@ port.onMessage.addListener(data=>{
 			timeout:3000
 		})
 	}
-	if("updateStatus" in data)
+	if("updateStatus" in data&&!amoVersion)
 	{
 		if(data.updateStatus)
 		{

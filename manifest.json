@@ -35,12 +35,18 @@
 		"default_popup": "html/popup.html"
 	},
 	"background": {
-		"scripts": ["background.js"]
+		"scripts": [
+			"background.js"
+		]
 	},
 	"content_scripts": [
 		{
-			"matches": ["<all_urls>"],
-			"js": ["content_script.js"],
+			"matches": [
+				"<all_urls>"
+			],
+			"js": [
+				"content_script.js"
+			],
 			"run_at": "document_start"
 		}
 	],
