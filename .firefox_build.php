@@ -41,7 +41,7 @@ $extension_version = $json["version"];
 $definitions_version = substr(shell_exec("git rev-parse HEAD"), 0, 7);
 foreach($index as $fn)
 {
-	if($fn == "README.md")
+	if($fn == "README.md" || $fn == "Universal Bypass for Chromium-based browsers.zip")
 	{
 		continue;
 	}
