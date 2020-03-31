@@ -90,7 +90,7 @@
 		"message": "但若您马上跳转，他们将会检测到Universal Bypass。"
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "%秒后，您将在不再被检测到。"
+		"message": "%秒后，您将不再被检测到。"
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "1秒后，您将在不再被检测到。"

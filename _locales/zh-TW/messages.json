@@ -11,14 +11,23 @@
 	"version": {
 		"message": "版本"
 	},
+	"definitionsVersion": {
+		"message": "繞過規則定義"
+	},
 	"changelog": {
 		"message": "更新紀錄"
 	},
 	"update": {
 		"message": "檢查更新"
 	},
+	"updating": {
+		"message": "下載規則定義"
+	},
 	"updateYes": {
 		"message": "成功更新注入腳本!"
+	},
+	"updateNo": {
+		"message": "繞過規則定義已是最新版本。"
 	},
 	"faq": {
 		"message": "常見問答 (FAQ)"
@@ -41,6 +50,9 @@
 	"optionsNavigationDelay": {
 		"message": "在%秒後轉移到目標連結。 (輸入0可以瞬間轉移)"
 	},
+	"optionsTrackerBypass": {
+		"message": "繞過使用Apimon.de的追踪器（比如bit.ly和t.co）。"
+	},
 	"optionsInstantNavigationTrackers": {
 		"message": "跳過追蹤紀錄器，直接帶我到目的地。"
 	},
@@ -56,6 +68,9 @@
 	"privacyPolicy": {
 		"message": "隱私權政策"
 	},
+	"contributors": {
+		"message": "貢獻者"
+	},
 	"optionsUserscripts": {
 		"message": "自定義繞過規則"
 	},
@@ -68,6 +83,15 @@
 	"beforeNavigateDestination": {
 		"message": "您的目的地是 %"
 	},
+	"beforeNavigateUnsafe": {
+		"message": "但若您馬上跳轉，他們將會檢測到Universal Bypass。"
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "%秒後，您將不再被檢測到。"
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "1秒後，您將不再被檢測到。"
+	},
 	"beforeNavigateTimer": {
 		"message": "您將在%秒後被重新導向。"
 	},
@@ -76,6 +100,9 @@
 	},
 	"beforeNavigateOptions": {
 		"message": "您希望立刻或是x秒後被重新導向嗎？"
+	},
+	"beforeNavigateInstant": {
+		"message": "您正在導航到%"
 	},
 	"crowdWait": {
 		"message": "很遺憾的，您是第一個遇到這個連結的人，但在您等候了以後，其他 Universal Bypass 的用戶就不用受苦了。"
@@ -94,6 +121,15 @@
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "將在1秒後以新分頁開啟。"
+	},
+	"crowdCloseTimer": {
+		"message": "此分頁會在%秒後關閉"
+	},
+	"crowdCloseTimerSingular": {
+		"message": "此分頁會在1秒後關閉"
+	},
+	"cancel": {
+		"message": "取消"
 	},
 	"crowdBypassedIgnore": {
 		"message": "該回報資訊有誤嗎?"
