@@ -2,6 +2,8 @@
 
 ## Auto-updating
 
+*This section does not apply to Firefox.*
+
 In order to provide up-to-date bypasses, Universal Bypass sends a request to Github every hour, and if a new commit is found, it will download the latest "injection script."
 
 For this, [Github's privacy policy](https://help.github.com/en/github/site-policy/github-privacy-statement) applies.
