@@ -639,6 +639,12 @@ if(!bypassed)
 			document.querySelectorAll("form[action]").forEach(e=>e.action+="#ignoreCrowdBypass")
 			document.querySelectorAll("a[href]").forEach(e=>e.href+="#ignoreCrowdBypass")
 		}
+		domainBypass("up-load.io",()=>{
+			if(UNIVERSAL_BYPASS_INTERNAL_VERSION>=7)
+			{
+				insertInfoBox("{{msg.infoFileHoster}}")
+			}
+		})
 		domainBypass(/adfoc\.us|ads\.bdcraft\.net/,()=>ifElement(".skip[href]",b=>safelyNavigate(b.href)))
 		domainBypass("srt.am",()=>{
 			if(document.querySelector(".skip-container"))
