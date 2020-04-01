@@ -1067,7 +1067,7 @@ if(!bypassed)
 				safelyNavigate(decodeURIComponent(url.search.split("url=")[1].split("&")[0]))
 			}
 		}))
-		domainBypass(/bebasdownloadfilm\.com|dl\.sharemydrive\.xyz/,()=>ifElement("frame[src*='/iframe/top.php?']",f=>{
+		domainBypass(/bebasdownloadfilm\.com|dl\.(sharemydrive\.xyz|indexmovie\.biz)/,()=>ifElement("frame[src*='/iframe/top.php?']",f=>{
 			f.onload=()=>safelyNavigate(f.contentDocument.querySelector("p#skip a").href)
 		}))
 		domainBypass("midvip.xyz",()=>ensureDomLoaded(()=>{
