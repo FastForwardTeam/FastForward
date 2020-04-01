@@ -201,6 +201,11 @@ const updateBypassDefinitions = callback => {
 		xhr.send()
 	}
 	xhr.onerror = () => {
+		if(definitions_version)
+		{
+			console.error("This is literally impossible unless you purposefully provoke it")
+			return
+		}
 		let xhr = new XMLHttpRequest()
 		xhr.onload = () => {
 			const latestCommit = JSON.parse(xhr.responseText).sha
