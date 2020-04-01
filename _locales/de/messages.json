@@ -107,6 +107,9 @@
 	"beforeNavigateInstant": {
 		"message": "Du wirst navigiert zu %"
 	},
+	"infoFileHoster": {
+		"message": "Leider wird der Download-Server sicherstellen, dass du gewartet hast, bevor er dir erlaubt, die Datei herunterzuladen."
+	},
 	"crowdWait": {
 		"message": "Leider bist du der erste, der auf diesen Link trifft, aber nachdem du gewartet hast, müssen andere Universal Bypass Nutzer es nicht mehr tun."
 	},

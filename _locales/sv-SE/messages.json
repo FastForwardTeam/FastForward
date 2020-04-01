@@ -107,6 +107,9 @@
 	"beforeNavigateInstant": {
 		"message": "Du förflyttas nu till %"
 	},
+	"infoFileHoster": {
+		"message": "Tyvärr använder de backend-validering för att se till att du faktiskt väntar tiden ut innan du kan ladda ner filen."
+	},
 	"crowdWait": {
 		"message": "Vilken otur du har som är den första som stöter på den här länken, men efter att du har väntat kommer andra Universal Bypass-användare inte längre att behöva vänta."
 	},
