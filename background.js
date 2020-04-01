@@ -609,7 +609,13 @@ const onBeforeRequest_rules = {
 		}
 	},
 	param_a_base64: details => getRedirect(atob(details.url.substr(details.url.indexOf("?a=")+3).split("#",1)[0])),
-	param_url_base64: details => getRedirect(atob(details.url.substr(details.url.indexOf("?url=")+5))),
+	param_url_base64: details => {
+		let i=details.url.indexOf("?url=")
+		if(i>0)
+		{
+			return getRedirect(atob(details.url.substr(i+5).split("&")[0]))
+		}
+	},
 	param_id_base64: details => getRedirect(atob(details.url.substr(details.url.indexOf("?id=")+4))),
 	param_get_base64: details => {
 		let arg=details.url.substr(details.url.indexOf("?get=")+5)
