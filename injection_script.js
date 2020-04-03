@@ -1337,6 +1337,10 @@ if(!bypassed)
 			}
 		})
 		domainBypass("easylinkref.com",()=>ifElement(".easylinkref-go > strong",s=>safelyNavigate(s.textContent)))
+		domainBypass("subdowns.com",()=>ifElement("#botao",()=>{
+			window.setTimeout=f=>setTimeout(f,1)
+			awaitElement("a#botao[href^='http']",a=>safelyNavigate(a.href))
+		}))
 		//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 		if(bypassed)
 		{
