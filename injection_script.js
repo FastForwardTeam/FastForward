@@ -1343,6 +1343,12 @@ if(!bypassed)
 			window.setTimeout=f=>setTimeout(f,1)
 			awaitElement("a#botao[href^='http']",a=>safelyNavigate(a.href))
 		}))
+		domainBypass("katfile.com",()=>{
+			if(!document.querySelector(".g-recaptcha"))
+			{
+				window.setTimeout=f=>setTimeout(f,1)
+			}
+		})
 		//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 		if(bypassed)
 		{
