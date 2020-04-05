@@ -1349,6 +1349,7 @@ if(!bypassed)
 				window.setTimeout=f=>setTimeout(f,1)
 			}
 		})
+		domainBypass("jk-chat.com",()=>safelyNavigate(atob(location.hash.substr(1))))
 		//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 		if(bypassed)
 		{
