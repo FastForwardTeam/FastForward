@@ -663,7 +663,7 @@ ensureDomLoaded(()=>{
 	}
 	if(typeof InstallTrigger=="object"&&"UNIVERSAL_BYPASS_EXTERNAL_VERSION"!="13.9")
 	{
-		insertInfoBox("Universal Bypass for Firefox is now self-hosted. You will no longer get updates unless you re-install it.")
+		insertInfoBox("You will no longer get Universal Bypass updates unless you uninstall and re-install it from universal-bypass.org/install")
 	}
 	domainBypass("up-load.io",()=>{
 		if(UNIVERSAL_BYPASS_INTERNAL_VERSION>=7)
