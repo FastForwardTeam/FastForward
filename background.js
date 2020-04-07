@@ -1,7 +1,5 @@
 const brws=(typeof browser=="undefined"?chrome:browser),
 firefox=(brws.runtime.getURL("").substr(0,4)=="moz-"),
-extension_version=brws.runtime.getManifest().version,
-definitions_version="",
 getRedirect=(url,referer,safe_in)=>{
 	if(!isGoodLink(url))
 	{
@@ -188,7 +186,7 @@ const updateBypassDefinitions = callback => {
 	let xhr = new XMLHttpRequest()
 	xhr.onload = () => {
 		updateStatus = "updating"
-		upstreamCommit = definitions_version
+		upstreamCommit = ""
 		sendToOptions({upstreamCommit, updateStatus})
 		callback(true)
 		upstreamInjectionScript = xhr.responseText
@@ -274,7 +272,7 @@ refreshInjectionScript = () => {
 	{
 		injectionScript = (upstreamInjectionScript + "\n" + userScript)
 		.split("UNIVERSAL_BYPASS_INTERNAL_VERSION").join("7")
-		.split("UNIVERSAL_BYPASS_EXTERNAL_VERSION").join(extension_version)
+		.split("UNIVERSAL_BYPASS_EXTERNAL_VERSION").join(brws.runtime.getManifest().version)
 		.split("UNIVERSAL_BYPASS_INJECTION_VERSION").join(upstreamCommit?upstreamCommit.substr(0,7):"dev")
 		Object.keys(preflightRules).forEach(name=>{
 			if(name in onBeforeRequest_rules)
@@ -298,14 +296,11 @@ sendToOptions = data => {
 		optionsPort.postMessage(data)
 	}
 }
-if(!definitions_version)
-{
-	brws.alarms.create("update-bypass-definitions", {periodInMinutes: 60})
-	brws.alarms.onAlarm.addListener(alert => {
-		console.assert(alert.name == "update-bypass-definitions")
-		updateBypassDefinitions()
-	})
-}
+brws.alarms.create("update-bypass-definitions", {periodInMinutes: 60})
+brws.alarms.onAlarm.addListener(alert => {
+	console.assert(alert.name == "update-bypass-definitions")
+	updateBypassDefinitions()
+})
 
 // Messaging
 brws.runtime.onMessage.addListener((req, sender, respond) => {
@@ -370,7 +365,7 @@ brws.runtime.onConnect.addListener(port => {
 				break;
 			}
 		})
-		port.postMessage({updateStatus, upstreamCommit, bypassCounter, userScript, extension_version, amo: !!definitions_version})
+		port.postMessage({updateStatus, upstreamCommit, bypassCounter, userScript})
 		break;
 
 		case "crowd-query":
