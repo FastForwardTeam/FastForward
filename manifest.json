@@ -11,7 +11,7 @@
 	"name": "Universal Bypass",
 	"description": "__MSG_appDesc__",
 	"homepage_url": "https://universal-bypass.org/",
-	"version": "13.9.0",
+	"version": "13.9",
 	"author": "Tim \"timmyRS\" Speckhals",
 	"permissions": [
 		"alarms",
@@ -46,7 +46,8 @@
 	],
 	"browser_specific_settings": {
 		"gecko": {
-			"id": "{529b261b-df0b-4e3b-bf42-07b462da0ee8}"
+			"id": "{8f4fa810-9c36-4b81-8e72-de97c8f29d67}",
+			"update_url": "https://universal-bypass.org/firefox-will-never-overtake-chromium/updates.json"
 		}
 	},
 	"web_accessible_resources": [

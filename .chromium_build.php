@@ -1,41 +1,7 @@
 <?php
-function recursivelyDelete($path)
-{
-	if(substr($path, -1) == "/")
-	{
-		$path = substr($path, 0, -1);
-	}
-	if(!file_exists($path))
-	{
-		return;
-	}
-	if(is_dir($path))
-	{
-		foreach(scandir($path) as $file)
-		{
-			if(!in_array($file, [
-				".",
-				".."
-			]))
-			{
-				recursivelyDelete($path."/".$file);
-			}
-		}
-		rmdir($path);
-	}
-	else
-	{
-		unlink($path);
-	}
-}
-
-if(is_file("Universal Bypass for Chromium-based browsers.zip"))
+if(file_exists("Universal Bypass for Chromium-based browsers.zip"))
 {
 	unlink("Universal Bypass for Chromium-based browsers.zip");
-}
-if(is_dir(".firefox"))
-{
-	recursivelyDelete(".firefox");
 }
 
 echo "Indexing...\n";
@@ -50,7 +16,6 @@ function recursivelyIndex($dir)
 			$fn = $dir."/".$f;
 			if(is_dir($fn))
 			{
-				mkdir(".firefox/".$fn);
 				recursivelyIndex($fn);
 			}
 			else
@@ -60,7 +25,6 @@ function recursivelyIndex($dir)
 		}
 	}
 }
-mkdir(".firefox");
 recursivelyIndex(".");
 
 echo "Building...\n";
@@ -80,6 +44,7 @@ foreach($index as $fn)
 	if($fn == "manifest.json")
 	{
 		$json = json_decode(file_get_contents($fn), true);
+		$json["browser_specific_settings"]["gecko"]["update_url"] = "https://universal-bypass.org/firefox-will-never-overtake-chromium/updates.json";
 		unset($json["browser_specific_settings"]);
 		$json["incognito"] = "split";
 		$build->addFromString($fn, json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
@@ -88,8 +53,5 @@ foreach($index as $fn)
 	{
 		$build->addFile($fn, $fn);
 	}
-	copy($fn, ".firefox/".$fn);
 }
 $build->close();
-passthru(".firefox_build.bat");
-recursivelyDelete(".firefox");
