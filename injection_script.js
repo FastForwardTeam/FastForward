@@ -621,6 +621,23 @@ domainBypass("4shared.com",()=>{
 		document.cookie="exUserId=0; domain=.4shared.com; path=/"
 	}
 })
+domainBypass(/jemerik\.com|busyfinance\.site/,()=>{
+	let p=new URL(location.href).searchParams
+	if(p.has("safe"))
+	{
+		awaitElement("#gotoklinkz",()=>{
+			let u=CryptoJS.AES.decrypt(p.get("safe"),"CryptoHEXKareela2FyZWVsa3Vu",{format:{
+				parse:t=>{
+					let r=CryptoJS.lib.CipherParams.create({})
+					r.ciphertext=CryptoJS.enc.Hex.parse(t.substr(16))
+					r.salt=CryptoJS.enc.Hex.parse(t.substr(0,16))
+					return r
+				}
+			}}).toString(CryptoJS.enc.Utf8).split("||")[0]
+			safelyNavigate(u)
+		})
+	}
+})
 //Insertion point for bypasses running before the DOM is loaded.
 domainBypass(/^((www\.)?((njiir|healthykk|linkasm|dxdrive|getwallpapers|sammobile|ydfile)\.com|punchsubs\.net|k2s\.cc|muhammadyoga\.me|u\.to|skiplink\.io|(uploadfree|freeupload)\.info|fstore\.biz))$/,()=>window.setInterval=f=>setInterval(f,1))
 hrefBypass(/firefaucet\.win\/l\/|sfirmware\.com\/downloads-file\/|(apkily\.com\/getapp$)/,()=>window.setInterval=f=>setInterval(f,1))
@@ -1303,23 +1320,6 @@ if(!bypassed)
 		}))
 		domainBypass("sorewa.net",()=>ifElement("p[style='text-align: center;'] > strong > a[href]",a=>safelyNavigate(a.href)))
 		domainBypass("akwam.net",()=>ifElement(".btn-loader > a.link.btn.btn-light[href][download]",a=>safelyNavigate(a.href)))
-		domainBypass("jemerik.com",()=>{
-			window.onload=()=>{
-				if(typeof CryptoJS!="undefined"&&sessionStorage.getItem("SESIsafelink")!=null)
-				{
-					let u=CryptoJS.AES.decrypt(sessionStorage.getItem("SESIsafelink"),"CryptoHEXKareela2FyZWVsa3Vu",{format:{
-						prefix:"",
-						parse(t)
-						{
-							let r=CryptoJS.lib.CipherParams.create({}),
-							e=this.prefix.length
-							return 0!==t.indexOf(this.prefix)?r:(r.ciphertext=CryptoJS.enc.Hex.parse(t.substring(16+e)),r.salt=CryptoJS.enc.Hex.parse(t.substring(e,16+e)),r)
-						}
-					}}).toString(CryptoJS.enc.Utf8).split("||")[0]
-					safelyNavigate(u)
-				}
-			}
-		})
 		domainBypass("lefturl.com",()=>ifElement("a.download-link[href]",a=>safelyNavigate(a.href)))
 		domainBypass("worldofmods.com",()=>ifElement(".repost-button-twitter",b=>{
 			window.open=_=>{}
