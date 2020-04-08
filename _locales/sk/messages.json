@@ -107,6 +107,9 @@
 	"beforeNavigateInstant": {
 		"message": "Budete premiestnený na %"
 	},
+	"infoFileHoster": {
+		"message": "Nanešťastie, sťahovací server sa uistí, že ste čakali pred tým, ako Vám dovolil stiahnuť súbor."
+	},
 	"crowdWait": {
 		"message": "Ste prvý/á, kto navštívil túto stránku, ale ako ste Vy čakalim iný používatelia Universal Bypassu by už nemuseli."
 	},

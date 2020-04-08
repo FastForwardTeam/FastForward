@@ -107,6 +107,9 @@
 	"beforeNavigateInstant": {
 		"message": "Je wordt doorgestuurd naar %"
 	},
+	"infoFileHoster": {
+		"message": "Helaas zal de downloadserver ervoor zorgen dat je hebt gewacht voordat je dit bestand kan downloaden."
+	},
 	"crowdWait": {
 		"message": "Helaas ben je de eerste die deze link tegenkomt, maar nadat je hebt gewacht hoeven anderen dat niet meer."
 	},

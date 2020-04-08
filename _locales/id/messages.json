@@ -107,6 +107,9 @@
 	"beforeNavigateInstant": {
 		"message": "Anda sedang diarahkan ke %"
 	},
+	"infoFileHoster": {
+		"message": "Sayangnya, server unduhan nya akan memastikan bahwa anda telah menunggu sebelum mengizinkan anda untuk mengunduh file."
+	},
 	"crowdWait": {
 		"message": "Sayangnya, anda adalah orang yang pertama kali mengakses tautan ini, akan tetapi setelah anda melewatinya, pengguna Universal Bypass lainnya tidak perlu lagi melakukannya."
 	},

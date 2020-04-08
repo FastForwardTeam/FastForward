@@ -8,11 +8,35 @@
 	"firstrunNoScript": {
 		"message": "Въпреки това изглежда, че използвате NoScript или подобен, с който Universal Bypass не е съвместим."
 	},
+	"version": {
+		"message": "Версия"
+	},
+	"definitionsVersion": {
+		"message": "Определения на байпас"
+	},
+	"changelog": {
+		"message": "Дневник на промените"
+	},
+	"update": {
+		"message": "Провери за обновления"
+	},
 	"updating": {
 		"message": "Изтеглянето на байпас дефиниции..."
 	},
+	"updateYes": {
+		"message": "Успешно инсталирахте дефиниции на байпас."
+	},
+	"updateNo": {
+		"message": "Дефиниции на байпас са актуални"
+	},
 	"faq": {
 		"message": "Често задавани въпроси (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "Универсалният Байпас вече е заобиколил % сайтове за вас."
+	},
+	"support": {
+		"message": "Принос за Универсалният Байпас"
 	},
 	"options": {
 		"message": "Опции"

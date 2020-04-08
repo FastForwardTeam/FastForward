@@ -107,6 +107,9 @@
 	"beforeNavigateInstant": {
 		"message": "% Adresine yönlendiriliyorsunuz"
 	},
+	"infoFileHoster": {
+		"message": "İndirme sunucusu dosyayı indirmenize izin vermeden önce sizi biraz bekletecek."
+	},
 	"crowdWait": {
 		"message": "Maalesef, bu bağlantıyla ilk karşılaşan sizsiniz, ancak siz bekledikten sonra, diğer Universal Bypass kullanıcılarının artık buna ihtiyacı kalmayacak."
 	},
@@ -114,7 +117,7 @@
 		"message": "Bu web sitesi, seçeneklerde devre dışı bıraktığınız kitle bypass tarafından bypass edilmektedir."
 	},
 	"crowdBypassed": {
-		"message": "Beklemeniz gerekmeyebilir!"
+		"message": "Beklemek zorunda kalmayabilirsiniz!"
 	},
 	"crowdBypassedInfo": {
 		"message": "Diğer Universal Bypass kullanıcıları sizin yerinize zaten beklediler ve bunun şuraya yönlendiğini bildirdiler: %"

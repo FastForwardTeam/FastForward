@@ -107,6 +107,9 @@
 	"beforeNavigateInstant": {
 		"message": "Panjenengan lagi diarahaken menyang %"
 	},
+	"infoFileHoster": {
+		"message": "Sayange, server unduhanipun ajeng mesthekaken menawi panjenengan sampun ngentosi saderengipun ngangsalaken panjenengan kangge ngunduh file."
+	},
 	"crowdWait": {
 		"message": "Sayange, panjenengan minangka tiyang ingkang pertama ngliwati link niki, nanging sakwise panjenengan sampun ngliwati, pangguna Universal Bypass liyane mboten perlu ngliwati malih."
 	},
@@ -135,10 +138,10 @@
 		"message": "Batalaken."
 	},
 	"crowdBypassedIgnore": {
-		"message": "Menopo niki mboten leres?"
+		"message": "Menapa niki mboten leres?"
 	},
 	"crowdBypassedOptions": {
-		"message": "Menopo panjenengan pingin niki di bukak teng tab anyar langsung utawi ing x detik?"
+		"message": "Menapa panjenengan pingin niki di bukak teng tab anyar langsung utawi ing x detik?"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass nyegah IPne panjenengan supados mboten mlebet log."

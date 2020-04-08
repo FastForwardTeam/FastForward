@@ -11,14 +11,23 @@
 	"version": {
 		"message": "Versão"
 	},
+	"definitionsVersion": {
+		"message": "Definições de bypasses"
+	},
 	"changelog": {
 		"message": "Histórico de alterações"
 	},
 	"update": {
 		"message": "Procurar atualizações"
 	},
+	"updating": {
+		"message": "A transferir definições de bypasses..."
+	},
 	"updateYes": {
 		"message": "Script de injeção atualizado com sucesso!"
+	},
+	"updateNo": {
+		"message": "As definições de bypasses estão atualizadas."
 	},
 	"faq": {
 		"message": "Perguntas Frequentes (FAQ)"
@@ -41,6 +50,9 @@
 	"optionsNavigationDelay": {
 		"message": "Leve-me para destinos após % segundo(s). (Use 0 para ser ir instantaneamente.)"
 	},
+	"optionsTrackerBypass": {
+		"message": "Contornar rastreadores (tais como bit.ly e t.co) usando Apimon.de."
+	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Leve-me instantaneamente para destinos de rastreadores."
 	},
@@ -55,6 +67,9 @@
 	},
 	"privacyPolicy": {
 		"message": "Política de Privacidade"
+	},
+	"contributors": {
+		"message": "Contribuidores"
 	},
 	"optionsUserscripts": {
 		"message": "Bypasses Personalizados"
@@ -94,6 +109,9 @@
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Isto vai ser aberto numa nova janela em 1 segundo."
+	},
+	"cancel": {
+		"message": "Cancelar"
 	},
 	"crowdBypassedIgnore": {
 		"message": "Isto não estava correto?"

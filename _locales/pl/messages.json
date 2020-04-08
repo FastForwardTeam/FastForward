@@ -107,6 +107,9 @@
 	"beforeNavigateInstant": {
 		"message": "Trwa nawigacja do%"
 	},
+	"infoFileHoster": {
+		"message": "Niestety, serwer pobierania upewni się, czy czekałeś, zanim pozwoli ci pobrać ten plik."
+	},
 	"crowdWait": {
 		"message": "Niestety, jesteś pierwszym który wchodzi w ten link, ale po tym jak ty poczekałeś, inni użytkownicy Universal bypass nie będą musieli już czekać."
 	},

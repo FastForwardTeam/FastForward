@@ -107,6 +107,9 @@
 	"beforeNavigateInstant": {
 		"message": "Du videreføres til %"
 	},
+	"infoFileHoster": {
+		"message": "Bemærk: Downloadserveren tvinger dig til at vente et øjeblik, inden filen kan downloades."
+	},
 	"crowdWait": {
 		"message": "Desværre er du den første, der støder på dette link, men efter at du har ventet, vil ingen andre Universal Bypass-brugere længere skulle det."
 	},

@@ -107,6 +107,9 @@
 	"beforeNavigateInstant": {
 		"message": "Stai passando a%"
 	},
+	"infoFileHoster": {
+		"message": "Sfortunatamente, il server di download si assicurerà di aver aspettato prima di consentirti di scaricare il file."
+	},
 	"crowdWait": {
 		"message": "Purtroppo, sei il primo ad incontrare questo link, ma dopo aver aspettato, altri utenti di Bypass universali non dovranno più farlo."
 	},
