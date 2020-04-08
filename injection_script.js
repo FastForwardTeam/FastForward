@@ -622,12 +622,12 @@ domainBypass("4shared.com",()=>{
 		document.cookie="exUserId=0; domain=.4shared.com; path=/"
 	}
 })
-domainBypass(/jemerik\.com|busyfinance\.site/,()=>{
+domainBypass(/jemerik\.com|busyfinance\.site|behealth-id\.xyz/,()=>{
 	let p=new URL(location.href).searchParams
-	if(p.has("safe"))
+	if(p.has("safe")||p.has("kareeI"))
 	{
-		awaitElement("#gotoklinkz",()=>{
-			let u=CryptoJS.AES.decrypt(p.get("safe"),"CryptoHEXKareela2FyZWVsa3Vu",{format:{
+		awaitElement("#klinkzoutput .text-center",()=>{
+			let u=CryptoJS.AES.decrypt(p.has("safe")?p.get("safe"):p.get("kareeI"),"CryptoHEXKareela2FyZWVsa3Vu",{format:{
 				parse:t=>{
 					let r=CryptoJS.lib.CipherParams.create({})
 					r.ciphertext=CryptoJS.enc.Hex.parse(t.substr(16))
