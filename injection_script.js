@@ -627,7 +627,7 @@ domainBypass(/jemerik\.com|busyfinance\.site|behealth-id\.xyz/,()=>{
 	if(p.has("safe")||p.has("kareeI"))
 	{
 		awaitElement("#klinkzoutput .text-center",()=>{
-			let u=CryptoJS.AES.decrypt(p.has("safe")?p.get("safe"):p.get("kareeI"),"CryptoHEXKareela2FyZWVsa3Vu",{format:{
+			let u=CryptoJS.AES.decrypt(p.get(p.has("safe")?"safe":"kareeI"),"CryptoHEXKareela2FyZWVsa3Vu",{format:{
 				parse:t=>{
 					let r=CryptoJS.lib.CipherParams.create({})
 					r.ciphertext=CryptoJS.enc.Hex.parse(t.substr(16))
