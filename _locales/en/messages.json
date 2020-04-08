@@ -110,6 +110,9 @@
 	"infoFileHoster": {
 		"message": "Unfortunately, the download server will ensure that you have waited before allowing you to download the file."
 	},
+	"infoOutdated": {
+		"message": "This website is bypassed by a newer version of Universal Bypass."
+	},
 	"crowdWait": {
 		"message": "Unfortunately, you're the first to encounter this link, but after you've waited, other Universal Bypass users will no longer have to."
 	},
