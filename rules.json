@@ -116,7 +116,8 @@
 		"*://*.infotekno.net/vga?url=*",
 		"*://*.sehuruf.com/linkku/?url=*",
 		"*://*.k2nblog.com/gotothedl.html?url=*",
-		"*://*.novicearea.com/*/?url=*"
+		"*://*.novicearea.com/*/?url=*",
+		"*://*.dikatekno.com/go/?url=*"
 	],
 	"param_id_base64": [
 		"*://*/p/*.html?id=*",
