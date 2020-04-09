@@ -28,10 +28,13 @@ function recursivelyDelete($path)
 		unlink($path);
 	}
 }
-
 if(is_file("Universal Bypass for Chromium-based browsers.zip"))
 {
 	unlink("Universal Bypass for Chromium-based browsers.zip");
+}
+if(is_file("Universal Bypass for Netscape.zip"))
+{
+	unlink("Universal Bypass for Netscape.zip");
 }
 if(is_dir(".firefox"))
 {
@@ -71,6 +74,7 @@ function createZip($file)
 	return $zip;
 }
 $chromium_build = createZip("Universal Bypass for Chromium-based browsers.zip");
+$firefox_build = createZip("Universal Bypass for Netscape.zip");
 foreach($index as $fn)
 {
 	if($fn == "README.md" || $fn == "injection_script.js" || $fn == "rules.json")
@@ -81,15 +85,21 @@ foreach($index as $fn)
 	{
 		$json = json_decode(file_get_contents($fn), true);
 		unset($json["browser_specific_settings"]);
+		$firefox_build->addFromString($fn, json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
 		$json["incognito"] = "split";
 		$chromium_build->addFromString($fn, json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
 	}
 	else
 	{
 		$chromium_build->addFile($fn, $fn);
+		$firefox_build->addFile($fn, $fn);
 	}
 	copy($fn, ".firefox/".$fn);
 }
 $chromium_build->close();
-passthru(".firefox_build.bat");
+$firefox_build->close();
+if(is_file(".firefox_build.bat"))
+{
+	passthru(".firefox_build.bat");
+}
 recursivelyDelete(".firefox");
