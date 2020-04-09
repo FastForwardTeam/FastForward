@@ -107,7 +107,7 @@
 		"*://*.adsafelink.net/generate?a=*"
 	],
 	"param_url_base64": [
-		"*://*/p/*.html?*",
+		"*://*/p/*.html?url=aHR0c*",
 		"*://*.blogspot.com/*/*/*?url=*",
 		"*://*/descargar/index.php?url=*",
 		"*://*.mispuani.xyz/*?url=*",
