@@ -2001,9 +2001,12 @@ ensureDomLoaded(()=>{
 								}
 								if(isGoodLink(h))
 								{
-									clearInterval(cT)
-									a.parentNode.removeChild(a)
-									contributeAndNavigate(h)
+									if(h.indexOf("://partners.popcent.net/")==-1)//tr.link
+									{
+										clearInterval(cT)
+										a.parentNode.removeChild(a)
+										contributeAndNavigate(h)
+									}
 								}
 							},20)
 						})
