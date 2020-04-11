@@ -623,20 +623,34 @@ domainBypass("4shared.com",()=>{
 		document.cookie="exUserId=0; domain=.4shared.com; path=/"
 	}
 })
-domainBypass(/jemerik\.com|busyfinance\.site|behealth-id\.xyz/,()=>{
+domainBypass(/^((www\.)?(jemerik\.com|busyfinance\.site|behealth-id\.xyz|(safe\.anirocksite|my-code4you\.blogspot)\.com))$/,()=>{
 	let p=new URL(location.href).searchParams
 	if(p.has("safe")||p.has("kareeI"))
 	{
-		awaitElement("#klinkzoutput .text-center",()=>{
-			let u=CryptoJS.AES.decrypt(p.get(p.has("safe")?"safe":"kareeI"),"CryptoHEXKareela2FyZWVsa3Vu",{format:{
-				parse:t=>{
-					let r=CryptoJS.lib.CipherParams.create({})
-					r.ciphertext=CryptoJS.enc.Hex.parse(t.substr(16))
-					r.salt=CryptoJS.enc.Hex.parse(t.substr(0,16))
-					return r
+		ensureDomLoaded(()=>{
+			let w=setInterval(()=>{
+				if(typeof CryptoJS!="undefined")
+				{
+					clearInterval(w)
+					let u,m=p.get(p.has("safe")?"safe":"kareeI")
+					try
+					{
+						u=CryptoJS.AES.decrypt(m,"CryptoHEXKareela2FyZWVsa3Vu",{format:{
+							parse:t=>{
+								let r=CryptoJS.lib.CipherParams.create({})
+								r.ciphertext=CryptoJS.enc.Hex.parse(t.substr(16))
+								r.salt=CryptoJS.enc.Hex.parse(t.substr(0,16))
+								return r
+							}
+						}}).toString(CryptoJS.enc.Utf8).split("||")[0]
+					}
+					catch(e)
+					{
+						u=JSON.parse(CryptoJS.AES.decrypt(m,"CryptoJSAESpass").toString(CryptoJS.enc.Utf8)).url
+					}
+					safelyNavigate(u)
 				}
-			}}).toString(CryptoJS.enc.Utf8).split("||")[0]
-			safelyNavigate(u)
+			},100)
 		})
 	}
 })
