@@ -175,7 +175,7 @@ const updateBypassDefinitions = callback => {
 			uniqueness.push(val)
 			upstreamInjectionScript = upstreamInjectionScript.split("{{channel."+name+"}}").join(channel[name] = "data-" + val)
 		})
-		;["infoFileHoster","crowdWait","crowdDisabled"].forEach(name => {
+		;["infoFileHoster","infoOutdated","crowdWait","crowdDisabled"].forEach(name => {
 			upstreamInjectionScript = upstreamInjectionScript.split("{{msg."+name+"}}").join(brws.i18n.getMessage(name).split("\\").join("\\\\").split("\"").join("\\\""))
 		})
 		upstreamInjectionScript = upstreamInjectionScript.split("{{icon/48.png}}").join(brws.runtime.getURL("icon/48.png"))
@@ -271,7 +271,7 @@ refreshInjectionScript = () => {
 	if(enabled)
 	{
 		injectionScript = (upstreamInjectionScript + "\n" + userScript)
-		.split("UNIVERSAL_BYPASS_INTERNAL_VERSION").join("7")
+		.split("UNIVERSAL_BYPASS_INTERNAL_VERSION").join("8")
 		.split("UNIVERSAL_BYPASS_EXTERNAL_VERSION").join(brws.runtime.getManifest().version)
 		.split("UNIVERSAL_BYPASS_INJECTION_VERSION").join(upstreamCommit?upstreamCommit.substr(0,7):"dev")
 		Object.keys(preflightRules).forEach(name=>{
