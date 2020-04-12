@@ -110,6 +110,9 @@
 	"infoFileHoster": {
 		"message": "Helaas zal de downloadserver ervoor zorgen dat je hebt gewacht voordat je dit bestand kan downloaden."
 	},
+	"infoOutdated": {
+		"message": "Deze website wordt overgeslagen in een nieuwere versie van Universal Bypass."
+	},
 	"crowdWait": {
 		"message": "Helaas ben je de eerste die deze link tegenkomt, maar nadat je hebt gewacht hoeven anderen dat niet meer."
 	},

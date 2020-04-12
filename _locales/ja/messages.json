@@ -110,6 +110,9 @@
 	"infoFileHoster": {
 		"message": "残念ながら、ダウンロードサーバーはファイルのダウンロードが許可される前に待機していることを確認します。"
 	},
+	"infoOutdated": {
+		"message": "このサイトは、Universal Bypassの新しいバージョンでバイパスされます。"
+	},
 	"crowdWait": {
 		"message": "残念ながら、あなたはこのリンクの最初のアクセス者です。しばらくすれば、他のUniversal Bypassユーザーが待つ必要はなくなります。"
 	},

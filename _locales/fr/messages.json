@@ -78,7 +78,7 @@
 		"message": "Contournements personnalisés"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "Il s'agit d'une fonctionnalité avancée permettant aux développeurs de créer leurs propres scripts pour contourner des sites. Une fois perfectionnés, ils peuvent ensuite être soumis sur GitHub pour être ajoutés à Universal Bypass, afin qu'ils soient accessibles à tous."
+		"message": "Il s'agit d'une fonctionnalité avancée permettant aux développeurs de créer leurs propres scripts pour contourner des sites Web. Une fois perfectionnés, ils peuvent ensuite être soumis sur GitHub pour être ajoutés à Universal Bypass, afin qu'ils soient accessibles à tous."
 	},
 	"beforeNavigate": {
 		"message": "Vous y êtes presque !"
@@ -109,6 +109,9 @@
 	},
 	"infoFileHoster": {
 		"message": "Malheureusement, le serveur de téléchargement s'assurera que vous avez bien attendu avant de vous permettre de télécharger le fichier."
+	},
+	"infoOutdated": {
+		"message": "Ce site Web est contourné par une version plus récente de Universal Bypass."
 	},
 	"crowdWait": {
 		"message": "Malheureusement, vous êtes la première personne à visiter ce lien, mais après avoir attendu, les autres utilisateurs de Universal Bypass n'auront plus à le faire."

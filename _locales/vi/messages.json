@@ -110,6 +110,9 @@
 	"infoFileHoster": {
 		"message": "Thật không may, máy chủ tải về bắt buộc bạn phải chờ trước khi cho phép bạn tải tệp về."
 	},
+	"infoOutdated": {
+		"message": "Trang web này được bỏ qua với phiên bản mới của Universal Bypass"
+	},
 	"crowdWait": {
 		"message": "Thật không may, bạn là người đầu tiên gặp phải liên kết này, nhưng sau khi bạn chờ đợi, những người dùng Universal Bypass khác sẽ không còn phải làm như vậy nữa."
 	},

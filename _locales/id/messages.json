@@ -110,11 +110,14 @@
 	"infoFileHoster": {
 		"message": "Sayangnya, server unduhan nya akan memastikan bahwa anda telah menunggu sebelum mengizinkan anda untuk mengunduh file."
 	},
+	"infoOutdated": {
+		"message": "Situs web ini telah ter-bypass oleh versi yang paling baru dari Universal Bypass."
+	},
 	"crowdWait": {
 		"message": "Sayangnya, anda adalah orang yang pertama kali mengakses tautan ini, akan tetapi setelah anda melewatinya, pengguna Universal Bypass lainnya tidak perlu lagi melakukannya."
 	},
 	"crowdDisabled": {
-		"message": "Situs web ini telah ter-bypass oleh fitur crowd bypass, yang mana telah anda nonaktifkan fiturnya didalam opsi pengaturan."
+		"message": "Situs web ini telah ter-bypass oleh fitur crowd bypass, yang mana telah anda nonaktifkan fiturnya didalam pilihan pengaturan."
 	},
 	"crowdBypassed": {
 		"message": "Anda mungkin tidak perlu melewati!"

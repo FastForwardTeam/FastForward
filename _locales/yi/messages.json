@@ -1,0 +1,149 @@
+{
+	"appDesc": {
+		"message": "צי ניט זאָרג וועגן צייט. די דייווערזשאַן סיסטעם בייפּאַס די פאַרקירצט."
+	},
+	"firstrunTitle": {
+		"message": "\ndank ir far instoling universal beypas!"
+	},
+	"firstrunNoScript": {
+		"message": "\nir oyskumen tsu nutsn NoScript oder enlekh, vos universal beypas iz nisht kampatabal mit."
+	},
+	"version": {
+		"message": "ווערסיע versye"
+	},
+	"definitionsVersion": {
+		"message": "דעפיניטיאָן זוך."
+	},
+	"changelog": {
+		"message": "טוישן קלאָץ"
+	},
+	"update": {
+		"message": "זוכן פֿאַר נייַעס"
+	},
+	"updating": {
+		"message": "\ndaunlouding beypas definitsye..."
+	},
+	"updateYes": {
+		"message": "דעפיניטיאָנס זענען דאַונלאָודיד."
+	},
+	"updateNo": {
+		"message": "beypas definitsye iz aroyf tsu tog"
+	},
+	"faq": {
+		"message": "אָפט געשטעלטע פֿראגן"
+	},
+	"bypassCounter": {
+		"message": "וניווערסאַל בייפּאַסס האט דיווערטיד% זייטלעך פֿאַר אי."
+	},
+	"support": {
+		"message": "הילף וניווערסאַל דייווערזשאַן."
+	},
+	"options": {
+		"message": "אָפּציעס"
+	},
+	"optionsLink": {
+		"message": "toyshn di optsyes fun universal beypas.\n"
+	},
+	"optionsEnabled": {
+		"message": "\nגעבן וועבזייטל בייפּאַסיז.\ngebn vebzeytl beypasiz."
+	},
+	"optionsTrackerBypass": {
+		"message": "aroysfirn kravlerz (aza vi bit.ly aun t.co) durkh Apimon.de.\n"
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "\nטייקעף נעמען מיר צו דעסטאַניישאַנז פון טראַקערז.\nteykef nemen mir tsu destaneyshanz fun trakerz."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "\nבלאַקס יפּ רעדזשיסטרייערז אויב זיי קענען ניט זיין דערייווד.\nblax ip rejistreyerz aoyb zey kenen nit zeyn dereyvd."
+	},
+	"optionsCrowdBypass": {
+		"message": "gebn aun nemen di destaneyshanz fun anbaspasabal shorterz."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "\nעפֿענען מענטשן-סאָורסעד דעסטאַניישאַנז אין אַ נייַ קוויטל נאָך% סעקונדעס.\nefenen mentshn-soursed destaneyshanz in a nay kvitl nokh% sekundes."
+	},
+	"optionsCrowdAutoClose": {
+		"message": "\nנאָענט קוויטל מיט די מאַסע-סאָורסעד דעסטיניישאַן נאָך% סעקונדעס פון איר באזוכן.\nnoent kvitl mit di mase-soursed destineyshan nokh% sekundes fun ir bazukhn."
+	},
+	"privacyPolicy": {
+		"message": "\nprivatkeyt politik"
+	},
+	"contributors": {
+		"message": "\nמיטארבעטערס\nmitarbeters"
+	},
+	"optionsUserscripts": {
+		"message": "מנהג בייפּאַסיז\nmnhg beypasiz"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "דאָס איז אַן אַוואַנסירטע שטריך פֿאַר דעוועלאָפּערס צו שאַפֿן זייער אייגן סקריפּס צו בייפּאַס זייטלעך. אַמאָל פּערפעקטאַד, זיי קענען דעריבער זיין דערלאנגט אויף GitHub צו זיין מוסיף צו וניווערסאַל בייפּאַס, אַזוי זיי זענען פאַראַנען פֿאַר אַלעמען.\ndos iz an avansirte shtrikh far developers tsu shafn zeyer eygn skrips tsu beypas zeytlekh. amol perfektad, zey kenen deriber zeyn derlangt aoyf GitHub tsu zeyn musif tsu universal beypas, azoy zey zenen faranen far alemen."
+	},
+	"beforeNavigate": {
+		"message": "איר'רע קימאַט בייַ דיין דעסטיניישאַן.\nir're kimat bay deyn destineyshan."
+	},
+	"beforeNavigateDestination": {
+		"message": "דיין דעסטיניישאַן איז%\ndeyn destineyshan iz%"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "\nאויב איר נאַוויגירן איצט, זיי וועלן דעטעקט וניווערסאַל בייפּאַס.\naoyb ir navigirn itst, zey veln detekt universal beypas."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "ir vet nit mer zeyn ditektad in% sekundes.\n"
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "\nאיר וועט ניט מער זיין דיטעקטאַד אין 1 סעקונדע.\nir vet nit mer zeyn ditektad in 1 sekunde."
+	},
+	"beforeNavigateTimer": {
+		"message": "איר וועט זיין רידערעקטיד אויטאָמאַטיש אין% סעקונדעס.\nir vet zeyn riderektid aoytomatish in% sekundes."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "איר וועט זיין רידערעקטיד אויטאָמאַטיש אין 1 סעקונדע.\nir vet zeyn riderektid aoytomatish in 1 sekunde."
+	},
+	"beforeNavigateOptions": {
+		"message": "צי איר ווילן צו זיין רידערעקטיד טייקעף אָדער אין רענטגענ סעקונדעס?\ntsi ir viln tsu zeyn riderektid teykef oder in rentgen sekundes?"
+	},
+	"beforeNavigateInstant": {
+		"message": "מען ניווט צו%\nmen nivt tsu%"
+	},
+	"infoFileHoster": {
+		"message": "tsum badoyern, di arafkafye server vet enshur az ir hot gevart biz ir derloybt tsu oplodirn di teke.\n"
+	},
+	"crowdWait": {
+		"message": "צום באַדויערן, איר'רע דער ערשטער צו טרעפן דעם לינק, אָבער נאָך וואַרטן, אנדערע וניווערסאַל בייפּאַס ניצערס וועלן ניט מער האָבן צו.\ntsum badoyern, ir're der ershter tsu trefn dem link, ober nokh vartn, andere universal beypas nitsers veln nit mer hobn tsu"
+	},
+	"crowdDisabled": {
+		"message": "דער וועבזייטל איז בייפּאַסט דורך מאַסע בייפּאַס וואָס איר האָט פאַרקריפּלט אין די אָפּציעס.\nder vebzeytl iz beypast durkh mase beypas vos ir hot farkriplt in di optsyes."
+	},
+	"crowdBypassed": {
+		"message": "איר קען נישט האָבן צו וואַרטן!\nir ken nisht hobn tsu vartn!"
+	},
+	"crowdBypassedInfo": {
+		"message": "אנדערע וניווערסאַל בייפּאַס ניצערס האָבן שוין געווארט פֿאַר איר און געמאלדן אַז דאָס פירט צו%\nandere universal beypas nitsers hobn shoyn gevart far ir aun gemaldn az dos firt tsu%"
+	},
+	"crowdBypassedTimer": {
+		"message": "דאָס וועט זיין געעפנט אין אַ נייַ קוויטל אין% סעקונדעס.\ndos vet zeyn geefnt in a nay kvitl in% sekundes."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "דאָס וועט זיין געעפנט אין אַ נייַ קוויטל אין 1 סעקונדע.\ndos vet zeyn geefnt in a nay kvitl in 1 sekunde."
+	},
+	"crowdCloseTimer": {
+		"message": "דער קוויטל וועט פאַרמאַכן אין% סעקונדעס\nder kvitl vet farmakhn in% sekundes"
+	},
+	"crowdCloseTimerSingular": {
+		"message": "דער קוויטל וועט פאַרמאַכן אין 1 סעקונדע.\nder kvitl vet farmakhn in 1 sekunde."
+	},
+	"cancel": {
+		"message": "באָטל מאַכן.\nbotl makhn."
+	},
+	"crowdBypassedIgnore": {
+		"message": "איז דאָס ניט ריכטיק?\niz dos nit rikhtik?"
+	},
+	"crowdBypassedOptions": {
+		"message": "צי איר ווילן אַז דאָס זאָל זיין געעפנט אין אַ נייַ קוויטל טייקעף אָדער אין קס סעקונדעס?\ntsi ir viln az dos zol zeyn geefnt in a nay kvitl teykef oder in x sekundes?"
+	},
+	"blockedTitle": {
+		"message": "וניווערסאַל בייפּאַסס פּריווענטיד דיין IP פון לאָגד.\nuniversal beypass priventid deyn IP fun logd."
+	},
+	"blockedSubtitle": {
+		"message": "צי נישט וועלן צו וניווערסאַל בייפּאַס צו פאַרמייַדן שלעכט אַקטערז באַקומען דיין IP?\ntsi nisht veln tsu universal beypas tsu farmaydn shlekht akterz bakumen deyn IP?"
+	}
+}

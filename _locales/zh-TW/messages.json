@@ -65,6 +65,9 @@
 	"optionsCrowdAutoOpen": {
 		"message": "在%秒後轉移到用戶提供的連結。 (0=立刻轉移)"
 	},
+	"optionsCrowdAutoClose": {
+		"message": "訪問人們分享的目的網址%秒後將其標籤頁關閉。"
+	},
 	"privacyPolicy": {
 		"message": "隱私權政策"
 	},
@@ -103,6 +106,12 @@
 	},
 	"beforeNavigateInstant": {
 		"message": "您正在導航到%"
+	},
+	"infoFileHoster": {
+		"message": "很不幸，下載伺服器需要確保您在下載檔案前已等候"
+	},
+	"infoOutdated": {
+		"message": "此網站被更新版本的 Universal Bypass 繞過了。"
 	},
 	"crowdWait": {
 		"message": "很遺憾的，您是第一個遇到這個連結的人，但在您等候了以後，其他 Universal Bypass 的用戶就不用受苦了。"

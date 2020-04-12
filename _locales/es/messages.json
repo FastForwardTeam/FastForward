@@ -1,6 +1,6 @@
 {
 	"appDesc": {
-		"message": "No pierdas el tiempo para acceder. Universal Bypass omite automáticamente los molestos acortadores de enlaces."
+		"message": "No pierdas el tiempo para acceder. Universal Bypass evade automáticamente los molestos acortadores de enlaces."
 	},
 	"firstrunTitle": {
 		"message": "¡Gracias por instalar Universal Bypass!"
@@ -33,7 +33,7 @@
 		"message": "Preguntas frecuentes"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass ya ha descubierto % sitios para usted."
+		"message": "Universal Bypass ya ha evadido % sitios para usted."
 	},
 	"support": {
 		"message": "Ayuda a Universal Bypass"
@@ -45,22 +45,22 @@
 		"message": "Cambiar las opciones de Universal Bypass."
 	},
 	"optionsEnabled": {
-		"message": "Habilitar los bypasses del sitio web."
+		"message": "Habilitar las evasiones del sitio web."
 	},
 	"optionsNavigationDelay": {
 		"message": "Llévame a mi destino después de % segundo(s)."
 	},
 	"optionsTrackerBypass": {
-		"message": "Evita rastreadores (como bit.ly y t.co) usando Apimon.de."
+		"message": "Evadir rastreadores (como bit.ly y t.co) usando Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Llévame instantáneamente a los destinos de los rastreadores."
 	},
 	"optionsBlockIPLoggers": {
-		"message": "Bloquear registradores de IP si no pueden ser omitidos."
+		"message": "Bloquear registradores de IP si no pueden ser evadidos."
 	},
 	"optionsCrowdBypass": {
-		"message": "Dar y tomar los destinos de los acortadores que no se pueden omitir."
+		"message": "Dar y tomar los destinos de los acortadores que no se pueden evadir."
 	},
 	"optionsCrowdAutoOpen": {
 		"message": "Abrir los destinos que ya fueron descubiertos en una pestaña nueva después de % segundo(s)."
@@ -75,10 +75,10 @@
 		"message": "Colaboradores"
 	},
 	"optionsUserscripts": {
-		"message": "Bypasses personalizados"
+		"message": "Evasiones personalizadas"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "Esta es una característica avanzada para que los desarrolladores creen sus propios scripts para evitar sitios. Una vez perfeccionados, se pueden enviar en GitHub para añadirlos a Universal Bypass, de modo que estén disponibles para todos."
+		"message": "Esta es una característica avanzada para que los desarrolladores creen sus propios scripts para evadir sitios. Una vez perfeccionados, se pueden enviar en GitHub para añadirlos a Universal Bypass, de modo que estén disponibles para todos."
 	},
 	"beforeNavigate": {
 		"message": "Ya casi estás en tu destino."
@@ -110,11 +110,14 @@
 	"infoFileHoster": {
 		"message": "Desafortunadamente, el servidor de descarga se asegurará de que hayas esperado antes de permitirte descargar el archivo."
 	},
+	"infoOutdated": {
+		"message": "Este sitio web ha sido evadido por una nueva versión de Universal Bypass."
+	},
 	"crowdWait": {
 		"message": "Desafortunadamente, eres el primero en encontrar este enlace, pero después de haber esperado, otros usuarios de Universal Bypass ya no tendrán que hacerlo."
 	},
 	"crowdDisabled": {
-		"message": "Este sitio web ya fue descubierto, el cual has deshabilitado en las opciones."
+		"message": "Este sitio web ya fue evadido por evasión múltiple, el cual has deshabilitado en las opciones."
 	},
 	"crowdBypassed": {
 		"message": "¡Puede que no tengas que esperar!"

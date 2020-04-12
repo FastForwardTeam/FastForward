@@ -110,6 +110,9 @@
 	"infoFileHoster": {
 		"message": "Nanešťastie, sťahovací server sa uistí, že ste čakali pred tým, ako Vám dovolil stiahnuť súbor."
 	},
+	"infoOutdated": {
+		"message": "Táto stránka už bola obijdená novšou verziou Universal Bypassu."
+	},
 	"crowdWait": {
 		"message": "Ste prvý/á, kto navštívil túto stránku, ale ako ste Vy čakalim iný používatelia Universal Bypassu by už nemuseli."
 	},

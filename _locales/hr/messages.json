@@ -110,6 +110,9 @@
 	"infoFileHoster": {
 		"message": "Nažalost, poslužitelj za preuzimanja će se potruditi da ste pričekali prije no što ste u mogućnosti preuzeti datoteku."
 	},
+	"infoOutdated": {
+		"message": "Ova stranica je premošćena sa novom verzijom  of Universal Bypass."
+	},
 	"crowdWait": {
 		"message": "Nažalost, vi ste prvi koji je naišao na ovaj link, ali nakon što ste čekali, ostali korisnici Universal Bypass-a više ne moraju čekati."
 	},

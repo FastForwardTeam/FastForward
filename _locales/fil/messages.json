@@ -107,8 +107,14 @@
 	"beforeNavigateInstant": {
 		"message": "Naka-navigate ka sa%"
 	},
+	"infoOutdated": {
+		"message": "Ang website ay binaypass ng bagong version ng Universal Bypass."
+	},
 	"crowdWait": {
 		"message": "Sa kasamaang palad, ikaw ang unang nakatagpo ng link na ito, ngunit pagkatapos mong maghintay, ang ibang mga gumagamit ng Universal Bypass ay hindi na magkakaroon."
+	},
+	"crowdDisabled": {
+		"message": "Ang website ay bypassed ng crowd bypass, na ay iyong dinisable sa options."
 	},
 	"crowdBypassed": {
 		"message": "Maaaring hindi mo na kailangang maghintay!"

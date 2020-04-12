@@ -92,6 +92,9 @@
 	"beforeNavigateOptions": {
 		"message": "Você quer ser redirecionado instantaneamente ou em x segundos?"
 	},
+	"infoOutdated": {
+		"message": "Este site é contornado por uma versão mais recente do Universal Bypass."
+	},
 	"crowdWait": {
 		"message": "Infelizmente, você é o(a) primeiro(a) a encontrar este link, mas após a espera, outros utilizadores Universal Bypass não terão de esperar mais."
 	},

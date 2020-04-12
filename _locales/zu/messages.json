@@ -110,6 +110,9 @@
 	"infoFileHoster": {
 		"message": "Ngeshwa, iseva yokulanda izoqinisekisa ukuthi ulindile ngaphambi kokukuvumela ukuthi ulande ifayela."
 	},
+	"infoOutdated": {
+		"message": "Le webhusayithi iphambukiswa yinguqulo entsha ye-Universal Diversion."
+	},
 	"crowdWait": {
 		"message": "Ngeshwa, ungowokuqala ukuhlangana nalesi sixhumanisi, kepha ngemuva kokuthi usulindile, abanye abasebenzisi be-Universal Bypass ngeke kusadingeka."
 	},

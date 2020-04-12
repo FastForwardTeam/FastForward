@@ -110,6 +110,9 @@
 	"infoFileHoster": {
 		"message": "İndirme sunucusu dosyayı indirmenize izin vermeden önce sizi biraz bekletecek."
 	},
+	"infoOutdated": {
+		"message": "Bu web sitesi Universal Bypass'ın daha yeni bir sürümü tarafından atlandı."
+	},
 	"crowdWait": {
 		"message": "Maalesef, bu bağlantıyla ilk karşılaşan sizsiniz, ancak siz bekledikten sonra, diğer Universal Bypass kullanıcılarının artık buna ihtiyacı kalmayacak."
 	},
