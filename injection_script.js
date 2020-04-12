@@ -623,7 +623,7 @@ domainBypass("4shared.com",()=>{
 		document.cookie="exUserId=0; domain=.4shared.com; path=/"
 	}
 })
-domainBypass(/^((www\.)?(jemerik\.com|busyfinance\.site|behealth-id\.xyz|(safe\.anirocksite|my-code4you\.blogspot)\.com))$/,()=>{
+domainBypass(/^((www\.)?((safe\.anirocksite|my-code4you\.blogspot|jemerik)\.com|busyfinance\.site|behealth-id\.xyz))$/,()=>{
 	let p=new URL(location.href).searchParams
 	if(p.has("safe")||p.has("kareeI"))
 	{
