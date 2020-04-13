@@ -48,7 +48,8 @@
 		"*://*.forek.info/*?url=*",
 		"*://*.steamcommunity.com/linkfilter/?url=*",
 		"*://*.creditcable.info/*/*?*",
-		"*://*.adfoc.us/serve/sitelinks/?*"
+		"*://*.adfoc.us/serve/sitelinks/?*",
+		"*://*.made-by.org/redirection/?url=*"
 	],
 	"param_xurl_raw_http": [
 		"*://bluemediafiles.com/*?xurl=*"
