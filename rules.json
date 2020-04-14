@@ -200,6 +200,9 @@
 	"useragent_googlebot": [
 		"*://*.haaretz.co.il/*"
 	],
+	"useragent_iphone": [
+		"*://*.linkvertise.net/*"
+	],
 	"redirect_persist_id_path": [
 		"*://*.bercara.com/*",
 		"*://*.semawur.com/*",
