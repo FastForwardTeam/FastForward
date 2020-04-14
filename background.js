@@ -287,7 +287,7 @@ refreshInjectionScript = () => {
 			}
 			else if(name in onBeforeSendHeaders_rules)
 			{
-				brws.webRequest.onBeforeSendHeaders.addListener(onBeforeSendHeaders_rules[name],{types:["main_frame"],urls:preflightRules[name]},["blocking","requestHeaders"])
+				brws.webRequest.onBeforeSendHeaders.addListener(onBeforeSendHeaders_rules[name],{types:["main_frame","xmlhttprequest"],urls:preflightRules[name]},["blocking","requestHeaders"])
 			}
 			else if(name in onHeadersReceived_rules)
 			{
@@ -739,6 +739,13 @@ onBeforeSendHeaders_rules = {
 		details.requestHeaders.push({
 			name: "User-Agent",
 			value: "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+		})
+		return {requestHeaders: details.requestHeaders}
+	},
+	useragent_iphone: details => {
+		details.requestHeaders.push({
+			name: "User-Agent",
+			value: "Mozilla/5.0 (iPhone; CPU iPhone OS 13_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1 Mobile/15E148 Safari/604.1"
 		})
 		return {requestHeaders: details.requestHeaders}
 	}
