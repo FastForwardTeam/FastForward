@@ -136,7 +136,11 @@ hrefBypass=(regex,f)=>{
 		f(res)
 	}
 },
-ensureDomLoaded=f=>{
+ensureDomLoaded=(f,if_not_bypassed)=>{
+	if(if_not_bypassed&&bypassed)
+	{
+		return
+	}
 	if(["interactive","complete"].indexOf(document.readyState)>-1)
 	{
 		f()
@@ -666,10 +670,6 @@ domainBypass("universal-bypass.org",()=>{
 	window.universalBypassExternalVersion="UNIVERSAL_BYPASS_EXTERNAL_VERSION"
 	window.universalBypassInjectionVersion="UNIVERSAL_BYPASS_INJECTION_VERSION"
 })
-if(bypassed)
-{
-	return
-}
 ensureDomLoaded(()=>{
 	if(ignoreCrowdBypass)
 	{
@@ -2069,4 +2069,4 @@ ensureDomLoaded(()=>{
 		//Insertion point for bypasses detecting certain DOM elements which may appear up to 10 seconds after page load. Bypasses here will no longer need to call ensureDomLoaded.
 	},100)
 	setTimeout(()=>clearInterval(dT),10000)
-})
+},true)

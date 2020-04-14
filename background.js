@@ -1,5 +1,7 @@
 const brws=(typeof browser=="undefined"?chrome:browser),
 firefox=(brws.runtime.getURL("").substr(0,4)=="moz-"),
+extension_version=brws.runtime.getManifest().version,
+definitions_version="",
 getRedirect=(url,referer,safe_in)=>{
 	if(!isGoodLink(url))
 	{
@@ -186,7 +188,7 @@ const updateBypassDefinitions = callback => {
 	let xhr = new XMLHttpRequest()
 	xhr.onload = () => {
 		updateStatus = "updating"
-		upstreamCommit = ""
+		upstreamCommit = definitions_version
 		sendToOptions({upstreamCommit, updateStatus})
 		callback(true)
 		upstreamInjectionScript = xhr.responseText
@@ -198,68 +200,72 @@ const updateBypassDefinitions = callback => {
 		}
 		xhr.send()
 	}
-	xhr.onerror = () => {
-		let xhr = new XMLHttpRequest()
-		xhr.onload = () => {
-			const latestCommit = JSON.parse(xhr.responseText).sha
-			if(latestCommit == upstreamCommit)
-			{
+	if(definitions_version === "")
+	{
+		// No, I'm not going to remove this logic just for the Firefox build; it's unreachable just for the Firefox build, that'll have to suffice.
+		xhr.onerror = () => {
+			let xhr = new XMLHttpRequest()
+			xhr.onload = () => {
+				const latestCommit = JSON.parse(xhr.responseText).sha
+				if(latestCommit == upstreamCommit)
+				{
+					updateStatus = ""
+					sendToOptions({updateStatus})
+					callback(false)
+				}
+				else
+				{
+					updateStatus = "updating"
+					if(upstreamCommit == "")
+					{
+						sendToOptions({upstreamCommit: latestCommit})
+					}
+					sendToOptions({updateStatus})
+					callback(true)
+					upstreamCommit = latestCommit
+					let downloads = 0
+					xhr = new XMLHttpRequest()
+					xhr.onload = () => {
+						upstreamInjectionScript = xhr.responseText
+						if(++downloads == 2)
+						{
+							finishDownload()
+						}
+					}
+					xhr.onerror = () => {
+						if(++downloads == 2)
+						{
+							finishDownload()
+						}
+					}
+					xhr.open("GET", "https://raw.githubusercontent.com/Sainan/Universal-Bypass/" + upstreamCommit + "/injection_script.js", true)
+					xhr.send()
+					let xhr2 = new XMLHttpRequest()
+					xhr2.onload = () => {
+						preflightRules = JSON.parse(xhr2.responseText)
+						if(++downloads == 2)
+						{
+							finishDownload()
+						}
+					}
+					xhr2.onerror = () => {
+						if(++downloads == 2)
+						{
+							finishDownload()
+						}
+					}
+					xhr2.open("GET", "https://raw.githubusercontent.com/Sainan/Universal-Bypass/" + upstreamCommit + "/rules.json", true)
+					xhr2.send()
+				}
+			}
+			xhr.onerror = () => {
 				updateStatus = ""
 				sendToOptions({updateStatus})
 				callback(false)
 			}
-			else
-			{
-				updateStatus = "updating"
-				if(upstreamCommit == "")
-				{
-					sendToOptions({upstreamCommit: latestCommit})
-				}
-				sendToOptions({updateStatus})
-				callback(true)
-				upstreamCommit = latestCommit
-				let downloads = 0
-				xhr = new XMLHttpRequest()
-				xhr.onload = () => {
-					upstreamInjectionScript = xhr.responseText
-					if(++downloads == 2)
-					{
-						finishDownload()
-					}
-				}
-				xhr.onerror = () => {
-					if(++downloads == 2)
-					{
-						finishDownload()
-					}
-				}
-				xhr.open("GET", "https://raw.githubusercontent.com/Sainan/Universal-Bypass/" + upstreamCommit + "/injection_script.js", true)
-				xhr.send()
-				let xhr2 = new XMLHttpRequest()
-				xhr2.onload = () => {
-					preflightRules = JSON.parse(xhr2.responseText)
-					if(++downloads == 2)
-					{
-						finishDownload()
-					}
-				}
-				xhr2.onerror = () => {
-					if(++downloads == 2)
-					{
-						finishDownload()
-					}
-				}
-				xhr2.open("GET", "https://raw.githubusercontent.com/Sainan/Universal-Bypass/" + upstreamCommit + "/rules.json", true)
-				xhr2.send()
-			}
+			xhr.open("GET", "https://api.github.com/repos/Sainan/Universal-Bypass/commits/master", true)
+			xhr.send()
 		}
-		xhr.onerror = () => {
-			updateStatus = ""
-			sendToOptions({updateStatus})
-			callback(false)
-		}
-		xhr.open("GET", "https://api.github.com/repos/Sainan/Universal-Bypass/commits/master", true)
-		xhr.send()
 	}
 	xhr.open("GET", brws.runtime.getURL("injection_script.js"), true)
 	xhr.send()
@@ -272,7 +278,7 @@ refreshInjectionScript = () => {
 	{
 		injectionScript = (upstreamInjectionScript + "\n" + userScript)
 		.split("UNIVERSAL_BYPASS_INTERNAL_VERSION").join("8")
-		.split("UNIVERSAL_BYPASS_EXTERNAL_VERSION").join(brws.runtime.getManifest().version)
+		.split("UNIVERSAL_BYPASS_EXTERNAL_VERSION").join(extension_version)
 		.split("UNIVERSAL_BYPASS_INJECTION_VERSION").join(upstreamCommit?upstreamCommit.substr(0,7):"dev")
 		Object.keys(preflightRules).forEach(name=>{
 			if(name in onBeforeRequest_rules)
@@ -296,11 +302,14 @@ sendToOptions = data => {
 		optionsPort.postMessage(data)
 	}
 }
-brws.alarms.create("update-bypass-definitions", {periodInMinutes: 60})
-brws.alarms.onAlarm.addListener(alert => {
-	console.assert(alert.name == "update-bypass-definitions")
-	updateBypassDefinitions()
-})
+if(!definitions_version)
+{
+	brws.alarms.create("update-bypass-definitions", {periodInMinutes: 60})
+	brws.alarms.onAlarm.addListener(alert => {
+		console.assert(alert.name == "update-bypass-definitions")
+		updateBypassDefinitions()
+	})
+}
 
 // Messaging
 brws.runtime.onMessage.addListener((req, sender, respond) => {
@@ -365,7 +374,7 @@ brws.runtime.onConnect.addListener(port => {
 				break;
 			}
 		})
-		port.postMessage({updateStatus, upstreamCommit, bypassCounter, userScript})
+		port.postMessage({updateStatus, upstreamCommit, bypassCounter, userScript, extension_version, amo: !!definitions_version})
 		break;
 
 		case "crowd-query":
