@@ -16,7 +16,6 @@ function recursivelyIndex($dir)
 			$fn = $dir."/".$f;
 			if(is_dir($fn))
 			{
-				mkdir(".firefox/".$fn);
 				recursivelyIndex($fn);
 			}
 			else
@@ -51,8 +50,7 @@ foreach($index as $fn)
 	}
 	else
 	{
-		$chromium_build->addFile($fn, $fn);
-		$firefox_build->addFile($fn, $fn);
+		$build->addFile($fn, $fn);
 	}
 }
 $build->close();
