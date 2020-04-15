@@ -470,7 +470,7 @@ domainBypass("lnk.news",()=>ifElement("#skip_form",f=>goToUrl(),()=>ifElement("#
 	countIt()
 	f.submit()
 })))
-hrefBypass(/uiz\.(io|app)\/go/,()=>{
+hrefBypass(/(uiz\.(io|app)|moon7\.xyz)\/go/,()=>{
 	Object.freeze(location)
 	ensureDomLoaded(()=>{
 		const regex=/.*window\.location\.href = "(http[^"]+)";.*/
@@ -967,7 +967,7 @@ ensureDomLoaded(()=>{
 		})
 	})
 	domainBypass(/spacetica\.com|linkpoi\.(in|cc)/,()=>ifElement("a.btn.btn-primary[href]",a=>safelyNavigate(a.href)))
-	domainBypass(/uiz\.(io|app)/,()=>crowdBypass(()=>{
+	domainBypass(/uiz\.(io|app)|moon7\.xyz/,()=>crowdBypass(()=>{
 		awaitElement("#go-adsredirect",f=>{
 			f.action+="#bypassClipboard="+location.pathname.substr(1)
 		})
