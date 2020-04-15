@@ -1365,6 +1365,7 @@ ensureDomLoaded(()=>{
 	domainBypass("jk-chat.com",()=>safelyNavigate(atob(location.hash.substr(1))))
 	domainBypass("shorten.sh",()=>crowdBypass(()=>ifElement("#go-link",()=>awaitElement("#go-link.go-link",f=>$.post(f.action,$("#go-link").serialize(),d=>contributeAndNavigate(d.url))))))
 	domainBypass("urapk.com",()=>ifElement("#ed_dl_link > a[href]",a=>safelyNavigate(a.href)))
+	domainBypass("ua.techweft.com",()=>ifElement("a.ui.primary.large.button[href]",a=>safelyNavigate(a.href)))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
