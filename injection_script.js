@@ -48,6 +48,7 @@ unsafelyNavigate=target=>{
 		case "https://fluxteam.xyz/ks/checkpoint/index.php":
 		case "https://api.thinksuggest.org/?m=c&t=j&h=Jump&q=_clickout&pid=linkvertisenet&k=https%3A%2F%2Ffluxteam.xyz%2Fks%2Findex.php&subid=klickouts":
 		case "https://api.thinksuggest.org/?m=c&t=j&h=Jump&q=_clickout&pid=linkvertisenet&k=http%3A%2F%2Ffluxteam.xyz%2Fks%2Fmainsys.php&subid=klickouts":
+		case "https://api.thinksuggest.org/?m=c&t=j&h=Jump&q=_clickout&pid=linkvertisenet&k=https%3A%2F%2Ffluxteam.xyz%2Fks%2Fmainkeysys.php&subid=klickouts":
 		url+="&safe_in=170"
 		break;
 	}
