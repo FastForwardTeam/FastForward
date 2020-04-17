@@ -50,6 +50,17 @@ brws.runtime.onInstalled.addListener(details=>{
 	if(details.reason=="install")
 	{
 		brws.tabs.create({url:"https://universal-bypass.org/firstrun"})
+		brws.storage.sync.set({opened_options_after_update:1})
+	}
+	else
+	{
+		brws.storage.sync.get(["opened_options_after_update"],res=>{
+			if(!res||!res.opened_options_after_update)
+			{
+				brws.tabs.create({url:brws.runtime.getURL("html/options.html")})
+				brws.storage.sync.set({opened_options_after_update:1})
+			}
+		})
 	}
 })
 

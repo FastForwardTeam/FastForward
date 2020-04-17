@@ -74,6 +74,21 @@
 	"contributors": {
 		"message": "Contributors"
 	},
+	"legalBattleInfo1": {
+		"message": "Linkvertise wants to sue Universal Bypass."
+	},
+	"legalBattleInfo2": {
+		"message": "If you like this extension, help me fight the good fight."
+	},
+	"legalBattleInfo3": {
+		"message": "If you would like to learn more about this,"
+	},
+	"legalBattleInfo4": {
+		"message": "here is some more information"
+	},
+	"legalBattleInfo5": {
+		"message": " (the legal stuff is in German)."
+	},
 	"optionsUserscripts": {
 		"message": "Custom Bypasses"
 	},
