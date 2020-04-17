@@ -677,7 +677,7 @@ ensureDomLoaded(()=>{
 		document.querySelectorAll("form[action]").forEach(e=>e.action+="#ignoreCrowdBypass")
 		document.querySelectorAll("a[href]").forEach(e=>e.href+="#ignoreCrowdBypass")
 	}
-	domainBypass("up-load.io",()=>insertInfoBox("{{msg.infoFileHoster}}"))
+	domainBypass(/^((www\.)?(up-load\.io|mediafile\.cloud))$/,()=>insertInfoBox("{{msg.infoFileHoster}}"))
 	domainBypass(/adfoc\.us|ads\.bdcraft\.net/,()=>ifElement(".skip[href]",b=>safelyNavigate(b.href)))
 	domainBypass("srt.am",()=>{
 		if(document.querySelector(".skip-container"))
