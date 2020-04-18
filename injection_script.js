@@ -226,20 +226,21 @@ crowdBypass=(f,a)=>{
 		insertInfoBox("{{msg.crowdDisabled}}")
 	}
 },
+crowdContribute=(target,f)=>{
+	if(crowdEnabled&&isGoodLink(target))
+	{
+		document.documentElement.setAttribute("{{channel.crowd_contribute}}",target)
+		setTimeout(f,10)
+	}
+	else
+	{
+		f()
+	}
+},
 contributeAndNavigate=target=>{
 	if(!navigated&&isGoodLink(target))
 	{
-		if(crowdEnabled)
-		{
-			document.documentElement.setAttribute("{{channel.crowd_contribute}}",target)
-			setTimeout(()=>{
-				unsafelyNavigate(target)
-			},10)
-		}
-		else
-		{
-			unsafelyNavigate(target)
-		}
+		crowdContribute(()=>unsafelyNavigate(target))
 	}
 },
 insertInfoBox=text=>ensureDomLoaded(()=>{
@@ -677,7 +678,8 @@ ensureDomLoaded(()=>{
 		document.querySelectorAll("form[action]").forEach(e=>e.action+="#ignoreCrowdBypass")
 		document.querySelectorAll("a[href]").forEach(e=>e.href+="#ignoreCrowdBypass")
 	}
-	domainBypass(/^((www\.)?(up-load\.io|mediafile\.cloud))$/,()=>insertInfoBox("{{msg.infoFileHoster}}"))
+	//domainBypass(/^((www\.)?(up-load\.io))$/,()=>insertInfoBox("{{msg.infoFileHoster}}"))
+	domainBypass("up-load.io",()=>insertInfoBox("{{msg.infoFileHoster}}"))
 	domainBypass(/adfoc\.us|ads\.bdcraft\.net/,()=>ifElement(".skip[href]",b=>safelyNavigate(b.href)))
 	domainBypass("srt.am",()=>{
 		if(document.querySelector(".skip-container"))
@@ -1346,6 +1348,16 @@ ensureDomLoaded(()=>{
 		crowdBypass(()=>ifElement("form.captcha[action='?']",f=>{
 			f.action+=location.hash
 		},()=>awaitElement("button#link:not([disabled])",b=>contributeAndNavigate(b.parentNode.href))))
+	})
+	domainBypass("mediafile.cloud",()=>{
+		if(location.search.substr(0,4)=="?pt=")
+		{
+			awaitElement("a[href*='?download_token=']",a=>crowdContribute(a.href))
+		}
+		else
+		{
+			crowdBypass()
+		}
 	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
