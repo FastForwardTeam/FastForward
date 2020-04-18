@@ -2050,5 +2050,5 @@ ensureDomLoaded(()=>{
 		}
 		//Insertion point for bypasses detecting certain DOM elements which may appear up to 10 seconds after page load. Bypasses here will no longer need to call ensureDomLoaded.
 	},100)
-	setTimeout(()=>clearInterval(dT),10000)
+	setTimeout(()=>clearInterval(dT),10000)//
 },true)
