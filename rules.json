@@ -218,7 +218,8 @@
 		"*://*.healthinsider.online/*",
 		"*://*.cararoot.id/*",
 		"*://*.gubukbisnis.me/*",
-		"*://*.sekilastekno.com/*"
+		"*://*.sekilastekno.com/*",
+		"*://*.megaurl.in/*"
 	],
 	"redirect_persist_id_path_1_letter": [
 		"*://*.wadooo.com/g/*",
