@@ -1322,7 +1322,8 @@ ensureDomLoaded(()=>{
 	domainBypass("shre.su",()=>{
 		if(location.pathname!="/redirect")
 		{
-			safelyNavigate("https://shre.su/redirect")
+			countIt()
+			safelyAssign("https://shre.su/redirect")
 		}
 	})
 	domainBypass("easylinkref.com",()=>ifElement(".easylinkref-go > strong",s=>safelyNavigate(s.textContent)))
