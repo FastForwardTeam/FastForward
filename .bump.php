@@ -15,3 +15,5 @@ if(version_compare($json["version"], $argv[1]) > 0)
 $json["version"] = $argv[1];
 file_put_contents("manifest.json", str_replace("    ", "\t", json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)));
 file_put_contents(".next_build_id.txt", "0");
+passthru("git add manifest.json");
+passthru("git commit -m \"Bump version to {$argv[1]}\"");
