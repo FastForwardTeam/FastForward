@@ -74,6 +74,21 @@
 	"contributors": {
 		"message": "Người đóng góp"
 	},
+	"legalBattleInfo1": {
+		"message": "Một số trang muốn kiện Universal Bypass."
+	},
+	"legalBattleInfo2": {
+		"message": "Nếu bạn yêu thích Universal Bypass, hãy cùng chúng chiến đấu."
+	},
+	"legalBattleInfo3": {
+		"message": "Nếu bạn muốn tìm hiểu thêm về vấn đề này,"
+	},
+	"legalBattleInfo4": {
+		"message": "đây là một số thông tin"
+	},
+	"legalBattleInfo5": {
+		"message": " (nội dung pháp lý bằng tiếng Đức)."
+	},
 	"optionsUserscripts": {
 		"message": "Tùy chỉnh Bypasses"
 	},

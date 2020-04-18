@@ -39,13 +39,13 @@
 		"message": "Berkontribusi untuk Universal Bypass."
 	},
 	"options": {
-		"message": "Pilihan"
+		"message": "Pengaturan"
 	},
 	"optionsLink": {
 		"message": "Ganti pengaturan Universal Bypass."
 	},
 	"optionsEnabled": {
-		"message": "Aktifkan bypass website."
+		"message": "Aktifkan bypass situs web."
 	},
 	"optionsNavigationDelay": {
 		"message": "Arahkan ke halaman tujuan setelah % detik."
@@ -60,7 +60,7 @@
 		"message": "Blokir IP logger jika tidak dapat dilewati."
 	},
 	"optionsCrowdBypass": {
-		"message": "Memberi dan mendapatkan tujuan dari pemendek link yang tidak dapat dibypass. (Crowd bypass)"
+		"message": "Memberi dan mendapatkan tujuan dari pemendek link yang tidak dapat dibypass. (Crowd Bypass)"
 	},
 	"optionsCrowdAutoOpen": {
 		"message": "Buka halaman tujuan crowd bypass di tab baru setelah % detik."
@@ -73,6 +73,21 @@
 	},
 	"contributors": {
 		"message": "Kontributor"
+	},
+	"legalBattleInfo1": {
+		"message": "Linkvertise ingin menggugat Universal Bypass."
+	},
+	"legalBattleInfo2": {
+		"message": "Jika anda menyukai ekstensi ini, bantu saya berjuang melawan dengan baik."
+	},
+	"legalBattleInfo3": {
+		"message": "Jika anda ingin mempelajari lebih lanjut tentang hal ini,"
+	},
+	"legalBattleInfo4": {
+		"message": "berikut adalah beberapa informasi lebih lanjut"
+	},
+	"legalBattleInfo5": {
+		"message": "(dokumen hukumnya dalam bahasa Jerman)."
 	},
 	"optionsUserscripts": {
 		"message": "Kustom Bypass"
@@ -141,7 +156,7 @@
 		"message": "Batalkan."
 	},
 	"crowdBypassedIgnore": {
-		"message": "Apakah ini tidak benar ?"
+		"message": "Apakah ini tidak benar?"
 	},
 	"crowdBypassedOptions": {
 		"message": "Apakah anda ingin ini dibuka di tab baru secara langsung atau dalam x detik?"

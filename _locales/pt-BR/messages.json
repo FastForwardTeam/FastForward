@@ -74,6 +74,21 @@
 	"contributors": {
 		"message": "Colaboradores"
 	},
+	"legalBattleInfo1": {
+		"message": "Linkvertise quer processar o Universal Bypass."
+	},
+	"legalBattleInfo2": {
+		"message": "Se você gosta dessa extensão, me ajude a travar uma boa luta."
+	},
+	"legalBattleInfo3": {
+		"message": "Se você quiser saber mais sobre isso,"
+	},
+	"legalBattleInfo4": {
+		"message": "aqui estão algumas informações"
+	},
+	"legalBattleInfo5": {
+		"message": " (os termos legais estão em alemão)."
+	},
 	"optionsUserscripts": {
 		"message": "Bypasses Personalizados"
 	},

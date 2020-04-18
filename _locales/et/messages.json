@@ -65,11 +65,26 @@
 	"optionsCrowdAutoOpen": {
 		"message": "Pärast % sekundi möödumist avage uuel vahelehel rahvahulgaga sihtkohad."
 	},
+	"optionsCrowdAutoClose": {
+		"message": "Sulgege vahekaart, mis sisaldab rahvahulga päritolu sihtkohta pärast % sek möödumist selle külastamisest."
+	},
 	"privacyPolicy": {
 		"message": "Privaatsusreeglid"
 	},
 	"contributors": {
 		"message": "Toetajad"
+	},
+	"legalBattleInfo1": {
+		"message": "Linkvertise soovib Universal Bypass'i kohtusse kaevata."
+	},
+	"legalBattleInfo2": {
+		"message": "Kui teile meeldib see laiendus, aita mul võidelda head võitlust."
+	},
+	"legalBattleInfo4": {
+		"message": "siin on veel natuke teavet"
+	},
+	"legalBattleInfo5": {
+		"message": " (õiguslik värk on saksa keeles)."
 	},
 	"optionsUserscripts": {
 		"message": "Kohandatud ümbersõidud"
@@ -103,6 +118,9 @@
 	},
 	"beforeNavigateInstant": {
 		"message": "Sind suunatakse %"
+	},
+	"infoOutdated": {
+		"message": "Sellest veebisaidist möödumiseks on Universal Bypass uuem versioon."
 	},
 	"crowdWait": {
 		"message": "Kahjuks olete selle lingi kaudu esimestena kokku puutunud, kuid pärast teie ootust ei pea teised Universal Bypass'i kasutajad enam ootama."

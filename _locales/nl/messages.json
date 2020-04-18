@@ -74,6 +74,18 @@
 	"contributors": {
 		"message": "Bijdrragers"
 	},
+	"legalBattleInfo1": {
+		"message": "Linkvertise wil Universal Bypass aanklagen."
+	},
+	"legalBattleInfo2": {
+		"message": "Als je deze extentie leuk vindt, steun dan de goede kant."
+	},
+	"legalBattleInfo3": {
+		"message": "Als je hier meer over wil weten,"
+	},
+	"legalBattleInfo4": {
+		"message": "hier is wat meer informatie"
+	},
 	"optionsUserscripts": {
 		"message": "Aangepaste omzeilingen"
 	},

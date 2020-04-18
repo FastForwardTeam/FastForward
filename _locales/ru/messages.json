@@ -74,6 +74,21 @@
 	"contributors": {
 		"message": "Участники"
 	},
+	"legalBattleInfo1": {
+		"message": "Linkvertise хочет подать в суд на Universal Bypass."
+	},
+	"legalBattleInfo2": {
+		"message": "Если Вам нравится это расширение, помогите мне бороться за справедливое дело."
+	},
+	"legalBattleInfo3": {
+		"message": "Если Вы хотите узнать об этом больше,"
+	},
+	"legalBattleInfo4": {
+		"message": "то здесь есть больше информации"
+	},
+	"legalBattleInfo5": {
+		"message": " (юридический материал на немецком языке)."
+	},
 	"optionsUserscripts": {
 		"message": "Пользовательские обходы"
 	},

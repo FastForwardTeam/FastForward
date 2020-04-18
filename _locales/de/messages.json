@@ -74,6 +74,21 @@
 	"contributors": {
 		"message": "Mitwirkende"
 	},
+	"legalBattleInfo1": {
+		"message": "Linkvertise möchte Universal Bypass verklagen."
+	},
+	"legalBattleInfo2": {
+		"message": "Wenn dir diese Erweiterung gefällt, hilf mir den guten Kampf zu kämpfen."
+	},
+	"legalBattleInfo3": {
+		"message": "Falls du mehr darüber erfahren möchtest,"
+	},
+	"legalBattleInfo4": {
+		"message": "hier gibt es weitere Informationen"
+	},
+	"legalBattleInfo5": {
+		"message": "."
+	},
 	"optionsUserscripts": {
 		"message": "Eigene Umgehungen"
 	},

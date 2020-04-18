@@ -74,6 +74,21 @@
 	"contributors": {
 		"message": "المُساهمون"
 	},
+	"legalBattleInfo1": {
+		"message": "موقع Linkvertise يريد مقاضاة المتجاوز العالمي."
+	},
+	"legalBattleInfo2": {
+		"message": "اذا كنت تحب هذه الاضافة، ساعدنا فى القتال الجيد."
+	},
+	"legalBattleInfo3": {
+		"message": "اذا كنت ترغب فى معرفة المزيد عن هذا،"
+	},
+	"legalBattleInfo4": {
+		"message": "هنا المزيد من المعلومات"
+	},
+	"legalBattleInfo5": {
+		"message": "(الأمور القانونية بالالمانية)"
+	},
 	"optionsUserscripts": {
 		"message": "عمليات التجاوز المخصصة"
 	},

@@ -74,6 +74,21 @@
 	"contributors": {
 		"message": "Contributeurs"
 	},
+	"legalBattleInfo1": {
+		"message": "Linkvertise veut poursuivre en justice Universal Bypass."
+	},
+	"legalBattleInfo2": {
+		"message": "Si vous aimez cette extension, aidez-moi à mener un combat juste."
+	},
+	"legalBattleInfo3": {
+		"message": "Si vous souhaitez en savoir plus à ce sujet,"
+	},
+	"legalBattleInfo4": {
+		"message": "voici quelques informations supplémentaires"
+	},
+	"legalBattleInfo5": {
+		"message": " (la partie juridique est en allemand)."
+	},
 	"optionsUserscripts": {
 		"message": "Contournements personnalisés"
 	},
