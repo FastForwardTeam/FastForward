@@ -245,7 +245,7 @@ crowdContribute=(target,f)=>{
 contributeAndNavigate=target=>{
 	if(!navigated&&isGoodLink(target))
 	{
-		crowdContribute(()=>unsafelyNavigate(target))
+		crowdContribute(target,()=>unsafelyNavigate(target))
 	}
 },
 insertInfoBox=text=>ensureDomLoaded(()=>{
