@@ -1341,6 +1341,12 @@ ensureDomLoaded(()=>{
 			crowdBypass()
 		}
 	})
+	domainBypass("mlwbd.pw",()=>{
+		document.querySelectorAll("tr[id^='mov']").forEach(t=>{
+			t.querySelector("a[href^='javascript']").onclick=countIt
+			t.querySelector("a[href^='javascript']").href=t.querySelector("input[name='FU']").value
+		})
+	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
