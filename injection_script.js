@@ -228,6 +228,10 @@ crowdBypass=(f,a)=>{
 	}
 },
 crowdContribute=(target,f)=>{
+	if(typeof f!="function")
+	{
+		f=()=>{}
+	}
 	if(crowdEnabled&&isGoodLink(target))
 	{
 		document.documentElement.setAttribute("{{channel.crowd_contribute}}",target)
