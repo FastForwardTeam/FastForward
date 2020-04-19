@@ -216,7 +216,7 @@ const updateBypassDefinitions = callback => {
 	}
 	if(definitions_version === "")
 	{
-		// No, I'm not going to remove this logic just for the Firefox build; it's unreachable just for the Firefox build, that'll have to suffice.
+		// This is unreachable in Firefox because definitions_version will always be set.
 		xhr.onerror = () => {
 			let xhr = new XMLHttpRequest()
 			xhr.onload = () => {
