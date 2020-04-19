@@ -236,6 +236,7 @@
 		"*://*.goodssh.com/user/links"
 	],
 	"tracker": [
+		"*://analytics.twitter.com/mob_idsync_click?*",
 		"*://*.great.social/*",
 		"*://*.send.digital/*",
 		"*://*.snipli.com/*",
