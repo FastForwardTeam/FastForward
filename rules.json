@@ -118,7 +118,8 @@
 		"*://*.sehuruf.com/linkku/?url=*",
 		"*://*.k2nblog.com/gotothedl.html?url=*",
 		"*://*.novicearea.com/*/?url=*",
-		"*://*.dikatekno.com/go/?url=*"
+		"*://*.dikatekno.com/go/?url=*",
+		"*://*.blackmod.net/dl/?url=*"
 	],
 	"param_id_base64": [
 		"*://*/p/*.html?id=*",
