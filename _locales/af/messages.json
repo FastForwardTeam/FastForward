@@ -32,6 +32,9 @@
 	"faq": {
 		"message": "Meer algemene kwessies (MAK)"
 	},
+	"bypassCounter": {
+		"message": "Universal Bypass het reeds% -werwe vir u omseil."
+	},
 	"support": {
 		"message": "Maak'n bydrae tot die Universele shunt"
 	},
@@ -43,6 +46,9 @@
 	},
 	"optionsEnabled": {
 		"message": "In staat stel om die web site afleidings."
+	},
+	"optionsNavigationDelay": {
+		"message": "Neem my na% sekonde (s) na bestemmings."
 	},
 	"optionsTrackerBypass": {
 		"message": "Drif te spoorsnyers (soos bietjie.ly en t.co) deur gebruik te maak van Apimon.de ."
@@ -67,6 +73,21 @@
 	},
 	"contributors": {
 		"message": "Bydraers"
+	},
+	"legalBattleInfo1": {
+		"message": "Linkvertise wil Universal Bypass dagvaar."
+	},
+	"legalBattleInfo2": {
+		"message": "As u van hierdie uitbreiding hou, help my om die goeie stryd te beveg."
+	},
+	"legalBattleInfo3": {
+		"message": "As u meer hieroor wil leer,"
+	},
+	"legalBattleInfo4": {
+		"message": "hier is meer inligting"
+	},
+	"legalBattleInfo5": {
+		"message": "(die wettige goed is in Duits)."
 	},
 	"optionsUserscripts": {
 		"message": "Persoonlike Verbypaaie"

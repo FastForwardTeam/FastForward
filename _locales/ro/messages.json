@@ -74,6 +74,21 @@
 	"contributors": {
 		"message": "Contributori"
 	},
+	"legalBattleInfo1": {
+		"message": "Linkvertise vrea să dea în judecată Universal Bypass."
+	},
+	"legalBattleInfo2": {
+		"message": "Dacă vă place această extensie, ajutați-mă să lupt pentru ea."
+	},
+	"legalBattleInfo3": {
+		"message": "Dacă doriţi să aflaţi mai multe despre acest lucru,"
+	},
+	"legalBattleInfo4": {
+		"message": "Iată câteva informaţii suplimentare"
+	},
+	"legalBattleInfo5": {
+		"message": "(lucrurile legale sunt în Germană)"
+	},
 	"optionsUserscripts": {
 		"message": "Bypassuri personalizate"
 	},
@@ -106,6 +121,12 @@
 	},
 	"beforeNavigateInstant": {
 		"message": "Sunteți navigat până la%"
+	},
+	"infoFileHoster": {
+		"message": "Din păcate, serverul de descărcare se va asigura că ați așteptat înainte de a vă permite să descărcați fișierul."
+	},
+	"infoOutdated": {
+		"message": "Acest site web poate fi ocolit doar de o versiune mai nouă a Universal Bypass."
 	},
 	"crowdWait": {
 		"message": "Din păcăte, ești primul care să dea de acest link, dar după ce aștepți, alți utilizatori Universal Bypass nu vor mai trebuiască să aștepte."

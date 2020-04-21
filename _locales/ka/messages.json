@@ -1,0 +1,62 @@
+{
+	"firstrunTitle": {
+		"message": "მადლობა Universal Bypass დაყენებისთვის!"
+	},
+	"firstrunNoScript": {
+		"message": "შესაძლოა თქვენ იყენებთ NoScript ან სხვა მასგავს გაფართოებას, რომელიც არ არის თავსებადი Universal Bypass-თან"
+	},
+	"version": {
+		"message": "ვერსია"
+	},
+	"changelog": {
+		"message": "ცვლილებელის ისტორია"
+	},
+	"update": {
+		"message": "განახლების შემოწმება"
+	},
+	"faq": {
+		"message": "ხშირად დასმული კითხვები"
+	},
+	"options": {
+		"message": "პარამეტრები"
+	},
+	"optionsNavigationDelay": {
+		"message": "ავტომატური გადასვლა % წამში"
+	},
+	"privacyPolicy": {
+		"message": "კონფიდენციალურობის პოლიტიკა"
+	},
+	"contributors": {
+		"message": "წვლილის შემტანები"
+	},
+	"legalBattleInfo1": {
+		"message": "Linkvertise აპირებს უჩივლოს სასამართლოში Universal Bypass-ს.\n"
+	},
+	"legalBattleInfo3": {
+		"message": "თუ გსურთ შეიტყოთ მეტი ამის შესახებ"
+	},
+	"legalBattleInfo4": {
+		"message": "აქ არის დამატებითი ინფორმაცია"
+	},
+	"legalBattleInfo5": {
+		"message": "(იურიდიული მასალები გერმანულ ენაზე)"
+	},
+	"beforeNavigateDestination": {
+		"message": "დანიშნულების მისამართი %"
+	},
+	"beforeNavigateTimer": {
+		"message": "თქვენ გადამისამართდებით ავტომატურად % წამში"
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "თქვენ გადამისამართდებით ავტომატურად 1 წამში"
+	},
+	"beforeNavigateOptions": {
+		"message": "გსურთ გადამისამართება მომენტალურად ან x წამში?"
+	},
+	"infoFileHoster": {
+		"message": "სამწუხაროდ, გადმოწერის სერვერი ამოწმებს დაელოდეთ თუ არა შესაბამისი დრო ფაილის გადმოსაწერად."
+	},
+	"crowdWait": {
+		"message": "სამწუხაროდ, თქვენ ხართ პირველი მომხმარებელი, ვინც გახსნა ეს ბმული. სხვა მომხმარებლებს თქვენს შემდეგ აღარ მოუწევთ ლოდინი."
+	}
+}

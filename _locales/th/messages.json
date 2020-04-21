@@ -74,6 +74,21 @@
 	"contributors": {
 		"message": "ผู้มีส่วนร่วมต่างๆ"
 	},
+	"legalBattleInfo1": {
+		"message": "Linkvertis กำลังจะฟ้องร้อง Universal Bypass"
+	},
+	"legalBattleInfo2": {
+		"message": "ถ้าคุณชอบส่วนขยายนี้ ช่วยฉันสู้ในศึกนี้"
+	},
+	"legalBattleInfo3": {
+		"message": "ถ้าคุณอยากทราบข้อมูลเพิ่ม"
+	},
+	"legalBattleInfo4": {
+		"message": "นี้คือข้อมูลเพิ่มเติม"
+	},
+	"legalBattleInfo5": {
+		"message": "(พวกเรื่องกฎหมายเป็นภาษาเยอรมัน)"
+	},
 	"optionsUserscripts": {
 		"message": "บายพาสแบบกำหนดเอง"
 	},
@@ -107,11 +122,17 @@
 	"beforeNavigateInstant": {
 		"message": "คุณกำลังเข้าไป %"
 	},
+	"infoFileHoster": {
+		"message": "ขอโทษด้วย เนื่องจากเว็บไซต์นี้บังคับให้คุณรอก่อนจะดาวน์โหลดไฟล์"
+	},
+	"infoOutdated": {
+		"message": "เว็บไซต์นี้ถูกข้ามโดย Universal Bypass รุ่นใหม่"
+	},
 	"crowdWait": {
 		"message": "ขออภัยค่ะ ท่านเป็นคนแรกที่ได้พบกับลิงค์นี้ แต่หลังจากที่คุณข้ามลิ้งนี้แล้ว ผู้ใช้ Universal Bypass คนอื่นๆ จะไม่ต้องรอลิ้งนี้อีก"
 	},
 	"crowdDisabled": {
-		"message": "เว็บไซต์นี้ถูกบายพาสโดยกลุ่มนักบายพาส(crowd-sourced) ซึ่งคุณสามารถปิดการใช้งานได้ที่การตั้งค่า"
+		"message": "เว็บไซต์นี้ถูกข้ามโดยกลุ่มนักบายพาส(crowd-sourced) ซึ่งคุณสามารถปิดการใช้งานได้ที่การตั้งค่า"
 	},
 	"crowdBypassed": {
 		"message": "คุณอาจไม่ต้องรออีกต่อไป!"

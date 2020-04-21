@@ -1,6 +1,6 @@
 {
 	"appDesc": {
-		"message": "순하게 시간을 낭비하고 있지 마세요. Universal Bypass로 성가신 URL 단축 서비스를 자동 생략하세요."
+		"message": "시간을 낭비하지 마세요. Universal Bypass로 성가신 링크 단축 서비스를 자동 생략하세요."
 	},
 	"firstrunTitle": {
 		"message": "Universal Bypass를 설치해 주셔서 감사합니다!"
@@ -74,6 +74,21 @@
 	"contributors": {
 		"message": "도와주신 분들"
 	},
+	"legalBattleInfo1": {
+		"message": "Linkvertise는 우리를 고소하려 합니다."
+	},
+	"legalBattleInfo2": {
+		"message": "만약 이 확장프로그램이 마음에 드셨다면, 저희가 이길 수 있도록 도와주세요."
+	},
+	"legalBattleInfo3": {
+		"message": "만약 이에 대해 더 알고싶으시다면,"
+	},
+	"legalBattleInfo4": {
+		"message": "여기에서 더 많은 정보를 보실 수 있습니다."
+	},
+	"legalBattleInfo5": {
+		"message": "(법률은 독일어로 작성되어 있습니다)."
+	},
 	"optionsUserscripts": {
 		"message": "사용자 지정 우회책"
 	},
@@ -106,6 +121,12 @@
 	},
 	"beforeNavigateInstant": {
 		"message": "% (으)로 이동 중입니다"
+	},
+	"infoFileHoster": {
+		"message": "불행히도, 다운로드 서버가 당신이 실제로 파일을 받기 위해 기다렸는지 확인하기 때문에 건너뛸 수 없습니다."
+	},
+	"infoOutdated": {
+		"message": "이 사이트는 Universal Bypass를 업데이트 해야 건너뛸 수 있습니다."
 	},
 	"crowdWait": {
 		"message": "안타깝게도 이 링크의 첫 발견자신 것 같군요. 기다려주신다면 다른 Universal Bypass 사용자 분들은 기다리지 않으실 수 있어요."

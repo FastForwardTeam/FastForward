@@ -74,6 +74,21 @@
 	"contributors": {
 		"message": "貢献者"
 	},
+	"legalBattleInfo1": {
+		"message": "Linkvertiseが、Universal Bypassを訴えようとしています。"
+	},
+	"legalBattleInfo2": {
+		"message": "もしこの拡張機能のことを気に入っているのであれば、戦いがうまくいくように手伝っていただけませんか?"
+	},
+	"legalBattleInfo3": {
+		"message": "これについての詳しい情報は、"
+	},
+	"legalBattleInfo4": {
+		"message": "ここにあります"
+	},
+	"legalBattleInfo5": {
+		"message": "(法的事項はドイツ語です)。"
+	},
 	"optionsUserscripts": {
 		"message": "カスタムバイパス"
 	},

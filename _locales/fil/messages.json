@@ -74,6 +74,21 @@
 	"contributors": {
 		"message": "Ang mga kontribyutor"
 	},
+	"legalBattleInfo1": {
+		"message": "Nais ng Linkvertise na mag-demanda sa Universal Bypass."
+	},
+	"legalBattleInfo2": {
+		"message": "Kung gusto mo ang extension na ito, tulungan mo akong ipag laban ang demanda."
+	},
+	"legalBattleInfo3": {
+		"message": "Kung nais mong malaman ang higit pa tungkol dito"
+	},
+	"legalBattleInfo4": {
+		"message": "\nnarito ang ilang karagdagang impormasyon"
+	},
+	"legalBattleInfo5": {
+		"message": "ang batas ay nasa lingwahe ng German"
+	},
 	"optionsUserscripts": {
 		"message": "Pasadyang Mga Salamin"
 	},
@@ -99,13 +114,16 @@
 		"message": "Ikaw ay ididirektang awtomatiko sa loob ng % segundo."
 	},
 	"beforeNavigateTimerSingular": {
-		"message": "Ikaw ay ididirektang awtomatiko sa loob ng % segundo."
+		"message": "Ikaw ay ididirektang awtomatiko sa loob ng 1 segundo."
 	},
 	"beforeNavigateOptions": {
 		"message": "Nais mo bang mabuksan ito sa isang bagong tab kaagad o sa x segundo?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Naka-navigate ka sa%"
+		"message": "Naka-navigate ka sa %"
+	},
+	"infoFileHoster": {
+		"message": "Sa kasamaang palad, masisiguro ng download server na naghintay ka bago ka payagan na mag-download ng file."
 	},
 	"infoOutdated": {
 		"message": "Ang website ay binaypass ng bagong version ng Universal Bypass."
@@ -119,11 +137,20 @@
 	"crowdBypassed": {
 		"message": "Maaaring hindi mo na kailangang maghintay!"
 	},
+	"crowdBypassedInfo": {
+		"message": "Ang iba pang mga gumagamit ng Universal Bypass ay naghintay na sa iyo at iniulat na ang link na ito ay hahantong sa %"
+	},
 	"crowdBypassedTimer": {
 		"message": "Ito ay bubuksan sa isang bagong tab sa % segundo."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Ito ay bubuksan sa isang bagong tab sa 1 segundo."
+	},
+	"crowdCloseTimer": {
+		"message": "Ang tab na ito ay magsasara sa loob nang % segundo."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Ang tab na ito ay magsasara sa loob nang 1 segundo."
 	},
 	"cancel": {
 		"message": "I-cancel"
@@ -133,5 +160,11 @@
 	},
 	"crowdBypassedOptions": {
 		"message": "Nais mo bang mabuksan ito sa isang bagong tab kaagad o sa x segundo?"
+	},
+	"blockedTitle": {
+		"message": "Pinigilan ng Universal Bypass ang iyong IP na mai-log."
+	},
+	"blockedSubtitle": {
+		"message": "Hindi mo nais ang Universal Bypass upang maiwasan ang masasamang loob na makuha ang iyong IP?"
 	}
 }

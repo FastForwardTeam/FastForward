@@ -86,6 +86,9 @@
 	"legalBattleInfo4": {
 		"message": "hier is wat meer informatie"
 	},
+	"legalBattleInfo5": {
+		"message": "(Het juridische materiaal is Duits)."
+	},
 	"optionsUserscripts": {
 		"message": "Aangepaste omzeilingen"
 	},

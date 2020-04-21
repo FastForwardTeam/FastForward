@@ -6,7 +6,7 @@
 		"message": "Cảm ơn bạn đã cài đặt Universal Bypass!"
 	},
 	"firstrunNoScript": {
-		"message": "Tuy nhiên, bạn dường như sử dụng NoScript hoặc tương tự, mà Universal Bypass không tương thích."
+		"message": "Tuy nhiên, bạn dường như sử dụng NoScript hoặc những thứ tương tự mà Universal Bypass không tương thích."
 	},
 	"version": {
 		"message": "Phiên bản"
@@ -60,7 +60,7 @@
 		"message": "Chặn IP Logger nếu nó không thể bỏ qua."
 	},
 	"optionsCrowdBypass": {
-		"message": "Gửi và lấy đích đến của rút gọn chưa thế bypass."
+		"message": "Gửi và lấy đích đến của rút gọn chưa thể bypass."
 	},
 	"optionsCrowdAutoOpen": {
 		"message": "Mở các điểm đến có cộng đồng đóng góp trong một tab mới sau % giây. (0 = lập tức.)"
@@ -75,16 +75,16 @@
 		"message": "Người đóng góp"
 	},
 	"legalBattleInfo1": {
-		"message": "Một số trang muốn kiện Universal Bypass."
+		"message": "Linkvertise muốn kiện Universal Bypass."
 	},
 	"legalBattleInfo2": {
-		"message": "Nếu bạn yêu thích Universal Bypass, hãy cùng chúng chiến đấu."
+		"message": "Nếu bạn thích Universal Bypass, hãy cùng chúng tôi chiến đấu."
 	},
 	"legalBattleInfo3": {
 		"message": "Nếu bạn muốn tìm hiểu thêm về vấn đề này,"
 	},
 	"legalBattleInfo4": {
-		"message": "đây là một số thông tin"
+		"message": "đây là một số thông tin thêm."
 	},
 	"legalBattleInfo5": {
 		"message": " (nội dung pháp lý bằng tiếng Đức)."
@@ -96,7 +96,7 @@
 		"message": "Đây là tính năng nâng cao cho nhà phát triển để tạo mã bypass các trang. Một khi đã hoàn thành, họ có thể gửi lên GitHub để được thêm vào Universal Bypass, do đó mọi người có thể sử dụng."
 	},
 	"beforeNavigate": {
-		"message": "Bạn sắp đến đích đến."
+		"message": "Bạn sắp đến trang cần đến."
 	},
 	"beforeNavigateDestination": {
 		"message": "Điểm đến của bạn là %"
@@ -117,7 +117,7 @@
 		"message": "Bạn sẽ được chuyển hướng tự động trong 1 giây."
 	},
 	"beforeNavigateOptions": {
-		"message": "Bạn có muốn điều hướng nhanh hoặc trong x giây?"
+		"message": "Bạn có muốn chuyển hướng ngay hoặc trong x giây?"
 	},
 	"beforeNavigateInstant": {
 		"message": "Bạn đang được điều hướng đến %"
@@ -126,7 +126,7 @@
 		"message": "Thật không may, máy chủ tải về bắt buộc bạn phải chờ trước khi cho phép bạn tải tệp về."
 	},
 	"infoOutdated": {
-		"message": "Trang web này được bỏ qua với phiên bản mới của Universal Bypass"
+		"message": "Trang web này được bỏ qua với một phiên bản mới của Universal Bypass"
 	},
 	"crowdWait": {
 		"message": "Thật không may, bạn là người đầu tiên gặp phải liên kết này, nhưng sau khi bạn chờ đợi, những người dùng Universal Bypass khác sẽ không còn phải làm như vậy nữa."
@@ -135,16 +135,16 @@
 		"message": "Trang web này được bỏ qua bởi cộng đồng, mà bạn đã vô hiệu hóa trong tùy chọn."
 	},
 	"crowdBypassed": {
-		"message": "Bạn không cần phải đợi!"
+		"message": "Bạn có thể không cần phải đợi!"
 	},
 	"crowdBypassedInfo": {
 		"message": "Người dùng Universal Bypass đã từng chờ như bạn và phản hồi rằng liên liên kết này sẽ dẫn đến %"
 	},
 	"crowdBypassedTimer": {
-		"message": "Sẽ được mở trong tab mới sau % giây."
+		"message": "Sẽ được mở trong tab mới trong % giây."
 	},
 	"crowdBypassedTimerSingular": {
-		"message": "Sẽ được mở trong tab mới sau 1 giây."
+		"message": "Sẽ được mở trong tab mới trong 1 giây."
 	},
 	"crowdCloseTimer": {
 		"message": "Tab này sẽ đóng lại sau % giây."
@@ -153,7 +153,7 @@
 		"message": "Tab này sẽ đóng lại sau 1 giây."
 	},
 	"cancel": {
-		"message": "Huỷ bỏ."
+		"message": "Huỷ ."
 	},
 	"crowdBypassedIgnore": {
 		"message": "Điều này chưa chính xác ư?"

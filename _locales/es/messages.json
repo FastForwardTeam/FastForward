@@ -126,7 +126,7 @@
 		"message": "Desafortunadamente, el servidor de descarga se asegurará de que hayas esperado antes de permitirte descargar el archivo."
 	},
 	"infoOutdated": {
-		"message": "Este sitio web ha sido evadido por una nueva versión de Universal Bypass."
+		"message": "Este sitio web ya fue evadido por una nueva versión de Universal Bypass."
 	},
 	"crowdWait": {
 		"message": "Desafortunadamente, eres el primero en encontrar este enlace, pero después de haber esperado, otros usuarios de Universal Bypass ya no tendrán que hacerlo."

@@ -74,6 +74,21 @@
 	"contributors": {
 		"message": "貢獻者"
 	},
+	"legalBattleInfo1": {
+		"message": "Linkvertise 想要控告 Universal Bypass。"
+	},
+	"legalBattleInfo2": {
+		"message": "如果你喜歡這個擴充功能，就幫我一起奮戰吧。"
+	},
+	"legalBattleInfo3": {
+		"message": "如果你想知道更多，"
+	},
+	"legalBattleInfo4": {
+		"message": "這裡有更多資訊"
+	},
+	"legalBattleInfo5": {
+		"message": "(法律內容是德文)"
+	},
 	"optionsUserscripts": {
 		"message": "自定義繞過規則"
 	},
@@ -141,10 +156,10 @@
 		"message": "取消"
 	},
 	"crowdBypassedIgnore": {
-		"message": "該回報資訊有誤嗎?"
+		"message": "該資訊有誤嗎?"
 	},
 	"crowdBypassedOptions": {
-		"message": "您希望立刻或是x秒後被重新導向嗎？"
+		"message": "您希望立刻或是幾秒後被重新導向嗎？"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass 防止您的IP被記錄。"

@@ -65,11 +65,29 @@
 	"optionsCrowdAutoOpen": {
 		"message": "Abrir destinos de colaboração coletiva em uma nova aba após % segundo(s). (0 = instantâneo)"
 	},
+	"optionsCrowdAutoClose": {
+		"message": "Manter a % para que o campo de entrada possa ser inserido no texto."
+	},
 	"privacyPolicy": {
 		"message": "Política de Privacidade"
 	},
 	"contributors": {
 		"message": "Contribuidores"
+	},
+	"legalBattleInfo1": {
+		"message": "Linkvertise quer processar a Universal Bypass"
+	},
+	"legalBattleInfo2": {
+		"message": "Se gostarem desta extensão, ajudem-me a combater o bom combate."
+	},
+	"legalBattleInfo3": {
+		"message": "Se quiser saber mais sobre este assunto, "
+	},
+	"legalBattleInfo4": {
+		"message": " aqui ficam mais algumas informações"
+	},
+	"legalBattleInfo5": {
+		"message": " (o material jurídico está em alemão).\n"
 	},
 	"optionsUserscripts": {
 		"message": "Bypasses Personalizados"
@@ -83,6 +101,15 @@
 	"beforeNavigateDestination": {
 		"message": "Seu destino é %"
 	},
+	"beforeNavigateUnsafe": {
+		"message": "No entanto, se você navegar agora, eles irão detectar o Universal Bypass."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Você não será mais detectado em % segundos."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Você não será mais detectado em 1 segundo."
+	},
 	"beforeNavigateTimer": {
 		"message": "Você será automaticamente redirecionado em % segundos."
 	},
@@ -91,6 +118,12 @@
 	},
 	"beforeNavigateOptions": {
 		"message": "Você quer ser redirecionado instantaneamente ou em x segundos?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Você será navegado até %."
+	},
+	"infoFileHoster": {
+		"message": "Infelizmente, o servidor de download irá garantir que você esperou antes de permitir que você faça o download do arquivo."
 	},
 	"infoOutdated": {
 		"message": "Este site é contornado por uma versão mais recente do Universal Bypass."
@@ -112,6 +145,12 @@
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Isto vai ser aberto numa nova janela em 1 segundo."
+	},
+	"crowdCloseTimer": {
+		"message": "Este separador fechará em % segundos."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Este separador fechará em 1 segundos.\n"
 	},
 	"cancel": {
 		"message": "Cancelar"

@@ -11,6 +11,12 @@
 	"version": {
 		"message": "संस्करण"
 	},
+	"definitionsVersion": {
+		"message": "बाइपास परिभाषाएँ"
+	},
+	"changelog": {
+		"message": "बदलाव पुरालेख"
+	},
 	"faq": {
 		"message": "अकसर पूछे जाने वाले प्रश्न (FAQ)"
 	},

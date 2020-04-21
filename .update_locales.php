@@ -41,11 +41,21 @@ foreach(scandir("_locales") as $locale)
 		continue;
 	}
 	$json = json_decode($cont, true);
-	foreach(["bypassCounter", "optionsNavigationDelay", "optionsCrowdAutoOpen", "optionsCrowdAutoClose", "beforeNavigateDestination", "beforeNavigateTimer", "beforeNavigateUnsafeTimer", "beforeNavigateInstant", "crowdBypassedInfo", "crowdBypassedTimer"] as $key)
+	foreach($json as $key => $data)
 	{
-		if(array_key_exists($key, $json) && strpos($json[$key]["message"], "%") === false)
+		if(in_array($key, ["bypassCounter", "optionsNavigationDelay", "optionsCrowdAutoOpen", "optionsCrowdAutoClose", "beforeNavigateDestination", "beforeNavigateTimer", "beforeNavigateUnsafeTimer", "beforeNavigateInstant", "crowdBypassedInfo", "crowdBypassedTimer", "crowdCloseTimer"]))
 		{
-			echo "$key in $locale is missing %\n";
+			if(strpos($data["message"], "%") === false)
+			{
+				echo "$key in $locale is missing %\n";
+			}
+		}
+		else
+		{
+			if(strpos($data["message"], "%") !== false)
+			{
+				echo "$key in $locale has a superfluous %\n";
+			}
 		}
 	}
 	if(in_array($locale, ["es-ES", "br-FR"]))

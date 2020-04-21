@@ -6,13 +6,13 @@
 		"message": "Dziękujemy za instalacje Uniwersalnego Obejścia!"
 	},
 	"firstrunNoScript": {
-		"message": "Wydaje się, że używasz „NoScript” lub czegoś podobnego co powoduje, że Uniwersalne Obejście nie jest kompatybilne."
+		"message": "Wydaje się, że używasz „NoScript” lub czegoś podobnego, z którym Universal Bypass nie jest kompatybilny."
 	},
 	"version": {
 		"message": "Wersja"
 	},
 	"definitionsVersion": {
-		"message": "Obejście definicji"
+		"message": "Definicje obejścia"
 	},
 	"changelog": {
 		"message": "Dziennik zmian"
@@ -30,10 +30,10 @@
 		"message": "Skrypt wstrzyknięcia jest już aktualny."
 	},
 	"faq": {
-		"message": "Najczęściej zadawane pytania (FAQ)"
+		"message": "Najczęściej zadawane pytania (FAQ)."
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass ominął dla ciebie % stron."
+		"message": "Uniwersalne Obejście ominęło za Ciebie % stron."
 	},
 	"support": {
 		"message": "Wspieraj Uniwersalne Obejście"
@@ -48,7 +48,7 @@
 		"message": "Włącz obejścia stron."
 	},
 	"optionsNavigationDelay": {
-		"message": "Zabierz mnie do miejsc docelowych po % sekund. (Wpisz 0 aby być zabieranym od razu.))("
+		"message": "Zabierz mnie do miejsc docelowych po % sekund. (Wpisz 0, aby być zabieranym od razu)."
 	},
 	"optionsTrackerBypass": {
 		"message": "Omiń trackery (takie jak bit.ly i t.co) za pomocą Apimon.de."
@@ -57,10 +57,10 @@
 		"message": "Natychmiast zabieraj mnie do miejsc docelowych."
 	},
 	"optionsBlockIPLoggers": {
-		"message": "Zablokuj rejestratory IP, jeśli nie można ich ominąć."
+		"message": "Zablokuj rejestratory IP,  jeśli nie można ich ominąć."
 	},
 	"optionsCrowdBypass": {
-		"message": "Podaj i wykorzystaj miejsca, do których nie można przejść."
+		"message": "Podaj i wykorzystaj miejsca, których nie możesz ominąć."
 	},
 	"optionsCrowdAutoOpen": {
 		"message": "Otwórz crowd-sourcing w nowej karcie po % sekundach. (0 = natychmiast.)"
@@ -72,7 +72,22 @@
 		"message": "Polityka prywatności"
 	},
 	"contributors": {
-		"message": "Twórcy"
+		"message": "Wnieśli wkład"
+	},
+	"legalBattleInfo1": {
+		"message": "Linkvertise chce pozwać Universal Bypass"
+	},
+	"legalBattleInfo2": {
+		"message": "Jeżeli lubisz to rozszerzenie, pomóż mi walczyć"
+	},
+	"legalBattleInfo3": {
+		"message": "Jeśli chcesz dowiedzieć się więcej na ten temat,"
+	},
+	"legalBattleInfo4": {
+		"message": "tutaj jest kilka informacji"
+	},
+	"legalBattleInfo5": {
+		"message": "(dokumenty są w języku niemieckim)"
 	},
 	"optionsUserscripts": {
 		"message": "Niestandardowe obejścia"
@@ -87,7 +102,7 @@
 		"message": "Twoje miejsce docelowe jest %"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "على أية حال، اذا انتقلت الان، سيكتشفون استخدامك لالمتجاوز الشامل."
+		"message": "Jeżeli zostaniesz przekierowany od razu, strona wykryje, że używasz Uniwersalnego Obejścia."
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "Nie będziesz wykrywany za % sekund."
@@ -105,13 +120,16 @@
 		"message": "Chcesz być przekierowywany natychmiastowo, czy za x sekund?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Trwa nawigacja do%"
+		"message": "Trwa nawigacja do %"
 	},
 	"infoFileHoster": {
 		"message": "Niestety, serwer pobierania upewni się, czy czekałeś, zanim pozwoli ci pobrać ten plik."
 	},
+	"infoOutdated": {
+		"message": "Ta strona jest omijana przez nowszą wersję Universal Bypass."
+	},
 	"crowdWait": {
-		"message": "Niestety, jesteś pierwszym który wchodzi w ten link, ale po tym jak ty poczekałeś, inni użytkownicy Universal bypass nie będą musieli już czekać."
+		"message": "Niestety, jesteś pierwszym, który wchodzi w ten link, ale po tym jak ty zaczekasz, inni użytkownicy Universal bypass nie będą musieli już czekać."
 	},
 	"crowdDisabled": {
 		"message": "Ta strona jest ominięta przez crowd bypass, którą masz wyłączoną w ustawieniach."
@@ -120,7 +138,7 @@
 		"message": "Już nie musisz czekać!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Inni użytkownicy Uniwersalnego obejścia czekali na ciebie i zgłosili, że prowadzi to do %"
+		"message": "Inni użytkownicy Uniwersalnego obejścia czekali za ciebie i zgłosili, że prowadzi to do %"
 	},
 	"crowdBypassedTimer": {
 		"message": "To będzie otwarte w nowym oknie za % sekund."

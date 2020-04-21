@@ -3,7 +3,7 @@
 		"message": "Jangan habiskan waktu anda dengan menaati aturan. Universal Bypass secara otomatis akan melompati link pemendek yang menyebalkan."
 	},
 	"firstrunTitle": {
-		"message": "Terima kasih anda telah memasang Universal Bypass!"
+		"message": "Terima kasih telah memasang Universal Bypass!"
 	},
 	"firstrunNoScript": {
 		"message": "Akan tetapi, anda sepertinya menggunakan ekstensi NoScript atau yang menyerupai itu, karena itu Universal Bypass tidak kompatibel dengannya."
@@ -30,10 +30,10 @@
 		"message": "Definisi bypassnya sudah paling terbaru."
 	},
 	"faq": {
-		"message": "Pertanyaan yang Sering Diajukan (FAQ)"
+		"message": "Pertanyaan yang Sering Diajukan (PySD)"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass sudah membypass % situs untuk anda."
+		"message": "Universal Bypass sudah mem-bypass[give italic at \"bypass\"] % situs untuk anda."
 	},
 	"support": {
 		"message": "Berkontribusi untuk Universal Bypass."
@@ -123,7 +123,7 @@
 		"message": "Anda sedang diarahkan ke %"
 	},
 	"infoFileHoster": {
-		"message": "Sayangnya, server unduhan nya akan memastikan bahwa anda telah menunggu sebelum mengizinkan anda untuk mengunduh file."
+		"message": "Sayangnya, peladen unduhannya akan memastikan bahwa Anda telah menunggu sebelum mengizinkan Anda untuk mengunduh file."
 	},
 	"infoOutdated": {
 		"message": "Situs web ini telah ter-bypass oleh versi yang paling baru dari Universal Bypass."

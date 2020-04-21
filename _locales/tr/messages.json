@@ -6,7 +6,7 @@
 		"message": "Universal Bypass'i kurduğunuz için çok teşekkürler!"
 	},
 	"firstrunNoScript": {
-		"message": "Ancak görünen o ki Universal Baypass'in uyumlu olmadığı NoScript veya benzeri bir betik kullanıyorsunuz."
+		"message": "Ancak görünen o ki Universal Baypass'in uyumlu olmadığı NoScript veya benzeri bir uzatma kullanıyorsunuz."
 	},
 	"version": {
 		"message": "Sürüm"
@@ -15,7 +15,7 @@
 		"message": "Bypass tanımları"
 	},
 	"changelog": {
-		"message": "Değişiklik kütüğü"
+		"message": "Değişiklik listesi"
 	},
 	"update": {
 		"message": "Güncellemeleri kontrol et"
@@ -74,8 +74,23 @@
 	"contributors": {
 		"message": "Katkıda bulunanlar"
 	},
+	"legalBattleInfo1": {
+		"message": "Linkvertise, Universal Bypasse dava açmak istiyor."
+	},
+	"legalBattleInfo2": {
+		"message": "Eğer bu uzantıyı seviyorsan, iyi savaşı savaşmama yardımcı ol."
+	},
+	"legalBattleInfo3": {
+		"message": "bunun hakkında daha fazla bilgi edinmek istersen,"
+	},
+	"legalBattleInfo4": {
+		"message": "burada daha fazla bilgi var:"
+	},
+	"legalBattleInfo5": {
+		"message": "(yasal şeyler Almancada)."
+	},
 	"optionsUserscripts": {
-		"message": "Özel Es Geçmeler"
+		"message": "Özel Baypaslar"
 	},
 	"optionsUserscriptsDescription": {
 		"message": "Bu, geliştiricilerin siteleri atlamak için kendi komut dosyalarını oluşturmaları için gelişmiş bir özelliktir. Kusursuz çalıştığında, GitHub'a Universal Bypass'a eklenmesi için gönderilebilirsiniz, böylece herkesin kullanımına açık olur."

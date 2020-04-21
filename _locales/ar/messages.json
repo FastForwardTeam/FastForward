@@ -114,7 +114,7 @@
 		"message": "سيتم تحويلك تلقائيا بعد % ثوان."
 	},
 	"beforeNavigateTimerSingular": {
-		"message": "سيتم تحويلك تلقائيا بعد % ثوان."
+		"message": "سيتم تحويلك تلقائيا بعد 1 ثوان."
 	},
 	"beforeNavigateOptions": {
 		"message": "هل تريد ان يتم تحويلك تلقائيا او بعدد ثوانى محددة؟"

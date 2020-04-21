@@ -1,0 +1,50 @@
+{
+	"firstrunNoScript": {
+		"message": "Vi ŝajne uzas NoScript, aŭ aferoj same. Universal Bypass bedaŭrinde ne povas kunfari kun tioj."
+	},
+	"version": {
+		"message": "versio"
+	},
+	"updating": {
+		"message": "Elŝutanta preterpasa difiniojn"
+	},
+	"faq": {
+		"message": "Ofta demandoj"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass preterpasinta % retpaĝojn. "
+	},
+	"options": {
+		"message": "agordoj"
+	},
+	"legalBattleInfo1": {
+		"message": "Linvertise volas procesi Universal Bypass -on."
+	},
+	"legalBattleInfo2": {
+		"message": "Se vi ŝatas ĉi, bonvolu helpi min sur ĉi batalo"
+	},
+	"legalBattleInfo3": {
+		"message": "Se vi volas plisciĝi,"
+	},
+	"legalBattleInfo4": {
+		"message": "multaj informoj estas ĉi."
+	},
+	"legalBattleInfo5": {
+		"message": "La aferoj legala estas Germana."
+	},
+	"infoOutdated": {
+		"message": "Ĉi tio retpaĝo estas uzanta pli nova versio de Universal Bypass"
+	},
+	"crowdWait": {
+		"message": "Bedaŭrinde, vi estas la unua vizitanto sur ĉi retpaĝo. Sed, se vi atendas, la aliaj uzantoj ne atendos."
+	},
+	"cancel": {
+		"message": "Nuligi."
+	},
+	"crowdBypassedOptions": {
+		"message": "Ĉu vi volas aperi tion instante, sur nova tabo?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass haltis via IP adreso registrita."
+	}
+}

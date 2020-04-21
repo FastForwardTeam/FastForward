@@ -74,6 +74,21 @@
 	"contributors": {
 		"message": "贡献者"
 	},
+	"legalBattleInfo1": {
+		"message": "linkvertise希望起诉Universal Bypass"
+	},
+	"legalBattleInfo2": {
+		"message": "如果您喜欢此扩展程序，请帮助我打好仗"
+	},
+	"legalBattleInfo3": {
+		"message": "如果您想了解更多信息，"
+	},
+	"legalBattleInfo4": {
+		"message": "这是更多信息"
+	},
+	"legalBattleInfo5": {
+		"message": "（法律材料为德语）。"
+	},
 	"optionsUserscripts": {
 		"message": "自定义绕过规则"
 	},
@@ -106,6 +121,12 @@
 	},
 	"beforeNavigateInstant": {
 		"message": "您正在导航到%"
+	},
+	"infoFileHoster": {
+		"message": "不幸的是，下载服务器会确保您已经等待，然后才允许您下载文件。"
+	},
+	"infoOutdated": {
+		"message": "该网站已被新版本的Universal Bypass取代。"
 	},
 	"crowdWait": {
 		"message": "很抱歉您是第一个点击此链接的人，但您等待这段时间以后，其他Universal Bypass用户将不再需要等待。"

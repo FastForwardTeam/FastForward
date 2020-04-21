@@ -11,10 +11,130 @@
 	"version": {
 		"message": "Верзија"
 	},
+	"definitionsVersion": {
+		"message": "Верзија на дефиниции"
+	},
 	"changelog": {
 		"message": "Историја на промени"
 	},
 	"update": {
 		"message": "Провери за нова верзија"
+	},
+	"updating": {
+		"message": "Обновување"
+	},
+	"updateYes": {
+		"message": "Успешно обновување"
+	},
+	"updateNo": {
+		"message": "Дефинициите се во најнова верзија."
+	},
+	"faq": {
+		"message": "Често Поставени Прашања (ЧПП)"
+	},
+	"bypassCounter": {
+		"message": "Универзален Бајпас веќе има заобиколено % страни за тебе"
+	},
+	"support": {
+		"message": "Помогни на Универзален Бајпас"
+	},
+	"options": {
+		"message": "Опции"
+	},
+	"optionsLink": {
+		"message": "Смени ги поставките на Универзален Бајпас"
+	},
+	"optionsEnabled": {
+		"message": "Вклучи заобиколување на страни"
+	},
+	"optionsNavigationDelay": {
+		"message": "Однесиме на дестинацијата после % секунда(и)"
+	},
+	"optionsTrackerBypass": {
+		"message": "Заобиколи тракери (како bit.ly и t.co) со користење на Apimon.de"
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Однесиме на дестинацијата на тракерот наеднаш"
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Блокирај ги IP Логерите ако неможат да се заобиколат."
+	},
+	"optionsCrowdBypass": {
+		"message": "Земи ги и дади ги дестинациите на скратувачите кои неможат да се заобиколат."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Отвори ја crowd-sourced дестинација во ново јазиче (Tab) после % секунда(и)"
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Исклули го јазичето (Tab) кое ја содржи crowd-sourced дестинацијата после % секунда(и) од отварање"
+	},
+	"privacyPolicy": {
+		"message": "Правила и Условите"
+	},
+	"contributors": {
+		"message": "Луѓе кои помогнале"
+	},
+	"legalBattleInfo1": {
+		"message": "Linkvertise сака да го тужи Универзалниот Бајпас"
+	},
+	"legalBattleInfo2": {
+		"message": "Ако ја сакаш оваа extension, помогними да се борам со твоја помош"
+	},
+	"legalBattleInfo3": {
+		"message": "Ако сакаш да прочиташ нешто поврзано со ова,"
+	},
+	"legalBattleInfo4": {
+		"message": "еве повеќе информации."
+	},
+	"legalBattleInfo5": {
+		"message": "(легалните документи се на Германски)"
+	},
+	"optionsUserscripts": {
+		"message": "Твои Бајпаси"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Ова е напредна функција која е направена за програмери да направат своја скрипта за да заобиколуваат страни. Кога тие скрипти ќе се совршат, тогаш ќе можат да се пратена на ГитХуб (GitHub) за да се додадени во Универзалниот Бајпас, за да се достапни за сите."
+	},
+	"beforeNavigate": {
+		"message": "Уште малку си до твојата дестинација"
+	},
+	"beforeNavigateDestination": {
+		"message": "Твојата дестинација е %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "Но, ако сакаш да одиш сега, тие ќе го заприметат Универзалниот Бајпас."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Нема да го заприметат за % секунди"
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Нема да биде заприметен за 1 секунда"
+	},
+	"beforeNavigateTimer": {
+		"message": "Автоматски ќе бидеш префрлен на дестинацијата за % секунди."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Автоматски ќе бидеш префрлен за 1 секунда"
+	},
+	"beforeNavigateOptions": {
+		"message": "Дали сакаш веднаш да бидеш префрлен или за x секунди?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Ти ќе бидеш префрлен на %"
+	},
+	"infoFileHoster": {
+		"message": "За жал, серверот ќе се погрижи да почекаш пред да можеш да го спуштиш фајлот."
+	},
+	"infoOutdated": {
+		"message": "Оваа страна е заобиколена со користење на понова страна од Универзален Бајпас."
+	},
+	"crowdWait": {
+		"message": "За жал, ти си првиот кој го сретна овој линк, но одкако ќе почекаш, други корисници (вклучувајки и тебе) во иднина не ќе мораат."
+	},
+	"crowdDisabled": {
+		"message": "Оваа страна е заобиколена со користење на crowd заобиколување, кое го имате исклучено во поставките."
+	},
+	"crowdBypassed": {
+		"message": "Можеби не ќе мораш да чекаш"
 	}
 }
