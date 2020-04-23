@@ -60,7 +60,7 @@
 		"message": "Block IP loggers if they can't be bypassed."
 	},
 	"optionsCrowdBypass": {
-		"message": "Give and take the destinations of unbypassable shorteners."
+		"message": "Crowd Bypass: Give and take the destinations of unbypassable shorteners."
 	},
 	"optionsCrowdAutoOpen": {
 		"message": "Open crowd-sourced destinations in a new tab after % second(s)."
@@ -129,7 +129,7 @@
 		"message": "Unfortunately, you're the first to encounter this link, but after you've waited, other Universal Bypass users will no longer have to."
 	},
 	"crowdDisabled": {
-		"message": "This website is bypassed by crowd bypass, which you have disabled in the options."
+		"message": "This website is bypassed by crowd bypass, which you can enable in the options."
 	},
 	"crowdBypassed": {
 		"message": "You might not have to wait!"

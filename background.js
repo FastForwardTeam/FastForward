@@ -87,7 +87,18 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 		trackerBypassEnabled=(res.no_tracker_bypass!=="true")
 		instantNavigationTrackers=(res.no_instant_navigation_trackers!=="true")
 		blockIPLoggers=(res.allow_ip_loggers!=="true")
-		crowdEnabled=(res.crowd_bypass_opt_out!=="true")
+		if(res.crowd_bypass_opt_out)
+		{
+			crowdEnabled=(res.crowd_bypass_opt_out!=="true")
+		}
+		else
+		{
+			crowdEnabled=!firefox
+			if(firefox)
+			{
+				brws.storage.sync.set({crowd_bypass_opt_out:"true"})
+			}
+		}
 		if(!res.crowd_open_delay||res.crowd_open_delay==61)
 		{
 			brws.storage.sync.set({crowd_open_delay:-6})
