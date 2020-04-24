@@ -204,6 +204,9 @@
 	"useragent_iphone": [
 		"*://*.linkvertise.net/*"
 	],
+	"useragent_chrome": [
+		"*://*.fluxteam.xyz/*"
+	],
 	"redirect_persist_id_path": [
 		"*://*.bercara.com/*",
 		"*://*.semawur.com/*",
