@@ -93,11 +93,13 @@ foreach($index as $fn)
 	{
 		$content = str_replace([
 			"extension_version=brws.runtime.getManifest().version,",
-			"definitions_version=\"\","
+			"definitions_version=\"\",",
+			"if(definitions_version===\"\")",
 		],
 		[
 			"extension_version=\"{$extension_version}\",",
-			"definitions_version=\"{$definitions_version}\","
+			"definitions_version=\"{$definitions_version}\",",
+			"if(false)"
 		], file_get_contents($fn));
 		$build->addFromString($fn, $content);
 		file_put_contents(".firefox/".$fn, $content);

@@ -214,9 +214,8 @@ const updateBypassDefinitions = callback => {
 		}
 		xhr.send()
 	}
-	if(definitions_version === "")
+	if(definitions_version==="")
 	{
-		// This is unreachable in Firefox because definitions_version will always be set.
 		xhr.onerror = () => {
 			let xhr = new XMLHttpRequest()
 			xhr.onload = () => {

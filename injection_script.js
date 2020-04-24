@@ -808,7 +808,8 @@ ensureDomLoaded(()=>{
 	domainBypass("elsfile.org",()=>{
 		let f=document.createElement("form")
 		f.method="POST"
-		f.innerHTML='<input type="hidden" name="op" value="download1"><input type="hidden" name="usr_login" value="C"><input type="hidden" name="id" value="'+location.pathname.substr(1)+'"><input type="hidden" name="fname" value="'+document.querySelectorAll("div#container > div > div > table > tbody > tr > td")[2].textContent+'"><input type="hidden" name="referer" value="q"><input type="hidden" name="method_free" value="Free Download">'
+		f.innerHTML='<input type="hidden" name="op" value="download1"><input type="hidden" name="usr_login" value="C"><input type="hidden" name="id" value="'+location.pathname.substr(1)+'"><input type="hidden" name="fname"><input type="hidden" name="referer" value="q"><input type="hidden" name="method_free" value="Free Download">'
+		f.querySelector("[name='fname']").value=document.querySelectorAll("div#container > div > div > table > tbody > tr > td")[2].textContent
 		f=document.documentElement.appendChild(f)
 		countIt(()=>f.submit())
 	})
@@ -1082,7 +1083,8 @@ ensureDomLoaded(()=>{
 		let a=document.createElement("a")
 		a.href=e.getAttribute("link")
 		a.setAttribute("class",e.getAttribute("class"))
-		a.innerHTML='<i class="fa fa-fw fa-download"></i>'+e.textContent
+		a.textContent=e.textContent
+		a.innerHTML='<i class="fa fa-fw fa-download"></i>'+a.innerHTML
 		e.closest("footer").replaceChild(a,e.parentNode)
 	})))
 	domainBypass("mispuani.xyz",()=>{
