@@ -1395,7 +1395,7 @@ ensureDomLoaded(()=>{
 		}))
 		/*jshint ignore:end*/
 	}
-	domainBypass(/pahe\.(in|me)/,()=>document.querySelectorAll("a.shortc-button.small[href*='?c4871c3e35='], a.shortc-button.small[href*='?id=']").forEach(a=>{
+	domainBypass(/pahe\.(in|me)/,()=>document.querySelectorAll("a.shortc-button.small[href*='?4bb9c2daed='], a.shortc-button.small[href*='?id=']").forEach(a=>{
 		let qe=a.previousElementSibling
 		while(qe&&qe.tagName!="B"&&qe.tagName!="STRONG")
 		{
@@ -1666,7 +1666,7 @@ ensureDomLoaded(()=>{
 
 					case "sweetlantern.com":
 					case "intercelestial.com":
-					referer="https://pahe.me/?c4871c3e35="+id
+					referer="https://pahe.me/?4bb9c2daed="+id
 					break;
 				}
 				referer+="#bypassClipboard="+bypassClipboard
