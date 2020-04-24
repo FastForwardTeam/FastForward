@@ -761,6 +761,16 @@ onBeforeSendHeaders_rules = {
 			value: "Mozilla/5.0 (iPhone; CPU iPhone OS 13_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1 Mobile/15E148 Safari/604.1"
 		})
 		return {requestHeaders: details.requestHeaders}
+	},
+	useragent_chrome: details => {
+		if(firefox)
+		{
+			details.requestHeaders.push({
+				name: "User-Agent",
+				value: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36"
+			})
+			return {requestHeaders: details.requestHeaders}
+		}
 	}
 },
 onHeadersReceived_rules = {
