@@ -46,7 +46,7 @@ unsafelyNavigate=target=>{
 		break;
 
 		case (/fluxteam\.xyz/.exec(target)||{}).input:
-		url+="&safe_in=90"
+		url+="&safe_in=95"
 		break;
 	}
 	location.assign(url)
