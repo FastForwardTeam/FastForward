@@ -1,0 +1,152 @@
+{
+	"appDesc": {
+		"message": "不要浪費時間遵守法規。通用旁路繞過了惱人的鏈接縮短器。"
+	},
+	"firstrunTitle": {
+		"message": "感謝您安裝通用旁路！"
+	},
+	"firstrunNoScript": {
+		"message": "但是，您似乎正在使用與Universal Bypass不兼容的NoScript或類似腳本。"
+	},
+	"version": {
+		"message": "版"
+	},
+	"definitionsVersion": {
+		"message": "繞過定義"
+	},
+	"changelog": {
+		"message": "變更日誌"
+	},
+	"update": {
+		"message": "檢查更新"
+	},
+	"updating": {
+		"message": "正在下載旁路定義..."
+	},
+	"updateYes": {
+		"message": "成功下載旁路定義。"
+	},
+	"updateNo": {
+		"message": "旁路定義是最新的。"
+	},
+	"faq": {
+		"message": "常見問題解答 (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass % 已經為您繞過了站點。"
+	},
+	"support": {
+		"message": "為通用旁路做貢獻。"
+	},
+	"options": {
+		"message": "選件"
+	},
+	"optionsLink": {
+		"message": "更改通用繞過選項。"
+	},
+	"optionsEnabled": {
+		"message": "啟用網站繞過。"
+	},
+	"optionsTrackerBypass": {
+		"message": "使用Apimon.de繞過跟踪器（例如bit.ly和t.co）。"
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "立即將我帶到追踪器的目的地。"
+	},
+	"optionsBlockIPLoggers": {
+		"message": "如果無法繞過IP記錄器，則將其阻止。"
+	},
+	"optionsCrowdBypass": {
+		"message": "給予和繞過不可逾越的起酥油的目的地。"
+	},
+	"privacyPolicy": {
+		"message": "隱私政策"
+	},
+	"contributors": {
+		"message": "貢獻者"
+	},
+	"legalBattleInfo1": {
+		"message": "Linkvertise希望起訴通用旁路。"
+	},
+	"legalBattleInfo2": {
+		"message": "如果您喜歡此擴展程序，請幫助我打好仗。"
+	},
+	"legalBattleInfo3": {
+		"message": "如果您想了解更多有關此的信息，"
+	},
+	"legalBattleInfo4": {
+		"message": "這是更多信息"
+	},
+	"optionsUserscripts": {
+		"message": "自定義繞過\n"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "這是開發人員可以創建自己的腳本來繞過站點的高級功能。完善後，可以將它們提交到GitHub上以添加到Universal Bypass，因此每個人都可以使用。"
+	},
+	"beforeNavigate": {
+		"message": "您快要到目的地了。"
+	},
+	"beforeNavigateDestination": {
+		"message": "您的目的地是 %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "但是，如果您現在導航，他們將檢測到通用旁路。"
+	},
+	"beforeNavigateTimer": {
+		"message": "您將在幾秒鐘內自動重定向 %。"
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "您將在1秒內自動重定向。"
+	},
+	"beforeNavigateOptions": {
+		"message": "您要立即重定向還是在x秒內重定向？"
+	},
+	"beforeNavigateInstant": {
+		"message": "您正在導航到 %"
+	},
+	"infoFileHoster": {
+		"message": "不幸的是，下載服務器將確保您等待之後才允許下載文件。"
+	},
+	"infoOutdated": {
+		"message": "較新版本的Universal Bypass繞過了該網站。"
+	},
+	"crowdWait": {
+		"message": "不幸的是，您是第一個遇到此鏈接的人，但是在等待之後，其他通用繞過用戶將不再需要。"
+	},
+	"crowdDisabled": {
+		"message": "您已在選項中禁用了人群旁路，從而繞過了該網站。"
+	},
+	"crowdBypassed": {
+		"message": "您可能不必等待！"
+	},
+	"crowdBypassedInfo": {
+		"message": "其他通用繞過用戶已經在等您，並報告這導致 %"
+	},
+	"crowdBypassedTimer": {
+		"message": "這將在幾秒鐘內在新標籤頁中打開 %。"
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "這將在1秒鐘內在新標籤頁中打開。"
+	},
+	"crowdCloseTimer": {
+		"message": "此標籤將在幾秒鐘內關閉 %。"
+	},
+	"crowdCloseTimerSingular": {
+		"message": "此標籤將在1秒鐘內關閉。"
+	},
+	"cancel": {
+		"message": "取消。"
+	},
+	"crowdBypassedIgnore": {
+		"message": "這不正確嗎？"
+	},
+	"crowdBypassedOptions": {
+		"message": "您是否要立即或在x秒內在新標籤頁中打開它？"
+	},
+	"blockedTitle": {
+		"message": "通用旁路阻止您的IP被記錄。"
+	},
+	"blockedSubtitle": {
+		"message": "不想讓Universal Bypass阻止不良行為者獲取您的IP嗎？"
+	}
+}

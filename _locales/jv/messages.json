@@ -60,7 +60,7 @@
 		"message": "Blokir IP logger menawi mboten saged di bypass."
 	},
 	"optionsCrowdBypass": {
-		"message": "Maringi lan oleh tujuan saking pemendek link sing mboten saged di bypass. (Crowd bypass)"
+		"message": "Crowd Bypass: Maringi lan angsal tujuan saking pemendek link ingkang mboten saged di bypass."
 	},
 	"optionsCrowdAutoOpen": {
 		"message": "Mbukak tujuan crowd bypass ing tab anyar sakwise % detik. "
@@ -78,16 +78,13 @@
 		"message": "Linkvertise badhe nuntut Universal Bypass."
 	},
 	"legalBattleInfo2": {
-		"message": "Yen panjenengan seneng ekstensi niki, tulung kula berjuang nglawan ingkang cara sae."
+		"message": "Yen panjenengan seneng ekstensi niki, tulung kita berjuang nglawan ingkang sae."
 	},
 	"legalBattleInfo3": {
 		"message": "Yen panjenengan kajeng sumerep langkung lajeng tentang hal niki,"
 	},
 	"legalBattleInfo4": {
 		"message": "menika inggih sawetara informasi liyane"
-	},
-	"legalBattleInfo5": {
-		"message": "(dokumen hukumipun ngangge basa jerman)."
 	},
 	"optionsUserscripts": {
 		"message": "Kustom Bypass"
@@ -132,7 +129,7 @@
 		"message": "Sayange, panjenengan minangka tiyang ingkang pertama ngliwati link niki, nanging sakwise panjenengan sampun ngliwati, pangguna Universal Bypass liyane mboten perlu ngliwati malih."
 	},
 	"crowdDisabled": {
-		"message": "Situs web niki sampun saged di bypass ndamel fitur crowd bypass, ingkang fiture mboten panjenengan aktifne teng pengaturan."
+		"message": "Situs web niki sampun saged di bypass ndamel fitur crowd bypass, ingkang saged panjenengan aktifaken wonten pengaturan."
 	},
 	"crowdBypassed": {
 		"message": "Panjenengan mungkin mboten perlu ngenteni!"

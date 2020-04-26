@@ -6,13 +6,13 @@
 		"message": "ขอขอบคุณสำหรับการติดตั้ง Universal Bypass!"
 	},
 	"firstrunNoScript": {
-		"message": "แต่อย่างไรก็ตาม ดูเหมือนคุณกำลังใช้ NoScript หรืออะไรที่คล้ายกัน ซึ่ง Universal Bypass นั้นเข้ากันไม่ได้"
+		"message": " ดูเหมือนคุณกำลังใช้ NoScript หรือสิ่งที่คล้ายคลึง ซึ้ง Universal Bypass ไม่สามารถทำงานร่วมกันได้"
 	},
 	"version": {
 		"message": "เวอร์ชัน"
 	},
 	"definitionsVersion": {
-		"message": "คำจำกัดความของ Bypass "
+		"message": "เครื่องมือ Bypass "
 	},
 	"changelog": {
 		"message": "บันทึกการเปลี่ยนแปลง"
@@ -21,13 +21,13 @@
 		"message": "ตรวจสอบการอัปเดต"
 	},
 	"updating": {
-		"message": "กำลังโหลด คำจำกัดความของ Bypass..."
+		"message": "กำลังโหลด เครื่องมือ Bypass..."
 	},
 	"updateYes": {
-		"message": "ดาวน์โหลดคำจำกัดความ bypass สำเร็จแล้ว"
+		"message": "ดาวน์โหลดเครื่องมือ bypass สำเร็จแล้ว"
 	},
 	"updateNo": {
-		"message": "คำจำกัดความ bypass เป็นเวอชั่นล่าสุดแล้ว"
+		"message": "เครื่องมือ bypass เป็นเวอร์ชั่นล่าสุดแล้ว"
 	},
 	"faq": {
 		"message": "คำถามที่พบบ่อย (FAQ)"
@@ -85,9 +85,6 @@
 	},
 	"legalBattleInfo4": {
 		"message": "นี้คือข้อมูลเพิ่มเติม"
-	},
-	"legalBattleInfo5": {
-		"message": "(พวกเรื่องกฎหมายเป็นภาษาเยอรมัน)"
 	},
 	"optionsUserscripts": {
 		"message": "บายพาสแบบกำหนดเอง"

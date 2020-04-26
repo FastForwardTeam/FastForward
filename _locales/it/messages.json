@@ -75,19 +75,16 @@
 		"message": "Contributori"
 	},
 	"legalBattleInfo1": {
-		"message": "Linkvertise vuole citare in giudizio Universal Bypass."
+		"message": "Linkvertise vuole denunciare Universal Bypass."
 	},
 	"legalBattleInfo2": {
 		"message": "Se ti piace questa estensione, aiutami a combattere la causa."
 	},
 	"legalBattleInfo3": {
-		"message": "Se vuoi saperne di più,"
+		"message": "Se ti piacerebbe saperne di più,"
 	},
 	"legalBattleInfo4": {
 		"message": "ecco delle informazioni aggiuntive"
-	},
-	"legalBattleInfo5": {
-		"message": "(la parte giuridica è in tedesco)."
 	},
 	"optionsUserscripts": {
 		"message": "Bypass personalizzati"

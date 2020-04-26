@@ -11,14 +11,23 @@
 	"version": {
 		"message": "Versjon"
 	},
+	"definitionsVersion": {
+		"message": "Bypass definisjoner"
+	},
 	"changelog": {
 		"message": "Endringslogg"
 	},
 	"update": {
 		"message": "Se etter oppdateringer"
 	},
+	"updating": {
+		"message": "Laster ned bypass-definisjoner..."
+	},
 	"updateYes": {
 		"message": "Oppdateringsskriptet ble oppdatert!"
+	},
+	"updateNo": {
+		"message": "Forbigående definisjoner er oppdatert."
 	},
 	"faq": {
 		"message": "Ofte Stilte Spørsmål (FAQ)"
@@ -40,6 +49,9 @@
 	},
 	"optionsNavigationDelay": {
 		"message": "Ta meg til destinasjoner etter % sekund(er). (Bruk 0 for å navigere øyeblikkelig.)"
+	},
+	"optionsTrackerBypass": {
+		"message": "Omgå for trackere (for eksempel bit.ly og t.co) ved å bruke Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Ta meg til destinasjoner av trackere med en gang."
@@ -94,6 +106,9 @@
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Dette åpnes i en ny fane om 1 sekund."
+	},
+	"cancel": {
+		"message": "Avbryt."
 	},
 	"crowdBypassedIgnore": {
 		"message": "Var ikke dette korrekt?"

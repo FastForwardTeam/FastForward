@@ -1,6 +1,6 @@
 {
 	"appDesc": {
-		"message": "No pierdas el tiempo para acceder. Universal Bypass evade automáticamente los molestos acortadores de enlaces."
+		"message": "No pierdas el tiempo para acceder. Universal Bypass evade los molestos acortadores de enlaces."
 	},
 	"firstrunTitle": {
 		"message": "¡Gracias por instalar Universal Bypass!"
@@ -60,7 +60,7 @@
 		"message": "Bloquear registradores de IP si no pueden ser evadidos."
 	},
 	"optionsCrowdBypass": {
-		"message": "Dar y tomar los destinos de los acortadores que no se pueden evadir."
+		"message": "Evasión múltiple: Dar y tomar los destinos de los acortadores que no se pueden evadir."
 	},
 	"optionsCrowdAutoOpen": {
 		"message": "Abrir los destinos que ya fueron descubiertos en una pestaña nueva después de % segundo(s)."
@@ -86,9 +86,6 @@
 	"legalBattleInfo4": {
 		"message": "aquí encontrará más información"
 	},
-	"legalBattleInfo5": {
-		"message": " (el documento legal está en alemán)."
-	},
 	"optionsUserscripts": {
 		"message": "Evasiones personalizadas"
 	},
@@ -102,7 +99,7 @@
 		"message": "Tu dirección de destino es %"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "Sin embargo, si navega ahora, Universal Bypass será detectado."
+		"message": "Sin embargo, si navegas ahora, Universal Bypass será detectado."
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "Ya no serás detectado en % segundos."
@@ -132,7 +129,7 @@
 		"message": "Desafortunadamente, eres el primero en encontrar este enlace, pero después de haber esperado, otros usuarios de Universal Bypass ya no tendrán que hacerlo."
 	},
 	"crowdDisabled": {
-		"message": "Este sitio web ya fue evadido por evasión múltiple, el cual has deshabilitado en las opciones."
+		"message": "Este sitio web ya fue evadido por evasión múltiple, el cual puedes habilitar en las opciones."
 	},
 	"crowdBypassed": {
 		"message": "¡Puede que no tengas que esperar!"

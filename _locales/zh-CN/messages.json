@@ -12,28 +12,28 @@
 		"message": "版本"
 	},
 	"definitionsVersion": {
-		"message": "绕过规则定义"
+		"message": "Bypass的定义"
 	},
 	"changelog": {
-		"message": "更新日志"
+		"message": "更新记录"
 	},
 	"update": {
 		"message": "检查更新"
 	},
 	"updating": {
-		"message": "正在下载绕过规则定义..."
+		"message": "正在下载Bypass 的定义..."
 	},
 	"updateYes": {
-		"message": "下载绕过规则定义成功。"
+		"message": "Bypass的定义下载成功。"
 	},
 	"updateNo": {
-		"message": "绕过规则定义已是最新版本。"
+		"message": "Bypass的定义已是最新版本。"
 	},
 	"faq": {
 		"message": "常见问题(FAQ)"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass已经帮你绕过了%的网站"
+		"message": "Universal Bypass已经帮你跳过了%的网站"
 	},
 	"support": {
 		"message": "支持Universal Bypass."
@@ -42,25 +42,25 @@
 		"message": "选项"
 	},
 	"optionsLink": {
-		"message": "更改Universal Bypass的设置"
+		"message": "更改Universal Bypass的选项"
 	},
 	"optionsEnabled": {
-		"message": "启用网站绕过"
+		"message": "启用网站跳过功能"
 	},
 	"optionsNavigationDelay": {
-		"message": "在%秒后转到目标网站.(0 为立刻跳转.)"
+		"message": "在%秒后跳到目标网站.(0 为立刻跳转.)"
 	},
 	"optionsTrackerBypass": {
-		"message": "绕过使用Apimon.de的追踪器（比如bit.ly和t.co）。"
+		"message": "跳过使用Apimon.de的追踪器（比如bit.ly和t.co）。"
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "立即将我带到追踪器的目的网址。"
 	},
 	"optionsBlockIPLoggers": {
-		"message": "无法绕过IP记录器时将其屏蔽。"
+		"message": "如果无法绕过IP记录器，则将其屏蔽。\n"
 	},
 	"optionsCrowdBypass": {
-		"message": "分享/获取无法绕过的短地址提供商的目的网址。"
+		"message": "分享/获取无法跳过的短地址提供商的目的网址。"
 	},
 	"optionsCrowdAutoOpen": {
 		"message": "%秒后在新标签页打开人们分享的目的网址。"
@@ -75,22 +75,19 @@
 		"message": "贡献者"
 	},
 	"legalBattleInfo1": {
-		"message": "linkvertise希望起诉Universal Bypass"
+		"message": "linkvertise想起诉Universal Bypass"
 	},
 	"legalBattleInfo2": {
-		"message": "如果您喜欢此扩展程序，请帮助我打好仗"
+		"message": "如果您喜欢此扩展程序，请帮助我们"
 	},
 	"legalBattleInfo3": {
 		"message": "如果您想了解更多信息，"
 	},
 	"legalBattleInfo4": {
-		"message": "这是更多信息"
-	},
-	"legalBattleInfo5": {
-		"message": "（法律材料为德语）。"
+		"message": "了解更多信息"
 	},
 	"optionsUserscripts": {
-		"message": "自定义绕过规则"
+		"message": "自定义跳过"
 	},
 	"optionsUserscriptsDescription": {
 		"message": "此高级功能供开发者创建自己的绕过脚本。完善以后，这些脚本可以提交到GitHub上，再添加到Universal Bypass中，让所有人都能使用。"
@@ -102,7 +99,7 @@
 		"message": "您的目的网址为%"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "但若您马上跳转，他们将会检测到Universal Bypass。"
+		"message": "如果您马上跳转，他们将会检测到Universal Bypass。"
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "%秒后，您将不再被检测到。"
@@ -111,34 +108,34 @@
 		"message": "1秒后，您将在不再被检测到。"
 	},
 	"beforeNavigateTimer": {
-		"message": "%秒后，您将被自动重定向。"
+		"message": "%秒后，您将被自动导航到目的网站。"
 	},
 	"beforeNavigateTimerSingular": {
-		"message": "1秒后，您将被自动重定向。"
+		"message": "1秒后，您将被自动导航到目的网站。"
 	},
 	"beforeNavigateOptions": {
-		"message": "您想立刻重定向还是在x秒后？"
+		"message": "您想立刻导航到目的网站还是在x秒后？"
 	},
 	"beforeNavigateInstant": {
 		"message": "您正在导航到%"
 	},
 	"infoFileHoster": {
-		"message": "不幸的是，下载服务器会确保您已经等待，然后才允许您下载文件。"
+		"message": "很不辛的是，下载服务器会确保您已经等待，然后才允许您下载文件。"
 	},
 	"infoOutdated": {
-		"message": "该网站已被新版本的Universal Bypass取代。"
+		"message": "该网站已被新版本的Universal Bypass跳转。"
 	},
 	"crowdWait": {
-		"message": "很抱歉您是第一个点击此链接的人，但您等待这段时间以后，其他Universal Bypass用户将不再需要等待。"
+		"message": "很抱歉您是第一个点击此链接的人，过一段时间以后，其他Universal Bypass用户将不再需要等待。"
 	},
 	"crowdDisabled": {
-		"message": "该网站需使用群众分享绕过功能，但您已禁用该功能。"
+		"message": "该网站需使用群众分享跳过功能，但您已禁用此功能。"
 	},
 	"crowdBypassed": {
 		"message": "您或许不必等待！"
 	},
 	"crowdBypassedInfo": {
-		"message": "其他Universal Bypass用户已经帮您等待，并报告该链接的目的网址为%"
+		"message": "其他Universal Bypass用户已经帮您导航，并报告该链接的目的网址为%"
 	},
 	"crowdBypassedTimer": {
 		"message": "%秒后将会在新标签页打开。"
@@ -156,15 +153,15 @@
 		"message": "取消"
 	},
 	"crowdBypassedIgnore": {
-		"message": "该网址不正确？"
+		"message": "该信息不正确？"
 	},
 	"crowdBypassedOptions": {
 		"message": "您想在新标签页中立刻打开还是在x秒后？"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass阻止你的IP被记录"
+		"message": "Universal Bypass阻止了您的IP地址被记录"
 	},
 	"blockedSubtitle": {
-		"message": "不想要Universal Bypass阻止不良分子获取您的IP？"
+		"message": "不想要Universal Bypass阻止不良分子获取您的IP地址？"
 	}
 }

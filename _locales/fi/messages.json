@@ -8,6 +8,15 @@
 	"firstrunNoScript": {
 		"message": "Vaikuttaa kuitenkin siltä, että käytät NoScriptiä tai vastaavaa, jonka kanssa Universal Bypass ei ole yhteensopiva."
 	},
+	"version": {
+		"message": "Versio"
+	},
+	"changelog": {
+		"message": "Muutosloki"
+	},
+	"update": {
+		"message": "Tarkista päivitykset"
+	},
 	"faq": {
 		"message": "Usein Kysytyt Kysymykset (UKK)"
 	},

@@ -36,7 +36,7 @@
 		"message": "Universal Bypass đã bỏ qua % trang cho bạn."
 	},
 	"support": {
-		"message": "Giúp đỡ Universal Bypass."
+		"message": "Đóng góp cho Universal Bypass."
 	},
 	"options": {
 		"message": "Tùy chọn"
@@ -57,7 +57,7 @@
 		"message": "Lập tức đưa tôi đến đích của các mã theo dõi."
 	},
 	"optionsBlockIPLoggers": {
-		"message": "Chặn IP Logger nếu nó không thể bỏ qua."
+		"message": "Chặn IP Logger nếu không thể bỏ qua."
 	},
 	"optionsCrowdBypass": {
 		"message": "Gửi và lấy đích đến của rút gọn chưa thể bypass."
@@ -86,9 +86,6 @@
 	"legalBattleInfo4": {
 		"message": "đây là một số thông tin thêm."
 	},
-	"legalBattleInfo5": {
-		"message": " (nội dung pháp lý bằng tiếng Đức)."
-	},
 	"optionsUserscripts": {
 		"message": "Tùy chỉnh Bypasses"
 	},
@@ -99,7 +96,7 @@
 		"message": "Bạn sắp đến trang cần đến."
 	},
 	"beforeNavigateDestination": {
-		"message": "Điểm đến của bạn là %"
+		"message": "Đường dẫn của bạn là %"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "Tuy nhiên, nếu bạn chọn chuyển hướng ngay bây giờ, trang web sẽ phát hiện được Universal Bypass."

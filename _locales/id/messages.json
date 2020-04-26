@@ -1,6 +1,6 @@
 {
 	"appDesc": {
-		"message": "Jangan habiskan waktu anda dengan menaati aturan. Universal Bypass secara otomatis akan melompati link pemendek yang menyebalkan."
+		"message": "Jangan habiskan waktu anda dengan menaati aturan. Universal Bypass secara otomatis akan melompati pemendek tautan yang menyebalkan."
 	},
 	"firstrunTitle": {
 		"message": "Terima kasih telah memasang Universal Bypass!"
@@ -27,13 +27,13 @@
 		"message": "Berhasil mengunduh definisi bypass."
 	},
 	"updateNo": {
-		"message": "Definisi bypassnya sudah paling terbaru."
+		"message": "Definisi bypass-nya sudah paling terbaru."
 	},
 	"faq": {
-		"message": "Pertanyaan yang Sering Diajukan (PySD)"
+		"message": "Pertanyaan yang Sering Diajukan (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass sudah mem-bypass[give italic at \"bypass\"] % situs untuk anda."
+		"message": "Universal Bypass sudah mem-bypass % situs untuk anda."
 	},
 	"support": {
 		"message": "Berkontribusi untuk Universal Bypass."
@@ -42,7 +42,7 @@
 		"message": "Pengaturan"
 	},
 	"optionsLink": {
-		"message": "Ganti pengaturan Universal Bypass."
+		"message": "Ubah pengaturan Universal Bypass."
 	},
 	"optionsEnabled": {
 		"message": "Aktifkan bypass situs web."
@@ -60,7 +60,7 @@
 		"message": "Blokir IP logger jika tidak dapat dilewati."
 	},
 	"optionsCrowdBypass": {
-		"message": "Memberi dan mendapatkan tujuan dari pemendek link yang tidak dapat dibypass. (Crowd Bypass)"
+		"message": "Crowd Bypass: Memberi dan mendapatkan tujuan dari pemendek link yang tidak dapat di-bypass. "
 	},
 	"optionsCrowdAutoOpen": {
 		"message": "Buka halaman tujuan crowd bypass di tab baru setelah % detik."
@@ -78,16 +78,13 @@
 		"message": "Linkvertise ingin menggugat Universal Bypass."
 	},
 	"legalBattleInfo2": {
-		"message": "Jika anda menyukai ekstensi ini, bantu saya berjuang melawan dengan baik."
+		"message": "Jika anda menyukai ekstensi ini, bantu kami berjuang melawan dengan baik."
 	},
 	"legalBattleInfo3": {
 		"message": "Jika anda ingin mempelajari lebih lanjut tentang hal ini,"
 	},
 	"legalBattleInfo4": {
 		"message": "berikut adalah beberapa informasi lebih lanjut"
-	},
-	"legalBattleInfo5": {
-		"message": "(dokumen hukumnya dalam bahasa Jerman)."
 	},
 	"optionsUserscripts": {
 		"message": "Kustom Bypass"
@@ -123,7 +120,7 @@
 		"message": "Anda sedang diarahkan ke %"
 	},
 	"infoFileHoster": {
-		"message": "Sayangnya, peladen unduhannya akan memastikan bahwa Anda telah menunggu sebelum mengizinkan Anda untuk mengunduh file."
+		"message": "Sayangnya, server unduhannya akan memastikan bahwa anda telah menunggu sebelum mengizinkan anda untuk mengunduh file."
 	},
 	"infoOutdated": {
 		"message": "Situs web ini telah ter-bypass oleh versi yang paling baru dari Universal Bypass."
@@ -132,7 +129,7 @@
 		"message": "Sayangnya, anda adalah orang yang pertama kali mengakses tautan ini, akan tetapi setelah anda melewatinya, pengguna Universal Bypass lainnya tidak perlu lagi melakukannya."
 	},
 	"crowdDisabled": {
-		"message": "Situs web ini telah ter-bypass oleh fitur crowd bypass, yang mana telah anda nonaktifkan fiturnya didalam pilihan pengaturan."
+		"message": "Situs web ini telah ter-bypass oleh fitur crowd bypass, yang dapat anda aktifkan fiturnya didalam pilihan pengaturan."
 	},
 	"crowdBypassed": {
 		"message": "Anda mungkin tidak perlu melewati!"
@@ -162,9 +159,9 @@
 		"message": "Apakah anda ingin ini dibuka di tab baru secara langsung atau dalam x detik?"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass mencegah IP anda supaya tidak terlog."
+		"message": "Universal Bypass mencegah IP anda supaya tidak tercatat dalam log."
 	},
 	"blockedSubtitle": {
-		"message": "Tidak ingin Universal Bypass untuk mencegah bad actors (Peretas) dari mendapatkan IP Anda?"
+		"message": "Apakah anda tidak ingin Universal Bypass mencegah bad actors (Peretas) supaya tidak bisa mendapatkan IP anda?"
 	}
 }

@@ -1,0 +1,152 @@
+{
+	"appDesc": {
+		"message": "Ne zapravljajte časa s skladnostjo.  Univerzalni bypass obide nadležne krajšave povezav."
+	},
+	"firstrunTitle": {
+		"message": "Hvala, ker ste namestili Universal Bypass!"
+	},
+	"firstrunNoScript": {
+		"message": "Vendar se zdi, da uporabljate NoScript ali podobno, s čimer Universal Bypass ni združljiv."
+	},
+	"version": {
+		"message": "Različica"
+	},
+	"definitionsVersion": {
+		"message": "Opredelitve definicij"
+	},
+	"changelog": {
+		"message": "Dnevnik sprememb"
+	},
+	"update": {
+		"message": "Preveri za posodobitve"
+	},
+	"updating": {
+		"message": "Prenos definicij bypass ..."
+	},
+	"updateYes": {
+		"message": "Definicije bypass so uspešno prenesene."
+	},
+	"updateNo": {
+		"message": "Definicije bypass so posodobljene."
+	},
+	"faq": {
+		"message": "Pogosta vprašanja (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass je že zaobšel% spletnih mest za vas."
+	},
+	"support": {
+		"message": "Prispevajte k Univerzalni obvoznici."
+	},
+	"options": {
+		"message": "Opcije"
+	},
+	"optionsLink": {
+		"message": "Spremeni možnosti Universal Bypass '."
+	},
+	"optionsEnabled": {
+		"message": "Omogoči obhode spletnih strani"
+	},
+	"optionsNavigationDelay": {
+		"message": "Odpeljite me do cilja po% sekundah."
+	},
+	"optionsTrackerBypass": {
+		"message": "S storitvijo Apimon.de obiščite sledilnike (na primer bit.ly in t.co)."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Takoj me popeljejo na destinacije sledilcev."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Blokirajte zapisovalnike IP, če jih ni mogoče zaobiti."
+	},
+	"optionsCrowdBypass": {
+		"message": "Množični obvoz: Določite in izkoristite cilje neprimerljivih skrajševalcev."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Po% sekundah odprite nove cilje na novem zavihku na novem zavihku."
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Zaprite zavihek, ki vsebuje destinacijo z množico ljudi po% sekunde obiska."
+	},
+	"privacyPolicy": {
+		"message": "Politika zasebnosti"
+	},
+	"contributors": {
+		"message": "Sodelujoči"
+	},
+	"legalBattleInfo1": {
+		"message": "Linkvertise želi tožiti Universal Bypass."
+	},
+	"legalBattleInfo2": {
+		"message": "Če vam je všeč ta podaljšek, mi pomagajte v dobrem boju."
+	},
+	"legalBattleInfo3": {
+		"message": "Če želite o tem izvedeti več,"
+	},
+	"legalBattleInfo4": {
+		"message": "tu je še nekaj informacij"
+	},
+	"optionsUserscripts": {
+		"message": "Obvoznice po meri"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "To je napredna funkcija za razvijalce, da ustvarijo svoje skripte za obhod spletnih mest.  Ko bodo izpopolnjeni, jih je mogoče nato poslati na GitHub in jih dodati Universal Bypass, tako da so na voljo vsem."
+	},
+	"beforeNavigate": {
+		"message": "Skoraj že ste na svojem cilju."
+	},
+	"beforeNavigateDestination": {
+		"message": "Vaš cilj je%"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "Če pa greste zdaj, bodo zaznali Universal Bypass."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "V% sekundah ne boste več zaznani."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "V 1 sekundi ne boste več zaznani."
+	},
+	"beforeNavigateTimer": {
+		"message": "Preusmerjeni boste samodejno v% sekundah."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "V 1 sekundi boste samodejno preusmerjeni."
+	},
+	"beforeNavigateOptions": {
+		"message": "Ali želite biti preusmerjeni takoj ali v x sekundah?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Navigirate do%"
+	},
+	"infoFileHoster": {
+		"message": "Na žalost bo strežnik za prenos poskrbel, da ste čakali, preden boste dovolili prenos datoteke."
+	},
+	"infoOutdated": {
+		"message": "To spletno mesto obide novejša različica Universal Bypass."
+	},
+	"crowdWait": {
+		"message": "Na žalost ste prvič naleteli na to povezavo, vendar po tem, ko ste čakali, drugim uporabnikom Universal Bypass-a ne bo več treba."
+	},
+	"crowdDisabled": {
+		"message": "To spletno mesto obide množica bypass, kar lahko omogočite v možnostih."
+	},
+	"crowdBypassed": {
+		"message": "Morda ne bo treba čakati!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Drugi uporabniki Universal Bypass-a so vas že čakali in sporočili, da to vodi do%"
+	},
+	"crowdBypassedTimer": {
+		"message": "To se odpre v novem zavihku v% sekundah."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "To se odpre v novem zavihku v 1 sekundi."
+	},
+	"crowdCloseTimer": {
+		"message": "Ta zavihek se zapre v% sekundah."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Ta zavihek se zapre v 1 sekundi."
+	}
+}

@@ -11,11 +11,17 @@
 	"version": {
 		"message": "Έκδοση"
 	},
+	"definitionsVersion": {
+		"message": "Ορισμοι παραλειψης"
+	},
 	"changelog": {
 		"message": "Αλλαγές"
 	},
 	"update": {
-		"message": "Έλεγξε για ενημερώσεις"
+		"message": "Έλεγχος ενημερώσεων"
+	},
+	"updating": {
+		"message": "Κατεβαινουν οι ορισμοι παραλειψης"
 	},
 	"updateYes": {
 		"message": "Το σενάριο εισαγωγής ενημερώθηκε επιτυχώς!"
@@ -44,6 +50,9 @@
 	"optionsNavigationDelay": {
 		"message": "Πήγαινε με στον προορισμό μετά από % δευτερολεπτό/α. (πάτα 0 για να μεταφερθείς κατευθείαν)"
 	},
+	"optionsTrackerBypass": {
+		"message": "αποτρέψετε την ιχνηλατηση (οπως bit.ly και t.co) με την μεσολαβηση του Apimon.de.  "
+	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Πήγαινε με αμέσως στους προορισμούς των trackers."
 	},
@@ -65,6 +74,18 @@
 	"contributors": {
 		"message": "Συνεισφέροντες"
 	},
+	"legalBattleInfo1": {
+		"message": "Η σελίδα Linkvertise θέλει να κάνει μήνυση στο Universal Bypass."
+	},
+	"legalBattleInfo2": {
+		"message": "Άμα σου αρέσει η επέκταση, βοηθήστε με να παλέψω εναντίον της."
+	},
+	"legalBattleInfo3": {
+		"message": "Άμα θα θέλατε να μάθετε κι άλλα γι' αυτό το θέμα"
+	},
+	"legalBattleInfo4": {
+		"message": "εδώ είναι κάποιες πληροφορίες"
+	},
 	"optionsUserscripts": {
 		"message": "Προσαρμοσμένες παρακάμψεις"
 	},
@@ -77,6 +98,15 @@
 	"beforeNavigateDestination": {
 		"message": "Ο προορισμός σας είναι %"
 	},
+	"beforeNavigateUnsafe": {
+		"message": "κι ομως, με δεδομενο οτι παραλειψετε την ιστοσελιδα τωρα, θα εντοπισουν το παγκοσμιο εργαλειο παραλειψης"
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Δεν θα σας εντοπισουν σε % δευτερολεπτοα"
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Δεν θα σας εντοπισουν σε 1 δευτερολεπτο"
+	},
 	"beforeNavigateTimer": {
 		"message": "Θα ανακατευθυνθείς αυτόματα σε % δευτερόλεπτα."
 	},
@@ -85,6 +115,15 @@
 	},
 	"beforeNavigateOptions": {
 		"message": "Θέλεις να ανακατευθυνθείς αμέσως, ή σε Χ δευτερόλεπτα;"
+	},
+	"beforeNavigateInstant": {
+		"message": "Σας πλοηγουμαι στην %"
+	},
+	"infoFileHoster": {
+		"message": "Δυστυχώς ο διακομιστής θα σιγουρευτεί οτι περιμενετε πριν σας επιτραπει να κατεβασετε το αρχειο "
+	},
+	"infoOutdated": {
+		"message": "Η δεδομενη ιστοσελιδα δεν υποστηρίζει την πιο προσφατη εκδοση του παγκοσμιου εργαλειου παραλειψης"
 	},
 	"crowdWait": {
 		"message": "Δυστυχώς, είσαι ο πρώτος που θα συνάντησες αυτόν τον σύνδεσμο, αλλά αφού έχεις περιμένει και συνδεθεί, δε θα απαιτείται από τους άλλους χρήστες του Universal Bypass."

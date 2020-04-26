@@ -60,7 +60,7 @@
 		"message": "Blockiere IP-Logger wenn sie nicht umgangen werden können."
 	},
 	"optionsCrowdBypass": {
-		"message": "Gebe und nehme die Ziel-Urls von unumgänglichen Linkkürzern."
+		"message": "Crowd Bypass: Gebe und nehme die Ziel-Urls von unumgänglichen Linkkürzern."
 	},
 	"optionsCrowdAutoOpen": {
 		"message": "Nutzer-geteilte Ziele nach % Sekunde(n) in einem neuen Tab öffnen."
@@ -85,9 +85,6 @@
 	},
 	"legalBattleInfo4": {
 		"message": "hier gibt es weitere Informationen"
-	},
-	"legalBattleInfo5": {
-		"message": "."
 	},
 	"optionsUserscripts": {
 		"message": "Eigene Umgehungen"
@@ -132,7 +129,7 @@
 		"message": "Leider bist du der erste, der auf diesen Link trifft, aber nachdem du gewartet hast, müssen andere Universal Bypass Nutzer es nicht mehr tun."
 	},
 	"crowdDisabled": {
-		"message": "Die Ziel-URL dieser Webseite könnte durch Crowd Bypass geteilt werden, aber das hast du in den Optionen deaktiviert."
+		"message": "Diese Webseite ist durch Crowd Bypass umgänglich. Du kannst Crowd Bypass in den Optionen aktivieren."
 	},
 	"crowdBypassed": {
 		"message": "Du musst vielleicht nicht warten!"

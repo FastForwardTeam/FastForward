@@ -33,7 +33,7 @@
 		"message": "Najczęściej zadawane pytania (FAQ)."
 	},
 	"bypassCounter": {
-		"message": "Uniwersalne Obejście ominęło za Ciebie % stron."
+		"message": "Uniwersalne Obejście ominęło dla Ciebie % stron."
 	},
 	"support": {
 		"message": "Wspieraj Uniwersalne Obejście"
@@ -85,9 +85,6 @@
 	},
 	"legalBattleInfo4": {
 		"message": "tutaj jest kilka informacji"
-	},
-	"legalBattleInfo5": {
-		"message": "(dokumenty są w języku niemieckim)"
 	},
 	"optionsUserscripts": {
 		"message": "Niestandardowe obejścia"

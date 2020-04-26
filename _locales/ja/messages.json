@@ -60,7 +60,7 @@
 		"message": "バイパスできない場合はIPアドレスがログに記録されないように阻止する"
 	},
 	"optionsCrowdBypass": {
-		"message": "バイパスできない短縮URLへ移動したり提供できるようにする (Crowd Bypass)"
+		"message": "バイパスできない短縮urlの行き先を設定する"
 	},
 	"optionsCrowdAutoOpen": {
 		"message": "%秒後に新しいタブでクラウドソーシング先を開く"
@@ -84,10 +84,7 @@
 		"message": "これについての詳しい情報は、"
 	},
 	"legalBattleInfo4": {
-		"message": "ここにあります"
-	},
-	"legalBattleInfo5": {
-		"message": "(法的事項はドイツ語です)。"
+		"message": "こちらへ"
 	},
 	"optionsUserscripts": {
 		"message": "カスタムバイパス"
@@ -102,7 +99,7 @@
 		"message": "リンク先: %"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "ただし、すぐに移動すると、サイトはUniversal Bypassを検出してしまいます。"
+		"message": "ただし、今移動すると、サイトはUniversal Bypassを検出してしまいます。"
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "あと%秒で検出されなくなります。"
@@ -132,7 +129,7 @@
 		"message": "残念ながら、あなたはこのリンクの最初のアクセス者です。しばらくすれば、他のUniversal Bypassユーザーが待つ必要はなくなります。"
 	},
 	"crowdDisabled": {
-		"message": "このサイトはCrowd Bypassを有効にしているときのみバイパスできますが、このオプションはオフになっています。"
+		"message": "このサイトは、Crowd Bypassを有効にしているときのみバイパスできます。オプションからこの設定をオンにすることができます。"
 	},
 	"crowdBypassed": {
 		"message": "もう待つ必要はありません!"
@@ -159,12 +156,12 @@
 		"message": "正しくありませんか?"
 	},
 	"crowdBypassedOptions": {
-		"message": "すぐに、または数秒後に新しいタブで開かれるようにしたいですか?"
+		"message": "これをすぐに新しいタブで開きますか、それともx秒で開きますか？"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypassは、あなたのIPアドレスがログに記録されないように阻止しました。"
+		"message": "ユニバーサルバイパスにより、IPアドレスがログに記録されなくなりました。"
 	},
 	"blockedSubtitle": {
-		"message": "悪意のある人があなたのIPアドレスをログに記録できないようにする機能をオフにしたいですか?"
+		"message": "悪意のある人があなたのIPアドレスをログできないようにする機能をオフにしたいですか?"
 	}
 }
