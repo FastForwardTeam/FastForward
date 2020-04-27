@@ -24,6 +24,7 @@ if(args.has("target"))
 	if(args.has("safe_in"))
 	{
 		document.getElementById("unsafe").classList.remove("uk-hidden")
+		document.getElementById("options-link").classList.add("uk-hidden")
 		timer("beforeNavigateUnsafeTimer",args.get("safe_in"),false,when_safe)
 	}
 	else
