@@ -1504,7 +1504,7 @@ ensureDomLoaded(()=>{
 			a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.closest("ul").previousElementSibling.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.toLowerCase()
 		}
 	}))
-	domainBypass("drivenime.com",()=>document.querySelectorAll("a[href^='https://drivenime.com?a82ad005b1=']").forEach(a=>{
+	domainBypass("drivenime.com",()=>document.querySelectorAll("a[href*='?a82ad005b1=']").forEach(a=>{
 		let p=a.parentNode,qe=p.previousElementSibling
 		while(qe&&qe.tagName!="H2")
 		{
