@@ -317,11 +317,22 @@ ODP(window,"ysmm",{
 	get:()=>"undefined"
 })
 //LinkBucks
-var actualInitLbjs
+let actualInitLbjs
 ODP(window,"initLbjs",{
 	set:(_)=>actualInitLbjs=_,
 	get:()=>(a,p)=>{
-		p.Countdown--
+		crowdBypass(()=>{
+			JSON.parse=new Proxy(JSON.parse,{
+				apply:(...a)=>{
+					let json=Reflect.apply(...a)
+					if(json&&json.Url)
+					{
+						contributeAndNavigate(json.Url)
+					}
+					return json
+				}
+			})
+		})
 		actualInitLbjs(a,p)
 	}
 })
