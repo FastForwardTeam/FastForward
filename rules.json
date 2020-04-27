@@ -70,7 +70,8 @@
 	"param_link_base64": [
 		"*://*.leechpremium.link/cheat/?link=*",
 		"*://*.bdzone.xyz/cheat.php?link=*",
-		"*://*.extramovies.casa/download.php?name=*&link=*"
+		"*://*.extramovies.casa/download.php?name=*&link=*",
+		"*://*.gilakerja.com/*/?link=*"
 	],
 	"param_link_encoded_base64": [
 		"*://*.safelinkgratis.info/*?link=*"
