@@ -49,7 +49,8 @@
 		"*://*.steamcommunity.com/linkfilter/?url=*",
 		"*://*.creditcable.info/*/*?*",
 		"*://*.adfoc.us/serve/sitelinks/?*",
-		"*://*.made-by.org/redirection/?url=*"
+		"*://*.made-by.org/redirection/?url=*",
+		"*://*.itsbx.com/redirect/?url=*"
 	],
 	"param_xurl_raw_http": [
 		"*://bluemediafiles.com/*?xurl=*"
