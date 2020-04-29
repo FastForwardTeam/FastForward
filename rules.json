@@ -6,6 +6,9 @@
 	"path_s_encoded": [
 		"*://*.gslink.co/e/*/s/*"
 	],
+	"path_r_base64": [
+		"*://*.linkspy.cc/r/*"
+	],
 	"path_dl_base64": [
 		"*://*.k2nblog.com/dl/*",
 		"*://*.filekita.me/page/dl/*"
