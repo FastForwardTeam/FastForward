@@ -198,7 +198,8 @@
 		"*://*.shiroyasha.me/?go=*"
 	],
 	"param_to_base64": [
-		"*://*.beermoneyforum.com/redirect?*"
+		"*://*.beermoneyforum.com/redirect?*",
+		"*://*.instant-hack.to/redirect/?to=*"
 	],
 	"useragent_googlebot": [
 		"*://*.haaretz.co.il/*"
