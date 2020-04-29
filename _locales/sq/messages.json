@@ -1,0 +1,14 @@
+{
+	"appDesc": {
+		"message": "Mos e humbni kohën tuaj me pajtueshmëri. Bypass Universal anashkalojnë shkurtuesit e bezdisshëm të lidhjeve."
+	},
+	"firstrunTitle": {
+		"message": "Faleminderit që instaluat Bypass Universal!"
+	},
+	"firstrunNoScript": {
+		"message": "Sidoqoftë, ju duket se po përdorni NoScript ose të ngjashëm, me të cilin Universal Bypass nuk është i pajtueshëm."
+	},
+	"version": {
+		"message": "Version"
+	}
+}
