@@ -52,7 +52,6 @@
 	],
 	"browser_specific_settings": {
 		"gecko": {
-			"id": "{8f4fa810-9c36-4b81-8e72-de97c8f29d67}",
 			"update_url": "https://universal-bypass.org/firefox/updates.json"
 		}
 	},
