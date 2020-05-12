@@ -1364,6 +1364,7 @@ ensureDomLoaded(()=>{
 	})
 	domainBypass("uploadking.net",()=>ifElement("form[name='F1']",f=>countIt(()=>f.submit())))
 	domainBypass("5play.ru",()=>ifElement("div.download-result > a[href]",a=>safelyNavigate(a.href)))
+	domainBypass("daunshorte.kertashitam.com",()=>ifElement("div[align=center] > center > a[href]",a=>safelyAssign(a.href)))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
