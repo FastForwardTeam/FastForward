@@ -3,10 +3,10 @@
 		"message": "Nie marnuj czasu na przestrzeganie przepisów, Uniwersalny Bypass automatycznie pomija irytujące skróty linkowe."
 	},
 	"firstrunTitle": {
-		"message": "Dziękujemy za instalacje Uniwersalnego Obejścia!"
+		"message": "Dziękujemy za instalację Uniwersalnego Obejścia Andlytics!"
 	},
 	"firstrunNoScript": {
-		"message": "Wydaje się, że używasz „NoScript” lub czegoś podobnego, z którym Universal Bypass nie jest kompatybilny."
+		"message": "Wygląda na to, że używasz NoScript lub czegoś podobnego co powoduje, że Uniwersalne Obejście nie jest kompatybilne."
 	},
 	"version": {
 		"message": "Wersja"
@@ -21,16 +21,16 @@
 		"message": "Sprawdź dostępność aktualizacji"
 	},
 	"updating": {
-		"message": "Pobieranie definicji Universal Bypass..."
+		"message": "Pobieranie definicji Uniwersalnego Obejścia..."
 	},
 	"updateYes": {
-		"message": "Pomyślnie zaktualizowano skrypt wstrzyknięcia!"
+		"message": "Pomyślnie pobrano definicje obejścia."
 	},
 	"updateNo": {
-		"message": "Skrypt wstrzyknięcia jest już aktualny."
+		"message": "Definicja omijania jest aktualna."
 	},
 	"faq": {
-		"message": "Najczęściej zadawane pytania (FAQ)."
+		"message": "Najczęściej zadawane pytania (FAQ)"
 	},
 	"bypassCounter": {
 		"message": "Uniwersalne Obejście ominęło dla Ciebie % stron."
@@ -45,10 +45,10 @@
 		"message": "Zmień opcje Uniwersalnego Obejścia."
 	},
 	"optionsEnabled": {
-		"message": "Włącz obejścia stron."
+		"message": "Włącz obejście stron."
 	},
 	"optionsNavigationDelay": {
-		"message": "Zabierz mnie do miejsc docelowych po % sekund. (Wpisz 0, aby być zabieranym od razu)."
+		"message": "Zabierz mnie do miejsc docelowych po % sekund(ach)."
 	},
 	"optionsTrackerBypass": {
 		"message": "Omiń trackery (takie jak bit.ly i t.co) za pomocą Apimon.de."
@@ -69,28 +69,28 @@
 		"message": "Zamknij zakładkę zawierająca crowd-sourcing miejsca docelowego po % sekundach jej wizyty."
 	},
 	"privacyPolicy": {
-		"message": "Polityka prywatności"
+		"message": "Polityka Prywatności"
 	},
 	"contributors": {
-		"message": "Wnieśli wkład"
+		"message": "Wkładcy"
 	},
 	"legalBattleInfo1": {
-		"message": "Linkvertise chce pozwać Universal Bypass"
+		"message": "Linkvertise chce pozwać Universal Bypass."
 	},
 	"legalBattleInfo2": {
-		"message": "Jeżeli lubisz to rozszerzenie, pomóż mi walczyć"
+		"message": "Jeżeli lubisz to rozszerzenie, pomóż mi walczyć w dobrej mierze."
 	},
 	"legalBattleInfo3": {
-		"message": "Jeśli chcesz dowiedzieć się więcej na ten temat,"
+		"message": "Jeśli chciałbyś dowiedzieć się więcej na ten temat,"
 	},
 	"legalBattleInfo4": {
 		"message": "tutaj jest kilka informacji"
 	},
 	"optionsUserscripts": {
-		"message": "Niestandardowe obejścia"
+		"message": "Niestandardowe Obejścia"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "Jest to zaawansowana funkcja dla programistów do tworzenia własnych skryptów, które omijają witryny. Po udoskonaleniu można je przesłać na GitHub'a i dodać do Uniwersalnego Obejścia, więc są one dostępne dla wszystkich."
+		"message": "Jest to zaawansowana funkcja dla programistów do tworzenia własnych skryptów do omijania witryn. Po udoskonaleniu można je przesłać na GitHub i dodać do Universal Bypass, więc są one dostępne dla wszystkich."
 	},
 	"beforeNavigate": {
 		"message": "Jesteś prawie w miejscu docelowym."

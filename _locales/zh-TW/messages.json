@@ -126,7 +126,7 @@
 		"message": "此網站被更新版本的 Universal Bypass 繞過了。"
 	},
 	"crowdWait": {
-		"message": "很遺憾的，您是第一個遇到這個連結的人，但在您等候了以後，其他 Universal Bypass 的用戶就不用受苦了。"
+		"message": "很遺憾地，您是第一個遇到這個連結的人，但在您等候了以後，其他 Universal Bypass 的用戶就不用受苦了。"
 	},
 	"crowdDisabled": {
 		"message": "這個網站是以用戶提供的連結繞過，而此功能已被您在設定中關閉。"
@@ -156,7 +156,7 @@
 		"message": "該資訊有誤嗎?"
 	},
 	"crowdBypassedOptions": {
-		"message": "您希望立刻或是幾秒後被重新導向嗎？"
+		"message": "您希望立刻或是幾秒後以新分頁開啟嗎？"
 	},
 	"blockedTitle": {
 		"message": "Universal Bypass 防止您的IP被記錄。"

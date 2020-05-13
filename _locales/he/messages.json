@@ -11,8 +11,23 @@
 	"version": {
 		"message": "גרסה"
 	},
+	"definitionsVersion": {
+		"message": "הגדרות מעקף"
+	},
 	"changelog": {
 		"message": "רשימת שינויים"
+	},
+	"update": {
+		"message": "בדוק עדכונים"
+	},
+	"updating": {
+		"message": "מוריד הגדרות עקיפה ..."
+	},
+	"updateYes": {
+		"message": "הגדרות עקיפה הורדו בהצלחה."
+	},
+	"updateNo": {
+		"message": "הגדרות עקיפה אותרו כעדכניות."
 	},
 	"faq": {
 		"message": "שאלות נפוצות (FAQ)"
@@ -44,11 +59,32 @@
 	"privacyPolicy": {
 		"message": "מדיניות פרטיות"
 	},
+	"contributors": {
+		"message": "תורמים"
+	},
+	"legalBattleInfo1": {
+		"message": "Linkvertise רוצה לתבוע את Universal Bypass (תוספת זו)."
+	},
+	"legalBattleInfo2": {
+		"message": " אם אתם אוהבים את תוספת זו, עזרו לי להילחם במאבק."
+	},
+	"legalBattleInfo3": {
+		"message": "אם תרצה ללמוד יותר על זה,"
+	},
+	"legalBattleInfo4": {
+		"message": "למידע נוסף"
+	},
 	"optionsUserscripts": {
 		"message": "מעקפים מותאמים אישית"
 	},
+	"beforeNavigate": {
+		"message": "כמעט ביעד שלך."
+	},
 	"beforeNavigateDestination": {
 		"message": "כתובת היעד שלך היא %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "אם תנווט כעת, הם יזהו את תוספת זאת."
 	},
 	"beforeNavigateTimer": {
 		"message": "תועבר אוטומטית עוד % שניות."
@@ -56,13 +92,40 @@
 	"beforeNavigateTimerSingular": {
 		"message": "תועבר אוטומטית בעוד שנייה."
 	},
+	"beforeNavigateInstant": {
+		"message": "מנווט ל %"
+	},
+	"crowdDisabled": {
+		"message": "אתר זה עוקף על ידי crowd bypass, אפשר לכבות אופציה זו בהגדרות."
+	},
 	"crowdBypassed": {
 		"message": "יתכן ואתה לא צריך להמתין בכלל!"
 	},
 	"crowdBypassedInfo": {
 		"message": "משתמשים נוספים כבר המתינו, ודיווחו שהקישור מוביל ל- %"
 	},
+	"crowdBypassedTimer": {
+		"message": "תוכן זה יפתח בחלון חדש בעוד % שניות."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "תוכן זה יפתח בחלון חדש בעוד כשניה."
+	},
+	"crowdCloseTimer": {
+		"message": "חלון זה ייסגר בעוד % שניות."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "חלון זה ייסגר בעוד שניה."
+	},
+	"cancel": {
+		"message": "ביטול."
+	},
 	"crowdBypassedIgnore": {
 		"message": "האם נתיב זה שגוי?"
+	},
+	"crowdBypassedOptions": {
+		"message": "האם ברצונך לפתוח חלון זה באופן מיידי או תוך x שניות?"
+	},
+	"blockedTitle": {
+		"message": "עקיפה אוניברסלית מנעה את רישום ה- IP שלך."
 	}
 }
