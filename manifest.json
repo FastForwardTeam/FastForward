@@ -50,11 +50,6 @@
 			"run_at": "document_start"
 		}
 	],
-	"browser_specific_settings": {
-		"gecko": {
-			"update_url": "https://universal-bypass.org/firefox/updates.json"
-		}
-	},
 	"web_accessible_resources": [
 		"html/before-navigate.html",
 		"html/blocked.html",
