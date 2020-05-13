@@ -196,7 +196,7 @@ updateButton.onclick=()=>{
 	}
 }
 
-brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_instant_navigation_trackers","allow_ip_loggers","crowd_bypass_opt_out","crowd_open_delay","crowd_close_delay","no_info_box"],res=>{
+brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_instant_navigation_trackers","allow_ip_loggers","crowd_bypass","crowd_open_delay","crowd_close_delay","no_info_box"],res=>{
 	if(res==undefined)
 	{
 		res={}
@@ -231,7 +231,7 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 	{
 		blockIPLoggersCheckbox.setAttribute("checked","checked")
 	}
-	if(res.crowd_bypass_opt_out!=="true")
+	if(res.crowd_bypass==="true")
 	{
 		crowdBypassCheckbox.setAttribute("checked","checked")
 	}
@@ -312,7 +312,7 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 	crowdBypassCheckbox.onchange=function()
 	{
 		brws.storage.sync.set({
-			crowd_bypass_opt_out:(!this.checked).toString()
+			crowd_bypass:this.checked.toString()
 		})
 		if(this.checked)
 		{

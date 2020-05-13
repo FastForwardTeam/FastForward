@@ -58,7 +58,7 @@ brws.runtime.setUninstallURL("https://docs.google.com/forms/d/e/1FAIpQLSdXw-Yf5I
 
 // Keeping track of options
 var bypassCounter=0,enabled=true,instantNavigation=true,trackerBypassEnabled=true,instantNavigationTrackers=false,blockIPLoggers=true,crowdEnabled=true,userScript=""
-brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_instant_navigation_trackers","allow_ip_loggers","crowd_bypass_opt_out","crowd_open_delay","crowd_close_delay","no_info_box"],res=>{
+brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_instant_navigation_trackers","allow_ip_loggers","crowd_bypass","crowd_bypass_opt_out","crowd_open_delay","crowd_close_delay","no_info_box"],res=>{
 	if(res)
 	{
 		enabled=(!res.disable||res.disable!=="true")
@@ -87,16 +87,20 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 		trackerBypassEnabled=(res.no_tracker_bypass!=="true")
 		instantNavigationTrackers=(res.no_instant_navigation_trackers!=="true")
 		blockIPLoggers=(res.allow_ip_loggers!=="true")
-		if(res.crowd_bypass_opt_out)
+		if(res.crowd_bypass)
 		{
-			crowdEnabled=(res.crowd_bypass_opt_out!=="true")
+			crowdEnabled=(res.crowd_bypass==="true")
 		}
 		else
 		{
-			crowdEnabled=!firefox
-			if(firefox)
+			crowdEnabled=(res.crowd_bypass_opt_out==="false"||!firefox)
+			if(crowdEnabled)
 			{
-				brws.storage.sync.set({crowd_bypass_opt_out:"true"})
+				brws.storage.sync.set({crowd_bypass:"true"})
+			}
+			if(res.crowd_bypass_opt_out)
+			{
+				brws.storage.sync.remove(["crowd_bypass_opt_out"])
 			}
 		}
 		if(!res.crowd_open_delay||res.crowd_open_delay==61)
@@ -154,9 +158,9 @@ brws.storage.onChanged.addListener(changes=>{
 	{
 		blockIPLoggers=(changes.allow_ip_loggers.newValue!=="true")
 	}
-	if(changes.crowd_bypass_opt_out)
+	if(changes.crowd_bypass)
 	{
-		crowdEnabled=(changes.crowd_bypass_opt_out.newValue!=="true")
+		crowdEnabled=(changes.crowd_bypass.newValue==="true")
 	}
 	if(changes.userscript)
 	{
