@@ -462,7 +462,7 @@ domainBypass("uploaded.net",()=>{
 		return setTimeout(f,100)
 	}
 })
-domainBypass(/mylinks\.xyz|mylink\.zone/,()=>{
+domainBypass(/mylinks\.xyz|mylink\.zone|mylink1\.biz/,()=>{//clictune
 	window.setTimeout=f=>setTimeout(f,1)
 	awaitElement("#compteur a[href]",a=>safelyNavigate(new URL(a.href).searchParams.get("url")))
 })
