@@ -1477,7 +1477,7 @@ ensureDomLoaded(()=>{
 			a.href+="#bypassClipboard="+qe.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
 		}
 	}))
-	domainBypass("neonime.org",()=>document.querySelectorAll("a[href^='https://neonime.org?700ef7c050=']").forEach(a=>{
+	domainBypass("neonime.moe",()=>document.querySelectorAll("a[href^='https://neonime.moe?700ef7c050=']").forEach(a=>{
 		a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.parentNode.firstChild.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()+a.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
 	}))
 	domainBypass("mmsubs.com",()=>document.querySelectorAll("a[href^='https://mmsubs.com?e75fad73d9=']").forEach(a=>{
