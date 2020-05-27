@@ -48,6 +48,10 @@ unsafelyNavigate=target=>{
 		case (/fluxteam\.xyz/.exec(target)||{}).input:
 		url+="&safe_in=95"
 		break;
+
+		case (/krnl\.rocks/.exec(target)||{}).input:
+		url+="&safe_in=85"
+		break;
 	}
 	location.assign(url)
 },
