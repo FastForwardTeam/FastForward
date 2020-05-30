@@ -1308,7 +1308,15 @@ ensureDomLoaded(()=>{
 		}
 	}))
 	domainBypass("tricxbd.com",()=>ifElement("a#get_btn[href]",a=>safelyAssign(a.href)))
-	domainBypass("do.customercareal.com",()=>ifElement("a#locked_action_link[href]",a=>safelyAssign(a.href),()=>ifElement("div.links_actions > a.blue[href]",a=>safelyAssign(a.href),()=>ifElement("a#redirecting_counter[href]",a=>safelyNavigate(a.href)))))
+	domainBypass(/customercareal\.com|(eduinstruct|medific)\.net/,()=>{
+		let i=location.search.indexOf("&page=")
+		if(i>0)
+		{
+			ifElement("a[href]#locked_link",a=>safelyNavigate(a.href),()=>{
+				location.search=location.search.substr(0,i+6)+(parseInt(location.search.substr(i+6))+1)
+			})
+		}
+	})
 	domainBypass("iloadit11.info",()=>ifElement("button#timerbtn",()=>{
 		let f=document.createElement("form")
 		f.method="POST"
