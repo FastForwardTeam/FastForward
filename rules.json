@@ -311,6 +311,7 @@
 		"*://*.blasze.com/*",
 		"*://*.blasze.tk/*",
 		"*://*.ipgrab.org/*",
-		"*://*.gyazos.com/*"
+		"*://*.gyazos.com/*",
+		"*://*.discord.kim/*"
 	]
 }
