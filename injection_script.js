@@ -930,7 +930,7 @@ ensureDomLoaded(()=>{
 		document.querySelector("#captchaVerifiedStatus").click()
 		doTheThing(()=>doTheThing(()=>doTheThing(()=>document.querySelector("#template-contactform-submit").click())))
 	})
-	domainBypass(/^((www\.)?(((get-click2|informations-library|media-blue|akashirohige|aibouanimelink)\.blogspot|business\.ominfoupdate|majidzhacker|citgratis|tekloggers|pro\-bangla)\.com|pastikan\.me|(blog\.infolanjutan|jkoding)\.xyz|safe\.onbatch\.my\.id|jackofnine\.site))$/,()=>{
+	domainBypass(/^((www\.)?(((get-click2|informations-library|media-blue|akashirohige|aibouanimelink)\.blogspot|business\.ominfoupdate|majidzhacker|citgratis|tekloggers|pro\-bangla)\.com|pastikan\.me|(blog\.infolanjutan|jkoding)\.xyz|(safe\.onbatch\.my|google-playss\.sdetectives)\.id|jackofnine\.site))$/,()=>{
 		let u=aesCrypto.decrypt(convertstr(location.href.substr(location.href.indexOf("?o=")+3)),convertstr("root"))
 		if(isGoodLink(u))
 		{
