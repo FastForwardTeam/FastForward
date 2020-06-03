@@ -38,13 +38,6 @@ unsafelyNavigate=target=>{
 	let url="https://universal-bypass.org/bypassed?target="+encodeURIComponent(target)+"&referer="+encodeURIComponent(referer)
 	switch(target)//All values here have been tested using "Take me to destinations after 0 seconds."
 	{
-		case "https://proxoexploits.com/proxo/continue_two":
-		case "https://proxoexploits.com/ProxoKeyKeyLol":
-		case "https://api.thinksuggest.org/?m=c&t=j&h=Jump&q=_clickout&pid=linkvertisenet&k=https%3A%2F%2Fproxoexploits.com%2Fproxo%2Fcontinue_two&subid=klickouts":
-		case "https://api.thinksuggest.org/?m=c&t=j&h=Jump&q=_clickout&pid=linkvertisenet&k=https%3A%2F%2Fproxoexploits.com%2FProxoKeyKeyLol&subid=klickouts":
-		url+="&safe_in=20"
-		break;
-
 		case (/fluxteam\.xyz/.exec(target)||{}).input:
 		url+="&safe_in=95"
 		break;
