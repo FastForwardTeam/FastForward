@@ -322,10 +322,7 @@ sendToOptions = data => {
 if(!definitions_version)
 {
 	brws.alarms.create("update-bypass-definitions", {periodInMinutes: 60})
-	brws.alarms.onAlarm.addListener(alert => {
-		console.assert(alert.name == "update-bypass-definitions")
-		updateBypassDefinitions()
-	})
+	brws.alarms.onAlarm.addListener(()=>updateBypassDefinitions())
 }
 
 // Messaging
