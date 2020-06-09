@@ -704,7 +704,7 @@ ensureDomLoaded(()=>{
 		document.querySelectorAll("form[action]").forEach(e=>e.action+="#ignoreCrowdBypass")
 		document.querySelectorAll("a[href]").forEach(e=>e.href+="#ignoreCrowdBypass")
 	}
-	domainBypass(/^((www\.)?(up-load\.io|cosmobox\.org|filefactory\.com|rockfile\.co))$/,()=>insertInfoBox("{{msg.infoFileHoster}}"))
+	domainBypass(/^((www\.)?(file(factory|-upload)\.com|up-load\.io|cosmobox\.org|rockfile\.co))$/,()=>insertInfoBox("{{msg.infoFileHoster}}"))
 	domainBypass(/adfoc\.us|ads\.bdcraft\.net/,()=>ifElement(".skip[href]",b=>safelyNavigate(b.href)))
 	domainBypass("srt.am",()=>{
 		if(document.querySelector(".skip-container"))
