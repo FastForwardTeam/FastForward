@@ -574,7 +574,7 @@ domainBypass(/linkvertise\.(com|net)|link-to\.net/,()=>{
 		},2000)
 	})
 })
-domainBypass(/acortalo\.(live|xyz)/,()=>{
+domainBypass(/acortalo\.(live|xyz|org)/,()=>{
 	if(document.referrer.indexOf("megawarez")>-1)
 	{
 		const _ce=document.createElement
