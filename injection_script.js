@@ -45,6 +45,10 @@ unsafelyNavigate=target=>{
 		case (/krnl\.rocks/.exec(target)||{}).input:
 		url+="&safe_in=85"
 		break;
+
+		case "https://api.thinksuggest.org/?m=c&t=j&h=Jump&q=_clickout&pid=linkvertisenet&k=https%3A%2F%2Fproxoexploits.com%2FProxoKeyKeyLol&subid=klickouts":
+		url+="&safe_in=20"
+		break;
 	}
 	location.assign(url)
 },
