@@ -25,8 +25,7 @@
 		"*://*.hikarinoakariost.info/out/?*"
 	],
 	"hash_base64": [
-		"*://*.acorme.com/*",
-		"**://mcaltdispenserwebsite.herokuapp.com/*"
+		"*://*.acorme.com/*"
 	],
 	"param_url_general": [
 		"*://*/st?api=*&url=*",
