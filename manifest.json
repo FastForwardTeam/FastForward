@@ -11,8 +11,8 @@
 	"name": "Universal Bypass",
 	"description": "__MSG_appDesc__",
 	"homepage_url": "https://universal-bypass.org/",
-	"version": "13.12.1",
-	"author": "Sainan.de",
+	"version": "13.12.2",
+	"author": "Sainan",
 	"permissions": [
 		"alarms",
 		"storage",
