@@ -17,18 +17,6 @@
 	"options": {
 		"message": "agordoj"
 	},
-	"legalBattleInfo1": {
-		"message": "Linvertise volas procesi Universal Bypass -on."
-	},
-	"legalBattleInfo2": {
-		"message": "Se vi ŝatas ĉi, bonvolu helpi min sur ĉi batalo"
-	},
-	"legalBattleInfo3": {
-		"message": "Se vi volas plisciĝi,"
-	},
-	"legalBattleInfo4": {
-		"message": "multaj informoj estas ĉi."
-	},
 	"infoOutdated": {
 		"message": "Ĉi tio retpaĝo estas uzanta pli nova versio de Universal Bypass"
 	},

@@ -74,18 +74,6 @@
 	"contributors": {
 		"message": "도와주신 분들"
 	},
-	"legalBattleInfo1": {
-		"message": "Linkvertise는 우리를 고소하려 합니다!"
-	},
-	"legalBattleInfo2": {
-		"message": "만약 이 확장프로그램이 마음에 드셨다면, 저희가 승소할 수 있도록 도와주세요."
-	},
-	"legalBattleInfo3": {
-		"message": "만약 이에 대해 더 알고싶으시다면,"
-	},
-	"legalBattleInfo4": {
-		"message": "여기에서 더 많은 정보를 보실 수 있습니다."
-	},
 	"optionsUserscripts": {
 		"message": "사용자 지정 우회책"
 	},

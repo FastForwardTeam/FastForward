@@ -12,7 +12,7 @@
 		"message": "Versioon"
 	},
 	"definitionsVersion": {
-		"message": "Bypass definitsioon"
+		"message": "Bypassi definitsioon"
 	},
 	"changelog": {
 		"message": "Muudatuste logi"
@@ -39,7 +39,7 @@
 		"message": "Panustage Universal Bypass-i."
 	},
 	"options": {
-		"message": "Seaded"
+		"message": "Valikud"
 	},
 	"optionsLink": {
 		"message": "Muutke Universal Bypass valikuid."
@@ -74,15 +74,6 @@
 	"contributors": {
 		"message": "Toetajad"
 	},
-	"legalBattleInfo1": {
-		"message": "Linkvertise soovib Universal Bypass'i kohtusse kaevata."
-	},
-	"legalBattleInfo2": {
-		"message": "Kui teile meeldib see laiendus, aita mul võidelda head võitlust."
-	},
-	"legalBattleInfo4": {
-		"message": "siin on veel natuke teavet"
-	},
 	"optionsUserscripts": {
 		"message": "Kohandatud ümbersõidud"
 	},
@@ -116,6 +107,9 @@
 	"beforeNavigateInstant": {
 		"message": "Sind suunatakse %"
 	},
+	"infoFileHoster": {
+		"message": "Kahjuks tagab allalaadimisserver, et olete enne faili allalaadimist oodanud ,et lubada teil faili allalaadimine."
+	},
 	"infoOutdated": {
 		"message": "Sellest veebisaidist möödumiseks on Universal Bypass uuem versioon."
 	},
@@ -127,6 +121,9 @@
 	},
 	"crowdBypassed": {
 		"message": "Võimalik, et ei pea ootama!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Teised Universal Bypassi kasutajad on juba oodanud sinu järgi ning andnud teada et see viib %"
 	},
 	"crowdBypassedTimer": {
 		"message": "See avatakse uuel vahekaardil % sekundi pärast."

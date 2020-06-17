@@ -74,18 +74,6 @@
 	"contributors": {
 		"message": "Podporovatelia"
 	},
-	"legalBattleInfo1": {
-		"message": "Linkvertise chce zažalovať Universal Bypass"
-	},
-	"legalBattleInfo2": {
-		"message": "Ak sa vám toto rozšírenie páči, pomôžte mi bojovať v dobrom boji."
-	},
-	"legalBattleInfo3": {
-		"message": "Ak sa o tom chcete dozvedieť viac,"
-	},
-	"legalBattleInfo4": {
-		"message": "tu je viac informácií"
-	},
 	"optionsUserscripts": {
 		"message": "Vlastné obtoky"
 	},

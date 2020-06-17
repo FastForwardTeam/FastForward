@@ -74,18 +74,6 @@
 	"contributors": {
 		"message": "Сътрудници"
 	},
-	"legalBattleInfo1": {
-		"message": "Linkvertise иска да съди Universal Bypass."
-	},
-	"legalBattleInfo2": {
-		"message": "Ако ви харесва това разширение, помогнете ми да се боря с добрата битка."
-	},
-	"legalBattleInfo3": {
-		"message": "Ако искате да научите повече за това,"
-	},
-	"legalBattleInfo4": {
-		"message": "ето още малко информация"
-	},
 	"optionsUserscripts": {
 		"message": "Персонализирани байпаси"
 	},

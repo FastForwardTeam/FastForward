@@ -60,7 +60,7 @@
 		"message": "Blokér IP-loggere, hvis de ikke kan omgås."
 	},
 	"optionsCrowdBypass": {
-		"message": "Giv og tag destinationerne fra uomgåelige afkortere."
+		"message": "Masseomgåelse. Giv og tag destinationerne fra uomgåelige afkortere."
 	},
 	"optionsCrowdAutoOpen": {
 		"message": "Åbn crowd-sourced destinationer i en ny fane efter % sekund(er)."
@@ -73,18 +73,6 @@
 	},
 	"contributors": {
 		"message": "Bidragsydere"
-	},
-	"legalBattleInfo1": {
-		"message": "Linkvertise ønsker at sagsøge Universal Bypass."
-	},
-	"legalBattleInfo2": {
-		"message": "Hvis du kan lide denne udvidelse, så hjælp mig med at kæmpe for den gode kamp."
-	},
-	"legalBattleInfo3": {
-		"message": "Hvis du gerne vil lære mere om dette,"
-	},
-	"legalBattleInfo4": {
-		"message": "her er nogle flere oplysninger"
 	},
 	"optionsUserscripts": {
 		"message": "Tilpassede Omgåelser"

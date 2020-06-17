@@ -6,13 +6,13 @@
 		"message": "Děkujeme za instalaci Universal Bypass!"
 	},
 	"firstrunNoScript": {
-		"message": "Niceméně, vypadá že používáte NoScript nebo něco podobného, s kterým Universal Bypass není kompatibilní."
+		"message": "Zdá se však, že používáte NoScript nebo podobné, se kterým Universal Bypass není kompatibilní."
 	},
 	"version": {
 		"message": "Verze"
 	},
 	"definitionsVersion": {
-		"message": "Definice přemostění"
+		"message": "Definice vynechání"
 	},
 	"changelog": {
 		"message": "Přehled změn"
@@ -73,18 +73,6 @@
 	},
 	"contributors": {
 		"message": "Přispěvatelé"
-	},
-	"legalBattleInfo1": {
-		"message": "Linkvertise se chce s Universal Bypass soudit"
-	},
-	"legalBattleInfo2": {
-		"message": "Jestli máte toto rozšíření rádi, pomozte mi vyhrát tuto válku"
-	},
-	"legalBattleInfo3": {
-		"message": "Jestli by jste se o tomhle chtěli dozvědět více,"
-	},
-	"legalBattleInfo4": {
-		"message": "tady je více informací"
 	},
 	"optionsUserscripts": {
 		"message": "Vlastní obcházení"

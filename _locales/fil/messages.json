@@ -74,18 +74,6 @@
 	"contributors": {
 		"message": "Ang mga kontribyutor"
 	},
-	"legalBattleInfo1": {
-		"message": "Nais ng Linkvertise na mag-demanda sa Universal Bypass."
-	},
-	"legalBattleInfo2": {
-		"message": "Kung gusto mo ang extension na ito, tulungan mo akong ipag laban ang demanda."
-	},
-	"legalBattleInfo3": {
-		"message": "Kung nais mong malaman ang higit pa tungkol dito"
-	},
-	"legalBattleInfo4": {
-		"message": "\nnarito ang ilang karagdagang impormasyon"
-	},
 	"optionsUserscripts": {
 		"message": "Pasadyang Mga Salamin"
 	},

@@ -1,6 +1,6 @@
 {
 	"appDesc": {
-		"message": "Älä tuhlaa aikaa noudattamiseen! Universal Bypass skippaa automaattisesti ärsyttäviä linkin lyhentäjiä."
+		"message": "Älä tuhlaa aikaa odottamiseen ja mainosten katseluun! Universal Bypass skippaa automaattisesti ärsyttävät linkinlyhentäjät."
 	},
 	"firstrunTitle": {
 		"message": "Kiitos, kun asensit Universal Bypassin!"
@@ -73,18 +73,6 @@
 	},
 	"contributors": {
 		"message": "Osallistujat"
-	},
-	"legalBattleInfo1": {
-		"message": "Linkvertise haluaa haastaa Universal Bypassin oikeuteen."
-	},
-	"legalBattleInfo2": {
-		"message": "Jos tykkäät tästä laajennuksesta, auta minua taistelemaan hyvä taistelu."
-	},
-	"legalBattleInfo3": {
-		"message": "Jos haluaisit tietää enemmän tästä,"
-	},
-	"legalBattleInfo4": {
-		"message": "tässä olisi vähän lisätietoja"
 	},
 	"optionsUserscripts": {
 		"message": "Räätälöidyt Ohitukset"

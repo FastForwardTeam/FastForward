@@ -74,18 +74,6 @@
 	"contributors": {
 		"message": "Contributeurs"
 	},
-	"legalBattleInfo1": {
-		"message": "Linkvertise veut poursuivre en justice Universal Bypass."
-	},
-	"legalBattleInfo2": {
-		"message": "Si vous aimez cette extension, aidez-moi à mener un combat juste."
-	},
-	"legalBattleInfo3": {
-		"message": "Si vous souhaitez en savoir plus à ce sujet,"
-	},
-	"legalBattleInfo4": {
-		"message": "voici quelques informations supplémentaires"
-	},
 	"optionsUserscripts": {
 		"message": "Contournements personnalisés"
 	},
@@ -99,7 +87,7 @@
 		"message": "Votre destination est %"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "Cependant, si vous naviguez maintenant, ils détecteront Universal Bypass."
+		"message": "Cependant, si vous naviguez maintenant, Universal Bypass sera détecté."
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "Vous ne serez plus détecté dans % secondes."
@@ -117,7 +105,7 @@
 		"message": "Voulez-vous être redirigé instantanément ou après x secondes ?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Vous allez être redirigé vers %"
+		"message": "Vous allez être redirigé vers cette adresse : %"
 	},
 	"infoFileHoster": {
 		"message": "Malheureusement, le serveur de téléchargement s'assurera que vous avez bien attendu avant de vous permettre de télécharger le fichier."

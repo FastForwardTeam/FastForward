@@ -65,18 +65,6 @@
 	"contributors": {
 		"message": "貢獻者"
 	},
-	"legalBattleInfo1": {
-		"message": "Linkvertise希望起訴通用旁路。"
-	},
-	"legalBattleInfo2": {
-		"message": "如果您喜歡此擴展程序，請幫助我打好仗。"
-	},
-	"legalBattleInfo3": {
-		"message": "如果您想了解更多有關此的信息，"
-	},
-	"legalBattleInfo4": {
-		"message": "這是更多信息"
-	},
 	"optionsUserscripts": {
 		"message": "自定義繞過\n"
 	},

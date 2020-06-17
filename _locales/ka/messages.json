@@ -59,18 +59,6 @@
 	"contributors": {
 		"message": "წვლილის შემტანები"
 	},
-	"legalBattleInfo1": {
-		"message": "Linkvertise აპირებს უჩივლოს სასამართლოში Universal Bypass-ს.\n"
-	},
-	"legalBattleInfo2": {
-		"message": "თუ მოგწონთ Universal Bypasser-ი, დამეხმარეტ მოვიგო ჩხუბი"
-	},
-	"legalBattleInfo3": {
-		"message": "თუ გსურთ შეიტყოთ მეტი ამის შესახებ"
-	},
-	"legalBattleInfo4": {
-		"message": "აქ არის დამატებითი ინფორმაცია"
-	},
 	"optionsUserscripts": {
 		"message": "არაოფიციალური შემოსავლები"
 	},

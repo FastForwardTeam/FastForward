@@ -74,18 +74,6 @@
 	"contributors": {
 		"message": "贡献者"
 	},
-	"legalBattleInfo1": {
-		"message": "linkvertise想起诉Universal Bypass"
-	},
-	"legalBattleInfo2": {
-		"message": "如果您喜欢此扩展程序，请帮助我们"
-	},
-	"legalBattleInfo3": {
-		"message": "如果您想了解更多信息，"
-	},
-	"legalBattleInfo4": {
-		"message": "了解更多信息"
-	},
 	"optionsUserscripts": {
 		"message": "自定义跳过"
 	},

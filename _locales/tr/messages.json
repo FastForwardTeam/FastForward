@@ -74,18 +74,6 @@
 	"contributors": {
 		"message": "Katkıda bulunanlar"
 	},
-	"legalBattleInfo1": {
-		"message": "Linkvertise, Universal Bypasse dava açmak istiyor."
-	},
-	"legalBattleInfo2": {
-		"message": "Eğer bu uzantıyı seviyorsan, iyi savaşı savaşmama yardımcı ol."
-	},
-	"legalBattleInfo3": {
-		"message": "bunun hakkında daha fazla bilgi edinmek istersen,"
-	},
-	"legalBattleInfo4": {
-		"message": "burada daha fazla bilgi var:"
-	},
 	"optionsUserscripts": {
 		"message": "Özel Baypaslar"
 	},

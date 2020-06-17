@@ -18,7 +18,7 @@
 		"message": "変更履歴"
 	},
 	"update": {
-		"message": "アップデートを確認"
+		"message": "アップデートを確認する"
 	},
 	"updating": {
 		"message": "バイパス定義をダウンロードしています..."
@@ -33,7 +33,7 @@
 		"message": "よくある質問と回答(FAQ)"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypassは今までに%件のサイトをバイパスしています。"
+		"message": "Universal Bypassは今までに%件のサイトをバイパスしました。"
 	},
 	"support": {
 		"message": "Universal Bypassに貢献する"
@@ -57,10 +57,10 @@
 		"message": "すぐにトラッカーのリンク先へ移動する"
 	},
 	"optionsBlockIPLoggers": {
-		"message": "バイパスできない場合はIPアドレスがログに記録されないように阻止する"
+		"message": "バイパスされなかった場合はIPアドレスがログされないように阻止する"
 	},
 	"optionsCrowdBypass": {
-		"message": "バイパスできない短縮urlの行き先を設定する"
+		"message": "Crowd Bypass: バイパスできない短縮リンクの行き先を取得したり提供したりする"
 	},
 	"optionsCrowdAutoOpen": {
 		"message": "%秒後に新しいタブでクラウドソーシング先を開く"
@@ -74,18 +74,6 @@
 	"contributors": {
 		"message": "貢献者"
 	},
-	"legalBattleInfo1": {
-		"message": "Linkvertiseが、Universal Bypassを訴えようとしています。"
-	},
-	"legalBattleInfo2": {
-		"message": "もしこの拡張機能のことを気に入っているのであれば、戦いがうまくいくように手伝っていただけませんか?"
-	},
-	"legalBattleInfo3": {
-		"message": "これについての詳しい情報は、"
-	},
-	"legalBattleInfo4": {
-		"message": "こちらへ"
-	},
 	"optionsUserscripts": {
 		"message": "カスタムバイパス"
 	},
@@ -96,10 +84,10 @@
 		"message": "リンク先まであと少しです。"
 	},
 	"beforeNavigateDestination": {
-		"message": "リンク先: %"
+		"message": "リンク先は%"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "ただし、今移動すると、サイトはUniversal Bypassを検出してしまいます。"
+		"message": "ただし、いま移動すると、サイトはUniversal Bypassを検出してしまいます。"
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "あと%秒で検出されなくなります。"
@@ -117,7 +105,7 @@
 		"message": "すぐに、または数秒後にリダイレクトされるようにしたいですか?"
 	},
 	"beforeNavigateInstant": {
-		"message": "% に移動しています"
+		"message": "%に移動しています"
 	},
 	"infoFileHoster": {
 		"message": "残念ながら、ダウンロードサーバーはファイルのダウンロードが許可される前に待機していることを確認します。"
@@ -156,10 +144,10 @@
 		"message": "正しくありませんか?"
 	},
 	"crowdBypassedOptions": {
-		"message": "これをすぐに新しいタブで開きますか、それともx秒で開きますか？"
+		"message": "すぐに、または数秒後に新しいタブで開かれるようにしたいですか?"
 	},
 	"blockedTitle": {
-		"message": "ユニバーサルバイパスにより、IPアドレスがログに記録されなくなりました。"
+		"message": "Universal Bypassは、あなたのIPアドレスがログされないように阻止しました。"
 	},
 	"blockedSubtitle": {
 		"message": "悪意のある人があなたのIPアドレスをログできないようにする機能をオフにしたいですか?"

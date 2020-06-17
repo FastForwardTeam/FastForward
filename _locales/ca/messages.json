@@ -74,18 +74,6 @@
 	"contributors": {
 		"message": "Contribuïdors"
 	},
-	"legalBattleInfo1": {
-		"message": "Linkvertise vol demandar a Universal Bypass."
-	},
-	"legalBattleInfo2": {
-		"message": "Si t'agrada aquesta extensió, ajuda'm amb aquesta bona causa."
-	},
-	"legalBattleInfo3": {
-		"message": "Si t'agradaría aprendre més sobre això,"
-	},
-	"legalBattleInfo4": {
-		"message": "aquí hi ha més informació"
-	},
 	"optionsUserscripts": {
 		"message": "Circumval·lacions personalitzades"
 	},

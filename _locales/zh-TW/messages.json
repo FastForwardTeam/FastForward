@@ -74,18 +74,6 @@
 	"contributors": {
 		"message": "貢獻者"
 	},
-	"legalBattleInfo1": {
-		"message": "Linkvertise 想要控告 Universal Bypass。"
-	},
-	"legalBattleInfo2": {
-		"message": "如果你喜歡這個擴充功能，就幫我一起奮戰吧。"
-	},
-	"legalBattleInfo3": {
-		"message": "如果你想知道更多，"
-	},
-	"legalBattleInfo4": {
-		"message": "這裡有更多資訊"
-	},
 	"optionsUserscripts": {
 		"message": "自定義繞過規則"
 	},

@@ -7,5 +7,32 @@
 	},
 	"firstrunNoScript": {
 		"message": "Tačiau panašu, kad naudojate „NoScript“ ar panašius, su kuriais „Universal Bypass“ nesuderinamas."
+	},
+	"version": {
+		"message": "Versija"
+	},
+	"definitionsVersion": {
+		"message": "Praleidimo apibrėžimai"
+	},
+	"changelog": {
+		"message": "Pokyčių sąrašas"
+	},
+	"update": {
+		"message": "Tikrinti dėl atnaujinimų"
+	},
+	"updating": {
+		"message": "Atsiunčiami praleidimo apibrėžimai..."
+	},
+	"updateYes": {
+		"message": "Sėkmingai atsiųsti praleidimo apibrėžimai."
+	},
+	"updateNo": {
+		"message": "Praleidimo apibrėžimai yra naujausios versijos."
+	},
+	"faq": {
+		"message": "Dažnai užduodami klausimai"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass praleido % puslapių jums."
 	}
 }

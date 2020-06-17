@@ -5,6 +5,48 @@
 	"firstrunTitle": {
 		"message": "Köszönjük, hogy telepítetted a Universal Bypass-t!"
 	},
+	"firstrunNoScript": {
+		"message": "Azonban úgy tünik hogy te NoScript-tett használsz vagy hasonlót, amivel a Universal Bypass nem kompatibilis."
+	},
+	"version": {
+		"message": "Verzió"
+	},
+	"definitionsVersion": {
+		"message": "Kitérő meghatározások"
+	},
+	"changelog": {
+		"message": "Változási napló\n"
+	},
+	"update": {
+		"message": "Frissítések keresése\n"
+	},
+	"updating": {
+		"message": "A kitérő meghatározások letöltése.."
+	},
+	"updateYes": {
+		"message": "Sikeresen letöltőtt kitérő meghatározások."
+	},
+	"updateNo": {
+		"message": "A kitérő meghatározások naprakészek."
+	},
+	"faq": {
+		"message": "Gyakran ismételt kérdések (GYIK)"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass már megkerülte az Ön számára szánt % webhelyeket."
+	},
+	"support": {
+		"message": "Hozzájárulás Universal Bypass számára."
+	},
+	"options": {
+		"message": "Opciók"
+	},
+	"optionsLink": {
+		"message": "Változtassa meg az Universal Bypass opciói."
+	},
+	"optionsEnabled": {
+		"message": "Engedélyezze a weboldal megkerülését."
+	},
 	"optionsBlockIPLoggers": {
 		"message": "IP-loggerek blokkolása, ha nem kerülhetők ki."
 	},

@@ -3,16 +3,16 @@
 		"message": "Verschwende deine Zeit nicht mit Unterwerfung. Universal Bypass umgeht nervige Linkkürzer."
 	},
 	"firstrunTitle": {
-		"message": "Danke, dass du Universal Bypass installiert hast!"
+		"message": "Danke, Dass du Universal Bypass installiert hast!"
 	},
 	"firstrunNoScript": {
-		"message": "Jedoch sieht es so aus, als ob du NoScript oder ähnliches verwendest, womit Universal Bypass nicht kompatibel ist."
+		"message": "Du scheintst jedoch NoScript oder ähnliches zu verwenden, mit dem Universal Bypass nicht kompatibel ist."
 	},
 	"version": {
 		"message": "Version"
 	},
 	"definitionsVersion": {
-		"message": "Umgehungsdefinitionen"
+		"message": "Definitionen umgehen"
 	},
 	"changelog": {
 		"message": "Änderungsverlauf"
@@ -21,7 +21,7 @@
 		"message": "Nach Updates suchen"
 	},
 	"updating": {
-		"message": "Umgehungsdefinitionen werden heruntergeladen..."
+		"message": "Definitionen werden heruntergeladen..."
 	},
 	"updateYes": {
 		"message": "Umgehungsdefinitionen wurden erfolgreich heruntergeladen."
@@ -36,16 +36,16 @@
 		"message": "Universal Bypass hat bereits % Seiten für dich umgangen."
 	},
 	"support": {
-		"message": "Unterstütze Universal Bypass."
+		"message": "Helfen Sie zu universellen Umgehungen beizutragen."
 	},
 	"options": {
 		"message": "Optionen"
 	},
 	"optionsLink": {
-		"message": "Ändere die Optionen von Universal Bypass."
+		"message": "Ändere die Universal Bypass Optionen."
 	},
 	"optionsEnabled": {
-		"message": "Aktiviere Webseiten-Umgehungen."
+		"message": "Website-Umgehungen aktivieren."
 	},
 	"optionsNavigationDelay": {
 		"message": "Bring mich nach % Sekunde(n) ans Ziel."
@@ -66,7 +66,7 @@
 		"message": "Nutzer-geteilte Ziele nach % Sekunde(n) in einem neuen Tab öffnen."
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Schließe den Tab, der das Nuzer-geteilte Ziel beinhaltet % Sekunde(n) nachdem das Ziel geöffnet wurde."
+		"message": "chließen Sie die Registerkarte mit dem Crowd-Sourcing-Ziel nach% Sekunde (n) des Besuchs."
 	},
 	"privacyPolicy": {
 		"message": "Datenschutzerklärung"
@@ -75,7 +75,7 @@
 		"message": "Mitwirkende"
 	},
 	"optionsUserscripts": {
-		"message": "Eigene Umgehungen"
+		"message": "Benutzerdefinierte Umgehungen"
 	},
 	"optionsUserscriptsDescription": {
 		"message": "Dies ist eine erweiterte Funktion für Entwickler, um eigene Skripte zu erstellen, um Webseiten zu umgehen. Wenn perfektioniert, können diese auf GitHub eingereicht werden, um in Universal Bypass hinzugefügt zu werden und allen zur Verfügung zu stehen."
@@ -93,13 +93,13 @@
 		"message": "Du wirst nicht mehr erkannt in % Sekunden."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
-		"message": "Du wirst nicht mehr erkannt in einer Sekunde."
+		"message": "Du wirst nicht mehr in 1 Sekunde erkannt."
 	},
 	"beforeNavigateTimer": {
-		"message": "Du wirst in % Sekunden automatisch weitergeleitet."
+		"message": "Sie werden automatisch in % Sekunden weitergeleitet."
 	},
 	"beforeNavigateTimerSingular": {
-		"message": "Du wirst in einer Sekunde automatisch weitergeleitet."
+		"message": "Du wirst automatisch in einer Sekunde weitergeleitet."
 	},
 	"beforeNavigateOptions": {
 		"message": "Möchtest du sofort oder in x Sekunden weitergeleitet werden?"
@@ -114,7 +114,7 @@
 		"message": "Leider wird der Download-Server sicherstellen, dass du gewartet hast, bevor er dir erlaubt, die Datei herunterzuladen."
 	},
 	"infoOutdated": {
-		"message": "Diese Website ist in einer neueren Version von Universal Bypass umgangen."
+		"message": "Diese Website wird von einer neueren Version von Universal Bypass umgangen."
 	},
 	"crowdWait": {
 		"message": "Leider bist du der erste, der auf diesen Link trifft, aber nachdem du gewartet hast, müssen andere Universal Bypass Nutzer es nicht mehr tun."

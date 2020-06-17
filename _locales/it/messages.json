@@ -74,18 +74,6 @@
 	"contributors": {
 		"message": "Contributori"
 	},
-	"legalBattleInfo1": {
-		"message": "Linkvertise vuole denunciare Universal Bypass."
-	},
-	"legalBattleInfo2": {
-		"message": "Se ti piace questa estensione, aiutami a combattere la causa."
-	},
-	"legalBattleInfo3": {
-		"message": "Se ti piacerebbe saperne di più,"
-	},
-	"legalBattleInfo4": {
-		"message": "ecco delle informazioni aggiuntive"
-	},
 	"optionsUserscripts": {
 		"message": "Bypass personalizzati"
 	},

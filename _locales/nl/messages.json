@@ -60,7 +60,7 @@
 		"message": "Blokkeer IP-loggers als ze niet kunnen worden omzeilt."
 	},
 	"optionsCrowdBypass": {
-		"message": "Geef en neem de bestemmingen van ondoorlaatbare verkortingen."
+		"message": "Crowd Bypass: Geef en neem de bestemmingen van ondoorlaatbare verkorters."
 	},
 	"optionsCrowdAutoOpen": {
 		"message": "Open crowd-sourced bestemmingen in een nieuw tabblad na % seconde(s). (0 = direct.)"
@@ -73,18 +73,6 @@
 	},
 	"contributors": {
 		"message": "Bijdrragers"
-	},
-	"legalBattleInfo1": {
-		"message": "Linkvertise wil Universal Bypass aanklagen."
-	},
-	"legalBattleInfo2": {
-		"message": "Als je deze extentie leuk vindt, steun dan de goede kant."
-	},
-	"legalBattleInfo3": {
-		"message": "Als je hier meer over wil weten,"
-	},
-	"legalBattleInfo4": {
-		"message": "hier is wat meer informatie"
 	},
 	"optionsUserscripts": {
 		"message": "Aangepaste omzeilingen"
@@ -129,7 +117,7 @@
 		"message": "Helaas ben je de eerste die deze link tegenkomt, maar nadat je hebt gewacht hoeven anderen dat niet meer."
 	},
 	"crowdDisabled": {
-		"message": "Deze website wordt omzeild door crowd bypass, dit heb je uitgeschakeld in de opties."
+		"message": "Deze website wordt omzeild door crowd bypass, dit kan je inschakelen in de opties."
 	},
 	"crowdBypassed": {
 		"message": "U hoeft misschien niet te wachten!"

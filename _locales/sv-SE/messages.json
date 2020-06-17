@@ -74,18 +74,6 @@
 	"contributors": {
 		"message": "Medverkande"
 	},
-	"legalBattleInfo1": {
-		"message": "Linkvertise vill stämma Universal Bypass."
-	},
-	"legalBattleInfo2": {
-		"message": "Om du gillar detta tillägg, hjälp mig då att slåss för den goda saken."
-	},
-	"legalBattleInfo3": {
-		"message": "Om du vill lära dig mer om detta,"
-	},
-	"legalBattleInfo4": {
-		"message": "här är lite mer information"
-	},
 	"optionsUserscripts": {
 		"message": "Anpassade förbikopplingar"
 	},

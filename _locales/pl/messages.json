@@ -36,7 +36,7 @@
 		"message": "Uniwersalne Obejście ominęło dla Ciebie % stron."
 	},
 	"support": {
-		"message": "Wspieraj Uniwersalne Obejście"
+		"message": "Wesprzyj Uniwersalne Obejście."
 	},
 	"options": {
 		"message": "Opcje"
@@ -73,18 +73,6 @@
 	},
 	"contributors": {
 		"message": "Wkładcy"
-	},
-	"legalBattleInfo1": {
-		"message": "Linkvertise chce pozwać Universal Bypass."
-	},
-	"legalBattleInfo2": {
-		"message": "Jeżeli lubisz to rozszerzenie, pomóż mi walczyć w dobrej mierze."
-	},
-	"legalBattleInfo3": {
-		"message": "Jeśli chciałbyś dowiedzieć się więcej na ten temat,"
-	},
-	"legalBattleInfo4": {
-		"message": "tutaj jest kilka informacji"
 	},
 	"optionsUserscripts": {
 		"message": "Niestandardowe Obejścia"

@@ -74,18 +74,6 @@
 	"contributors": {
 		"message": "Луѓе кои помогнале"
 	},
-	"legalBattleInfo1": {
-		"message": "Linkvertise сака да го тужи Universal Bypass."
-	},
-	"legalBattleInfo2": {
-		"message": "Ако ја сакаш оваа extension, помогними да се борам со твоја помош"
-	},
-	"legalBattleInfo3": {
-		"message": "Ако сакаш да прочиташ нешто поврзано со ова,"
-	},
-	"legalBattleInfo4": {
-		"message": "еве повеќе информации."
-	},
 	"optionsUserscripts": {
 		"message": "Твои Бајпаси"
 	},

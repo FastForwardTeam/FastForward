@@ -74,18 +74,6 @@
 	"contributors": {
 		"message": "ผู้มีส่วนร่วมต่างๆ"
 	},
-	"legalBattleInfo1": {
-		"message": "Linkvertis กำลังจะฟ้องร้อง Universal Bypass"
-	},
-	"legalBattleInfo2": {
-		"message": "ถ้าคุณชอบส่วนขยายนี้ ช่วยฉันสู้ในศึกนี้"
-	},
-	"legalBattleInfo3": {
-		"message": "ถ้าคุณอยากทราบข้อมูลเพิ่ม"
-	},
-	"legalBattleInfo4": {
-		"message": "นี้คือข้อมูลเพิ่มเติม"
-	},
 	"optionsUserscripts": {
 		"message": "บายพาสแบบกำหนดเอง"
 	},

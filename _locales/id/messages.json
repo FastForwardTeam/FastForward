@@ -74,18 +74,6 @@
 	"contributors": {
 		"message": "Kontributor"
 	},
-	"legalBattleInfo1": {
-		"message": "Linkvertise ingin menggugat Universal Bypass."
-	},
-	"legalBattleInfo2": {
-		"message": "Jika anda menyukai ekstensi ini, bantu kami berjuang melawan dengan baik."
-	},
-	"legalBattleInfo3": {
-		"message": "Jika anda ingin mempelajari lebih lanjut tentang hal ini,"
-	},
-	"legalBattleInfo4": {
-		"message": "berikut adalah beberapa informasi lebih lanjut"
-	},
 	"optionsUserscripts": {
 		"message": "Kustom Bypass"
 	},
