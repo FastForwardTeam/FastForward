@@ -74,18 +74,6 @@
 	"contributors": {
 		"message": "Contributors"
 	},
-	"legalBattleInfo1": {
-		"message": "Linkvertise wants to sue Universal Bypass."
-	},
-	"legalBattleInfo2": {
-		"message": "If you like this extension, help me fight the good fight."
-	},
-	"legalBattleInfo3": {
-		"message": "If you would like to learn more about this,"
-	},
-	"legalBattleInfo4": {
-		"message": "here is some more information"
-	},
 	"optionsUserscripts": {
 		"message": "Custom Bypasses"
 	},
@@ -118,6 +106,9 @@
 	},
 	"beforeNavigateInstant": {
 		"message": "You are being navigated to %"
+	},
+	"infoLinkvertise": {
+		"message": "We're not allowed to bypass this website but we have negotiated the removal of their most annoying steps."
 	},
 	"infoFileHoster": {
 		"message": "Unfortunately, the download server will ensure that you have waited before allowing you to download the file."
