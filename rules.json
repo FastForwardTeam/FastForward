@@ -301,5 +301,6 @@
 		"*://*.ipgrab.org/*",
 		"*://*.gyazos.com/*",
 		"*://*.discord.kim/*"
-	]
+	],
+	"linkvertise_safe_in": {}
 }
