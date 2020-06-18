@@ -634,6 +634,9 @@ domainBypass("chaosity.cheatsquad.gg",()=>{
 	ODP(window,"steps",{
 		get:()=>[true]
 	})
+	ODP(window,"youtube",{
+		get:()=>1
+	})
 	ensureDomLoaded(()=>document.querySelectorAll("div.loader").forEach(d=>d.className="check_loader"))
 })
 domainBypass("pirateproxy.wtf",()=>{
