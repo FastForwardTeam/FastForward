@@ -107,6 +107,9 @@
 	"beforeNavigateInstant": {
 		"message": "Navođenje do %"
 	},
+	"infoLinkvertise": {
+		"message": "Nije nam dopušteno zaobilaženje ove stranice ali smo dogovorili micanje najdosasnijih koraka"
+	},
 	"infoFileHoster": {
 		"message": "Nažalost, poslužitelj za preuzimanja će se potruditi da ste pričekali prije no što ste u mogućnosti preuzeti datoteku."
 	},

@@ -107,6 +107,9 @@
 	"beforeNavigateInstant": {
 		"message": "Anda sedang diarahkan ke %"
 	},
+	"infoLinkvertise": {
+		"message": "Kami tidak diizinkan melakukan bypass pada situs web ini tapi Kami sedang membicarakan penghapusan langkah menjengkelkan ini."
+	},
 	"infoFileHoster": {
 		"message": "Sayangnya, server unduhannya akan memastikan bahwa anda telah menunggu sebelum mengizinkan anda untuk mengunduh file."
 	},

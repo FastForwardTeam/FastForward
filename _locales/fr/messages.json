@@ -107,6 +107,9 @@
 	"beforeNavigateInstant": {
 		"message": "Vous allez être redirigé vers cette adresse : %"
 	},
+	"infoLinkvertise": {
+		"message": "Nous ne sommes pas autorisés à contourner ce site Web, mais nous avons négocié la suppression de leurs étapes les plus ennuyeuses."
+	},
 	"infoFileHoster": {
 		"message": "Malheureusement, le serveur de téléchargement s'assurera que vous avez bien attendu avant de vous permettre de télécharger le fichier."
 	},

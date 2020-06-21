@@ -107,6 +107,9 @@
 	"beforeNavigateInstant": {
 		"message": "Bạn đang được điều hướng đến %"
 	},
+	"infoLinkvertise": {
+		"message": "Chúng tôi không được phép vượt qua trang này nhưng chúng tôi đã gỡ bỏ các bước làm bạn khó chịu nhất."
+	},
 	"infoFileHoster": {
 		"message": "Thật không may, máy chủ tải về bắt buộc bạn phải chờ trước khi cho phép bạn tải tệp về."
 	},

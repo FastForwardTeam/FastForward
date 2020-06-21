@@ -107,6 +107,9 @@
 	"beforeNavigateInstant": {
 		"message": "Trwa nawigacja do %"
 	},
+	"infoLinkvertise": {
+		"message": "Nie możemy obejść tej strony, jednakże wynegocjowaliśmy usunięcie najbardziej irytujących kroków."
+	},
 	"infoFileHoster": {
 		"message": "Niestety, serwer pobierania upewni się, czy czekałeś, zanim pozwoli ci pobrać ten plik."
 	},

@@ -107,6 +107,9 @@
 	"beforeNavigateInstant": {
 		"message": "Du videreføres til %"
 	},
+	"infoLinkvertise": {
+		"message": "Vi har ikke tilladelse til at omgå dette websted, men det er lykkedes at opnå fjernelse af dets mest irriterende trin."
+	},
 	"infoFileHoster": {
 		"message": "Bemærk: Downloadserveren tvinger dig til at vente et øjeblik, inden filen kan downloades."
 	},

@@ -107,6 +107,9 @@
 	"beforeNavigateInstant": {
 		"message": "Anda sedang dinavigasi ke %"
 	},
+	"infoLinkvertise": {
+		"message": "Kami tidak dibenarkan untuk memintas laman web ini tetapi kami telah berbincang tentang penyisihan langkah-langkah mereka yang paling menjengkelkan. "
+	},
 	"infoFileHoster": {
 		"message": "Sayangnya, pelayan muatturun memastikan anda menunggu sebentar sebelum membenarkan anda memuatturun file."
 	},

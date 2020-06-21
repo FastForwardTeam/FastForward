@@ -33,7 +33,7 @@
 		"message": "よくある質問と回答(FAQ)"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypassは今までに%件のサイトをバイパスしました。"
+		"message": "Universal Bypassは、今までに%件のサイトをバイパスしました。"
 	},
 	"support": {
 		"message": "Universal Bypassに貢献する"
@@ -78,7 +78,7 @@
 		"message": "カスタムバイパス"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "これは、開発者が独自のスクリプトを作成してサイトをバイパスするための高度な機能です。完成後、誰でも使えるように、GitHubに投稿してUniversal Bypassに追加することができます。"
+		"message": "これは、開発者が独自のスクリプトを作成してサイトをバイパスするための高度な機能です。完成後、誰でも使えるように、GitHubに投稿してUniversal Bypassに追加することもできます。"
 	},
 	"beforeNavigate": {
 		"message": "リンク先まであと少しです。"
@@ -106,6 +106,9 @@
 	},
 	"beforeNavigateInstant": {
 		"message": "%に移動しています"
+	},
+	"infoLinkvertise": {
+		"message": "このサイトのバイパスは許可されていませんが、私たちはこのサイトのもっとも迷惑な手順を除去するように交渉しました。"
 	},
 	"infoFileHoster": {
 		"message": "残念ながら、ダウンロードサーバーはファイルのダウンロードが許可される前に待機していることを確認します。"

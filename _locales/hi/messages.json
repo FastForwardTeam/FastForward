@@ -23,6 +23,9 @@
 	"updating": {
 		"message": "बाइपास परिभाषाएँ डाउनलोड हो रही..."
 	},
+	"updateYes": {
+		"message": "Successfully downloaded bypass definitions."
+	},
 	"faq": {
 		"message": "अकसर पूछे जाने वाले प्रश्न (FAQ)"
 	},

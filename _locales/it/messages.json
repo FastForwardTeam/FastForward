@@ -107,6 +107,9 @@
 	"beforeNavigateInstant": {
 		"message": "Stai passando a%"
 	},
+	"infoLinkvertise": {
+		"message": "Non siamo autorizzati a bypassare questo sito web ma abbiamo negoziato la rimozione dei loro step più fastidiosi"
+	},
 	"infoFileHoster": {
 		"message": "Sfortunatamente, il server di download si assicurerà di aver aspettato prima di consentirti di scaricare il file."
 	},

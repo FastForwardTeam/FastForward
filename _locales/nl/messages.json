@@ -107,6 +107,9 @@
 	"beforeNavigateInstant": {
 		"message": "Je wordt doorgestuurd naar %"
 	},
+	"infoLinkvertise": {
+		"message": "We hebben geen toestemming om deze website te omzeilen, maar we hebben onderhandeld over het verwijderen van hun meest vervelende stappen. "
+	},
 	"infoFileHoster": {
 		"message": "Helaas zal de downloadserver ervoor zorgen dat je hebt gewacht voordat je dit bestand kan downloaden."
 	},

@@ -107,6 +107,9 @@
 	"beforeNavigateInstant": {
 		"message": "Estás siendo redirigido a %"
 	},
+	"infoLinkvertise": {
+		"message": "No se nos permite evadir este sitio web, pero hemos negociado la eliminación de sus pasos más molestos."
+	},
 	"infoFileHoster": {
 		"message": "Desafortunadamente, el servidor de descarga se asegurará de que hayas esperado antes de permitirte descargar el archivo."
 	},

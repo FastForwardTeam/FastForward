@@ -60,7 +60,7 @@
 		"message": "Blockera IP-loggerare om de inte kan förbikopplas."
 	},
 	"optionsCrowdBypass": {
-		"message": "Ge och ta målen för icke förbikopplade länkförkortare."
+		"message": "Crowd-bypass: Ge och ta målen för icke förbikopplade länkförkortare."
 	},
 	"optionsCrowdAutoOpen": {
 		"message": "Öppna crowd-sourced mål i en ny flik efter % sekund(er)."
@@ -106,6 +106,9 @@
 	},
 	"beforeNavigateInstant": {
 		"message": "Du förflyttas nu till %"
+	},
+	"infoLinkvertise": {
+		"message": "Vi har inte möjlighet att koppla förbi denna webbplats men vi har förhandlat fram borttagning av deras mest irriterande steg."
 	},
 	"infoFileHoster": {
 		"message": "Tyvärr använder de backend-validering för att se till att du faktiskt väntar tiden ut innan du kan ladda ner filen."
