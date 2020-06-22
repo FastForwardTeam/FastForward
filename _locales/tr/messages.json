@@ -107,6 +107,9 @@
 	"beforeNavigateInstant": {
 		"message": "% Adresine yönlendiriliyorsunuz"
 	},
+	"infoLinkvertise": {
+		"message": "Bu web sitesini atlamamıza izin verilmiyor, ancak en can sıkıcı adımlarının kaldırılması konusunda görüştük."
+	},
 	"infoFileHoster": {
 		"message": "İndirme sunucusu dosyayı indirmenize izin vermeden önce sizi biraz bekletecek."
 	},

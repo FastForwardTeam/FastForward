@@ -3,22 +3,22 @@
 		"message": "Mos e humbni kohën tuaj me pajtueshmëri. Bypass Universal anashkalojnë shkurtuesit e bezdisshëm të lidhjeve."
 	},
 	"firstrunTitle": {
-		"message": "Faleminderit që instaluat Bypass Universal!"
+		"message": "Faleminderit për  instalimin e Bypass Universal!"
 	},
 	"firstrunNoScript": {
 		"message": "Sidoqoftë, ju duket se po përdorni NoScript ose të ngjashëm, me të cilin Universal Bypass nuk është i pajtueshëm."
 	},
 	"version": {
-		"message": "Version"
+		"message": "Verzion"
 	},
 	"definitionsVersion": {
-		"message": "Përkufizimet e bypass-it"
+		"message": "Definicionet e Bypass-it"
 	},
 	"changelog": {
 		"message": "Ndryshoni regjistrin"
 	},
 	"update": {
-		"message": "Kontrolloni për azhurnime"
+		"message": "Kontrollo për të rejat e aplikacionit"
 	},
 	"updating": {
 		"message": "Shkarkimi i përkufizimeve të bypass-it ..."
@@ -106,6 +106,9 @@
 	},
 	"beforeNavigateInstant": {
 		"message": "Ju jeni duke u lundruar në%"
+	},
+	"infoLinkvertise": {
+		"message": "Nuk na lejohet të anashkalojmë këtë faqe interneti por kemi negociuar heqjen e hapave të tyre më të bezdisshëm."
 	},
 	"infoFileHoster": {
 		"message": "Fatkeqësisht, serveri i shkarkimit do të sigurojë që keni pritur përpara se t'ju lejojë të shkarkoni skedarin."

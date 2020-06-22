@@ -6,31 +6,31 @@
 		"message": "ዩኒቨርሳል Bypass ን ስለጫኑ እናመሰግናለን!"
 	},
 	"firstrunNoScript": {
-		"message": "\nሆኖም ኖቭስክሪፕትን ወይም ተመሳሳይን የሚጠቀሙ ፣ ዩኒቨርሳል ኦንቨርንቨር ከ ጋር የማይጣጣም ይመስላል።"
+		"message": "ሆኖም ኖቭስክሪፕትን ወይም ተመሳሳይን የሚጠቀሙ ፣ ዩኒቨርሳል ኦንቨርንቨር ከ ጋር የማይጣጣም ይመስላል።"
 	},
 	"version": {
-		"message": "\nሥሪት"
+		"message": "ሥሪት"
 	},
 	"definitionsVersion": {
 		"message": "ትርጓሜዎችን ማለፍ"
 	},
 	"changelog": {
-		"message": "\nመለወጫ"
+		"message": "መለወጫ"
 	},
 	"update": {
 		"message": "ዝማኔዎችን ይመልከቱ"
 	},
 	"updating": {
-		"message": "\nየትርጉም ፍችዎችን በማውረድ ላይ ..."
+		"message": "የትርጉም ፍችዎችን በማውረድ ላይ ..."
 	},
 	"updateYes": {
-		"message": "\nየትርጉም ፍችዎችን በማውረድ ላይ ..."
+		"message": "የትርጉም ፍችዎችን በማውረድ ላይ ..."
 	},
 	"updateNo": {
-		"message": "\nየማለፍ ትርጓሜዎች ወቅታዊ ናቸው።"
+		"message": "የማለፍ ትርጓሜዎች ወቅታዊ ናቸው።"
 	},
 	"faq": {
-		"message": "\nተዘውትረው የሚጠየቁ ጥያቄዎች (ተዘውትረው)"
+		"message": "ተዘውትረው የሚጠየቁ ጥያቄዎች (ተዘውትረው)"
 	},
 	"bypassCounter": {
 		"message": "ሁለንተናዊ ማለፍ ቀድሞውንም ጣቢያዎችን% አል sitesል"
@@ -39,7 +39,7 @@
 		"message": "ወደ ሁለንተናዊ ማቋረጫ ያበርክቱ።"
 	},
 	"options": {
-		"message": "\nአማራጮች"
+		"message": "አማራጮች"
 	},
 	"optionsLink": {
 		"message": "ሁለንተናዊ አቋራጭ አማራጮችን ቀይር።"
@@ -51,19 +51,19 @@
 		"message": "ከ% ሰከንድ (ሰ) በኋላ ወደ መድረሻዎች ውሰደኝ ፡፡"
 	},
 	"optionsTrackerBypass": {
-		"message": "\nApimon.de ን በመጠቀም ትራኮችን (ለምሳሌ bit.ly እና t.co ን) በመጠቀም ያቋርጣሉ ፡፡"
+		"message": "Apimon.de ን በመጠቀም ትራኮችን (ለምሳሌ bit.ly እና t.co ን) በመጠቀም ያቋርጣሉ ፡፡"
 	},
 	"optionsInstantNavigationTrackers": {
-		"message": "\nበፍጥነት ወደ ትራካckers መድረሻዎች ውሰደኝ ፡፡"
+		"message": "በፍጥነት ወደ ትራካckers መድረሻዎች ውሰደኝ ፡፡"
 	},
 	"optionsBlockIPLoggers": {
 		"message": "የአይ.ፒ ሎጊዎችን ማለፍ ካልቻሉ አግድ።"
 	},
 	"optionsCrowdBypass": {
-		"message": "\nየተጨናነቀ አቋራጭ የማይተላለፍ አቋራጭ ያላቸውን መድረሻ ይስጡ እና ይውሰዱ ፡፡"
+		"message": "የተጨናነቀ አቋራጭ የማይተላለፍ አቋራጭ ያላቸውን መድረሻ ይስጡ እና ይውሰዱ ፡፡"
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "\nከ% ሰከንድ (ቶች) በኋላ በህዝብ የተመረጡ መድረሻዎችን በአዲስ ትር ክፈት"
+		"message": "ከ% ሰከንድ (ቶች) በኋላ በህዝብ የተመረጡ መድረሻዎችን በአዲስ ትር ክፈት"
 	},
 	"optionsCrowdAutoClose": {
 		"message": "ከጎበኙ በኋላ ከ% ሰከንድ (ሰት) በኋላ በሕዝብ የተፈጠረ መድረሻን የያዘ ትር ይዝጉ"
@@ -72,84 +72,84 @@
 		"message": "የ ግል የሆነ"
 	},
 	"contributors": {
-		"message": "\nአስተዋፅutors አበርካቾች"
+		"message": "አስተዋፅutors አበርካቾች"
 	},
 	"optionsUserscripts": {
-		"message": "\nብጁ መተላለፊያዎች"
+		"message": "ብጁ መተላለፊያዎች"
 	},
 	"optionsUserscriptsDescription": {
 		"message": "ጣቢያዎችን ለማለፍ የራሳቸውን ስክሪፕቶች ለመፍጠር ለገንቢዎች ይህ የላቀ ባህሪ ነው። አንዴ ከተጠናቀቁ በኋላ ወደ ዩኒቨርሳል ማለፍ እንዲታከሉ በ GitHub ላይ ሊገቡ ይችላሉ ፣ ስለሆነም ለሁሉም ሰው ይገኛሉ ፡፡"
 	},
 	"beforeNavigate": {
-		"message": "\nመድረሻዎ ላይ ደርሰዋል።"
+		"message": "መድረሻዎ ላይ ደርሰዋል።"
 	},
 	"beforeNavigateDestination": {
 		"message": "መድረሻዎ% ነው"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "\nሆኖም ግን ፣ አሁን ከዳሰሱ ዩኒቨርሳል ኦንቨርንሌይትን ይገነዘባሉ።"
+		"message": "ሆኖም ግን ፣ አሁን ከዳሰሱ ዩኒቨርሳል ኦንቨርንሌይትን ይገነዘባሉ።"
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "በ% ሰከንዶች ውስጥ ከእንግዲህ አይገኙም"
 	},
 	"beforeNavigateUnsafeTimerSingular": {
-		"message": "\nበ 1 ሰከንድ ውስጥ ከእንግዲህ ወዲህ አይገኙም።"
+		"message": "በ 1 ሰከንድ ውስጥ ከእንግዲህ ወዲህ አይገኙም።"
 	},
 	"beforeNavigateTimer": {
 		"message": "በ% ሰከንዶች ውስጥ በራስ-ሰር ይዛወራሉ።"
 	},
 	"beforeNavigateTimerSingular": {
-		"message": "\nበ 1 ሴኮንድ ውስጥ በራስ-ሰር ይዛወራሉ።"
+		"message": "በ 1 ሴኮንድ ውስጥ በራስ-ሰር ይዛወራሉ።"
 	},
 	"beforeNavigateOptions": {
-		"message": "\nበቅጽበት ወይም በ x ሰከንዶች ውስጥ አቅጣጫዎን መለወጥ ይፈልጋሉ?"
+		"message": "በቅጽበት ወይም በ x ሰከንዶች ውስጥ አቅጣጫዎን መለወጥ ይፈልጋሉ?"
 	},
 	"beforeNavigateInstant": {
-		"message": "\nወደ% እየተጓዙ ነው"
+		"message": "ወደ% እየተጓዙ ነው"
 	},
 	"infoFileHoster": {
-		"message": "\nእንደ አለመታደል ሆኖ የወረደው አገልጋይ ፋይሉን ለማውረድ ከመፍቀድዎ በፊት መጠበቅዎን ያረጋግጣል።"
+		"message": "እንደ አለመታደል ሆኖ የወረደው አገልጋይ ፋይሉን ለማውረድ ከመፍቀድዎ በፊት መጠበቅዎን ያረጋግጣል።"
 	},
 	"infoOutdated": {
-		"message": "\nይህ ድርጣቢያ በአዲሱ ኦቨርቨር ኦቨር ኦቨር ኦቨር ኦቨር ኦፕሬሽን (ስሪት) ተላል isል።"
+		"message": "ይህ ድርጣቢያ በአዲሱ ኦቨርቨር ኦቨር ኦቨር ኦቨር ኦቨር ኦፕሬሽን (ስሪት) ተላል isል።"
 	},
 	"crowdWait": {
 		"message": "እንደ አለመታደል ሆኖ ይህንን አገናኝ ያጋጠሙዎት እርስዎ የመጀመሪያ ነዎት ፣ ግን ከጠበቁ በኋላ ሌሎች ሁለንተናዊ የመንገድ ተጠቃሚዎች ከእንግዲህ አያስፈልጉም ፡፡"
 	},
 	"crowdDisabled": {
-		"message": "\nይህ ድርጣቢያ በአጋጣሚዎች ውስጥ ማንቃት በሚችሉት የሰዎች ማለፍ ተላልpassል።"
+		"message": "ይህ ድርጣቢያ በአጋጣሚዎች ውስጥ ማንቃት በሚችሉት የሰዎች ማለፍ ተላልpassል።"
 	},
 	"crowdBypassed": {
-		"message": "\nመጠበቅ የለብዎትም!"
+		"message": "መጠበቅ የለብዎትም!"
 	},
 	"crowdBypassedInfo": {
 		"message": "ሌሎች ሁለንተናዊ አቋራጭ ተጠቃሚዎች እርስዎን ይጠባበቁ እና ይህ ወደ% እንደሚወስድ ዘግቧል።"
 	},
 	"crowdBypassedTimer": {
-		"message": "\nይህ በ% ሰከንዶች ውስጥ በአዲስ ትር ውስጥ ይከፈታል።"
+		"message": "ይህ በ% ሰከንዶች ውስጥ በአዲስ ትር ውስጥ ይከፈታል።"
 	},
 	"crowdBypassedTimerSingular": {
-		"message": "\nይህ በ 1 ሴኮንድ ውስጥ በአዲስ ትር ውስጥ ይከፈታል"
+		"message": "ይህ በ 1 ሴኮንድ ውስጥ በአዲስ ትር ውስጥ ይከፈታል"
 	},
 	"crowdCloseTimer": {
-		"message": "\nይህ ትር በ% ሰከንዶች ውስጥ ይዘጋል።"
+		"message": "ይህ ትር በ% ሰከንዶች ውስጥ ይዘጋል።"
 	},
 	"crowdCloseTimerSingular": {
-		"message": "\nይህ ትር በ 1 ሴኮንድ ውስጥ ይዘጋል።"
+		"message": "ይህ ትር በ 1 ሴኮንድ ውስጥ ይዘጋል።"
 	},
 	"cancel": {
-		"message": "\nይቅር።"
+		"message": "ይቅር።"
 	},
 	"crowdBypassedIgnore": {
-		"message": "\nይህ ትክክል አልነበረም?"
+		"message": "ይህ ትክክል አልነበረም?"
 	},
 	"crowdBypassedOptions": {
-		"message": "\nይህ በአዲሱ ትር ውስጥ ወዲያውኑ ወይም በ x ሰከንዶች ውስጥ እንዲከፈት ይፈልጋሉ?"
+		"message": "ይህ በአዲሱ ትር ውስጥ ወዲያውኑ ወይም በ x ሰከንዶች ውስጥ እንዲከፈት ይፈልጋሉ?"
 	},
 	"blockedTitle": {
-		"message": "\nሁለንተናዊ መተላለፊያ የእርስዎ አይፒ እንዳይመዘገብ አግዶታል ፡፡"
+		"message": "ሁለንተናዊ መተላለፊያ የእርስዎ አይፒ እንዳይመዘገብ አግዶታል ፡፡"
 	},
 	"blockedSubtitle": {
-		"message": "\nመጥፎ ተዋንያን የእርስዎን አይፒ (IP) እንዳያገኙ ለመከላከል ሁለንተናዊ ማለፍ ይፈልጋሉ?"
+		"message": "መጥፎ ተዋንያን የእርስዎን አይፒ (IP) እንዳያገኙ ለመከላከል ሁለንተናዊ ማለፍ ይፈልጋሉ?"
 	}
 }

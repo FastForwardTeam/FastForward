@@ -57,6 +57,13 @@ foreach(scandir("_locales") as $locale)
 				echo "$key in $locale has a superfluous %\n";
 			}
 		}
+		if(in_array($key, ["infoLinkvertise","infoFileHoster","infoOutdated","crowdWait","crowdDisabled"]))
+		{
+			if(strpos($data["message"], "\n") !== false)
+			{
+				echo "$key in $locale has a new line character\n";
+			}
+		}
 	}
 	if(in_array($locale, ["es-ES", "br-FR"]))
 	{

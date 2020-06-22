@@ -107,6 +107,9 @@
 	"beforeNavigateInstant": {
 		"message": "Estàs essent navegat a %"
 	},
+	"infoLinkvertise": {
+		"message": "No se'ns permet passar aquesta web, però hem negociat l'eliminació dels seus passos més molestos."
+	},
 	"infoFileHoster": {
 		"message": "Desafotunadament, el servidor de descàrregues s'assegurarà que has esperat abans de permitir-te descarregar el fitxer."
 	},

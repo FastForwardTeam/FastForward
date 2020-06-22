@@ -1,6 +1,6 @@
 {
 	"appDesc": {
-		"message": "Älä tuhlaa aikaa odottamiseen ja mainosten katseluun! Universal Bypass skippaa automaattisesti ärsyttävät linkinlyhentäjät."
+		"message": "Älä tuhlaa aikaa odottamiseen ja mainosten katseluun! Universal Bypass skippaa automaattisesti ärsyttävät linkin lyhentäjät."
 	},
 	"firstrunTitle": {
 		"message": "Kiitos, kun asensit Universal Bypassin!"
@@ -106,6 +106,9 @@
 	},
 	"beforeNavigateInstant": {
 		"message": "Sinua ollaan ohjaamassa %"
+	},
+	"infoLinkvertise": {
+		"message": "Emme saa kiertää tätä nettisivustoa, mutta olemme neuvotelleet heidän ärsyttävimpien vaihteiden poistosta."
 	},
 	"infoFileHoster": {
 		"message": "Valitettavasti, latauspalvelin vaatii, että olet odottanut ennen kuin antaa sinun ladata tiedostosi."

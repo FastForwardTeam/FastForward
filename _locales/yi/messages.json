@@ -105,13 +105,7 @@
 		"message": "מען ניווט צו%\nmen nivt tsu%"
 	},
 	"infoFileHoster": {
-		"message": "tsum badoyern, di arafkafye server vet enshur az ir hot gevart biz ir derloybt tsu oplodirn di teke.\n"
-	},
-	"crowdWait": {
-		"message": "צום באַדויערן, איר'רע דער ערשטער צו טרעפן דעם לינק, אָבער נאָך וואַרטן, אנדערע וניווערסאַל בייפּאַס ניצערס וועלן ניט מער האָבן צו.\ntsum badoyern, ir're der ershter tsu trefn dem link, ober nokh vartn, andere universal beypas nitsers veln nit mer hobn tsu"
-	},
-	"crowdDisabled": {
-		"message": "דער וועבזייטל איז בייפּאַסט דורך מאַסע בייפּאַס וואָס איר האָט פאַרקריפּלט אין די אָפּציעס.\nder vebzeytl iz beypast durkh mase beypas vos ir hot farkriplt in di optsyes."
+		"message": "tsum badoyern, di arafkafye server vet enshur az ir hot gevart biz ir derloybt tsu oplodirn di teke."
 	},
 	"crowdBypassed": {
 		"message": "איר קען נישט האָבן צו וואַרטן!\nir ken nisht hobn tsu vartn!"

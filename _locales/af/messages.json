@@ -107,6 +107,9 @@
 	"beforeNavigateInstant": {
 		"message": "Jy word navigator te %"
 	},
+	"infoLinkvertise": {
+		"message": "Ons mag nie hierdie webwerf omseil nie, maar ons het onderhandel oor die verwydering van hul mees irriterende stappe."
+	},
 	"infoFileHoster": {
 		"message": "Ongelukkig, die aflaai bediener sal verseker dat jy gewag het voordat jy die lêer af te laai."
 	},
