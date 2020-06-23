@@ -1352,6 +1352,7 @@ ensureDomLoaded(()=>{
 	domainBypass("5play.ru",()=>ifElement("div.download-result > a[href]",a=>safelyNavigate(a.href)))
 	domainBypass("daunshorte.kertashitam.com",()=>ifElement("div[align=center] > center > a[href]",a=>safelyAssign(a.href)))
 	hrefBypass(/www1\.swatchseries\.to\/freecale\.html\?r\=/,()=>awaitElement("a.push_button.blue[href]:not([href='http://www1.swatchseries.to/'])",a=>safelyNavigate(a.href)))
+	domainBypass("tl.gd",()=>safelyAssign("http://www.twitlonger.com/show"+location.pathname))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
