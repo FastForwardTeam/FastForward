@@ -243,6 +243,7 @@
 	"tracker": [
 		"*://analytics.twitter.com/mob_idsync_click?*",
 		"*://click.linksynergy.com/deeplink?*",
+		"*://track.flexlinkspro.com/a.ashx?*",
 		"*://*.great.social/*",
 		"*://*.send.digital/*",
 		"*://*.snipli.com/*",
