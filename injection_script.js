@@ -1358,6 +1358,12 @@ ensureDomLoaded(()=>{
 			}
 		})
 	})
+	domainBypass("multifilemirror.com",()=>{
+		if(location.search!="?action=Download")
+		{
+			location.search="?action=Download"
+		}
+	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
