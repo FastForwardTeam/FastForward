@@ -957,7 +957,7 @@ ensureDomLoaded(()=>{
 		})
 	})
 	domainBypass(/linkpoi\.(in|cc)/,()=>ifElement("a.btn.btn-primary[href]",a=>safelyNavigate(a.href)))
-	domainBypass("spacetica.com",()=>ifElement("a.btn.btn-prime.btn-xs[href]",a=>safelyNavigate(a.href)))
+	domainBypass("spacetica.com",()=>ifElement("a.btn.btn-xs[href]",a=>safelyNavigate(a.href)))
 	domainBypass(/uiz\.(io|app)|moon7\.xyz/,()=>crowdBypass(()=>{
 		awaitElement("#go-adsredirect",f=>{
 			f.action+="#bypassClipboard="+location.pathname.substr(1)
