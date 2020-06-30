@@ -1782,10 +1782,19 @@ ensureDomLoaded(()=>{
 	}
 	if(document.querySelector("amp-facebook-page[data-href='https://www.facebook.com/duit.cc']"))
 	{
-		ifElement("#main > #Blog1 a",a=>{
-			safelyAssign(a.href)
-			finish()
-		})
+		if(typeof generate=="function")
+		{
+			window.setInterval=f=>setInterval(f,1)
+			generate()
+			awaitElement("#download > form > input[type='submit']",i=>i.click())
+		}
+		else
+		{
+			ifElement("#main > #Blog1 a",a=>{
+				safelyAssign(a.href)
+				finish()
+			})
+		}
 	}
 	//Other Templates
 	ifElement(".timed-content-client_show_0_30_0",d=>{//technicoz.com
