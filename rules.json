@@ -196,7 +196,14 @@
 		"*://*.instant-hack.to/redirect/?to=*"
 	],
 	"useragent_googlebot": [
-		"*://*.haaretz.co.il/*"
+		"*://*.haaretz.co.il/*",
+		"*://*.ceesty.com/*",
+		"*://*.corneey.com/*",
+		"*://*.destyy.com/*",
+		"*://*.festyy.com/*",
+		"*://*.gestyy.com/*",
+		"*://*.sh.st/*",
+		"*://*.viid.me/*"
 	],
 	"useragent_chrome": [
 		"*://*.fluxteam.xyz/*"
