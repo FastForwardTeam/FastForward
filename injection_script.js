@@ -382,14 +382,6 @@ ODP(window,"soralink",{
 ODP(window,"adtival_base64_encode",{
 	get:()=>{}
 })
-//Shorte.st
-transparentProperty("reqwest",r=>(typeof app!="undefined"&&document.querySelector(".skip-add-container .first-img[alt='Shorte.st']"))?a=>{
-	if(a.type==="jsonp")
-	{
-		a.success=s=>contributeAndNavigate(s.destinationUrl)
-	}
-	r(a)
-}:r)
 domainBypass(/ur\.ly|urly\.mobi/,()=>{
 	if(location.pathname.length>2&&location.pathname.substr(0,6)!="/goii/")
 	{
@@ -1779,12 +1771,6 @@ ensureDomLoaded(()=>{
 			safelyNavigate(atob(s.get("go")))
 			return finish()
 		}
-	}
-	//Shorte.st
-	if(typeof app!="undefined"&&document.querySelector(".skip-add-container .first-img[alt='Shorte.st']"))
-	{
-		window.setInterval=f=>setInterval(f,800)
-		return crowdBypass()
 	}
 	//Duit.cc
 	if(document.querySelector("script[src='https://duit.cc/js/jquery.1.8.3.js']"))
