@@ -269,7 +269,9 @@
 		"*://*.t.co/*",
 		"*://analytics.twitter.com/mob_idsync_click?*",
 		"*://click.linksynergy.com/deeplink?*",
-		"*://track.flexlinkspro.com/a.ashx?*"
+		"*://track.flexlinkspro.com/a.ashx?*",
+		"*://shareasale.com/r.cfm?*",
+		"*://shareasale-analytics.com/r.cfm?*"
 	],
 	"ip_logger": [
 		"*://*.viral.over-blog.com/*",
