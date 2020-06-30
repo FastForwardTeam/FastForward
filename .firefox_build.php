@@ -1,7 +1,7 @@
 <?php
-if(file_exists("Universal Bypass for Netscape Navigator.zip"))
+if(file_exists("Universal Bypass for Firefox.zip"))
 {
-	unlink("Universal Bypass for Netscape Navigator.zip");
+	unlink("Universal Bypass for Firefox.zip");
 }
 
 echo "Indexing...\n";
@@ -34,7 +34,7 @@ function createZip($file)
 	$zip->open($file, ZipArchive::CREATE + ZipArchive::EXCL + ZipArchive::CHECKCONS) or die("Failed to create {$file}.\n");
 	return $zip;
 }
-$build = createZip("Universal Bypass for Netscape Navigator.zip");
+$build = createZip("Universal Bypass for Firefox.zip");
 $build_id = intval(file_get_contents(".next_build_id.txt"));
 $json = json_decode(file_get_contents("manifest.json"), true);
 $extension_version = $json["version"];
