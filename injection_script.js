@@ -1782,6 +1782,10 @@ ensureDomLoaded(()=>{
 			return finish()
 		}
 	}
+	//wpapk template
+	ifElement("a[href].wpapks-download-link",a=>ifElement("#wpapks-pre-download-btn",b=>{
+		b.onclick=()=>safelyNavigate(a.href)
+	}))
 	//Duit.cc
 	if(document.querySelector("script[src='https://duit.cc/js/jquery.1.8.3.js']"))
 	{
