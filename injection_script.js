@@ -1368,6 +1368,7 @@ ensureDomLoaded(()=>{
 			location.search="?action=Download"
 		}
 	})
+	domainBypass("welcome.indihome.co.id",()=>ifElement("div.button-lanjut",a=>a.click()))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
