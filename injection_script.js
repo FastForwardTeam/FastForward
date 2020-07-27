@@ -1369,6 +1369,13 @@ ensureDomLoaded(()=>{
 		}
 	})
 	domainBypass("welcome.indihome.co.id",()=>ifElement("div.button-lanjut",a=>a.click()))
+	domainBypass(/adyou.(me|co|ws)|shortadd.com/, () => {
+		let link = document.body.innerHTML.match(/(?<=Content from: )[^\s]*/)[0]
+		if(link)
+		{
+			safelyNavigate(link)
+		}
+	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
