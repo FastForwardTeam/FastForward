@@ -662,7 +662,7 @@ hrefBypass(/thesimsresource\.com\/downloads\/details\/id\//,()=>window.setTimeou
 hrefBypass(/firefaucet\.win\/l\/|sfirmware\.com\/downloads-file\/|(apkily\.com\/getapp$)|androidtop\.net\/\?do=downloads\&id=/,()=>window.setInterval=f=>setInterval(f,1))
 hrefBypass(/emulator\.games\/download\.php|curseforge\.com\/.*\/download\/[0-9]*/,()=>window.setInterval=f=>setInterval(f,100))
 domainBypass(/^((www\.)?((racaty|longfiles|filepuma|portableapps)\.com|indishare\.org|datei\.to|keisekai\.fun|solvetube\.site))$/,()=>window.setTimeout=f=>setTimeout(f,1))
-domainBypass("lkc21.net",()=>window.setTimeout=f=>setTimeout(f,100))
+domainBypass(/lkc21\.net|layarkacaxxi\.org/,()=>window.setTimeout=f=>setTimeout(f,100))
 domainBypass("universal-bypass.org",()=>{
 	window.universalBypassInstalled=true
 	window.universalBypassInternalVersion=UNIVERSAL_BYPASS_INTERNAL_VERSION
@@ -981,7 +981,7 @@ ensureDomLoaded(()=>{
 		countIt(()=>f.submit())
 	})
 	domainBypass("xxx.lewd.ninja",()=>safelyNavigate(document.body.textContent))
-	domainBypass(/tr\.link|movienear\.me|lewat\.club|tautan\.pro|(droidtamvan|gubukbisnis|onlinecorp)\.me|(liveshootv|modebaca|haipedia|sekilastekno)\.com|shrink\.world|link\.mymastah\.xyz|(sportif|cararoot)\.id/,()=>{
+	domainBypass(/tr\.link|movienear\.me|lewat\.club|tautan\.pro|(droidtamvan|gubukbisnis|onlinecorp)\.me|(liveshootv|modebaca|haipedia|sekilastekno|miuiku)\.com|shrink\.world|link\.mymastah\.xyz|(sportif|cararoot)\.id/,()=>{
 		if(typeof app_vars=="undefined")
 		{
 			app_vars={}
@@ -1373,8 +1373,8 @@ ensureDomLoaded(()=>{
 		}
 	})
 	domainBypass("welcome.indihome.co.id",()=>ifElement("div.button-lanjut",a=>a.click()))
-	domainBypass(/adyou.(me|co|ws)|shortadd.com/, () => {
-		let link = document.body.innerHTML.match(/(?<=Content from: )[^\s]*/)[0]
+	domainBypass(/adyou\.(me|co|ws)|shortadd\.com/,()=>{
+		let link=document.body.innerHTML.match(/(?<=Content from: )[^\s]*/)[0]
 		if(link)
 		{
 			safelyNavigate(link)
@@ -1431,7 +1431,7 @@ ensureDomLoaded(()=>{
 		}))
 		/*jshint ignore:end*/
 	}
-	domainBypass(/pahe\.(in|me|ph)/,()=>document.querySelectorAll("a.shortc-button.small[href*='?'], a.shortc-button.small[href*='?id=']").forEach(a=>{
+	domainBypass(/pahe\.(in|me|ph)/,()=>document.querySelectorAll("a[href*='?'], a[href*='?id=']").forEach(a=>{
 		let qe=a.previousElementSibling
 		while(qe&&qe.tagName!="B"&&qe.tagName!="STRONG")
 		{
@@ -1980,7 +1980,7 @@ ensureDomLoaded(()=>{
 			}
 			domainBypass("adcoinfly.com",()=>document.querySelectorAll("a.btn[href=''], a.btn[href*='clickme']").forEach(e=>e.parentNode.removeChild(e)))
 			domainBypass(/(semawur|bercara)\.com|in11\.site/,()=>ifElement("input[type='hidden'][name='alias'][value]",i=>crowdPath(i.value),()=>crowdPath(location.hash.substr(1))))
-			domainBypass(/movienear\.me|lewat\.club|tautan\.pro|(droidtamvan|gubukbisnis|onlinecorp)\.me|(liveshootv|modebaca|haipedia|sekilastekno)\.com|shrink\.world|link\.mymastah\.xyz|(sportif|cararoot)\.id|healthinsider\.online/,()=>{
+			domainBypass(/movienear\.me|lewat\.club|tautan\.pro|(droidtamvan|gubukbisnis|onlinecorp)\.me|(liveshootv|modebaca|haipedia|sekilastekno|miuiku)\.com|shrink\.world|link\.mymastah\.xyz|(sportif|cararoot)\.id|healthinsider\.online/,()=>{
 				ifElement("input[type='hidden'][name='alias'][value]",i=>{
 					i.parentNode.action+="#"+i.value+(ignoreCrowdBypass?"#ignoreCrowdBypass":"")
 					crowdPath(i.value)
