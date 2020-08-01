@@ -1380,6 +1380,10 @@ ensureDomLoaded(()=>{
 			safelyNavigate(link)
 		}
 	})
+	domainBypass("techrfour.com",()=>{
+		ifElement("form[id='1']",f=>f.submit())
+		bypassed=false
+	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
