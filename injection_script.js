@@ -1385,12 +1385,10 @@ ensureDomLoaded(()=>{
 		bypassed=false
 	})
 	domainBypass("fcc.lc",()=>{
-		const a=new URLSearchParams(location.search)
-		if(a.has("a"))
-		{
-			crowdPath(atob(a.get("a")))
-			crowdBypass(()=>ifElement("a#surl",()=>awaitElement("a#surl[href]:not(.disabled)",a=>contributeAndNavigate(a.href))))
-		}
+		ifElement("form#form",()=>{
+			window.setInterval=f=>setInterval(f,1)
+			ifElement(".btn-captcha",b=>b.parentNode.submit(),()=>awaitElement("a#surl[href]:not(.disabled)",a=>safelyNavigate(a.href)))
+		})
 	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
