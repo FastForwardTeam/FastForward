@@ -1384,7 +1384,7 @@ ensureDomLoaded(()=>{
 		ifElement("form[id='1']",f=>f.submit())
 		bypassed=false
 	})
-	domainBypass("fcc.lc",()=>{
+	domainBypass(/(fcdot|fcc)\.lc/,()=>{
 		ifElement("form#form",()=>{
 			window.setInterval=f=>setInterval(f,100)
 			ifElement(".btn-captcha",b=>setTimeout(()=>b.parentNode.submit(),2000),()=>awaitElement("a#surl[href]:not(.disabled)",a=>safelyNavigate(a.href)))
