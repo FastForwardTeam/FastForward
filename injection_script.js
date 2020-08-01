@@ -1386,8 +1386,8 @@ ensureDomLoaded(()=>{
 	})
 	domainBypass("fcc.lc",()=>{
 		ifElement("form#form",()=>{
-			window.setInterval=f=>setInterval(f,1)
-			ifElement(".btn-captcha",b=>setTimeout(()=>b.parentNode.submit(),1000),()=>awaitElement("a#surl[href]:not(.disabled)",a=>safelyNavigate(a.href)))
+			window.setInterval=f=>setInterval(f,100)
+			ifElement(".btn-captcha",b=>setTimeout(()=>b.parentNode.submit(),2000),()=>awaitElement("a#surl[href]:not(.disabled)",a=>safelyNavigate(a.href)))
 		})
 	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
