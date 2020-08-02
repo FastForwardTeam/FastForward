@@ -1033,7 +1033,7 @@ ensureDomLoaded(()=>{
 			}
 		})
 	})
-	domainBypass("pucuktranslation.pw",()=>ifElement("a.button.primary[href]",a=>safelyNavigate(a.href)))
+	domainBypass("pucuktranslation.pw",()=>ifElement("a.button.primary.small[href*=apk]",a=>a.click()))
 	domainBypass("gsu.st",()=>ifElement("#Subform input[type='submit'][name='btn'].btn",b=>b.click()))
 	domainBypass("mangalist.org",()=>{
 		awaitElement("#btt > button.btn.btn-primary.text-center[onclick^='window.location.assign(']",b=>{
