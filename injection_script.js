@@ -812,7 +812,7 @@ ensureDomLoaded(()=>{
 		f=document.documentElement.appendChild(f)
 		countIt(()=>f.submit())
 	})
-	domainBypass("goou.in",()=>ifElement("div#download_link > a#download[href]",a=>a.href))
+	domainBypass(/goou\.in|manualsbooks\.com/,()=>ifElement("div#download_link > a#download[href]",a=>safelyNavigate(a.href)))
 	domainBypass("ryn.cc",()=>{
 		if(typeof countdown=="function")
 		{
