@@ -1390,6 +1390,14 @@ ensureDomLoaded(()=>{
 			ifElement(".btn-captcha",b=>setTimeout(()=>b.parentNode.submit(),2000),()=>awaitElement("a#surl[href]:not(.disabled)",a=>safelyNavigate(a.href)))
 		})
 	})
+	domainBypass("tudofinanceiro.club", () => { // BRCheats Blocker for Downloads
+		awaitElement("a#linkarq[href]", a => {
+			safelyAssign(a.href)
+		})
+		awaitElement("a#botao2[href]", a => {
+			safelyAssign(a.href)
+		})
+	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
