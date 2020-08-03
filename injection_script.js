@@ -1377,11 +1377,14 @@ ensureDomLoaded(()=>{
 		ifElement("form[id='1']",f=>f.submit())
 		bypassed=false
 	})
-	domainBypass(/(fcdot|fcc)\.lc/,()=>{
-		ifElement("form#form",()=>{
-			window.setInterval=f=>setInterval(f,100)
-			ifElement(".btn-captcha",b=>setTimeout(()=>b.parentNode.submit(),2000),()=>awaitElement("a#surl[href]:not(.disabled)",a=>safelyNavigate(a.href)))
-		})
+	domainBypass(/(fcdot|fcc)\.lc/,()=>ifElement("form#form",()=>{
+		window.setInterval=f=>setInterval(f,100)
+		ifElement(".btn-captcha",b=>setTimeout(()=>b.parentNode.submit(),3000),()=>awaitElement("a#surl[href]:not(.disabled)",a=>safelyNavigate(a.href)))
+	}))
+	domainBypass("dl.helow.id",()=>ifElement("button#btn6",b=>b.onclick()))
+	domainBypass("dl.ocanoke.com",()=>{
+		crowdPath(location.pathname.split("/").pop())
+		crowdBypass(()=>ifElement("#link-view",f=>f.submit(),()=>awaitElement("a.get-link[href]:not(.disabled)",a=>contributeAndNavigate(a.href))))
 	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
