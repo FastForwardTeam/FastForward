@@ -669,6 +669,17 @@ domainBypass("universal-bypass.org",()=>{
 	window.universalBypassExternalVersion="UNIVERSAL_BYPASS_EXTERNAL_VERSION"
 	window.universalBypassInjectionVersion="UNIVERSAL_BYPASS_INJECTION_VERSION"
 })
+
+domainBypass("apkhubs.com", () => {
+    ensureDomLoaded(() => {
+    	awaitElement("a#downloadbtn", a => {//element id is the same in countdown and after
+            countdown(0);//reveal link
+            safelyAssign(a.href);//
+            a.innerHTML = "-.- Downloading...";//opcional if 'safelyNavigate' is not used
+    	})
+    })
+})//example: https://apkhubs.com/es/fran-bow-chapter-all-apk/downnow/3176
+
 ensureDomLoaded(()=>{
 	if(ignoreCrowdBypass)
 	{
