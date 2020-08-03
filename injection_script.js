@@ -1373,13 +1373,6 @@ ensureDomLoaded(()=>{
 		}
 	})
 	domainBypass("welcome.indihome.co.id",()=>ifElement("div.button-lanjut",a=>a.click()))
-	domainBypass(/adyou\.(me|co|ws)|shortadd\.com/,()=>{
-		let link=document.body.innerHTML.match(/(?<=Content from: )[^\s]*/)[0]
-		if(link)
-		{
-			safelyNavigate(link)
-		}
-	})
 	domainBypass("techrfour.com",()=>{
 		ifElement("form[id='1']",f=>f.submit())
 		bypassed=false
