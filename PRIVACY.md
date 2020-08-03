@@ -15,4 +15,4 @@ When Crowd Bypass (Options > "Give and take the destinations of unbypassable sho
 - When you visit a known unbypassable shortener website, the URL is sent so it can check against the database if someone else has already reported its destination.
 - When you complete your visit on such a website, the URL and destination URL are sent so it can be recorded for future visitors.
 
-I keep no request logs. I use Clouflare and [their privacy policy](https://www.cloudflare.com/privacypolicy/) applies to you as an "End User."
+I keep no request logs. I use Cloudflare and [their privacy policy](https://www.cloudflare.com/privacypolicy/) applies to you as an "End User."
