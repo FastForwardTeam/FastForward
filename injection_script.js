@@ -1386,6 +1386,14 @@ ensureDomLoaded(()=>{
 		crowdPath(location.pathname.split("/").pop())
 		crowdBypass(()=>ifElement("#link-view",f=>f.submit(),()=>awaitElement("a.get-link[href]:not(.disabled)",a=>contributeAndNavigate(a.href))))
 	})
+	domainBypass("tudofinanceiro.club", () => { // BRCheats Blocker for Downloads
+		awaitElement("a#linkarq[href]", a => {
+			safelyAssign(a.href)
+		})
+		awaitElement("a#botao2[href]", a => {
+			safelyAssign(a.href)
+		})
+	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
