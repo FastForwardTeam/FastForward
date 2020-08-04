@@ -669,17 +669,6 @@ domainBypass("universal-bypass.org",()=>{
 	window.universalBypassExternalVersion="UNIVERSAL_BYPASS_EXTERNAL_VERSION"
 	window.universalBypassInjectionVersion="UNIVERSAL_BYPASS_INJECTION_VERSION"
 })
-
-domainBypass("apkhubs.com", () => {
-    ensureDomLoaded(() => {
-    	awaitElement("a#downloadbtn", a => {//element id is the same in countdown and after
-            countdown(0);//reveal link
-            safelyAssign(a.href);//
-            a.innerHTML = "-.- Downloading...";//opcional if 'safelyNavigate' is not used
-    	})
-    })
-})//example: https://apkhubs.com/es/fran-bow-chapter-all-apk/downnow/3176
-
 ensureDomLoaded(()=>{
 	if(ignoreCrowdBypass)
 	{
@@ -1397,14 +1386,14 @@ ensureDomLoaded(()=>{
 		crowdPath(location.pathname.split("/").pop())
 		crowdBypass(()=>ifElement("#link-view",f=>f.submit(),()=>awaitElement("a.get-link[href]:not(.disabled)",a=>contributeAndNavigate(a.href))))
 	})
-	domainBypass("tudofinanceiro.club", () => { // BRCheats Blocker for Downloads
-		awaitElement("a#linkarq[href]", a => {
-			safelyAssign(a.href)
-		})
-		awaitElement("a#botao2[href]", a => {
-			safelyAssign(a.href)
-		})
+	domainBypass("tudofinanceiro.club",()=>{
+		awaitElement("a#linkarq[href]",a=>safelyAssign(a.href))
+		awaitElement("a#botao2[href]",a=>safelyAssign(a.href))
 	})
+	domainBypass("apkhubs.com",()=>ifElement("a#downloadbtn",a=>{
+		countdown(0)
+		safelyNavigate(a.href)
+	}))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
