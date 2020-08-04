@@ -1448,7 +1448,7 @@ ensureDomLoaded(()=>{
 	domainBypass(/pahe\.(in|me|ph)/,()=>{
 		document.querySelectorAll("a[href*='?']").forEach(a=>{
 			let qe=a.previousElementSibling
-			while(qe&&qe.tagName!="B"&&qe.tagName!="STRONG")
+			while(qe&&qe.tagName!="B"&&qe.tagName!="STRONG"&&qe.tagName!="BR")
 			{
 				qe=qe.previousElementSibling
 			}
@@ -1460,7 +1460,7 @@ ensureDomLoaded(()=>{
 			}
 			if(qe!==null)
 			{
-				a.href+=qe.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
+				qe.tagName=="BR"?a.href+=qe.previousSibling.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase():a.href+=qe.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
 			}
 			a.href+=a.textContent.toLowerCase()
 		})
