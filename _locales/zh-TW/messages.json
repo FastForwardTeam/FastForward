@@ -107,6 +107,9 @@
 	"beforeNavigateInstant": {
 		"message": "您正在導航到%"
 	},
+	"infoLinkvertise": {
+		"message": "我們不受允許直接繞過這個網頁，不過我們已通過談判能夠移除這個網頁最麻煩的步驟了。"
+	},
 	"infoFileHoster": {
 		"message": "很不幸，下載伺服器需要確保您在下載檔案前已等候"
 	},

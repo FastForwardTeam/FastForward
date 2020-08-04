@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "လိုက်နာမှုနှင့်သင်၏အချိန်ဖြုန်းမနေပါနဲ့။ Universal Bypass သည်နှောင့်အယှက်ပေးသော link shorteners များကိုရှောင်ကွင်းသည်။"
+	},
+	"firstrunTitle": {
+		"message": "Universal Bypass တပ်ဆင်သည့်အတွက်ကျေးဇူးတင်ပါသည်။"
+	},
+	"firstrunNoScript": {
+		"message": "သို့သော်၊ သင် NoScript သို့မဟုတ်ဆင်တူသည့် Universal Bypass နှင့်မကိုက်ညီသောပုံရသည်။"
+	},
+	"version": {
+		"message": "ဗားရှင်း"
+	},
+	"definitionsVersion": {
+		"message": "ရှောင်ကွင်းအဓိပ္ပာယ်"
+	},
+	"changelog": {
+		"message": "angelရာဝတီ"
+	},
+	"update": {
+		"message": "နောက်ဆုံးသတင်းများကိုစစ်ဆေးပါ"
+	},
+	"updating": {
+		"message": "ရှောင်ကွင်းခြင်းအဓိပ္ပာယ်များကိုဒေါင်းလုပ်ဆွဲနေသည် ..."
+	},
+	"updateYes": {
+		"message": "အောင်မြင်စွာ download လုပ်ထားသော bypass definitions ။"
+	},
+	"updateNo": {
+		"message": "ရှောင်ကွင်းအဓိပ္ပာယ်များသည်နောက်ဆုံးပေါ်ဖြစ်သည်။"
+	},
+	"faq": {
+		"message": "အမေးများသောမေးခွန်းများ (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass သည်သင့်အတွက်% sites များကိုကျော်ဖြတ်ပြီးဖြစ်သည်။"
+	},
+	"support": {
+		"message": "Universal Bypass ကိုလှူဒါန်းပါ။"
+	},
+	"options": {
+		"message": "ရွေးစရာများ"
+	},
+	"optionsLink": {
+		"message": "Universal Bypass 'options ကိုပြောင်းပါ။"
+	},
+	"optionsEnabled": {
+		"message": "ဝဘ်ဆိုက်ရှောင်ကွင်းခြင်းကိုဖွင့်ပါ။"
+	},
+	"optionsNavigationDelay": {
+		"message": "% ဒုတိယ (s) များအပြီးတွင်ကျွန်ုပ်ကိုလမ်းညွှန်များသို့ပို့ဆောင်ပါ။"
+	},
+	"optionsTrackerBypass": {
+		"message": "Apimon.de ကိုအသုံးပြုပြီး (bit.ly နှင့် t.co ကဲ့သို့) trackers ကိုရှောင်ကွင်းပါ။"
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "ချက်ချင်းငါ့ကို tracker ၏ ဦး တည်ရာသို့ယူပါ။"
+	},
+	"optionsBlockIPLoggers": {
+		"message": "သူတို့ log in လုပ်လို့မရရင် IP loggers ကိုပိတ်ပါ။"
+	},
+	"optionsCrowdBypass": {
+		"message": "လူအစုအဝေးရှောင်: မကျော်လွှားနိုင်သောအတိုကောက်၏ ဦး တည်ရာများကိုယူပြီးယူပါ။"
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "% ဒုတိယ (s) များအပြီးလူပုဂ္ဂိုလ်အရင်းအမြစ်များကို tab အသစ်ဖြင့်ဖွင့်ပါ။"
+	},
+	"optionsCrowdAutoClose": {
+		"message": "% ဒုတိယပြီးနောက် (များ) ပြီးနောက်လူစုလူဝေးအရင်းအမြစ်ရှာဖွေသည့်နေရာပါ ၀ င်သောပိတ်ခလုတ်။"
+	},
+	"privacyPolicy": {
+		"message": "ကိုယ်ရေးအချက်အလက်မူဝါဒ"
+	},
+	"contributors": {
+		"message": "အလှူရှင်များ"
+	},
+	"optionsUserscripts": {
+		"message": "စိတ်တိုင်းကျရှောင်ကွင်း"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "ဤသည်သည် developer များအနေဖြင့်ဆိုဒ်များကိုကျော်လွှားရန်သူတို့၏ကိုယ်ပိုင် script များကိုဖန်တီးရန်အဆင့်မြင့်သောအင်္ဂါရပ်တစ်ခုဖြစ်သည်။ ပြီးတာနဲ့ပြီးပြည့်စုံတဲ့အခါမှာတော့သူတို့က Universal Bypass မှာထည့်သွင်းဖို့ GitHub မှာတင်လို့ရတယ်။"
+	},
+	"beforeNavigate": {
+		"message": "သင်သွားလိုတဲ့နေရာကိုရောက်နေပြီ။"
+	},
+	"beforeNavigateDestination": {
+		"message": "သင့် ဦး တည်ရာသည်% ဖြစ်သည်"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "သို့သော်ယခုသင်သွားပါကသူတို့သည် Universal Bypass ကိုရှာဖွေလိမ့်မည်။"
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "သင့်အား% စက္ကန့်အတွင်း၌သင်မတွေ့ရပါ။"
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "၁ စက္ကန့်အတွင်းသင့်ကိုနောက်တဖန်မတွေ့ရပါ။"
+	},
+	"beforeNavigateTimer": {
+		"message": "သင့်အား% စက္ကန့်အတွင်းအလိုအလျောက်လမ်းကြောင်းပြောင်းလိမ့်မည်။"
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "၁ စက္ကန့်အတွင်းသင်အလိုအလျောက်လမ်းကြောင်းပြောင်းလိမ့်မည်။"
+	},
+	"beforeNavigateOptions": {
+		"message": "သင်ချက်ချင်းသို့မဟုတ် x စက္ကန့်အတွင်း redirected ချင်ပါသလား?"
+	},
+	"beforeNavigateInstant": {
+		"message": "သင်% ကိုသွားနေသည်"
+	},
+	"infoLinkvertise": {
+		"message": "ဒီဝက်ဘ်ဆိုက်ကိုကျော်လွှားရန်ကျွန်ုပ်တို့ကိုခွင့်မပြုပါ။"
+	},
+	"infoFileHoster": {
+		"message": "ကံမကောင်းစွာဖြင့် download server သည်သင် file ကို download လုပ်ရန်ခွင့်မပြုမီသင်စောင့်ဆိုင်းရန်သေချာလိမ့်မည်။"
+	},
+	"infoOutdated": {
+		"message": "ဒီဝက်ဘ်ဆိုက်ကို Universal Bypass ဗားရှင်းအသစ်ဖြင့်ကျော်လွှားနိုင်သည်။"
+	},
+	"crowdWait": {
+		"message": "ကံမကောင်းစွာပဲ၊ သင်ဒီ link ကိုပထမဆုံးတွေ့ပြီ၊ ဒါပေမယ့်သင်စောင့်ပြီးတဲ့နောက်၊ အခြား Universal Bypass အသုံးပြုသူများသည်နောက်ထပ်မလိုအပ်တော့ပါ။"
+	},
+	"crowdDisabled": {
+		"message": "ဒီဝက်ဘ်ဆိုက်ကိုလူစုလူဝေးဖြင့်ရှောင်ကွင်းပြီး၊"
+	},
+	"crowdBypassed": {
+		"message": "သင်စောင့်စရာမလိုပေ။"
+	},
+	"crowdBypassedInfo": {
+		"message": "အခြား Universal Bypass သုံးစွဲသူများသည်သင့်ကိုစောင့်ဆိုင်းပြီး ဖြစ်၍ ၎င်းသည်% ကို ဦး တည်ကြောင်းအစီရင်ခံသည်။"
+	},
+	"crowdBypassedTimer": {
+		"message": "၎င်းကို% စက္ကန့်ပိုင်းအသစ်တစ်ခုအရဖွင့်လှစ်ပါလိမ့်မည်။"
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "၁ စက္ကန့်အတွင်းမှာဒီ tab ကိုဖွင့်ပါလိမ့်မယ်။"
+	},
+	"crowdCloseTimer": {
+		"message": "ဤ tab သည်% စက္ကန့်အတွင်းပိတ်လိမ့်မည်။"
+	},
+	"crowdCloseTimerSingular": {
+		"message": "ဒီ tab ဟာ ၁ စက္ကန့်အတွင်းမှာပိတ်လိမ့်မယ်။"
+	},
+	"cancel": {
+		"message": "ပယ်ဖျက်ပါ။"
+	},
+	"crowdBypassedIgnore": {
+		"message": "ဒါမမှန်ဘူးလား"
+	},
+	"crowdBypassedOptions": {
+		"message": "သင်ဒီ tab ကိုချက်ချင်း (သို့) x စက္ကန့်အသစ်မှာဖွင့်ချင်ပါသလား။"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass သည်သင်၏ IP ကို logged မလုပ်နိုင်အောင်တားဆီးထားသည်။"
+	},
+	"blockedSubtitle": {
+		"message": "Universal Bypass သည်မကောင်းသောသရုပ်ဆောင်များကိုသင့် IP ရရှိခြင်းကိုတားဆီးရန်မလိုလားပါ။"
+	}
+}

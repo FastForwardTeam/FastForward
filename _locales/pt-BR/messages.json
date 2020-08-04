@@ -1,6 +1,6 @@
 {
 	"appDesc": {
-		"message": "Não perca tempo com conformidades. O Universal Bypass automaticamente ultrapassa encurtadores de links irritantes."
+		"message": "Não perca tempo com conformidades. O Universal Bypass ultrapassa automaticamente encurtadores de links irritantes."
 	},
 	"firstrunTitle": {
 		"message": "Obrigado por instalar o Universal Bypass!"
@@ -12,7 +12,7 @@
 		"message": "Versão"
 	},
 	"definitionsVersion": {
-		"message": "Definições do bypass"
+		"message": "Definições de Bypass"
 	},
 	"changelog": {
 		"message": "Registo de alterações"
@@ -21,22 +21,22 @@
 		"message": "Verificar atualizações"
 	},
 	"updating": {
-		"message": "Baixando definições de bypas..."
+		"message": "Baixando definições de bypass..."
 	},
 	"updateYes": {
-		"message": "Script de injeção atualizado com sucesso!"
+		"message": "Definições de bypass baixadas com sucesso."
 	},
 	"updateNo": {
-		"message": "O script de injeção já está atualizado."
+		"message": "Definições de bypass está atualizadas. "
 	},
 	"faq": {
 		"message": "Perguntas Frequentes (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "O Universal Bypass já bloqueou % sites para você."
+		"message": "O Universal Bypass já ''Bypassou'' % sites para você."
 	},
 	"support": {
-		"message": "Apoie o Universal Bypass"
+		"message": "Apoie o Universal Bypass."
 	},
 	"options": {
 		"message": "Opções"

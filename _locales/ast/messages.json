@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "No perdis el temps amb compliment. El bypass universal evita els molèstics acotadors."
+	},
+	"firstrunTitle": {
+		"message": "Gràcies per instal·lar Universal Bypass."
+	},
+	"firstrunNoScript": {
+		"message": "Tanmateix, sembla que utilitzeu NoScript o similar, amb el qual Universal Bypass no és compatible."
+	},
+	"version": {
+		"message": "versió"
+	},
+	"definitionsVersion": {
+		"message": "Definicions de bypass"
+	},
+	"changelog": {
+		"message": "canvi de canvis"
+	},
+	"update": {
+		"message": "Buscar actualitzacions"
+	},
+	"updating": {
+		"message": "S'està baixant les definicions de bypass ...\n"
+	},
+	"updateYes": {
+		"message": "Definicions de bypass descarregades amb èxit."
+	},
+	"updateNo": {
+		"message": "Les definicions de bypass són actualitzades."
+	},
+	"faq": {
+		"message": "Preguntes més freqüents (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "El bypass universal ja ha superat el% de llocs."
+	},
+	"support": {
+		"message": "Contribueix al bypass universal."
+	},
+	"options": {
+		"message": "Opcions"
+	},
+	"optionsLink": {
+		"message": "Canvieu les opcions del bypass universal."
+	},
+	"optionsEnabled": {
+		"message": "Habilita els bypasss del lloc web."
+	},
+	"optionsNavigationDelay": {
+		"message": "Emporteu-me a les destinacions després del% segon."
+	},
+	"optionsTrackerBypass": {
+		"message": "Rastrejar bypass (com bit.ly i t.co) utilitzant Apimon.de."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Em porto a l’instant a les destinacions de seguidors."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Bloqueu els registradors d’IP si no es poden obviar."
+	},
+	"optionsCrowdBypass": {
+		"message": "Crowd Bypass: proporciona i pren les destinacions d’acortitzadors inigualables."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Obre les destinacions amb origen multitudinari en una pestanya nova després de% segon."
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Tanca la pestanya que conté la destinació originada per la multitud després de% segon de la visita."
+	},
+	"privacyPolicy": {
+		"message": "Política de privacitat"
+	},
+	"contributors": {
+		"message": "Col·laboradors"
+	},
+	"optionsUserscripts": {
+		"message": "Desviaments personalitzats"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Aquesta és una característica avançada perquè els desenvolupadors puguin crear els seus propis scripts per deixar de banda els llocs. Un cop perfeccionats, es poden enviar a GitHub per afegir-los a Universal Bypass, de manera que estiguin a l’abast de tothom"
+	},
+	"beforeNavigate": {
+		"message": "Gairebé estàs al vostre destí."
+	},
+	"beforeNavigateDestination": {
+		"message": "La vostra destinació és%"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "Tanmateix, si navegueu ara, detectaran bypass universal."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Ja no sereu detectats en% segons."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Ja no se us detectarà en un segon."
+	},
+	"beforeNavigateTimer": {
+		"message": "Se us redirigirà automàticament en% segons."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Se us redireccionarà automàticament en 1 segon."
+	},
+	"beforeNavigateOptions": {
+		"message": "Voleu redirigir-vos a l'instant o en x segons?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Esteu navegant a%"
+	},
+	"infoLinkvertise": {
+		"message": "No se'ns permet passar aquesta web, però hem negociat l'eliminació dels seus passos més molestos."
+	},
+	"infoFileHoster": {
+		"message": "Malauradament, el servidor de descàrrega es garantirà que heu esperat abans de permetre-vos descarregar el fitxer."
+	},
+	"infoOutdated": {
+		"message": "Aquesta pàgina web és obviada per una versió més recent de Universal Bypass."
+	},
+	"crowdWait": {
+		"message": "Malauradament, ets el primer a trobar aquest enllaç, però després d’esperar, altres usuaris de Universal Bypass ja no hauran de fer-ho."
+	},
+	"crowdDisabled": {
+		"message": "Aquest lloc web es contempla el bypass multitudinari, que podeu habilitar en les opcions."
+	},
+	"crowdBypassed": {
+		"message": "Potser no haureu d’esperar!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Altres usuaris del bypass universal ja t’han esperat i han informat que això comporta un%"
+	},
+	"crowdBypassedTimer": {
+		"message": "Aquesta opció s'obrirà en una pestanya nova en% segons."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "S’obrirà en una nova pestanya en un segon."
+	},
+	"crowdCloseTimer": {
+		"message": "Aquesta pestanya es tancarà en% segons."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Aquesta pestanya es tancarà d'aquí a un segon."
+	},
+	"cancel": {
+		"message": "Cancel · lar."
+	},
+	"crowdBypassedIgnore": {
+		"message": "Això no va ser correcte?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Voleu que s'obri en una pestanya nova a l'instant o en x segons?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass va impedir que es registrés la vostra IP."
+	},
+	"blockedSubtitle": {
+		"message": "No voleu que el bypass universal eviti que els actors negatius puguin obtenir la vostra IP?"
+	}
+}

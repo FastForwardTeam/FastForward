@@ -3,10 +3,10 @@
 		"message": "Nie marnuj czasu na przestrzeganie przepisów, Uniwersalny Bypass automatycznie pomija irytujące skróty linkowe."
 	},
 	"firstrunTitle": {
-		"message": "Dziękujemy za instalację Uniwersalnego Obejścia Andlytics!"
+		"message": "Dziękujemy za instalację Universal Bypass!"
 	},
 	"firstrunNoScript": {
-		"message": "Wygląda na to, że używasz NoScript lub czegoś podobnego co powoduje, że Uniwersalne Obejście nie jest kompatybilne."
+		"message": "Wygląda na to, że używasz NoScript lub czegoś podobnego co powoduje, że Universal Bypass nie jest kompatybilny."
 	},
 	"version": {
 		"message": "Wersja"
@@ -21,7 +21,7 @@
 		"message": "Sprawdź dostępność aktualizacji"
 	},
 	"updating": {
-		"message": "Pobieranie definicji Uniwersalnego Obejścia..."
+		"message": "Pobieranie definicji Universal Bypass'a..."
 	},
 	"updateYes": {
 		"message": "Pomyślnie pobrano definicje obejścia."
@@ -33,7 +33,7 @@
 		"message": "Najczęściej zadawane pytania (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "Uniwersalne Obejście ominęło dla Ciebie % stron."
+		"message": "Universal Bypass ominął dla Ciebie % stron."
 	},
 	"support": {
 		"message": "Wesprzyj Uniwersalne Obejście."
@@ -117,13 +117,13 @@
 		"message": "Ta strona jest omijana przez nowszą wersję Universal Bypass."
 	},
 	"crowdWait": {
-		"message": "Niestety, jesteś pierwszym, który wchodzi w ten link, ale po tym jak ty zaczekasz, inni użytkownicy Universal bypass nie będą musieli już czekać."
+		"message": "Ups... wydaje się, że jesteś pierwszym, który klika w ten link, ale po tym jak Ty zaczekasz, inni użytkownicy Universal bypass nie będą musieli już czekać, ale w tym przypadku także ty nie będziesz musiał czekać wchodząc następnym razem w ten link."
 	},
 	"crowdDisabled": {
 		"message": "Ta strona jest ominięta przez crowd bypass, którą masz wyłączoną w ustawieniach."
 	},
 	"crowdBypassed": {
-		"message": "Już nie musisz czekać!"
+		"message": "Nie musisz już czekać!"
 	},
 	"crowdBypassedInfo": {
 		"message": "Inni użytkownicy Uniwersalnego obejścia czekali za ciebie i zgłosili, że prowadzi to do %"

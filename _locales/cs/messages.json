@@ -107,6 +107,9 @@
 	"beforeNavigateInstant": {
 		"message": "jste navigováni na %"
 	},
+	"infoLinkvertise": {
+		"message": "Nejsme oprávněni obejít tento web, ale vyjednali jsme odstranění jejich nejotravnějších kroků."
+	},
 	"infoFileHoster": {
 		"message": "Bohužel, stahující server se ujistí že počkáte než vám dovolí stáhnout složku"
 	},

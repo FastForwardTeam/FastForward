@@ -105,7 +105,7 @@
 		"message": "Vuoi essere reindirizzato all'istante o in x secondi?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Stai passando a%"
+		"message": "Stai passando a %"
 	},
 	"infoLinkvertise": {
 		"message": "Non siamo autorizzati a bypassare questo sito web ma abbiamo negoziato la rimozione dei loro step più fastidiosi"

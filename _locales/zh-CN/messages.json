@@ -107,6 +107,9 @@
 	"beforeNavigateInstant": {
 		"message": "您正在导航到%"
 	},
+	"infoLinkvertise": {
+		"message": "我们不允许绕过这个网站，但我们已经通过谈判取消了他们最烦人的步骤。"
+	},
 	"infoFileHoster": {
 		"message": "很不辛的是，下载服务器会确保您已经等待，然后才允许您下载文件。"
 	},

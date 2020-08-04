@@ -1,6 +1,6 @@
 {
 	"appDesc": {
-		"message": "Nu-ți pierde timpul așteptând. Universal Bypass te scapă de linkurile scurtate, ducându-te direct la destinație."
+		"message": "Nu mai irosii timpul. Universal Bypass te scapă de scurtăturile linkurilor."
 	},
 	"firstrunTitle": {
 		"message": "Vă mulțumim că ați instalat Universal Bypass!"
@@ -12,7 +12,7 @@
 		"message": "Versiunea"
 	},
 	"definitionsVersion": {
-		"message": "Definitii pentru ocolire"
+		"message": "Definitii pentru bypass"
 	},
 	"changelog": {
 		"message": "Istoricul modificărilor"
@@ -24,10 +24,10 @@
 		"message": "Descărcăm definițiile de ocolire..."
 	},
 	"updateYes": {
-		"message": "Instalarea definiților de ocolire a avut succes"
+		"message": "Instalarea definiților pentru bypass a avut succes."
 	},
 	"updateNo": {
-		"message": "Definițiile de ocolire sunt cele mai noi."
+		"message": "Definițiile pentru bypass sunt cele mai noi."
 	},
 	"faq": {
 		"message": "Întrebări populare"
@@ -106,6 +106,9 @@
 	},
 	"beforeNavigateInstant": {
 		"message": "Sunteți navigat până la%"
+	},
+	"infoLinkvertise": {
+		"message": "Nu avem permisiunea de a trece peste acest site dar am negociat ștergerea celor mai enervante etape."
 	},
 	"infoFileHoster": {
 		"message": "Din păcate, serverul de descărcare se va asigura că ați așteptat înainte de a vă permite să descărcați fișierul."

@@ -34,5 +34,29 @@
 	},
 	"bypassCounter": {
 		"message": "Universal Bypass praleido % puslapių jums."
+	},
+	"support": {
+		"message": "Prisidėti prie Universalus apėjimo."
+	},
+	"options": {
+		"message": "Nustatymai"
+	},
+	"optionsLink": {
+		"message": "Pakeisti Universalus apėjimo nustatymus."
+	},
+	"optionsEnabled": {
+		"message": "Įjungti nuorodų apėjimą."
+	},
+	"optionsNavigationDelay": {
+		"message": "Nuveskite mane į paskirtį po % sekundžių"
+	},
+	"optionsTrackerBypass": {
+		"message": "Apeiti sekėjus (tokius kaip bit.ly ir t.co) naudojant Apimon.de"
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Akimirksniu nuveskite mane į sekėjų vietas."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Blokuoti \"IP loggers\", jei jų neįmanoma apeiti."
 	}
 }

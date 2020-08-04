@@ -153,6 +153,6 @@
 		"message": "Universal Bypass impidió que tu IP se registrara."
 	},
 	"blockedSubtitle": {
-		"message": "¿No quieres que Universal Bypass impida que los actores malos obtengan tu IP?"
+		"message": "¿No quieres que Universal Bypass impida que personas malas obtengan tu IP?"
 	}
 }

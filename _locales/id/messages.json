@@ -1,6 +1,6 @@
 {
 	"appDesc": {
-		"message": "Jangan habiskan waktu anda dengan menaati aturan. Universal Bypass secara otomatis akan melompati pemendek tautan yang menyebalkan."
+		"message": "Jangan habiskan waktu anda dengan pemenuhan syarat (Iklan). Universal Bypass secara otomatis akan melompati pemendek tautan yang menyebalkan."
 	},
 	"firstrunTitle": {
 		"message": "Terima kasih telah memasang Universal Bypass!"
@@ -57,10 +57,10 @@
 		"message": "Langsung arahkan ke halaman tujuan pelacak."
 	},
 	"optionsBlockIPLoggers": {
-		"message": "Blokir IP logger jika tidak dapat dilewati."
+		"message": "Blokir IP logger jika tidak dapat di-bypass."
 	},
 	"optionsCrowdBypass": {
-		"message": "Crowd Bypass: Memberi dan mendapatkan tujuan dari pemendek link yang tidak dapat di-bypass. "
+		"message": "Crowd Bypass: Memberi dan mendapatkan tujuan dari pemendek link (iklan) yang tidak dapat di-bypass. "
 	},
 	"optionsCrowdAutoOpen": {
 		"message": "Buka halaman tujuan crowd bypass di tab baru setelah % detik."

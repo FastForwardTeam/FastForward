@@ -30,7 +30,7 @@
 		"message": "A kitérő meghatározások naprakészek."
 	},
 	"faq": {
-		"message": "Gyakran ismételt kérdések (GYIK)"
+		"message": "Gyakran Ismételt Kérdések (GYIK)"
 	},
 	"bypassCounter": {
 		"message": "Universal Bypass már megkerülte az Ön számára szánt % webhelyeket."
@@ -39,13 +39,16 @@
 		"message": "Hozzájárulás Universal Bypass számára."
 	},
 	"options": {
-		"message": "Opciók"
+		"message": "Beállítások"
 	},
 	"optionsLink": {
-		"message": "Változtassa meg az Universal Bypass opciói."
+		"message": "Változtassa meg az Universal Bypass beállításait."
 	},
 	"optionsEnabled": {
 		"message": "Engedélyezze a weboldal megkerülését."
+	},
+	"optionsTrackerBypass": {
+		"message": "Nyomkövetők kikerülése (például a bit.ly és t.co) az Apimon.de használatával."
 	},
 	"optionsBlockIPLoggers": {
 		"message": "IP-loggerek blokkolása, ha nem kerülhetők ki."
@@ -53,14 +56,53 @@
 	"privacyPolicy": {
 		"message": "Adatvédelmi irányelvek"
 	},
+	"contributors": {
+		"message": "Hozzájárulók"
+	},
 	"optionsUserscripts": {
-		"message": "Egyéni kikerülések"
+		"message": "Egyéni megkerülések"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Ez egy fejlett szolgáltatás a fejlesztők számára, hogy saját szkripteket készítsenek a webhelyek megkerülésére. Miután tökéletesítették őket, elküldhetők a GitHub-on, hogy hozzáadják az Universal Bypass-hoz, hogy mindenki számára elérhetőek legyenek."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Automatikusan át leszel irányítva 1 másodperc múlva."
+	},
+	"beforeNavigateOptions": {
+		"message": "Egyből vagy x másodperc múlva legyél átirányítva?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Át leszel irányítva ide: %"
+	},
+	"infoFileHoster": {
+		"message": "Sajnos a letöltő szerver ellenőrzi, hogy tényleg várt-e, mielőtt elkezdené letölteni a fájlt."
+	},
+	"infoOutdated": {
+		"message": "Ez az oldal csak az Universal Bypass egy újabb verziójával kerülhető meg."
+	},
+	"crowdWait": {
+		"message": "Sajnos, te vagy az első aki erre a linkre kattintott, emiatt sajnos az oldal nem megkerülhető a Crowd Bypass segítségével. Ha megvárod a linket, a többi Universal Bypass felhasználónak már nem kell. "
+	},
+	"crowdDisabled": {
+		"message": "Ez a weboldal megkerülhető a Crowd Bypass funkcióval, amit a beállításokban tudsz engedélyezni."
 	},
 	"crowdBypassed": {
 		"message": "Talán nem kell várakoznod!"
 	},
 	"crowdBypassedInfo": {
 		"message": "Más Universal Bypass felhasználók már vártak helyetted, és szerintük ez a(z) % webhelyhez vezet"
+	},
+	"crowdBypassedTimer": {
+		"message": "Az oldal egy új lapon lesz megnyitva % másodperc múlva."
+	},
+	"crowdCloseTimer": {
+		"message": "Az oldal bezárul % másodperc múlva."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Az oldal be fog zárulni 1 másodperc múlva."
+	},
+	"cancel": {
+		"message": "Mégsem."
 	},
 	"crowdBypassedIgnore": {
 		"message": "Ez helytelen?"
