@@ -1464,7 +1464,10 @@ ensureDomLoaded(()=>{
 			}
 			a.href+=a.textContent.toLowerCase()
 		})
-		jQuery&&jQuery(document).off("click",".box.download a")
+		if(typeof jQuery=="function")
+		{
+			jQuery(document).off("click",".box.download a")
+		}
 	})
 	domainBypass("channelmyanmar.org",()=>document.querySelectorAll("a[href^='https://channelmyanmar.org?1c17f28bf0=']").forEach(a=>{
 		if(a.classList.contains("FLMBTN-Btn"))
