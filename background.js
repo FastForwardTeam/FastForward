@@ -710,6 +710,13 @@ const onBeforeRequest_rules = {
 			return getRedirect(atob(url.searchParams.get("to")))
 		}
 	},
+	param_data_base64: details => {
+		let url=new URL(details.url)
+		if(url.searchParams.has("data"))
+		{
+			return getRedirect(atob(url.searchParams.get("data")))
+		}
+	},
 	tracker: details => {
 		if(trackerBypassEnabled&&new URL(details.url).pathname!="/")
 		{

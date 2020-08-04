@@ -195,6 +195,9 @@
 		"*://*.beermoneyforum.com/redirect?*",
 		"*://*.instant-hack.to/redirect/?to=*"
 	],
+	"param_data_base64": [
+		"*://*.magersari.web.id/?*"
+	],
 	"useragent_googlebot": [
 		"*://*.haaretz.co.il/*",
 		"*://*.ceesty.com/*",
