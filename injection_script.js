@@ -1394,10 +1394,7 @@ ensureDomLoaded(()=>{
 		countdown(0)
 		safelyNavigate(a.href)
 	}))
-	domainBypass("favpng.com", ()=>ifElement("div#countdown", a => {
-		if (window.location.href.substr(19,12) == "png_download")
-		safelyNavigate("https://files.favpng.com/api_download.php?k="+window.location.href.substr(32));
-	}))
+	domainBypass("favpng.com",()=>ifElement("div#countdown",()=>safelyNavigate("https://files.favpng.com/api_download.php?k="+location.pathname.substr(14))))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
