@@ -193,7 +193,7 @@
 	],
 	"param_to_base64": [
 		"*://*.beermoneyforum.com/redirect?*",
-		"*://*.instant-hack.to/redirect/?to=*"
+		"*://*.instant-hack.to/redirect*?to=*"
 	],
 	"param_data_base64": [
 		"*://*.magersari.web.id/?*"
