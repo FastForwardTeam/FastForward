@@ -1071,7 +1071,7 @@ ensureDomLoaded(()=>{
 	hrefBypass(/stayonline\.pro\/l\/(.*)\//,m=>$.post(endpoint,{id:m[1],ref:""},r=>safelyNavigate(r.data.value)))
 	domainBypass("xlink.cc",()=>safelyNavigate(JSON.parse(atob(window.bootstrapData)).linkResponse.link.long_url))
 	domainBypass("1shortlink.com",()=>awaitElement("#redirect-link[data-href]",a=>safelyNavigate(a.getAttribute("data-href"))))
-	domainBypass("multiup.org",()=>ifElement("form[target][onsubmit] button[type='submit']",b=>{
+	domainBypass(/multiup\.(org|eu)/,()=>ifElement("form[target][onsubmit] button[type='submit']",b=>{
 		if(!document.querySelector(".g-recaptcha"))
 		{
 			const f=document.querySelector("form[target][onsubmit]")
