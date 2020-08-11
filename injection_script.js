@@ -656,6 +656,10 @@ domainBypass("an1.com",()=>{
 	window.setTimeout=f=>setTimeout(f,1)
 	awaitElement("#waiting > a", a=>a.click())
 })
+hrefBypass(/online-fix\.me\/ext\//,()=>{
+	window.setTimeout=f=>setTimeout(f,1)
+	awaitElement("#res > center > button.btn[onclick]",b=>b.onclick())
+})
 //Insertion point for bypasses running before the DOM is loaded.
 domainBypass(/^((www\.)?((njiir|healthykk|linkasm|dxdrive|getwallpapers|sammobile|ydfile)\.com|(punchsubs|zedge)\.net|k2s\.cc|muhammadyoga\.me|u\.to|skiplink\.io|(uploadfree|freeupload)\.info|fstore\.biz))$/,()=>window.setInterval=f=>setInterval(f,1))
 hrefBypass(/thesimsresource\.com\/downloads\/details\/id\//,()=>window.setTimeout=f=>setTimeout(f,1))
