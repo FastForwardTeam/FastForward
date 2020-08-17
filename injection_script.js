@@ -1462,15 +1462,15 @@ ensureDomLoaded(()=>{
 			{
 				qe=qe.previousElementSibling
 			}
-			a.href+="#bypassClipboard="+location.pathname.replace(/[^\w]/g,"")
+			a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"")
 			let ep=a.parentNode.querySelector("span[style] > b")
 			if(ep!==null)
 			{
-				a.href+=ep.textContent.replace(/[^\w]/g,"").toLowerCase()
+				a.href+=ep.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
 			}
 			if(qe!==null)
 			{
-				a.href+=(qe.tagName=="BR"?qe.previousSibling:qe).textContent.replace(/[^\w]/g,"").toLowerCase()
+				a.href+=(qe.tagName=="BR"?qe.previousSibling:qe).textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
 			}
 			a.href+=a.textContent.toLowerCase()
 		})
@@ -1490,17 +1490,17 @@ ensureDomLoaded(()=>{
 					{
 						qe=qe.previousElementSibling
 					}
-					s+="#bypassClipboard="+location.pathname.replace(/[^\w]/g,"")
+					s+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"")
 					let ep=a.parentNode.querySelector("span[style] > b")
 					if(ep!==null)
 					{
-						s+=ep.textContent.replace(/[^\w]/g,"").toLowerCase()
+						s+=ep.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
 					}
 					if(qe!==null)
 					{
-						s+=(qe.tagName=="BR"?qe.previousSibling:qe).textContent.replace(/[^\w]/g,"").toLowerCase()
+						s+=(qe.tagName=="BR"?qe.previousSibling:qe).textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
 					}
-					s+=a.textContent.replace(/[^\w]/g,"").toLowerCase()
+					s+=a.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
 					c=s
 				}
 			})
