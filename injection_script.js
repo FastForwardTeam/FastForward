@@ -974,7 +974,7 @@ ensureDomLoaded(()=>{
 		})
 	})
 	domainBypass(/linkpoi\.(in|cc)/,()=>ifElement("a.btn.btn-primary[href]",a=>safelyNavigate(a.href)))
-	domainBypass("spacetica.com",()=>ifElement("a.btn.btn-xs[href]",a=>safelyNavigate(a.href)))
+	domainBypass(/spacetica\.com|linegee\.net/,()=>ifElement("a.btn.btn-xs[href]",a=>safelyNavigate(a.href)))
 	domainBypass(/uiz\.(io|app)|moon7\.xyz/,()=>crowdBypass(()=>{
 		awaitElement("#go-adsredirect",f=>{
 			f.action+="#bypassClipboard="+location.pathname.substr(1)
@@ -1462,21 +1462,48 @@ ensureDomLoaded(()=>{
 			{
 				qe=qe.previousElementSibling
 			}
-			a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"")
+			a.href+="#bypassClipboard="+location.pathname.replace(/[^\w]/g,"")
 			let ep=a.parentNode.querySelector("span[style] > b")
 			if(ep!==null)
 			{
-				a.href+=ep.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
+				a.href+=ep.textContent.replace(/[^\w]/g,"").toLowerCase()
 			}
 			if(qe!==null)
 			{
-				qe.tagName=="BR"?a.href+=qe.previousSibling.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase():a.href+=qe.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
+				a.href+=(qe.tagName=="BR"?qe.previousSibling:qe).textContent.replace(/[^\w]/g,"").toLowerCase()
 			}
 			a.href+=a.textContent.toLowerCase()
 		})
 		if(typeof jQuery=="function")
 		{
 			jQuery(document).off("click")
+		}
+		if(document.querySelectorAll(".box-inner-block a[href*='?']").length==0)
+		{
+			let e=document.querySelector(".box-inner-block").lastElementChild,o=window.open,c=""
+			e=(e.tagName=="BR"?e.previousElementSibling:e).tagName.toLowerCase()
+			window.open=(u,t)=>(u+=c,o.call(window,u,t))
+			document.querySelectorAll(e).forEach(a=>{
+				a.onclick=()=>{
+					let qe=a.previousElementSibling,s=""
+					while(qe&&qe.tagName!="B"&&qe.tagName!="STRONG"&&qe.tagName!="BR")
+					{
+						qe=qe.previousElementSibling
+					}
+					s+="#bypassClipboard="+location.pathname.replace(/[^\w]/g,"")
+					let ep=a.parentNode.querySelector("span[style] > b")
+					if(ep!==null)
+					{
+						s+=ep.textContent.replace(/[^\w]/g,"").toLowerCase()
+					}
+					if(qe!==null)
+					{
+						s+=(qe.tagName=="BR"?qe.previousSibling:qe).textContent.replace(/[^\w]/g,"").toLowerCase()
+					}
+					s+=a.textContent.replace(/[^\w]/g,"").toLowerCase()
+					c=s
+				}
+			})
 		}
 	})
 	domainBypass("channelmyanmar.org",()=>document.querySelectorAll("a[href^='https://channelmyanmar.org?1c17f28bf0=']").forEach(a=>{
