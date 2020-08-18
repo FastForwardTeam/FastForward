@@ -1404,6 +1404,13 @@ ensureDomLoaded(()=>{
 		safelyNavigate(a.href)
 	}))
 	domainBypass("favpng.com",()=>ifElement("div#countdown",()=>safelyNavigate("https://files.favpng.com/api_download.php?k="+location.pathname.substr(14))))
+	domainBypass("sh.st",()=>ifElement("[data-translate='block_headline']",()=>location.hostname="ceesty.com"))
+	domainBypass("gestyy.com",()=>{
+		if(typeof postCaptchaResponse=="function")
+		{
+			postCaptchaResponse(location.href,"")
+		}
+	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
