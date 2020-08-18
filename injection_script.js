@@ -1472,7 +1472,7 @@ ensureDomLoaded(()=>{
 			{
 				a.href+=(qe.tagName=="BR"?qe.previousSibling:qe).textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
 			}
-			a.href+=a.textContent.toLowerCase()
+			a.href+=a.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
 		})
 		if(typeof jQuery=="function")
 		{
