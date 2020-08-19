@@ -1231,16 +1231,11 @@ ensureDomLoaded(()=>{
 	}))
 	domainBypass("cshort.org",()=>{
 		crowdBypass()
-		if(typeof getId=="function"&&typeof startTimer=="function"&&typeof $=="function")
+		if(typeof redirect=="function"&&typeof isChrome=="boolean")
 		{
-			getId()
-			startTimer()
-			setTimeout(()=>{
-				if(typeof id=="string")
-				{
-					$.get("/redirect.php?alias="+location.pathname.substr(1)+"&uuid="+id,contributeAndNavigate)
-				}
-			},30000)
+			isChrome=false
+			window.open=safelyNavigate
+			setTimeout(redirect,10000)
 		}
 	})
 	domainBypass("otewe.net",()=>ifElement("#form-human",f=>f.submit(),()=>{

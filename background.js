@@ -915,6 +915,29 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 "*://*.lnk2.cc/*/*"
 ]},["blocking","responseHeaders"])
 
+// Cshort.org Crowd Bypass
+brws.webRequest.onHeadersReceived.addListener(details=>{
+	if(enabled&&crowdEnabled)
+	{
+		let url=new URL(details.url)
+		for(let i in details.responseHeaders)
+		{
+			let header=details.responseHeaders[i]
+			if(header.name.toLowerCase()=="location"&&isGoodLink(header.value))
+			{
+				let xhr=new XMLHttpRequest(),
+				domain=url.hostname
+				xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
+				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+				xhr.send("domain="+domain+"&path="+encodeURIComponent(url.pathname.substr(1))+"&target="+encodeURIComponent(header.value))
+				break
+			}
+		}
+	}
+},{types:["main_frame"],urls:[
+"*://*.cshort.org/*?u=*"
+]},["blocking","responseHeaders"])
+
 // SoraLink Crowd Bypass
 let soralink_contribute={}
 brws.webRequest.onBeforeRequest.addListener(details=>{
