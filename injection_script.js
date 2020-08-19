@@ -1488,16 +1488,20 @@ ensureDomLoaded(()=>{
 		if(document.querySelectorAll(".box-inner-block a[href*='?']").length==0)
 		{
 			let e=document.querySelector(".box-inner-block").lastElementChild,o=window.open,ce=document.createElement,c=""
-			e=(e.tagName=="BR"?e.previousElementSibling:e).tagName.toLowerCase()
+			while(e&&(e.tagName=="BR"||e.tagName=="A"))
+			{
+				e=e.previousElementSibling
+			}
+			e=e.tagName.toLowerCase()
 			window.open=(u,t)=>(u+=c,o.call(window,u,t))
 			document.createElement=(t,o)=>{
-				let e=ce.call(document,t,o)
+				let el=ce.call(document,t,o)
 				if(t=="a")
 				{
-					let cl=e.click
-					e.click=()=>(e.href+=c,cl.call(e))
+					let cl=el.click
+					el.click=()=>(el.href+=c,cl.call(el))
 				}
-				return e
+				return el
 			}
 			document.querySelectorAll(e).forEach(a=>{
 				a.onclick=()=>{
