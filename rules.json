@@ -275,7 +275,8 @@
 		"*://click.linksynergy.com/deeplink?*",
 		"*://track.flexlinkspro.com/a.ashx?*",
 		"*://shareasale.com/r.cfm?*",
-		"*://shareasale-analytics.com/r.cfm?*"
+		"*://shareasale-analytics.com/r.cfm?*",
+		"*://r20.rs6.net/tn.jsp?*"
 	],
 	"ip_logger": [
 		"*://*.viral.over-blog.com/*",
