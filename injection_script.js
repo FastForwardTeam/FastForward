@@ -1406,6 +1406,15 @@ ensureDomLoaded(()=>{
 			postCaptchaResponse(location.href,"")
 		}
 	})
+	domainBypass("adshrink.it",()=>{
+		let iT=setInterval(()=>{
+			if(typeof window[___reactjsD.o]=="object"&&typeof window[___reactjsD.o].dest=="string")
+			{
+				clearInterval(iT)
+				safelyNavigate(window[___reactjsD.o].dest)
+			}
+		})
+	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
