@@ -1418,6 +1418,11 @@ ensureDomLoaded(()=>{
 			}
 		})
 	})
+	domainBypass("apkpsp.xyz",()=>ifElement("span#dwto",s=>{
+		window.setInterval=f=>setInterval(f,1)
+		s.click()
+		awaitElement("span#goto > a[href]",a=>safelyNavigate(a.href))
+	}))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
