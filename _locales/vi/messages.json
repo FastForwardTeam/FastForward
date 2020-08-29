@@ -27,7 +27,7 @@
 		"message": "Cập nhật thành công đoạn mã có sẵn."
 	},
 	"updateNo": {
-		"message": "Đoạn mã có sẵn đã là bản mới nhất."
+		"message": "Đoạn mã có sẵn đã được cập nhật lên bản mới nhất."
 	},
 	"faq": {
 		"message": "Câu hỏi thường gặp (FAQ)"
@@ -42,7 +42,7 @@
 		"message": "Tùy chọn"
 	},
 	"optionsLink": {
-		"message": "Thay đổi tùy chọn Universal Bypass."
+		"message": "Thay đổi thiết lập của Universal Bypass."
 	},
 	"optionsEnabled": {
 		"message": "Cho phép bỏ qua website."
@@ -51,7 +51,7 @@
 		"message": "Đưa tôi đến đích sau % giây. (Sử dụng 0 để được chuyển hướng ngay lập tức.)"
 	},
 	"optionsTrackerBypass": {
-		"message": "Bỏ qua trình theo dõi (như bit.ly và t.co) bằng Apimon.de."
+		"message": "Bỏ qua trình theo dõi (như bit.ly và t.co) bằng cách sử dụng Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Lập tức đưa tôi đến đích của các mã theo dõi."
@@ -66,7 +66,7 @@
 		"message": "Mở các điểm đến có cộng đồng đóng góp trong một tab mới sau % giây. (0 = lập tức.)"
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Đóng tab chứa địa điểm đã được cộng đồng đóng góp sau % giây truy cập."
+		"message": "Đóng thẻ chứa địa điểm đã được cộng đồng đóng góp sau % giây truy cập."
 	},
 	"privacyPolicy": {
 		"message": "Chính sách bảo mật"
@@ -78,10 +78,10 @@
 		"message": "Tùy chỉnh Bypasses"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "Đây là tính năng nâng cao cho những nhà phát triển để tạo những đoạn mã giúp bỏ qua các trang. Một khi đã hoàn thành, họ có thể gửi chúng lên GitHub để được thêm vào Universal Bypass, giúp mọi người có thể sử dụng."
+		"message": "Đây là tính năng nâng cao cho những nhà phát triển để tạo những đoạn mã giúp bỏ qua các trang. Khi đã hoàn thành, họ có thể gửi chúng lên GitHub để được thêm vào Universal Bypass, để mọi người có thể sử dụng."
 	},
 	"beforeNavigate": {
-		"message": "Bạn sắp đến trang cần đến."
+		"message": "Bạn sắp được đưa đến trang đích."
 	},
 	"beforeNavigateDestination": {
 		"message": "Trang đích của bạn là %"
@@ -114,7 +114,7 @@
 		"message": "Thật không may, máy chủ cần phải đảm bảo bạn đã chờ trước khi cho phép tải về tệp."
 	},
 	"infoOutdated": {
-		"message": "Trang web này sẽ được bỏ qua với một phiên bản mới của Universal Bypass"
+		"message": "Trang web này sẽ được bỏ qua với một phiên bản mới hơn của Universal Bypass."
 	},
 	"crowdWait": {
 		"message": "Thật không may, bạn là người đầu tiên gặp phải liên kết này, nhưng sau khi bạn chờ đợi, những người dùng Universal Bypass khác sẽ không còn phải làm như vậy nữa."
@@ -138,7 +138,7 @@
 		"message": "Tab này sẽ đóng lại sau % giây."
 	},
 	"crowdCloseTimerSingular": {
-		"message": "Tab này sẽ đóng lại sau 1 giây."
+		"message": "Thẻ này sẽ đóng lại sau 1 giây."
 	},
 	"cancel": {
 		"message": "Huỷ bỏ."

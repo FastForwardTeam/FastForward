@@ -30,7 +30,7 @@
 		"message": "Bypasses ay updated."
 	},
 	"faq": {
-		"message": "Mga Madalas na Tanong"
+		"message": "Mga Madalas Itanong"
 	},
 	"bypassCounter": {
 		"message": "Ang Universal Bypass ay naka iwas ng % mga sites para lang sa iyo."
@@ -69,7 +69,7 @@
 		"message": "Isara ang tab na naglalaman ng crowd-sourced destination pagkatapos ng % segundo ng pagbisita ito."
 	},
 	"privacyPolicy": {
-		"message": "Patakaran sa Pagkapribado"
+		"message": "Pribadong seguridad"
 	},
 	"contributors": {
 		"message": "Ang mga kontribyutor"

@@ -1,0 +1,29 @@
+{
+	"appDesc": {
+		"message": "Ne gubite vreme na komplikacije. Universal Bypass zaobilazi dosadne link shortenere."
+	},
+	"firstrunTitle": {
+		"message": "Hvala vam za instaliranje Universal Bypass!"
+	},
+	"firstrunNoScript": {
+		"message": "Međutim, izgleda da koristite NoScript ili slično, s čime Universal Bypass nije kompatibilan."
+	},
+	"version": {
+		"message": "Verzija"
+	},
+	"definitionsVersion": {
+		"message": "Definicija bypassera"
+	},
+	"changelog": {
+		"message": "Promene"
+	},
+	"update": {
+		"message": "Proveri ima li ažuriranja"
+	},
+	"updating": {
+		"message": "Preuzimanje definicije bypassera..."
+	},
+	"updateYes": {
+		"message": "Uspešno instaliran bypass"
+	}
+}

@@ -108,7 +108,7 @@
 		"message": "Anda sedang diarahkan ke %"
 	},
 	"infoLinkvertise": {
-		"message": "Kami tidak diizinkan melakukan bypass pada situs web ini tapi Kami sedang membicarakan penghapusan langkah menjengkelkan ini."
+		"message": "Kami tidak diizinkan melakukan bypass pada situs web ini tapi Kami sudah membicarakan penghapusan langkah menjengkelkan ini."
 	},
 	"infoFileHoster": {
 		"message": "Sayangnya, server unduhannya akan memastikan bahwa anda telah menunggu sebelum mengizinkan anda untuk mengunduh file."
@@ -153,6 +153,6 @@
 		"message": "Universal Bypass mencegah IP anda supaya tidak tercatat dalam log."
 	},
 	"blockedSubtitle": {
-		"message": "Apakah anda tidak ingin Universal Bypass mencegah bad actors (Peretas) supaya tidak bisa mendapatkan IP anda?"
+		"message": "Tidak ingin Universal Bypass untuk mencegah bad actors (Peretas) dari mendapatkan IP Anda?"
 	}
 }

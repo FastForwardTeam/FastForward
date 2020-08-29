@@ -33,7 +33,7 @@
 		"message": "よくある質問と回答(FAQ)"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypassは、今までに%件のサイトをバイパスしました。"
+		"message": "Universal Bypassは、いままでに%件のサイトをバイパスしました。"
 	},
 	"support": {
 		"message": "Universal Bypassに貢献する"

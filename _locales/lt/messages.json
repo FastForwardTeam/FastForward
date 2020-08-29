@@ -58,5 +58,83 @@
 	},
 	"optionsBlockIPLoggers": {
 		"message": "Blokuoti \"IP loggers\", jei jų neįmanoma apeiti."
+	},
+	"privacyPolicy": {
+		"message": "Privatumo politika"
+	},
+	"contributors": {
+		"message": "Pagalbininkai"
+	},
+	"optionsUserscripts": {
+		"message": "Pasirinktinas perėjimas"
+	},
+	"beforeNavigate": {
+		"message": "Jūs beveik pasiekėte savo tikslą."
+	},
+	"beforeNavigateDestination": {
+		"message": "Jūsų tikslas yra %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "Jeigu dabar pereisite, \"Universal Bypass\" bus aptiktas."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Jūs nebebūsite aptinkamas už % sekundžių."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Jūs nebebūsite aptinkamas už 1 sekundes."
+	},
+	"beforeNavigateTimer": {
+		"message": "Jūs busite automatiškai nukreiptas už % sekundžių."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Jūs busite automatiškai nukreiptas už 1 sekundės."
+	},
+	"beforeNavigateInstant": {
+		"message": "Jūs busite perkeltas į %"
+	},
+	"infoLinkvertise": {
+		"message": "Mes negalime apeiti šios svetainės, bet su jos kūrėjais yra susitarta, kad jie pašalins dauguma įkyrių žingsnių."
+	},
+	"infoFileHoster": {
+		"message": "Deja, parsisiuntimo serveris turės užgarantuoti, kad jūs palaukėte, prieš leisdamas jums parsisiųsti failą."
+	},
+	"infoOutdated": {
+		"message": "Ši svetainė gali būti apeita naudojant tik naujesnės versijos Universalų Perėjimą."
+	},
+	"crowdWait": {
+		"message": "Deja, jūs esate pirmasis susidūręs su šiuo saitu. Jums palaukus, kitiems \"Universal Bypass\" vartotojams nereikės daugiau laukti."
+	},
+	"crowdDisabled": {
+		"message": "Šio saito tikslas yra pasidalintas, ir ji galima apeiti naudojant \"crowd bypass\", kuris įjungiamas nustatymuose."
+	},
+	"crowdBypassed": {
+		"message": "Jums turbūt nereikės laukti!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Kiti \"Universal Bypass\" vartotojai jau buvo laukę šiame saite ir pranešė, kad tai veda į %."
+	},
+	"crowdBypassedTimer": {
+		"message": "Šis turinys bus atidarytas naujoje kortelėje už % sekundžių."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Šis turinys bus atidarytas naujoje kortelėje už 1 sekundes."
+	},
+	"crowdCloseTimer": {
+		"message": "Ši kortelė užsidarys už % sekundžių."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Ši kortelė užsidarys už 1 sekundės."
+	},
+	"cancel": {
+		"message": "Atšaukti."
+	},
+	"crowdBypassedIgnore": {
+		"message": "Ar šis veiksmas buvo klaidingas?"
+	},
+	"blockedTitle": {
+		"message": "Universalus Perėjimas neleido šiam puslapiui įrašyti jūsų IP adreso."
+	},
+	"blockedSubtitle": {
+		"message": "Nenorite, kad \"Universal Bypass\" užkirstų kelią sukčiam gauti jūsų IP adresą?"
 	}
 }
