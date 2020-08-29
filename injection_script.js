@@ -1036,8 +1036,8 @@ ensureDomLoaded(()=>{
 			safelyNavigate(o.page.url)
 		}
 	})
-	hrefBypass(/mirrorace\.com\/m\/[a-zA-Z0-9]+\/[0-9]+/,()=>safelyAssign(document.querySelector("a[href*='"+location.search+"']:not([hidden]):not(.uk-hidden)").href))
-	domainBypass("mirrorace.com",()=>{
+	hrefBypass(/mirrorace\.(com|org)\/m\/[a-zA-Z0-9]+\/[0-9]+/,()=>safelyAssign(document.querySelector("a[href*='"+location.search+"']:not([hidden]):not(.uk-hidden)").href))
+	domainBypass(/mirrorace\.(com|org)/,()=>{
 		ifElement(".uk-modal-close",b=>{
 			if(b.textContent=="I have a VPN already")
 			{
