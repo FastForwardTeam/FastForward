@@ -53,7 +53,8 @@
 		"*://*.creditcable.info/*/*?*",
 		"*://*.adfoc.us/serve/sitelinks/?*",
 		"*://*.made-by.org/redirection/?url=*",
-		"*://*.itsbx.com/redirect/?url=*"
+		"*://*.itsbx.com/redirect/?url=*",
+		"*://*.forocoches.com/link.php?url=*"
 	],
 	"param_xurl_raw_http": [
 		"*://bluemediafiles.com/*?xurl=*"
@@ -197,6 +198,9 @@
 	],
 	"param_data_base64": [
 		"*://*.magersari.web.id/?*"
+	],
+	"bypass_clipboard": [
+		"*://*.intercelestial.com/?id=*"
 	],
 	"useragent_googlebot": [
 		"*://*.haaretz.co.il/*",

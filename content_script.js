@@ -89,6 +89,15 @@ if(document instanceof HTMLDocument)
 					document.documentElement.setAttribute(channel.adlinkfly_target, "")
 				}
 			}
+			else if(document.documentElement.hasAttribute(channel.bypass_clipboard))
+			{
+				const clipboard=document.documentElement.getAttribute(channel.bypass_clipboard)
+				document.documentElement.removeAttribute(channel.bypass_clipboard)
+				brws.runtime.sendMessage({
+					type: "bypass-clipboard",
+					data: clipboard
+				})
+			}
 		})
 		observer.observe(document.documentElement, {attributes: true})
 

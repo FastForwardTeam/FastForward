@@ -170,7 +170,7 @@ brws.storage.onChanged.addListener(changes=>{
 })
 
 // Bypass definition management
-let updateStatus = "", injectionScript = "", preflightRules = {}, upstreamInjectionScript = "", upstreamCommit, channel = {}, optionsTab, optionsPort
+let updateStatus = "", injectionScript = "", preflightRules = {}, upstreamInjectionScript = "", upstreamCommit, channel = {}, optionsTab, optionsPort, bypassClipboard = ""
 const updateBypassDefinitions = callback => {
 	if(updateStatus != "")
 	{
@@ -185,7 +185,7 @@ const updateBypassDefinitions = callback => {
 	const finishDownload = () => {
 		channel = {}
 		let uniqueness = []
-		;["stop_watching","count_it","crowd_referer","crowd_path","crowd_query","crowd_queried","crowd_contribute","adlinkfly_info","adlinkfly_target"].forEach(name => {
+		;["stop_watching","count_it","crowd_referer","crowd_path","crowd_query","crowd_queried","crowd_contribute","adlinkfly_info","adlinkfly_target","bypass_clipboard"].forEach(name => {
 			let val
 			do
 			{
@@ -359,6 +359,10 @@ brws.runtime.onMessage.addListener((req, sender, respond) => {
 		{
 			console.warn("Unexpected message:", req)
 		}
+		break;
+		
+		case "bypass-clipboard":
+		bypassClipboard=req.data
 		break;
 
 		default:
@@ -717,6 +721,11 @@ const onBeforeRequest_rules = {
 			return getRedirect(atob(url.searchParams.get("data")))
 		}
 	},
+	bypass_clipboard: details => {
+		let url=details.url+bypassClipboard
+		bypassClipboard=""
+		return{redirectUrl:url}
+	},
 	tracker: details => {
 		if(trackerBypassEnabled&&new URL(details.url).pathname!="/")
 		{
@@ -886,7 +895,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	}
 },{types:["main_frame"],urls:["*://*.surfsees.com/?*"]},["blocking"])
 
-// Ouo.io/press & lnk2.cc Crowd Bypass
+// Ouo.io/press / lnk2.cc / Cshort.org Crowd Bypass
 brws.webRequest.onHeadersReceived.addListener(details=>{
 	if(enabled&&crowdEnabled)
 	{
@@ -897,14 +906,15 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 			if(header.name.toLowerCase()=="location"&&isGoodLink(header.value))
 			{
 				let xhr=new XMLHttpRequest(),
-				domain=url.hostname
+				domain=url.hostname,path
 				if(domain=="ouo.press")
 				{
 					domain="ouo.io"
 				}
+				path=(domain=="cshort.org"?url.pathname.substr(1):url.pathname.split("/")[2])
 				xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
 				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
-				xhr.send("domain="+domain+"&path="+encodeURIComponent(url.pathname.split("/")[2])+"&target="+encodeURIComponent(header.value))
+				xhr.send("domain="+domain+"&path="+encodeURIComponent(path)+"&target="+encodeURIComponent(header.value))
 				break
 			}
 		}
@@ -912,29 +922,7 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 },{types:["main_frame"],urls:[
 "*://*.ouo.io/*/*",
 "*://*.ouo.press/*/*",
-"*://*.lnk2.cc/*/*"
-]},["blocking","responseHeaders"])
-
-// Cshort.org Crowd Bypass
-brws.webRequest.onHeadersReceived.addListener(details=>{
-	if(enabled&&crowdEnabled)
-	{
-		let url=new URL(details.url)
-		for(let i in details.responseHeaders)
-		{
-			let header=details.responseHeaders[i]
-			if(header.name.toLowerCase()=="location"&&isGoodLink(header.value))
-			{
-				let xhr=new XMLHttpRequest(),
-				domain=url.hostname
-				xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
-				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
-				xhr.send("domain="+domain+"&path="+encodeURIComponent(url.pathname.substr(1))+"&target="+encodeURIComponent(header.value))
-				break
-			}
-		}
-	}
-},{types:["main_frame"],urls:[
+"*://*.lnk2.cc/*/*",
 "*://*.cshort.org/*?u=*"
 ]},["blocking","responseHeaders"])
 

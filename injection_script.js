@@ -474,8 +474,11 @@ domainBypass(/wadooo\.com|gotravelgo\.space|pantauterus\.me|liputannubi\.net/,()
 	crowdPath(location.hash.substr(1))
 	crowdBypass()
 })
-domainBypass("lnk.news",()=>ifElement("#skip_form",f=>goToUrl(),()=>ifElement("#display_go_form",f=>{
-	countIt(()=>f.submit())
+domainBypass("lnk.news",()=>ifElement("#display_go_form",f=>{
+	window.open=()=>{}
+},()=>ifElement("#skip_form",()=>{
+	Math.random=()=>1
+	setTimeout(()=>$("#skip_form").trigger("submit"),50)
 })))
 hrefBypass(/(uiz\.(io|app)|moon7\.xyz)\/go/,()=>{
 	Object.freeze(location)
@@ -1467,7 +1470,7 @@ ensureDomLoaded(()=>{
 		/*jshint ignore:end*/
 	}
 	domainBypass(/pahe\.(in|me|ph)/,()=>{
-		document.querySelectorAll("a[href*='?']").forEach(a=>{
+		document.querySelectorAll(".box.download a[href*='?']").forEach(a=>{
 			let qe=a.previousElementSibling
 			while(qe&&qe.tagName!="B"&&qe.tagName!="STRONG"&&qe.tagName!="BR")
 			{
@@ -1489,24 +1492,14 @@ ensureDomLoaded(()=>{
 		{
 			jQuery(document).off("click")
 		}
-		if(document.querySelectorAll(".box-inner-block a[href*='?']").length==0)
+		if(document.querySelector(".box-inner-block")&&!document.querySelector(".box-inner-block a[href*='?']"))
 		{
-			let e=document.querySelector(".box-inner-block").lastElementChild,o=window.open,ce=document.createElement,c=""
-			while(e&&(e.tagName=="BR"||e.tagName=="A"))
+			let e=document.querySelector(".box-inner-block").lastElementChild
+			while(e&&e.tagName.length<8)
 			{
 				e=e.previousElementSibling
 			}
 			e=e.tagName.toLowerCase()
-			window.open=(u,t)=>(u+=c,o.call(window,u,t))
-			document.createElement=(t,o)=>{
-				let el=ce.call(document,t,o)
-				if(t=="a")
-				{
-					let cl=el.click
-					el.click=()=>(el.href+=c,cl.call(el))
-				}
-				return el
-			}
 			document.querySelectorAll(e).forEach(a=>{
 				a.onclick=()=>{
 					let qe=a.previousElementSibling,s=""
@@ -1525,7 +1518,7 @@ ensureDomLoaded(()=>{
 						s+=(qe.tagName=="BR"?qe.previousSibling:qe).textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
 					}
 					s+=a.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
-					c=s
+					document.documentElement.setAttribute("{{channel.bypass_clipboard}}",s)
 				}
 			})
 		}
