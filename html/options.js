@@ -94,7 +94,11 @@ if(hash)
 	}
 }
 
-let editor=ace.edit("userscript",{mode:"ace/mode/javascript",theme:"ace/theme/monokai"})
+let editor=ace.edit("userscript",{
+	mode:"ace/mode/javascript",
+	theme:"ace/theme/monokai",
+	useWorker:false
+})
 editor.on("change", ()=>{
 	clearInterval(saveTimer)
 	saveTimer=setTimeout(()=>{
