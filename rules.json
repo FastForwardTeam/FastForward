@@ -210,7 +210,13 @@
 		"*://*.festyy.com/*",
 		"*://*.gestyy.com/*",
 		"*://*.sh.st/*",
-		"*://*.viid.me/*"
+		"*://*.viid.me/*",
+		"*://*.clkmein.com/*",
+		"*://*.cllkme.com/*",
+		"*://*.jnw0.com/*",
+		"*://*.xiw34.com/*",
+		"*://*.clkme.me/*",
+		"*://*.wiid.me/*"
 	],
 	"useragent_chrome": [
 		"*://*.fluxteam.xyz/*"
