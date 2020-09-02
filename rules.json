@@ -22,7 +22,8 @@
 		"*://*.hidereferrer.com/?*"
 	],
 	"query_base64": [
-		"*://*.hikarinoakariost.info/out/?*"
+		"*://*.hikarinoakariost.info/out/?*",
+		"*://*.p3dm.ru/download-en.html?*"
 	],
 	"hash_base64": [
 		"*://*.acorme.com/*"
