@@ -117,7 +117,8 @@
 		"*://*.k2nblog.com/gotothedl.html?url=*",
 		"*://*.novicearea.com/*/?url=*",
 		"*://*.dikatekno.com/go/?url=*",
-		"*://*.blackmod.net/dl/?url=*"
+		"*://*.blackmod.net/dl/?url=*",
+		"*://*.hulblog.com/*/?url=*"
 	],
 	"param_id_base64": [
 		"*://*/p/*.html?id=*",
