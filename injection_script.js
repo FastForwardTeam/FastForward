@@ -4,7 +4,7 @@
 
 //Copying important functions to avoid interference from other extensions or the page
 const ODP=(t,p,o)=>{try{Object.defineProperty(t,p,o)}catch(e){console.trace("[Universal Bypass] Couldn't define",p)}},
-setTimeout=window.setTimeout,setInterval=window.setInterval,URL=window.URL,
+setTimeout=window.setTimeout,setInterval=window.setInterval,URL=window.URL,docSetAttribute=document.documentElement.setAttribute.bind(document.documentElement),
 transparentProperty=(name,valFunc)=>{
 	let real
 	ODP(window,name,{
@@ -256,7 +256,13 @@ insertInfoBox=text=>ensureDomLoaded(()=>{
 	span.textContent=text
 	div.onclick=()=>document.body.removeChild(div)
 	document.body.appendChild(div)
-})
+}),
+clipboard=c=>{
+	if(c)
+	{
+		docSetAttribute("{{channel.bypass_clipboard}}",c)
+	}
+}
 let navigated=false,
 bypassed=false,
 domain=location.hostname,
@@ -1476,58 +1482,35 @@ ensureDomLoaded(()=>{
 		/*jshint ignore:end*/
 	}
 	domainBypass(/pahe\.(in|me|ph)/,()=>{
-		document.querySelectorAll(".box.download a[href*='?']").forEach(a=>{
-			let qe=a.previousElementSibling
-			while(qe&&qe.tagName!="B"&&qe.tagName!="STRONG"&&qe.tagName!="BR")
+		let e=""
+		document.querySelectorAll("body *").forEach(a=>{
+			if(a.tagName.length>8)
 			{
-				qe=qe.previousElementSibling
+				e=a.tagName.toLowerCase()+","
 			}
-			a.href+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"")
-			let ep=a.parentNode.querySelector("span[style] > b")
-			if(ep!==null)
-			{
-				a.href+=ep.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
-			}
-			if(qe!==null)
-			{
-				a.href+=(qe.tagName=="BR"?qe.previousSibling:qe).textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
-			}
-			a.href+=a.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
 		})
-		if(typeof jQuery=="function")
-		{
-			jQuery(document).off("click")
-		}
-		if(document.querySelector(".box-inner-block")&&!document.querySelector(".box-inner-block a[href*='?']"))
-		{
-			let e=document.querySelector(".box-inner-block").lastElementChild
-			while(e&&e.tagName.length<8)
-			{
-				e=e.previousElementSibling
-			}
-			e=e.tagName.toLowerCase()
-			document.querySelectorAll(e).forEach(a=>{
-				a.onclick=()=>{
-					let qe=a.previousElementSibling,s=""
-					while(qe&&qe.tagName!="B"&&qe.tagName!="STRONG"&&qe.tagName!="BR")
-					{
-						qe=qe.previousElementSibling
-					}
-					s+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"")
-					let ep=a.parentNode.querySelector("span[style] > b")
-					if(ep!==null)
-					{
-						s+=ep.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
-					}
-					if(qe!==null)
-					{
-						s+=(qe.tagName=="BR"?qe.previousSibling:qe).textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
-					}
-					s+=a.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
-					document.documentElement.setAttribute("{{channel.bypass_clipboard}}",s)
+		e+="a[href*='?']"
+		document.querySelectorAll(e).forEach(a=>{
+			a.onclick=()=>{
+				let qe=a.previousElementSibling,s=""
+				while(qe&&qe.tagName!="B"&&qe.tagName!="STRONG"&&qe.tagName!="BR")
+				{
+					qe=qe.previousElementSibling
 				}
-			})
-		}
+				s+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"")
+				let ep=a.parentNode.querySelector("span[style] > b")
+				if(ep!==null)
+				{
+					s+=ep.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
+				}
+				if(qe!==null)
+				{
+					s+=(qe.tagName=="BR"?qe.previousSibling:qe).textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
+				}
+				s+=a.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
+				clipboard(s)
+			}
+		})
 	})
 	domainBypass("channelmyanmar.org",()=>document.querySelectorAll("a[href^='https://channelmyanmar.org?1c17f28bf0=']").forEach(a=>{
 		if(a.classList.contains("FLMBTN-Btn"))
@@ -1971,7 +1954,7 @@ ensureDomLoaded(()=>{
 	ifElement("input[type='hidden'][name='mylink'][value^='http']",i=>{//#549
 		safelyNavigate(i.value)
 		finish()
-	},()=>domainBypass("seputarinfomenarik.com",()=>ifElement("a#hapus",a=>safelyAssign(a.href))))
+	},()=>domainBypass(/seputarinfomenarik\.com|(massardi|kribboy)\.xyz/,()=>ifElement("a#hapus",a=>safelyAssign(a.href))))
 	//Insertion point for bypasses detecting certain DOM elements. Bypasses here will no longer need to call ensureDomLoaded.
 	let t=document.querySelector("title")
 	if(!bypassed&&t)
