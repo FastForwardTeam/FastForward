@@ -288,7 +288,8 @@
 		"*://track.flexlinkspro.com/a.ashx?*",
 		"*://shareasale.com/r.cfm?*",
 		"*://shareasale-analytics.com/r.cfm?*",
-		"*://r20.rs6.net/tn.jsp?*"
+		"*://r20.rs6.net/tn.jsp?*",
+		"*://ay.link/i/*"
 	],
 	"ip_logger": [
 		"*://*.viral.over-blog.com/*",

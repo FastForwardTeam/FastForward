@@ -1430,6 +1430,19 @@ ensureDomLoaded(()=>{
 		awaitElement("span#goto > a[href]",a=>safelyNavigate(a.href))
 	}))
 	domainBypass("maukredit.online",()=>document.getElementById("wpsafe-link").children[0].click())
+	domainBypass("ay.link",()=>{
+		var form = $('#go-link')
+		$.ajax({
+				type: 'POST',
+				async: true,
+				url: form.attr('action'),
+				data: form.serialize() + '&token=' + app['token'],
+				dataType: 'json',
+				success: function(data) {
+					safelyNavigate(data.url);
+				}
+		});
+	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
