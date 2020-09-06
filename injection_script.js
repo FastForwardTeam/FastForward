@@ -13,7 +13,7 @@ transparentProperty=(name,valFunc)=>{
 	})
 },
 isGoodLink=link=>{
-	if(typeof link!="string"||link.split("#")[0]==location.href.split("#")[0]||link.substr(0,6)=="about:"||link.substr(0,11)=="javascript:")//jshint ignore:line
+	if(typeof link!="string"||link.split("#")[0]==location.href.split("#")[0]||link.substr(0,6)=="about:"||link.substr(0,11)=="javascript:")
 	{
 		return false
 	}
@@ -1475,11 +1475,9 @@ ensureDomLoaded(()=>{
 	}
 	for(let domain in soralink_data)
 	{
-		/*jshint ignore:start*/
 		domainBypass(domain,()=>document.querySelectorAll("a[href^='"+location.origin+"?"+soralink_data[domain]+"=']").forEach(a=>{
 			a.href+="#bypassClipboard="+a.href.split("?"+soralink_data[domain]+"=")[1]
 		}))
-		/*jshint ignore:end*/
 	}
 	domainBypass(/pahe\.(in|me|ph)/,()=>{
 		let e=""

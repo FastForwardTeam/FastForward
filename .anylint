@@ -1,7 +1,0 @@
-{
-	"html_has_js": false,
-	"php_has_html": false,
-	"json_severity": "failure",
-	"disable": ["html"],
-	"ignore": ["html/ace/", "html/uikit/"]
-}
