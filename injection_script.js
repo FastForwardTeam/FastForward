@@ -492,7 +492,6 @@ hrefBypass(/(uiz\.(io|app)|moon7\.xyz)\/go/,()=>{
 		const regex=/.*window\.location\.href = "(http[^"]+)";.*/
 		document.querySelectorAll("script").forEach(script=>{
 			let matches=regex.exec(script.textContent)
-			console.log(matches)
 			if(matches&&matches[1])
 			{
 				crowdPath(bypassClipboard)
@@ -983,7 +982,13 @@ ensureDomLoaded(()=>{
 		})
 	})
 	domainBypass(/linkpoi\.(in|cc)/,()=>ifElement("a.btn.btn-primary[href]",a=>safelyNavigate(a.href)))
-	domainBypass(/spacetica\.com|linegee\.net/,()=>ifElement("a.btn.btn-xs[href]",a=>safelyNavigate(a.href)))
+	domainBypass(/spacetica\.com|linegee\.net/,()=>ifElement("a.btn.btn-xs[href]",a=>setTimeout(()=>{
+		let matches=/.*location\.href = '(http[^"]+)';.*/.exec($._data(a,"events").click[0].handler)
+		if(matches&&matches[1])
+		{
+			safelyNavigate(matches[1])
+		}
+	},1000)))
 	domainBypass(/uiz\.(io|app)|moon7\.xyz/,()=>crowdBypass(()=>{
 		awaitElement("#go-adsredirect",f=>{
 			f.action+="#bypassClipboard="+location.pathname.substr(1)
