@@ -13,7 +13,7 @@ transparentProperty=(name,valFunc)=>{
 	})
 },
 isGoodLink=link=>{
-	if(typeof link!="string"||link.split("#")[0]==location.href.split("#")[0]||link.substr(0,6)=="about:"||link.substr(0,11)=="javascript:"||link.substr(0,26)=="https://google.com/search?q=")
+	if(typeof link!="string"||link.split("#")[0]==location.href.split("#")[0]||link.substr(0,6)=="about:"||link.substr(0,11)=="javascript:"||link.substr(0,28)=="https://google.com/search?q=")
 	{
 		return false
 	}
