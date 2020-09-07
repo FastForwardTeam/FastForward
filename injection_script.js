@@ -13,7 +13,7 @@ transparentProperty=(name,valFunc)=>{
 	})
 },
 isGoodLink=link=>{
-	if(typeof link!="string"||link.split("#")[0]==location.href.split("#")[0]||link.substr(0,6)=="about:"||link.substr(0,11)=="javascript:"||link.substr(0,28)=="https://google.com/search?q=")
+	if(typeof link!="string"||link.split("#")[0]==location.href.split("#")[0]||link.substr(0,6)=="about:"||link.substr(0,11)=="javascript:")
 	{
 		return false
 	}
@@ -982,14 +982,44 @@ ensureDomLoaded(()=>{
 		})
 	})
 	domainBypass(/linkpoi\.(in|cc)/,()=>ifElement("a.btn.btn-primary[href]",a=>safelyNavigate(a.href)))
-	domainBypass(/spacetica\.com|linegee\.net/,()=>ifElement("a.btn.btn-xs[href]",a=>setTimeout(()=>{
-		console.log("but I already know that you want to waste time, that's why this extension was made ;P")
-		let matches=/location\.href *= *'(http[^"]+)';/.exec($._data(a,"events").click[1].handler)
-		if(matches&&matches[1])
+	domainBypass(/spacetica\.com|linegee\.net/,()=>setTimeout(()=>{
+		console.log("Honestly, I was just gonna remove your bypass, because this was getting pretty boring, but you're talking big words.")
+		let links=[];
+		document.querySelectorAll("a.btn[href],a.btn-primary[href],a.btn-xs[href]").forEach(a=>{
+			links.push(a.href)
+			let click_handlers=$._data(a,"events").click
+			if(click_handlers)
+			{
+				click_handlers.forEach(f=>{
+					const r=/'.*(http[^']+)';/g
+					while(true)
+					{
+						let matches=r.exec(f.handler)
+						if(!matches)
+						{
+							break;
+						}
+						if(matches[1])
+						{
+							links.push(matches[1])
+						}
+					}
+				})
+			}
+		})
+		let true_i=-1;
+		for(let i=0;i<links.length;i++)
 		{
-			safelyNavigate(matches[1])
+			if(links[i].indexOf("google.com/search")==-1&&links[i].indexOf("/404")==-1)
+			{
+				true_i=true_i==-1?i:-2
+			}
 		}
-	},0)))
+		if(true_i>-1)
+		{
+			safelyNavigate(links[true_i])
+		}
+	},0))
 	domainBypass(/uiz\.(io|app)|moon7\.xyz/,()=>crowdBypass(()=>{
 		awaitElement("#go-adsredirect",f=>{
 			f.action+="#bypassClipboard="+location.pathname.substr(1)
