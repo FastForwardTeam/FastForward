@@ -983,11 +983,7 @@ ensureDomLoaded(()=>{
 	})
 	domainBypass(/linkpoi\.(in|cc)/,()=>ifElement("a.btn.btn-primary[href]",a=>safelyNavigate(a.href)))
 	domainBypass(/spacetica\.com|linegee\.net/,()=>ifElement("a.btn.btn-xs[href]",a=>setTimeout(()=>{
-		let matches=/.*location\.href += +'(http[^"]+)';.*/.exec($._data(a,"events").click[0].handler)
-		if(matches&&matches[1])
-		{
-			safelyNavigate(matches[1])
-		}
+		$._data(a,"events").click[0].handler({preventDefault:()=>{},originalEvent:{}})
 	},1000)))
 	domainBypass(/uiz\.(io|app)|moon7\.xyz/,()=>crowdBypass(()=>{
 		awaitElement("#go-adsredirect",f=>{
