@@ -982,7 +982,14 @@ ensureDomLoaded(()=>{
 		})
 	})
 	domainBypass(/linkpoi\.(in|cc)/,()=>ifElement("a.btn.btn-primary[href]",a=>safelyNavigate(a.href)))
-	domainBypass(/spacetica\.com|linegee\.net/,()=>ifElement("a.btn.btn-primary[href]",a=>safelyNavigate(a.href)))
+	domainBypass(/spacetica\.com|linegee\.net/,()=>ifElement("a.btn.btn-xs[href]",a=>setTimeout(()=>{
+		console.log("but I already know that you want to waste time, that's why this extension was made ;P")
+		let matches=/location\.href *= *'(http[^"]+)';/.exec($._data(a,"events").click[1].handler)
+		if(matches&&matches[1])
+		{
+			safelyNavigate(matches[1])
+		}
+	},0)))
 	domainBypass(/uiz\.(io|app)|moon7\.xyz/,()=>crowdBypass(()=>{
 		awaitElement("#go-adsredirect",f=>{
 			f.action+="#bypassClipboard="+location.pathname.substr(1)
