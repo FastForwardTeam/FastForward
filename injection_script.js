@@ -983,7 +983,6 @@ ensureDomLoaded(()=>{
 	})
 	domainBypass(/linkpoi\.(in|cc)/,()=>ifElement("a.btn.btn-primary[href]",a=>safelyNavigate(a.href)))
 	domainBypass(/spacetica\.com|linegee\.net/,()=>setTimeout(()=>{
-		console.log("Honestly, I was just gonna remove your bypass, because this was getting pretty boring, but you're talking big words.")
 		let links=[];
 		document.querySelectorAll("a.btn[href],a.btn-primary[href],a.btn-xs[href]").forEach(a=>{
 			links.push(a.href)
