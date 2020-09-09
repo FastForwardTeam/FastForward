@@ -2013,6 +2013,18 @@ ensureDomLoaded(()=>{
 			e.onclick=()=>safelyNavigate("https://javadl.oracle.com/webapps/download/GetFile/1.8.0_"+jre8[1]+"-b"+jre8[2]+"/"+jre8[3]+"/"+os_type+"-i586/"+jre8[4])
 		}
 	}))
+	domainBypass("genlink.cc",()=>{
+		$(".check-ad").append("<input name='step' value=2 type='hidden'>")
+		let b=$(".real-link")
+		if(b.attr("href"))
+		{
+			safelyNavigate(b.attr("href"))
+		}
+		else
+		{
+			b.click()
+		}
+	})
 	//Insertion point for bypasses detecting certain DOM elements. Bypasses here will no longer need to call ensureDomLoaded.
 	let t=document.querySelector("title")
 	if(!bypassed&&t)
