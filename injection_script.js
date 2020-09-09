@@ -1009,7 +1009,7 @@ ensureDomLoaded(()=>{
 		let true_i=-1;
 		for(let i=0;i<links.length;i++)
 		{
-			if(links[i].indexOf("google.com/search")==-1&&links[i].indexOf("/404")==-1&&!/^https?:\/\/.+\/[0-9a-f]{40,41}$/.exec(links[i]))
+			if(links[i].indexOf("google.com/search")==-1&&links[i].indexOf("/404")==-1&&!/^https?:\/\/.+\/[0-9a-f]{40,}$/.exec(links[i]))
 			{
 				true_i=true_i==-1?i:-2
 			}
