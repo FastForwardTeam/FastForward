@@ -1468,14 +1468,14 @@ ensureDomLoaded(()=>{
 	domainBypass("ay.link",()=>{
 		var form = $('#go-link')
 		$.ajax({
-				type: 'POST',
-				async: true,
-				url: form.attr('action'),
-				data: form.serialize() + '&token=' + app['token'],
-				dataType: 'json',
-				success: function(data) {
-					safelyNavigate(data.url);
-				}
+			type: 'POST',
+			async: true,
+			url: form.attr('action'),
+			data: form.serialize() + '&token=' + app['token'],
+			dataType: 'json',
+			success: function(data) {
+				safelyNavigate(data.url);
+			}
 		});
 	})
 	domainBypass("forex1pro.com",()=>safelyAssign("https://fx4vip.com"+location.pathname))
