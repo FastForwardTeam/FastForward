@@ -918,7 +918,7 @@ ensureDomLoaded(()=>{
 		document.querySelector("#captchaVerifiedStatus").click()
 		doTheThing(()=>doTheThing(()=>doTheThing(()=>document.querySelector("#template-contactform-submit").click())))
 	})
-	domainBypass(/^((www\.)?(((get-click2|informations-library|media-blue|akashirohige|aibouanimelink|wwwfotografgotlin)\.blogspot|business\.ominfoupdate|majidzhacker|citgratis|tekloggers|pro-bangla|ph\.(apps2app|samapkstore)|blog\.(hulblog|omgmusik|omglyrics))\.com|pastikan\.me|ph\.tpaste\.net|(blog\.infolanjutan|jkoding)\.xyz|(safe\.onbatch\.my|google-playss\.sdetectives)\.id|jackofnine\.site))$/,()=>{
+	domainBypass(/^((www\.)?(((get-click2|informations-library|media-blue|akashirohige|aibouanimelink|wwwfotografgotlin)\.blogspot|business\.ominfoupdate|majidzhacker|citgratis|tekloggers|pro-bangla|ph\.(apps2app|samapkstore)|blog\.(hulblog|omgmusik|omglyrics))\.com|(pastikan|belajar-bersama2)\.me|ph\.tpaste\.net|(blog\.infolanjutan|jkoding)\.xyz|(safe\.onbatch\.my|google-playss\.sdetectives)\.id|jackofnine\.site))$/,()=>{
 		let u=aesCrypto.decrypt(convertstr(location.href.substr(location.href.indexOf("?o=")+3)),convertstr("root"))
 		if(isGoodLink(u))
 		{
