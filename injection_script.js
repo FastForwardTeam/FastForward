@@ -2032,6 +2032,10 @@ ensureDomLoaded(()=>{
 		safelyNavigate(i.value)
 		finish()
 	},()=>domainBypass(/seputarinfomenarik\.com|(massardi|kribboy)\.xyz/,()=>ifElement("a#hapus",a=>safelyAssign(a.href))))
+	if(typeof megabux=="object"&&"link"in megabux)//acortaz.com#1460
+	{
+		safelyNavigate(megabux.link)
+	}
 	//Insertion point for bypasses detecting certain DOM elements. Bypasses here will no longer need to call ensureDomLoaded.
 	let t=document.querySelector("title")
 	if(!bypassed&&t)
