@@ -84,10 +84,10 @@ safelyAssign=target=>{
 },
 finish=()=>{
 	bypassed=true
-	document.documentElement.setAttribute("{{channel.stop_watching}}","")
+	docSetAttribute("{{channel.stop_watching}}","")
 },
 countIt=f=>{
-	document.documentElement.setAttribute("{{channel.count_it}}","")
+	docSetAttribute("{{channel.count_it}}","")
 	setTimeout(f,10)
 },
 domainBypass=(domain,f)=>{
@@ -182,13 +182,13 @@ awaitElement=(q,f)=>ensureDomLoaded(()=>{
 crowdPath=p=>{
 	if(crowdEnabled&&p)
 	{
-		document.documentElement.setAttribute("{{channel.crowd_path}}",p)
+		docSetAttribute("{{channel.crowd_path}}",p)
 	}
 },
 crowdReferer=r=>{
 	if(r)
 	{
-		document.documentElement.setAttribute("{{channel.crowd_referer}}",r)
+		docSetAttribute("{{channel.crowd_referer}}",r)
 	}
 },
 crowdBypass=(f,a)=>{
@@ -204,7 +204,7 @@ crowdBypass=(f,a)=>{
 		}
 		else
 		{
-			document.documentElement.setAttribute("{{channel.crowd_query}}","")
+			docSetAttribute("{{channel.crowd_query}}","")
 			let iT=setInterval(()=>{
 				if(document.documentElement.hasAttribute("{{channel.crowd_queried}}"))
 				{
@@ -232,7 +232,7 @@ crowdContribute=(target,f)=>{
 	}
 	if(crowdEnabled&&isGoodLink(target))
 	{
-		document.documentElement.setAttribute("{{channel.crowd_contribute}}",target)
+		docSetAttribute("{{channel.crowd_contribute}}",target)
 		setTimeout(f,10)
 	}
 	else
@@ -2134,7 +2134,7 @@ ensureDomLoaded(()=>{
 				},()=>crowdPath(location.hash.substr(1))))
 			})
 			domainBypass(/(atv|adlink)\.pw|safe\.mirrordown\.com|kabarviral\.blog/,()=>crowdPath(location.search.substr(1).split("=")[0]))
-			document.documentElement.setAttribute("{{channel.adlinkfly_info}}","")
+			docSetAttribute("{{channel.adlinkfly_info}}","")
 			let iT=setInterval(()=>{
 				if(document.documentElement.hasAttribute("{{channel.adlinkfly_target}}"))
 				{
