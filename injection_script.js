@@ -257,7 +257,7 @@ insertInfoBox=text=>ensureDomLoaded(()=>{
 	div.onclick=()=>document.body.removeChild(div)
 	document.body.appendChild(div)
 }),
-clipboard=c=>{
+backgroundScriptBypassClipboard=c=>{
 	if(c)
 	{
 		docSetAttribute("{{channel.bypass_clipboard}}",c)
@@ -667,6 +667,38 @@ domainBypass("an1.com",()=>{
 hrefBypass(/online-fix\.me\/ext\//,()=>{
 	window.setTimeout=f=>setTimeout(f,1)
 	awaitElement("#res > center > button.btn[onclick]",b=>b.onclick())
+})
+domainBypass(/pahe\.(in|me|ph)/,()=>{
+	let _addEventListener=window.addEventListener
+	window.addEventListener=(e,f)=>{
+		if(e=="load"&&f.toString().indexOf("[n*15];")!==-1)
+		{
+			_addEventListener(e,()=>eval("("+f.toString().split("[n*15];").join("[n*15]+'#bypassClipboard='+event.target.getAttribute('data-bypass-clipboard')")+")()"))
+		}
+		else
+		{
+			_addEventListener(e,f)
+		}
+	}
+	ensureDomLoaded(()=>document.querySelectorAll("acee").forEach(a=>{
+		let s=location.pathname.replace(/[^a-zA-Z0-9]/g,""),
+		ep=a.parentNode.querySelector("span[style] > b")
+		if(ep!==null)
+		{
+			s+=ep.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
+		}
+		qe=a.previousElementSibling
+		while(qe&&qe.tagName!="B"&&qe.tagName!="STRONG"&&qe.tagName!="BR")
+		{
+			qe=qe.previousElementSibling
+		}
+		if(qe!==null)
+		{
+			s+=(qe.tagName=="BR"?qe.previousSibling:qe).textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
+		}
+		s+=a.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
+		a.setAttribute("data-bypass-clipboard",s)
+	}))
 })
 //Insertion point for bypasses running before the DOM is loaded.
 domainBypass(/^((www\.)?((njiir|healthykk|linkasm|dxdrive|getwallpapers|sammobile|ydfile)\.com|(punchsubs|zedge|fex)\.net|k2s\.cc|muhammadyoga\.me|u\.to|skiplink\.io|(uploadfree|freeupload)\.info|fstore\.biz))$/,()=>window.setInterval=f=>setInterval(f,1))
@@ -1558,37 +1590,6 @@ ensureDomLoaded(()=>{
 			a.href+="#bypassClipboard="+a.href.split("?"+soralink_data[domain]+"=")[1]
 		}))
 	}
-	domainBypass(/pahe\.(in|me|ph)/,()=>{
-		let e=""
-		document.querySelectorAll("body *").forEach(a=>{
-			if(a.tagName.length>8)
-			{
-				e=a.tagName.toLowerCase()+","
-			}
-		})
-		e+="a[href*='?']"
-		document.querySelectorAll(e).forEach(a=>{
-			a.onclick=()=>{
-				let qe=a.previousElementSibling,s=""
-				while(qe&&qe.tagName!="B"&&qe.tagName!="STRONG"&&qe.tagName!="BR")
-				{
-					qe=qe.previousElementSibling
-				}
-				s+="#bypassClipboard="+location.pathname.replace(/[^a-zA-Z0-9]/g,"")
-				let ep=a.parentNode.querySelector("span[style] > b")
-				if(ep!==null)
-				{
-					s+=ep.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
-				}
-				if(qe!==null)
-				{
-					s+=(qe.tagName=="BR"?qe.previousSibling:qe).textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
-				}
-				s+=a.textContent.replace(/[^a-zA-Z0-9]/g,"").toLowerCase()
-				clipboard(s)
-			}
-		})
-	})
 	domainBypass("channelmyanmar.org",()=>document.querySelectorAll("a[href^='https://channelmyanmar.org?1c17f28bf0=']").forEach(a=>{
 		if(a.classList.contains("FLMBTN-Btn"))
 		{

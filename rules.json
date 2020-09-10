@@ -201,9 +201,6 @@
 	"param_data_base64": [
 		"*://*.magersari.web.id/?*"
 	],
-	"bypass_clipboard": [
-		"*://*.intercelestial.com/?id=*"
-	],
 	"useragent_googlebot": [
 		"*://*.haaretz.co.il/*",
 		"*://*.ceesty.com/*",
