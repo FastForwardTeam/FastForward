@@ -185,7 +185,7 @@ const updateBypassDefinitions = callback => {
 	const finishDownload = () => {
 		channel = {}
 		let uniqueness = []
-		;["stop_watching","count_it","crowd_referer","crowd_path","crowd_query","crowd_queried","crowd_contribute","adlinkfly_info","adlinkfly_target","bypass_clipboard"].forEach(name => {
+		;["stop_watching","count_it","crowd_referer","crowd_domain","crowd_path","crowd_query","crowd_queried","crowd_contribute","adlinkfly_info","adlinkfly_target","bypass_clipboard"].forEach(name => {
 			let val
 			do
 			{
@@ -294,7 +294,7 @@ refreshInjectionScript = () => {
 	if(enabled)
 	{
 		injectionScript = (upstreamInjectionScript + "\n" + userScript)
-		.split("UNIVERSAL_BYPASS_INTERNAL_VERSION").join("9")
+		.split("UNIVERSAL_BYPASS_INTERNAL_VERSION").join("10")
 		.split("UNIVERSAL_BYPASS_EXTERNAL_VERSION").join(extension_version)
 		.split("UNIVERSAL_BYPASS_INJECTION_VERSION").join(upstreamCommit?upstreamCommit.substr(0,7):"dev")
 		Object.keys(preflightRules).forEach(name=>{

@@ -17,6 +17,13 @@ if(document instanceof HTMLDocument)
 		ignoreCrowdBypass=true
 		location.hash=location.hash.substr(0,location.hash.length-18)
 	}
+	const simplifyDomain=domain=>{
+		if(domain.substr(0,4)=="www.")
+		{
+			domain=domain.substr(4)
+		}
+		return domain
+	}
 	const brws=(typeof browser=="undefined"?chrome:browser)
 	brws.runtime.sendMessage({type: "content"}, res => {
 		if(!res.enabled)
@@ -39,6 +46,11 @@ if(document instanceof HTMLDocument)
 			{
 				referer=document.documentElement.getAttribute(channel.crowd_referer)
 				document.documentElement.removeAttribute(channel.crowd_referer)
+			}
+			else if(document.documentElement.hasAttribute(channel.crowd_domain))
+			{
+				domain=simplifyDomain(document.documentElement.getAttribute(channel.crowd_domain))
+				document.documentElement.removeAttribute(channel.crowd_domain)
 			}
 			else if(document.documentElement.hasAttribute(channel.crowd_path))
 			{
@@ -101,13 +113,9 @@ if(document instanceof HTMLDocument)
 		})
 		observer.observe(document.documentElement, {attributes: true})
 
-		let domain=location.hostname,
+		let domain=simplifyDomain(location.hostname),
 		crowdPath=location.pathname.substr(1),
 		referer=location.href
-		if(domain.substr(0,4)=="www.")
-		{
-			domain=domain.substr(4)
-		}
 		if(domain=="api.rurafs.me")
 		{
 			return

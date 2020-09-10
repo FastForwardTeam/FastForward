@@ -179,6 +179,12 @@ awaitElement=(q,f)=>ensureDomLoaded(()=>{
 	},10)
 	setInterval(()=>clearInterval(t),30000)
 }),
+crowdDomain=d=>{
+	if(crowdEnabled&&d)
+	{
+		docSetAttribute("{{channel.crowd_domain}}",d)
+	}
+},
 crowdPath=p=>{
 	if(crowdEnabled&&p)
 	{
@@ -1541,6 +1547,10 @@ ensureDomLoaded(()=>{
 			b.click()
 		}
 	})
+	hrefBypass(/psarips\.(com|net|org|eu|in|one|xyz)\/exit\//,()=>ifElement("form[name='redirect']",f=>{
+		window.stop()
+		safelyAssign(f.action+"#bypassClipboard=psarips:"+location.pathname.substr(6))
+	}))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
@@ -2143,6 +2153,11 @@ ensureDomLoaded(()=>{
 					let t=document.documentElement.getAttribute("{{channel.adlinkfly_target}}")
 					if(t=="")
 					{
+						if(UNIVERSAL_BYPASS_INTERNAL_VERSION>=10&&bypassClipboard.substr(0,8)=="psarips:")
+						{
+							crowdDomain("psarips.com")
+							crowdPath("/exit/"+bypassClipboard.substr(8))
+						}
 						crowdBypass(()=>{
 							let cT=setInterval(()=>{
 								let a=document.querySelector("a.get-link[href]:not([href='']):not([href*='.ads.']):not([href*='//ads.']):not(.disabled), .skip-ad a[href]:not([href='']):not([href*='.ads.']):not([href*='//ads.'])"),h
