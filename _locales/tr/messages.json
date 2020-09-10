@@ -18,7 +18,7 @@
 		"message": "Değişiklik listesi"
 	},
 	"update": {
-		"message": "Güncellemeleri kontrol et"
+		"message": "Güncellemeleri denetle"
 	},
 	"updating": {
 		"message": "Baypas tanımları indiriliyor ..."
@@ -33,7 +33,7 @@
 		"message": "Sıkça Sorulan Sorular (SSS)"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass sizin için şimdiye kadar % siteyi es geçti."
+		"message": "Universal Bypass sizin için şimdiye kadar % siteyi baypas etti."
 	},
 	"support": {
 		"message": "Universal Bypass'ı Destekleyin"
@@ -60,7 +60,7 @@
 		"message": "Eğer es geçilemezse IP kayıtçılarını engelle."
 	},
 	"optionsCrowdBypass": {
-		"message": "Es geçilemeyen adres kısaltıcıların hedeflerini geliştiriciyle paylaş."
+		"message": "Baypas edilemeyen adres kısaltıcıların hedeflerini geliştiriciyle paylaş."
 	},
 	"optionsCrowdAutoOpen": {
 		"message": "Kitle kaynaklı hedefleri % saniye sonra yeni bir sekmede aç. (0 = hemen.)"
@@ -87,13 +87,13 @@
 		"message": "Hedefiniz %"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "Ancak, şimdi gezinirseniz Evrensel Es Geçmeyi algılarlar."
+		"message": "Hemen geçerseniz, bu web sitesi Universal Bypass'i algılayacaktır."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "% saniye içerisinde farkedliymeyeceksiniz."
+		"message": "% saniye sonra fark edilmeyeceksiniz."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
-		"message": "1 saniye içerisinde farkedliymeyeceksiniz."
+		"message": "1 saniye içerisinde fark edilmeyeceksiniz."
 	},
 	"beforeNavigateTimer": {
 		"message": "% saniye içinde otomatik olarak yönlendirileceksiniz."
@@ -105,7 +105,7 @@
 		"message": "Hemen mi yoksa x saniye içinde mi yönlendirilmek istersiniz?"
 	},
 	"beforeNavigateInstant": {
-		"message": "% Adresine yönlendiriliyorsunuz"
+		"message": "% adresine yönlendiriliyorsunuz"
 	},
 	"infoLinkvertise": {
 		"message": "Bu web sitesini atlamamıza izin verilmiyor, ancak en can sıkıcı adımlarının kaldırılması konusunda görüştük."
@@ -120,10 +120,10 @@
 		"message": "Maalesef, bu bağlantıyla ilk karşılaşan sizsiniz, ancak siz bekledikten sonra, diğer Universal Bypass kullanıcılarının artık buna ihtiyacı kalmayacak."
 	},
 	"crowdDisabled": {
-		"message": "Bu web sitesi, seçeneklerde devre dışı bıraktığınız kitle bypass tarafından bypass edilmektedir."
+		"message": "Bu web sitesi, ayarlarda devre dışı bıraktığınız kitle baypası tarafından baypas edilmektedir."
 	},
 	"crowdBypassed": {
-		"message": "Beklemek zorunda kalmayabilirsiniz!"
+		"message": "Beklemek zorunda değilsiniz!"
 	},
 	"crowdBypassedInfo": {
 		"message": "Diğer Universal Bypass kullanıcıları sizin yerinize zaten beklediler ve bunun şuraya yönlendiğini bildirdiler: %"
