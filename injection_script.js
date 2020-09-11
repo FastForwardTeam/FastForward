@@ -268,7 +268,11 @@ backgroundScriptBypassClipboard=c=>{
 	{
 		docSetAttribute("{{channel.bypass_clipboard}}",c)
 	}
-}
+},
+persistHash=h=>ensureDomLoaded(()=>{
+	document.querySelectorAll("form[action]").forEach(e=>e.action+="#"+h)
+	document.querySelectorAll("a[href]").forEach(e=>e.href+="#"+h)
+})
 let navigated=false,
 bypassed=false,
 domain=location.hostname,
@@ -722,8 +726,7 @@ domainBypass("universal-bypass.org",()=>{
 ensureDomLoaded(()=>{
 	if(ignoreCrowdBypass)
 	{
-		document.querySelectorAll("form[action]").forEach(e=>e.action+="#ignoreCrowdBypass")
-		document.querySelectorAll("a[href]").forEach(e=>e.href+="#ignoreCrowdBypass")
+		persistHash("ignoreCrowdBypass")
 	}
 	domainBypass(/^((www\.)?(file(factory|-upload)\.com|up-load\.io|cosmobox\.org|rockfile\.co))$/,()=>insertInfoBox("{{msg.infoFileHoster}}"))
 	domainBypass(/linkvertise\.(com|net)|link-to\.net/,()=>insertInfoBox(UNIVERSAL_BYPASS_INTERNAL_VERSION>=9?"{{msg.infoLinkvertise}}":"We're not allowed to bypass this website but we have negotiated the removal of their most annoying steps."))
@@ -2155,6 +2158,7 @@ ensureDomLoaded(()=>{
 					{
 						if(UNIVERSAL_BYPASS_INTERNAL_VERSION>=10&&bypassClipboard.substr(0,8)=="psarips:")
 						{
+							persistHash("bypassClipboard="+bypassClipboard)
 							crowdDomain("psarips.com")
 							crowdPath("/exit/"+bypassClipboard.substr(8))
 						}
