@@ -55,7 +55,8 @@
 		"*://*.adfoc.us/serve/sitelinks/?*",
 		"*://*.made-by.org/redirection/?url=*",
 		"*://*.itsbx.com/redirect/?url=*",
-		"*://*.forocoches.com/link.php?url=*"
+		"*://*.forocoches.com/link.php?url=*",
+		"*://*.pixiv.net/jump.php?url=*"
 	],
 	"param_xurl_raw_http": [
 		"*://bluemediafiles.com/*?xurl=*"
