@@ -1554,6 +1554,12 @@ ensureDomLoaded(()=>{
 		window.stop()
 		safelyAssign(f.action+"#bypassClipboard=psarips:"+location.pathname.substr(6))
 	}))
+	domainBypass("rekonise.com",()=>{
+		let xhr=new XMLHttpRequest()
+		xhr.onload=()=>safelyNavigate(JSON.parse(xhr.responseText).url)
+		xhr.open("GET","https://api.rekonise.com/unlocks"+location.pathname,true)
+		xhr.send()
+	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
