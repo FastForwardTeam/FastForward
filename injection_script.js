@@ -1560,6 +1560,12 @@ ensureDomLoaded(()=>{
 		xhr.open("GET","https://api.rekonise.com/unlocks"+location.pathname,true)
 		xhr.send()
 	})
+	domainBypass("jwfinancas.club",()=>{
+		ifElement("a.btn-primary[href]", a => {
+		safelyAssign(a.href)
+	        	},()=>{
+        	})
+	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
