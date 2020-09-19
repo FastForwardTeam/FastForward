@@ -1135,7 +1135,7 @@ ensureDomLoaded(()=>{
 			safelyNavigate(o.substr(24,o.length-3))
 		})
 	})
-	domainBypass(/terbit21\.(club|online|host|show|top|cool|fun|stream)|movies21\.asia/,()=>ifElement("a#downloadbutton[href]",a=>countIt(safelyAssign(a.href))))
+	domainBypass(/(terbit|movies)21\.[a-z]+/,()=>ifElement("a#downloadbutton[href]",a=>countIt(()=>safelyAssign(a.href))))
 	domainBypass("onepieceex.net",()=>ifElement("noscript",n=>safelyNavigate(n.textContent)))
 	domainBypass("felanovia.com",()=>ifElement("form",f=>countIt(()=>f.submit())))
 	domainBypass("redir.animenine.net",()=>ifElement("a#lanjutkeun[href]",a=>safelyNavigate(a.href)))
