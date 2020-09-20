@@ -1561,6 +1561,7 @@ ensureDomLoaded(()=>{
 		xhr.send()
 	})
 	domainBypass("jwfinancas.club",()=>ifElement("a.btn-primary[href]",a=>safelyAssign(a.href)))
+	domainBypass("saver.id",()=>ifElement("input[name='ouyeah']",i=>safelyAssign(i.value)))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
