@@ -1466,10 +1466,10 @@ ensureDomLoaded(()=>{
 		ifElement("form[id='1']",f=>f.submit())
 		bypassed=false
 	})
-	domainBypass(/(fcdot|fcc)\.lc/,()=>ifElement("form#form",()=>{
+	domainBypass(/(fcdot|fcc)\.lc|fc-lc\.com/,()=>ifElement("form#form",()=>{
 		window.setInterval=f=>setInterval(f,100)
 		ifElement(".btn-captcha",b=>setTimeout(()=>b.parentNode.submit(),3000),()=>awaitElement("a#surl[href]:not(.disabled)",a=>safelyNavigate(a.href)))
-	}))
+	},()=>ifElement("form#submit_data",f=>f.submit())))
 	domainBypass("dl.helow.id",()=>ifElement("button#btn6",b=>b.onclick()))
 	domainBypass("dl.ocanoke.com",()=>{
 		crowdPath(location.pathname.split("/").pop())
