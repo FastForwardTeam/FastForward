@@ -2057,6 +2057,20 @@ ensureDomLoaded(()=>{
 	{
 		safelyNavigate(megabux.link)
 	}
+	//dl.ccbluex.net
+	domainBypass("dl.ccbluex.net", () => {
+    		ifElement("div.top-bar", content => {
+        		if (location.pathname.substring(0, 6) == "/skip/") {
+            			var skipButton = _("skip-button");
+            			skipButton.disabled = false;
+            			skipButton.click();
+        		}
+    		}, () => {
+        		if (location.pathname.substring(0, 6) == "/skip/") {
+            			location.reload();
+        		}
+    		})
+	})
 	//Insertion point for bypasses detecting certain DOM elements. Bypasses here will no longer need to call ensureDomLoaded.
 	let t=document.querySelector("title")
 	if(!bypassed&&t)
