@@ -2058,7 +2058,11 @@ ensureDomLoaded(()=>{
 	ifElement("input[type='hidden'][name='mylink'][value^='http']",i=>{//#549
 		safelyNavigate(i.value)
 		finish()
-	},()=>domainBypass(/seputarinfomenarik\.com|(massardi|kribboy)\.xyz/,()=>ifElement("a#hapus",a=>safelyAssign(a.href))))
+	})
+	if(document.querySelector("a[href='https://facebook.com/realsht.mobi']"))
+	{
+		ifElement("a#hapus",a=>safelyAssign(a.href))
+	}
 	if(typeof megabux=="object"&&"link"in megabux)//acortaz.com#1460
 	{
 		safelyNavigate(megabux.link)
