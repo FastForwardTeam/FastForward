@@ -1075,13 +1075,14 @@ ensureDomLoaded(()=>{
 		countIt(()=>f.submit())
 	})
 	domainBypass("xxx.lewd.ninja",()=>safelyNavigate(document.body.textContent))
-	domainBypass(/tr\.link|movienear\.me|lewat\.club|tautan\.pro|(droidtamvan|gubukbisnis|onlinecorp)\.me|(liveshootv|modebaca|haipedia|sekilastekno|miuiku)\.com|shrink\.world|link\.mymastah\.xyz|(sportif|cararoot)\.id/,()=>{
+	domainBypass(/tr\.link|movienear\.me|lewat\.club|tautan\.pro|(droidtamvan|gubukbisnis|onlinecorp)\.me|(liveshootv|modebaca|haipedia|sekilastekno|miuiku)\.com|shrink\.world|link\.mymastah\.xyz|(sportif|cararoot)\.id|(fcdot|fcc)\.lc/,()=>{
 		if(typeof app_vars=="undefined")
 		{
 			app_vars={}
 		}
 		bypassed=false
 	})
+	domainBypass("fc-lc.com",()=>crowdBypass())
 	domainBypass("lompat.in",()=>{
 		window.open=u=>{
 			if(u.substr(0,28)=="http://henpoi.lompat.in/?go="&&u.substr(-4)=="&s=1")
@@ -1466,10 +1467,6 @@ ensureDomLoaded(()=>{
 		ifElement("form[id='1']",f=>f.submit())
 		bypassed=false
 	})
-	domainBypass(/(fcdot|fcc)\.lc|fc-lc\.com/,()=>ifElement("form#form",()=>{
-		window.setInterval=f=>setInterval(f,100)
-		ifElement(".btn-captcha",b=>setTimeout(()=>b.parentNode.submit(),3000),()=>awaitElement("a#surl[href]:not(.disabled)",a=>safelyNavigate(a.href)))
-	},()=>ifElement("form#submit_data",f=>f.submit())))
 	domainBypass("dl.helow.id",()=>ifElement("button#btn6",b=>b.onclick()))
 	domainBypass("dl.ocanoke.com",()=>{
 		crowdPath(location.pathname.split("/").pop())
