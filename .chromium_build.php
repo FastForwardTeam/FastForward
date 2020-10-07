@@ -37,7 +37,7 @@ function createZip($file)
 $build = createZip("Universal Bypass for Chromium-based browsers.zip");
 foreach($index as $fn)
 {
-	if($fn == "README.md" || $fn == "injection_script.js" || $fn == "rules.json" || $fn == "Universal Bypass for Netscape Navigator.zip")
+	if($fn == "README.md" || $fn == "injection_script.js" || $fn == "rules.json" || $fn == "Universal Bypass for Firefox.zip")
 	{
 		continue;
 	}
