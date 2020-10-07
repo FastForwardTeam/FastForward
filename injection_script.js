@@ -2188,8 +2188,8 @@ ensureDomLoaded(()=>{
 							crowdPath("/exit/"+bypassClipboard.substr(8))
 						}
 						crowdBypass(()=>{
-							let cT=setInterval(()=>{
-								let a=document.querySelector("a.get-link[href]:not([href='']):not([href*='.ads.']):not([href*='//ads.']):not(.disabled), .skip-ad a[href]:not([href='']):not([href*='.ads.']):not([href*='//ads.'])"),h
+							let cT=setInterval(()=>{//                                                                                                                                                                               v spotted on fc-lc.com
+								let a=document.querySelector("a.get-link[href]:not([href='']):not([href*='.ads.']):not([href*='//ads.']):not(.disabled), .skip-ad a[href]:not([href='']):not([href*='.ads.']):not([href*='//ads.']), a#surl[href]:not([href='']):not([href*='.ads.']):not([href*='//ads.'])"),h
 								if(a)
 								{
 									h=a.href
