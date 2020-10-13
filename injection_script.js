@@ -1565,6 +1565,7 @@ ensureDomLoaded(()=>{
 		insertInfoBox("{{msg.infoFileHoster}}")
 	})
 	domainBypass("links.shortenbuddy.com",()=>safelyAssign(location.href.replace("links.","")))
+	domainBypass("anon.to",()=>ifElement("#redirect_button",a=>safelyNavigate(a.href)))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
