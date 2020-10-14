@@ -382,13 +382,16 @@ ODP(window,"safelink",
 		return actual_safelink
 	}
 })
-for(let key in forced_safelink)
+if(typeof safelink!="undefined")
 {
-	ODP(safelink,key,
+	for(let key in forced_safelink)
 	{
-		writable:false,
-		value:forced_safelink[key]
-	})
+		ODP(safelink,key,
+		{
+			writable:false,
+			value:forced_safelink[key]
+		})
+	}
 }
 //Soralink Wordpress Plugin
 ODP(window,"soralink",{
