@@ -1381,7 +1381,7 @@ ensureDomLoaded(()=>{
 		}
 	}))
 	domainBypass("tricxbd.com",()=>ifElement("a#get_btn[href]",a=>safelyAssign(a.href)))
-	domainBypass(/customercareal\.com|(eduinstruct|medific)\.net/,()=>{
+	domainBypass(/customercareal\.com|(eduinstruct|medific|newswala)\.net/,()=>{
 		let i=location.search.indexOf("&page=")
 		if(i>0)
 		{
@@ -1431,7 +1431,6 @@ ensureDomLoaded(()=>{
 	domainBypass("jk-chat.com",()=>safelyNavigate(atob(location.hash.substr(1))))
 	domainBypass("shorten.sh",()=>crowdBypass(()=>ifElement("#go-link",()=>awaitElement("#go-link.go-link",f=>$.post(f.action,$("#go-link").serialize(),d=>contributeAndNavigate(d.url))))))
 	domainBypass("urapk.com",()=>ifElement("#ed_dl_link > a[href]",a=>safelyNavigate(a.href)))
-	domainBypass("ua.techweft.com",()=>ifElement("a.ui.primary.large.button[href]",a=>safelyNavigate(a.href)))
 	domainBypass("expertvn.com",()=>{
 		crowdPath(location.hash.substr(1))
 		crowdBypass(()=>ifElement("form.captcha[action='?']",f=>{
