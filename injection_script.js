@@ -1577,6 +1577,7 @@ ensureDomLoaded(()=>{
 	domainBypass("links.shortenbuddy.com",()=>safelyAssign(location.href.replace("links.","")))
 	domainBypass("anon.to",()=>ifElement("#redirect_button",a=>safelyNavigate(a.href)))
 	domainBypass("dl-protect1.co",()=>ifElement("#form_link",f=>f.submit(),()=>ifElement(".lienet > a[href]",a=>safelyNavigate(a.href))))
+	domainBypass("linkdoni.soft98.ir",()=>ifElement(".actions a[href].button.primary",a=>safelyNavigate(a.href)))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
