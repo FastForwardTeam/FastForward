@@ -27,13 +27,16 @@ isGoodLink=link=>{
 	}
 	return true
 },
+unsafelyAssign=target=>{
+	navigated=true
+	window.onbeforeunload=null
+	location.assign(target)
+},
 unsafelyNavigate=target=>{
 	if(navigated)
 	{
 		return
 	}
-	navigated=true
-	window.onbeforeunload=null
 	//The background script will intercept the request and redirect to html/before-navigate.html or to the target depending on the user's settings.
 	let url="https://universal-bypass.org/bypassed?target="+encodeURIComponent(target)+"&referer="+encodeURIComponent(referer)
 	switch(target)//All values here have been tested using "Take me to destinations after 0 seconds."
@@ -50,7 +53,7 @@ unsafelyNavigate=target=>{
 		url+="&safe_in=20"
 		break;
 	}
-	location.assign(url)
+	unsafelyAssign(url)
 },
 parseTarget=target=>target instanceof HTMLAnchorElement?target.href:target,
 safelyNavigate=(target,drophash)=>{
@@ -80,9 +83,7 @@ safelyAssign=target=>{
 	{
 		target+=location.hash
 	}
-	navigated=true
-	window.onbeforeunload=null
-	location.assign(target)
+	unsafelyAssign(target)
 	return true
 },
 finish=()=>{
