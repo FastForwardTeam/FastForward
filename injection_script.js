@@ -1582,13 +1582,10 @@ ensureDomLoaded(()=>{
 	domainBypass("anon.to",()=>ifElement("#redirect_button",safelyNavigate))
 	domainBypass("dl-protect1.co",()=>ifElement("#form_link",f=>f.submit(),()=>ifElement(".lienet > a[href]",safelyNavigate)))
 	domainBypass("linkdoni.soft98.ir",()=>ifElement(".actions a[href].button.primary",safelyNavigate))
-	domainBypass("stfly.me",()=>{
-		ifElement("form#submit_data",f=>f.submit(),()=>ifElement("form#myform",f=>{
-			referer=f.action
-			safelyAssign(location.href)
-		}))
-		bypassed=false
-	})
+	domainBypass("stfly.me",()=>ifElement("form#submit_data",f=>f.submit(),()=>ifElement("form#myform",f=>{
+		referer=f.action
+		unsafelyNavigate(location.href)
+	})))
 	domainBypass("nbyts.online",()=>ifElement("form#form button[type='submit']",s=>{
 		s.removeAttribute("disabled")
 		s.click()
