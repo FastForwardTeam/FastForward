@@ -1589,6 +1589,10 @@ ensureDomLoaded(()=>{
 		}))
 		bypassed=false
 	})
+	domainBypass("nbyts.online",()=>ifElement("form#form button[type='submit']",s=>{
+		s.removeAttribute("disabled")
+		s.click()
+	},()=>ifElement("a[href].btn-success",a=>safelyAssign(a.href))))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
