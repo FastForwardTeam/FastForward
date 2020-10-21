@@ -1585,7 +1585,7 @@ ensureDomLoaded(()=>{
 	domainBypass("stfly.me",()=>ifElement("form#submit_data",f=>f.submit(),()=>ifElement("form#myform",f=>{
 		referer=f.action
 		unsafelyNavigate(location.href)
-	})))
+	}),()=>bypassed=false))
 	domainBypass("nbyts.online",()=>ifElement("form#form button[type='submit']",s=>{
 		s.removeAttribute("disabled")
 		s.click()
