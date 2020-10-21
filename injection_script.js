@@ -94,6 +94,13 @@ countIt=f=>{
 	docSetAttribute("{{channel.count_it}}","")
 	setTimeout(f,10)
 },
+keepLooking=f=>{
+	bypassed=false
+	if(typeof f=="function")
+	{
+		f()
+	}
+}
 domainBypass=(domain,f)=>{
 	if(bypassed)
 	{
@@ -1087,7 +1094,7 @@ ensureDomLoaded(()=>{
 		{
 			app_vars={}
 		}
-		bypassed=false
+		keepLooking()
 	})
 	domainBypass("fc-lc.com",()=>crowdBypass())
 	domainBypass("lompat.in",()=>{
@@ -1477,10 +1484,7 @@ ensureDomLoaded(()=>{
 		}
 	})
 	domainBypass("welcome.indihome.co.id",()=>ifElement("div.button-lanjut",a=>a.click()))
-	domainBypass("techrfour.com",()=>{
-		ifElement("form[id='1']",f=>f.submit())
-		bypassed=false
-	})
+	domainBypass("techrfour.com",()=>keepLooking(()=>ifElement("form[id='1']",f=>f.submit())))
 	domainBypass("dl.helow.id",()=>ifElement("button#btn6",b=>b.onclick()))
 	domainBypass("dl.ocanoke.com",()=>{
 		crowdPath(location.pathname.split("/").pop())
@@ -1582,10 +1586,10 @@ ensureDomLoaded(()=>{
 	domainBypass("anon.to",()=>ifElement("#redirect_button",safelyNavigate))
 	domainBypass("dl-protect1.co",()=>ifElement("#form_link",f=>f.submit(),()=>ifElement(".lienet > a[href]",safelyNavigate)))
 	domainBypass("linkdoni.soft98.ir",()=>ifElement(".actions a[href].button.primary",safelyNavigate))
-	domainBypass("stfly.me",()=>ifElement("form#submit_data",f=>f.submit(),()=>ifElement("form#myform",f=>{
+	domainBypass("stfly.me",()=>keepLooking(()=>ifElement("form#submit_data",f=>f.submit(),()=>ifElement("form#myform",f=>{
 		referer=f.action
 		unsafelyNavigate(location.href)
-	}),()=>bypassed=false))
+	}))))
 	domainBypass("nbyts.online",()=>ifElement("form#form button[type='submit']",s=>{
 		s.removeAttribute("disabled")
 		s.click()
