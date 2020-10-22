@@ -292,6 +292,10 @@
 		"*://r20.rs6.net/tn.jsp?*",
 		"*://ay.link/i/*"
 	],
+	"tracker_force_http": [
+		"ow.ly",
+		"nzn.me"
+	],
 	"ip_logger": [
 		"*://*.viral.over-blog.com/*",
 		"*://*.gyazo.in/*",

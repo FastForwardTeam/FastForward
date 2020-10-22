@@ -522,10 +522,12 @@ function resolveRedirect(url)
 		if(json&&json.destination)
 		{
 			destination=json.destination
-			if(destination.substr(0,14)=="https://ow.ly/")
-			{
-				destination="http://ow.ly/"+destination.substr(14)
-			}
+			preflightRules.tracker_force_http.forEach(domain=>{
+				if(destination.substr(0,9+domain.length)=="https://"+domain+"/")
+				{
+					destination="http://"+domain+"/"+destination.substr(9+domain.length)
+				}
+			})
 		}
 	}
 	xhr.open("GET","https://apimon.de/redirect/"+encodeURIComponent(url),false)
