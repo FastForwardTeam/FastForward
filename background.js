@@ -791,6 +791,13 @@ onBeforeSendHeaders_rules = {
 			})
 			return {requestHeaders: details.requestHeaders}
 		}
+	},
+	useragent_empty: details => {
+		details.requestHeaders.push({
+			name: "User-Agent",
+			value: ""
+		})
+		return {requestHeaders: details.requestHeaders}
 	}
 },
 onHeadersReceived_rules = {

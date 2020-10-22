@@ -1507,12 +1507,6 @@ ensureDomLoaded(()=>{
 	}))
 	domainBypass("favpng.com",()=>ifElement("div#countdown",()=>safelyNavigate("https://files.favpng.com/api_download.php?k="+location.pathname.substr(14))))
 	domainBypass("sh.st",()=>ifElement("[data-translate='block_headline']",()=>location.hostname="ceesty.com"))
-	domainBypass(/(ceesty|corneey|destyy|festyy|gestyy|clkmein|cllkme|jnw0|xiw34)\.com|(viid|clkme|wiid)\.me/,()=>{
-		if(typeof postCaptchaResponse=="function")
-		{
-			postCaptchaResponse(location.href,"")
-		}
-	})
 	domainBypass("adshrink.it",()=>{
 		let iT=setInterval(()=>{
 			if(typeof window[___reactjsD.o]=="object"&&typeof window[___reactjsD.o].dest=="string")

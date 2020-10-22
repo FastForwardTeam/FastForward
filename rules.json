@@ -206,7 +206,12 @@
 		"*://*.magersari.web.id/?*"
 	],
 	"useragent_googlebot": [
-		"*://*.haaretz.co.il/*",
+		"*://*.haaretz.co.il/*"
+	],
+	"useragent_chrome": [
+		"*://*.fluxteam.xyz/*"
+	],
+	"useragent_empty": [
 		"*://*.ceesty.com/*",
 		"*://*.corneey.com/*",
 		"*://*.destyy.com/*",
@@ -220,9 +225,6 @@
 		"*://*.xiw34.com/*",
 		"*://*.clkme.me/*",
 		"*://*.wiid.me/*"
-	],
-	"useragent_chrome": [
-		"*://*.fluxteam.xyz/*"
 	],
 	"redirect_persist_id_path": [
 		"*://*.bercara.com/*",
