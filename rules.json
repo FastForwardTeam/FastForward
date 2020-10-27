@@ -56,7 +56,8 @@
 		"*://*.made-by.org/redirection/?url=*",
 		"*://*.itsbx.com/redirect/?url=*",
 		"*://*.forocoches.com/link.php?url=*",
-		"*://*.pixiv.net/jump.php?url=*"
+		"*://*.pixiv.net/jump.php?url=*",
+		"*://hdblurayindir.com/git.php?url=*"
 	],
 	"param_q_encoded": [
 		"*://*.youtube.com/redirect?*"
