@@ -1400,12 +1400,14 @@ ensureDomLoaded(()=>{
 	}))
 	domainBypass("tricxbd.com",()=>ifElement("a#get_btn[href]",safelyAssign))
 	domainBypass(/customercareal\.com|(eduinstruct|medific|newswala)\.net/,()=>{
-		let i=location.search.indexOf("&page=")
-		if(i>0)
+		if(document.querySelector('.navbar-brand').innerText=="Do2Unlock")
 		{
-			ifElement("a[href]#locked_link",safelyNavigate,()=>{
-				location.search=location.search.substr(0,i+6)+(parseInt(location.search.substr(i+6))+1)
-			})
+			const searchParams=new URLSearchParams(location.search)
+			if(searchParams.get("page")==1)
+			{
+				location.href=location.href.replace("page=1", "page=3")
+			}
+			safelyNavigate(document.querySelectorAll('[type="text/javascript"]')[6].innerText.split('f\", \"')[1].split("\")")[0])
 		}
 	})
 	domainBypass("iloadit11.info",()=>ifElement("button#timerbtn",()=>{
