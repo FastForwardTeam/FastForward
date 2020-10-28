@@ -123,7 +123,8 @@
 		"*://*.novicearea.com/*/?url=*",
 		"*://*.dikatekno.com/go/?url=*",
 		"*://*.blackmod.net/dl/?url=*",
-		"*://*.hulblog.com/*/?url=*"
+		"*://*.hulblog.com/*/?url=*",
+		"*://*.nyantaidulu.com/linknya/?url=*"
 	],
 	"param_id_base64": [
 		"*://*/p/*.html?id=*",
@@ -204,7 +205,9 @@
 		"*://*.instant-hack.to/redirect*?to=*"
 	],
 	"param_data_base64": [
-		"*://*.magersari.web.id/?*"
+		"*://*.magersari.web.id/?*",
+		"*://zodiark.xyz/?data=*",
+		"*://rahwana.xyz/?data=*"
 	],
 	"useragent_googlebot": [
 		"*://*.haaretz.co.il/*"
