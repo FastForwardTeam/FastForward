@@ -1428,7 +1428,6 @@ ensureDomLoaded(()=>{
 		},500)
 	}))
 	domainBypass("linkconfig.com",()=>ifElement("a#download[href]",safelyNavigate))
-	domainBypass("yourtechnology.online",()=>ifElement("#meio > a[href]",safelyAssign))
 	domainBypass("suanoticia.online",()=>ifElement("#meio > a[href]",safelyNavigate))
 	hrefBypass(/crxne\.de\/crxneunlock\/crxne\/download\//,()=>safelyNavigate("https://crxne.de/crxneunlock/crxne/download/links/downloadlinks.html"))
 	domainBypass("shre.su",()=>{
