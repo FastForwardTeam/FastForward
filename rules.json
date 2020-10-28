@@ -293,7 +293,8 @@
 		"*://shareasale.com/r.cfm?*",
 		"*://shareasale-analytics.com/r.cfm?*",
 		"*://r20.rs6.net/tn.jsp?*",
-		"*://ay.link/i/*"
+		"*://ay.link/i/*",
+		"*://*.disq.us/url?url=*"
 	],
 	"tracker_force_http": [
 		"ow.ly",
