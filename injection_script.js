@@ -1595,6 +1595,7 @@ ensureDomLoaded(()=>{
 		s.removeAttribute("disabled")
 		s.click()
 	},()=>ifElement("a[href].btn-success",safelyAssign)))
+	domainBypass("tecknity.com",()=>{if(typeof counter!="undefined")counter=0})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
