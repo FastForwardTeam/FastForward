@@ -59,6 +59,15 @@
 	"optionsBlockIPLoggers": {
 		"message": "Blokuoti \"IP loggers\", jei jų neįmanoma apeiti."
 	},
+	"optionsCrowdBypass": {
+		"message": "Minios praleidimas: nurodykite ir pasiimkite neišvengiamų trumpiklių paskirties vietas."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Atidarykite minios šaltinius naujame skirtuke po % sekundė(s)."
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Uždaryti skirtuką, kuriame yra minios šaltinis, aplankius % s."
+	},
 	"privacyPolicy": {
 		"message": "Privatumo politika"
 	},
@@ -67,6 +76,9 @@
 	},
 	"optionsUserscripts": {
 		"message": "Pasirinktinas perėjimas"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Tai yra pažangi funkcija, skirta kūrėjams kurti savo scenarijus, norint apeiti svetaines. Kai jie bus patobulinti, juos bus galima pateikti „GitHub“ ir pridėti prie visuotinio aplinkkelio, kad jie būtų prieinami visiems."
 	},
 	"beforeNavigate": {
 		"message": "Jūs beveik pasiekėte savo tikslą."
@@ -88,6 +100,9 @@
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Jūs busite automatiškai nukreiptas už 1 sekundės."
+	},
+	"beforeNavigateOptions": {
+		"message": "Ar norite būti nukreipti akimirksniu ar per x sekundes?"
 	},
 	"beforeNavigateInstant": {
 		"message": "Jūs busite perkeltas į %"
@@ -130,6 +145,9 @@
 	},
 	"crowdBypassedIgnore": {
 		"message": "Ar šis veiksmas buvo klaidingas?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Ar norite, kad tai būtų atidaryta naujame skirtuke iškart ar per x sekundes?"
 	},
 	"blockedTitle": {
 		"message": "Universalus Perėjimas neleido šiam puslapiui įrašyti jūsų IP adreso."

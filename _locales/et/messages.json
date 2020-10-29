@@ -1,18 +1,18 @@
 {
 	"appDesc": {
-		"message": "Ära raiska oma aega nõuetele vastamisega. Universal Bypass hoiab kõrvale tüütutest lühendajatest."
+		"message": "Ärge raisake oma aega järgimisega. Universaalne ümbersõit möödab tüütuid linkide lühendajaid."
 	},
 	"firstrunTitle": {
-		"message": "Täname, et installisid rakenduse Universal Bypass!"
+		"message": "\nTäname universaalse ümbersõidu Universal Bypass!"
 	},
 	"firstrunNoScript": {
-		"message": "Siiski tundub, et kasutate Nocripti või midagi sarnast, millega Universal Bypass ei ühildu."
+		"message": "\nTundub, et kasutate siiski NoScripti või muud sarnast, millega Universal Bypass ei ühildu."
 	},
 	"version": {
 		"message": "Versioon"
 	},
 	"definitionsVersion": {
-		"message": "Bypassi definitsioon"
+		"message": "\nMõistete ümbersõit"
 	},
 	"changelog": {
 		"message": "Muudatuste logi"
@@ -106,6 +106,9 @@
 	},
 	"beforeNavigateInstant": {
 		"message": "Sind suunatakse %"
+	},
+	"infoLinkvertise": {
+		"message": "Me ei tohi sellest veebisaidist mööda hiilida, kuid oleme pidanud läbirääkimisi nende kõige tüütumate sammude eemaldamise üle."
 	},
 	"infoFileHoster": {
 		"message": "Kahjuks tagab allalaadimisserver, et olete enne faili allalaadimist oodanud ,et lubada teil faili allalaadimine."

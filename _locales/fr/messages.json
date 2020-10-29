@@ -6,7 +6,7 @@
 		"message": "Merci d'avoir installé Universal Bypass !"
 	},
 	"firstrunNoScript": {
-		"message": "Cependant, il semble que vous utilisiez le module NoScript ou quelque chose de similaire, avec lequel Universal Bypass n'est pas compatible."
+		"message": "Cependant, il semble que vous utilisiez le module NoScript ou une extension similaire, avec lequel Universal Bypass n'est pas compatible."
 	},
 	"version": {
 		"message": "Version"
@@ -60,13 +60,13 @@
 		"message": "Bloquer les enregistreurs d'adresse IP s'ils ne peuvent pas être contournés."
 	},
 	"optionsCrowdBypass": {
-		"message": "Donner et obtenir les destinations des raccourcisseurs incontournables."
+		"message": "Partager et obtenir les destinations des raccourcisseurs incontournables."
 	},
 	"optionsCrowdAutoOpen": {
 		"message": "Ouvrir les destinations partagées par les utilisateurs dans un nouvel onglet après % seconde(s)."
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Fermer les onglets contenant une destination partagée par les utilisateurs après % seconde(s) de visite."
+		"message": "Fermer les onglets contenant une destination partagée par les utilisateurs après % seconde(s)."
 	},
 	"privacyPolicy": {
 		"message": "Politique de confidentialité"
@@ -84,28 +84,28 @@
 		"message": "Vous y êtes presque !"
 	},
 	"beforeNavigateDestination": {
-		"message": "Votre destination est %"
+		"message": "L'URL de destination est %"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "Cependant, si vous naviguez maintenant, Universal Bypass sera détecté."
+		"message": "Cependant, Universal Bypass sera détecté si vous accédez maintenant à ce site."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "Vous ne serez plus détecté dans % secondes."
+		"message": "Universal Bypass ne sera plus détecté dans % secondes."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
-		"message": "Vous ne serez plus détecté dans une seconde."
+		"message": "Universal Bypass ne sera plus détecté dans une seconde."
 	},
 	"beforeNavigateTimer": {
-		"message": "Vous serez automatiquement redirigé dans % secondes."
+		"message": "Vous serez automatiquement redirigé vers ce site dans % secondes."
 	},
 	"beforeNavigateTimerSingular": {
-		"message": "Vous serez automatiquement redirigé dans 1 seconde."
+		"message": "Vous serez automatiquement redirigé vers ce site dans 1 seconde."
 	},
 	"beforeNavigateOptions": {
 		"message": "Voulez-vous être redirigé instantanément ou après x secondes ?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Vous allez être redirigé vers cette adresse : %"
+		"message": "Vous allez être redirigé vers le site %"
 	},
 	"infoLinkvertise": {
 		"message": "Malheureusement, nous ne sommes pas autorisés à contourner ce site Web, mais nous avons négocié la suppression de leurs étapes les plus ennuyeuses."
@@ -117,7 +117,7 @@
 		"message": "Ce site Web est contourné par une version plus récente de Universal Bypass."
 	},
 	"crowdWait": {
-		"message": "Malheureusement, vous êtes la première personne à visiter ce lien, mais après avoir attendu, les autres utilisateurs de Universal Bypass n'auront plus à le faire."
+		"message": "Malheureusement, vous êtes la première personne à consulter ce lien, mais après avoir attendu, les autres utilisateurs de Universal Bypass n'auront plus à le faire."
 	},
 	"crowdDisabled": {
 		"message": "L'URL de destination de ce site Web pourrait être partagée avec d'autres utilisateurs, mais vous avez désactivé cette fonctionnalité dans les options."
@@ -126,7 +126,7 @@
 		"message": "Vous n'aurez peut-être pas à attendre !"
 	},
 	"crowdBypassedInfo": {
-		"message": "D'autres utilisateurs de Universal Bypass ont déjà visité ce lien et ont indiqué que cela mène à cette adresse : %"
+		"message": "D'autres utilisateurs de Universal Bypass ont déjà consulté ce lien et ont indiqué que cela mène à cette adresse : %"
 	},
 	"crowdBypassedTimer": {
 		"message": "Ce lien sera ouvert dans un nouvel onglet dans % secondes."

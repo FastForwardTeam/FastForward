@@ -51,19 +51,19 @@
 		"message": "Vie minut ohitettuihin nettisivustoihin % sekunnin jälkeen."
 	},
 	"optionsTrackerBypass": {
-		"message": "Estä seurantapalvelimet (kuten bit.ly ja t.co) käyttäen Apimon.de."
+		"message": "Estä seurantapalvelimet (kuten bit.ly ja t.co) käyttäen Apimon.de palvelua."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Vie minut heti seurantapalveluiden kohteisiin."
 	},
 	"optionsBlockIPLoggers": {
-		"message": "Estä IP-osoitteen kerääjät, jos niitä ei voi ohittaa."
+		"message": "Estä IP-osoitteen kerääjät, jos niitä ei voida ohittaa."
 	},
 	"optionsCrowdBypass": {
 		"message": "Joukko Ohitus: Anna ja ota ohittamattomien lyhentäjien määränpäät."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Avaa joukoitetut kohteet uudessa välilehdessä % sekunnin jälkeen."
+		"message": "Avaa joukoitetut kohteet uudessa välilehdessä % sekuntin jälkeen."
 	},
 	"optionsCrowdAutoClose": {
 		"message": "Sulje joukoitettu välilehti % sekunnin jälkeen käytyäsi siellä."
@@ -75,10 +75,10 @@
 		"message": "Osallistujat"
 	},
 	"optionsUserscripts": {
-		"message": "Räätälöidyt Ohitukset"
+		"message": "Mukautetut Ohitukset"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "Tämä on edistynyt ominaisuus, joka on luotu ohjelmistokehittäjille voidakseen tehdä omia ohituksiaan. Kunnes ne ovat virheettömiä ja valmiita, ne voi julkaista GitHubissa lisättäväksi Universaaliin Bypassiin. Näin ne ovat saatavilla kaikille."
+		"message": "Tämä on edistynyt ominaisuus, joka on luotu ohjelmistokehittäjille voidakseen tehdä omia ohituksiaan. Kunnes ne ovat virheettömiä ja valmiita, ne voi julkaista GitHubissa lisättäväksi Universal Bypassiin. Näin ne ovat saatavilla kaikille."
 	},
 	"beforeNavigate": {
 		"message": "Olet melkein määränpäässäsi."
@@ -87,31 +87,31 @@
 		"message": "Sinun määränpääsi on %."
 	},
 	"beforeNavigateUnsafe": {
-		"message": "Jos navigoit nyt, ne tunnistavat Universaalin Bypassin."
+		"message": "Jos kuitenkin navigoit nyt, he havaitsevat Universal Bypassin."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "Et ole enää havaittu % sekunnin kuluttua."
+		"message": "Sinua ei enää havaita % sekunnin kuluttua."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
-		"message": "Et ole enää havaittu yhden sekunnin kuluttua."
+		"message": "Sinua ei enää havaita sekuntin kuluttua."
 	},
 	"beforeNavigateTimer": {
-		"message": "Sinut uudelleenohjataan automaattisesti % sekunnissa."
+		"message": "Sinut uudelleenohjataan automaattisesti % sekuntin päästä."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Sinut uudelleenohjataan automaattisesti yhdessä sekunnissa."
 	},
 	"beforeNavigateOptions": {
-		"message": "Haluatko tulla uudelleenohjatuksi heti vai x sekunnissa?"
+		"message": "Haluatko, että sinut uudelleenohjataan heti tai x sekunnissa?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Sinua ollaan ohjaamassa %"
+		"message": "Sinua ohjataan nettisivulle %"
 	},
 	"infoLinkvertise": {
-		"message": "Emme saa kiertää tätä nettisivustoa, mutta olemme neuvotelleet heidän ärsyttävimpien vaihteiden poistosta."
+		"message": "Emme saa ohittaa tätä verkkosivustoa, mutta olemme neuvotelleet heidän ärsyttävimpien vaiheidensa poistamisesta."
 	},
 	"infoFileHoster": {
-		"message": "Valitettavasti, latauspalvelin vaatii, että olet odottanut ennen kuin antaa sinun ladata tiedostosi."
+		"message": "Valitettavasti, latauspalvelin vaatii, että olet odottanut ennen kuin se antaa sinun ladata tiedostosi."
 	},
 	"infoOutdated": {
 		"message": "Tämä sivusto on ohitettavissa Universal Bypassin uudella versiolla."

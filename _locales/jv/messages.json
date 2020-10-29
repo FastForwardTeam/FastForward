@@ -107,6 +107,9 @@
 	"beforeNavigateInstant": {
 		"message": "Panjenengan lagi diarahaken menyang %"
 	},
+	"infoLinkvertise": {
+		"message": "Kita ora diidini ngliwati situs web iki nanging wis negosiasi langkah-langkah sing paling ngganggu."
+	},
 	"infoFileHoster": {
 		"message": "Sayange, server unduhanipun ajeng mesthekaken menawi panjenengan sampun ngentosi saderengipun ngangsalaken panjenengan kangge ngunduh file."
 	},

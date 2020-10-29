@@ -1,12 +1,12 @@
 {
 	"appDesc": {
-		"message": "不要浪费时间遵守规则，Universal Bypass可以帮你规避烦人的短链接。"
+		"message": "不要费时等待，Universal Bypass 可以帮你规避烦人的短链接。"
 	},
 	"firstrunTitle": {
 		"message": "感谢您安装 Universal Bypass!"
 	},
 	"firstrunNoScript": {
-		"message": "看起来您正在使用NoScript或者类似的工具，Universal Bypass并不与这些兼容。"
+		"message": "看起来您正在使用 NoScript 或类似工具，Universal Bypass 暂不与之兼容。"
 	},
 	"version": {
 		"message": "版本"

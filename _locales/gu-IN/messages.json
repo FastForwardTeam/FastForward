@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "પાલન સાથે તમારો સમય બગાડો નહીં. સાર્વત્રિક બાયપાસ હેરાન કરે છે કડી ટૂંકાણ કરનારાઓ."
+	},
+	"firstrunTitle": {
+		"message": "યુનિવર્સલ બાયપાસ સ્થાપિત કરવા બદલ આભાર!"
+	},
+	"firstrunNoScript": {
+		"message": "જો કે, તમે નોસ્ક્રિપ્ટ અથવા સમાનનો ઉપયોગ કરી રહ્યાં છો, જે યુનિવર્સલ બાયપાસ સુસંગત નથી."
+	},
+	"version": {
+		"message": "સંસ્કરણ"
+	},
+	"definitionsVersion": {
+		"message": "બાયપાસ વ્યાખ્યાઓ"
+	},
+	"changelog": {
+		"message": "ચેન્જલોગ"
+	},
+	"update": {
+		"message": "અપડેટ માટે ચકાસો"
+	},
+	"updating": {
+		"message": "બાયપાસ વ્યાખ્યાઓ ડાઉનલોડ કરી રહ્યાં છે ..."
+	},
+	"updateYes": {
+		"message": "બાયપાસ વ્યાખ્યાઓ સફળતાપૂર્વક ડાઉનલોડ થઈ."
+	},
+	"updateNo": {
+		"message": "બાયપાસ વ્યાખ્યાઓ અદ્યતન છે."
+	},
+	"faq": {
+		"message": "વારંવાર પૂછાતા પ્રશ્નો (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "યુનિવર્સલ બાયપાસ પહેલાથી જ તમારા માટે%% બાયપાસ કરી ચુકી છે."
+	},
+	"support": {
+		"message": "યુનિવર્સલ બાયપાસમાં ફાળો આપો."
+	},
+	"options": {
+		"message": "વિકલ્પો"
+	},
+	"optionsLink": {
+		"message": "યુનિવર્સલ બાયપાસ વિકલ્પો બદલો."
+	},
+	"optionsEnabled": {
+		"message": "વેબસાઇટ બાયપાસને સક્ષમ કરો."
+	},
+	"optionsNavigationDelay": {
+		"message": "મને% સેકંડ પછી ગંતવ્ય પર લઈ જાઓ."
+	},
+	"optionsTrackerBypass": {
+		"message": "Apimon.de નો ઉપયોગ કરીને બાયપાસ ટ્રેકર્સ (જેમ કે bit.ly અને t.co)."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "મને તરત જ ટ્રેકર્સના સ્થળો પર લઈ જાઓ."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "આઇપી લ logગર્સને અવરોધિત કરો જો તેમને બાયપાસ કરી શકાતા નથી."
+	},
+	"optionsCrowdBypass": {
+		"message": "ભીડ બાયપાસ: અનબાયપાસ શોર્ટનર્સના સ્થળો આપો અને લો."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "% સેકંડ (ઓ) પછી નવા ટ newબમાં ભીડ-સ્ત્રોત સ્થળો ખોલો."
+	},
+	"optionsCrowdAutoClose": {
+		"message": "તેની મુલાકાત લીધાના% સેકંડ પછી ભીડ-સરસ ગંતવ્ય ધરાવતું ટેબ બંધ કરો."
+	},
+	"privacyPolicy": {
+		"message": "ગોપનીયતા નીતિ"
+	},
+	"contributors": {
+		"message": "ફાળો આપનાર"
+	},
+	"optionsUserscripts": {
+		"message": "કસ્ટમ બાયપાસ"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "બાયપાસ સાઇટ્સ પર તેમની પોતાની સ્ક્રિપ્ટ્સ બનાવવા માટે વિકાસકર્તાઓ માટે આ એક અદ્યતન સુવિધા છે. એકવાર પૂર્ણ થઈ ગયા પછી, તેઓને યુનિવર્સલ બાયપાસમાં ઉમેરવા માટે ગિટહબ પર સબમિટ કરી શકાય છે, જેથી તે દરેક માટે ઉપલબ્ધ હોય."
+	},
+	"beforeNavigate": {
+		"message": "તમે લગભગ તમારા લક્ષ્યસ્થાન પર છો."
+	},
+	"beforeNavigateDestination": {
+		"message": "તમારું લક્ષ્યસ્થાન%"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "જો કે, જો તમે હવે નેવિગેટ કરો છો, તો તેઓ યુનિવર્સલ બાયપાસને શોધી કા willશે."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "તમે હવે% સેકંડમાં શોધી શકશો નહીં."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "હવે તમને 1 સેકંડમાં શોધી કા .વામાં આવશે નહીં."
+	},
+	"beforeNavigateTimer": {
+		"message": "તમને% સેકંડમાં આપમેળે રીડાયરેક્ટ કરવામાં આવશે."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "તમને 1 સેકંડમાં આપમેળે રીડાયરેક્ટ કરવામાં આવશે."
+	},
+	"beforeNavigateOptions": {
+		"message": "શું તમે તરત અથવા x સેકંડમાં રીડાયરેક્ટ થવા માંગો છો?"
+	},
+	"beforeNavigateInstant": {
+		"message": "તમને% પર નેવિગેટ કરવામાં આવી રહ્યા છે"
+	},
+	"infoLinkvertise": {
+		"message": "અમને આ વેબસાઇટને બાયપાસ કરવાની મંજૂરી નથી પરંતુ અમે તેમના ખૂબ જ હેરાન પગલાઓને દૂર કરવા માટે વાટાઘાટો કરી છે."
+	},
+	"infoFileHoster": {
+		"message": "દુર્ભાગ્યે, ડાઉનલોડ સર્વર સુનિશ્ચિત કરશે કે ફાઇલ ડાઉનલોડ કરવાની મંજૂરી આપતા પહેલાં તમે પ્રતીક્ષા કરી છે."
+	},
+	"infoOutdated": {
+		"message": "આ વેબસાઇટને યુનિવર્સલ બાયપાસના નવા સંસ્કરણ દ્વારા બાયપાસ કરવામાં આવી છે."
+	},
+	"crowdWait": {
+		"message": "દુર્ભાગ્યવશ, તમે આ લિન્કનો સામનો કરવા માટે પ્રથમ છો, પરંતુ તમે પ્રતીક્ષા કર્યા પછી, અન્ય યુનિવર્સલ બાયપાસ વપરાશકર્તાઓને આની જરૂર રહેશે નહીં."
+	},
+	"crowdDisabled": {
+		"message": "આ વેબસાઇટ ભીડ બાયપાસ દ્વારા બાયપાસ છે, જેને તમે વિકલ્પોમાં સક્ષમ કરી શકો છો."
+	},
+	"crowdBypassed": {
+		"message": "તમારે રાહ જોવી ન પડે!"
+	},
+	"crowdBypassedInfo": {
+		"message": "અન્ય યુનિવર્સલ બાયપાસ વપરાશકર્તાઓએ પહેલેથી જ તમારી રાહ જોવી છે અને જાણ કરી છે કે આ% તરફ દોરી જાય છે"
+	},
+	"crowdBypassedTimer": {
+		"message": "આ% સેકંડમાં નવા ટ tabબમાં ખોલવામાં આવશે."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "આ 1 સેકંડમાં નવા ટ tabબમાં ખોલવામાં આવશે."
+	},
+	"crowdCloseTimer": {
+		"message": "આ ટેબ% સેકંડમાં બંધ થઈ જશે."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "આ ટેબ 1 સેકંડમાં બંધ થશે."
+	},
+	"cancel": {
+		"message": "રદ કરો."
+	},
+	"crowdBypassedIgnore": {
+		"message": "શું આ સાચું નથી?"
+	},
+	"crowdBypassedOptions": {
+		"message": "શું તમે ઇચ્છો છો કે આને તરત જ નવા ટ tabબમાં ખોલો અથવા x સેકંડમાં?"
+	},
+	"blockedTitle": {
+		"message": "યુનિવર્સલ બાયપાસ તમારા આઇપીને લ beingગ ઇન થવાથી રોકે છે."
+	},
+	"blockedSubtitle": {
+		"message": "શું નથી ઇચ્છતા કે યુનિવર્સલ બાયપાસ ખરાબ અભિનેતાઓને તમારો આઈપી મેળવવાથી અટકાવે?"
+	}
+}
