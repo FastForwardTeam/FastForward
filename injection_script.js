@@ -1597,6 +1597,7 @@ ensureDomLoaded(()=>{
 		s.click()
 	},()=>ifElement("a[href].btn-success",safelyAssign)))
 	domainBypass("tecknity.com",()=>{if(typeof counter!="undefined")counter=0})
+	domainBypass("url.rizaldi.web.id",()=>ifElement("a#download_link[href]",a=>safelyNavigate(a.href)))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
