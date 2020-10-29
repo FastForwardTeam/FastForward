@@ -1598,6 +1598,21 @@ ensureDomLoaded(()=>{
 	},()=>ifElement("a[href].btn-success",safelyAssign)))
 	domainBypass("tecknity.com",()=>{if(typeof counter!="undefined")counter=0})
 	domainBypass("url.rizaldi.web.id",()=>ifElement("a#download_link[href]",a=>safelyNavigate(a.href)))
+	domainBypass("1bit.space",()=>{
+		if(typeof hcaptcha=="object"&&typeof apiCounter=="object")
+		{
+			window.app_country_visitor=""
+			hcaptcha.getResponse=()=>{}
+			apiCounter.generateURL()
+			apiCounter.redirectTo(document.querySelector("button.button-element-verification"))
+		}
+	})
+	domainBypass("1bitspace.com",()=>{
+		if(typeof tokenURL=="string")
+		{
+			safelyNavigate(atob(tokenURL))
+		}
+	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
