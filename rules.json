@@ -228,7 +228,8 @@
 		"*://*.jnw0.com/*",
 		"*://*.xiw34.com/*",
 		"*://*.clkme.me/*",
-		"*://*.wiid.me/*"
+		"*://*.wiid.me/*",
+		"*://*.paypou.com/*"
 	],
 	"redirect_persist_id_path": [
 		"*://*.bercara.com/*",
