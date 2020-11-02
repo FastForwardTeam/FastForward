@@ -1613,6 +1613,7 @@ ensureDomLoaded(()=>{
 			safelyNavigate(atob(tokenURL))
 		}
 	})
+	domainBypass("gethatch.com", ()=>ifElement("body > script:nth-child(4)",a=>safelyNavigate(a.innerHTML.split('NoSession: "')[1].split('"')[0])))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
