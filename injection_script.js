@@ -1615,9 +1615,9 @@ ensureDomLoaded(()=>{
 	})
 	domainBypass("gethatch.com",()=>ifElement("body > script:nth-child(4)",a=>safelyNavigate(a.innerHTML.split('NoSession: "')[1].split('"')[0])))
 	domainBypass("gcloud.live",()=>{
-		if(typeof buildDownload=="function")
+		if(typeof buildDownload=="function"&&location.pathname.substr(0,3)=="/f/")
 		{
-			fetch("https://gcloud.live/api/source/ln5grsn081em74k",{
+			fetch("https://gcloud.live/api/source/"+location.pathname.substr(3),{
 				"referrer":location.href,
 				"method":"POST"
 			}).then(res=>res.json()).then(json=>{
