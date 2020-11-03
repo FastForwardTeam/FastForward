@@ -1613,7 +1613,19 @@ ensureDomLoaded(()=>{
 			safelyNavigate(atob(tokenURL))
 		}
 	})
-	domainBypass("gethatch.com", ()=>ifElement("body > script:nth-child(4)",a=>safelyNavigate(a.innerHTML.split('NoSession: "')[1].split('"')[0])))
+	domainBypass("gethatch.com",()=>ifElement("body > script:nth-child(4)",a=>safelyNavigate(a.innerHTML.split('NoSession: "')[1].split('"')[0])))
+	domainBypass("gcloud.live",()=>{
+		if(typeof buildDownload=="function")
+		{
+			fetch("https://gcloud.live/api/source/ln5grsn081em74k",{
+				"referrer":location.href,
+				"method":"POST"
+			}).then(res=>res.json()).then(json=>{
+				data=json.data
+				buildDownload()
+			})
+		}
+	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
