@@ -2025,7 +2025,7 @@ ensureDomLoaded(()=>{
 		b.onclick=()=>safelyNavigate(a.href)
 	}))
 	//Duit.cc
-	if(document.querySelector("script[src='https://duit.cc/js/jquery.1.8.3.js']"))
+	if(document.querySelector("script[src^='https://duit.cc/js/']"))
 	{
 		ifElement("input[type='hidden'][name='geturl'][value^='http']",i=>{
 			safelyNavigate(i.value)
