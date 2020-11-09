@@ -198,7 +198,8 @@
 	"param_go_hex": [
 		"*://*.zflas.com/*?go=*",
 		"*://*.365myoffice.com/?go=*",
-		"*://*.shiroyasha.me/?go=*"
+		"*://*.shiroyasha.me/?go=*",
+		"*://*.copydev.com/?go=*"
 	],
 	"param_to_base64": [
 		"*://*.beermoneyforum.com/redirect?*",
