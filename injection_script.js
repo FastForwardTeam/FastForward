@@ -654,6 +654,7 @@ domainBypass(/^((www\.)?((safe\.anirocksite|my-code4you\.blogspot|jemerik)\.com|
 		})
 	}
 })
+
 domainBypass("cheatsquad.gg",()=>{
 	ODP(window,"steps",{
 		get:()=>[true]
@@ -731,6 +732,7 @@ domainBypass("linksunlocked.com",()=>{
 		safelyNavigate("https://uploadhaven.com/download/"+searchParams.get("token"))
 	}
 })
+domainBypass("samehadaku.vip",()=>{ensureDomLoaded()=>{document.querySelector('.adsplayer div.close-button').click()}})
 //Insertion point for bypasses running before the DOM is loaded.
 domainBypass(/^((www\.)?((njiir|healthykk|linkasm|dxdrive|getwallpapers|sammobile|ydfile)\.com|(punchsubs|zedge|fex)\.net|k2s\.cc|muhammadyoga\.me|u\.to|skiplink\.io|(uploadfree|freeupload)\.info|fstore\.biz))$/,()=>window.setInterval=f=>setInterval(f,1))
 hrefBypass(/thesimsresource\.com\/downloads\/details\/id\//,()=>window.setTimeout=f=>setTimeout(f,1))
