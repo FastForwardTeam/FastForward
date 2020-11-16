@@ -654,7 +654,6 @@ domainBypass(/^((www\.)?((safe\.anirocksite|my-code4you\.blogspot|jemerik)\.com|
 		})
 	}
 })
-
 domainBypass("cheatsquad.gg",()=>{
 	ODP(window,"steps",{
 		get:()=>[true]
