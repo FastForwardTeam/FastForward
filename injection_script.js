@@ -1627,6 +1627,7 @@ ensureDomLoaded(()=>{
 			})
 		}
 	})
+	domainBypass("pnd.money",()=>keepLooking(()=>ifElement("form#pnd_redirect_form, form#link-view",f=>f.submit())))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
@@ -2251,7 +2252,7 @@ ensureDomLoaded(()=>{
 						}
 						crowdBypass(()=>{
 							let cT=setInterval(()=>{//                                                                                                                                                                               v spotted on fc-lc.com
-								let a=document.querySelector("a.get-link[href]:not([href='']):not([href*='.ads.']):not([href*='//ads.']):not(.disabled), .skip-ad a[href]:not([href='']):not([href*='.ads.']):not([href*='//ads.']), a#surl[href]:not([href='']):not([href*='.ads.']):not([href*='//ads.'])"),h
+								let a=document.querySelector("a.get-link[href]:not([href='']):not([href*='.ads.']):not([href*='//ads.']):not(.disabled), .skip-ad a[href]:not([href='']):not([href*='.ads.']):not([href*='//ads.']), a#surl[href]:not([href='']):not([href*='.ads.']):not([href*='//ads.']), a.pnd-submit-button[href]:not([href^='javascript:'])"),h
 								if(a)
 								{
 									h=a.href
