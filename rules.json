@@ -1,7 +1,8 @@
 {
 	"path_base64": [
 		"*://*.bursadrakor.com/protect-link/*",
-		"*://*.getfile.mobi/get/files/*"
+		"*://*.getfile.mobi/get/files/*",
+		"*://hikarinoakari.com/out/?*"
 	],
 	"path_s_encoded": [
 		"*://*.gslink.co/e/*/s/*"
