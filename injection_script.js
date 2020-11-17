@@ -1965,6 +1965,29 @@ ensureDomLoaded(()=>{
 		i.click()
 		finish()
 	})
+	if(document.getElementById("wpsafe-generate")&&typeof wpsafegenerate=="function")
+	{
+		ifElement("#wpsafegenerate > #wpsafe-link > a[href]",a=>{
+			safelyNavigate(a.href)
+			return finish()
+		},()=>{
+			let s=new URLSearchParams(location.search)
+			if(s.has("go"))
+			{
+				if(safelyNavigate(atob(s.get("go"))))
+					return finish()
+			}
+			else if(location.pathname.substr(0,4)=="/go/")
+			{
+				search=atob(location.pathname.substr(4))
+				if(search.substr(0,4)=="http")
+				{
+					safelyNavigate(search)
+					return finish()
+				}
+			}
+		})
+	}
 	ifElement(".wpsafe-bottom > [id^='wpsafe-lin'] > a[href]",a=>{
 		safelyNavigate(a.href)
 		finish()
@@ -1988,29 +2011,6 @@ ensureDomLoaded(()=>{
 		awaitElement(".wp-safelink-button.wp-safelink-success-color",a=>{
 			window.open=safelyNavigate
 			a.click()
-		})
-	}
-	if(document.getElementById("wpsafe-generate")&&typeof wpsafegenerate=="function")
-	{
-		ifElement("#wpsafegenerate > #wpsafe-link > a[href]",a=>{
-			safelyNavigate(a.href)
-			return finish()
-		},()=>{
-			let s=new URLSearchParams(location.search)
-			if(s.has("go"))
-			{
-				if(safelyNavigate(atob(s.get("go"))))
-					return finish()
-			}
-			else if(location.pathname.substr(0,4)=="/go/")
-			{
-				search=atob(location.pathname.substr(4))
-				if(search.substr(0,4)=="http")
-				{
-					safelyNavigate(search)
-					return finish()
-				}
-			}
 		})
 	}
 	if(document.querySelector("input[type='hidden'][name='newwpsafelink'][value]"))
