@@ -1325,9 +1325,11 @@ ensureDomLoaded(()=>{
 		})))
 	})
 	domainBypass("filesupload.org",()=>ifElement("a[href='?unlock']",safelyAssign,()=>ifElement(".download-timer",()=>awaitElement(".download-timer>form>input[name='link']",i=>safelyAssign(i.value)))))
-	hrefBypass(/nexusmods\.com\/.*\/mods\/[0-9]*\?tab=files&file_id=[0-9]*$/,()=>{
-		window.setTimeout=f=>setTimeout(f,1)
-		ifElement("#slowDownloadButton",a=>countIt(()=>a.click()))
+	domainBypass("nexusmods.com",()=>{
+		if(location.search.includes('file_id')) {
+			window.setTimeout=f=>setTimeout(f,1)
+			ifElement("#slowDownloadButton",a=>countIt(()=>a.click()))
+		}
 	})
 	domainBypass("myotto.online",()=>ifElement("button#makingdifferenttimer > a[href]",safelyAssign))
 	domainBypass("disiniaja.site",()=>ifElement("button > a.button[href]",safelyAssign))
