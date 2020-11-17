@@ -1422,7 +1422,7 @@ ensureDomLoaded(()=>{
 	}))
 	domainBypass("sorewa.net",()=>ifElement("p[style='text-align: center;'] > strong > a[href]",safelyNavigate))
 	domainBypass("akwam.net",()=>ifElement(".btn-loader > a.link.btn.btn-light[href][download]",safelyNavigate))
-	domainBypass(/^lefturl\.com|(palsweet|pluslive)\.live$/,()=>ifElement("a.download-link[href]",safelyNavigate))
+	domainBypass(/^(lefturl|akwams)\.com|(palsweet|pluslive)\.live$/,()=>ifElement("a.download-link[href]",safelyNavigate))
 	domainBypass("worldofmods.com",()=>ifElement(".repost-button-twitter",b=>{
 		window.open=_=>{}
 		setTimeout(()=>{
