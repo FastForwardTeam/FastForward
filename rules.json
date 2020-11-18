@@ -209,7 +209,8 @@
 	"param_data_base64": [
 		"*://*.magersari.web.id/?*",
 		"*://zodiark.xyz/?data=*",
-		"*://rahwana.xyz/?data=*"
+		"*://rahwana.xyz/?data=*",
+		"*://caraterbaik.my.id/?data=*"
 	],
 	"useragent_googlebot": [
 		"*://*.haaretz.co.il/*"
