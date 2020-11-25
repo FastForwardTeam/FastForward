@@ -2,6 +2,8 @@
  // If you want to add your own bypass, add it above the relevant "Insertion point" comment //
 /////////////////////////////////////////////////////////////////////////////////////////////
 
+//Variables
+let isGoodLink_allowSelf=false
 //Copying important functions to avoid interference from other extensions or the page
 const ODP=(t,p,o)=>{try{Object.defineProperty(t,p,o)}catch(e){console.trace("[Universal Bypass] Couldn't define",p)}},
 setTimeout=window.setTimeout,setInterval=window.setInterval,URL=window.URL,docSetAttribute=document.documentElement.setAttribute.bind(document.documentElement),
@@ -13,7 +15,7 @@ transparentProperty=(name,valFunc)=>{
 	})
 },
 isGoodLink=link=>{
-	if(typeof link!="string"||link.split("#")[0]==location.href.split("#")[0]||link.substr(0,6)=="about:"||link.substr(0,11)=="javascript:")
+	if(typeof link!="string"||(link.split("#")[0]==location.href.split("#")[0]&&!isGoodLink_allowSelf)||link.substr(0,6)=="about:"||link.substr(0,11)=="javascript:")
 	{
 		return false
 	}
@@ -2134,10 +2136,23 @@ ensureDomLoaded(()=>{
 	domainBypass("dl.ccbluex.net",()=>{
 		if(location.pathname.substring(0,6)=="/skip/")
 		{
-			ifElement("div.top-bar #skip-button",b=>{
-				b.disabled=false
-				b.click()
-			},()=>location.reload())
+			crowdBypass(()=>{
+				ifElement("div.top-bar form[method='POST'][action]",f=>{
+					awaitElement("div.top-bar form[method='POST'][action] #skip-button[value='Skip AD']",b=>{
+						f.action+='#bypassClipboard='+location.pathname.substr(1)
+						b.click()
+					})
+				})
+			})
+		}
+		else if(location.pathname.substring(0,10)=="/download/")
+		{
+			if(bypassClipboard)
+			{
+				isGoodLink_allowSelf=true
+				crowdPath(bypassClipboard)
+				crowdContribute(location.href)
+			}
 		}
 	})
 	//Insertion point for bypasses detecting certain DOM elements. Bypasses here will no longer need to call ensureDomLoaded.
