@@ -83,7 +83,8 @@
 		"*://*.leechpremium.link/cheat/?link=*",
 		"*://*.bdzone.xyz/cheat.php?link=*",
 		"*://*.extramovies.casa/download.php?name=*&link=*",
-		"*://*.gilakerja.com/*/?link=*"
+		"*://*.gilakerja.com/*/?link=*",
+		"*://sekolahgan.my.id/?link=*"
 	],
 	"param_link_encoded_base64": [
 		"*://*.safelinkgratis.info/*?link=*"
