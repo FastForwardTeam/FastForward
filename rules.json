@@ -210,7 +210,8 @@
 		"*://*.magersari.web.id/?*",
 		"*://zodiark.xyz/?data=*",
 		"*://rahwana.xyz/?data=*",
-		"*://caraterbaik.my.id/?data=*"
+		"*://caraterbaik.my.id/?data=*",
+		"*://safe2.wisatamu.my.id/?data=*"
 	],
 	"useragent_googlebot": [
 		"*://*.haaretz.co.il/*"
