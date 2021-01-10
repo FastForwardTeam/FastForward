@@ -933,21 +933,8 @@ ensureDomLoaded(()=>{
 		}
 	})
 	domainBypass("drivehub.link",()=>ifElement("a#proceed[href]",safelyNavigate))
-	domainBypass(/oxy\.(cloud|st)/,()=>{
-		let params=new URL(document.querySelector("#divdownload > a[href]").href).searchParams
-		if(params.has("predirect"))
-		{
-			safelyAssign(params.get("predirect"))
-		}
-		else if(params.has("bpredirect"))
-		{
-			safelyAssign(atob(params.get("bpredirect")))
-		}
-		else if(params.has("url"))
-		{
-			safelyAssign(params.get("url"))
-		}
-	})
+	domainBypass("oxy.st",()=>{awaitElement("a.btn.btn-primary.btn-lg",t=>{safelyAssign(t.href)}),ifElement("button#download[disabled]",t=>{awaitElement("button#download:not([disabled])",t=>{t.click()})})})
+	domainBypass("oxy.cloud",()=>{ifElement("button#download[disabled]",d=>{awaitElement("button#download:not([disabled])",d=>{d.click()})})})
 	domainBypass("daunshorte.teknologilink.com",()=>safelyAssign(document.querySelector("a[href^='https://teknosafe.teknologilink.com/linkteknolink/safelinkscript.php?']").href))
 	domainBypass("imgtaxi.com",()=>document.querySelector("a.overlay_ad_link").click())
 	domainBypass("do2unlock.com",()=>{
