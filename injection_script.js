@@ -1513,15 +1513,6 @@ ensureDomLoaded(()=>{
 	}))
 	domainBypass("favpng.com",()=>ifElement("div#countdown",()=>safelyNavigate("https://files.favpng.com/api_download.php?k="+location.pathname.substr(14))))
 	domainBypass("sh.st",()=>ifElement("[data-translate='block_headline']",()=>location.hostname="ceesty.com"))
-	domainBypass("adshrink.it",()=>{
-		let iT=setInterval(()=>{
-			if(typeof window[___reactjsD.o]=="object"&&typeof window[___reactjsD.o].dest=="string")
-			{
-				clearInterval(iT)
-				safelyNavigate(window[___reactjsD.o].dest)
-			}
-		})
-	})
 	domainBypass("apkpsp.xyz",()=>ifElement("span#dwto",s=>{
 		window.setInterval=f=>setInterval(f,1)
 		s.click()
@@ -2154,6 +2145,16 @@ ensureDomLoaded(()=>{
 				crowdContribute(location.href)
 			}
 		}
+	})
+	//adshrink.it
+	ifElement("meta[property='og:site_name'][content='Adshrink.it']",()=>{
+		let iT=setInterval(()=>{
+			if(typeof window[___reactjsD.o]=="object"&&typeof window[___reactjsD.o].dest=="string")
+			{
+				clearInterval(iT)
+				safelyNavigate(window[___reactjsD.o].dest)
+			}
+		})
 	})
 	//Insertion point for bypasses detecting certain DOM elements. Bypasses here will no longer need to call ensureDomLoaded.
 	let t=document.querySelector("title")
