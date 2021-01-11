@@ -214,9 +214,7 @@
 		"*://caraterbaik.my.id/?data=*",
 		"*://safe2.wisatamu.my.id/?data=*"
 	],
-	"useragent_googlebot": [
-		"*://*.haaretz.co.il/*"
-	],
+	"useragent_googlebot": [],
 	"useragent_chrome": [
 		"*://*.fluxteam.xyz/*"
 	],
