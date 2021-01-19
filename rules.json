@@ -212,7 +212,7 @@
 		"*://zodiark.xyz/?data=*",
 		"*://rahwana.xyz/?data=*",
 		"*://caraterbaik.my.id/?data=*",
-		"*://safe2.wisatamu.my.id/?data=*"
+		"*://*.wisatamu.my.id/?data=*"
 	],
 	"useragent_chrome": [
 		"*://*.fluxteam.xyz/*"
