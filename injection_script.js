@@ -1033,7 +1033,7 @@ ensureDomLoaded(()=>{
 			$(window).on("focus")
 		})
 	})
-	domainBypass(/linkpoi\.(in|cc)/,()=>ifElement("a.btn.btn-primary[href]",safelyNavigate))
+	domainBypass(/linkpoi\.(in|cc|me)/,()=>ifElement("a.btn.btn-primary[href]",safelyNavigate))
 	domainBypass(/spacetica\.com|linegee\.net/,()=>setTimeout(()=>{
 		let links=[];
 		document.querySelectorAll("a.btn[href],a.btn-primary[href],a.btn-xs[href]").forEach(a=>{
