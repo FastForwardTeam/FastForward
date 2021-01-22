@@ -1483,7 +1483,7 @@ ensureDomLoaded(()=>{
 			location.search="?action=Download"
 		}
 	})
-	domainBypass("welcome.indihome.co.id",()=>ifElement("div.button-lanjut",a=>a.click()))
+	domainBypass("welcome.indihome.co.id",()=>ifElement(`.button-lanjut:not([onclick='stop_timer();'])`,a=>a.click()))
 	domainBypass("techrfour.com",()=>keepLooking(()=>ifElement("form[id='1']",f=>f.submit())))
 	domainBypass("dl.helow.id",()=>ifElement("button#btn6",b=>b.onclick()))
 	domainBypass("dl.ocanoke.com",()=>{
