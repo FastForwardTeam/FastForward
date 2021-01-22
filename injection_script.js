@@ -1610,6 +1610,7 @@ ensureDomLoaded(()=>{
 		}
 	})
 	domainBypass("pnd.money",()=>keepLooking(()=>ifElement("form#pnd_redirect_form, form#link-view",f=>f.submit())))
+	domainBypass("5mod-file.ru",()=>ensureDomLoaded(()=>ifElement("a.download",a=>safelyNavigate(a.href))))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
