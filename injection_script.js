@@ -1610,9 +1610,9 @@ ensureDomLoaded(()=>{
 		}
 	})
 	domainBypass("pnd.money",()=>keepLooking(()=>ifElement("form#pnd_redirect_form, form#link-view",f=>f.submit())))
-	domainBypass("5mod-file.ru",()=>ensureDomLoaded(()=>ifElement("a.download",a=>safelyNavigate(a.href))))
-	domainBypass("kazanclilink.com",()=>ensureDomLoaded(()=>ifElement("a#baglantigit",a=>safelyNavigate(a.href))))
-	domainBypass("moddingunited.xyz",()=>ensureDomLoaded(()=>{if(typeof reverseString=="function")safelyNavigate(reverseString(window.location.search.substring(1)))}))
+	domainBypass("5mod-file.ru",()=>ifElement("a.download",a=>safelyNavigate(a.href)))
+	domainBypass("kazanclilink.com",()=>ifElement("a#baglantigit",a=>safelyNavigate(a.href)))
+	domainBypass("moddingunited.xyz",()=>{if(typeof reverseString=="function")safelyNavigate(reverseString(window.location.search.substring(1)))})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
