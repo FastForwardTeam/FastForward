@@ -315,6 +315,8 @@
 		"*://*.steamcommumity.com/*",
 		"*://*.imgur.com.de/*",
 		"*://*.fuglekos.com/*",
+		"*://*.discord.kim/*",
+		"*://*.prntcrs.com/*",
 		"*://*.grabify.link/*",
 		"*://*.leancoding.co/*",
 		"*://*.stopify.co/*",
@@ -343,8 +345,7 @@
 		"*://*.blasze.com/*",
 		"*://*.blasze.tk/*",
 		"*://*.ipgrab.org/*",
-		"*://*.gyazos.com/*",
-		"*://*.discord.kim/*"
+		"*://*.gyazos.com/*"
 	],
 	"linkvertise_safe_in": {}
 }
