@@ -585,6 +585,7 @@ const onBeforeRequest_rules = {
 			return getRedirect(url.searchParams.get("url"))
 		}
 	},
+	param_url_raw: details => getRedirect(details.url.substr(details.url.indexOf("?url=")+5)),
 	param_q_encoded: details => {
 		let url=new URL(details.url)
 		if(url.searchParams.has("q"))

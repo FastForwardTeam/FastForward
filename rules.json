@@ -51,7 +51,6 @@
 		"*://*.zxro.com/u/*?url=*",
 		"*://*.macdownload.org/redirect/?url=*",
 		"*://*.forek.info/*?url=*",
-		"*://*.steamcommunity.com/linkfilter/?url=*",
 		"*://*.creditcable.info/*/*?*",
 		"*://*.adfoc.us/serve/sitelinks/?*",
 		"*://*.made-by.org/redirection/?url=*",
@@ -59,6 +58,9 @@
 		"*://*.forocoches.com/link.php?url=*",
 		"*://*.pixiv.net/jump.php?url=*",
 		"*://hdblurayindir.com/git.php?url=*"
+	],
+	"param_url_raw": [
+		"*://*.steamcommunity.com/linkfilter/?url=*"
 	],
 	"param_q_encoded": [
 		"*://*.youtube.com/redirect?*"
