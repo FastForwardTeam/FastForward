@@ -1551,7 +1551,7 @@ ensureDomLoaded(()=>{
 			b.click()
 		}
 	})
-	hrefBypass(/psarips\.(com|net|org|eu|in|one|xyz|uk)\/exit\//,()=>ifElement("form[name='redirect']",f=>{
+	hrefBypass(/((psarips\.(com|net|org|eu|in|one|xyz|uk))|(psa\.one))\/exit\//,()=>ifElement("form[name='redirect']",f=>{
 		window.stop()
 		safelyAssign(f.action+"#bypassClipboard=psarips:"+location.pathname.substr(6))
 	}))
