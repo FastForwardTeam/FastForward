@@ -219,22 +219,6 @@
 	"useragent_chrome": [
 		"*://*.fluxteam.xyz/*"
 	],
-	"useragent_empty": [
-		"*://*.ceesty.com/*",
-		"*://*.corneey.com/*",
-		"*://*.destyy.com/*",
-		"*://*.festyy.com/*",
-		"*://*.gestyy.com/*",
-		"*://*.sh.st/*",
-		"*://*.viid.me/*",
-		"*://*.clkmein.com/*",
-		"*://*.cllkme.com/*",
-		"*://*.jnw0.com/*",
-		"*://*.xiw34.com/*",
-		"*://*.clkme.me/*",
-		"*://*.wiid.me/*",
-		"*://*.paypou.com/*"
-	],
 	"redirect_persist_id_path": [
 		"*://*.bercara.com/*",
 		"*://*.semawur.com/*",
