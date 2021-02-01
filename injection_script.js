@@ -2140,7 +2140,13 @@ ensureDomLoaded(()=>{
 	//adshrink.it
 	ifElement("meta[property='og:site_name'][content='Adshrink.it']",()=>{
 		let iT=setInterval(()=>{
-			if(typeof window[___reactjsD.o]=="object"&&typeof window[___reactjsD.o].dest=="string")
+			if(typeof _sharedData=="object"&&0 in _sharedData&&"destination"in _sharedData[0])
+			{
+				clearInterval(iT)
+				document.write(_sharedData[0].destination)
+				safelyNavigate(document.body.textContent)
+			}
+			else if(typeof ___reactjsD!="undefined"&&typeof window[___reactjsD.o]=="object"&&typeof window[___reactjsD.o].dest=="string")
 			{
 				clearInterval(iT)
 				safelyNavigate(window[___reactjsD.o].dest)
