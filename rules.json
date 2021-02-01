@@ -220,6 +220,10 @@
 	"useragent_chrome": [
 		"*://*.fluxteam.xyz/*"
 	],
+	"useragent_empty": [
+		"*://*.corneey.com/*",
+		"*://*.sh.st/*"
+	],
 	"redirect_persist_id_path": [
 		"*://*.bercara.com/*",
 		"*://*.semawur.com/*",
