@@ -1485,7 +1485,15 @@ ensureDomLoaded(()=>{
 		}
 	})
 	domainBypass("welcome.indihome.co.id",()=>ifElement(`.button-lanjut:not([onclick='stop_timer();'])`,a=>a.click()))
-	domainBypass("techrfour.com",()=>keepLooking(()=>ifElement("form[id='1']",f=>f.submit())))
+	domainBypass("techrfour.com",()=>ifElement("input[name='newwpsafelink']",i=>{
+		const{parse}=JSON,{searchParams}=new URL(parse(atob(i.value)).linkr)
+		if(searchParams.has("safelink_redirect"))
+		{
+			const{safelink,second_safelink_url}=parse(atob(searchParams.get("safelink_redirect")))
+			referer=second_safelink_url
+			safelyNavigate(safelink)
+		}
+	}))
 	domainBypass("dl.helow.id",()=>ifElement("button#btn6",b=>b.onclick()))
 	domainBypass("dl.ocanoke.com",()=>{
 		crowdPath(location.pathname.split("/").pop())
