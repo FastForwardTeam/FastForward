@@ -17,6 +17,9 @@
 	"path_u_id_base64": [
 		"*://*.shrink-service.it/u/*/*"
 	],
+	"path_ads_hex": [
+		"*://*.leechall.com/ads/*"
+	],
 	"query_raw": [
 		"*://*.anonym.to/?*",
 		"*://*.anonymz.com/?*",

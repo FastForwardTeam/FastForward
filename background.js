@@ -534,11 +534,21 @@ function resolveRedirect(url)
 	xhr.send()
 	return destination
 }
+function decodeHexString(hexstr)
+{
+	let a=[]
+	for(let i=0;i<hexstr.length-1;i+=2)
+	{
+		a.push(parseInt(hexstr.substr(i,2),16))
+	}
+	return String.fromCharCode.apply(String,a)
+}
 const onBeforeRequest_rules = {
 	path_base64: details => getRedirect(atob(details.url.substr(details.url.indexOf("aHR0c")))),
 	path_s_encoded: details => encodedRedirect(details.url.substr(details.url.indexOf("/s/")+3)),
 	path_r_base64: details => getRedirect(atob(details.url.substr(details.url.indexOf("/r/")+3))),
 	path_dl_base64: details => getRedirect(atob(details.url.substr(details.url.indexOf("/dl/")+4))),
+	path_ads_hex: details => getRedirect(decodeHexString(details.url.substr(details.url.indexOf("/ads/")+5))),
 	path_u_id_base64: details => {
 		let data=details.url.substr(details.url.indexOf("/u/")+3)
 		return getRedirect(atob(data.substr(data.indexOf("/")+1)))
@@ -713,12 +723,7 @@ const onBeforeRequest_rules = {
 		let url=new URL(details.url)
 		if(url.searchParams.has("go"))
 		{
-			let go=url.searchParams.get("go"),a=[]
-			for(let i=0;i<go.length-1;i+=2)
-			{
-				a.push(parseInt(go.substr(i,2),16))
-			}
-			return getRedirect(String.fromCharCode.apply(String,a))
+			return getRedirect(decodeHexString(url.searchParams.get("go")))
 		}
 	},
 	param_to_base64: details => {
