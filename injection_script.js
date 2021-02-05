@@ -740,7 +740,7 @@ domainBypass(/^((www\.)?((njiir|healthykk|linkasm|dxdrive|getwallpapers|sammobil
 hrefBypass(/thesimsresource\.com\/downloads\/details\/id\//,()=>window.setTimeout=f=>setTimeout(f,1))
 hrefBypass(/firefaucet\.win\/l\/|sfirmware\.com\/downloads-file\/|(apkily\.com\/getapp$)|androidtop\.net\/\?do=downloads\&id=/,()=>window.setInterval=f=>setInterval(f,1))
 hrefBypass(/emulator\.games\/download\.php|curseforge\.com\/.*\/download\/[0-9]*/,()=>window.setInterval=f=>setInterval(f,100))
-domainBypass(/^((www\.)?((racaty|longfiles|filepuma|portableapps|majorgeeks)\.com|indishare\.org|datei\.to|keisekai\.fun|solvetube\.site))$/,()=>window.setTimeout=f=>setTimeout(f,1))
+domainBypass(/^((www\.)?((racaty|longfiles|filepuma|portableapps)\.com|indishare\.org|datei\.to|keisekai\.fun|solvetube\.site))$/,()=>window.setTimeout=f=>setTimeout(f,1))
 domainBypass(/lkc21\.net|layarkacaxxi\.org/,()=>window.setTimeout=f=>setTimeout(f,100))
 domainBypass("universal-bypass.org",()=>{
 	window.universalBypassInstalled=true
@@ -1622,6 +1622,17 @@ ensureDomLoaded(()=>{
 	domainBypass("5mod-file.ru",()=>ifElement("#form",f=>f.submit()))
 	domainBypass("kazanclilink.com",()=>ifElement("a#baglantigit",a=>safelyNavigate(a.href)))
 	domainBypass("moddingunited.xyz",()=>{if(typeof reverseString=="function")safelyNavigate(reverseString(window.location.search.substring(1)))})
+	domainBypass("majorgeeks.com",()=>{
+		let it=document.createNodeIterator(document.documentElement,NodeFilter.SHOW_COMMENT,()=>NodeFilter.FILTER_ACCEPT,false);
+		let node;
+		while(node=it.nextNode())
+		{
+			if(node.textContent.substr(0, 8) == " Debug: ")
+			{
+				safelyNavigate(node.textContent.substr(8))
+			}
+		}
+	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
