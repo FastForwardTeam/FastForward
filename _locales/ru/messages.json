@@ -1,6 +1,6 @@
 {
 	"appDesc": {
-		"message": "Не тратьте зря своё время на уступчивость. Universal Bypass автоматически пропускает раздражающие сокращатели ссылок."
+		"message": "Не тратьте зря своё время на уступчивость. Universal Bypass автоматически обходит раздражающие сокращатели ссылок."
 	},
 	"firstrunTitle": {
 		"message": "Спасибо за установку Universal Bypass!"
@@ -36,7 +36,7 @@
 		"message": "Universal Bypass обошёл сайтов: %."
 	},
 	"support": {
-		"message": "Поддержать Universal Bypass."
+		"message": "Поддержать Универсальный обходчик."
 	},
 	"options": {
 		"message": "Настройки"

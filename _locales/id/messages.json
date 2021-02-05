@@ -60,7 +60,7 @@
 		"message": "Blokir IP logger jika tidak dapat di-bypass."
 	},
 	"optionsCrowdBypass": {
-		"message": "Crowd Bypass: Memberi dan mendapatkan tujuan dari pemendek link (iklan) yang tidak dapat di-bypass. "
+		"message": "Crowd Bypass: Memberi dan mendapatkan tujuan dari pemendek link yang tidak dapat di-bypass. "
 	},
 	"optionsCrowdAutoOpen": {
 		"message": "Buka halaman tujuan crowd bypass di tab baru setelah % detik."
@@ -108,7 +108,7 @@
 		"message": "Anda sedang diarahkan ke %"
 	},
 	"infoLinkvertise": {
-		"message": "Kami tidak diizinkan melakukan bypass pada situs web ini tapi Kami sudah membicarakan penghapusan langkah menjengkelkan ini."
+		"message": "Kami tidak diizinkan untuk melakukan bypass pada situs web ini tapi kami telah menegosiasikan penghapusan langkah-langkah menjengkelkan ini."
 	},
 	"infoFileHoster": {
 		"message": "Sayangnya, server unduhannya akan memastikan bahwa anda telah menunggu sebelum mengizinkan anda untuk mengunduh file."
@@ -153,6 +153,6 @@
 		"message": "Universal Bypass mencegah IP anda supaya tidak tercatat dalam log."
 	},
 	"blockedSubtitle": {
-		"message": "Tidak ingin Universal Bypass untuk mencegah bad actors (Peretas) dari mendapatkan IP Anda?"
+		"message": "Tidak ingin Universal Bypass untuk mencegah peretas dari mendapatkan IP Anda?"
 	}
 }

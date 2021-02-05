@@ -48,7 +48,7 @@
 		"message": "Habilitar las evasiones del sitio web."
 	},
 	"optionsNavigationDelay": {
-		"message": "Llévame a mi destino después de % segundo(s)."
+		"message": "Llévame a mi página de destino después de % segundo(s)."
 	},
 	"optionsTrackerBypass": {
 		"message": "Evadir rastreadores (como bit.ly y t.co) usando Apimon.de."

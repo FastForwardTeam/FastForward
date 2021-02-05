@@ -114,7 +114,7 @@
 		"message": "Thật không may, máy chủ cần phải đảm bảo bạn đã chờ trước khi cho phép tải về tệp."
 	},
 	"infoOutdated": {
-		"message": "Trang web này sẽ được bỏ qua với một phiên bản mới hơn của Universal Bypass."
+		"message": "Trang web này đã được bỏ qua với một phiên bản mới hơn của Universal Bypass."
 	},
 	"crowdWait": {
 		"message": "Thật không may, bạn là người đầu tiên gặp phải liên kết này, nhưng sau khi bạn chờ đợi, những người dùng Universal Bypass khác sẽ không còn phải làm như vậy nữa."

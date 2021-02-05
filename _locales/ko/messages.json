@@ -39,10 +39,10 @@
 		"message": "Universal Bypass 돕기"
 	},
 	"options": {
-		"message": "설정하기"
+		"message": "설정"
 	},
 	"optionsLink": {
-		"message": "Universal Bypass의 설정을 바꾸세요."
+		"message": "Universal Bypass의 설정을 바꾸기"
 	},
 	"optionsEnabled": {
 		"message": "웹사이트 우회 켜기"

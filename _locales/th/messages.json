@@ -1,12 +1,12 @@
 {
 	"appDesc": {
-		"message": "ไม่ต้องเสียเวลากับขั้นตอนการข้ามลิ้งค์. Universal Bypass ช่วยคุณข้ามย่อลิงค์ที่โครตน่ารำคาญให้โดยอัตโนมัติ"
+		"message": "ไม่ต้องเสียเวลากับขั้นตอนการข้ามลิ้งค์. Universal Bypass ช่วยคุณข้ามลิงค์ที่น่ารำคาญให้โดยอัตโนมัติ"
 	},
 	"firstrunTitle": {
 		"message": "ขอขอบคุณสำหรับการติดตั้ง Universal Bypass!"
 	},
 	"firstrunNoScript": {
-		"message": " ดูเหมือนคุณกำลังใช้ NoScript หรือสิ่งที่คล้ายคลึง ซึ้ง Universal Bypass ไม่สามารถทำงานร่วมกันได้"
+		"message": " ดูเหมือนคุณกำลังใช้ NoScript หรือสิ่งที่คล้ายคลึง ซึ่ง Universal Bypass ไม่สามารถทำงานร่วมกันได้"
 	},
 	"version": {
 		"message": "เวอร์ชัน"
@@ -45,7 +45,7 @@
 		"message": "เปลี่ยนการตั้งค่าของ Universal Bypass"
 	},
 	"optionsEnabled": {
-		"message": "เปิดใช้งาน website bypasses"
+		"message": "เปิดใช้งานการ bypasses"
 	},
 	"optionsNavigationDelay": {
 		"message": "พาไปยังจุดหมายปลายทางหลังจาก % วินาที (ใช้ 0 เพื่อข้ามทันที)"
@@ -147,12 +147,12 @@
 		"message": "สิ่งนี้ไม่ถูกต้องหรือไม่?"
 	},
 	"crowdBypassedOptions": {
-		"message": "คุณต้องการที่จะเปิด ในแท็บใหม่ ทันทีหรือใน x วินาทีมั้ย?"
+		"message": "คุณต้องการที่จะเปิดเว็บนี้ในแท็บใหม่ทันทีหรือใน x วินาที?"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass ช่วยป้องกัน IP คุณจากการถูกเก็บประวัติ."
+		"message": "Universal Bypass ช่วยป้องกัน IP ของคุณจากการถูกเก็บประวัติ."
 	},
 	"blockedSubtitle": {
-		"message": "ไม่ต้องการให้ Universal Bypass ป้องกันผู้ที่ไม่ประสงดีรับ IP ของคุณใช่ไหม?"
+		"message": "ไม่ต้องการให้ Universal Bypass ป้องกันผู้ที่ไม่ประสงค์ดีรับ IP ของคุณใช่ไหม?"
 	}
 }

@@ -6,7 +6,7 @@
 		"message": "Universal Bypass'i kurduğunuz için çok teşekkürler!"
 	},
 	"firstrunNoScript": {
-		"message": "Ancak görünen o ki Universal Baypass'in uyumlu olmadığı NoScript veya benzeri bir uzatma kullanıyorsunuz."
+		"message": "Görünen o ki Universal Bypass ile uyumlu olmayan benzeri bir eklenti, NoScript veya betik kullanıyorsunuz."
 	},
 	"version": {
 		"message": "Sürüm"
@@ -84,7 +84,7 @@
 		"message": "Neredeyse vardınız."
 	},
 	"beforeNavigateDestination": {
-		"message": "Hedefiniz %"
+		"message": "Hedefiniz: %"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "Hemen geçerseniz, bu web sitesi Universal Bypass'i algılayacaktır."
