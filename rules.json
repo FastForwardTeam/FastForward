@@ -27,7 +27,8 @@
 	],
 	"query_base64": [
 		"*://*.hikarinoakariost.info/out/?*",
-		"*://*.p3dm.ru/download-en.html?*"
+		"*://*.p3dm.ru/download-en.html?*",
+		"*://*.iplhd.cf/*?*"
 	],
 	"hash_base64": [
 		"*://*.acorme.com/*"
