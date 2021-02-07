@@ -2031,30 +2031,6 @@ ensureDomLoaded(()=>{
 	ifElement("a[href].wpapks-download-link",a=>ifElement("#wpapks-pre-download-btn",b=>{
 		b.onclick=()=>safelyNavigate(a.href)
 	}))
-	//Duit.cc
-	if(document.querySelector("script[src^='https://duit.cc/js/']"))
-	{
-		ifElement("input[type='hidden'][name='geturl'][value^='http']",i=>{
-			safelyNavigate(i.value)
-			finish()
-		})
-	}
-	if(document.querySelector("amp-facebook-page[data-href='https://www.facebook.com/duit.cc']"))
-	{
-		if(typeof generate=="function")
-		{
-			window.setInterval=f=>setInterval(f,1)
-			generate()
-			awaitElement("#download > form > input[type='submit']",i=>i.click())
-		}
-		else
-		{
-			ifElement("#main > #Blog1 a",a=>{
-				safelyAssign(a.href)
-				finish()
-			})
-		}
-	}
 	//Other Templates
 	ifElement(".timed-content-client_show_0_30_0",d=>{//technicoz.com
 		d.classList.remove("timed-content-client_show_0_30_0")
