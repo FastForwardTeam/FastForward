@@ -224,8 +224,9 @@
 		"*://*.fluxteam.xyz/*"
 	],
 	"useragent_empty": [
-		"*://*.corneey.com/*",
-		"*://*.sh.st/*"
+		"*://*.sh.st/*",
+		"*://*.ceesty.com/*",
+		"*://*.corneey.com/*"
 	],
 	"redirect_persist_id_path": [
 		"*://*.bercara.com/*",
