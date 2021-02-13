@@ -134,7 +134,8 @@
 		"*://*.dikatekno.com/go/?url=*",
 		"*://*.blackmod.net/dl/?url=*",
 		"*://*.hulblog.com/*/?url=*",
-		"*://*.nyantaidulu.com/linknya/?url=*"
+		"*://*.nyantaidulu.com/linknya/?url=*",
+		"*://*.pixelshost.com/?url=*"
 	],
 	"param_id_base64": [
 		"*://*/p/*.html?id=*",
