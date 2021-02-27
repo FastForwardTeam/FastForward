@@ -1634,6 +1634,36 @@ ensureDomLoaded(()=>{
 		}
 	})
 	domainBypass("droidfilehost.com",()=>{if(typeof wt !== 'undefined')wt=1})
+	domainBypass("educationmedianews.com", () => {
+		let scripts = document.querySelectorAll('script');
+
+		for (let key in scripts) {
+			result = scripts[key].innerHTML.match(/var redirectLink = '(.*)/);
+			if (result && result.length !== 0) {
+				eval(result[0]);
+				safelyNavigate(redirectLink);
+				break;
+			}
+		}
+	});
+	domainBypass("gplinks.co",()=>{
+		setTimeout(()=>{ // Currently the AJAX request should be delayed for 10 seconds, due to server-sided validation
+			if(jQuery)
+			{
+				let form = document.querySelector('form')
+
+				$.ajax({
+					dataType: "json",
+					url: form.action,
+					type: 'POST',
+					data: $(form).serialize(),
+					success: (res)=>{
+						safelyNavigate(res.url);
+					}
+				});
+			}
+		}, 10000)
+	});
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
