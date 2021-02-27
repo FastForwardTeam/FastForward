@@ -1647,6 +1647,7 @@ ensureDomLoaded(()=>{
 		}
 	});
 	domainBypass("gplinks.co",()=>{
+		insertInfoBox("Please wait for 10 seconds and you'll be directed to the desired link automatically.");
 		setTimeout(()=>{ // Currently the AJAX request should be delayed for 10 seconds, due to server-sided validation
 			if(jQuery)
 			{
