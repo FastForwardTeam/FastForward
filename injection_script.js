@@ -1665,6 +1665,8 @@ ensureDomLoaded(()=>{
 			}
 		}, 10000)
 	});
+	domainBypass("kooi.xyz",()=>ifElement("a#link_download",safelyNavigate))
+	domainBypass("usdb.animux.de",()=>ifElement("form#timeform",f=>f.submit()))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
