@@ -1636,6 +1636,11 @@ ensureDomLoaded(()=>{
 	domainBypass("droidfilehost.com",()=>{if(typeof wt !== 'undefined')wt=1})
 	domainBypass("kooi.xyz",()=>ifElement("a#link_download",safelyNavigate))
 	domainBypass("usdb.animux.de",()=>ifElement("form#timeform",f=>f.submit()))
+	domainBypass("www.thegamesdownload.net",()=>awaitElement("#gid",btn=>safelyAssign(btn.value)))
+	domainBypass("thefileslocker.com",()=>{
+		awaitElement("#method_free",btn=>btn.click())
+		awaitElement("[name=F1]",frm=>frm.submit())
+	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
