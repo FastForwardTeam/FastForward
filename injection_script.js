@@ -1641,24 +1641,19 @@ ensureDomLoaded(()=>{
 		awaitElement("[name=F1]",frm=>frm.submit())
 	})
 	domainBypass("techgeek.digital",()=>{
-		ifElement('form', form => form.submit());
-		ifElement('#surl1', a => a.click());
+		ifElement("form",form=>form.submit())
+		ifElement("#surl1",a=>a.click())
 	})
 	domainBypass("adshort.live",()=>{
-		if (jQuery) {
-			var goForm = $('form#go-link');
-
-			$.ajax({
-				dataType: 'json',
-				type: 'POST',
-				url: goForm.attr('action'),
-				data: goForm.serialize(),
-				success: (res) => {
-					safelyNavigate(res.url);
-				}
-			});
-		}
-	});
+		let f=$("form#go-link")
+		$.ajax({
+			dataType:"json",
+			type:"POST",
+			url:f.attr('action'),
+			data:f.serialize(),
+			success:res=>safelyNavigate(res.url)
+		})
+	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
