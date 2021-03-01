@@ -1633,6 +1633,44 @@ ensureDomLoaded(()=>{
 		}
 	})
 	domainBypass("droidfilehost.com",()=>{if(typeof wt !== 'undefined')wt=1})
+	domainBypass(/educationmedianews\.com|rexoxer\.net/, () => {
+	    setTimeout(() => {
+    		let scripts = document.querySelectorAll('script');
+    
+    		for (let key in scripts) {
+    		    if (scripts[key] instanceof Element) {
+        			result = scripts[key].innerHTML.match(/var redirectLink = '(.*)/);
+        			if (result && result.length !== 0) {
+        				eval(result[0]);
+        				safelyNavigate(redirectLink);
+        				break;
+        			}
+    		    }
+    		}
+	    }, 500);
+	});
+	domainBypass("gplinks.co",()=>{
+		crowdPath(location.pathname.split("/").pop())
+	    insertInfoBox("Please wait for 10 seconds and you'll be automatically directed to the desired link.");
+		setTimeout(()=>{ // Currently the AJAX request should be delayed for 10 seconds, due to server-sided validation
+		    crowdBypass(() => {
+    			if(jQuery)
+    			{
+    				let form = document.querySelector('form')
+    
+    				$.ajax({
+    					dataType: "json",
+    					url: form.action,
+    					type: 'POST',
+    					data: $(form).serialize(),
+    					success: (res)=>{
+    						contributeAndNavigate(res.url);
+    					}
+    				});
+    			}
+		    })
+		}, 10000)
+	});
 	domainBypass("kooi.xyz",()=>ifElement("a#link_download",safelyNavigate))
 	domainBypass("usdb.animux.de",()=>ifElement("form#timeform",f=>f.submit()))
 	domainBypass("www.thegamesdownload.net",()=>awaitElement("#gid",btn=>safelyAssign(btn.value)))
