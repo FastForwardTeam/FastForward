@@ -1626,51 +1626,13 @@ ensureDomLoaded(()=>{
 		let node;
 		while(node=it.nextNode())
 		{
-			if(node.textContent.substr(0, 8) == " Debug: ")
+			if(node.textContent.substr(0, 8)==" Debug: ")
 			{
 				safelyNavigate(node.textContent.substr(8))
 			}
 		}
 	})
-	domainBypass("droidfilehost.com",()=>{if(typeof wt !== 'undefined')wt=1})
-	domainBypass(/educationmedianews\.com|rexoxer\.net/, () => {
-	    setTimeout(() => {
-    		let scripts = document.querySelectorAll('script');
-    
-    		for (let key in scripts) {
-    		    if (scripts[key] instanceof Element) {
-        			result = scripts[key].innerHTML.match(/var redirectLink = '(.*)/);
-        			if (result && result.length !== 0) {
-        				eval(result[0]);
-        				safelyNavigate(redirectLink);
-        				break;
-        			}
-    		    }
-    		}
-	    }, 500);
-	});
-	domainBypass("gplinks.co",()=>{
-		crowdPath(location.pathname.split("/").pop())
-	    insertInfoBox("Please wait for 10 seconds and you'll be automatically directed to the desired link.");
-		setTimeout(()=>{ // Currently the AJAX request should be delayed for 10 seconds, due to server-sided validation
-		    crowdBypass(() => {
-    			if(jQuery)
-    			{
-    				let form = document.querySelector('form')
-    
-    				$.ajax({
-    					dataType: "json",
-    					url: form.action,
-    					type: 'POST',
-    					data: $(form).serialize(),
-    					success: (res)=>{
-    						contributeAndNavigate(res.url);
-    					}
-    				});
-    			}
-		    })
-		}, 10000)
-	});
+	domainBypass("droidfilehost.com",()=>{if(typeof wt!=="undefined")wt=1})
 	domainBypass("kooi.xyz",()=>ifElement("a#link_download",safelyNavigate))
 	domainBypass("usdb.animux.de",()=>ifElement("form#timeform",f=>f.submit()))
 	domainBypass("www.thegamesdownload.net",()=>awaitElement("#gid",btn=>safelyAssign(btn.value)))
@@ -1691,6 +1653,34 @@ ensureDomLoaded(()=>{
 			data:f.serialize(),
 			success:res=>safelyNavigate(res.url)
 		})
+	})
+	domainBypass(/educationmedianews\.com|rexoxer\.net/,()=>{
+		setTimeout(()=>{
+			document.querySelectorAll("script").forEach(script=>{
+				result=script.innerHTML.match(/var redirectLink = '(.*)/)
+				if(result&&result.length!==0)
+				{
+					eval(result[0])
+					safelyAssign(redirectLink+(ignoreCrowdBypass?"#ignoreCrowdBypass":""))
+				}
+			})
+		},500)
+	})
+	domainBypass("gplinks.co",()=>{
+		crowdPath(location.pathname.split("/").join(""))
+		crowdBypass(()=>{
+			setTimeout(()=>{
+				ifElement("form",form=>{
+					$.ajax({
+						dataType:"json",
+						url:form.action,
+						type:"POST",
+						data:$(form).serialize(),
+						success:res=>contributeAndNavigate(res.url)
+					})
+				})
+			},10000)
+		},true)
 	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
