@@ -512,7 +512,7 @@ domainBypass("lnk.news",()=>ifElement("#display_go_form",f=>{
 	Math.random=()=>1
 	setTimeout(()=>$("#skip_form").trigger("submit"),50)
 })))
-hrefBypass(/(uiz\.(io|app)|moon7\.xyz)\/go/,()=>{
+hrefBypass(/(uiz\.(io|app)|moon7\.xyz)\/go|tlkm\.id/,()=>{
 	Object.freeze(location)
 	ensureDomLoaded(()=>{
 		const regex=/.*window\.location\.href = "(http[^"]+)";.*/
