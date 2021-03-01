@@ -755,7 +755,6 @@ ensureDomLoaded(()=>{
 	}
 	domainBypass(/^((www\.)?((file(factory|-upload)|asdfiles|mega4up)\.com|up-load\.io|cosmobox\.org|rockfile\.co|devdrive\.cloud))$/,()=>insertInfoBox("{{msg.infoFileHoster}}"))
 	domainBypass(/linkvertise\.(com|net)|link-to\.net/,()=>insertInfoBox(UNIVERSAL_BYPASS_INTERNAL_VERSION>=9?"{{msg.infoLinkvertise}}":"We're not allowed to bypass this website but we have negotiated the removal of their most annoying steps."))
-	domainBypass(/adfoc\.us|ads\.bdcraft\.net/,()=>ifElement(".skip[href]",b=>safelyNavigate(b.href)))
 	domainBypass("srt.am",()=>{
 		if(document.querySelector(".skip-container"))
 		{
@@ -2168,6 +2167,10 @@ ensureDomLoaded(()=>{
 				safelyAssign(b.getAttribute("data-url"))
 				finish()
 			})
+			break;
+
+			case"AdFoc.us":
+			ifElement("a.skip[href]",e=>{safelyNavigate(e.href)});
 			break;
 
 			case"shortadd : 302 Moved":
