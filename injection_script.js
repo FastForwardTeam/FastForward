@@ -682,7 +682,7 @@ domainBypass("fouadmods.com",()=>{
 		value:()=>({countdown360:d=>{d.onComplete()}})
 	})
 })
-domainBypass("akwam.org",()=>{
+domainBypass(/akwam\.org|old\.akwam\.co/,()=>{
 	window.setInterval=f=>setInterval(f,1)
 	awaitElement("a.download_button[href]",safelyNavigate)
 })
@@ -1414,8 +1414,8 @@ ensureDomLoaded(()=>{
 		countIt(()=>f.submit())
 	}))
 	domainBypass("sorewa.net",()=>ifElement("p[style='text-align: center;'] > strong > a[href]",safelyNavigate))
-	domainBypass("akwam.net",()=>ifElement(".btn-loader > a.link.btn.btn-light[href][download]",safelyNavigate))
-	domainBypass(/^(lefturl|akwams|askquds|goo-2o)\.com|(palsweet|pluslive)\.live$/,()=>ifElement("a.download-link[href]",safelyNavigate))
+	hrefBypass(/akwam\.(net|in\/download)/,()=>ifElement(".btn-loader > a.link.btn.btn-light[href][download]",safelyNavigate))
+	domainBypass(/^(lefturl|askquds|goo-2o)\.com|(palsweet|pluslive)\.live|go\.akwam\.in$/,()=>ifElement("a.download-link[href]",safelyNavigate))
 	domainBypass("worldofmods.com",()=>ifElement(".repost-button-twitter",b=>{
 		window.open=_=>{}
 		setTimeout(()=>{
