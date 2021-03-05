@@ -88,6 +88,10 @@ safelyAssign=target=>{
 	unsafelyAssign(target)
 	return true
 },
+unsafelyAssignWithReferer=(target,referer)=>{
+	//The background script will intercept this request and handle it.
+	location.href="https://universal-bypass.org/navigate?target="+encodeURIComponent(target)+"&referer="+encodeURIComponent(referer)
+},
 finish=()=>{
 	bypassed=true
 	docSetAttribute("{{channel.stop_watching}}","")
@@ -1682,6 +1686,9 @@ ensureDomLoaded(()=>{
 			},10000)
 		},true)
 	})
+	domainBypass("adbull.me",()=>ifElement("form#setc",({action})=>{
+		unsafelyAssignWithReferer(location.href,action)
+	}))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
