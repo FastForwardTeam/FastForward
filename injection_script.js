@@ -739,6 +739,16 @@ domainBypass("linksunlocked.com",()=>{
 })
 domainBypass("samehadaku.vip",()=>ifElement("div.close-button",a=>a.click()))
 domainBypass("playhindi.com",()=>transparentProperty("downloadButton",safelyNavigate))
+hrefBypass(/daominhha\.com\/download/,()=>{
+	var str=(new URL(location.href)).searchParams.get("url");
+	str=str.split("");
+	str=str.reverse();
+	str=str.join("");
+	str=str.replaceAll("-","+");
+	str=str.replaceAll(".","/");
+	str=str.replaceAll(",","=");
+	safelyAssign(atob(str));
+});
 //Insertion point for bypasses running before the DOM is loaded.
 domainBypass(/^((www\.)?((njiir|healthykk|linkasm|dxdrive|getwallpapers|sammobile|ydfile|mobilemodsapk|dlandroid|download\.modsofapk)\.com|(punchsubs|zedge|fex)\.net|k2s\.cc|muhammadyoga\.me|u\.to|skiplink\.io|(uploadfree|freeupload)\.info|fstore\.biz))$/,()=>window.setInterval=f=>setInterval(f,1))
 hrefBypass(/thesimsresource\.com\/downloads\/details\/id\//,()=>window.setTimeout=f=>setTimeout(f,1))
