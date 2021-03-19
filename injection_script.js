@@ -749,6 +749,11 @@ hrefBypass(/daominhha\.com\/download/,()=>{
 	str=str.replaceAll(",","=");
 	safelyAssign(atob(str));
 });
+hrefBypass(/bluemediafiles\.com\/url-generator\.php\?url=/,()=>{
+	window.setInterval=f=>setInterval(f,1)
+	transparentProperty("Time_Start",t=>t-5000)
+	awaitElement("input#nut[src]",i=>i.parentNode.submit())
+})
 //Insertion point for bypasses running before the DOM is loaded.
 domainBypass(/^((www\.)?((njiir|healthykk|linkasm|dxdrive|getwallpapers|sammobile|ydfile|mobilemodsapk|dlandroid|download\.modsofapk)\.com|(punchsubs|zedge|fex)\.net|k2s\.cc|muhammadyoga\.me|u\.to|skiplink\.io|(uploadfree|freeupload)\.info|fstore\.biz))$/,()=>window.setInterval=f=>setInterval(f,1))
 hrefBypass(/thesimsresource\.com\/downloads\/details\/id\//,()=>window.setTimeout=f=>setTimeout(f,1))

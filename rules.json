@@ -72,9 +72,6 @@
 	"param_q_encoded": [
 		"*://*.youtube.com/redirect?*"
 	],
-	"param_xurl_raw_http": [
-		"*://bluemediafiles.com/*?xurl=*"
-	],
 	"param_aurl_encoded": [
 		"*://*.folderenius.com/*/*?*"
 	],
