@@ -892,14 +892,6 @@ ensureDomLoaded(()=>{
 		f.setAttribute("action",f.getAttribute("action").replace("../out2/","../outlink/"))
 		countIt(()=>f.submit())
 	})
-	domainBypass(/douploads\.(com|net)/,()=>{
-		ifElement(".seconds",s=>{
-			s.textContent="1"
-			document.getElementById("chkIsAdd").checked=false
-			document.getElementById("downloadBtnClick").style.display="none"
-			document.getElementById("downloadbtn").style.display="block"
-		})
-	})
 	domainBypass("elsfile.org",()=>{
 		let f=document.createElement("form")
 		f.method="POST"
