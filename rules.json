@@ -132,6 +132,7 @@
 		"*://*.dikatekno.com/go/?url=*",
 		"*://*.blackmod.net/dl/?url=*",
 		"*://*.hulblog.com/*/?url=*",
+		"*://*.omglyrics.com/*/?url=*",
 		"*://*.nyantaidulu.com/linknya/?url=*",
 		"*://*.pixelshost.com/?url=*"
 	],
