@@ -1697,6 +1697,11 @@ ensureDomLoaded(()=>{
 		unsafelyAssignWithReferer(location.href,action)
 	}))
 	domainBypass("tinyurl.is",()=>ifElement("a#skip-btn[href]",safelyNavigate))
+	domainBypass("journaldupirate.net",()=>{
+		ifElement("div.alert a",safelyNavigate,()=>{
+			$(".button-blue").first().click()
+		})
+	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
