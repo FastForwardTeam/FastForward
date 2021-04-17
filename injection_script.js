@@ -1696,6 +1696,7 @@ ensureDomLoaded(()=>{
 	domainBypass("adbull.me",()=>ifElement("form#setc",({action})=>{
 		unsafelyAssignWithReferer(location.href,action)
 	}))
+	domainBypass("tinyurl.is",()=>ifElement("a#skip-btn[href]",safelyNavigate))
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
