@@ -1724,6 +1724,9 @@ ensureDomLoaded(()=>{
 			}
 		}
 	})
+	domainBypass("acortame.xyz", () => {
+		safelyNavigate("https://acortame.xyz?redir=" + atob(atob(atob(atob(Lnk)))))
+	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	if(bypassed)
 	{
