@@ -43,16 +43,12 @@ unsafelyNavigate=target=>{
 	let url="https://universal-bypass.org/bypassed?target="+encodeURIComponent(target)+"&referer="+encodeURIComponent(referer)
 	switch(target)//All values here have been tested using "Take me to destinations after 0 seconds."
 	{
-		case (/fluxteam\.xyz/.exec(target)||{}).input:
-		url+="&safe_in=95"
-		break;
-
-		case (/krnl\.rocks/.exec(target)||{}).input:
+		case (/fluxteam|ksapi|oxygenu\.xyz/.exec(target)||{}).input:
 		url+="&safe_in=85"
 		break;
 
-		case "https://api.thinksuggest.org/?m=c&t=j&h=Jump&q=_clickout&pid=linkvertisenet&k=https%3A%2F%2Fproxoexploits.com%2FProxoKeyKeyLol&subid=klickouts":
-		url+="&safe_in=20"
+		case (/krnl\.gg/.exec(target)||{}).input:
+		url+="&safe_in=15"
 		break;
 	}
 	unsafelyAssign(url)
@@ -462,6 +458,12 @@ domainBypass(/bc\.vc|bcvc\.live/,()=>{
 	window.setInterval=f=>setInterval(f,1)
 	awaitElement("a#getLink:not([style^='display'])",a=>a.click())
 })
+domainBypass("tei.ai", () => {
+	ensureDomLoaded(() => {
+	    var link = atob("aH" + document.querySelector("#link-view [name='token']").value.split("aH")[1]);
+	    safelyNavigate(link);
+	});
+});
 domainBypass("shortly.xyz",()=>{
 	if(location.pathname.substr(0,3)=="/r/")
 	{
@@ -730,6 +732,10 @@ domainBypass(/pahe\.(in|me|ph)/,()=>{
 		a.setAttribute("data-bypass-clipboard",s)
 	}))
 })
+domainBypass("boost.ink", () => fetch(location.href).then(r=>r.text()).then(text=>{
+        if(text.split("<title>")[1].split("</title>")[0].includes("Complete")) safelyNavigate(atob(text.split("version=\"")[1].split("\"")[0]))
+    })
+)
 domainBypass("linksunlocked.com",()=>{
 	const searchParams=new URLSearchParams(location.search)
 	if(searchParams.has("token"))
@@ -755,6 +761,7 @@ hrefBypass(/(bluemediafiles\.com|pcgamestorrents.org)\/url-generator\.php\?url=/
 	awaitElement("input#nut[src]",i=>i.parentNode.submit())
 })
 //Insertion point for bypasses running before the DOM is loaded.
+domainBypass("downloadr.in",()=>safelyNavigate(new URL(location.href).search.slice(1)))
 domainBypass(/^((www\.)?((njiir|healthykk|linkasm|dxdrive|getwallpapers|sammobile|ydfile|mobilemodsapk|dlandroid|download\.modsofapk)\.com|(punchsubs|zedge|fex)\.net|k2s\.cc|muhammadyoga\.me|u\.to|skiplink\.io|(uploadfree|freeupload)\.info|fstore\.biz))$/,()=>window.setInterval=f=>setInterval(f,1))
 hrefBypass(/thesimsresource\.com\/downloads\/details\/id\//,()=>window.setTimeout=f=>setTimeout(f,1))
 hrefBypass(/firefaucet\.win\/l\/|sfirmware\.com\/downloads-file\/|(apkily\.com\/getapp$)|androidtop\.net\/\?do=downloads\&id=/,()=>window.setInterval=f=>setInterval(f,1))
@@ -1728,6 +1735,33 @@ ensureDomLoaded(()=>{
 		safelyNavigate(location.origin + "?redir=" + atob(atob(atob(atob(Lnk)))))
 	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
+	domainBypass("animestc.xyz", () => {
+		ifElement("#link-id", a => {
+		    fetch("https://protetor.animestc.xyz/api/link/" + a.getAttribute("value")).then(r=>r.json()).then(json=>{
+			safelyNavigate(json.link)
+		    })
+		})
+	})
+	// Apparently broken, see PR #18 on UB
+	//domainBypass("duit.cc", () => {
+	//    ifElement("[name=short]", a => {
+	//	safelyNavigate(a.value)
+	//    })
+	//})
+	domainBypass("theepochtimes.com", () => {
+	    awaitElement("#landing-page", subscriptionWall => {
+			subscriptionWall.remove()
+			document.querySelector("#main").style = "";
+	    })
+	})
+	domainBypass("apkdone.com", () => {
+	    ifElement("#download", a=>{
+			ensureDomLoaded(()=>{
+	            countdown(0)
+	            safelyNavigate(document.querySelector("#download > a:nth-child(1)").href)
+	        })
+	    })
+	})
 	if(bypassed)
 	{
 		return
@@ -1776,6 +1810,7 @@ ensureDomLoaded(()=>{
 			a.href+="#bypassClipboard="+a.href.split("?"+soralink_data[domain]+"=")[1]
 		}))
 	}
+	domainBypass("www.tech2learners.com", () => safelyNavigate(downloadButton.href))
 	domainBypass("channelmyanmar.org",()=>document.querySelectorAll("a[href^='https://channelmyanmar.org?1c17f28bf0=']").forEach(a=>{
 		if(a.classList.contains("FLMBTN-Btn"))
 		{
