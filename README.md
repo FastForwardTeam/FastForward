@@ -1,7 +1,9 @@
 <h1 align="center" font-size= "10em";>
   Universal Bypass
   <br>
-  <img src="https://github.com/Universal-Bypass-Renewed/Universal-Bypass/actions/workflows/main.yml/badge.svg?branch=main" />
+  <a href="https://github.com/Universal-Bypass-Renewed/Universal-Bypass/blob/main/.github/workflows/main.yml">
+  <img src="https://github.com/Universal-Bypass-Renewed/Universal-Bypass/actions/workflows/main.yml/badge.svg?branch=main">
+  </a>
   <a href="https://discord.gg/RSAf7b5njt">
   <img src="https://badgen.net/badge/icon/discord?icon=discord&label=Universal+Bypass+Renewed" />
   </a>
