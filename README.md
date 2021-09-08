@@ -10,7 +10,7 @@
 #### Don't waste your time with compliance. Universal Bypass automatically skips annoying link shorteners.
 
 As you may know, universal bypass is no longer maintained by its original developer, Sainan, who had worked on it for so long. 
-Thanks Sainan for your hard work.
+Thanks Sainan for your hard work. This project is to continue working on Universal Bypass, and anyone can help. join our discord :P
 
 # Installing
 | Jump to section                           |
