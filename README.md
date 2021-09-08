@@ -24,7 +24,7 @@ Thanks Sainan for your hard work.
 
 Chromium based browsers include Chrome, Edge and Brave 
 
-1) Go to the [Github actions tab](https://github.com/Universal-Bypass-Renewed/Universal-Bypass/actions) and click on latest succesful Chromium_build workflow run.
+1) Go to the [Github actions tab](https://github.com/Universal-Bypass-Renewed/Universal-Bypass/actions) and click on latest succesful workflow run.
 2) Scroll down to the artifacts section and download the universal bypass chromium package.
 3) Unnzip the file once to get 
 4) Open the manage extensions page on your borwser and turn on "Developer Mode"
