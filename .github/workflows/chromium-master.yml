@@ -1,0 +1,31 @@
+name: Chromium_build
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  workflow_dispatch:
+
+
+jobs:
+  Pack_for_chromium:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Set outputs
+        id: vars
+        run: echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
+
+      - name: Make package
+        run: bash scripts/chromium.sh nover
+
+      - name: Upload Package Artifact
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          name: Universal_bypass_${{ steps.vars.outputs.sha_short }}_chromium
+          path: build/dist
+          if-no-files-found: error
