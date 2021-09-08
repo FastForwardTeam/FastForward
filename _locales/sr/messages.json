@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "Немојте губити време са потврдама. Universal Bypass аутоматски заобилази досадне сервисе за скраћивање линкова."
+	},
+	"firstrunTitle": {
+		"message": "Хвала Вам што сте инсталирали Universal Bypass!"
+	},
+	"firstrunNoScript": {
+		"message": "Изгледа да користите NoScript или слично, са тим Universal Bypass није компатибилан."
+	},
+	"version": {
+		"message": "Верзија"
+	},
+	"definitionsVersion": {
+		"message": "Дефиниције обилазница"
+	},
+	"changelog": {
+		"message": "Измене"
+	},
+	"update": {
+		"message": "Провери ажурирања"
+	},
+	"updating": {
+		"message": "Довлаче се дефиниције за бајпас..."
+	},
+	"updateYes": {
+		"message": "Успешно је ажурирана скрипта убризгавања!"
+	},
+	"updateNo": {
+		"message": "Скрипта убризгавања је већ ажурирана."
+	},
+	"faq": {
+		"message": "Често постављана питања (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass је већ заобишао % сајт(а)/сајтова за Вас."
+	},
+	"support": {
+		"message": "Подржите Universal Bypass"
+	},
+	"options": {
+		"message": "Опције"
+	},
+	"optionsLink": {
+		"message": "Измените опције Universal Bypass-а."
+	},
+	"optionsEnabled": {
+		"message": "Омогућите обилазнице сајтова."
+	},
+	"optionsNavigationDelay": {
+		"message": "Одведи ме до дестинације након % секунде(и). (Користите 0 да не бисте чекали.)"
+	},
+	"optionsTrackerBypass": {
+		"message": "Заобићи пратиоце (као што су bit.ly и t.co) користећи Apimon.de."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Моментално ме одведи до извора трекера."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Блокирај IP логере ако не могу бити заобиђени."
+	},
+	"optionsCrowdBypass": {
+		"message": "Направи компромис између дестинација сервиса за скраћивање који се не могу заобићи."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Отвори дестинације ка заједницама у новом табу након % секунде(и). (0 = одмах.)"
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Затворите картицу која садржи дестинацију ка заједницама након % секунд(и) посете."
+	},
+	"privacyPolicy": {
+		"message": "Полиса приватности"
+	},
+	"contributors": {
+		"message": "Сарадници"
+	},
+	"optionsUserscripts": {
+		"message": "Ручно урађене обилазнице"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Ово је напреднa опција за програмерe да би могли да креирају своје личне скрипте за обилажење. Једном када је усаврше, могу је послати на GitHub како би је касније додали на Universal Bypass, tako да буде доступна свима."
+	},
+	"beforeNavigate": {
+		"message": "Ускоро стижете на Ваше одредиште."
+	},
+	"beforeNavigateDestination": {
+		"message": "Ваше одредиште је %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "Ипак, ако будете сада отишли, они ће детектовати Universal Bypass."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Више нећете бити детектовани за % секунди."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Више нећете бити детектовани за 1 секунду."
+	},
+	"beforeNavigateTimer": {
+		"message": "Ускоро ћете бити аутоматски преусмерени за % секунде(и)."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Ускоро ћете бити аутоматски усмерени за 1 секунду."
+	},
+	"beforeNavigateOptions": {
+		"message": "Да ли желите да будете усмерени одмах или за x секунди?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Бићете усмерени до %"
+	},
+	"infoLinkvertise": {
+		"message": "Није нам дозвољено да заобиђемо овај веб сајт али смо у преговорима како би се уклонили њихови неугодни елементи."
+	},
+	"infoFileHoster": {
+		"message": "Нажалост, они користе позадинску валидацију како би се осигурали да ви заправо чекате пре него што будете скинули датотеку."
+	},
+	"infoOutdated": {
+		"message": "Овај сајт је заобиђен од стране новије верзије Universal Bypass-а."
+	},
+	"crowdWait": {
+		"message": "Нажалост, Ви сте први који сте наишли на овај линк, али после вашег чекања на Universal Bypass ниједан други корисник неће морати више да чека."
+	},
+	"crowdDisabled": {
+		"message": "Дестинација овог сајта може бити дељена, њу сте искључили у опцијама."
+	},
+	"crowdBypassed": {
+		"message": "Можда не морате да чекате!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Остали Universal Bypass корисници су већ чекали на вас и јавили да ово води на %"
+	},
+	"crowdBypassedTimer": {
+		"message": "Ово ће бити отворено у новој картици за % секунд(и)."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Ово ће бити отворено у новој картици за 1 секунд."
+	},
+	"crowdCloseTimer": {
+		"message": "Ова картица ће се затворити за % секунди."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Ова картица ће се затворити за 1 секунд."
+	},
+	"cancel": {
+		"message": "Отказати"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Није ли ово било у реду?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Да ли желите да се ово отвара у новој картици одмах или за x секунди?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass је спречио да ваша IP буде забележена."
+	},
+	"blockedSubtitle": {
+		"message": "Не желите да Universal Bypass спречи лоше људе да забележе вашу IP адресу?"
+	}
+}

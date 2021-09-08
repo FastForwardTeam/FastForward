@@ -1,0 +1,53 @@
+{
+	"appDesc": {
+		"message": "ຢ່າເສຍເວລາຂອງທ່ານດ້ວຍການປະຕິບັດຕາມ. Universal Bypass ຫລີກລ້ຽງການເຊື່ອມຕໍ່ສັ້ນທີ່ ໜ້າ ຮໍາຄານ"
+	},
+	"firstrunTitle": {
+		"message": "ຂອບໃຈ ສຳ ລັບຕິດຕັ້ງ Universal Bypass!"
+	},
+	"firstrunNoScript": {
+		"message": "ເຖິງຢ່າງໃດກໍ່ຕາມ, ທ່ານເບິ່ງຄືວ່າ ກຳ ລັງໃຊ້ NoScript ຫຼືຄ້າຍຄືກັນ, ເຊິ່ງ Universal Bypass ບໍ່ເຂົ້າກັນ."
+	},
+	"version": {
+		"message": "ຮຸ່ນ"
+	},
+	"definitionsVersion": {
+		"message": "ຄຳ ນິຍາມບິດເບືອນ"
+	},
+	"changelog": {
+		"message": "Changelog"
+	},
+	"update": {
+		"message": "ກວດເບິ່ງການປັບປຸງ..."
+	},
+	"updating": {
+		"message": "ກຳ ລັງດາວໂຫລດ ຄຳ ນິຍາມ bypass ..."
+	},
+	"updateYes": {
+		"message": "ການດາວໂຫລດ ຄຳ ນິຍາມ bypass ສຳ ເລັດແລ້ວ."
+	},
+	"updateNo": {
+		"message": "ນິຍາມ Bypass ແມ່ນທັນສະ ໄໝ."
+	},
+	"faq": {
+		"message": "ຄໍາ​ຖາມ​ທີ່​ຖືກ​ຖາມ​ເລື້ອຍໆ"
+	},
+	"support": {
+		"message": "ປະກອບສ່ວນໃຫ້ Universal Bypass."
+	},
+	"options": {
+		"message": "ທາງເລືອກ"
+	},
+	"optionsLink": {
+		"message": "ປ່ຽນຕົວເລືອກ Universal Bypass."
+	},
+	"optionsEnabled": {
+		"message": "ເປີດ ນຳ ໃຊ້ເວັບໄຊທ໌ຂ້າມຜ່ານ."
+	},
+	"optionsNavigationDelay": {
+		"message": "ພາຂ້ອຍໄປທີ່ຈຸດ ໝາຍ ປາຍທາງຫຼັງຈາກ % ວິນາທີ."
+	},
+	"optionsTrackerBypass": {
+		"message": "ຜູ້ຕິດຕາມ Bypass (ເຊັ່ນ: bit.ly ແລະ t.co) ໂດຍໃຊ້ Apimon.de"
+	}
+}

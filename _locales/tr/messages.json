@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "Zamanınızı karmaşa ile harcamayın. Universal Bypass, rahatsız edici bağlantı kısaltıcıları kendiliğinden geçer."
+	},
+	"firstrunTitle": {
+		"message": "Universal Bypass'i kurduğunuz için çok teşekkürler!"
+	},
+	"firstrunNoScript": {
+		"message": "Görünen o ki Universal Bypass ile uyumlu olmayan benzeri bir eklenti, NoScript veya betik kullanıyorsunuz."
+	},
+	"version": {
+		"message": "Sürüm"
+	},
+	"definitionsVersion": {
+		"message": "Bypass tanımları"
+	},
+	"changelog": {
+		"message": "Değişiklik listesi"
+	},
+	"update": {
+		"message": "Güncellemeleri denetle"
+	},
+	"updating": {
+		"message": "Baypas tanımları indiriliyor ..."
+	},
+	"updateYes": {
+		"message": "Baypas tanımları başarıyla indirildi."
+	},
+	"updateNo": {
+		"message": "Bypass tanımları güncel."
+	},
+	"faq": {
+		"message": "Sıkça Sorulan Sorular (SSS)"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass sizin için şimdiye kadar % siteyi baypas etti."
+	},
+	"support": {
+		"message": "Universal Bypass'ı Destekleyin"
+	},
+	"options": {
+		"message": "Ayarlar"
+	},
+	"optionsLink": {
+		"message": "Universal Bypass'ın seçeneklerini değiştir."
+	},
+	"optionsEnabled": {
+		"message": "Web sayfalarını es geçmeyi etkinleştir."
+	},
+	"optionsNavigationDelay": {
+		"message": "Beni hedeflere % saniye sonra yönlendir. (Hemen yönlendirilmek için 0 yazın.)"
+	},
+	"optionsTrackerBypass": {
+		"message": "Apimon.de kullanarak (bit.ly ve t.co) gibi izleyicileri  atla"
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Beni anında izleyicilerin hedeflerine götür."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Eğer es geçilemezse IP kayıtçılarını engelle."
+	},
+	"optionsCrowdBypass": {
+		"message": "Baypas edilemeyen adres kısaltıcıların hedeflerini geliştiriciyle paylaş."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Kitle kaynaklı hedefleri % saniye sonra yeni bir sekmede aç. (0 = hemen.)"
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Ziyaretin % saniyesinden sonra kitle kaynaklı hedefi içeren sekmeyi kapat."
+	},
+	"privacyPolicy": {
+		"message": "Gizlilik Politikası"
+	},
+	"contributors": {
+		"message": "Katkıda bulunanlar"
+	},
+	"optionsUserscripts": {
+		"message": "Özel Baypaslar"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Bu, geliştiricilerin siteleri atlamak için kendi komut dosyalarını oluşturmaları için gelişmiş bir özelliktir. Kusursuz çalıştığında, GitHub'a Universal Bypass'a eklenmesi için gönderilebilirsiniz, böylece herkesin kullanımına açık olur."
+	},
+	"beforeNavigate": {
+		"message": "Neredeyse vardınız."
+	},
+	"beforeNavigateDestination": {
+		"message": "Hedefiniz: %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "Hemen geçerseniz, bu web sitesi Universal Bypass'i algılayacaktır."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "% saniye sonra fark edilmeyeceksiniz."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "1 saniye içerisinde fark edilmeyeceksiniz."
+	},
+	"beforeNavigateTimer": {
+		"message": "% saniye içinde otomatik olarak yönlendirileceksiniz."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "1 saniye içinde otomatik olarak yönlendirileceksiniz."
+	},
+	"beforeNavigateOptions": {
+		"message": "Hemen mi yoksa x saniye içinde mi yönlendirilmek istersiniz?"
+	},
+	"beforeNavigateInstant": {
+		"message": "% adresine yönlendiriliyorsunuz"
+	},
+	"infoLinkvertise": {
+		"message": "Bu web sitesini atlamamıza izin verilmiyor, ancak en can sıkıcı adımlarının kaldırılması konusunda görüştük."
+	},
+	"infoFileHoster": {
+		"message": "İndirme sunucusu dosyayı indirmenize izin vermeden önce sizi biraz bekletecek."
+	},
+	"infoOutdated": {
+		"message": "Bu web sitesi Universal Bypass'ın daha yeni bir sürümü tarafından atlandı."
+	},
+	"crowdWait": {
+		"message": "Maalesef, bu bağlantıyla ilk karşılaşan sizsiniz, ancak siz bekledikten sonra, diğer Universal Bypass kullanıcılarının artık buna ihtiyacı kalmayacak."
+	},
+	"crowdDisabled": {
+		"message": "Bu web sitesi, ayarlarda devre dışı bıraktığınız kitle baypası tarafından baypas edilmektedir."
+	},
+	"crowdBypassed": {
+		"message": "Beklemek zorunda değilsiniz!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Diğer Universal Bypass kullanıcıları sizin yerinize zaten beklediler ve bunun şuraya yönlendiğini bildirdiler: %"
+	},
+	"crowdBypassedTimer": {
+		"message": "Bu, % saniye içinde yeni bir sekmede açılacaktır."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Bu, 1 saniye içinde yeni bir sekmede açılacaktır."
+	},
+	"crowdCloseTimer": {
+		"message": "Bu sekme % saniye içinde kapanacak."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Bu sekme 1 saniye içinde kapanacak."
+	},
+	"cancel": {
+		"message": "Vazgeç."
+	},
+	"crowdBypassedIgnore": {
+		"message": "Bu doğru değil miydi?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Bu adresin hemen mi yoksa x saniye sonra mı yeni bir sekmede açılmasını istersiniz?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass, IP adresinizin kayıtlara eklenmesini engelledi."
+	},
+	"blockedSubtitle": {
+		"message": "Universal Bypass'ın sizi kötü kişilerin IP adresinizi almasından korumasını istemiyor musunuz?"
+	}
+}

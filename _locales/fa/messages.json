@@ -1,0 +1,155 @@
+{
+	"appDesc": {
+		"message": ".وقت خود را با مطابقت دادن هدر ندهید. میان بر جهانی به طور خودکار کوتاه کننده های لینک مزاحم را از قلم می اندازد"
+	},
+	"firstrunTitle": {
+		"message": ".با تشکر برای نصب میان بر جهانی"
+	},
+	"firstrunNoScript": {
+		"message": ".به نظر می رسد شما از نو اسکریپت یا مشابه آن استفاده می کنید که با میان بر جهانی سازگار نیست"
+	},
+	"version": {
+		"message": "نسخه"
+	},
+	"definitionsVersion": {
+		"message": "تنظیمات دورزدن"
+	},
+	"changelog": {
+		"message": "گزارش تغییرات"
+	},
+	"update": {
+		"message": "جستسجو برای بروزرسانی"
+	},
+	"updating": {
+		"message": "در حال دانلود تنظیمات دورزدن..."
+	},
+	"updateYes": {
+		"message": "تنظیمات دورزدن با موفقیت دانلود شد."
+	},
+	"updateNo": {
+		"message": "تنظیمات دورزدن به روز هستند."
+	},
+	"faq": {
+		"message": ".سوالات متداول"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass سایت % را برای شما دور زد."
+	},
+	"support": {
+		"message": "با Universal Bypass همکاری کنید."
+	},
+	"options": {
+		"message": "گزینه ها"
+	},
+	"optionsLink": {
+		"message": "تغییر تنظیمات Universal Bypass."
+	},
+	"optionsEnabled": {
+		"message": ".میان بر های وب سایت را فعال سازید"
+	},
+	"optionsNavigationDelay": {
+		"message": "من را پس از % ثانیه به مقصد ببر."
+	},
+	"optionsTrackerBypass": {
+		"message": "دور زدن کوتاه کننده‌ها (مثل bit.ly و t.co) توسط Apimon.de"
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "بلافاصله من را به مقصد کوتاه‌کننده‌ها ببر."
+	},
+	"optionsBlockIPLoggers": {
+		"message": ".آی پی ورودگر ها که قابل به رد شدن نیستند را مسدود کن"
+	},
+	"optionsCrowdBypass": {
+		"message": ".مقاصد غیر قابل رد شدن کوتاه کننده ها را بدهید و بگیرید"
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "مقصد‌های پیداشده را در صفحه ای جدید بعد از % ثانیه باز کن."
+	},
+	"optionsCrowdAutoClose": {
+		"message": "صفحه‌ی مقصد پیدا شده را بعد از % ثانیه از مشاهده آن ببند."
+	},
+	"privacyPolicy": {
+		"message": ".مقررات حفظ حریم شخصی"
+	},
+	"contributors": {
+		"message": "مشارکت کنندگان"
+	},
+	"optionsUserscripts": {
+		"message": ".میان بر های سفارشی"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "این یک قابلیت پیشرفته برای توسعه‌دهندگان است تا کدهای خودشان را برای دورزدن سایت‌ها بنویسند.\nوقتی که کامل شد، می‌توانند در GitHub ثبت شوند و به Universal Bypass اضافه شوند، تا برای همه قابل دسترس باشند."
+	},
+	"beforeNavigate": {
+		"message": ".شما تقریبا به مقصدتان رسیده اید"
+	},
+	"beforeNavigateDestination": {
+		"message": ".مقصد شما % است"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "در هرصورت، اگر الان هدایت شوید، آن‌ها متوجه Universal Bypass می‌شوند."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "شما پس از % ثانیه دیگر شناسایی نخواهید شد."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "شما پس از 1 ثانیه دیگر شناسایی نخواهید شد."
+	},
+	"beforeNavigateTimer": {
+		"message": "شما به طور خودکار پس از % ثانیه هدایت خواهید شد."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "شما به طور خودکار پس از ۱ ثانیه هدایت خواهید شد."
+	},
+	"beforeNavigateOptions": {
+		"message": "آیا می‌خواهید بلافاصله هدایت شوید یا پس ازx ثانیه؟"
+	},
+	"beforeNavigateInstant": {
+		"message": "در حال هدایت شدن به % هستید"
+	},
+	"infoFileHoster": {
+		"message": "متاسفانه، سرور دانلود باید حتما مطمئن شود که شما صبر کردید قبل از اینکه به شما اجازه دانلود بدهد."
+	},
+	"infoOutdated": {
+		"message": "این وبسایت توسط یک نسخه جدیدتر از Universal Bypass دور زده شده است."
+	},
+	"crowdWait": {
+		"message": "متاسفانه، شما اولین نفری هستید که از این لینک بازدید می‌کنید؛ولی بعد اینکه شما صبر کردید بقیه کاربران Universal Bypass دیگر نیازی ندارند."
+	},
+	"crowdDisabled": {
+		"message": "این وبسایت توسط دورزدن دسته‌جمعی دور زده شده است، که شما در تنظیمات غیرفعال کرده اید."
+	},
+	"crowdBypassed": {
+		"message": "!ممکن است شما مجبور به صبر کردن نباشید"
+	},
+	"crowdBypassedInfo": {
+		"message": ".دیگر کاربران میان بر جهانی منتظر شما بوده اند و گزارش داده اند که این منجر به % شده است"
+	},
+	"crowdBypassedTimer": {
+		"message": "این پس از% ثانیه در یک صفحه جدید باز خواهد شد."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "این پس از۱ ثانیه در یک صفحه جدید باز خواهد شد."
+	},
+	"crowdCloseTimer": {
+		"message": "این صفحه بعد از % ثانیه بسته خواهد شد."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "این صفحه بعد از ۱ ثانیه بسته خواهد شد."
+	},
+	"cancel": {
+		"message": "انصراف"
+	},
+	"crowdBypassedIgnore": {
+		"message": "آیا این نادرست است؟"
+	},
+	"crowdBypassedOptions": {
+		"message": "آیا می‌خواهید این بلافاصله در یک صفحه جدید باز شود یا بعد از x ثانیه؟"
+	},
+	"blockedTitle": {
+		"message": ".میان بر جهانی مانع از وارد شدن آی پی شما شده است"
+	},
+	"blockedSubtitle": {
+		"message": "یا شما نمی خواهید تا میان بر جهانی مانع از گرفته شدن آی پی شما توسط فعالان نادرست شود؟"
+	}
+}

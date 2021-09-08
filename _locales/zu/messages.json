@@ -1,0 +1,155 @@
+{
+	"appDesc": {
+		"message": "Musa ukuchitha isikhathi sakho ngokuhambisana. I-Universal Bypass ivimbela izifinyezo ezihluphayo zesixhumanisi."
+	},
+	"firstrunTitle": {
+		"message": "\nSiyabonga ngokufaka i-Universal Bypass!"
+	},
+	"firstrunNoScript": {
+		"message": "Noma kunjalo, ubonakala ngathi usebenzisa i-NoScript noma efanayo, i-Universal Bypass engahambelani nayo."
+	},
+	"version": {
+		"message": "ukuhumushela"
+	},
+	"definitionsVersion": {
+		"message": "Izincazelo zeBypass"
+	},
+	"changelog": {
+		"message": "\nGuqulalog"
+	},
+	"update": {
+		"message": "\nBheka izibuyekezo"
+	},
+	"updating": {
+		"message": "\nIlanda izincazelo ezidlula ngendlela ..."
+	},
+	"updateYes": {
+		"message": "\nKulandwe ngempumelelo izincazelo ze-bypass."
+	},
+	"updateNo": {
+		"message": "\nIzincazelo zeBypass zisesikhathini."
+	},
+	"faq": {
+		"message": "Eminye imibuzo ejwayelekile (EIE)"
+	},
+	"bypassCounter": {
+		"message": "I-Universal Bypass isivele idlule kuwe amasayithi we-%."
+	},
+	"support": {
+		"message": "Yenza umnikelo ku-Universal Diverter"
+	},
+	"options": {
+		"message": "\nIzesekeli."
+	},
+	"optionsLink": {
+		"message": "Shintsha izici ze-Universal Diverter."
+	},
+	"optionsEnabled": {
+		"message": "Nika amandla okudluliselwa kwewebhusayithi."
+	},
+	"optionsNavigationDelay": {
+		"message": "\nNgihambise ezindaweni ngemuva kwe (%) yesibili."
+	},
+	"optionsTrackerBypass": {
+		"message": "\nAbakhandi be-Derive (njenge-bit.ly ne-t.co) ngokusebenzisa i-Apimon.de."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Ngihambise masinya lapho ngiya khona kubasebenzisi be-trackers."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "\nVimba ukungena kwe-IP uma kungenakudlula."
+	},
+	"optionsCrowdBypass": {
+		"message": "Nikeza futhi uthathe izindawo ezinqamulelayo ezingashintshiwe."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "\nVula izindawo okutholwe izixuku kuthebhu entsha ngemuva kwama-% wesibili."
+	},
+	"optionsCrowdAutoClose": {
+		"message": "\nVala ithebhu equkethe indawo okutholwe kuyo isixuku ngemuva kwe-% yesibili yokuyi vakashela."
+	},
+	"privacyPolicy": {
+		"message": "Inqubomgomo yobumfihlo"
+	},
+	"contributors": {
+		"message": "\nAbahlanganyeli"
+	},
+	"optionsUserscripts": {
+		"message": "\nAmaBypasses enziwe ngokwezifiso"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Lesi isici esithuthukisiwe sonjiniyela bokuzenzela imibhalo yabo ezizeni ezidlula. Lapho sebesetshenzisiwe, bangafakwa ku-GitHub ukuthi ingezwe ku-Universal Bypass, ngakho-ke batholakala kuwo wonke umuntu."
+	},
+	"beforeNavigate": {
+		"message": "Usondele lapho uya khona."
+	},
+	"beforeNavigateDestination": {
+		"message": "\nIndawo yakho ngu-%"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "\nKodwa-ke, uma uzulazula manje, bazobona i-Universal Bypass."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "\nNgeke usatholakala emasekhondini angu-%."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "\nNgeke usatholakala kwisekhondi eli-1."
+	},
+	"beforeNavigateTimer": {
+		"message": "\nUzoqondiswa kabusha ngemizuzwana engu-%."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Uzoqondiswa kabusha ngomzuzwana o-1."
+	},
+	"beforeNavigateOptions": {
+		"message": "\nUfuna ukuphinde uqondiswe kabusha noma ngemizuzwana eyi-x?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Uzulazelwa ku-%"
+	},
+	"infoFileHoster": {
+		"message": "Ngeshwa, iseva yokulanda izoqinisekisa ukuthi ulindile ngaphambi kokukuvumela ukuthi ulande ifayela."
+	},
+	"infoOutdated": {
+		"message": "Le webhusayithi iphambukiswa yinguqulo entsha ye-Universal Diversion."
+	},
+	"crowdWait": {
+		"message": "Ngeshwa, ungowokuqala ukuhlangana nalesi sixhumanisi, kepha ngemuva kokuthi usulindile, abanye abasebenzisi be-Universal Bypass ngeke kusadingeka."
+	},
+	"crowdDisabled": {
+		"message": "Le webhusayithi idluliswa ukudlula kwesixuku, esikhubaze kukho ongakhetha kukho."
+	},
+	"crowdBypassed": {
+		"message": "\nKungase kungadingeki ulinde!"
+	},
+	"crowdBypassedInfo": {
+		"message": "\nAbanye abasebenzisi be-Universal Bypass sebevele bakulindile futhi babika ukuthi lokhu kuholela ku-%"
+	},
+	"crowdBypassedTimer": {
+		"message": "Lokhu kuzovulwa kuthebhu entsha ngemizuzwana engu-%."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Lokhu kuzovulwa kuthebhu entsha kusekhondi eli-1."
+	},
+	"crowdCloseTimer": {
+		"message": "\nLe thebhu izovala ngemizuzwana engu-%."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "\nLe thebhu izovalwa ngomzuzwana eli-1"
+	},
+	"cancel": {
+		"message": "Khansela."
+	},
+	"crowdBypassedIgnore": {
+		"message": "Lokhu bekungalungile?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Ngabe ufuna ukuthi lokhu kuvulwe kuthebhu entsha ngokushesha noma ngemizuzwana eyi-x?"
+	},
+	"blockedTitle": {
+		"message": "\nI-Universal Bypass ivimbele i-IP yakho ukuthi ingangeni."
+	},
+	"blockedSubtitle": {
+		"message": "Ngabe awufuni i-Universal Bypass ukuvikela abenzi ababi ekutholeni i-IP yakho?"
+	}
+}

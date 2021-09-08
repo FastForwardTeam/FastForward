@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "Ärge raisake oma aega järgimisega. Universaalne ümbersõit möödab tüütuid linkide lühendajaid."
+	},
+	"firstrunTitle": {
+		"message": "\nTäname universaalse ümbersõidu Universal Bypass!"
+	},
+	"firstrunNoScript": {
+		"message": "\nTundub, et kasutate siiski NoScripti või muud sarnast, millega Universal Bypass ei ühildu."
+	},
+	"version": {
+		"message": "Versioon"
+	},
+	"definitionsVersion": {
+		"message": "\nMõistete ümbersõit"
+	},
+	"changelog": {
+		"message": "Muudatuste logi"
+	},
+	"update": {
+		"message": "Uuenduste kontrollimine"
+	},
+	"updating": {
+		"message": "Indekseerimise määratluste laadimine..."
+	},
+	"updateYes": {
+		"message": "Süstimisskripti värskendamine õnnestus!"
+	},
+	"updateNo": {
+		"message": "Süstimisskript on juba ajakohane."
+	},
+	"faq": {
+		"message": "Korduma Kippuvad Küsimused"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass-i välditud saidid: %."
+	},
+	"support": {
+		"message": "Panustage Universal Bypass-i."
+	},
+	"options": {
+		"message": "Valikud"
+	},
+	"optionsLink": {
+		"message": "Muutke Universal Bypass valikuid."
+	},
+	"optionsEnabled": {
+		"message": "Veebisaidi möödasõitude lubamine."
+	},
+	"optionsNavigationDelay": {
+		"message": "Minge sihtkohta % sek pärast."
+	},
+	"optionsTrackerBypass": {
+		"message": "Bypass jälgijad (näiteks bit.ly ja t.co), kasutades Apimon.de."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Viige mind kohe jälitajate sihtkohtadesse."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Blokeerige IP-logerid, kui neist ei saa mööda."
+	},
+	"optionsCrowdBypass": {
+		"message": "Saate saata ja vastu võtta sihtkohti, millest ei saa mööda minna."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Pärast % sekundi möödumist avage uuel vahelehel rahvahulgaga sihtkohad."
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Sulgege vahekaart, mis sisaldab rahvahulga päritolu sihtkohta pärast % sek möödumist selle külastamisest."
+	},
+	"privacyPolicy": {
+		"message": "Privaatsusreeglid"
+	},
+	"contributors": {
+		"message": "Toetajad"
+	},
+	"optionsUserscripts": {
+		"message": "Kohandatud ümbersõidud"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "See on täiustatud funktsioon, mille abil arendajad saavad luua oma skripte saitide indekseerimiseks. Kui silumine on lõpule jõudnud, saab nad saata GitHubisse, et lisada need Universal Bypassisse, nii et need oleksid kõigile kättesaadavad."
+	},
+	"beforeNavigate": {
+		"message": "Olete peaaegu sihtkohta jõudnud."
+	},
+	"beforeNavigateDestination": {
+		"message": "Sinu sihtkoht on %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "Kui aga nüüd lähete, avastavad nad Universal Bypass-i."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Teid ei tuvastata enam % sekundi jooksul."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Teid ei tuvastata enam ühe sekundi jooksul."
+	},
+	"beforeNavigateTimer": {
+		"message": "Teid suunatakse automaatselt ümber % sekundi jooksul."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Teid suunatakse automaatselt ümber ühe sekundi jooksul."
+	},
+	"beforeNavigateOptions": {
+		"message": "Kas soovite, et teid suunataks kohe või mõne sekundi pärast?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Sind suunatakse %"
+	},
+	"infoLinkvertise": {
+		"message": "Me ei tohi sellest veebisaidist mööda hiilida, kuid oleme pidanud läbirääkimisi nende kõige tüütumate sammude eemaldamise üle."
+	},
+	"infoFileHoster": {
+		"message": "Kahjuks tagab allalaadimisserver, et olete enne faili allalaadimist oodanud ,et lubada teil faili allalaadimine."
+	},
+	"infoOutdated": {
+		"message": "Sellest veebisaidist möödumiseks on Universal Bypass uuem versioon."
+	},
+	"crowdWait": {
+		"message": "Kahjuks olete selle lingi kaudu esimestena kokku puutunud, kuid pärast teie ootust ei pea teised Universal Bypass'i kasutajad enam ootama."
+	},
+	"crowdDisabled": {
+		"message": "Sellest saidist mööda saamiseks rakendatakse kohandatud meetodit, mille olete seadetes keelanud."
+	},
+	"crowdBypassed": {
+		"message": "Võimalik, et ei pea ootama!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Teised Universal Bypassi kasutajad on juba oodanud sinu järgi ning andnud teada et see viib %"
+	},
+	"crowdBypassedTimer": {
+		"message": "See avatakse uuel vahekaardil % sekundi pärast."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "See avatakse uuel vahekaardil 1 sekundi pärast."
+	},
+	"crowdCloseTimer": {
+		"message": "See vahekaart sulgub % sekundi pärast."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "See vahekaart suletakse ühe sekundiga."
+	},
+	"cancel": {
+		"message": "Loobu."
+	},
+	"crowdBypassedIgnore": {
+		"message": "Kas see polnud õige?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Kas soovite, et see avataks kohe või x s pärast uuel vahelehel?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass takistas teie IP logimist."
+	},
+	"blockedSubtitle": {
+		"message": "Kas te ei soovi, et Universal Bypass takistaks halbadel osalejatel teie IP-d saada?"
+	}
+}

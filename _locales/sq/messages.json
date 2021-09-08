@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "Mos e humbni kohën tuaj me pajtueshmëri. Bypass Universal anashkalojnë shkurtuesit e bezdisshëm te lidhjeve."
+	},
+	"firstrunTitle": {
+		"message": "Faleminderit për  instalimin e Bypass Universal!"
+	},
+	"firstrunNoScript": {
+		"message": "Sidoqoftë, ju duket se po përdorni NoScript ose të ngjashëm, me të cilin Universal Bypass nuk është i pajtueshëm."
+	},
+	"version": {
+		"message": "Verzion"
+	},
+	"definitionsVersion": {
+		"message": "Definicionet e Bypass-it"
+	},
+	"changelog": {
+		"message": "Ndryshoni regjistrin"
+	},
+	"update": {
+		"message": "Kontrollo për të rejat e aplikacionit"
+	},
+	"updating": {
+		"message": "Shkarkimi i përkufizimeve të bypass-it ..."
+	},
+	"updateYes": {
+		"message": "Përkufizime të shkarkuara me sukses të bypass-it."
+	},
+	"updateNo": {
+		"message": "Përkufizimet e bypass-it janë të azhurnuara."
+	},
+	"faq": {
+		"message": "Pyetjet e bëra më shpesh (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "Bypass Universal tashmë ka anashkaluar% faqet për ju."
+	},
+	"support": {
+		"message": "Kontriboni në Bypass Universal."
+	},
+	"options": {
+		"message": "Opsione"
+	},
+	"optionsLink": {
+		"message": "Ndryshoni opsionet e Bypass Universal."
+	},
+	"optionsEnabled": {
+		"message": "Aktivizo anashkalimet e faqes në internet."
+	},
+	"optionsNavigationDelay": {
+		"message": "Më çoni në destinacione pas% sekondë (s)."
+	},
+	"optionsTrackerBypass": {
+		"message": "Ndjekës të anashkalimeve (të tilla si bit.ly dhe t.co) duke përdorur Apimon.de."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Me çoni menjëherë në destinacionet e gjurmuesve."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Bllokoni loggers IP nëse nuk mund të anashkalohen."
+	},
+	"optionsCrowdBypass": {
+		"message": "Crowd Bypass: Jepni dhe merrni destinacionet e shkurtuesve të pakontestueshëm."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Hapni destinacionet me burim të turmës në një skedë të re pas% sekondës (a)."
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Close tab containing the crowd-sourced destination after % second(s) of visiting it."
+	},
+	"privacyPolicy": {
+		"message": "Politika e privatësisë"
+	},
+	"contributors": {
+		"message": "kontribuesit"
+	},
+	"optionsUserscripts": {
+		"message": "Bypass-et e personalizuara"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Ky është një tipar i avancuar për zhvilluesit që të krijojnë skriptet e tyre për të anashkaluar faqet. Pasi të përsosen, ato më pas mund të dorëzohen në GitHub për t'u shtuar në Bypass Universal, kështu që ato janë të disponueshme për të gjithë."
+	},
+	"beforeNavigate": {
+		"message": "Ju jeni pothuajse në destinacionin tuaj."
+	},
+	"beforeNavigateDestination": {
+		"message": "Destinacioni juaj është%"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "Sidoqoftë, nëse navigoni tani, ata do të zbulojnë Universal Bypass."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Ju nuk do të zbuloheni më në% sekonda."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Ju nuk do të zbuloheni më në 1 sekondë."
+	},
+	"beforeNavigateTimer": {
+		"message": "Do të ridrejtoheni automatikisht në% sekonda."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Do të ridrejtoheni automatikisht në 1 sekondë."
+	},
+	"beforeNavigateOptions": {
+		"message": "Dëshironi të ridrejtoheni menjëherë ose në x sekonda?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Ju jeni duke u lundruar në%"
+	},
+	"infoLinkvertise": {
+		"message": "Nuk na lejohet të anashkalojmë këtë faqe interneti por kemi negociuar heqjen e hapave të tyre më të bezdisshëm."
+	},
+	"infoFileHoster": {
+		"message": "Fatkeqësisht, serveri i shkarkimit do të sigurojë që keni pritur përpara se t'ju lejojë të shkarkoni skedarin."
+	},
+	"infoOutdated": {
+		"message": "Kjo faqe në internet është anashkaluar nga një version i ri i Bypass Universal."
+	},
+	"crowdWait": {
+		"message": "Fatkeqësisht, ju jeni i pari që keni hasur në këtë lidhje, por pasi të keni pritur, përdoruesit e tjerë të Bypass Universal nuk do të duhet më."
+	},
+	"crowdDisabled": {
+		"message": "This website is bypassed by crowd bypass, which you can enable in the options."
+	},
+	"crowdBypassed": {
+		"message": "Ndoshta nuk duhet të prisni!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Përdoruesit e tjerë të Bypass Universal tashmë kanë pritur për ju dhe kanë raportuar se kjo çon në%"
+	},
+	"crowdBypassedTimer": {
+		"message": "Kjo do të hapet në një skedë të re brenda% sekondave."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Kjo do të hapet në një skedë të re në 1 sekondë."
+	},
+	"crowdCloseTimer": {
+		"message": "Kjo skedë do të mbyllet në% sekonda."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Kjo skedë do të mbyllet në 1 sekondë."
+	},
+	"cancel": {
+		"message": "Anulluar."
+	},
+	"crowdBypassedIgnore": {
+		"message": "v"
+	},
+	"crowdBypassedOptions": {
+		"message": "A nuk ishte e saktë kjo?"
+	},
+	"blockedTitle": {
+		"message": "Bypass Universal pengoi IP-në tuaj të regjistrohej."
+	},
+	"blockedSubtitle": {
+		"message": "A nuk doni Bypass Universal për të parandaluar aktorët e këqij të marrin IP tuaj?"
+	}
+}

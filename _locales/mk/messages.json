@@ -1,0 +1,155 @@
+{
+	"appDesc": {
+		"message": "Не си го трошете времето со согласување. Universal Bypass ги прескокнува веб скратувачите."
+	},
+	"firstrunTitle": {
+		"message": "Ви благодарам што го инсталиравте Universal Bypass!"
+	},
+	"firstrunNoScript": {
+		"message": "Но, изгледа дека користите NoScript или нешто слично, која ја попречува работата на Universal Bypass."
+	},
+	"version": {
+		"message": "Верзија"
+	},
+	"definitionsVersion": {
+		"message": "Верзија на дефиниции"
+	},
+	"changelog": {
+		"message": "Историја на промени"
+	},
+	"update": {
+		"message": "Провери за нова верзија"
+	},
+	"updating": {
+		"message": "Обновување"
+	},
+	"updateYes": {
+		"message": "Успешно обновување"
+	},
+	"updateNo": {
+		"message": "Дефинициите се во најнова верзија."
+	},
+	"faq": {
+		"message": "Често Поставени Прашања (ЧПП)"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass веќе има заобиколено % страни за тебе"
+	},
+	"support": {
+		"message": "Помогни на Universal Bypass"
+	},
+	"options": {
+		"message": "Подесувања"
+	},
+	"optionsLink": {
+		"message": "Смени ги подесувањата на Universal Bypass"
+	},
+	"optionsEnabled": {
+		"message": "Вклучи заобиколување на страни"
+	},
+	"optionsNavigationDelay": {
+		"message": "Однесиме на дестинацијата после % секунда(и)"
+	},
+	"optionsTrackerBypass": {
+		"message": "Заобиколи тракери (како bit.ly и t.co) со користење на Apimon.de"
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Однесиме на дестинацијата на тракерот наеднаш"
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Блокирај ги IP Логерите ако неможат да се заобиколат."
+	},
+	"optionsCrowdBypass": {
+		"message": "Земи ги и дади ги дестинациите на скратувачите кои неможат да се заобиколат."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Отвори ја crowd-sourced дестинација во ново јазиче (Tab) после % секунда(и)"
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Исклули го јазичето (Tab) кое ја содржи crowd-sourced дестинацијата после % секунда(и) од отварање"
+	},
+	"privacyPolicy": {
+		"message": "Правила и Условите"
+	},
+	"contributors": {
+		"message": "Луѓе кои помогнале"
+	},
+	"optionsUserscripts": {
+		"message": "Твои Бајпаси"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Ова е напредна функција која е направена за програмери да направат своја скрипта за да заобиколуваат страни. Кога тие скрипти ќе се совршат, тогаш ќе можат да се пратена на ГитХуб (GitHub) за да се додадени во Universal Bypass, за да се достапни за сите."
+	},
+	"beforeNavigate": {
+		"message": "Уште малку си до твојата дестинација"
+	},
+	"beforeNavigateDestination": {
+		"message": "Твојата дестинација е %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "Но, ако сакаш да одиш сега, тие ќе го заприметат Universal Bypass."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Нема да го заприметат за % секунди"
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Нема да биде заприметен за 1 секунда"
+	},
+	"beforeNavigateTimer": {
+		"message": "Автоматски ќе бидеш префрлен на дестинацијата за % секунди."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Автоматски ќе бидеш префрлен за 1 секунда"
+	},
+	"beforeNavigateOptions": {
+		"message": "Дали сакаш веднаш да бидеш префрлен или за x секунди?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Ти ќе бидеш префрлен на %"
+	},
+	"infoFileHoster": {
+		"message": "За жал, серверот ќе се погрижи да почекаш пред да можеш да го спуштиш фајлот."
+	},
+	"infoOutdated": {
+		"message": "Оваа страна е заобиколена со користење на понова страна од Universal Bypass."
+	},
+	"crowdWait": {
+		"message": "За жал, ти си првиот кој го сретна овој линк, но одкако ќе почекаш, други корисници (вклучувајки и тебе) во иднина не ќе мораат."
+	},
+	"crowdDisabled": {
+		"message": "Оваа страна е заобиколена со користење на crowd заобиколување, кое го имате исклучено во поставките."
+	},
+	"crowdBypassed": {
+		"message": "Можеби не ќе мораш да чекаш"
+	},
+	"crowdBypassedInfo": {
+		"message": "Други корисници веќе имаат чекано и кажаја дека носи на следниот линк %"
+	},
+	"crowdBypassedTimer": {
+		"message": "Ова ќе биде отворено во ново јазиче (Tab) за % секунди"
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Ова ќе биде отворено во ново јазиче (Tab) за 1 секунда"
+	},
+	"crowdCloseTimer": {
+		"message": "Јазичето ќе се затвори за % секунди."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Јазичето ќе се затвори за 1 секунда."
+	},
+	"cancel": {
+		"message": "Откажи."
+	},
+	"crowdBypassedIgnore": {
+		"message": "Дали тоа не беше точно?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Дали сакаш ова веднаш да се отвори во ново јазиче (Tab) одма или за x секунди."
+	},
+	"blockedTitle": {
+		"message": "Универзален Бајпас ја крие вашата IP Адреса"
+	},
+	"blockedSubtitle": {
+		"message": "Не сакаш Универзален Бајпас да ја крие вашата IP адреса од лоши луѓе?"
+	}
+}

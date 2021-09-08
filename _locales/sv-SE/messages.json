@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "Slösa inte bort din tid med samstämmighet. Universal Bypass hoppar automatiskt över irriterande länkförkortare."
+	},
+	"firstrunTitle": {
+		"message": "Tack för att du installerat Universal Bypass!"
+	},
+	"firstrunNoScript": {
+		"message": "Det verkar som om du använder NoScript eller något liknande vilket Universal Bypass inte är kompatibel med."
+	},
+	"version": {
+		"message": "Version"
+	},
+	"definitionsVersion": {
+		"message": "Förbikopplingsdefinitioner"
+	},
+	"changelog": {
+		"message": "Ändringslogg"
+	},
+	"update": {
+		"message": "Sök efter uppdateringar"
+	},
+	"updating": {
+		"message": "Laddar ner förbikopplingsdefinitionerna..."
+	},
+	"updateYes": {
+		"message": "Förbikopplinsdefinitioner är nerladdade."
+	},
+	"updateNo": {
+		"message": "Förbikopplingsdefinitioner är uppdaterade."
+	},
+	"faq": {
+		"message": "Vanliga frågor (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass har redan förbikopplat % webbplatser för dig."
+	},
+	"support": {
+		"message": "Stöd Universal Bypass."
+	},
+	"options": {
+		"message": "Alternativ"
+	},
+	"optionsLink": {
+		"message": "Ändra det i alternativen för Universal Bypass."
+	},
+	"optionsEnabled": {
+		"message": "Aktivera förbikopplingar av webbplats."
+	},
+	"optionsNavigationDelay": {
+		"message": "Ta mig till målet efter % sekund(er)."
+	},
+	"optionsTrackerBypass": {
+		"message": "Gå förbi spårare (så som bit.ly och t.co) som använder sig av Apimon.de."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Ta mig omedelbart till målen av trackers."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Blockera IP-loggerare om de inte kan förbikopplas."
+	},
+	"optionsCrowdBypass": {
+		"message": "Crowd-bypass: Ge och ta målen för icke förbikopplade länkförkortare."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Öppna crowd-sourced mål i en ny flik efter % sekund(er)."
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Stäng fliken som innehåller crowdsourced-målet efter % sekund(er) efter du besökt den."
+	},
+	"privacyPolicy": {
+		"message": "Integritetspolicy"
+	},
+	"contributors": {
+		"message": "Medverkande"
+	},
+	"optionsUserscripts": {
+		"message": "Anpassade förbikopplingar"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Detta är en avancerad funktion för utvecklare som vill skapa egna skript för att gå förbi webbplatser. När de fungerar, kan de sedan skickas in till GitHub för att läggas till Universal Bypass, så alla får tillgång till dem."
+	},
+	"beforeNavigate": {
+		"message": "Du har nästan nått ditt mål."
+	},
+	"beforeNavigateDestination": {
+		"message": "Ditt mål är %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "Om du navigerar nu kommer de att upptäcka Universal Bypass."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Du kommer inte längre att bli upptäckt om % sekunder."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Du kommer inte längre att bli upptäckt om 1 sekund."
+	},
+	"beforeNavigateTimer": {
+		"message": "Du kommer automatiskt att omdirigeras om % sekunder."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Du kommer automatiskt att omdirigeras om 1 sekund."
+	},
+	"beforeNavigateOptions": {
+		"message": "Vill du omdirigeras direkt eller om x antal sekunder?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Du förflyttas nu till %"
+	},
+	"infoLinkvertise": {
+		"message": "Vi har inte möjlighet att koppla förbi denna webbplats men vi har förhandlat fram borttagning av deras mest irriterande steg."
+	},
+	"infoFileHoster": {
+		"message": "Tyvärr använder de backend-validering för att se till att du faktiskt väntar tiden ut innan du kan ladda ner filen."
+	},
+	"infoOutdated": {
+		"message": "Denna webbplats förbikopplas av en nyare version av Universal Bypass."
+	},
+	"crowdWait": {
+		"message": "Vilken otur du har som är den första som stöter på den här länken, men efter att du har väntat kommer andra Universal Bypass-användare inte längre att behöva vänta."
+	},
+	"crowdDisabled": {
+		"message": "Den här webbplatsen förbigås av crowd-bypass, som du har inaktiverat i alternativen."
+	},
+	"crowdBypassed": {
+		"message": "Det är inte säkert du behöver vänta!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Andra användare av Universal Bypass har redan väntat på dig och rapporterat att denna leder till %"
+	},
+	"crowdBypassedTimer": {
+		"message": "Detta öppnas i en ny flik om % sekunder."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Detta öppnas i en ny flik om 1 sekund."
+	},
+	"crowdCloseTimer": {
+		"message": "Den här fliken stängs om % sekunder."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Den här fliken stängs om 1 sekund."
+	},
+	"cancel": {
+		"message": "Avbryt"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Var detta inte korrekt?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Vill du att detta ska öppnas i en ny flik direkt eller om x antal sekunder?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass förhindrade din IP-adress från att loggas."
+	},
+	"blockedSubtitle": {
+		"message": "Vill du inte att Universal Bypass ska förhindra skurkar från att få tag på din IP-adress?"
+	}
+}

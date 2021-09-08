@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "Verschwenden Sie Ihre Zeit nicht mit der Einhaltung von Vorschriften. Universal Bypass umgeht lästige Linkverkürzungen."
+	},
+	"firstrunTitle": {
+		"message": "Danke, Dass du Universal Bypass installiert hast!"
+	},
+	"firstrunNoScript": {
+		"message": "Du scheintst jedoch NoScript oder ähnliches zu verwenden, mit dem Universal Bypass nicht kompatibel ist."
+	},
+	"version": {
+		"message": "Version"
+	},
+	"definitionsVersion": {
+		"message": "Definitionen umgehen"
+	},
+	"changelog": {
+		"message": "Änderungsverlauf"
+	},
+	"update": {
+		"message": "Nach Updates suchen"
+	},
+	"updating": {
+		"message": "Definitionen werden heruntergeladen..."
+	},
+	"updateYes": {
+		"message": "Umgehungsdefinitionen wurden erfolgreich heruntergeladen."
+	},
+	"updateNo": {
+		"message": "Umgehungsdefinitionen sind aktuell."
+	},
+	"faq": {
+		"message": "Häufig gestellte Fragen (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass hat bereits % Seiten für dich umgangen."
+	},
+	"support": {
+		"message": "Helfen Sie zu universellen Umgehungen beizutragen."
+	},
+	"options": {
+		"message": "Optionen"
+	},
+	"optionsLink": {
+		"message": "Ändere die Universal Bypass Optionen."
+	},
+	"optionsEnabled": {
+		"message": "Website-Umgehungen aktivieren."
+	},
+	"optionsNavigationDelay": {
+		"message": "Bring mich nach % Sekunde(n) ans Ziel."
+	},
+	"optionsTrackerBypass": {
+		"message": "Umgehe Tracker (wie bit.ly und t.co) mit Apimon.de."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Navigiere mich automatisch zu Ziel-Urls von Trackern."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Blockiere IP-Logger wenn sie nicht umgangen werden können."
+	},
+	"optionsCrowdBypass": {
+		"message": "Crowd Bypass: Gebe und nehme die Ziel-Urls von unumgänglichen Linkkürzern."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Nutzer-geteilte Ziele nach % Sekunde(n) in einem neuen Tab öffnen."
+	},
+	"optionsCrowdAutoClose": {
+		"message": "chließen Sie die Registerkarte mit dem Crowd-Sourcing-Ziel nach% Sekunde (n) des Besuchs."
+	},
+	"privacyPolicy": {
+		"message": "Datenschutzerklärung"
+	},
+	"contributors": {
+		"message": "Mitwirkende"
+	},
+	"optionsUserscripts": {
+		"message": "Benutzerdefinierte Umgehungen"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Dies ist eine erweiterte Funktion für Entwickler, um eigene Skripte zu erstellen, um Webseiten zu umgehen. Wenn perfektioniert, können diese auf GitHub eingereicht werden, um in Universal Bypass hinzugefügt zu werden und allen zur Verfügung zu stehen."
+	},
+	"beforeNavigate": {
+		"message": "Du bist fast am Ziel."
+	},
+	"beforeNavigateDestination": {
+		"message": "Dein Ziel ist %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "Jedoch, wenn du jetzt navigierst, wird Universal Bypass erkannt."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Du wirst nicht mehr erkannt in % Sekunden."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Du wirst nicht mehr in 1 Sekunde erkannt."
+	},
+	"beforeNavigateTimer": {
+		"message": "Sie werden automatisch in % Sekunden weitergeleitet."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Du wirst automatisch in einer Sekunde weitergeleitet."
+	},
+	"beforeNavigateOptions": {
+		"message": "Möchtest du sofort oder in x Sekunden weitergeleitet werden?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Du wirst navigiert zu %"
+	},
+	"infoLinkvertise": {
+		"message": "Es ist uns nicht gestattet, diese website zu umgehen, aber wir haben die Entfernung ihrer lästigsten Schritte ausgehandelt."
+	},
+	"infoFileHoster": {
+		"message": "Leider wird der Download-Server sicherstellen, dass du gewartet hast, bevor er dir erlaubt, die Datei herunterzuladen."
+	},
+	"infoOutdated": {
+		"message": "Diese Website wird von einer neueren Version von Universal Bypass umgangen."
+	},
+	"crowdWait": {
+		"message": "Leider bist du der erste, der auf diesen Link trifft, aber nachdem du gewartet hast, müssen andere Universal Bypass Nutzer es nicht mehr tun."
+	},
+	"crowdDisabled": {
+		"message": "Diese Webseite ist durch Crowd Bypass umgänglich. Du kannst Crowd Bypass in den Optionen aktivieren."
+	},
+	"crowdBypassed": {
+		"message": "Du musst vielleicht nicht warten!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Andere Universal Bypass-Nutzer haben bereits für dich gewartet und gemeldet, dass das zu % führt."
+	},
+	"crowdBypassedTimer": {
+		"message": "Dies wird in % Sekunden in einem neuen Tab geöffnet."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Dies wird in einer Sekunde in einem neuen Tab geöffnet."
+	},
+	"crowdCloseTimer": {
+		"message": "Dieser Tab wird in % Sekunden geschlossen."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Dieser Tab wird in einer Sekunde geschlossen."
+	},
+	"cancel": {
+		"message": "Abbrechen."
+	},
+	"crowdBypassedIgnore": {
+		"message": "War das nicht richtig?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Möchtest du, dass dies in einem neuen Tab sofort oder in x Sekunden geöffnet wird?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass hat dich vor einem IP-Logger geschützt."
+	},
+	"blockedSubtitle": {
+		"message": "Möchtest du nicht, dass Universal Bypass deine IP vor bösen Leuten schützt?"
+	}
+}

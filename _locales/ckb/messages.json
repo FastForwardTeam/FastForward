@@ -1,0 +1,89 @@
+{
+	"appDesc": {
+		"message": "کاتی خۆت بە فیڕۆ مەدە بە ڕەزای بوون، ئەم تێپەڕ گشتیە  هەموو بەستەرە بێزارکەرەکان لادەبات."
+	},
+	"firstrunTitle": {
+		"message": "سوپاس بۆ دامەزراندنی Universal Bypass!"
+	},
+	"firstrunNoScript": {
+		"message": "وا دیارە، تۆ زیادکراوی NoScript بەکار دەهێنیت یان هەر یەک لەو زیادکراوانە. کە ئەم زیادکراوەی ئێمە ناگونجێت لەگەڵیدا."
+	},
+	"version": {
+		"message": "نوسخە"
+	},
+	"definitionsVersion": {
+		"message": "ماناکانی تێپەڕەکە"
+	},
+	"changelog": {
+		"message": "تۆماری گۆڕانەکان"
+	},
+	"update": {
+		"message": "پشکنین بۆ نوسخە نوێکان"
+	},
+	"updating": {
+		"message": "داگرتنی ماناکانی تێپەڕەکە..."
+	},
+	"updateYes": {
+		"message": "داگرتنی ماناکانی تێپەڕەکە سەرکەوتوو بو"
+	},
+	"updateNo": {
+		"message": "پێناسەکانی تێپەڕەکە نوێە"
+	},
+	"faq": {
+		"message": "پرسیارە زۆر دووبارە کراوەکان"
+	},
+	"bypassCounter": {
+		"message": "ئەم تێپەڕە گشتیە هەتا ئێستا % پەڕەی بۆ تێپەڕاندوویت"
+	},
+	"support": {
+		"message": "یارمەتی تێپەڕەکە بدە."
+	},
+	"options": {
+		"message": "هەڵبژاردنەکان"
+	},
+	"optionsLink": {
+		"message": "بژاردەکانی تێپەڕەکە بگۆڕە"
+	},
+	"optionsEnabled": {
+		"message": "بەکارخستنی رێگاگرتنی وێبسایت."
+	},
+	"optionsNavigationDelay": {
+		"message": "بمبە شوێنی مەبەست دوای % چرکە"
+	},
+	"optionsTrackerBypass": {
+		"message": "بیپەڕێنە سایتەکە سیخوڕیەکان (وەک bit.ly و t.co) بە بەکارهێنانی Apimon.de. "
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "دەستبەجی بمبە بۆ شوێنی چوون."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "ڕایبگرە ئایپی دزە پێکەرەکان ئەگەر نەتوانی پەڕەکە تێ بپەڕێنیت"
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "لینکی کۆتایم پێ بدە لە دوای % چرکەدا"
+	},
+	"optionsUserscripts": {
+		"message": "دەربازبوونی نەریتی"
+	},
+	"beforeNavigateDestination": {
+		"message": "ئەو شوێنەی کە ذەچیت: %"
+	},
+	"crowdBypassed": {
+		"message": "لەوانەیە پێویست نەکات بوەستیت!"
+	},
+	"cancel": {
+		"message": "لابردن"
+	},
+	"crowdBypassedIgnore": {
+		"message": "ئایە ئەمە ڕاست نەبوو؟"
+	},
+	"crowdBypassedOptions": {
+		"message": "ئایا تۆ دەتەوێت ئەمە بکرێتەوە لە پەڕیەکی نوێدا ڕاستەوخۆ یان دوای چەند چرکەیەک ؟"
+	},
+	"blockedTitle": {
+		"message": "ئەم تێپەڕە نەیهێشت ئایپی ئەدرێسەکەت تۆمار بکرێت"
+	},
+	"blockedSubtitle": {
+		"message": "ئایا تۆ ناتەوێت ئەم تێپەڕە ڕێگری بکات لە خەڵکانی خراپ لە بردنی IP تایبەت بە تۆ ؟"
+	}
+}

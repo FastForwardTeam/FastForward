@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "Đừng lãng phí thời gian của bạn. Universal Bypass tự động bỏ qua các liên kết rút gọn phiền phức."
+	},
+	"firstrunTitle": {
+		"message": "Cảm ơn bạn đã cài đặt Universal Bypass!"
+	},
+	"firstrunNoScript": {
+		"message": "Tuy nhiên, bạn dường như đang sử dụng NoScript hoặc những thứ tương tự mà Universal Bypass không tương thích."
+	},
+	"version": {
+		"message": "Phiên bản"
+	},
+	"definitionsVersion": {
+		"message": "Đoạn mã có sẵn"
+	},
+	"changelog": {
+		"message": "Thay đổi"
+	},
+	"update": {
+		"message": "Kiểm tra cập nhật"
+	},
+	"updating": {
+		"message": "Đang tải các đoạn mã có sẵn..."
+	},
+	"updateYes": {
+		"message": "Cập nhật thành công đoạn mã có sẵn."
+	},
+	"updateNo": {
+		"message": "Đoạn mã có sẵn đã là bản mới nhất."
+	},
+	"faq": {
+		"message": "Câu hỏi thường gặp (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass đã bỏ qua % trang cho bạn."
+	},
+	"support": {
+		"message": "Đóng góp cho Universal Bypass."
+	},
+	"options": {
+		"message": "Tùy chọn"
+	},
+	"optionsLink": {
+		"message": "Thay đổi thiết lập của Universal Bypass."
+	},
+	"optionsEnabled": {
+		"message": "Cho phép bỏ qua website."
+	},
+	"optionsNavigationDelay": {
+		"message": "Đưa tôi đến đích sau % giây. (Sử dụng 0 để được chuyển hướng ngay lập tức.)"
+	},
+	"optionsTrackerBypass": {
+		"message": "Bỏ qua trình theo dõi (như bit.ly và t.co) bằng cách sử dụng Apimon.de."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Lập tức đưa tôi đến đích của các mã theo dõi."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Chặn IP Logger nếu không thể bỏ qua."
+	},
+	"optionsCrowdBypass": {
+		"message": "Gửi và lấy đích đến của link rút gọn chưa thể bỏ qua."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Mở các điểm đến có cộng đồng đóng góp trong một tab mới sau % giây. (0 = lập tức.)"
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Đóng thẻ chứa địa điểm đã được cộng đồng đóng góp sau % giây truy cập."
+	},
+	"privacyPolicy": {
+		"message": "Chính sách bảo mật"
+	},
+	"contributors": {
+		"message": "Những người đóng góp"
+	},
+	"optionsUserscripts": {
+		"message": "Tùy chỉnh Bypasses"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Đây là tính năng nâng cao cho những nhà phát triển để tạo những đoạn mã giúp bỏ qua các trang. Khi đã hoàn thành, họ có thể gửi chúng lên GitHub để được thêm vào Universal Bypass, để mọi người có thể sử dụng."
+	},
+	"beforeNavigate": {
+		"message": "Bạn sắp được đưa đến trang đích."
+	},
+	"beforeNavigateDestination": {
+		"message": "Trang đích của bạn là %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "Tuy nhiên, nếu bạn chọn chuyển hướng ngay bây giờ, trang web sẽ phát hiện được Universal Bypass."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Bạn sẽ không còn bị phát hiện sau % giây."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Bạn sẽ không còn bị phát hiện sau 1 giây."
+	},
+	"beforeNavigateTimer": {
+		"message": "Bạn sẽ được điều hướng tự động trong % giây."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Bạn sẽ được chuyển hướng tự động trong 1 giây."
+	},
+	"beforeNavigateOptions": {
+		"message": "Bạn có muốn chuyển hướng ngay hoặc trong x giây nữa?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Bạn đang được chuyển hướng đến %"
+	},
+	"infoLinkvertise": {
+		"message": "Chúng tôi không được phép vượt qua trang này nhưng chúng tôi đã gỡ bỏ các bước làm bạn khó chịu nhất."
+	},
+	"infoFileHoster": {
+		"message": "Thật không may, máy chủ cần phải đảm bảo bạn đã chờ trước khi cho phép tải về tệp."
+	},
+	"infoOutdated": {
+		"message": "Trang web này đã được bỏ qua với một phiên bản mới hơn của Universal Bypass."
+	},
+	"crowdWait": {
+		"message": "Thật không may, bạn là người đầu tiên gặp phải liên kết này, nhưng sau khi bạn chờ đợi, những người dùng Universal Bypass khác sẽ không còn phải làm như vậy nữa."
+	},
+	"crowdDisabled": {
+		"message": "Trang web này được bỏ qua bởi chức năng Crowd Bypass mà bạn đã vô hiệu hóa trong tùy chọn."
+	},
+	"crowdBypassed": {
+		"message": "Bạn có thể không cần phải đợi!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Người dùng Universal Bypass đã từng chờ như bạn và phản hồi rằng liên liên kết này sẽ dẫn đến %"
+	},
+	"crowdBypassedTimer": {
+		"message": "Sẽ được mở trong tab mới sau % giây."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Sẽ được mở trong tab mới sau 1 giây."
+	},
+	"crowdCloseTimer": {
+		"message": "Tab này sẽ đóng lại sau % giây."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Thẻ này sẽ đóng lại sau 1 giây."
+	},
+	"cancel": {
+		"message": "Huỷ bỏ."
+	},
+	"crowdBypassedIgnore": {
+		"message": "Điều này chưa chính xác ư?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Bạn có muốn mở trang web trong tab mới ngay bây giờ hay trong x giây?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass đã ngăn chặn IP của bạn bị ghi lại."
+	},
+	"blockedSubtitle": {
+		"message": "Không muốn Universal Bypass ngăn kẻ xấu lấy được IP của bạn?"
+	}
+}

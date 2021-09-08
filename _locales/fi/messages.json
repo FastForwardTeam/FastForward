@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "Älä tuhlaa aikaa odottamiseen ja mainosten katseluun! Universal Bypass skippaa automaattisesti ärsyttävät linkin lyhentäjät."
+	},
+	"firstrunTitle": {
+		"message": "Kiitos, kun asensit Universal Bypassin!"
+	},
+	"firstrunNoScript": {
+		"message": "Vaikuttaa kuitenkin siltä, että käytät NoScriptiä tai vastaavaa, jonka kanssa Universal Bypass ei ole yhteensopiva."
+	},
+	"version": {
+		"message": "Versio"
+	},
+	"definitionsVersion": {
+		"message": "Bypass määritelmät"
+	},
+	"changelog": {
+		"message": "Muutosloki"
+	},
+	"update": {
+		"message": "Tarkista päivitykset"
+	},
+	"updating": {
+		"message": "Ladataan bypass määrityksiä..."
+	},
+	"updateYes": {
+		"message": "Bypass määritykset ladattu onnistuneesti."
+	},
+	"updateNo": {
+		"message": "Bypass määritykset ovat ajan tasalla."
+	},
+	"faq": {
+		"message": "Usein Kysytyt Kysymykset (UKK)"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass on ohittanut % sivuja sinulle."
+	},
+	"support": {
+		"message": "Tue Universal Bypassia"
+	},
+	"options": {
+		"message": "Asetukset"
+	},
+	"optionsLink": {
+		"message": "Vaihda Universal Bypassin asetuksia."
+	},
+	"optionsEnabled": {
+		"message": "Aktivoi nettisivustojen ohitus."
+	},
+	"optionsNavigationDelay": {
+		"message": "Vie minut ohitettuihin nettisivustoihin % sekunnin jälkeen."
+	},
+	"optionsTrackerBypass": {
+		"message": "Estä seurantapalvelimet (kuten bit.ly ja t.co) käyttäen Apimon.de palvelua."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Vie minut heti seurantapalveluiden kohteisiin."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Estä IP-osoitteen kerääjät, jos niitä ei voida ohittaa."
+	},
+	"optionsCrowdBypass": {
+		"message": "Joukko Ohitus: Anna ja ota ohittamattomien lyhentäjien määränpäät."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Avaa joukoitetut kohteet uudessa välilehdessä % sekuntin jälkeen."
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Sulje joukoitettu välilehti % sekunnin jälkeen käytyäsi siellä."
+	},
+	"privacyPolicy": {
+		"message": "Tietosuojakäytäntö"
+	},
+	"contributors": {
+		"message": "Osallistujat"
+	},
+	"optionsUserscripts": {
+		"message": "Mukautetut Ohitukset"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Tämä on edistynyt ominaisuus, joka on luotu ohjelmistokehittäjille voidakseen tehdä omia ohituksiaan. Kunnes ne ovat virheettömiä ja valmiita, ne voi julkaista GitHubissa lisättäväksi Universal Bypassiin. Näin ne ovat saatavilla kaikille."
+	},
+	"beforeNavigate": {
+		"message": "Olet melkein määränpäässäsi."
+	},
+	"beforeNavigateDestination": {
+		"message": "Sinun määränpääsi on %."
+	},
+	"beforeNavigateUnsafe": {
+		"message": "Jos kuitenkin navigoit nyt, he havaitsevat Universal Bypassin."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Sinua ei enää havaita % sekunnin kuluttua."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Sinua ei enää havaita sekuntin kuluttua."
+	},
+	"beforeNavigateTimer": {
+		"message": "Sinut uudelleenohjataan automaattisesti % sekuntin päästä."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Sinut uudelleenohjataan automaattisesti yhdessä sekunnissa."
+	},
+	"beforeNavigateOptions": {
+		"message": "Haluatko, että sinut uudelleenohjataan heti tai x sekunnissa?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Sinua ohjataan nettisivulle %"
+	},
+	"infoLinkvertise": {
+		"message": "Emme saa ohittaa tätä verkkosivustoa, mutta olemme neuvotelleet heidän ärsyttävimpien vaiheidensa poistamisesta."
+	},
+	"infoFileHoster": {
+		"message": "Valitettavasti, latauspalvelin vaatii, että olet odottanut ennen kuin se antaa sinun ladata tiedostosi."
+	},
+	"infoOutdated": {
+		"message": "Tämä sivusto on ohitettavissa Universal Bypassin uudella versiolla."
+	},
+	"crowdWait": {
+		"message": "Valitettavasti olet ensimmäinen, joka on törmännyt tähän linkkiin, mutta odottamisesi jälkeen muiden Universal Bypass käyttäjien ei tarvitse odottaa."
+	},
+	"crowdDisabled": {
+		"message": "Tämä sivusto on ohitettavissa joukoitetulla ohituksella, jonka pystyt laittamaan päälle asetuksissa."
+	},
+	"crowdBypassed": {
+		"message": "Sinun ei välttämättä tarvitse odottaa!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Toiset Universal Bypassin käyttäjät ovat entuudestaan odottaneet sinulle ja ilmoittaneet, että tämä vie %"
+	},
+	"crowdBypassedTimer": {
+		"message": "Tämä tullaan avaamaan uudessa välilehdessä % sekunnin kuluttua."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Tämä tullaan avaamaan uudessa välilehdessä yhden sekunnin kuluttua."
+	},
+	"crowdCloseTimer": {
+		"message": "Tämä välilehti sulkeutuu % sekunnin kuluttua."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Tämä välilehti sulkeutuu yhden sekunnin kuluttua."
+	},
+	"cancel": {
+		"message": "Peruuta."
+	},
+	"crowdBypassedIgnore": {
+		"message": "Eikö tämä ollut oikea?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Haluatko, että tämä avataan heti vai x sekunnin päästä?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass esti IP-osoitteesi jäljittämisen."
+	},
+	"blockedSubtitle": {
+		"message": "Etkö halua Universal Bypassia estämästä huonoja yrityksiä saamasta IP-osoitettasi?"
+	}
+}

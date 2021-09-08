@@ -1,0 +1,125 @@
+{
+	"appDesc": {
+		"message": "Ikke kast bort tiden din på å følge krav. Universal Bypass hopper automatisk over irriterende lenkeforkortere."
+	},
+	"firstrunTitle": {
+		"message": "Takk for at du har installert Universal Bypass!"
+	},
+	"firstrunNoScript": {
+		"message": "Men du ser ut til å bruke NoScript eller noe lignende, som Universal Bypass ikke er kompatibel med."
+	},
+	"version": {
+		"message": "Versjon"
+	},
+	"definitionsVersion": {
+		"message": "Bypass definisjoner"
+	},
+	"changelog": {
+		"message": "Endringslogg"
+	},
+	"update": {
+		"message": "Se etter oppdateringer"
+	},
+	"updating": {
+		"message": "Laster ned bypass-definisjoner..."
+	},
+	"updateYes": {
+		"message": "Oppdateringsskriptet ble oppdatert!"
+	},
+	"updateNo": {
+		"message": "Forbigående definisjoner er oppdatert."
+	},
+	"faq": {
+		"message": "Ofte Stilte Spørsmål (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass har allerede forbigått % nettsteder for deg."
+	},
+	"support": {
+		"message": "Støtt Universal Bypass."
+	},
+	"options": {
+		"message": "Innstillinger"
+	},
+	"optionsLink": {
+		"message": "Endre Universal Bypass sine innstillinger."
+	},
+	"optionsEnabled": {
+		"message": "Slå på nettside bypass."
+	},
+	"optionsNavigationDelay": {
+		"message": "Ta meg til destinasjoner etter % sekund(er). (Bruk 0 for å navigere øyeblikkelig.)"
+	},
+	"optionsTrackerBypass": {
+		"message": "Omgå for trackere (for eksempel bit.ly og t.co) ved å bruke Apimon.de."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Ta meg til destinasjoner av trackere med en gang."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Blokker IP-loggførere dersom de ikke kan bli hoppet forbi."
+	},
+	"optionsCrowdBypass": {
+		"message": "Gi og ta ankomstpunktene til upasserbare forkortere."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Åpne publikumsdestinasjoner i en ny fane etter % sekund(er). (0 = øyeblikkelig.)"
+	},
+	"privacyPolicy": {
+		"message": "Privatlivsretningslinjer"
+	},
+	"optionsUserscripts": {
+		"message": "Tilpassede forbipasserere"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Dette er en avansert funksjon for utviklere å lage sine egne skript for å omgå nettsteder. Når de er perfeksjonert, kan de deretter sendes inn på GitHub for å bli lagt til Universal Bypass, slik at de er tilgjengelige for alle."
+	},
+	"beforeNavigate": {
+		"message": "Du er nesten i destinasjonen din."
+	},
+	"beforeNavigateDestination": {
+		"message": "Destinasjonen din er %"
+	},
+	"beforeNavigateTimer": {
+		"message": "Du blir omdirigert automatisk om % sekunder."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Du blir omdirigert automatisk i løpet av 1 sekund."
+	},
+	"beforeNavigateOptions": {
+		"message": "Vil du bli omdirigert øyeblikkelig eller om x sekunder?"
+	},
+	"crowdWait": {
+		"message": "Dessverre er du den første som møter denne lenken, men etter at du har ventet, vil andre brukere av Universal Bypass ikke lenger behøve å gjøre det."
+	},
+	"crowdDisabled": {
+		"message": "Dette nettstedet omgås av publikumsomgang, som du har deaktivert under alternativene."
+	},
+	"crowdBypassed": {
+		"message": "Du vil kanskje ikke måtte vente!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Andre Universal Bypass-brukere har allerede ventet på deg, og har meldt ifra om at dette fører til %"
+	},
+	"crowdBypassedTimer": {
+		"message": "Dette åpnes i en ny fane om % sekunder."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Dette åpnes i en ny fane om 1 sekund."
+	},
+	"cancel": {
+		"message": "Avbryt."
+	},
+	"crowdBypassedIgnore": {
+		"message": "Var ikke dette korrekt?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Vil du at dette skal åpnes i en ny fane øyeblikkelig eller om x sekunder?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass hindret IP-adressen din fra å bli loggført."
+	},
+	"blockedSubtitle": {
+		"message": "Vil du at Universal Bypass skal stoppe dårlige folk fra å få IPen din?"
+	}
+}

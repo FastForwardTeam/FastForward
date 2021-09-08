@@ -1,0 +1,56 @@
+{
+	"firstrunTitle": {
+		"message": "Trugarez evit ho staliañ Universal Bypass!"
+	},
+	"version": {
+		"message": "Handelv"
+	},
+	"changelog": {
+		"message": "Renabl ar c'hemmoù"
+	},
+	"update": {
+		"message": "Gwiriañ an hizivadurioù"
+	},
+	"faq": {
+		"message": "Foar ar Goulennoù (FAG)"
+	},
+	"bypassCounter": {
+		"message": "Bet oc'h e-biou da %s lec'hienn a-drugarez da Universal Bypass."
+	},
+	"support": {
+		"message": "Kenoberiañ da Universal Bypass."
+	},
+	"options": {
+		"message": "Dibarzhioù"
+	},
+	"optionsLink": {
+		"message": "Kemmañ dibarzhioù Universal Bypass."
+	},
+	"optionsEnabled": {
+		"message": "Gweredekaat an tremen e-biou d'al lec'hiennoù."
+	},
+	"privacyPolicy": {
+		"message": "Reolenn a-fet buhez prevez"
+	},
+	"contributors": {
+		"message": "Perzhidi"
+	},
+	"optionsUserscripts": {
+		"message": "Tremenadennoù e-biou personelaet"
+	},
+	"beforeNavigate": {
+		"message": "Tost erru oc'h da benn hoc'h hent."
+	},
+	"beforeNavigateDestination": {
+		"message": "% eo hoc'h arvoned"
+	},
+	"beforeNavigateTimer": {
+		"message": "Adheñchet e vezoc'h bet ent emgefreek a-benn % eilenn."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Adheñchet e vezoc'h bet ent emgefreek a-benn 1 eilenn."
+	},
+	"cancel": {
+		"message": "Nullañ."
+	}
+}

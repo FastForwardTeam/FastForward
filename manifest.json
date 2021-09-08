@@ -1,0 +1,62 @@
+{
+	"manifest_version": 2,
+	"icons": {
+		"48": "icon/48.png",
+		"128": "icon/128.png",
+		"150": "icon/150.png",
+		"176": "icon/176.png",
+		"512": "icon/512.png"
+	},
+	"default_locale": "en",
+	"name": "Universal Bypass",
+	"description": "__MSG_appDesc__",
+	"homepage_url": "https://universal-bypass.org/",
+	"version": "13.15.2",
+	"author": "Sainan",
+	"permissions": [
+		"alarms",
+		"storage",
+		"webRequest",
+		"webRequestBlocking",
+		"<all_urls>"
+	],
+	"options_ui": {
+		"page": "html/options.html",
+		"open_in_tab": true
+	},
+	"browser_action": {
+		"default_icon": {
+			"48": "icon/48.png",
+			"128": "icon/128.png",
+			"150": "icon/150.png",
+			"176": "icon/176.png",
+			"512": "icon/512.png"
+		},
+		"default_popup": "html/popup.html"
+	},
+	"background": {
+		"scripts": [
+			"background.js"
+		]
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"<all_urls>"
+			],
+			"js": [
+				"content_script.js"
+			],
+			"run_at": "document_start"
+		}
+	],
+	"web_accessible_resources": [
+		"html/before-navigate.html",
+		"html/blocked.html",
+		"html/crowd-bypassed.html",
+		"html/firstrun.html",
+		"html/firstrun-noscript.html",
+		"html/options.html",
+		"icon/48.png"
+	]
+}

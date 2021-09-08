@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "Peidiwch â gwastraffu eich amser gyda chydymffurfiaeth. Mae Universal Bypass yn osgoi linciau byr annifyr."
+	},
+	"firstrunTitle": {
+		"message": "Diolch am lawrlwytho Universal Bypass!"
+	},
+	"firstrunNoScript": {
+		"message": "Fodd bynnag, ni ydych yn defnyddio NoScript neu unrhyw beth tebyg, nad yw Universal Bypass yn addas ar gyfer."
+	},
+	"version": {
+		"message": "Fersiwn"
+	},
+	"definitionsVersion": {
+		"message": "Dyffiniadau osgoi"
+	},
+	"changelog": {
+		"message": "Newidiadau"
+	},
+	"update": {
+		"message": "Edrych am ddiweddariad"
+	},
+	"updating": {
+		"message": "Lawrlwytho dyffiniadau osgoi..."
+	},
+	"updateYes": {
+		"message": "Wedi lawr lwytho dyffiniadau osgoi."
+	},
+	"updateNo": {
+		"message": "Dyffiniadau osgoi mwyaf diweddar."
+	},
+	"faq": {
+		"message": "Cwestiynau cyffredin (CC)"
+	},
+	"bypassCounter": {
+		"message": "Mae Universal Bypass wedi osgoi % gwefan yn barod i chi."
+	},
+	"support": {
+		"message": "Cyfrannu i Universal Bypass"
+	},
+	"options": {
+		"message": "Opsiynau"
+	},
+	"optionsLink": {
+		"message": "Newid opsiynau Universal Bypass."
+	},
+	"optionsEnabled": {
+		"message": "Caniatáu osgoi gwefanau"
+	},
+	"optionsNavigationDelay": {
+		"message": "Ail-lywio i'r diwedd ar ôl % eiliad."
+	},
+	"optionsTrackerBypass": {
+		"message": "Osgoi tracwyr (megis bit.ly a t.co) trwy ddefnyddio Apimon.de."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Cymrwch fi i ddiwedd tracwyr ar unwaith."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Blocio logiwr IP os ni ellir ei hosgoi."
+	},
+	"optionsCrowdBypass": {
+		"message": "Osgoi Torfol: Rhowch a derbyn cyrchfan linciau byr na ellir eu hosgoi."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Agor cyrchfannau o linciau torfol mewn tab newydd ar ôl % eiliad(au)."
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Cau tab sydd yn cynnwys y cyrchfan torfol ar ôl % eiliad o'i ymweld."
+	},
+	"privacyPolicy": {
+		"message": "Hysbysiad preifatrwydd"
+	},
+	"contributors": {
+		"message": "Cyfranwyr"
+	},
+	"optionsUserscripts": {
+		"message": "Ffyrdd Osgoi Personol"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Mae hon yn nodwedd uwch i ddatblygwyr greu sgriptiau eu hunain i osgoi safleoedd. Ar ôl eu perffeithio, gellir eu cyflwyno wedyn ar GitHub i'w hychwanegu at Universal Bypass, fel ei bod ar gael i bawb."
+	},
+	"beforeNavigate": {
+		"message": "Rydych bron ar eich cyrchfan."
+	},
+	"beforeNavigateDestination": {
+		"message": "Eich cyrchfan yw %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "Fodd bynnag, os byddwch yn llywio nawr, byddant yn synhwyro Universal Bypass."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Ni fyddwch yn cael eich synhywro mwyach mewn % eiliad."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Ni fyddwch yn cael eich synhwyro mewn 1 eiliad."
+	},
+	"beforeNavigateTimer": {
+		"message": "Cewch eich ailgyfeirio'n awtomatig mewn % eiliad."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Cewch eich ailgyfeirio'n awtomatig mewn 1 eiliad."
+	},
+	"beforeNavigateOptions": {
+		"message": "Ydych chi am gael eich ailgyfeirio ar unwaith neu mewn x eiliad?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Rydych chi'n cael eich llywio i %"
+	},
+	"infoLinkvertise": {
+		"message": "Nid ydym yn cael osgoi'r wefan hon ond rydym wedi cytuno i osgoi y camau mwyaf diflas."
+	},
+	"infoFileHoster": {
+		"message": "Yn anffodus, bydd y gweinydd lawrlwytho yn sicrhau eich bod wedi aros cyn gadael i chi lawrlwytho'r ffeil."
+	},
+	"infoOutdated": {
+		"message": "Mae'r wefan hon yn gallu cael ei hosgoi gan fersiwn mwy newydd o Universal Bypass."
+	},
+	"crowdWait": {
+		"message": "Yn anffodus, chi yw'r cyntaf i ddod ar draws y linc hwn, ond ar ôl i chi aros, ni fydd yn rhaid i ddefnyddwyr eraill Universal Bypass wneud hynny."
+	},
+	"crowdDisabled": {
+		"message": "Mae'r wefan hon yn cael ei hosgoi gan osgoi torfol, gallwch ei galluogi yn yr opsiynau."
+	},
+	"crowdBypassed": {
+		"message": "Efallai ni fydd yn rhaid i chi aros!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Mae defnyddwyr eraill Universal Bypass eisoes wedi aros ac wedi dweud fod hwn yn arwain at %"
+	},
+	"crowdBypassedTimer": {
+		"message": "Bydd hwn yn cael ei agor mewn tab newydd mewn % eiliad."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Bydd hwn yn cael ei agor mewn tab newydd yn 1 eiliad."
+	},
+	"crowdCloseTimer": {
+		"message": "Bydd y tab hwn yn cau mewn % eiliad."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Bydd y tab hwn yn cau mewn 1 eiliad."
+	},
+	"cancel": {
+		"message": "Canslo."
+	},
+	"crowdBypassedIgnore": {
+		"message": "A oedd hwn yn anghywir?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Ydych chi am i hwn gael ei hagor mewn tab newydd ar unwaith neu mewn x eiliad?"
+	},
+	"blockedTitle": {
+		"message": "Rhwystrodd Universal Bypass eich IP rhag cael ei ddwyn."
+	},
+	"blockedSubtitle": {
+		"message": "Ddim am i Universal Bypass atal pobl gwael rhag cael eich IP?"
+	}
+}

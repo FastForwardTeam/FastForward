@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "不要费时等待，Universal Bypass 可以帮你规避烦人的短链接。"
+	},
+	"firstrunTitle": {
+		"message": "感谢您安装 Universal Bypass!"
+	},
+	"firstrunNoScript": {
+		"message": "看起来您正在使用 NoScript 或类似工具，Universal Bypass 暂不与之兼容。"
+	},
+	"version": {
+		"message": "版本"
+	},
+	"definitionsVersion": {
+		"message": "Bypass的定义"
+	},
+	"changelog": {
+		"message": "更新记录"
+	},
+	"update": {
+		"message": "检查更新"
+	},
+	"updating": {
+		"message": "正在下载Bypass 的定义..."
+	},
+	"updateYes": {
+		"message": "Bypass的定义下载成功。"
+	},
+	"updateNo": {
+		"message": "Bypass的定义已是最新版本。"
+	},
+	"faq": {
+		"message": "常见问题(FAQ)"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass已经帮你跳过了%的网站"
+	},
+	"support": {
+		"message": "支持Universal Bypass."
+	},
+	"options": {
+		"message": "选项"
+	},
+	"optionsLink": {
+		"message": "更改Universal Bypass的选项"
+	},
+	"optionsEnabled": {
+		"message": "启用网站跳过功能"
+	},
+	"optionsNavigationDelay": {
+		"message": "在%秒后跳到目标网站.(0 为立刻跳转.)"
+	},
+	"optionsTrackerBypass": {
+		"message": "跳过使用Apimon.de的追踪器（比如bit.ly和t.co）。"
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "立即将我带到追踪器的目的网址。"
+	},
+	"optionsBlockIPLoggers": {
+		"message": "如果无法绕过IP记录器，则将其屏蔽。\n"
+	},
+	"optionsCrowdBypass": {
+		"message": "分享/获取无法跳过的短地址提供商的目的网址。"
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "%秒后在新标签页打开人们分享的目的网址。"
+	},
+	"optionsCrowdAutoClose": {
+		"message": "访问人们分享的目的网址%秒后将其标签页关闭。"
+	},
+	"privacyPolicy": {
+		"message": "隐私政策"
+	},
+	"contributors": {
+		"message": "贡献者"
+	},
+	"optionsUserscripts": {
+		"message": "自定义跳过"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "此高级功能供开发者创建自己的绕过脚本。完善以后，这些脚本可以提交到GitHub上，再添加到Universal Bypass中，让所有人都能使用。"
+	},
+	"beforeNavigate": {
+		"message": "您即将到达目的网址。"
+	},
+	"beforeNavigateDestination": {
+		"message": "您的目的网址为%"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "如果您马上跳转，他们将会检测到Universal Bypass。"
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "%秒后，您将不再被检测到。"
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "1秒后，您将在不再被检测到。"
+	},
+	"beforeNavigateTimer": {
+		"message": "%秒后，您将被自动导航到目的网站。"
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "1秒后，您将被自动导航到目的网站。"
+	},
+	"beforeNavigateOptions": {
+		"message": "您想立刻导航到目的网站还是在x秒后？"
+	},
+	"beforeNavigateInstant": {
+		"message": "您正在导航到%"
+	},
+	"infoLinkvertise": {
+		"message": "我们不允许绕过这个网站，但我们已经通过谈判取消了他们最烦人的步骤。"
+	},
+	"infoFileHoster": {
+		"message": "很不辛的是，下载服务器会确保您已经等待，然后才允许您下载文件。"
+	},
+	"infoOutdated": {
+		"message": "该网站已被新版本的Universal Bypass跳转。"
+	},
+	"crowdWait": {
+		"message": "很抱歉您是第一个点击此链接的人，过一段时间以后，其他Universal Bypass用户将不再需要等待。"
+	},
+	"crowdDisabled": {
+		"message": "该网站需使用群众分享跳过功能，但您已禁用此功能。"
+	},
+	"crowdBypassed": {
+		"message": "您或许不必等待！"
+	},
+	"crowdBypassedInfo": {
+		"message": "其他Universal Bypass用户已经帮您导航，并报告该链接的目的网址为%"
+	},
+	"crowdBypassedTimer": {
+		"message": "%秒后将会在新标签页打开。"
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "1秒后将会在新标签页打开。"
+	},
+	"crowdCloseTimer": {
+		"message": "此选项卡将在%秒后关闭。"
+	},
+	"crowdCloseTimerSingular": {
+		"message": "此选项卡将在1秒后关闭。"
+	},
+	"cancel": {
+		"message": "取消"
+	},
+	"crowdBypassedIgnore": {
+		"message": "该信息不正确？"
+	},
+	"crowdBypassedOptions": {
+		"message": "您想在新标签页中立刻打开还是在x秒后？"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass阻止了您的IP地址被记录"
+	},
+	"blockedSubtitle": {
+		"message": "不想要Universal Bypass阻止不良分子获取您的IP地址？"
+	}
+}

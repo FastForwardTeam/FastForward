@@ -1,0 +1,23 @@
+{
+	"appDesc": {
+		"message": "Vaqtingizni moslashtirish uchun bekorga ketkazmang. Universal Bypass sizga veb manzillarni qisqartirishda ko'mak beradi."
+	},
+	"firstrunTitle": {
+		"message": "Universal Bypassni o'rnatganingiz uchun rahmat!"
+	},
+	"firstrunNoScript": {
+		"message": "Siz Universal Bypassga mos bo'lmagan NoScript yoki shunga o'xshash dasturdan foydalanayotgangan o'xshaysiz."
+	},
+	"version": {
+		"message": "Versiya"
+	},
+	"definitionsVersion": {
+		"message": "Bypass ta'riflari"
+	},
+	"changelog": {
+		"message": "Holati"
+	},
+	"update": {
+		"message": "Yangilanishlar uchun tekshirish"
+	}
+}

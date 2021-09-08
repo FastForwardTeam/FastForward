@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "Не витрачайте час на дотримання. Універсальний байпас обходить дратівливі укорочувачі лано."
+	},
+	"firstrunTitle": {
+		"message": "Дякуємо за встановлення Universal Bypass!"
+	},
+	"firstrunNoScript": {
+		"message": "Однак, схоже, ви використовуєте NoScript або щось подібне, з яким Universal Bypass не сумісний."
+	},
+	"version": {
+		"message": "Версія"
+	},
+	"definitionsVersion": {
+		"message": "Визначення обходів"
+	},
+	"changelog": {
+		"message": "Список змін"
+	},
+	"update": {
+		"message": "Перевірити на наявність оновлень"
+	},
+	"updating": {
+		"message": "Завантаження визначень обходу ..."
+	},
+	"updateYes": {
+		"message": "Визначення обходу успішно завантажено."
+	},
+	"updateNo": {
+		"message": "Визначення байпасу актуальні."
+	},
+	"faq": {
+		"message": " Часті запитання - FAQ"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass вже обійшов % сайтів для вас."
+	},
+	"support": {
+		"message": "Підтримати Universal Bypass."
+	},
+	"options": {
+		"message": "Опції"
+	},
+	"optionsLink": {
+		"message": "Змінити параметри Universal Bypass."
+	},
+	"optionsEnabled": {
+		"message": "Увімкнути обходи веб-сайтів."
+	},
+	"optionsNavigationDelay": {
+		"message": "Перейти до адреси призначення через % секунд(и)."
+	},
+	"optionsTrackerBypass": {
+		"message": "Обходити трекери (наприклад, bit.ly і t.co) використовуючи Apimon.de."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Миттєво переходити до адреси призначення трекерів."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Блокувати IP логгери, якщо їх неможливо обійти."
+	},
+	"optionsCrowdBypass": {
+		"message": "Відправляти та отримувати адреси призначення сайтів,яких неможливо обійти."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Відкрити пункти набору натовпу у новій вкладці через% секунди.\n"
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Закрийте вкладку, що містить місце розташування натовпу після% секунди відвідування."
+	},
+	"privacyPolicy": {
+		"message": "Політика конфіденційності"
+	},
+	"contributors": {
+		"message": "Автори та перекладачі"
+	},
+	"optionsUserscripts": {
+		"message": "Користувацькі обходи"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Це розширена функція розробникам для створення власних скриптів щоб обходити сайти. Після вдосконалення вони можуть бути відправлені на GitHub, для додавання до Universal Bypass, отже вони будуть доступні усім."
+	},
+	"beforeNavigate": {
+		"message": "Ви майже на місці призначення."
+	},
+	"beforeNavigateDestination": {
+		"message": "Ваш адреса призначення: %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "Проте, якщо ви зараз перейдете, то вони виявлять Universal Bypass."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Ви більше не будете виявлені через % секунд."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Ви більше не будете виявлені через 1 секунду."
+	},
+	"beforeNavigateTimer": {
+		"message": "Ви будете перенаправлені автоматично через % секунд."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Ви будете перенаправлені автоматично через 1 секунду."
+	},
+	"beforeNavigateOptions": {
+		"message": "Чи хочете ви, щоб перейшли миттєво або через х секунд?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Ви переміщалися в %"
+	},
+	"infoLinkvertise": {
+		"message": "Нам не дозволено обходити цей веб-сайт, але ми домовились про видалення найбільш надокучливих кроків."
+	},
+	"infoFileHoster": {
+		"message": "На жаль, сервер завантаження гарантує, що ви дочекалися, перш ніж дозволити завантажити файл."
+	},
+	"infoOutdated": {
+		"message": "Цей сайт обходиться новішою версією Universal Bypass."
+	},
+	"crowdWait": {
+		"message": "На жаль, ви вперше зіткнулися з цим посиланням, але після очікування інші користувачі Universal Bypass більше не будуть чекати завдяки вам :)"
+	},
+	"crowdDisabled": {
+		"message": "Цей сайт можна обійти тільки використовуючи crowd bypass, який ви вимкнули у цих опціях."
+	},
+	"crowdBypassed": {
+		"message": "Можливо, ви не повинні чекати це!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Інші користувачі Universal Bypass вже зачекали для вас і повідомили, що це перенаправляє до %"
+	},
+	"crowdBypassedTimer": {
+		"message": "Це буде відкрито в новій вкладці через % секунд."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Це буде відкрито в новій вкладці через 1 секунду."
+	},
+	"crowdCloseTimer": {
+		"message": "Ця вкладка закриється через % секунд."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Ця вкладка закриється через 1 секунду."
+	},
+	"cancel": {
+		"message": "Скасувати."
+	},
+	"crowdBypassedIgnore": {
+		"message": "Чи було це неправильним?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Чи хочете ви, щоб це відкрилося миттєво в новій вкладці або через х секунд?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass запобіг отримання вашого IP адресу."
+	},
+	"blockedSubtitle": {
+		"message": "Чи не хочете ви Universal Bypass щоб запобігти отримування вашої IP-адреси поганими людьми?"
+	}
+}

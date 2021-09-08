@@ -1,0 +1,134 @@
+{
+	"appDesc": {
+		"message": "ნუ დაკარგავთ დროს. Universal Bypass გამოტოვებს მომაბეზრებელ ბმულის შემამოკლებლებს."
+	},
+	"firstrunTitle": {
+		"message": "მადლობა Universal Bypass დაყენებისთვის!"
+	},
+	"firstrunNoScript": {
+		"message": "შესაძლოა თქვენ იყენებთ NoScript ან სხვა მასგავს გაფართოებას, რომელიც არ არის თავსებადი Universal Bypass-თან"
+	},
+	"version": {
+		"message": "ვერსია"
+	},
+	"definitionsVersion": {
+		"message": "გამოტოვების წესები"
+	},
+	"changelog": {
+		"message": "ცვლილებელის ისტორია"
+	},
+	"update": {
+		"message": "განახლების შემოწმება"
+	},
+	"updating": {
+		"message": "გამოტოვების წესები ითვირთება..."
+	},
+	"updateYes": {
+		"message": "გამოტოვების წესები წარმატებით ჩამოიტვირთა."
+	},
+	"updateNo": {
+		"message": "გამოტოვების წესები განახლებულია."
+	},
+	"faq": {
+		"message": "ხშირად დასმული კითხვები"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass-მა გამოტოვა % გვერდი თქვენთვის."
+	},
+	"support": {
+		"message": "შეიტანეთ თქვენი წვლილი."
+	},
+	"options": {
+		"message": "პარამეტრები"
+	},
+	"optionsLink": {
+		"message": "შეცვალეთ პარამეტრები."
+	},
+	"optionsEnabled": {
+		"message": "ok"
+	},
+	"optionsNavigationDelay": {
+		"message": "ავტომატური გადასვლა % წამში"
+	},
+	"optionsBlockIPLoggers": {
+		"message": "დაბლოკე იპ ლოგერები თუ  შემოვლა არ მუშაობს"
+	},
+	"privacyPolicy": {
+		"message": "კონფიდენციალურობის პოლიტიკა"
+	},
+	"contributors": {
+		"message": "წვლილის შემტანები"
+	},
+	"optionsUserscripts": {
+		"message": "არაოფიციალური შემოსავლები"
+	},
+	"beforeNavigate": {
+		"message": "თითქმით მისული ხარტ თქვენ ვებსაიტზე"
+	},
+	"beforeNavigateDestination": {
+		"message": "დანიშნულების მისამართი %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "თუ ეხლა გადახვალთ საიტზე ისინი დააფიქსირებენ Universal Bypass."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "თქვენ არ იქნებით დაფიქსირებული % წამში"
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "თქვენ არ იქნებით დაფიქსირებული 1 წამში"
+	},
+	"beforeNavigateTimer": {
+		"message": "თქვენ გადამისამართდებით ავტომატურად % წამში"
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "თქვენ გადამისამართდებით ავტომატურად 1 წამში"
+	},
+	"beforeNavigateOptions": {
+		"message": "გსურთ გადამისამართება მომენტალურად ან x წამში?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Universal Bypass-ერი ეხლა წაგიყვანთ %"
+	},
+	"infoFileHoster": {
+		"message": "სამწუხაროდ, გადმოწერის სერვერი ამოწმებს დაელოდეთ თუ არა შესაბამისი დრო ფაილის გადმოსაწერად."
+	},
+	"infoOutdated": {
+		"message": "ამ ვებსაიტის შემოვლა შესაძლებელია მხოლოდ Universal Bypass-ის ახალი ვერსიით"
+	},
+	"crowdWait": {
+		"message": "სამწუხაროდ, თქვენ ხართ პირველი მომხმარებელი, ვინც გახსნა ეს ბმული. სხვა მომხმარებლებს თქვენს შემდეგ აღარ მოუწევთ ლოდინი."
+	},
+	"crowdBypassed": {
+		"message": "თქვენ არ გჭირდებათ ლოდინი"
+	},
+	"crowdBypassedInfo": {
+		"message": "Universal Bypass-ის სხვა მომხმარებლები დაელოდნენ თქვენს მაგივრად და შეგვატყობინეს რომ ეს მისამართი გადამისამართდება % -ზე."
+	},
+	"crowdBypassedTimer": {
+		"message": "და ის გაიხსნება % წამში."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "და ის გაიხსნება 1 წამში."
+	},
+	"crowdCloseTimer": {
+		"message": "ეს ჩანართი დაიხურება % წამში."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "ეს ჩანართი დაიხურება 1 წამში."
+	},
+	"cancel": {
+		"message": "გაუქმება"
+	},
+	"crowdBypassedIgnore": {
+		"message": "ეს არასწორია?"
+	},
+	"crowdBypassedOptions": {
+		"message": "გსურთ გახსნა მომენტალურად ან x წამში?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass-მა დაგიცვათ თქვენი IP-ს დამახსოვრებისგან.\n"
+	},
+	"blockedSubtitle": {
+		"message": "არ გინდათ Universal Bypasser-მა რო დაგიცვას ცუდი ადამიანებისგან თქვენი მდებარეობა რო არ გაიგონ?"
+	}
+}

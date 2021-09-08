@@ -1,0 +1,1 @@
+All files in this folder are from the [src-min folder in ajaxorg/ace-builds as of a4103cb0a672a4fec9a16fc344f3116b51d6bcda](https://github.com/ajaxorg/ace-builds/tree/a4103cb0a672a4fec9a16fc344f3116b51d6bcda/src)

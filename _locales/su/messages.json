@@ -1,0 +1,29 @@
+{
+	"appDesc": {
+		"message": "Ulah nyia-nyia keun waktos nurut kana aturan. Universal Bypass bakal otomatis ngalangkungan alamat nu matak ngagganggu. "
+	},
+	"firstrunTitle": {
+		"message": "Hatur nuhun parantos masang Universal Bypass!"
+	},
+	"firstrunNoScript": {
+		"message": "Nanging, anjeun sigana nganggo ekstensi NoScript atawa nu sajabana, nyebabkeun Universal Bypass teu jalan."
+	},
+	"version": {
+		"message": "Vérsi"
+	},
+	"definitionsVersion": {
+		"message": "Pangertian Bypass"
+	},
+	"changelog": {
+		"message": "Catetan parobahan"
+	},
+	"update": {
+		"message": "Marios pambaharuan"
+	},
+	"updating": {
+		"message": "Ngunduh definisi bypass..."
+	},
+	"updateYes": {
+		"message": "Rengse ngunduh definisi bypass."
+	}
+}

@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "अपना समय बर्बाद ना करें। यूनिवर्सल बायपास आप को तंग करने वाले शॉर्टर्स लिंक से निजात दिलाता है।"
+	},
+	"firstrunTitle": {
+		"message": "यूनिवर्सल बाईपास इनस्टॉल करने के लिए आपका धन्यवाद!"
+	},
+	"firstrunNoScript": {
+		"message": "हालाँकि, आप नोस्क्रिप्ट या इसी की तरह कुछ उपयोग करते दिख रहे हैं, जिसके साथ यूनिवर्सल बाईपास काम नहीं कर सकता।"
+	},
+	"version": {
+		"message": "संस्करण"
+	},
+	"definitionsVersion": {
+		"message": "बाइपास परिभाषाएँ"
+	},
+	"changelog": {
+		"message": "बदलाव पुरालेख"
+	},
+	"update": {
+		"message": "नई सुविधाओं के लिए जाँच करें"
+	},
+	"updating": {
+		"message": "बाइपास परिभाषाएँ डाउनलोड हो रही..."
+	},
+	"updateYes": {
+		"message": "Successfully downloaded bypass definitions."
+	},
+	"updateNo": {
+		"message": "बायपास परिभाषाएँ अप-टू-डेट हैं।"
+	},
+	"faq": {
+		"message": "अकसर पूछे जाने वाले प्रश्न (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "यूनिवर्सल बायपास ने आपके लिए पहले ही% साइटों को दरकिनार कर दिया है।"
+	},
+	"support": {
+		"message": "यूनिवर्सल बाईपास में योगदान करें।"
+	},
+	"options": {
+		"message": "विकल्प"
+	},
+	"optionsLink": {
+		"message": "यूनिवर्सल बाईपास के विकल्प बदलें"
+	},
+	"optionsEnabled": {
+		"message": "वेबसाइट बाइपास को चालू करें ।"
+	},
+	"optionsNavigationDelay": {
+		"message": "% सेकंड (सेकेंड) के बाद मुझे गंतव्यों तक ले जाएं।"
+	},
+	"optionsTrackerBypass": {
+		"message": "Apimon.de का उपयोग करके बायपास ट्रैकर्स (जैसे bit.ly और t.co)।"
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "बिना रुके ट्रैकर्स को बाईपास करें"
+	},
+	"optionsBlockIPLoggers": {
+		"message": "अगर आईपी का संग्रह करने वाले बाईपास नहीं हो सकते तो उन्हे ब्लॉक कर दे"
+	},
+	"optionsCrowdBypass": {
+		"message": "बाईपास होने वाले लिंक को साझा करे "
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "% सेकंड (सेकेंड) के बाद एक नए टैब में भीड़-भीड़ वाले स्थान खोलें।"
+	},
+	"optionsCrowdAutoClose": {
+		"message": "इसे देखने के% सेकंड (s) के बाद भीड़-युक्त गंतव्य वाले टैब को बंद करें।"
+	},
+	"privacyPolicy": {
+		"message": "गोपनीयता नीति"
+	},
+	"contributors": {
+		"message": "योगदानकर्ता"
+	},
+	"optionsUserscripts": {
+		"message": "कस्टम बाईपासेस"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "यह एक उन्नत विकल्प है ऐसे डवलपर्स( Developers) के लिए जो अपनी खुद की बायपास स्क्रिप्ट लिखना चाहते है, जब यह काम कर रही हो तो उन्हें यूनिवर्सल बायपास में शामिल करने के लिए GitHub पर डाला जा सकता है, ताकि उसका लाभ सभी ले सके"
+	},
+	"beforeNavigate": {
+		"message": "आप लगभग अपनी मंजिल पर है"
+	},
+	"beforeNavigateDestination": {
+		"message": "ये रहा आपका लिंक %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "हालाँकि, यदि आप अभी नेविगेट करते हैं, तो वे यूनिवर्सल बाईपास का पता लगाएंगे।"
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "अब आपको% सेकंड में पता नहीं चलेगा।"
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "अब आपको 1 सेकंड में पता नहीं चलेगा।"
+	},
+	"beforeNavigateTimer": {
+		"message": "आप% सेकंड में स्वचालित रूप से पुनर्निर्देशित हो जाएंगे।"
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "आपको 1 सेकंड में स्वचालित रूप से रीडायरेक्ट किया जाएगा।"
+	},
+	"beforeNavigateOptions": {
+		"message": "क्या आप तुरंत या x सेकंड में पुनर्निर्देशित होना चाहते हैं?"
+	},
+	"beforeNavigateInstant": {
+		"message": "आपको% पर नेविगेट किया जा रहा है"
+	},
+	"infoLinkvertise": {
+		"message": "हमें इस वेबसाइट को बायपास करने की अनुमति नहीं है लेकिन हमने उनके सबसे कष्टप्रद कदमों को हटाने के लिए बातचीत की है।"
+	},
+	"infoFileHoster": {
+		"message": "दुर्भाग्य से, डाउनलोड सर्वर यह सुनिश्चित करेगा कि आपने फ़ाइल डाउनलोड करने की अनुमति देने से पहले इंतजार किया है।"
+	},
+	"infoOutdated": {
+		"message": "यह वेबसाइट यूनिवर्सल बाईपास के एक नए संस्करण द्वारा बाईपास की गई है।"
+	},
+	"crowdWait": {
+		"message": "दुर्भाग्य से, आप इस लिंक का सामना करने वाले पहले व्यक्ति हैं, लेकिन आपके इंतजार करने के बाद, अन्य यूनिवर्सल बायपास उपयोगकर्ताओं को अब नहीं रहना पड़ेगा।"
+	},
+	"crowdDisabled": {
+		"message": "यह वेबसाइट भीड़ द्वारा बाईपास है, जिसे आप विकल्पों में सक्षम कर सकते हैं।"
+	},
+	"crowdBypassed": {
+		"message": "शायद आपको इंतज़ार ना करना पड़े"
+	},
+	"crowdBypassedInfo": {
+		"message": "अन्य यूनिवर्सल बाईपास उपयोगकर्ता आपके लिए पहले ही इंतजार कर चुके हैं और रिपोर्ट कर चुके हैं कि यह लिंक इसपर जाता है %"
+	},
+	"crowdBypassedTimer": {
+		"message": "इसे% सेकंड में एक नए टैब में खोला जाएगा।"
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "यह 1 सेकंड में एक नए टैब में खोला जाएगा।"
+	},
+	"crowdCloseTimer": {
+		"message": "यह टैब% सेकंड में बंद हो जाएगा।"
+	},
+	"crowdCloseTimerSingular": {
+		"message": "यह टैब 1 सेकंड में बंद हो जाएगा।"
+	},
+	"cancel": {
+		"message": "रद्द करें"
+	},
+	"crowdBypassedIgnore": {
+		"message": "क्या ये सही नहीं था?"
+	},
+	"crowdBypassedOptions": {
+		"message": "क्या आप चाहते हैं कि यह तुरंत एक नए टैब में या एक्स सेकंड में खोला जाए?"
+	},
+	"blockedTitle": {
+		"message": "यूनिवर्सल बाईपास ने अपकी आईपी को साझा होने से बचाया।"
+	},
+	"blockedSubtitle": {
+		"message": "क्या आप नहीं चाहते कि यूनिवर्सल बाईपास आपकी आईपी को बुरे लोगो के पास जाने से बचाए?"
+	}
+}

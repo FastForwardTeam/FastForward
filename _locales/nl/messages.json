@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "Verspil geen tijd met moeilijkheid. Universal Bypass slaat irritante link-verkorters automatisch over."
+	},
+	"firstrunTitle": {
+		"message": "Bedankt voor het installeren van Universal Bypass!"
+	},
+	"firstrunNoScript": {
+		"message": "U lijkt NoScript of dergelijke te gebruiken, daarmee werkt Universal Bypass niet."
+	},
+	"version": {
+		"message": "Versie"
+	},
+	"definitionsVersion": {
+		"message": "Omzeiling definities"
+	},
+	"changelog": {
+		"message": "Wijzigingslogboek"
+	},
+	"update": {
+		"message": "Controleren op updates"
+	},
+	"updating": {
+		"message": "Omziel definities downloaden..."
+	},
+	"updateYes": {
+		"message": "Omzeil definities succesvol gedownload."
+	},
+	"updateNo": {
+		"message": "Het injectiescript is al bijgewerkt."
+	},
+	"faq": {
+		"message": "Veelgestelde Vragen (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass heeft al % sites voor je omzeild."
+	},
+	"support": {
+		"message": "Ondersteun Universal Bypass."
+	},
+	"options": {
+		"message": "Opties"
+	},
+	"optionsLink": {
+		"message": "Universal Bypass-opties wijzigen."
+	},
+	"optionsEnabled": {
+		"message": "Website bypass inschakelen."
+	},
+	"optionsNavigationDelay": {
+		"message": "Stuur me door naar de bestemming na % seconde(n). (Gebruik 0 om gelijk doorgestuurd te worden.)"
+	},
+	"optionsTrackerBypass": {
+		"message": "Omzeil trackers (zoals bit.ly en t.co) met behulp van Apimon.de."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Stuur me gelijk naar de bestemming van trackers."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Blokkeer IP-loggers als ze niet kunnen worden omzeilt."
+	},
+	"optionsCrowdBypass": {
+		"message": "Crowd Bypass: Geef en neem de bestemmingen van ondoorlaatbare verkorters."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Open crowd-sourced bestemmingen in een nieuw tabblad na % seconde(s). (0 = direct.)"
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Sluit tabblad met crowd-bestemmingen na % seconde(n) na het bezoeken."
+	},
+	"privacyPolicy": {
+		"message": "Privacy Verklaring"
+	},
+	"contributors": {
+		"message": "Bijdrragers"
+	},
+	"optionsUserscripts": {
+		"message": "Aangepaste omzeilingen"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Dit is een geavanceerde functie voor ontwikkelaars om hun eigen scripts te maken om sites te omzeilen. Eenmaal geperfectioneerd, kunnen ze deze vervolgens indienen op GitHub om toe te voegen aan Universele Bypass, zodat ze voor iedereen beschikbaar zijn."
+	},
+	"beforeNavigate": {
+		"message": "Je bent bijna op je bestemming."
+	},
+	"beforeNavigateDestination": {
+		"message": "Uw bestemming is %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "Echter, als je nu navigeert, detecteren ze Universal Bypass."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Je wordt niet langer gedetecteerd over % seconden."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Je wordt niet langer gedetecteerd over 1 seconde."
+	},
+	"beforeNavigateTimer": {
+		"message": "Je wordt automatisch doorgestuurd in % seconden."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "U wordt over 1 seconde automatisch doorgestuurd."
+	},
+	"beforeNavigateOptions": {
+		"message": "Wil je gelijk worden doorgestuurd of na x seconden?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Je wordt doorgestuurd naar %"
+	},
+	"infoLinkvertise": {
+		"message": "We hebben geen toestemming om deze website te omzeilen, maar we hebben onderhandeld over het verwijderen van hun meest vervelende stappen. "
+	},
+	"infoFileHoster": {
+		"message": "Helaas zal de downloadserver ervoor zorgen dat je hebt gewacht voordat je dit bestand kan downloaden."
+	},
+	"infoOutdated": {
+		"message": "Deze website wordt overgeslagen in een nieuwere versie van Universal Bypass."
+	},
+	"crowdWait": {
+		"message": "Helaas ben je de eerste die deze link tegenkomt, maar nadat je hebt gewacht hoeven anderen dat niet meer."
+	},
+	"crowdDisabled": {
+		"message": "Deze website wordt omzeild door crowd bypass, dit kan je inschakelen in de opties."
+	},
+	"crowdBypassed": {
+		"message": "U hoeft misschien niet te wachten!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Andere Universal Bypass-gebruikers hebben al aangegeven dat dit aan % ligt"
+	},
+	"crowdBypassedTimer": {
+		"message": "Dit zal in % seconden worden geopend in een nieuw tabblad."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Dit zal in 1 seconde worden geopend in een nieuw tabblad."
+	},
+	"crowdCloseTimer": {
+		"message": "Dit tabblad wordt over % seconden gesloten."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Dit tabblad wordt over 1 seconde gesloten."
+	},
+	"cancel": {
+		"message": "Annuleren."
+	},
+	"crowdBypassedIgnore": {
+		"message": "Klopt dit niet?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Wilt je dat dit direct, of na x seconden wordt geopend in een nieuw tabblad?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass voorkwam dat uw IP werdt geregistreerd."
+	},
+	"blockedSubtitle": {
+		"message": "Weet u zeker dat u IP-Logger bescherming wilt uitschakelen?"
+	}
+}

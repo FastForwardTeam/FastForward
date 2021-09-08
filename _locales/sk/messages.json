@@ -1,0 +1,155 @@
+{
+	"appDesc": {
+		"message": "Nestrácajte svoj drahocenný čas so súhlasom. Universal Bypass obchádza otravné funkcie skracovania linkov."
+	},
+	"firstrunTitle": {
+		"message": "Ďakujeme za inštaláciu Universal Bypass!"
+	},
+	"firstrunNoScript": {
+		"message": "Vyzerá to ale tak, že používate NoScript alebo podobnú funkciu, ktorá nie je s Universal Bypass kompatibilná."
+	},
+	"version": {
+		"message": "Verzia"
+	},
+	"definitionsVersion": {
+		"message": "Definície obchádzky"
+	},
+	"changelog": {
+		"message": "Zoznam zmien"
+	},
+	"update": {
+		"message": "Skontrolovať aktualizácie"
+	},
+	"updating": {
+		"message": "Sťahujem definície prechodu..."
+	},
+	"updateYes": {
+		"message": "Úspešne si aktualizoval skript na obchádzku!"
+	},
+	"updateNo": {
+		"message": "Definície prechodu sú najnovšie."
+	},
+	"faq": {
+		"message": "Často kladené otázky"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass pre Vás úspešne obišiel už % stránok."
+	},
+	"support": {
+		"message": "Podieľajte sa na Universal Bypass."
+	},
+	"options": {
+		"message": "Možnosti"
+	},
+	"optionsLink": {
+		"message": "Zmeniť nastavenia Universal Bypass."
+	},
+	"optionsEnabled": {
+		"message": "Povoliť obchádzanie webstránok."
+	},
+	"optionsNavigationDelay": {
+		"message": "Dostaň ma do cieľa za % sek. (Pre okamžitú navigáciu použite 0.)"
+	},
+	"optionsTrackerBypass": {
+		"message": "Obíjdite sledovače (ako bit.ly a t.co) použitím Apimon.de."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Okamžite ma dostaňte do cieľa sledovateľov."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Blokuj IP adresy prihlasovateľov, ktoré nemôžu byť obídené."
+	},
+	"optionsCrowdBypass": {
+		"message": "Zadajte destinácie skracovačov, ktoré nie je možné obísť."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Otvoriť crowd-založené destinácie v novom tabe po % sekundách."
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Zatvoriť tab obsahujúci crowd-založenú destináciu po % sekundách navštívenia."
+	},
+	"privacyPolicy": {
+		"message": "Ochrana osobných údajov"
+	},
+	"contributors": {
+		"message": "Podporovatelia"
+	},
+	"optionsUserscripts": {
+		"message": "Vlastné obtoky"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Toto je pokročilá funkcia pre vývojárov, aby si mohli vytvárať vlastné skripty na obídenie stránok. Ak sú dokonalé, môžu byť predložené na GitHub aby boli pridané do Universal Bypass, takže sú dostupné pre každeho."
+	},
+	"beforeNavigate": {
+		"message": "Už ste skoro tam!"
+	},
+	"beforeNavigateDestination": {
+		"message": "Stranka, na ktorú sa pokúšate dostať je %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "Ak pôjdete na stránku teraz, odhalia Universal Bypass."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Prechod bude bezpečný o % (sekúnd if 5-999, sekundy if 2-4)."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Prechod bude bezpečný o 1 sekundu."
+	},
+	"beforeNavigateTimer": {
+		"message": "Budete automaticky presmerovaný o % (sekúnd if 5-999, sekundy if 2-4)."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Budete automaticky presmerovaný o 1 sekundu."
+	},
+	"beforeNavigateOptions": {
+		"message": "Chcete byť presmerovaný okamžite alebo o X sekúnd?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Budete premiestnený na %"
+	},
+	"infoFileHoster": {
+		"message": "Nanešťastie, sťahovací server sa uistí, že ste čakali pred tým, ako Vám dovolil stiahnuť súbor."
+	},
+	"infoOutdated": {
+		"message": "Táto stránka už bola obijdená novšou verziou Universal Bypassu."
+	},
+	"crowdWait": {
+		"message": "Ste prvý/á, kto navštívil túto stránku, ale ako ste Vy čakalim iný používatelia Universal Bypassu by už nemuseli."
+	},
+	"crowdDisabled": {
+		"message": "Táto stránka sa obchádza spôsobom crowdm ktorý ste vypli v nastaveniach."
+	},
+	"crowdBypassed": {
+		"message": "Už nemusíte čakať!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Iní používatelia Universal Bypassu už čakali namiesto Vás a nahlásili, že to vedie na %"
+	},
+	"crowdBypassedTimer": {
+		"message": "Totot bude otvorené v novom tabe o % (sekúnd if 5-999, sekundy if 2-4)."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Totot bude otvorené v novom tabe o 1 sekundu."
+	},
+	"crowdCloseTimer": {
+		"message": "Tento tab sa zatvorí o % (sekúnd if 5-999, sekundy if 2-4)."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Tento tab sa zatvorí o 1 sekundu."
+	},
+	"cancel": {
+		"message": "Zrušiť"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Je toto zle?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Chcete aby sa stránka otvorila v novom okne okamžite alebo o X sekúnd?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass Vás obránil pred uložením IP adresy na stránke."
+	},
+	"blockedSubtitle": {
+		"message": "Nechcete, aby Universal Bypass zabránil zlým hercom v získaní Vašej IP adresy?"
+	}
+}

@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "Neztrácejte čas. Universal Bypass automaticky přeskočí nepříjemné zkracovače odkazů."
+	},
+	"firstrunTitle": {
+		"message": "Děkujeme za instalaci Universal Bypass!"
+	},
+	"firstrunNoScript": {
+		"message": "Zdá se však, že používáte NoScript nebo podobné, se kterým Universal Bypass není kompatibilní."
+	},
+	"version": {
+		"message": "Verze"
+	},
+	"definitionsVersion": {
+		"message": "Definice vynechání"
+	},
+	"changelog": {
+		"message": "Přehled změn"
+	},
+	"update": {
+		"message": "Zkontrolovat aktualizace"
+	},
+	"updating": {
+		"message": "Stahování definic obtoku ..."
+	},
+	"updateYes": {
+		"message": "Definice obtoku byly úspěšně staženy."
+	},
+	"updateNo": {
+		"message": "Definice bypassu jsou aktuální."
+	},
+	"faq": {
+		"message": "Často kladené otázky (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass již pro vás obešel % stránek."
+	},
+	"support": {
+		"message": "Přispějte k Universal Bypass."
+	},
+	"options": {
+		"message": "Možnosti"
+	},
+	"optionsLink": {
+		"message": "Změnit nastavení Universal Bypass."
+	},
+	"optionsEnabled": {
+		"message": "Povolit obcházení zkracovačů."
+	},
+	"optionsNavigationDelay": {
+		"message": "Přesuňte mě do destinací po % sekundách."
+	},
+	"optionsTrackerBypass": {
+		"message": "Vynechat sledovače (jako bit.ly a t.co) pomocí Apimon.de."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Okamžitě mě přesuňtě na destinaci sledovačů procházení."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Blokovat IP loggery pokud je nelze obejít."
+	},
+	"optionsCrowdBypass": {
+		"message": "Dávejte a berte cíle stránek které nejde obejít"
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Otevřete croed-sourced cíl v nové záložce po % vteřinách."
+	},
+	"optionsCrowdAutoClose": {
+		"message": "zavřít záložku obsahující crow-sorced cíl po % vteřinách po jejím navštívení"
+	},
+	"privacyPolicy": {
+		"message": "Zásady ochrany osobních údajů"
+	},
+	"contributors": {
+		"message": "Přispěvatelé"
+	},
+	"optionsUserscripts": {
+		"message": "Vlastní obcházení"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "tohle je pokročilá možnost pro vývojáře aby si mohli dělat vlastní scripty na obcházení stránek, když zdokonalené, můzou být dány na GitHub aby byly přidány do Universal Bypass, takže budou přístupné pro všechny"
+	},
+	"beforeNavigate": {
+		"message": "Jste téměř na destinaci."
+	},
+	"beforeNavigateDestination": {
+		"message": "Vaše destinace tohoto zkráceného odkazu je %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "jestliže obejdete stránku teď, tak Universall Bypass detekují."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "už nebudete detekováni v % sekundách"
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "už nebudete detekováni v 1 sekundě"
+	},
+	"beforeNavigateTimer": {
+		"message": "Budete automaticky přesměrováni za % sekund."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Budete automaticky přesměrováni za 1 sekundu."
+	},
+	"beforeNavigateOptions": {
+		"message": "chcete být přesměrováni hned, nebo v X sekundách?"
+	},
+	"beforeNavigateInstant": {
+		"message": "jste navigováni na %"
+	},
+	"infoLinkvertise": {
+		"message": "Nejsme oprávněni obejít tento web, ale vyjednali jsme odstranění jejich nejotravnějších kroků."
+	},
+	"infoFileHoster": {
+		"message": "Bohužel, stahující server se ujistí že počkáte než vám dovolí stáhnout složku"
+	},
+	"infoOutdated": {
+		"message": "Tahle stránka je obcházena novější verzí Universal Bypass"
+	},
+	"crowdWait": {
+		"message": "Bohužel jste první, kdo narazil na tento odkaz, ale po čekání již nebudou muset čekat ostatní uživatelé Universal Bypass."
+	},
+	"crowdDisabled": {
+		"message": "Tato stránka je obcházena Crowd Bypass, který jste vypnuli v nastavení."
+	},
+	"crowdBypassed": {
+		"message": "Nemusel byste čekat!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Ostatní uživatelé Universal Bypass na vás čekali a náhlasit to vede k %"
+	},
+	"crowdBypassedTimer": {
+		"message": "Toto bude otevřeno na nové kartě za % sekund."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Toto bude otevřeno na nové kartě za 1 sekundu."
+	},
+	"crowdCloseTimer": {
+		"message": "Tato karta se uzavře za % sekund."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Tato karta se zavře za 1 sekundu."
+	},
+	"cancel": {
+		"message": "Zrušit."
+	},
+	"crowdBypassedIgnore": {
+		"message": "Nebylo to správně?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Přejete si, aby byla tato karta otevřena v nové kartě okamžitě nebo za x sekund?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass ochránil vaši IP před zaznamenáním."
+	},
+	"blockedSubtitle": {
+		"message": "Nechcete, aby Universal Bypass ochránil vaši IP?"
+	}
+}

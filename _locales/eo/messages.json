@@ -1,0 +1,50 @@
+{
+	"firstrunNoScript": {
+		"message": "Vi ŝajne uzas NoScript, aŭ aferoj same. Universal Bypass bedaŭrinde ne povas kunfari kun tioj."
+	},
+	"version": {
+		"message": "versio"
+	},
+	"definitionsVersion": {
+		"message": "transiranta difinoj"
+	},
+	"updating": {
+		"message": "Elŝutanta preterpasa difiniojn"
+	},
+	"faq": {
+		"message": "Ofta demandoj"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass preterpasinta % retpaĝojn. "
+	},
+	"options": {
+		"message": "agordoj"
+	},
+	"beforeNavigateInstant": {
+		"message": "Vi estas navigita al %"
+	},
+	"infoOutdated": {
+		"message": "Ĉi tio retpaĝo estas uzanta pli nova versio de Universal Bypass"
+	},
+	"crowdWait": {
+		"message": "Bedaŭrinde, vi estas la unua vizitanto sur ĉi retpaĝo. Sed, se vi atendas, la aliaj uzantoj ne atendos."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Nova langeto estos malfermita en 1 sekundo."
+	},
+	"crowdCloseTimer": {
+		"message": "La langeto estos fermita en % sekundoj"
+	},
+	"crowdCloseTimerSingular": {
+		"message": "La langeto estos fermita en 1 sekundo"
+	},
+	"cancel": {
+		"message": "Nuligi."
+	},
+	"crowdBypassedOptions": {
+		"message": "Ĉu vi volas aperi tion instante, sur nova tabo?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass haltis via IP adreso registrita."
+	}
+}

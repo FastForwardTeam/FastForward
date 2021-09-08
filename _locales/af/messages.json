@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "Moenie jou tyd mors met voldoening nie. Universal Bypass irriterende skakelverkorters omseil."
+	},
+	"firstrunTitle": {
+		"message": "Dankie dat u Universal Bypass geïnstalleer het!"
+	},
+	"firstrunNoScript": {
+		"message": "Dit lyk egter asof u NoScript of soortgelyk gebruik, waarmee Universal Bypass nie versoenbaar is nie."
+	},
+	"version": {
+		"message": "weergawe\nThose afrikaans translations are not accurate, those are made with a translator."
+	},
+	"definitionsVersion": {
+		"message": "Omseil definisies this is not accurated."
+	},
+	"changelog": {
+		"message": "Update geskiedenis"
+	},
+	"update": {
+		"message": "Kyk vir updates"
+	},
+	"updating": {
+		"message": "Aflaai afleiding definisies..."
+	},
+	"updateYes": {
+		"message": "Die afleiding definisies is suksesvol afgelaai."
+	},
+	"updateNo": {
+		"message": "Afleiding definisies is opgedateer"
+	},
+	"faq": {
+		"message": "Meer algemene kwessies (MAK)"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass het reeds% -werwe vir u omseil."
+	},
+	"support": {
+		"message": "Maak'n bydrae tot die Universele shunt"
+	},
+	"options": {
+		"message": "Vul."
+	},
+	"optionsLink": {
+		"message": "Verander die eienskappe van die \" Universele shunt"
+	},
+	"optionsEnabled": {
+		"message": "In staat stel om die web site afleidings."
+	},
+	"optionsNavigationDelay": {
+		"message": "Neem my na% sekonde (s) na bestemmings."
+	},
+	"optionsTrackerBypass": {
+		"message": "Drif te spoorsnyers (soos bietjie.ly en t.co) deur gebruik te maak van Apimon.de ."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Neem my onmiddellik aan die bestemmings van die spoorsnyers."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Blokke IP-assistente in die geval hulle kan nie afgelei word."
+	},
+	"optionsCrowdBypass": {
+		"message": "Ruil die bestemmings van nie-circumventable shorteners"
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Oop skare-verkry bestemmings in'n nuwe blad na % tweede(s)."
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Naby blad met die skare-verkry bestemming na % tweede(s) van die besoek van dit."
+	},
+	"privacyPolicy": {
+		"message": "Privaatheidsbeleid"
+	},
+	"contributors": {
+		"message": "Bydraers"
+	},
+	"optionsUserscripts": {
+		"message": "Persoonlike Verbypaaie"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Dit is'n gevorderde funksie vir ontwikkelaars te skep om hul eie skrifte te omseil webwerwe. Sodra volmaak, hulle kan dan ingedien word op GitHub te bygevoeg word om die Universele Omseil, so hulle is beskikbaar vir almal."
+	},
+	"beforeNavigate": {
+		"message": "Jy is amper by jou bestemming."
+	},
+	"beforeNavigateDestination": {
+		"message": "Jou bestemming is %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "Egter, as jy navigeer nou, hulle sal opspoor Universele Omseil."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Jy sal nie meer opgespoor word in % sekondes."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Jy sal nie meer opgespoor word in 1 sekonde."
+	},
+	"beforeNavigateTimer": {
+		"message": "Jy sal outomaties herlei word in % sekondes."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Jy sal outomaties herlei word in 1 sekonde."
+	},
+	"beforeNavigateOptions": {
+		"message": "Wil jy herlei word onmiddellik of in die x sekondes?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Jy word navigator te %"
+	},
+	"infoLinkvertise": {
+		"message": "Ons mag nie hierdie webwerf omseil nie, maar ons het onderhandel oor die verwydering van hul mees irriterende stappe."
+	},
+	"infoFileHoster": {
+		"message": "Ongelukkig, die aflaai bediener sal verseker dat jy gewag het voordat jy die lêer af te laai."
+	},
+	"infoOutdated": {
+		"message": "Le webhusayithi idluliswa yinguqulo entsha ye-Universal Bypass."
+	},
+	"crowdWait": {
+		"message": "U is die eerste om hierdie skakel teë te kom, so ander Universal Bypass-gebruikers sal dit nie meer hoef te doen nie."
+	},
+	"crowdDisabled": {
+		"message": "Hierdie webwerf is omseil deur die skare omseil, wat jy gestremdes in die opsies."
+	},
+	"crowdBypassed": {
+		"message": "Jy kan nie te wag!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Ander Universele Omseil gebruikers het reeds wag vir jou en berig dat dit lei tot %"
+	},
+	"crowdBypassedTimer": {
+		"message": "Dit sal oopgemaak word in'n nuwe blad in % sekondes."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Dit sal oopgemaak word in'n nuwe blad in 1 sekonde."
+	},
+	"crowdCloseTimer": {
+		"message": "Hierdie blad sal sluit in % sekondes."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Hierdie blad sal sluit in 1 sekonde."
+	},
+	"cancel": {
+		"message": "Kanselleer."
+	},
+	"crowdBypassedIgnore": {
+		"message": "Was dit nie korrek nie?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Doen wat jy wil om dit te oopgemaak word in'n nuwe blad onmiddellik of in die x sekondes?"
+	},
+	"blockedTitle": {
+		"message": "Universele Omseil verhoed dat jou IP van aangemeld."
+	},
+	"blockedSubtitle": {
+		"message": "Wil nie Universele Omseil om te verhoed dat slegte akteurs uit om jou IP?"
+	}
+}

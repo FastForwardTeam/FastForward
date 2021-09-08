@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "Na caith an ùine agad le gèilleadh. Tha seach-rathad uile-choitcheann dol timcheall air giorrachadh ceangail neònach."
+	},
+	"firstrunTitle": {
+		"message": "Tapadh leibh airson Universal Bypass a stàladh!"
+	},
+	"firstrunNoScript": {
+		"message": "Ach, tha e coltach gu bheil thu a ’cleachdadh NoScript no a leithid, nach eil Universal Bypass co-chòrdail ris."
+	},
+	"version": {
+		"message": "Dreachan"
+	},
+	"definitionsVersion": {
+		"message": "Mìneachaidhean seach-rathad"
+	},
+	"changelog": {
+		"message": "atharraich log"
+	},
+	"update": {
+		"message": "thoir sùil airson ùrachaidhean"
+	},
+	"updating": {
+		"message": "A ’luchdachadh sìos mìneachaidhean seach-rathad ..."
+	},
+	"updateYes": {
+		"message": "Mìneachaidhean seach-rathad air an luchdachadh sìos gu soirbheachail."
+	},
+	"updateNo": {
+		"message": "Mìneachaidhean seach-rathad air an ùrachadh."
+	},
+	"faq": {
+		"message": "Ceistean Bitheanta (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "Tha seach-rathad uile-choitcheann air a dhol seachad air % làraich dhut mar-thà."
+	},
+	"support": {
+		"message": "\nCuir seach-rathad uile-choitcheann ris."
+	},
+	"options": {
+		"message": "Roghainnean"
+	},
+	"optionsLink": {
+		"message": "\nAtharraich roghainnean seach-rathad uile-choitcheann."
+	},
+	"optionsEnabled": {
+		"message": "Dèan comas air seach-rathaidean làrach-lìn."
+	},
+	"optionsNavigationDelay": {
+		"message": "\nRach gu ceann-uidhe às deidh % de dhiog"
+	},
+	"optionsTrackerBypass": {
+		"message": "Rianadairean seach-rathad (leithid bit.ly agus t.co) a ’cleachdadh Apimon.de."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Sa bhad thoir mi gu cinn-uidhe lorgairean."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Cuir casg air luchd-logaidh IP mura h-urrainnear an seachnadh."
+	},
+	"optionsCrowdBypass": {
+		"message": "Seach-rathad Sluagh: Thoir seachad agus gabh cinn-uidhe luchd-giorrachaidh nach gabh faighinn troimhe."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Fosgail cinn-uidhe mòr-chòrdte ann an taba ùr às deidh % ìre de dhiog. (s)"
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Dùin tab ceann-uidhe sluaigh às deidh % uiread de dhiogan de thadhal."
+	},
+	"privacyPolicy": {
+		"message": "Poileasaidh Dìomhaireachd"
+	},
+	"contributors": {
+		"message": "Fiosraichean"
+	},
+	"optionsUserscripts": {
+		"message": "Seach-rathaidean gnàthaichte"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Tha seo na fheart adhartach dha luchd-leasachaidh gus na sgriobtaichean aca fhèin a chruthachadh gus làraich a sheachnadh. Aon uair ‘s gu bheil iad air an dèanamh foirfe, faodar an uairsin a chuir a-steach air GitHub airson an cur ri Universal Bypass, gus am bi iad rim faighinn leis a h-uile duine."
+	},
+	"beforeNavigate": {
+		"message": "Tha thu cha mhòr aig do cheann-uidhe."
+	},
+	"beforeNavigateDestination": {
+		"message": "Is e % an ceann-uidhe agad"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "Ach, ma nì thu seòladh a-nis, lorgaidh iad Universal Bypass."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Cha tèid do lorg tuilleadh ann an % diogan."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Cha tèid do lorg tuilleadh ann an 1 diog."
+	},
+	"beforeNavigateTimer": {
+		"message": "Thèid do ath-stiùireadh gu fèin-ghluasadach ann an % diogan."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Thèid do ath-stiùireadh gu fèin-ghluasadach ann an 1 diog."
+	},
+	"beforeNavigateOptions": {
+		"message": "A bheil thu airson gun tèid do ath-stiùireadh sa bhad no ann an x ​​diogan?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Thathas gad sheòladh gu %"
+	},
+	"infoLinkvertise": {
+		"message": "Chan eil cead againn an làrach-lìn seo a sheachnadh ach tha sinn air co-rèiteachadh a dhèanamh gus na ceumannan as miosa a thoirt air falbh."
+	},
+	"infoFileHoster": {
+		"message": "Gu mì-fhortanach, nì an frithealaiche luchdachadh sìos cinnteach gu bheil thu air feitheamh mus leig thu leat am faidhle a luchdachadh sìos."
+	},
+	"infoOutdated": {
+		"message": "Tha an làrach-lìn seo air a sheachnadh le dreach nas ùire de Universal Bypass."
+	},
+	"crowdWait": {
+		"message": "Gu mì-fhortanach, is tu a ’chiad neach a choinnich ris a’ cheangal seo, ach às deidh dhut feitheamh, cha bhith aig luchd-cleachdaidh Seach-rathad Uile-choitcheann eile tuilleadh."
+	},
+	"crowdDisabled": {
+		"message": "Tha an làrach-lìn seo air a sheachnadh le seach-rathad sluagh, as urrainn dhut a chomasachadh anns na roghainnean."
+	},
+	"crowdBypassed": {
+		"message": "Is dòcha nach fheum thu feitheamh!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Tha luchd-cleachdaidh Seach-rathad Uile-choitcheann eile air feitheamh ort mar-thà agus air aithris gu bheil seo a ’leantainn gu %"
+	},
+	"crowdBypassedTimer": {
+		"message": "Thèid seo fhosgladh ann an taba ùr ann an % diogan."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Thèid seo fhosgladh ann an taba ùr ann an 1 diog."
+	},
+	"crowdCloseTimer": {
+		"message": "Dùinidh an taba seo ann an % diogan."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "\nDùinidh an taba seo ann an 1 diog."
+	},
+	"cancel": {
+		"message": "Cuir stad "
+	},
+	"crowdBypassedIgnore": {
+		"message": "Nach robh seo ceart?"
+	},
+	"crowdBypassedOptions": {
+		"message": "\nA bheil thu airson seo fhosgladh ann an taba ùr sa bhad no ann an x ​​diogan?"
+	},
+	"blockedTitle": {
+		"message": "Chuir Seach-rathad Uile-choitcheann casg air do IP a bhith air a chlàradh."
+	},
+	"blockedSubtitle": {
+		"message": "Nach eil thu ag iarraidh Seach-rathad Uile-choitcheann gus casg a chuir air droch chleasaichean bho bhith a ’faighinn do IP?"
+	}
+}

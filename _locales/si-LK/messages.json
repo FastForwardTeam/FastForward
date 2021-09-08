@@ -1,0 +1,155 @@
+{
+	"appDesc": {
+		"message": "ඔබේ කාලය අපතේ නොයවන්න. Universal Bypass මගින් කරදරකාරී link හැකිලීම් ඉක්මවා යයි."
+	},
+	"firstrunTitle": {
+		"message": "Universal Bypass ස්ථාපනය කරාට ඔබට ස්තුතියි!"
+	},
+	"firstrunNoScript": {
+		"message": "කෙසේ වුවද, ඔබ Universal Bypass හා නොගැළපෙන NoScript හෝ ඒ හා සමාන යෙදුමක් භාවිත කරයි."
+	},
+	"version": {
+		"message": "පිටපත"
+	},
+	"definitionsVersion": {
+		"message": "මගහැරීම් පිටපත්"
+	},
+	"changelog": {
+		"message": "වෙනස්කම් සටහන"
+	},
+	"update": {
+		"message": "යාවත්කාලීනය සඳහා පිරික්සන්න"
+	},
+	"updating": {
+		"message": "මගහැරීම් පිටපත් භාගත වෙමින් පවතී..."
+	},
+	"updateYes": {
+		"message": "මගහැරීම් පිටපත් භාගත කිරීම සාර්ථකයි."
+	},
+	"updateNo": {
+		"message": "මගහැරීම් පිටපත් අදට යාවත්කාලීනයි."
+	},
+	"faq": {
+		"message": "නිතර අසන පැන"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass දැනටමත් ඔබ සඳහා වෙබ් අඩවි % මගහැර ඇත."
+	},
+	"support": {
+		"message": "Universal Bypass සඳහා දායක වන්න."
+	},
+	"options": {
+		"message": "සැකසුම්"
+	},
+	"optionsLink": {
+		"message": "Universal Bypass සැකසුම් වෙනස් කිරීම."
+	},
+	"optionsEnabled": {
+		"message": "වෙබ් අඩවි මගහැරීම් සක්‍රීය කරන්න."
+	},
+	"optionsNavigationDelay": {
+		"message": "ගමනාන්තය වෙත මාව තත්පර % ට පසු ගෙන යන්න."
+	},
+	"optionsTrackerBypass": {
+		"message": "Apimon.de මගින් bit.ly හා t.co වැනි trackers මගහරින්න."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Trackers වල ගමනාන්තය වෙත මාව ක්ෂණිකව ගෙනයන්න."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "IP සටහන් කරගන්නන් මගහැරීමට නොහැකි නම් ඔවුන්ව වලක්වන්න."
+	},
+	"optionsCrowdBypass": {
+		"message": "මගහැරීමට නොහැකි කෙටිකිරීම් වල ගමනාන්ත හුවමාරු කරන්න."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "සමූහ-දායකත්ව ගමනාන්තයන් තත්පර % ට පසු නව පිටුවක විවෘත කරන්න."
+	},
+	"optionsCrowdAutoClose": {
+		"message": "සමූහ-දායකත්ව ගමනාන්තය පිළිබඳ දක්වන පිටුව තත්පර % ට පසුව වසා දමන්න. "
+	},
+	"privacyPolicy": {
+		"message": "පෞද්ගලිකත්ව ප්‍රතිපත්තිය"
+	},
+	"contributors": {
+		"message": "දායකකරුවන්"
+	},
+	"optionsUserscripts": {
+		"message": "ඔබගේ මගහැරීම්"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "මෙය සංවර්ධකයින් මගින්, ඔවුන්ගේ script භාවිතයෙන් වෙබ් අඩවි මගහැරීමට යොදා ගත හැකි සංකීර්ණ යෙදුමකි. හොඳින් පරිපූර්ණ කළ පසු GitHub හි ඉදිරිපත් කර Universal Bypass වෙත එකතු කිරීමෙන් එය සැමටම ලබාදිය හැක."
+	},
+	"beforeNavigate": {
+		"message": "ඔබ ගමනාන්තය වෙත ළඟා වෙමින් පවතී."
+	},
+	"beforeNavigateDestination": {
+		"message": "ඔබගේ ගමනාන්තය % වේ."
+	},
+	"beforeNavigateUnsafe": {
+		"message": "කෙසේ වුවද, ඔබ දැන්ම උත්සාහ කළහොත් ඔවුන් Universal Bypass හදුනා ගනු ඇත."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "ඔබව තත්පර % ට පසු හඳුනා ගැනීමට නොහැකිවනු ඇත."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "ඔබව තත්පරයකට පසු හඳුනා ගැනීමට නොහැකිවනු ඇත."
+	},
+	"beforeNavigateTimer": {
+		"message": "ඔබව තත්පර % ට පසුව ස්වයංක්‍රීයව යොමුකරනු ඇත."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "ඔබව තත්පරයකට පසුව ස්වයංක්‍රීයව යොමුකරනු ඇත."
+	},
+	"beforeNavigateOptions": {
+		"message": "ඔබව ක්ෂණිකවම හෝ තත්පර xට පසු යොමු කිරීමට අවශ්‍ය ද?"
+	},
+	"beforeNavigateInstant": {
+		"message": "ඔබව % වෙත යොමු වෙමින් පවතී."
+	},
+	"infoFileHoster": {
+		"message": "අවාසනාවකට, භාගත කිරීමට අවසර දීමට පෙර භාගත සර්වරය මගින් ඔබව ප්‍රමාදයට ලක්වන බව සහතික කරනු ඇත."
+	},
+	"infoOutdated": {
+		"message": "මෙම වෙබ් අඩවිය Universal Bypass නව පිටපතකින් මගහැරීමට පුළුවන."
+	},
+	"crowdWait": {
+		"message": "අවාසනාවකට, මෙම සබැඳිය හමු වූ පළමු තැනැත්තා ඔබය, නමුත් ඔබ ප්‍රමාද වුවද ඔබ අනෙක් Universal Bypass පරිශීලකයන් හට මෙය මගහැරීමට දායක වනු ඇත."
+	},
+	"crowdDisabled": {
+		"message": "මෙම වෙබ්අඩවිය සමූහ-දායකත්වයෙන් දැනටමත් මගහැර ඇතත් ඔබ එම යෙදවුම අක්‍රීය කර ඇත."
+	},
+	"crowdBypassed": {
+		"message": "ඔබට ප්‍රමාද වීමට අවශ්‍ය නොවීමට පුළුවන!"
+	},
+	"crowdBypassedInfo": {
+		"message": "අනෙකුත් Universal Bypass පරිශීලකයන් දැනටමත් ඔබ වෙනුවෙන් ප්‍රමාදව මෙය % වෙත යොමුවන බව වාර්තා කර ඇත."
+	},
+	"crowdBypassedTimer": {
+		"message": "මෙය තත්පර % ට පසු  නව පිටුවක විවෘත වනු ඇත."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "මෙය තත්පරයකට පසු  නව පිටුවක විවෘත වනු ඇත."
+	},
+	"crowdCloseTimer": {
+		"message": "මෙම පිටුව තත්පර % ට පසු වැසෙනු ඇත."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "මෙම පිටුව තත්පරයකට පසු වැසෙනු ඇත."
+	},
+	"cancel": {
+		"message": "අවලංගු කරන්න."
+	},
+	"crowdBypassedIgnore": {
+		"message": "මෙය වැරදීමක් ද?"
+	},
+	"crowdBypassedOptions": {
+		"message": "ඔබව ක්ෂණිකවම හෝ තත්පර xට පසු මෙය නව පිටුවක විවෘත වීමට අවශ්‍ය ද?"
+	},
+	"blockedTitle": {
+		"message": "ඔබගේ IP සටහන් කරගැනීම Universal Bypass විසින් වලක්වන ලදි."
+	},
+	"blockedSubtitle": {
+		"message": "ඔබගේ IP සටහන් කරගන්නන් Universal Bypass විසින් වැලැක්වීම නැවත්වීමට අවශ්‍ය ද?"
+	}
+}

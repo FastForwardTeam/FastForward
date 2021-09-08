@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "Aja nelasaken wektune panjenengan gawe manuti aturan. Universal Bypass bakal kanthi otomatis nglewati pemendek link sing ngganggu."
+	},
+	"firstrunTitle": {
+		"message": "Matur sembah nuwun kangge panjenengan sing sampun nginstal Universal Bypass!"
+	},
+	"firstrunNoScript": {
+		"message": "Nanging, kados'e panjenengan ngagem ekstensi NoScript utawi sing meh sami, mulane Universal Bypass mboten kompatibel kalih niku."
+	},
+	"version": {
+		"message": "Versi"
+	},
+	"definitionsVersion": {
+		"message": "Definisi bypass"
+	},
+	"changelog": {
+		"message": "Catetan perubahan"
+	},
+	"update": {
+		"message": "Priksa damel nganyari"
+	},
+	"updating": {
+		"message": "Ngundhuh definisi bypass..."
+	},
+	"updateYes": {
+		"message": "Sukses ngundhuh definisi bypass."
+	},
+	"updateNo": {
+		"message": "Definisi bypass'e sampun ingkang paling enggal."
+	},
+	"faq": {
+		"message": "Pitakon Seng Umum (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass sampun ngebypass % situs kangge panjenengan."
+	},
+	"support": {
+		"message": "Maringi kontribusi kangge Universal Bypass."
+	},
+	"options": {
+		"message": "Pilihan"
+	},
+	"optionsLink": {
+		"message": "Ngganti setelan Universal Bypass."
+	},
+	"optionsEnabled": {
+		"message": "Ngaktifne bypass situs web."
+	},
+	"optionsNavigationDelay": {
+		"message": "Arahne menyang tujuan sakwise % detik. "
+	},
+	"optionsTrackerBypass": {
+		"message": "Bypass pelacak (kados'e bit.ly lan t.co) ngagem Apimon.de."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Langsung arahne menyang tujuan pelacak."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Blokir IP logger menawi mboten saged di bypass."
+	},
+	"optionsCrowdBypass": {
+		"message": "Crowd Bypass: Maringi lan angsal tujuan saking pemendek link ingkang mboten saged di bypass."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Mbukak tujuan crowd bypass ing tab anyar sakwise % detik. "
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Tutup tab ingkang isine tujuan saking crowd bypass ing % detik sakwise sampun ngunjungi."
+	},
+	"privacyPolicy": {
+		"message": "Kebijakan Privasi"
+	},
+	"contributors": {
+		"message": "Kontributor"
+	},
+	"optionsUserscripts": {
+		"message": "Kustom Bypass"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Niki minangka fitur khusus kangge para pangembang ndamel skrip piyambak kagem ngebypass situs. Sakwise sampun sampurna, saged dikirim ing GitHub supaya bisa ditambahake datheng Universal Bypass, supados bypass'e niku wau kasedhiya kangge tiyang kathah."
+	},
+	"beforeNavigate": {
+		"message": "Panjenengan meh ngantos tekan tujuane panjenengan."
+	},
+	"beforeNavigateDestination": {
+		"message": "Tujuane panjenengan yaiku %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "Nanging, menawi panjenengan langsung nglewati sakniki, dekne kabeh bakal ndeteksi Universal Bypass."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Panjenengan mboten bakal maneh dideteksi ing % detik."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Panjenengan mboten bakal maneh dideteksi ing 1 detik."
+	},
+	"beforeNavigateTimer": {
+		"message": "Panjenengan bakal dialihne kanthi otomatis ing % detik."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Panjenengan bakal dialihne kanthi otomatis ing 1 detik."
+	},
+	"beforeNavigateOptions": {
+		"message": "Menopo panjenengan pingin dialihne langsung utawi ing x detik?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Panjenengan lagi diarahaken menyang %"
+	},
+	"infoLinkvertise": {
+		"message": "Kita ora diidini ngliwati situs web iki nanging wis negosiasi langkah-langkah sing paling ngganggu."
+	},
+	"infoFileHoster": {
+		"message": "Sayange, server unduhanipun ajeng mesthekaken menawi panjenengan sampun ngentosi saderengipun ngangsalaken panjenengan kangge ngunduh file."
+	},
+	"infoOutdated": {
+		"message": "Situs web niki sampun di bypass dening versi ingkang paling enggal saking Universal Bypass."
+	},
+	"crowdWait": {
+		"message": "Sayange, panjenengan minangka tiyang ingkang pertama ngliwati link niki, nanging sakwise panjenengan sampun ngliwati, pangguna Universal Bypass liyane mboten perlu ngliwati malih."
+	},
+	"crowdDisabled": {
+		"message": "Situs web niki sampun saged di bypass ndamel fitur crowd bypass, ingkang saged panjenengan aktifaken wonten pengaturan."
+	},
+	"crowdBypassed": {
+		"message": "Panjenengan mungkin mboten perlu ngenteni!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Pangguna Universal Bypass liyane sampun ngliwati kangge panjenengan lan nglaporne yen link niki tujuane yaiku %"
+	},
+	"crowdBypassedTimer": {
+		"message": "Niki bakal di bukak teng tab anyar ing % detik."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Niki bakal di bukak teng tab anyar ing 1 detik."
+	},
+	"crowdCloseTimer": {
+		"message": "Tab niki bakal ditutup ing % detik."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Tab niki bakal ditutup ing 1 detik."
+	},
+	"cancel": {
+		"message": "Batalaken."
+	},
+	"crowdBypassedIgnore": {
+		"message": "Menapa niki mboten leres?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Menapa panjenengan pingin niki di bukak teng tab anyar langsung utawi ing x detik?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass nyegah IPne panjenengan supados mboten mlebet log."
+	},
+	"blockedSubtitle": {
+		"message": "Mboten pingin Universal Bypass nyegah bad actors (Peretas) saking mendet IPne panjenengan?"
+	}
+}

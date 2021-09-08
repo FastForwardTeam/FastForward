@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "Não perca tempo com conformidades. O Universal Bypass automaticamente ignora encurtadores de links irritantes."
+	},
+	"firstrunTitle": {
+		"message": "Obrigado por instalar o Universal Bypass!"
+	},
+	"firstrunNoScript": {
+		"message": "No entanto, parece que você está usando o NoScript ou similar, com o qual o Universal Bypass não é compatível."
+	},
+	"version": {
+		"message": "Versão"
+	},
+	"definitionsVersion": {
+		"message": "Definições de bypasses"
+	},
+	"changelog": {
+		"message": "Histórico de alterações"
+	},
+	"update": {
+		"message": "Procurar atualizações"
+	},
+	"updating": {
+		"message": "A transferir definições de bypasses..."
+	},
+	"updateYes": {
+		"message": "Script de injeção atualizado com sucesso!"
+	},
+	"updateNo": {
+		"message": "As definições de bypasses estão atualizadas."
+	},
+	"faq": {
+		"message": "Perguntas Frequentes (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "A Bypass Universal já passou por cima de % dos sites por si."
+	},
+	"support": {
+		"message": "Suporte do Universal Bypass"
+	},
+	"options": {
+		"message": "Opções"
+	},
+	"optionsLink": {
+		"message": "Alterar as opções do Universal Bypass."
+	},
+	"optionsEnabled": {
+		"message": "Ativar bypasses de websites."
+	},
+	"optionsNavigationDelay": {
+		"message": "Leve-me para destinos após % segundo(s). (Use 0 para ser ir instantaneamente.)"
+	},
+	"optionsTrackerBypass": {
+		"message": "Contornar rastreadores (tais como bit.ly e t.co) usando Apimon.de."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Leve-me instantaneamente para destinos de rastreadores."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Bloqueie os registradores de IP se eles não puderem ser ignorados."
+	},
+	"optionsCrowdBypass": {
+		"message": "Dê e pegue o destino de encurtadores não-passáveis."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Abrir destinos de colaboração coletiva em uma nova aba após % segundo(s). (0 = instantâneo)"
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Manter a % para que o campo de entrada possa ser inserido no texto."
+	},
+	"privacyPolicy": {
+		"message": "Política de Privacidade"
+	},
+	"contributors": {
+		"message": "Contribuidores"
+	},
+	"optionsUserscripts": {
+		"message": "Bypasses Personalizados"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Este é um recurso avançado para que os desenvolvedores criam seus próprios scripts para ignorar sites. Uma vez aperfeiçoados, eles podem ser enviados no GitHub para serem adicionados ao Universal Bypass, então eles estarão disponíveis para todos."
+	},
+	"beforeNavigate": {
+		"message": "Você está quase no seu destino."
+	},
+	"beforeNavigateDestination": {
+		"message": "Seu destino é %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "No entanto, se você navegar agora, eles irão detectar o Universal Bypass."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Você não será mais detectado em % segundos."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Você não será mais detectado em 1 segundo."
+	},
+	"beforeNavigateTimer": {
+		"message": "Você será automaticamente redirecionado em % segundos."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Você será automaticamente redirecionado em 1 segundo."
+	},
+	"beforeNavigateOptions": {
+		"message": "Você quer ser redirecionado instantaneamente ou em x segundos?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Você será navegado até %."
+	},
+	"infoLinkvertise": {
+		"message": "Não nos é permitido contornar este site, mas negociámos a eliminação dos seus passos mais incómodos."
+	},
+	"infoFileHoster": {
+		"message": "Infelizmente, o servidor de download irá garantir que você esperou antes de permitir que você faça o download do arquivo."
+	},
+	"infoOutdated": {
+		"message": "Este site é contornado por uma versão mais recente do Universal Bypass."
+	},
+	"crowdWait": {
+		"message": "Infelizmente, você é o(a) primeiro(a) a encontrar este link, mas após a espera, outros utilizadores Universal Bypass não terão de esperar mais."
+	},
+	"crowdDisabled": {
+		"message": "O destino deste website é partilhável através do recurso 'crowd bypass', que você desativou nas opções."
+	},
+	"crowdBypassed": {
+		"message": "Talvez você não precise esperar!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Outros usuários do Universal Bypass já esperaram para você e reportaram que isto leva para %"
+	},
+	"crowdBypassedTimer": {
+		"message": "Isto vai ser aberto numa nova janela em % segundos."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Isto vai ser aberto numa nova janela em 1 segundo."
+	},
+	"crowdCloseTimer": {
+		"message": "Este separador fechará em % segundos."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Este separador fechará em 1 segundos.\n"
+	},
+	"cancel": {
+		"message": "Cancelar"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Isto não estava correto?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Quer que isto seja aberto numa nova janela instantaneamente ou em x segundos?"
+	},
+	"blockedTitle": {
+		"message": "O Universal Bypass preveniu que seu IP fosse registrado."
+	},
+	"blockedSubtitle": {
+		"message": "Você quer que o Universal Bypass previna que pessoas mal intencionadas obtenham seu IP?"
+	}
+}

@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "別浪費時間在等待上！Universal Bypass 能夠全自動地繞過煩人的短連結！"
+	},
+	"firstrunTitle": {
+		"message": "感謝您安裝 Universal Bypass！"
+	},
+	"firstrunNoScript": {
+		"message": "然而，您似乎安裝了 NoScript 或類似的插件，導致與 Universal Bypass 造成衝突。"
+	},
+	"version": {
+		"message": "版本"
+	},
+	"definitionsVersion": {
+		"message": "繞過規則定義"
+	},
+	"changelog": {
+		"message": "更新紀錄"
+	},
+	"update": {
+		"message": "檢查更新"
+	},
+	"updating": {
+		"message": "下載規則定義"
+	},
+	"updateYes": {
+		"message": "成功更新注入腳本!"
+	},
+	"updateNo": {
+		"message": "繞過規則定義已是最新版本。"
+	},
+	"faq": {
+		"message": "常見問答 (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass 已幫您繞過%個網站。"
+	},
+	"support": {
+		"message": "幫助 Universal Bypass"
+	},
+	"options": {
+		"message": "選項"
+	},
+	"optionsLink": {
+		"message": "設定 Universal Bypass 的選項"
+	},
+	"optionsEnabled": {
+		"message": "啟用網站繞過功能"
+	},
+	"optionsNavigationDelay": {
+		"message": "在%秒後轉移到目標連結。 (輸入0可以瞬間轉移)"
+	},
+	"optionsTrackerBypass": {
+		"message": "繞過使用Apimon.de的追踪器（比如bit.ly和t.co）。"
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "跳過追蹤紀錄器，直接帶我到目的地。"
+	},
+	"optionsBlockIPLoggers": {
+		"message": "若實在無法繞過，直接禁止瀏覽器訪問IP記錄網站。"
+	},
+	"optionsCrowdBypass": {
+		"message": "對於無法繞過的短連結，直接帶我到短連結頁面。"
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "在%秒後轉移到用戶提供的連結。 (0=立刻轉移)"
+	},
+	"optionsCrowdAutoClose": {
+		"message": "訪問人們分享的目的網址%秒後將其標籤頁關閉。"
+	},
+	"privacyPolicy": {
+		"message": "隱私權政策"
+	},
+	"contributors": {
+		"message": "貢獻者"
+	},
+	"optionsUserscripts": {
+		"message": "自定義繞過規則"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "這是讓開發者自己編寫程式繞過網站的進階功能。當修改至功能完好後，可以提交到 Github，以新增至 Universal Bypass 讓大家使用。"
+	},
+	"beforeNavigate": {
+		"message": "您與目的地觸手可及。"
+	},
+	"beforeNavigateDestination": {
+		"message": "您的目的地是 %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "但若您馬上跳轉，他們將會檢測到Universal Bypass。"
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "%秒後，您將不再被檢測到。"
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "1秒後，您將不再被檢測到。"
+	},
+	"beforeNavigateTimer": {
+		"message": "您將在%秒後被重新導向。"
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "您將在1秒後被自動重新導向"
+	},
+	"beforeNavigateOptions": {
+		"message": "您希望立刻或是x秒後被重新導向嗎？"
+	},
+	"beforeNavigateInstant": {
+		"message": "您正在導航到%"
+	},
+	"infoLinkvertise": {
+		"message": "我們不受允許直接繞過這個網頁，不過我們已通過談判能夠移除這個網頁最麻煩的步驟了。"
+	},
+	"infoFileHoster": {
+		"message": "很不幸，下載伺服器需要確保您在下載檔案前已等候"
+	},
+	"infoOutdated": {
+		"message": "此網站被更新版本的 Universal Bypass 繞過了。"
+	},
+	"crowdWait": {
+		"message": "很遺憾地，您是第一個遇到這個連結的人，但在您等候了以後，其他 Universal Bypass 的用戶就不用受苦了。"
+	},
+	"crowdDisabled": {
+		"message": "這個網站是以用戶提供的連結繞過，而此功能已被您在設定中關閉。"
+	},
+	"crowdBypassed": {
+		"message": "或許您可以不用再等待了。"
+	},
+	"crowdBypassedInfo": {
+		"message": "其他的 Universal Bypass 用戶已經替您省下寶貴的時間，並回報該短連結重導向 %"
+	},
+	"crowdBypassedTimer": {
+		"message": "將在%秒後以新分頁開啟。"
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "將在1秒後以新分頁開啟。"
+	},
+	"crowdCloseTimer": {
+		"message": "此分頁會在%秒後關閉"
+	},
+	"crowdCloseTimerSingular": {
+		"message": "此分頁會在1秒後關閉"
+	},
+	"cancel": {
+		"message": "取消"
+	},
+	"crowdBypassedIgnore": {
+		"message": "該資訊有誤嗎?"
+	},
+	"crowdBypassedOptions": {
+		"message": "您希望立刻或是幾秒後以新分頁開啟嗎？"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass 防止您的IP被記錄。"
+	},
+	"blockedSubtitle": {
+		"message": "不希望Universal Bypass自動防止不法者獲取您的IP嗎?"
+	}
+}

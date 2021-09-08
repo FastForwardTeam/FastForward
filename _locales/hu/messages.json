@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "Ne vesztegesd az időd beleegyezésekkel. A Universal Bypass automatikusan kikerüli a bosszantó link-rövidítőket."
+	},
+	"firstrunTitle": {
+		"message": "Köszönjük, hogy telepítetted a Universal Bypass-t!"
+	},
+	"firstrunNoScript": {
+		"message": "Azonban úgy tünik hogy te NoScript-tett használsz vagy hasonlót, amivel a Universal Bypass nem kompatibilis."
+	},
+	"version": {
+		"message": "Verzió"
+	},
+	"definitionsVersion": {
+		"message": "Kitérő meghatározások"
+	},
+	"changelog": {
+		"message": "Változási napló\n"
+	},
+	"update": {
+		"message": "Frissítések keresése\n"
+	},
+	"updating": {
+		"message": "A kitérő meghatározások letöltése.."
+	},
+	"updateYes": {
+		"message": "Sikeresen letöltőtt kitérő meghatározások."
+	},
+	"updateNo": {
+		"message": "A kitérő meghatározások naprakészek."
+	},
+	"faq": {
+		"message": "Gyakran Ismételt Kérdések (GYIK)"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass már megkerülte az Ön számára szánt % webhelyeket."
+	},
+	"support": {
+		"message": "Hozzájárulás Universal Bypass számára."
+	},
+	"options": {
+		"message": "Beállítások"
+	},
+	"optionsLink": {
+		"message": "Változtassa meg az Universal Bypass beállításait."
+	},
+	"optionsEnabled": {
+		"message": "Engedélyezze a weboldal megkerülését."
+	},
+	"optionsNavigationDelay": {
+		"message": "Tegyél a célhoz % másdoperc elteltével"
+	},
+	"optionsTrackerBypass": {
+		"message": "Nyomkövetők kikerülése (például a bit.ly és t.co) az Apimon.de használatával."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Azonnal tegyél a nyomozó célokhoz."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "IP-loggerek blokkolása, ha nem kerülhetők ki."
+	},
+	"optionsCrowdBypass": {
+		"message": "Tömeg kitéreő: Add és vedd el a kitérhetetlen rövidítő oldalak céljait."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Nyisd meg a tömegből származó célokat új ablakban % másodperc elteltével."
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Zárja be a tömegből származő célokat % másodperccel miután meglátogattad"
+	},
+	"privacyPolicy": {
+		"message": "Adatvédelmi irányelvek"
+	},
+	"contributors": {
+		"message": "Hozzájárulók"
+	},
+	"optionsUserscripts": {
+		"message": "Egyéni megkerülések"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Ez egy fejlett szolgáltatás a fejlesztők számára, hogy saját szkripteket készítsenek a webhelyek megkerülésére. Miután tökéletesítették őket, elküldhetők a GitHub-on, hogy hozzáadják az Universal Bypass-hoz, hogy mindenki számára elérhetőek legyenek."
+	},
+	"beforeNavigate": {
+		"message": "Már majdnem a célodon vagy"
+	},
+	"beforeNavigateDestination": {
+		"message": "A cél hely: %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "Mindenesetre, ha most lépsz át, fel fogják ismerni az Universal Bypass-t."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "% másodperc múlva nem fogják észrevenni."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Nem fogják észrevenni 1 másodperc múlva."
+	},
+	"beforeNavigateTimer": {
+		"message": "Automatikusan át leszel irányítva % másodperc múlva."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Automatikusan át leszel irányítva 1 másodperc múlva."
+	},
+	"beforeNavigateOptions": {
+		"message": "Egyből vagy x másodperc múlva legyél átirányítva?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Át leszel irányítva ide: %"
+	},
+	"infoLinkvertise": {
+		"message": "Mi nem térhetünk ki ez a website ellen, de letárgyaltuk a legidegesítőbb lépéseinek eltávolítását."
+	},
+	"infoFileHoster": {
+		"message": "Sajnos a letöltő szerver ellenőrzi, hogy tényleg várt-e, mielőtt elkezdené letölteni a fájlt."
+	},
+	"infoOutdated": {
+		"message": "Ez az oldal csak az Universal Bypass egy újabb verziójával kerülhető meg."
+	},
+	"crowdWait": {
+		"message": "Sajnos, te vagy az első aki erre a linkre kattintott, emiatt sajnos az oldal nem megkerülhető a Crowd Bypass segítségével. Ha megvárod a linket, a többi Universal Bypass felhasználónak már nem kell. "
+	},
+	"crowdDisabled": {
+		"message": "Ez a weboldal megkerülhető a Crowd Bypass funkcióval, amit a beállításokban tudsz engedélyezni."
+	},
+	"crowdBypassed": {
+		"message": "Talán nem kell várakoznod!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Más Universal Bypass felhasználók már vártak helyetted, és szerintük ez a(z) % webhelyhez vezet"
+	},
+	"crowdBypassedTimer": {
+		"message": "Az oldal egy új lapon lesz megnyitva % másodperc múlva."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Az oldal egy új lapon lesz megnyitva 1 másodperc múlva."
+	},
+	"crowdCloseTimer": {
+		"message": "Az oldal bezárul % másodperc múlva."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Az oldal be fog zárulni 1 másodperc múlva."
+	},
+	"cancel": {
+		"message": "Mégsem."
+	},
+	"crowdBypassedIgnore": {
+		"message": "Ez helytelen?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Egyből vagy x másodperc múlva legyél átirányítva?"
+	},
+	"blockedTitle": {
+		"message": "A Universal Bypass megtiltotta, hogy az IP-t naplózható legyen."
+	},
+	"blockedSubtitle": {
+		"message": "Nem szeretnéd hogy az Universal Bypass megakadályozza a rossz emberektől hogy hozzáférhessenek az IP-d hez?"
+	}
+}

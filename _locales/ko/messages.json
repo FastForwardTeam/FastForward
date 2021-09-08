@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "시간을 낭비하지 마세요. Universal Bypass로 성가신 링크 단축 서비스를 자동 생략하세요."
+	},
+	"firstrunTitle": {
+		"message": "Universal Bypass를 설치해 주셔서 감사합니다!"
+	},
+	"firstrunNoScript": {
+		"message": "흠, NoScript나 비슷한 걸 쓰는 것 같지만, Universal Bypass는 그런 것들과 호환되지 않습니다."
+	},
+	"version": {
+		"message": "버전"
+	},
+	"definitionsVersion": {
+		"message": "우회 정의"
+	},
+	"changelog": {
+		"message": "변경 사항"
+	},
+	"update": {
+		"message": "업데이트 확인"
+	},
+	"updating": {
+		"message": "바이 패스 정의 다운로드 중 ..."
+	},
+	"updateYes": {
+		"message": "인젝션 스크립트를 업데이트하는데 성공했습니다!"
+	},
+	"updateNo": {
+		"message": "인젝션 스크립트가 이미 최신입니다."
+	},
+	"faq": {
+		"message": "자주 묻는 질문"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass는 당신을 위해 %개의 사이트를 우회했어요."
+	},
+	"support": {
+		"message": "Universal Bypass 돕기"
+	},
+	"options": {
+		"message": "설정"
+	},
+	"optionsLink": {
+		"message": "Universal Bypass의 설정을 바꾸기"
+	},
+	"optionsEnabled": {
+		"message": "웹사이트 우회 켜기"
+	},
+	"optionsNavigationDelay": {
+		"message": "목적지로 %초 뒤에 이동하기 (0을 쓰면 즉시 이동)"
+	},
+	"optionsTrackerBypass": {
+		"message": "Apimon.de를 사용하여 트래커 (예 : bit.ly 및 t.co)를 무시하십시오."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "즉시 추적기의 목적지로 보내기"
+	},
+	"optionsBlockIPLoggers": {
+		"message": "우회할 수 없는 사이트의 IP 기록 차단하기."
+	},
+	"optionsCrowdBypass": {
+		"message": "우회할 수 없는 URL 단축 사이트 목적지 주고 받기."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "%초 후 새 탭에서 크라우드 소싱 대상 열기 (0 = 즉시)"
+	},
+	"optionsCrowdAutoClose": {
+		"message": "크라우드소싱 대상 방문 %초 후 해당 탭 닫기."
+	},
+	"privacyPolicy": {
+		"message": "개인정보 취급방침"
+	},
+	"contributors": {
+		"message": "도와주신 분들"
+	},
+	"optionsUserscripts": {
+		"message": "사용자 지정 우회책"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "개발자를 위한 고급 기능으로 자체 우회책을 만들 수 있습니다. 완벽하게 만들어졌다면, GitHub에 제안해 Universal Bypass에 추가되고 모두가 쓸 수 있게 됩니다."
+	},
+	"beforeNavigate": {
+		"message": "거의 다 왔습니다."
+	},
+	"beforeNavigateDestination": {
+		"message": "목적지는 % 입니다."
+	},
+	"beforeNavigateUnsafe": {
+		"message": "잠깐!, 지금 바로 간다면 Universal Bypass가 들통날 거에요."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "%초 후에 감지되지 않게 됩니다."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "1초 후에 감지되지 않게 됩니다."
+	},
+	"beforeNavigateTimer": {
+		"message": "페이지로 %초 안에 이동합니다."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "페이지로 1초 안에 이동합니다."
+	},
+	"beforeNavigateOptions": {
+		"message": "자동으로 리다이렉트하고 싶나요?"
+	},
+	"beforeNavigateInstant": {
+		"message": "% (으)로 이동 중입니다"
+	},
+	"infoLinkvertise": {
+		"message": "우리는 이 웹 사이트를 우회 할 수는 없지만, 가장 귀찮은 단계를 제거하기로 협상했습니다."
+	},
+	"infoFileHoster": {
+		"message": "불행히도, 다운로드 서버가 당신이 실제로 파일을 받기 위해 기다렸는지 확인하기 때문에 건너뛸 수 없습니다."
+	},
+	"infoOutdated": {
+		"message": "이 사이트는 Universal Bypass를 업데이트 해야 건너뛸 수 있습니다."
+	},
+	"crowdWait": {
+		"message": "안타깝게도 이 링크의 첫 발견자신 것 같군요. 기다려주신다면 다른 사용자 분들은 기다리지 않으실 수 있어요."
+	},
+	"crowdDisabled": {
+		"message": "이 사이트는 crowd bypass에 의해서만 통과할 수 있습니다. 설정에서 이 옵션을 켤 수 있습니다."
+	},
+	"crowdBypassed": {
+		"message": "이제 기다릴 필요 없어요!"
+	},
+	"crowdBypassedInfo": {
+		"message": "다른 Universal Bypass 사용자가 이 페이지를 방문한 적이 있으며, % 로 이동하는걸로 알아냈습니다."
+	},
+	"crowdBypassedTimer": {
+		"message": "페이지가 새 탭에 %초 안에 열립니다."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "페이지가 새 탭에 1초 안에 열립니다."
+	},
+	"crowdCloseTimer": {
+		"message": "이 탭은 %초 후 닫힙니다."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "이 탭은 1초 후 닫힙니다."
+	},
+	"cancel": {
+		"message": "취소"
+	},
+	"crowdBypassedIgnore": {
+		"message": "올바르지 않나요?"
+	},
+	"crowdBypassedOptions": {
+		"message": "자동으로 이동하고 싶나요?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass가 당신의 IP를 기록하지 못하게 막았습니다."
+	},
+	"blockedSubtitle": {
+		"message": "Universal Bypass가 악성 사이트에서 IP를 가져가는것을 막기를 원하나요?"
+	}
+}

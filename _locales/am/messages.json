@@ -1,0 +1,155 @@
+{
+	"appDesc": {
+		"message": "በማክበር ጊዜዎን አያባክን። ሁለንተናዊ አቋራጭ የሚረብሹ አገናኝ አቋራጮችን ይገድባል።"
+	},
+	"firstrunTitle": {
+		"message": "ዩኒቨርሳል Bypass ን ስለጫኑ እናመሰግናለን!"
+	},
+	"firstrunNoScript": {
+		"message": "ሆኖም ኖቭስክሪፕትን ወይም ተመሳሳይን የሚጠቀሙ ፣ ዩኒቨርሳል ኦንቨርንቨር ከ ጋር የማይጣጣም ይመስላል።"
+	},
+	"version": {
+		"message": "ሥሪት"
+	},
+	"definitionsVersion": {
+		"message": "ትርጓሜዎችን ማለፍ"
+	},
+	"changelog": {
+		"message": "መለወጫ"
+	},
+	"update": {
+		"message": "ዝማኔዎችን ይመልከቱ"
+	},
+	"updating": {
+		"message": "የትርጉም ፍችዎችን በማውረድ ላይ ..."
+	},
+	"updateYes": {
+		"message": "የትርጉም ፍችዎችን በማውረድ ላይ ..."
+	},
+	"updateNo": {
+		"message": "የማለፍ ትርጓሜዎች ወቅታዊ ናቸው።"
+	},
+	"faq": {
+		"message": "ተዘውትረው የሚጠየቁ ጥያቄዎች (ተዘውትረው)"
+	},
+	"bypassCounter": {
+		"message": "ሁለንተናዊ ማለፍ ቀድሞውንም ጣቢያዎችን% አል sitesል"
+	},
+	"support": {
+		"message": "ወደ ሁለንተናዊ ማቋረጫ ያበርክቱ።"
+	},
+	"options": {
+		"message": "አማራጮች"
+	},
+	"optionsLink": {
+		"message": "ሁለንተናዊ አቋራጭ አማራጮችን ቀይር።"
+	},
+	"optionsEnabled": {
+		"message": "የድርጣቢያ ማለፍን ያንቁ።"
+	},
+	"optionsNavigationDelay": {
+		"message": "ከ% ሰከንድ (ሰ) በኋላ ወደ መድረሻዎች ውሰደኝ ፡፡"
+	},
+	"optionsTrackerBypass": {
+		"message": "Apimon.de ን በመጠቀም ትራኮችን (ለምሳሌ bit.ly እና t.co ን) በመጠቀም ያቋርጣሉ ፡፡"
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "በፍጥነት ወደ ትራካckers መድረሻዎች ውሰደኝ ፡፡"
+	},
+	"optionsBlockIPLoggers": {
+		"message": "የአይ.ፒ ሎጊዎችን ማለፍ ካልቻሉ አግድ።"
+	},
+	"optionsCrowdBypass": {
+		"message": "የተጨናነቀ አቋራጭ የማይተላለፍ አቋራጭ ያላቸውን መድረሻ ይስጡ እና ይውሰዱ ፡፡"
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "ከ% ሰከንድ (ቶች) በኋላ በህዝብ የተመረጡ መድረሻዎችን በአዲስ ትር ክፈት"
+	},
+	"optionsCrowdAutoClose": {
+		"message": "ከጎበኙ በኋላ ከ% ሰከንድ (ሰት) በኋላ በሕዝብ የተፈጠረ መድረሻን የያዘ ትር ይዝጉ"
+	},
+	"privacyPolicy": {
+		"message": "የ ግል የሆነ"
+	},
+	"contributors": {
+		"message": "አስተዋፅutors አበርካቾች"
+	},
+	"optionsUserscripts": {
+		"message": "ብጁ መተላለፊያዎች"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "ጣቢያዎችን ለማለፍ የራሳቸውን ስክሪፕቶች ለመፍጠር ለገንቢዎች ይህ የላቀ ባህሪ ነው። አንዴ ከተጠናቀቁ በኋላ ወደ ዩኒቨርሳል ማለፍ እንዲታከሉ በ GitHub ላይ ሊገቡ ይችላሉ ፣ ስለሆነም ለሁሉም ሰው ይገኛሉ ፡፡"
+	},
+	"beforeNavigate": {
+		"message": "መድረሻዎ ላይ ደርሰዋል።"
+	},
+	"beforeNavigateDestination": {
+		"message": "መድረሻዎ% ነው"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "ሆኖም ግን ፣ አሁን ከዳሰሱ ዩኒቨርሳል ኦንቨርንሌይትን ይገነዘባሉ።"
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "በ% ሰከንዶች ውስጥ ከእንግዲህ አይገኙም"
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "በ 1 ሰከንድ ውስጥ ከእንግዲህ ወዲህ አይገኙም።"
+	},
+	"beforeNavigateTimer": {
+		"message": "በ% ሰከንዶች ውስጥ በራስ-ሰር ይዛወራሉ።"
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "በ 1 ሴኮንድ ውስጥ በራስ-ሰር ይዛወራሉ።"
+	},
+	"beforeNavigateOptions": {
+		"message": "በቅጽበት ወይም በ x ሰከንዶች ውስጥ አቅጣጫዎን መለወጥ ይፈልጋሉ?"
+	},
+	"beforeNavigateInstant": {
+		"message": "ወደ% እየተጓዙ ነው"
+	},
+	"infoFileHoster": {
+		"message": "እንደ አለመታደል ሆኖ የወረደው አገልጋይ ፋይሉን ለማውረድ ከመፍቀድዎ በፊት መጠበቅዎን ያረጋግጣል።"
+	},
+	"infoOutdated": {
+		"message": "ይህ ድርጣቢያ በአዲሱ ኦቨርቨር ኦቨር ኦቨር ኦቨር ኦቨር ኦፕሬሽን (ስሪት) ተላል isል።"
+	},
+	"crowdWait": {
+		"message": "እንደ አለመታደል ሆኖ ይህንን አገናኝ ያጋጠሙዎት እርስዎ የመጀመሪያ ነዎት ፣ ግን ከጠበቁ በኋላ ሌሎች ሁለንተናዊ የመንገድ ተጠቃሚዎች ከእንግዲህ አያስፈልጉም ፡፡"
+	},
+	"crowdDisabled": {
+		"message": "ይህ ድርጣቢያ በአጋጣሚዎች ውስጥ ማንቃት በሚችሉት የሰዎች ማለፍ ተላልpassል።"
+	},
+	"crowdBypassed": {
+		"message": "መጠበቅ የለብዎትም!"
+	},
+	"crowdBypassedInfo": {
+		"message": "ሌሎች ሁለንተናዊ አቋራጭ ተጠቃሚዎች እርስዎን ይጠባበቁ እና ይህ ወደ% እንደሚወስድ ዘግቧል።"
+	},
+	"crowdBypassedTimer": {
+		"message": "ይህ በ% ሰከንዶች ውስጥ በአዲስ ትር ውስጥ ይከፈታል።"
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "ይህ በ 1 ሴኮንድ ውስጥ በአዲስ ትር ውስጥ ይከፈታል"
+	},
+	"crowdCloseTimer": {
+		"message": "ይህ ትር በ% ሰከንዶች ውስጥ ይዘጋል።"
+	},
+	"crowdCloseTimerSingular": {
+		"message": "ይህ ትር በ 1 ሴኮንድ ውስጥ ይዘጋል።"
+	},
+	"cancel": {
+		"message": "ይቅር።"
+	},
+	"crowdBypassedIgnore": {
+		"message": "ይህ ትክክል አልነበረም?"
+	},
+	"crowdBypassedOptions": {
+		"message": "ይህ በአዲሱ ትር ውስጥ ወዲያውኑ ወይም በ x ሰከንዶች ውስጥ እንዲከፈት ይፈልጋሉ?"
+	},
+	"blockedTitle": {
+		"message": "ሁለንተናዊ መተላለፊያ የእርስዎ አይፒ እንዳይመዘገብ አግዶታል ፡፡"
+	},
+	"blockedSubtitle": {
+		"message": "መጥፎ ተዋንያን የእርስዎን አይፒ (IP) እንዳያገኙ ለመከላከል ሁለንተናዊ ማለፍ ይፈልጋሉ?"
+	}
+}

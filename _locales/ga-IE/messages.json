@@ -1,0 +1,77 @@
+{
+	"appDesc": {
+		"message": "Ná drámhail do am lé comhlíonadh. Seachnaíonn Seachbhóthar Uilíoch go huathoibríoch gearrshaolaithe naisc atá annamh."
+	},
+	"firstrunTitle": {
+		"message": "Go raibh maith agat chun Universal Bypass a shuiteáil!"
+	},
+	"firstrunNoScript": {
+		"message": "Ach, Tá tú ag usaíd NoScript ná rúd againn éile agus ní feidir le Universal Bypass in an obair lé sin."
+	},
+	"faq": {
+		"message": "Ceisteanna Coitianta (CC)"
+	},
+	"support": {
+		"message": "Taspann do tachíocht le haghaidh Universal Bypass"
+	},
+	"options": {
+		"message": "Roghnna"
+	},
+	"optionsLink": {
+		"message": "Athrú ná roghnna de Universal Bypass."
+	},
+	"optionsEnabled": {
+		"message": "Cumasaigh seachbhóithre láithreán gréasáin."
+	},
+	"optionsNavigationDelay": {
+		"message": "Tuair me go cinn scríbe tar éis% an dara ceann. (Bain úsáid as 0 le nascleanúint a dhéanamh láithreach.)"
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Tóg mé chuig ceann scríbe na lorgairí láithreach."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Bloc logálaithe IP mura féidir iad a sheachaint."
+	},
+	"optionsCrowdBypass": {
+		"message": "Tuair agus tóg na cinn scríbe na ngiorraitheoirí nach féidir a phasáil."
+	},
+	"privacyPolicy": {
+		"message": "Beartas Príobháideachais"
+	},
+	"optionsUserscripts": {
+		"message": "Seachbhóithre saincheaptha"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Is gné ard é seo do fhorbróirí chun a gcuid scripteanna féin a chruthú chun suíomhanna a sheachbhóthar. Nuair a bheidh siad foirfe, is féidir iad a chur isteach ansin ar GitHub le bheith curtha le Seachbhóthar Uilíoch, agus mar sin tá siad ar fáil do gach duine."
+	},
+	"beforeNavigate": {
+		"message": "Ta tú beagnach ansín"
+	},
+	"beforeNavigateDestination": {
+		"message": "Tá do ceann scríbe %"
+	},
+	"beforeNavigateTimer": {
+		"message": "Déanfar tú a atreorú go huathoibríoch i% soicind."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Déanfar tú a atreorú go huathoibríoch i 1 soicind."
+	},
+	"beforeNavigateOptions": {
+		"message": "Ar mhaith leat a bheith atreoraithe láithreach nó i x soicind?"
+	},
+	"crowdBypassed": {
+		"message": "B'fhéidir nach mbeidh ort fanacht!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Tá úsáideoirí eile Seachbhóthar Uilíoch tar éis fanacht leat cheana féin agus thuairiscigh siad go dtiocfaidh %"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Nach raibh sé séo i gceart?"
+	},
+	"blockedTitle": {
+		"message": "Chuir Seachbhóthar Uilíoch cosc ar do IP a bheith logáilte isteach."
+	},
+	"blockedSubtitle": {
+		"message": "Ná bí ag iarraidh Seachbhóthar Uilíoch chun droch-ghníomhaithe a chosc ar do IP a fháil?"
+	}
+}

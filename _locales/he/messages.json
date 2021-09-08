@@ -1,0 +1,143 @@
+{
+	"appDesc": {
+		"message": "אל תבזבז את הזמן שלך! Universal Bypass מדלג אוטומטית על מקצרי לינקים מעצבנים."
+	},
+	"firstrunTitle": {
+		"message": "תודה לך על כך שהתקנת את Universal Bypass!"
+	},
+	"firstrunNoScript": {
+		"message": "ככול הנראה אתה עושה שימוש ב-NoScript ודומיו, מה שלא מאפשר את פעולת Universal Bypass."
+	},
+	"version": {
+		"message": "גרסה"
+	},
+	"definitionsVersion": {
+		"message": "הגדרות מעקף"
+	},
+	"changelog": {
+		"message": "רשימת שינויים"
+	},
+	"update": {
+		"message": "בדוק עדכונים"
+	},
+	"updating": {
+		"message": "מוריד הגדרות עקיפה ..."
+	},
+	"updateYes": {
+		"message": "הגדרות עקיפה הורדו בהצלחה."
+	},
+	"updateNo": {
+		"message": "הגדרות עקיפה אותרו כעדכניות."
+	},
+	"faq": {
+		"message": "שאלות נפוצות (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "מעקף אוניברסלי כבר עקף % אתרים בשבילך."
+	},
+	"support": {
+		"message": "תמוך ב-Universal Bypass"
+	},
+	"options": {
+		"message": "הגדרות"
+	},
+	"optionsLink": {
+		"message": "הגדר את Universal Bypass."
+	},
+	"optionsEnabled": {
+		"message": "הפעל מעקף לאתר."
+	},
+	"optionsNavigationDelay": {
+		"message": "קח אותי ליעד אחרי % שני(ות). (השתמש ב0 על מנת לנווט במיידי)"
+	},
+	"optionsTrackerBypass": {
+		"message": "תעקוף טראקרים (כמו bit.ly ו - t.co) באמצעות Apimon.de."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "העבר אותי למקור אוטומטית."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "חסום אוספי IP אם אי אפשר לעקוף אותם."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "תפתח מקורות שנוצרו בעזרת הקהל בכרטיסייה חדשה אחרי % שניות."
+	},
+	"privacyPolicy": {
+		"message": "מדיניות פרטיות"
+	},
+	"contributors": {
+		"message": "תורמים"
+	},
+	"optionsUserscripts": {
+		"message": "מעקפים מותאמים אישית"
+	},
+	"beforeNavigate": {
+		"message": "כמעט ביעד שלך."
+	},
+	"beforeNavigateDestination": {
+		"message": "כתובת היעד שלך היא %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "אם תנווט כעת, הם יזהו את תוספת זאת."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "אתה לא תהיה גלוי בעוד % שניות"
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "אתה לא תהיה גלוי בעוד שנייה."
+	},
+	"beforeNavigateTimer": {
+		"message": "תועבר אוטומטית עוד % שניות."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "תועבר אוטומטית בעוד שנייה."
+	},
+	"beforeNavigateOptions": {
+		"message": "האם ברצונך להיות מכוון מחדש מיידית או בעוד x שניות?"
+	},
+	"beforeNavigateInstant": {
+		"message": "מנווט ל %"
+	},
+	"infoOutdated": {
+		"message": "האתר הזה יכול להיעקף בעזרת גרסה חדשה יותר של Universal Bypass."
+	},
+	"crowdWait": {
+		"message": "לצערי, אתה הראשון שנתקל בקישור הזה, אבל אחרי שחיכית, משתמשי Universal Bypass אחרים לא יצטרכו לחכות יותר."
+	},
+	"crowdDisabled": {
+		"message": "אתר זה עוקף על ידי crowd bypass, אפשר לכבות אופציה זו בהגדרות."
+	},
+	"crowdBypassed": {
+		"message": "יתכן ואתה לא צריך להמתין בכלל!"
+	},
+	"crowdBypassedInfo": {
+		"message": "משתמשים נוספים כבר המתינו, ודיווחו שהקישור מוביל ל- %"
+	},
+	"crowdBypassedTimer": {
+		"message": "תוכן זה יפתח בחלון חדש בעוד % שניות."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "תוכן זה יפתח בחלון חדש בעוד כשניה."
+	},
+	"crowdCloseTimer": {
+		"message": "חלון זה ייסגר בעוד % שניות."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "חלון זה ייסגר בעוד שניה."
+	},
+	"cancel": {
+		"message": "ביטול."
+	},
+	"crowdBypassedIgnore": {
+		"message": "האם נתיב זה שגוי?"
+	},
+	"crowdBypassedOptions": {
+		"message": "האם ברצונך לפתוח חלון זה באופן מיידי או תוך x שניות?"
+	},
+	"blockedTitle": {
+		"message": "עקיפה אוניברסלית מנעה את רישום ה- IP שלך."
+	},
+	"blockedSubtitle": {
+		"message": "לא רוצה שUniversal Bypass ימנע ממקורות רעים לקבל גישה לכתובת הIP שלך?"
+	}
+}

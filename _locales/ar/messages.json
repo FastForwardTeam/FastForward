@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "لا تضيع وقتك بالتخطي. المتجاوز الشامل سيتخطى تلقائيًا كل مواقع إختصار الروابط المزعجة."
+	},
+	"firstrunTitle": {
+		"message": "شكرًا لتثبيتك المتجاوز الشامل!"
+	},
+	"firstrunNoScript": {
+		"message": "للاسف يبدو أنك تستخدم NoScript أو احد الاضافات المماثلة التي تكون غير متوافقة مع المتجاوز الشامل."
+	},
+	"version": {
+		"message": "الإصدار"
+	},
+	"definitionsVersion": {
+		"message": "تعريفات المتجاوز"
+	},
+	"changelog": {
+		"message": "سجل التغييرات"
+	},
+	"update": {
+		"message": "التحقق من وجود التحديثات"
+	},
+	"updating": {
+		"message": "تحميل تعريفات المتجاوز..."
+	},
+	"updateYes": {
+		"message": "تم تحديث تعريفات المتجاوز بنجاح!"
+	},
+	"updateNo": {
+		"message": "تعريفات المتجاوز محدثةٌ بالفعل."
+	},
+	"faq": {
+		"message": "الأسئلة المتداولة"
+	},
+	"bypassCounter": {
+		"message": "المتجاوز الشامل قد تجاوز % مواقع لأجلك."
+	},
+	"support": {
+		"message": "ادعم المتجاوز الشامل"
+	},
+	"options": {
+		"message": "الخيارات"
+	},
+	"optionsLink": {
+		"message": "تغيير إعدادات المتجاوز الشامل."
+	},
+	"optionsEnabled": {
+		"message": "تمكين تجاوز مواقع الويب."
+	},
+	"optionsNavigationDelay": {
+		"message": "خذني للوجهة بعد % ثوانٍ. (استخدم 0 للذهاب مباشرة.)"
+	},
+	"optionsTrackerBypass": {
+		"message": "تجاوز المتتبعات (مثل bit.ly و t.co) بإستخدام Apimon.de."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "قم بنقلي إلى الوجهة المباشِرة فورًا."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "حظر مسجلات الـ IP إذا كان لا يمكن تجاوزهم."
+	},
+	"optionsCrowdBypass": {
+		"message": "قم بإعطاء وأخذ وِجهات الروابط المختصرة الغير القابلة للتجاوز."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "فتح وجهة حشد المصادر في علامة تبويب جديدة بعد % ثوان. (0 للذهاب مباشرة.)"
+	},
+	"optionsCrowdAutoClose": {
+		"message": "إغلاق علامة التبويب التي تحتوي على مصادر الحشود للوجهة بعد زيارتها بـ % ثوان."
+	},
+	"privacyPolicy": {
+		"message": "سياسة الخصوصية"
+	},
+	"contributors": {
+		"message": "المُساهمون"
+	},
+	"optionsUserscripts": {
+		"message": "تخصيص المتجاوز"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "هذه ميزة متقدمة للمطورين لإنشاء نَصِهِم البرمجي الخاص لتخطى المواقع. بمجرد جاهزيته يمكنهم بعدها ارساله لـGitHub  ليضاف إلى المتجاوز الشامل، لكي يصبح متاحًا للجميع."
+	},
+	"beforeNavigate": {
+		"message": "انت الآن قريب من وجهتك."
+	},
+	"beforeNavigateDestination": {
+		"message": "وجهتك هي %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "على أية حال، إذا تصفحته الآن، سيكتشفون استخدامك للمتجاوز الشامل."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "لن يتم اكتشافك بعد % ثوان."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "لن يتم اكتشافك بعد ثانيةٍ واحدة."
+	},
+	"beforeNavigateTimer": {
+		"message": "سيتم توجيهك تلقائيًا بعد % ثوان."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "سيتم توجيهك تلقائيًا بعد 1 ثوان."
+	},
+	"beforeNavigateOptions": {
+		"message": "هل تريد أن يتم توجيهك فورًا أو بعدد ثواني محددة؟"
+	},
+	"beforeNavigateInstant": {
+		"message": "يتم نقلك إلى %"
+	},
+	"infoLinkvertise": {
+		"message": "لا يسمح لنا بتجاوز هذا الموقع لكننا تفاوضنا على إزالة أكثر خطواتهم إزعاجا."
+	},
+	"infoFileHoster": {
+		"message": "للأسف، موقع التنزيل هذا سيتأكد من إنتظارك الغعلي قبل أن يسمح لك بتنزيل الملف."
+	},
+	"infoOutdated": {
+		"message": "تم تجاوز هذا الموقع بواسطة إصدار أحدث من المتجاوز الشامل."
+	},
+	"crowdWait": {
+		"message": "للأسف، أنت أول شخص يواجه هذا الرابط، لكن بعد انتظارك، المستخدمون الآخرون للمتجاوز الشامل لن يضطروا للإنتظار."
+	},
+	"crowdDisabled": {
+		"message": "هذا الموقع يتم تجاوزه من خلال تجاوز الحشود، التي قمت بتعطيلها في الخيارات."
+	},
+	"crowdBypassed": {
+		"message": "ربما لن تحتاج للإنتظار بعد الآن!"
+	},
+	"crowdBypassedInfo": {
+		"message": "قام مستخدمون آخرون للمتجاوز الشامل بالإنتظار بدلاً عنك والتبليغ بأن هذا الرابط يؤدي إلى %"
+	},
+	"crowdBypassedTimer": {
+		"message": "سوف يفتح في علامة تبويب جديدة بعد % ثوان."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "سوف يفتح في علامة تبويب جديدة بعد ثانيةٍ واحدة."
+	},
+	"crowdCloseTimer": {
+		"message": "علامة التبويب هذه سيتم إغلاقها بعد % ثوان."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "علامة التبويب هذه سيتم إغلاقها بعد ثانية واحدة."
+	},
+	"cancel": {
+		"message": "إلغاء"
+	},
+	"crowdBypassedIgnore": {
+		"message": "هل كان هذا الرابط غير صحيح؟"
+	},
+	"crowdBypassedOptions": {
+		"message": "هل تريد أن يتم توجيهك إلى علامة التبويب الجديدة فورًا أو بعدد ثوانٍ محددة؟"
+	},
+	"blockedTitle": {
+		"message": "المتجاوز الشامل قام بمنع تسجيل عنوان الـ IP الخاص بك."
+	},
+	"blockedSubtitle": {
+		"message": "لا تريد من المتجاوز الشامل أن يمنع الجهات السيئة من الحصول على IP الخاص بك ؟"
+	}
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Universal Bypass</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="base.js"></script>
+</head>
+<body>
+	<nav class="uk-navbar-container uk-light" style="background:#1e87f0" uk-navbar>
+		<div class="uk-navbar-left">
+			<a class="uk-navbar-item uk-logo" href="#">Universal Bypass</a>
+			<ul class="uk-navbar-nav">
+				<li><a href="https://universal-bypass.org/changelog" target="_blank" data-message="changelog"></a></li>
+				<li><a href="https://universal-bypass.org/faq" target="_blank" data-message="faq"></a></li>
+				<li><a href="https://universal-bypass.org/contributors" target="_blank" data-message="contributors"></a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="uk-margin-top uk-margin-bottom uk-margin-left uk-margin-right">
+		<p><span data-message="version"></span> <span id="version"></span> &middot; <span id="definitionsVersion"></span> <a href="#" class="uk-button uk-button-small uk-button-primary" data-message="update"></a></p>
+		<div id="firstrun-alert" uk-alert class="uk-alert-primary uk-hidden">
+			<a class="uk-alert-close" uk-close></a>
+			<p data-message="firstrunTitle"></p>
+		</div>
+		<div id="dev-alert" class="uk-alert uk-alert-danger uk-hidden">
+			<p>You're using Universal bypass in development mode, which means that bypass definitions are loaded from your local injection_script.js and rules.json. If you would like to use the auto-updating system, delete those files and then check for updates.</p>
+		</div>
+		<div id="counter" class="uk-alert uk-alert-primary uk-hidden">
+			<p><span></span> <a href="https://universal-bypass.org/support" target="_blank" data-message="support"></a></p>
+		</div>
+		<h2 data-message="options"></h2>
+		<p>
+			<input type="checkbox" class="uk-checkbox" id="option-enabled"> <label style="cursor:pointer" for="option-enabled" data-message="optionsEnabled"></label><br>
+			<input type="checkbox" class="uk-checkbox" id="navigation-delay-toggle"> <span data-message="optionsNavigationDelay" for="option-navigation-delay"></span><br>
+			<input type="checkbox" class="uk-checkbox" id="option-tracker-bypass"> <label style="cursor:pointer" for="option-tracker-bypass"><span data-message="optionsTrackerBypass"></span></label> (<a href="https://apimon.de/privacy" target="_blank" data-message="privacyPolicy"></a>)<br>
+			<input type="checkbox" class="uk-checkbox" id="option-instant-navigation-trackers"> <label style="cursor:pointer" for="option-instant-navigation-trackers" data-message="optionsInstantNavigationTrackers"></label><br>
+			<input type="checkbox" class="uk-checkbox" id="option-block-ip-loggers"> <label style="cursor:pointer" for="option-block-ip-loggers" data-message="optionsBlockIPLoggers"></label><br>
+			<input type="checkbox" class="uk-checkbox" id="option-crowd-bypass"> <label style="cursor:pointer" for="option-crowd-bypass" data-message="optionsCrowdBypass"></label> (<a href="https://github.com/Sainan/Universal-Bypass/blob/master/PRIVACY.md#crowd-bypass" target="_blank" data-message="privacyPolicy"></a>)<br>
+			<input type="checkbox" class="uk-checkbox" id="option-crowd-open-delay-toggle"> <span data-message="optionsCrowdAutoOpen" for="option-crowd-open-delay"></span><br>
+			<input type="checkbox" class="uk-checkbox" id="option-crowd-close-delay-toggle"> <span data-message="optionsCrowdAutoClose" for="option-crowd-close-delay"></span><br>
+		</p>
+		<h2 data-message="optionsUserscripts"></h2>
+		<a name="userscripts"></a>
+		<p><span data-message="optionsUserscriptsDescription"></span></p>
+		<div id="userscript" style="font-family:'DejaVu Sans Mono',monospace;min-height:500px;height:calc(100vh - 200px)"></div>
+	</div>
+	<script src="i18n.js"></script>
+	<script src="uikit/uikit.js"></script>
+	<script src="ace/ace.js"></script>
+	<script src="options.js"></script>
+</body>
+</html>

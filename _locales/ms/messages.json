@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "Jangan bazirkan masa anda dengan pematuhan. Universal Bypass memintas pemendek pautan yang menyakitkan hati."
+	},
+	"firstrunTitle": {
+		"message": "Terima kasih kerana memasang Universal Bypass"
+	},
+	"firstrunNoScript": {
+		"message": "Bagaimanapun, anda seperti menggunakan NoScript atau yang sepertinya, yang mana Universal Bypass tidak  bersesuaian dengannya"
+	},
+	"version": {
+		"message": "Versi"
+	},
+	"definitionsVersion": {
+		"message": "Definasi Bypass"
+	},
+	"changelog": {
+		"message": "Log perubahan"
+	},
+	"update": {
+		"message": "Semak untuk kemaskini"
+	},
+	"updating": {
+		"message": "Memuatturun definasi Bypass..."
+	},
+	"updateYes": {
+		"message": "Muatturun definasi Bypass berjaya."
+	},
+	"updateNo": {
+		"message": "Definasi Bypass adalah terkini"
+	},
+	"faq": {
+		"message": "Soalan-soalan Lazim (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "Universal telah memintas % laman web untuk anda."
+	},
+	"support": {
+		"message": "Menyumbang untuk Universal Bypass."
+	},
+	"options": {
+		"message": "Pilihan"
+	},
+	"optionsLink": {
+		"message": "Ubah pilihan Universal Bypass."
+	},
+	"optionsEnabled": {
+		"message": "Benarkan pemintasan laman web."
+	},
+	"optionsNavigationDelay": {
+		"message": "Bawa saya ke destinasi selepas % saat."
+	},
+	"optionsTrackerBypass": {
+		"message": "Pintas penjejak (seperti bit.ly dan t.co) mengunakan Apimon.de."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Bawa saya ke destinasi penjejak dengan segera."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Sekat log IP jika tidak boleh dipintas."
+	},
+	"optionsCrowdBypass": {
+		"message": "Beri dan ambil destinasi pemendek link yang tidak boleh dipintas."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Buka destinasi sumber-awam di tab baru selepas % saat."
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Tutup tab yang mengandungi destinasi sumber-awam selepas % saat lawatan."
+	},
+	"privacyPolicy": {
+		"message": "Dasar privasi"
+	},
+	"contributors": {
+		"message": "Penyumbang-penyumbang"
+	},
+	"optionsUserscripts": {
+		"message": "Pemintas kostum"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Ini adalah ciri terkehadapan untuk pembangun untuk mencipta skrip mereka tersendiri untuk memintas laman web. setelah sempurna, mereka boleh menghantarnya ke Github untuk ditambah di Universal Bypass, jadi ia sedia ada untuk semua."
+	},
+	"beforeNavigate": {
+		"message": "Anda hampir di destinasi anda."
+	},
+	"beforeNavigateDestination": {
+		"message": "Destinasi anda %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "Akan tetapi, jika anda melayar sekarang, Universal Bypass akan dikesan."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Anda tidak lagi dikesan dalam % saat."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Anda tidak lagi dikesan dalam 1 saat."
+	},
+	"beforeNavigateTimer": {
+		"message": "Anda akan diarah secara automatik dalam % saat."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Anda akan diarah secara automatik dalam 1 saat."
+	},
+	"beforeNavigateOptions": {
+		"message": "Adakah anda mahu diarahkan sekarang atau dalam x saat?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Anda sedang dinavigasi ke %"
+	},
+	"infoLinkvertise": {
+		"message": "Kami tidak dibenarkan untuk memintas laman web ini tetapi kami telah berbincang tentang penyisihan langkah-langkah mereka yang paling menjengkelkan. "
+	},
+	"infoFileHoster": {
+		"message": "Sayangnya, pelayan muatturun memastikan anda menunggu sebentar sebelum membenarkan anda memuatturun file."
+	},
+	"infoOutdated": {
+		"message": "Laman web ini dipintas oleh versi terbaru Universal Bypass."
+	},
+	"crowdWait": {
+		"message": "Sayangnya, anda yang pertama denagn link ini, tapi selepas anda menunggu, penguna Universal Bypass yang lain tidak perlu lagi."
+	},
+	"crowdDisabled": {
+		"message": "Laman web ini dipintas oleh pemintas awam, yang telah di nyahaktifkan oleh anda di pilihan."
+	},
+	"crowdBypassed": {
+		"message": "Anda mungkin tidak perlu menunggu!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Pengguna Universal Bypass yang lain telah menunggu untuk anda dan melaporkan dan membawa ke %"
+	},
+	"crowdBypassedTimer": {
+		"message": "Ini akan dibuka di tab baru dalam % saat."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Ini akan dibuka di tab baru dalam 1 saat."
+	},
+	"crowdCloseTimer": {
+		"message": "Tab ini akan ditutup dalam % saat."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Tab ini akan ditutup dalam 1 saat."
+	},
+	"cancel": {
+		"message": "Batal."
+	},
+	"crowdBypassedIgnore": {
+		"message": "Adakah ini salah?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Adakah anda mahu ini dibuka di tab baru sekarang atau dalam x saat?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass menghalang IP anda dilog."
+	},
+	"blockedSubtitle": {
+		"message": "Tidak mahu Universal Bypass untuk menghalang pelaku jahat daripada mendapatkan IP anda?"
+	}
+}

@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "Don't waste your time with compliance. Universal Bypass circumvents annoying link shorteners."
+	},
+	"firstrunTitle": {
+		"message": "Thank you for installing Universal Bypass!"
+	},
+	"firstrunNoScript": {
+		"message": "However, you seem to be using NoScript or similar, which Universal Bypass is not compatible with."
+	},
+	"version": {
+		"message": "Version"
+	},
+	"definitionsVersion": {
+		"message": "Bypass definitions"
+	},
+	"changelog": {
+		"message": "Changelog"
+	},
+	"update": {
+		"message": "Check for updates"
+	},
+	"updating": {
+		"message": "Downloading bypass definitions..."
+	},
+	"updateYes": {
+		"message": "Successfully downloaded bypass definitions."
+	},
+	"updateNo": {
+		"message": "Bypass definitions are up-to-date."
+	},
+	"faq": {
+		"message": "Frequently Asked Questions (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass has already bypassed % sites for you."
+	},
+	"support": {
+		"message": "Contribute to Universal Bypass."
+	},
+	"options": {
+		"message": "Options"
+	},
+	"optionsLink": {
+		"message": "Change Universal Bypass' options."
+	},
+	"optionsEnabled": {
+		"message": "Enable website bypasses."
+	},
+	"optionsNavigationDelay": {
+		"message": "Take me to destinations after % second(s)."
+	},
+	"optionsTrackerBypass": {
+		"message": "Bypass trackers (such as bit.ly and t.co) using Apimon.de."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Instantly take me to destinations of trackers."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Block IP loggers if they can't be bypassed."
+	},
+	"optionsCrowdBypass": {
+		"message": "Crowd Bypass: Give and take the destinations of unbypassable shorteners."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Open crowd-sourced destinations in a new tab after % second(s)."
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Close tab containing the crowd-sourced destination after % second(s) of visiting it."
+	},
+	"privacyPolicy": {
+		"message": "Privacy Policy"
+	},
+	"contributors": {
+		"message": "Contributors"
+	},
+	"optionsUserscripts": {
+		"message": "Custom Bypasses"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "This is an advanced feature for developers to create their own scripts to bypass sites. Once perfected, they can then be submitted on GitHub to be added to Universal Bypass, so they're available to everyone."
+	},
+	"beforeNavigate": {
+		"message": "You're almost at your destination."
+	},
+	"beforeNavigateDestination": {
+		"message": "Your destination is %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "However, if you navigate now, they will detect Universal Bypass."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "You will no longer be detected in % seconds."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "You will no longer be detected in 1 second."
+	},
+	"beforeNavigateTimer": {
+		"message": "You will be redirected automatically in % seconds."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "You will be redirected automatically in 1 second."
+	},
+	"beforeNavigateOptions": {
+		"message": "Do you want to be redirected instantly or in x seconds?"
+	},
+	"beforeNavigateInstant": {
+		"message": "You are being navigated to %"
+	},
+	"infoLinkvertise": {
+		"message": "We're not allowed to bypass this website but we have negotiated the removal of their most annoying steps."
+	},
+	"infoFileHoster": {
+		"message": "Unfortunately, the download server will ensure that you have waited before allowing you to download the file."
+	},
+	"infoOutdated": {
+		"message": "This website is bypassed by a newer version of Universal Bypass."
+	},
+	"crowdWait": {
+		"message": "Unfortunately, you're the first to encounter this link, but after you've waited, other Universal Bypass users will no longer have to."
+	},
+	"crowdDisabled": {
+		"message": "This website is bypassed by crowd bypass, which you can enable in the options."
+	},
+	"crowdBypassed": {
+		"message": "You might not have to wait!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Other Universal Bypass users have already waited for you and reported that this leads to %"
+	},
+	"crowdBypassedTimer": {
+		"message": "This will be opened in a new tab in % seconds."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "This will be opened in a new tab in 1 second."
+	},
+	"crowdCloseTimer": {
+		"message": "This tab will close in % seconds."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "This tab will close in 1 second."
+	},
+	"cancel": {
+		"message": "Cancel."
+	},
+	"crowdBypassedIgnore": {
+		"message": "Was this not correct?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Do you want this to be opened in a new tab instantly or in x seconds?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass prevented your IP from being logged."
+	},
+	"blockedSubtitle": {
+		"message": "Don't want Universal Bypass to prevent bad actors from getting your IP?"
+	}
+}

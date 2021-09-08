@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "Μην σπαταλάτε το χρόνο σας περιμένοντας. Το Universal Bypass παραλείπει αυτόματα ενοχλητικούς συνδέσμους συντομεύσεων."
+	},
+	"firstrunTitle": {
+		"message": "Σε ευχαριστούμε για την εγκατάσταση του Universal Bypass!"
+	},
+	"firstrunNoScript": {
+		"message": "Ωστόσο, φαίνεται να χρησιμοποιείτε το NoScript ή παρόμοιο, με τα οποία το Universal Bypass δεν είναι συμβατό."
+	},
+	"version": {
+		"message": "Έκδοση"
+	},
+	"definitionsVersion": {
+		"message": "Ορισμοί παράκαμψης"
+	},
+	"changelog": {
+		"message": "Αλλαγές"
+	},
+	"update": {
+		"message": "Έλεγχος ενημερώσεων"
+	},
+	"updating": {
+		"message": "Λήψη ορισμών παράκαμψης"
+	},
+	"updateYes": {
+		"message": "Οι ορισμοί παράκαμψης ενημερώθηκαν επιτυχώς!"
+	},
+	"updateNo": {
+		"message": "Οι ορισμοί παράκαμψης είναι ήδη ενημερωμένοι."
+	},
+	"faq": {
+		"message": "Συχνές Ερωτήσεις (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "Το Universal Bypass έχει ήδη παρακάμψει % ιστοσελίδες για εσάς."
+	},
+	"support": {
+		"message": "Υποστήριξε το Universal Bypass."
+	},
+	"options": {
+		"message": "Επιλογές"
+	},
+	"optionsLink": {
+		"message": "Αλλάξτε τις επιλογές του Universal Bypass."
+	},
+	"optionsEnabled": {
+		"message": "Ενεργοποίηση παρακάμψεων ιστοσελίδων."
+	},
+	"optionsNavigationDelay": {
+		"message": "Μετάβαση στον προορισμό μετά από % δευτερόλεπτο/α. (πατήστε 0 για να μεταβείτε κατευθείαν)"
+	},
+	"optionsTrackerBypass": {
+		"message": "Παράκαμψη  ιχνηλατών (όπως bit.ly και t.co) με τη χρήση του Apimon.de.  "
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Μετάβαση αμέσως στους προορισμούς των ιχνηλατών."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Μπλόκαρε IP loggers, αν αυτοί δεν μπορούν να παρακάμπτουν."
+	},
+	"optionsCrowdBypass": {
+		"message": "Δώσε και να πάρε τους προορισμούς των συντομευτών που δεν παρακάμπτονται."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Άνοιξε προορισμούς τροφοδοτημένους από τους χρήστες σε καινούργια καρτέλα μετά απο % δευτερολεπτό/α. (0 = άμεσως.)"
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Να κλείνεται η καρτέλα με τον προορισμό τροφοδοτημένα από χρήστες % δευτερόλεπτο/α αφού το επισκεφθείς."
+	},
+	"privacyPolicy": {
+		"message": "Πολιτική Απορρήτου"
+	},
+	"contributors": {
+		"message": "Συνεισφέροντες"
+	},
+	"optionsUserscripts": {
+		"message": "Προσαρμοσμένες παρακάμψεις"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Αυτή είναι προηγμένη λειτουργία που απευθύνεται σε προγραμματιστές για να δημιουργήσουν δικά τους σενάρια για να παρακάμπτουν ιστοσελίδες. Όταν έχουν τελειοποιηθεί, μπορούν να σταλούν στο GitHub για να προστεθούν στο Universal Bypass και να είναι διαθέσιμα σε όλους."
+	},
+	"beforeNavigate": {
+		"message": "Είστε σχεδόν στον προορισμό σας."
+	},
+	"beforeNavigateDestination": {
+		"message": "Ο προορισμός σας είναι %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "κι ομως, με δεδομενο οτι παραλειψετε την ιστοσελιδα τωρα, θα εντοπισουν το παγκοσμιο εργαλειο παραλειψης"
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Δεν θα σας εντοπίζουν σε % δευτερόλεπτα"
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Δεν θα σας εντοπίζουν σε 1 δευτερολεπτο"
+	},
+	"beforeNavigateTimer": {
+		"message": "Θα ανακατευθυνθείτε αυτόματα σε % δευτερόλεπτα."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Θα ανακατευθυνθείς αυτόματα σε 1 δευτερόλεπτο."
+	},
+	"beforeNavigateOptions": {
+		"message": "Θέλεις να ανακατευθυνθείς αμέσως, ή σε Χ δευτερόλεπτα;"
+	},
+	"beforeNavigateInstant": {
+		"message": "Μετάβαση στη σελίδα %"
+	},
+	"infoLinkvertise": {
+		"message": "Δεν έχετε πρόσβαση να παραλείψετε την δεδομένη ιστοσελίδα. Παρόλα αυτά, έχουμε την συγκατάθεσή τους να αφαιρέσουμε τα πιο ενοχλητικά τους βήματα."
+	},
+	"infoFileHoster": {
+		"message": "Δυστυχώς ο διακομιστής θα σιγουρευτεί οτι περιμενετε πριν σας επιτραπει να κατεβασετε το αρχειο "
+	},
+	"infoOutdated": {
+		"message": "Η δεδομενη ιστοσελιδα δεν υποστηρίζει την πιο προσφατη εκδοση του παγκοσμιου εργαλειου παραλειψης"
+	},
+	"crowdWait": {
+		"message": "Δυστυχώς, είσαι ο πρώτος που θα συνάντησες αυτόν τον σύνδεσμο, αλλά αφού έχεις περιμένει και συνδεθεί, δε θα απαιτείται από τους άλλους χρήστες του Universal Bypass."
+	},
+	"crowdDisabled": {
+		"message": "Αυτός ο ιστότοπος έχει παρακαμφθεί από άλλους χρήστες, το οποίο έχετε απενεργοποιήσει στις επιλογές."
+	},
+	"crowdBypassed": {
+		"message": "Ίσως να μη χρειαστεί να περιμένεις!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Άλλοι χρήστες του Universal Bypass έχουν ήδη περιμένει για εσένα, και έχουν αναφέρει ότι αυτό οδηγεί σε %"
+	},
+	"crowdBypassedTimer": {
+		"message": "Θα ανοίξει σε καινούργια καρτέλα σε % δευτερόλεπτα."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Θα ανοίξει σε καινούργια καρτέλα σε 1 δευτερόλεπτο."
+	},
+	"crowdCloseTimer": {
+		"message": "Η καρτέλα θα κλειστεί σε % δευτερόλεπτα."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Η καρτέλα θα κλειστεί σε 1 δευτερόλεπτο."
+	},
+	"cancel": {
+		"message": "Ακύρωση"
+	},
+	"crowdBypassedIgnore": {
+		"message": "Δεν ήταν αυτό σωστό;"
+	},
+	"crowdBypassedOptions": {
+		"message": "Θέλεις να ανοίξει σε καινούργια καρτέλα αμέσως, ή σε Χ δευτερόλεπτα;"
+	},
+	"blockedTitle": {
+		"message": "Το Universal Bypass εμπόδισε την IP σου από το να καταγραφεί."
+	},
+	"blockedSubtitle": {
+		"message": "Δεν θές να αποτρέψει το Universal Bypass τους κακόβουλους φορείς από να υποκλέψουν την IP σου;"
+	}
+}

@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "Tue dini zit ned met onnötige link verkörtzer verschwände. Universal Bypass helft der bim omgoh vo setige links."
+	},
+	"firstrunTitle": {
+		"message": "Vele dank vörs installiere ond notze vo Universal Bypass!"
+	},
+	"firstrunNoScript": {
+		"message": "Es gsed so us als ob du NoScript oder öpis ähnleches tuesch verwände ond Universal Bypass esch ned demet kompatibel."
+	},
+	"version": {
+		"message": "Version"
+	},
+	"definitionsVersion": {
+		"message": "omgohigs definitione"
+	},
+	"changelog": {
+		"message": "Änderigsverlauf"
+	},
+	"update": {
+		"message": "Nach Updates sueche"
+	},
+	"updating": {
+		"message": "Definitione zom omgoh wärdit abeglade..."
+	},
+	"updateYes": {
+		"message": "Omgohigs definitione send erfolgrich abeglade worde."
+	},
+	"updateNo": {
+		"message": "Omgohigs definitione send aktuell."
+	},
+	"faq": {
+		"message": "Hüfig gstelti froge (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "Universal Bypass hed för dech scho % omgange."
+	},
+	"support": {
+		"message": "Onderstötz Universal Bypass."
+	},
+	"options": {
+		"message": "Ihstelige"
+	},
+	"optionsLink": {
+		"message": "Ihstelige vo Universal Bypass ändere."
+	},
+	"optionsEnabled": {
+		"message": "Website omgoh ischalte."
+	},
+	"optionsNavigationDelay": {
+		"message": "Breng mech zom ziel i % sekonde(ne)."
+	},
+	"optionsTrackerBypass": {
+		"message": "Verfolger omgoh (z.b. bit.ly ond t.co) met Apimon.de."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Breng mech sofort zom ziel vo de verfolger."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "IP's automatisch blockiere wenn mer sie ned chan omgoh."
+	},
+	"optionsCrowdBypass": {
+		"message": "Geb ond nem s ziel vomene ned omgohbare link verkörzer."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Mach es crowd-sourced ziel uf i % sekonde(ne)"
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Mach es suechmaschene fenster zue vomene crowd-sourced ziel noch % sekonde(ne) nachem bsueche."
+	},
+	"privacyPolicy": {
+		"message": "Dateschotzrechtlinie"
+	},
+	"contributors": {
+		"message": "Onderschtötzer"
+	},
+	"optionsUserscripts": {
+		"message": "Eigeti omgoh variante"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Das esch en erwiterti funktion för entweckler damet sie ehri eigete omgohigs wäg chönd programmiere för websitene. Wenn die mol perfekt usgarbeitet send chönd die via GitHub gschekt wärde ond de wärdets bi Universal Bypass hinzuegfüegt, somet stönds de vör ali zor verfüegig."
+	},
+	"beforeNavigate": {
+		"message": "Du besch fascht am ziel acho."
+	},
+	"beforeNavigateDestination": {
+		"message": "Dis ziel esch %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "Aber falls du jetzt scho witer gosch de werd Universal Bypass endeckt."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Du wersch i % sekondene nöme entdeckt."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Du wersch i 1 sekonde nöme entdeckt."
+	},
+	"beforeNavigateTimer": {
+		"message": "Du wersch i % sekondene automatisch witergleitet."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Du wersch i 1 sekonde automatisch witergleitet."
+	},
+	"beforeNavigateOptions": {
+		"message": "Wetsch du sofort witergleitet wärde oder i x sekonde(ne)?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Du wersch witergleitet zo %"
+	},
+	"infoLinkvertise": {
+		"message": "Wir dürfen diese Website nicht umgehen, aber wir haben die Beseitigung der nervigsten Schritte ausgehandelt."
+	},
+	"infoFileHoster": {
+		"message": "Leider muesch du warte da die website secher go wot das du gwartet hesch bevor du es abelade chasch."
+	},
+	"infoOutdated": {
+		"message": "Die website chan metere neuere version vo Universal Bypass omgange wärde."
+	},
+	"crowdWait": {
+		"message": "Leider besch du de erschti wo dä link hed aber nach dem du gwarted hesch muess es kei andere benotzer meh."
+	},
+	"crowdDisabled": {
+		"message": "Die website chan omgange wärde met Crowd bypass ond das chasch du i de ihstelige ahschalte."
+	},
+	"crowdBypassed": {
+		"message": "Anschinend muesch du ned warte!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Anderi Universal Bypass notzer händ vör dech scho gwarted ond die händ gseit das es do äne füert %"
+	},
+	"crowdBypassedTimer": {
+		"message": "Das werd i % sekondene imene neue fenster ufgmacht."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Das werd i 1 sekonde imene neue fenster ufgmacht."
+	},
+	"crowdCloseTimer": {
+		"message": "Das fenster werd i % sekondene zue goh."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Das fenster werd i 1 sekonde zue goh."
+	},
+	"cancel": {
+		"message": "Abbräche."
+	},
+	"crowdBypassedIgnore": {
+		"message": "Esch das ned korrekt gsi?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Wetsch du das es sofort imene neue fenster ufgmacht werd oder i x sekondene?"
+	},
+	"blockedTitle": {
+		"message": "Universal Bypass hed dech vomene IP-Logger gschötzt."
+	},
+	"blockedSubtitle": {
+		"message": "Wotsch ned das Universal Bypass dini IP vo böse lüüt schötzt?"
+	}
+}
