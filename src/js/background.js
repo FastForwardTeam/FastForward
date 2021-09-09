@@ -255,7 +255,7 @@ const updateBypassDefinitions = callback => {
 							finishDownload()
 						}
 					}
-					xhr.open("GET", "https://raw.githubusercontent.com/Universal-Bypass-Renewed/Universal-Bypass/" + upstreamCommit + "/injection_script.js", true)
+					xhr.open("GET", "https://raw.githubusercontent.com/Universal-Bypass-Renewed/Universal-Bypass/" + upstreamCommit + "/src/js/injection_script.js", true)
 					xhr.send()
 					let xhr2 = new XMLHttpRequest()
 					xhr2.onload = () => {
@@ -271,7 +271,7 @@ const updateBypassDefinitions = callback => {
 							finishDownload()
 						}
 					}
-					xhr2.open("GET", "https://raw.githubusercontent.com/Universal-Bypass-Renewed/Universal-Bypass/" + upstreamCommit + "/rules.json", true)
+					xhr2.open("GET", "https://raw.githubusercontent.com/Universal-Bypass-Renewed/Universal-Bypass/" + upstreamCommit + "/src/js/rules.json", true)
 					xhr2.send()
 				}
 			}
