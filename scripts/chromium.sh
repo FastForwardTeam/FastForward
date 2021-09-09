@@ -23,16 +23,16 @@ cp platform_spec/chromium/manifest.json    $DES
 cd $DES
 
 if [[ $# -eq 0 ]]; then
-    echo "*** Universal-bypass.Chromium: Creating dev package... (Tip: Use nover to create a normal package)"
-    bash ../../scripts/version.sh manifest.json .0
-    zip -qr ../$(basename $DIST)/UniversalBypass_chromium_dev.zip .
+    echo "*** Universal-bypass.Chromium: Creating dev package... (Tip: Use nover to create a no-version package)"
+    bash ../../scripts/version.sh manifest.json 0
+    zip -qr ../$(basename $DIST)/UniversalBypass_chromium_$(git shortlog | grep -E '^[ ]+\w+' | wc -l)_dev.zip .
 
 elif [ "$1" == "nover" ] ; then
     echo "*** Universal-bypass.Chromium: Creating non-versioned package... "
     rm injection_script.js
     rm rules.json
-    bash ../../scripts/version.sh manifest.json no
-    zip -qr ../$(basename $DIST)/UniversalBypass_chromium_0.zip .
+    bash ../../scripts/version.sh manifest.json nover
+    zip -qr ../$(basename $DIST)/UniversalBypass_chromium_0.$(git shortlog | grep -E '^[ ]+\w+' | wc -l).zip .
 
 elif [ "$1" == "ver" ]; then
     echo "*** Universal-bypass.Chromium: Creating versioned package... "
