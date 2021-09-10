@@ -25,14 +25,14 @@ cd $DES
 if [[ $# -eq 0 ]]; then
     echo "*** Universal-bypass.firefox: Creating dev package... (Tip: Use nover to create a no-version package)"
     bash ../../scripts/version.sh manifest.json 0
-    zip -qr ../$(basename $DIST)/UniversalBypass_firefox_$(git shortlog | grep -E '^[ ]+\w+' | wc -l)_dev.zip .
+    zip -qr ../$(basename $DIST)/UniversalBypass_firefox_$(git shortlog | grep -E '^[ ]+\w+' | wc -l)_dev.xpi .
 
 elif [ "$1" == "nover" ] ; then
     echo "*** Universal-bypass.firefox: Creating non-versioned package... "
     rm injection_script.js
     rm rules.json
     bash ../../scripts/version.sh manifest.json nover
-    zip -qr ../$(basename $DIST)/UniversalBypass_firefox_0.$(git shortlog | grep -E '^[ ]+\w+' | wc -l).zip .
+    zip -qr ../$(basename $DIST)/UniversalBypass_firefox_0.$(git shortlog | grep -E '^[ ]+\w+' | wc -l).xpi .
 
 elif [ "$1" == "ver" ]; then
     echo "*** Universal-bypass.firefox: Creating versioned package... "
