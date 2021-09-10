@@ -10,7 +10,7 @@ on:
 
 
 jobs:
-  Pack_for_chromium:
+  Chromium:
     runs-on: ubuntu-latest
     
     steps:
@@ -23,5 +23,21 @@ jobs:
         uses: actions/upload-artifact@v2.2.4
         with:
           name: Universal_bypass_chromium
+          path: build/dist
+          if-no-files-found: error
+
+  Firefox:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Make package
+        run: bash scripts/firefox.sh nover
+
+      - name: Upload Package Artifact
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          name: Universal_bypass_firefox
           path: build/dist
           if-no-files-found: error
