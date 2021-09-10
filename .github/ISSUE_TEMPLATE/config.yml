@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Discord
+    url: https://discord.gg/RSAf7b5njt
+    about: Please ask help and support here.
+  - name: Issues
+    url: https://github.com/Universal-Bypass-Renewed/Universal-Bypass/labels/New-bypass
+    about: Please search before issues to check if a site is already submitted.
