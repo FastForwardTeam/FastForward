@@ -54,7 +54,6 @@ brws.runtime.onInstalled.addListener(details=>{
 })
 
 // Uninstall handler
-brws.runtime.setUninstallURL("https://docs.google.com/forms/d/e/1FAIpQLSdXw-Yf5IaDXZWw4fDHroZkDFOF6hgWEvVDaXT9ZADqnF2reg/viewform")
 
 // Keeping track of options
 var bypassCounter=0,enabled=true,instantNavigation=true,trackerBypassEnabled=true,instantNavigationTrackers=false,blockIPLoggers=true,crowdEnabled=true,userScript=""
@@ -255,7 +254,7 @@ const updateBypassDefinitions = callback => {
 							finishDownload()
 						}
 					}
-					xhr.open("GET", "https://raw.githubusercontent.com/Universal-Bypass-Renewed/Universal-Bypass/" + upstreamCommit + "/src/js/injection_script.js", true)
+					xhr.open("GET", "https://github.com/FastForwardTeam/FastForward/" + upstreamCommit + "/src/js/injection_script.js", true)
 					xhr.send()
 					let xhr2 = new XMLHttpRequest()
 					xhr2.onload = () => {
@@ -271,7 +270,7 @@ const updateBypassDefinitions = callback => {
 							finishDownload()
 						}
 					}
-					xhr2.open("GET", "https://raw.githubusercontent.com/Universal-Bypass-Renewed/Universal-Bypass/" + upstreamCommit + "/src/js/rules.json", true)
+					xhr2.open("GET", "https://raw.githubusercontent.com/FastForwardTeam/FastForward/" + upstreamCommit + "/src/js/rules.json", true)
 					xhr2.send()
 				}
 			}
@@ -280,7 +279,7 @@ const updateBypassDefinitions = callback => {
 				sendToOptions({updateStatus})
 				callback(false)
 			}
-			xhr.open("GET", "https://api.github.com/repos/Universal-Bypass-Renewed/Universal-Bypass/commits/main", true)
+			xhr.open("GET", "https://api.github.com/repos/FastForwardTeam/FastForward/commits/main", true)
 			xhr.send()
 		}
 	}
