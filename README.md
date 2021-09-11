@@ -8,7 +8,7 @@
   <a href="https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_chromium.zip">
   <img src="https://img.shields.io/badge/Chromium-Unstable-e77334" />
   </a>
-  <a href="https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForwards_firefox.zip">
+  <a href="https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_firefox.zip">
   <img src="https://img.shields.io/badge/Firefox-Unstable-e77334" />
   </a>
  
