@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           # pulls all commits (needed for commits to version)
-          fetch-depth: "0"
+          fetch-depth: 0
       
       - name: Make package
         run: bash scripts/chromium.sh nover
@@ -35,7 +35,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch-depth: "0"
+          fetch-depth: 0
       
       - name: Make package
         run: bash scripts/firefox.sh nover
