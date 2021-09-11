@@ -8,39 +8,39 @@
 
 set -e
 
-echo "*** Universal-bypass.Chromium: Creating package..."
-DES=build/universal-bypass.chromium
+echo "*** FastForward.Chromium: Creating package..."
+DES=build/FastForward.chromium
 DIST=build/dist
 rm -rf      ./$DES
 mkdir -p    ./$DES
 rm -rf      ./$DIST
 mkdir -p    ./$DIST
 
-echo "*** Universal-bypass.Chromium: Copying files"
+echo "*** FastForward.Chromium: Copying files"
 bash ./scripts/copy_common.sh              $DES
 cp platform_spec/chromium/manifest.json    $DES
 
 cd $DES
 
 if [[ $# -eq 0 ]]; then
-    echo "*** Universal-bypass.Chromium: Creating dev package... (Tip: Use nover to create a no-version package)"
+    echo "*** FastForward.Chromium: Creating dev package... (Tip: Use nover to create a no-version package)"
     bash ../../scripts/version.sh manifest.json 0
-    zip -qr ../$(basename $DIST)/UniversalBypass_chromium_$(git shortlog | grep -E '^[ ]+\w+' | wc -l)_dev.zip .
+    zip -qr ../$(basename $DIST)/FastForward_chromium_$(git shortlog | grep -E '^[ ]+\w+' | wc -l)_dev.zip .
 
 elif [ "$1" == "nover" ] ; then
-    echo "*** Universal-bypass.Chromium: Creating non-versioned package... "
+    echo "*** FastForward.Chromium: Creating non-versioned package... "
     rm injection_script.js
     rm rules.json
     bash ../../scripts/version.sh manifest.json nover
-    zip -qr ../$(basename $DIST)/UniversalBypass_chromium_0.$(git shortlog | grep -E '^[ ]+\w+' | wc -l).zip .
+    zip -qr ../$(basename $DIST)/FastForward_chromium_0.$(git shortlog | grep -E '^[ ]+\w+' | wc -l).zip .
 
 elif [ "$1" == "ver" ]; then
-    echo "*** Universal-bypass.Chromium: Creating versioned package... "
+    echo "*** FastForward.Chromium: Creating versioned package... "
     rm injection_script.js
     rm rules.json
     bash ../../scripts/version.sh manifest.json
-    zip -qr ../$(basename $DIST)/UniversalBypass_$(cat ../../src/version.txt)_chromium.zip .
+    zip -qr ../$(basename $DIST)/FastForward_$(cat ../../src/version.txt)_chromium.zip .
 
 fi
 
-echo "*** Universal-bypass.Chromium: Package done."
+echo "*** FastForward.Chromium: Package done."

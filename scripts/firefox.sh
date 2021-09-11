@@ -8,39 +8,39 @@
 
 set -e
 
-echo "*** Universal-bypass.Firefox: Creating package..."
-DES=build/universal-bypass.firefox
+echo "*** FastForward.Firefox: Creating package..."
+DES=build/FastForward.firefox
 DIST=build/dist
 rm -rf      ./$DES
 mkdir -p    ./$DES
 rm -rf      ./$DIST
 mkdir -p    ./$DIST
 
-echo "*** Universal-bypass.firefox: Copying files"
+echo "*** FastForward.firefox: Copying files"
 bash ./scripts/copy_common.sh              $DES
 cp platform_spec/firefox/manifest.json    $DES
 
 cd $DES
 
 if [[ $# -eq 0 ]]; then
-    echo "*** Universal-bypass.firefox: Creating dev package... (Tip: Use nover to create a no-version package)"
+    echo "*** FastForward.firefox: Creating dev package... (Tip: Use nover to create a no-version package)"
     bash ../../scripts/version.sh manifest.json 0
-    zip -qr ../$(basename $DIST)/UniversalBypass_firefox_$(git shortlog | grep -E '^[ ]+\w+' | wc -l)_dev.xpi .
+    zip -qr ../$(basename $DIST)/FastForward_firefox_$(git shortlog | grep -E '^[ ]+\w+' | wc -l)_dev.xpi .
 
 elif [ "$1" == "nover" ] ; then
-    echo "*** Universal-bypass.firefox: Creating non-versioned package... "
+    echo "*** FastForward.firefox: Creating non-versioned package... "
     rm injection_script.js
     rm rules.json
     bash ../../scripts/version.sh manifest.json nover
-    zip -qr ../$(basename $DIST)/UniversalBypass_firefox_0.$(git shortlog | grep -E '^[ ]+\w+' | wc -l).xpi .
+    zip -qr ../$(basename $DIST)/FastForward_firefox_0.$(git shortlog | grep -E '^[ ]+\w+' | wc -l).xpi .
 
 elif [ "$1" == "ver" ]; then
-    echo "*** Universal-bypass.firefox: Creating versioned package... "
+    echo "*** FastForward.firefox: Creating versioned package... "
     rm injection_script.js
     rm rules.json
     bash ../../scripts/version.sh manifest.json
-    zip -qr ../$(basename $DIST)/UniversalBypass_$(cat ../../src/version.txt)_firefox.xpi .
+    zip -qr ../$(basename $DIST)/FastForward_$(cat ../../src/version.txt)_firefox.xpi .
 
 fi
 
-echo "*** Universal-bypass.firefox: Package done."
+echo "*** FastForward.firefox: Package done."
