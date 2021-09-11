@@ -232,6 +232,9 @@
 		"*://*.ceesty.com/*",
 		"*://*.corneey.com/*"
 	],
+	"useragent_iphone": [
+		"*://*.linkvertise.com/*"
+	],
 	"redirect_persist_id_path": [
 		"*://*.bercara.com/*",
 		"*://*.semawur.com/*",
