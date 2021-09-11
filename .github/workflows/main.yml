@@ -25,7 +25,7 @@ jobs:
       - name: Upload Package Artifact
         uses: actions/upload-artifact@v2.2.4
         with:
-          name: FastForward_firefox
+          name: FastForward_chromium
           path: build/dist
           if-no-files-found: error
 
