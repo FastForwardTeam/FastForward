@@ -254,7 +254,7 @@ const updateBypassDefinitions = callback => {
 							finishDownload()
 						}
 					}
-					xhr.open("GET", "https://github.com/FastForwardTeam/FastForward/" + upstreamCommit + "/src/js/injection_script.js", true)
+					xhr.open("GET", "https://raw.githubusercontent.com/FastForwardTeam/FastForward/" + upstreamCommit + "/src/js/injection_script.js", true)
 					xhr.send()
 					let xhr2 = new XMLHttpRequest()
 					xhr2.onload = () => {
