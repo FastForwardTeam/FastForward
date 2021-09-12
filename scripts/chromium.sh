@@ -21,18 +21,19 @@ bash ./scripts/copy_common.sh              $DES
 cp platform_spec/chromium/manifest.json    $DES
 
 cd $DES
+commit_num=$(git rev-list HEAD --count)
 
 if [[ $# -eq 0 ]]; then
     echo "*** FastForward.Chromium: Creating dev package... (Tip: Use nover to create a no-version package)"
     bash ../../scripts/version.sh manifest.json 0
-    zip -qr ../$(basename $DIST)/FastForward_chromium_$(git shortlog | grep -E '^[ ]+\w+' | wc -l)_dev.zip .
+    zip -qr ../$(basename $DIST)/FastForward_chromium_${commit_num}_dev.zip .
 
 elif [ "$1" == "nover" ] ; then
     echo "*** FastForward.Chromium: Creating non-versioned package... "
     rm injection_script.js
     rm rules.json
     bash ../../scripts/version.sh manifest.json nover
-    zip -qr ../$(basename $DIST)/FastForward_chromium_0.$(git shortlog | grep -E '^[ ]+\w+' | wc -l).zip .
+    zip -qr ../$(basename $DIST)/FastForward_chromium_0.${commit_num}.zip .
 
 elif [ "$1" == "ver" ]; then
     echo "*** FastForward.Chromium: Creating versioned package... "
