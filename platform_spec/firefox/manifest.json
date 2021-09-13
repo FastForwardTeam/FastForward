@@ -8,14 +8,14 @@
 		"512": "icon/512.png"
 	},
 	"default_locale": "en",
-	"name": "Universal Bypass",
+	"name": "FastForward",
 	"description": "__MSG_appDesc__",
-	"homepage_url": "https://universal-bypass.org/",
+	"homepage_url": "https://fastforward.team",
 	"version": "0.0.0.0",
-	"author": "Universal Bypass Renewed Contributors",
+	"author": "FastForward Team",
 	"browser_specific_settings": {
 		"gecko": {
-		  "id": "addon@universal-bypass-renewed.github.io",
+		  "id": "addon@fastforward.team",
 		  "strict_min_version": "57.0"
 		}
 	},
