@@ -16,7 +16,7 @@ If you are interested in assiting the development or need help, join our Discord
 
 # Installation instructions
 
-## Chromium browsers
+## Chromium based browsers
 
 Chromium based browsers include Chrome, Edge and Brave
 
