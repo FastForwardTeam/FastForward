@@ -8,11 +8,11 @@
 		"512": "icon/512.png"
 	},
 	"default_locale": "en",
-	"name": "Universal Bypass",
+	"name": "FastForward",
 	"description": "__MSG_appDesc__",
-	"homepage_url": "https://universal-bypass.org/",
+	"homepage_url": "https://fastforward.team",
 	"version": "13.15.2",
-	"author": "Sainan",
+	"author": "FastForward Team",
 	"permissions": [
 		"alarms",
 		"storage",
