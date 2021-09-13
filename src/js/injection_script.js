@@ -732,10 +732,7 @@ domainBypass(/pahe\.(in|me|ph)/,()=>{
 		a.setAttribute("data-bypass-clipboard",s)
 	}))
 })
-domainBypass("boost.ink", () => fetch(location.href).then(r=>r.text()).then(text=>{
-        if(text.split("<title>")[1].split("</title>")[0].includes("Complete")) safelyNavigate(atob(text.split("version=\"")[1].split("\"")[0]))
-    })
-)
+domainBypass("boost.ink",()=>ifElement("script[version]",s=>safelyNavigate(atob(s.getAttribute("version")))))
 domainBypass("linksunlocked.com",()=>{
 	const searchParams=new URLSearchParams(location.search)
 	if(searchParams.has("token"))
