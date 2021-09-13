@@ -1,16 +1,8 @@
 #  *FastForward*
-  <a href="https://github.com/FastForwardTeam/FastForward/blob/main/.github/workflows/main.yml">
-  <img src="https://badgen.net/github/checks/FastForwardTeam/FastForward?label=Build" />
-  </a>
-  <a href="https://discord.gg/RSAf7b5njt">
-  <img src="https://badgen.net/badge/icon/discord?icon=discord&label=Fast+Forward" />
-  </a>
-  <a href="https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_chromium.zip">
-  <img src="https://img.shields.io/badge/Chromium-Unstable-e77334" />
-  </a>
-  <a href="https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_firefox.zip">
-  <img src="https://img.shields.io/badge/Firefox-Unstable-e77334" />
-  </a>
+  [<img src="https://badgen.net/github/checks/FastForwardTeam/FastForward?label=Build" />](https://github.com/FastForwardTeam/FastForward/blob/main/.github/workflows/main.yml)
+  [<img src="https://badgen.net/badge/icon/discord?icon=discord&label=Fast+Forward" />](https://discord.gg/RSAf7b5njt)
+  [<img src="https://img.shields.io/badge/Chromium-Unstable-e77334" />](https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_chromium.zip)
+  [<img src="https://img.shields.io/badge/Firefox-Unstable-e77334" />](https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_firefox.zip)
  
 
 #### Don't waste your time with compliance. FastForward automatically skips annoying link shorteners.
