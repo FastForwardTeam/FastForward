@@ -30,4 +30,5 @@ If you need any help, join our Discord: https://discord.gg/RSAf7b5njt
 
 ### Firefox
 The addon is on the Firefox Addons store: https://addons.mozilla.org/en-US/firefox/addon/fastforwardteam/
+
 If you need any help, join our Discord: https://discord.gg/RSAf7b5njt
