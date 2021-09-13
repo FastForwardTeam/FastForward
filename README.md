@@ -41,6 +41,6 @@ The addon will soon be in the Mozilla Addons Store. If you want to try it *now* 
 1) Download the zip file using [this link](https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_firefox.zip).
 2) Unnzip the file once
 3) Go to the manage addons page and click on the cog wheel
-4) Click on debug addons and then select "FastForward_firefox_0.0.zip" after clicking on load temporary addon
+4) Click on debug addons and then select "FastForward_firefox_0.0.xpi" after clicking on load temporary addon
 
 If you need any help, join our Discord: https://discord.gg/RSAf7b5njt
