@@ -1,12 +1,12 @@
 {
 	"appDesc": {
-		"message": "No perdis el teu temps amb la conformitat. Universal Bypass se salta automàticament molests escurçadors d'enllaços."
+		"message": "No perdis el teu temps amb la conformitat. FastForward se salta automàticament molests escurçadors d'enllaços."
 	},
 	"firstrunTitle": {
-		"message": "Gràcies per instal·lar Universal Bypass!"
+		"message": "Gràcies per instal·lar FastForward!"
 	},
 	"firstrunNoScript": {
-		"message": "Però, sembla que estàs utilitzant NoScript o similar, amb la qual Universal Bypass no és compatible."
+		"message": "Però, sembla que estàs utilitzant NoScript o similar, amb la qual FastForward no és compatible."
 	},
 	"version": {
 		"message": "Versió"
@@ -33,16 +33,16 @@
 		"message": "Preguntes més freqüents (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass ha omès % pàgines per tu."
+		"message": "FastForward ha omès % pàgines per tu."
 	},
 	"support": {
-		"message": "Contribueix amb Universal Bypass."
+		"message": "Contribueix amb FastForward."
 	},
 	"options": {
 		"message": "Opcions"
 	},
 	"optionsLink": {
-		"message": "Canvia les opcions de Universal Bypass."
+		"message": "Canvia les opcions de FastForward."
 	},
 	"optionsEnabled": {
 		"message": "Activa omissió de pàgines web."
@@ -78,7 +78,7 @@
 		"message": "Circumval·lacions personalitzades"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "Aquesta és una funcionalitat avançada per a que els desenvolupadors crein els seus propis scripts per a omitir pàgines. Una vegada perfeccionat, poden èsser enviats a GitHub per a èsser afegits a Universal Bypass, essent aixi disponibles per a tot el món."
+		"message": "Aquesta és una funcionalitat avançada per a que els desenvolupadors crein els seus propis scripts per a omitir pàgines. Una vegada perfeccionat, poden èsser enviats a GitHub per a èsser afegits a FastForward, essent aixi disponibles per a tot el món."
 	},
 	"beforeNavigate": {
 		"message": "Casi has arribat al teu destí."
@@ -87,7 +87,7 @@
 		"message": "El teu destí és %"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "Però, si hi vas ara, detectaran que utilitzes Universal Bypass."
+		"message": "Però, si hi vas ara, detectaran que utilitzes FastForward."
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "No ho detectaran en % segons."
@@ -114,10 +114,10 @@
 		"message": "Desafotunadament, el servidor de descàrregues s'assegurarà que has esperat abans de permitir-te descarregar el fitxer."
 	},
 	"infoOutdated": {
-		"message": "La pàgina és omesa mitjançant la nova versió de Universal Bypass."
+		"message": "La pàgina és omesa mitjançant la nova versió de FastForward."
 	},
 	"crowdWait": {
-		"message": "Desafortunadament, aquesta és la primera vegada que es troba aquest link, però després de que haguis esperat, la resta d'usuaris d'Universal Bypass no ho hauran de fer"
+		"message": "Desafortunadament, aquesta és la primera vegada que es troba aquest link, però després de que haguis esperat, la resta d'usuaris d'FastForward no ho hauran de fer"
 	},
 	"crowdDisabled": {
 		"message": "Aquesta pàgina es redirigida mitjançant el bypass comunitari, que ho has desactivat a opcions."
@@ -126,7 +126,7 @@
 		"message": "Potser que no hagis d'esperar!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Altres usuaris de Universal Bypass ja han esperat per tu i han informat que això porta a %"
+		"message": "Altres usuaris de FastForward ja han esperat per tu i han informat que això porta a %"
 	},
 	"crowdBypassedTimer": {
 		"message": "Aquesta pàgina serà oberta en una nova pestanya en % segons."
@@ -150,7 +150,7 @@
 		"message": "Vols obrir-ho en una nova pestanya o en  x segons?"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass ha impedit que la seva adreça IP es registrés."
+		"message": "FastForward ha impedit que la seva adreça IP es registrés."
 	},
 	"blockedSubtitle": {
 		"message": "Vols que Universal Bpass eviti que persones malèfiques tinguin el teu IP?"

@@ -1,12 +1,12 @@
 {
 	"appDesc": {
-		"message": "Nu mai irosii timpul. Universal Bypass te scapă de scurtăturile linkurilor."
+		"message": "Nu mai irosii timpul. FastForward te scapă de scurtăturile linkurilor."
 	},
 	"firstrunTitle": {
-		"message": "Vă mulțumim că ați instalat Universal Bypass!"
+		"message": "Vă mulțumim că ați instalat FastForward!"
 	},
 	"firstrunNoScript": {
-		"message": "Totuși, se pare că folosești NoScript sau un program similar, care nu este compatibil cu Universal Bypass."
+		"message": "Totuși, se pare că folosești NoScript sau un program similar, care nu este compatibil cu FastForward."
 	},
 	"version": {
 		"message": "Versiunea"
@@ -33,16 +33,16 @@
 		"message": "Întrebări populare"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass a evitat deja % site-uri pentru tine."
+		"message": "FastForward a evitat deja % site-uri pentru tine."
 	},
 	"support": {
-		"message": "Ajută Universal Bypass."
+		"message": "Ajută FastForward."
 	},
 	"options": {
 		"message": "Opțiuni"
 	},
 	"optionsLink": {
-		"message": "Schimbă setările Universal Bypass."
+		"message": "Schimbă setările FastForward."
 	},
 	"optionsEnabled": {
 		"message": "Pornește evitarea de site-uri scurtate."
@@ -78,7 +78,7 @@
 		"message": "Bypassuri personalizate"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "Aceasta este o opțiune avansată pentru developeri care vor să creeze propriul lor coduri pentru sărirea site-urilor. Odată perfecționat, ele pot fi trimise pe GitHub unde pot fi adăugate in Universal Bypass, și vor fi disponibile pentru toată lumea."
+		"message": "Aceasta este o opțiune avansată pentru developeri care vor să creeze propriul lor coduri pentru sărirea site-urilor. Odată perfecționat, ele pot fi trimise pe GitHub unde pot fi adăugate in FastForward, și vor fi disponibile pentru toată lumea."
 	},
 	"beforeNavigate": {
 		"message": "Sunteți aproape de destinație."
@@ -87,7 +87,7 @@
 		"message": "Mai sunt doar %"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "Oricum, dacă navighezi acum, vor detecta Universal Bypass.\n"
+		"message": "Oricum, dacă navighezi acum, vor detecta FastForward.\n"
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "Nu vei mai fi detectat în % secunde"
@@ -114,10 +114,10 @@
 		"message": "Din păcate, serverul de descărcare se va asigura că ați așteptat înainte de a vă permite să descărcați fișierul."
 	},
 	"infoOutdated": {
-		"message": "Acest site web poate fi ocolit doar de o versiune mai nouă a Universal Bypass."
+		"message": "Acest site web poate fi ocolit doar de o versiune mai nouă a FastForward."
 	},
 	"crowdWait": {
-		"message": "Din păcăte, ești primul care să dea de acest link, dar după ce aștepți, alți utilizatori Universal Bypass nu vor mai trebuiască să aștepte."
+		"message": "Din păcăte, ești primul care să dea de acest link, dar după ce aștepți, alți utilizatori FastForward nu vor mai trebuiască să aștepte."
 	},
 	"crowdDisabled": {
 		"message": "Acest site a fost pasat de alți oameni, această opțiune a fost dezactivată în setări"
@@ -126,7 +126,7 @@
 		"message": "Sar putea sa nu aștepți!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Alți utilizatori Universal Bypass au așteptat deja și a fost raportat că duce la %"
+		"message": "Alți utilizatori FastForward au așteptat deja și a fost raportat că duce la %"
 	},
 	"crowdBypassedTimer": {
 		"message": "Aceasta va fi deschisă într-o nouă fila in % secunde."
@@ -150,9 +150,9 @@
 		"message": "Vrei ca această pagină să fie deschisă instant sau în x secunde?"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass a prevenit IP-ul tău din a fi înregistrat"
+		"message": "FastForward a prevenit IP-ul tău din a fi înregistrat"
 	},
 	"blockedSubtitle": {
-		"message": "Nu vrei Universal Bypass să prevină actorii răi din ați lua IP-ul"
+		"message": "Nu vrei FastForward să prevină actorii răi din ați lua IP-ul"
 	}
 }

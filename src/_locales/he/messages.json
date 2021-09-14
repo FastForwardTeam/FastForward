@@ -1,12 +1,12 @@
 {
 	"appDesc": {
-		"message": "אל תבזבז את הזמן שלך! Universal Bypass מדלג אוטומטית על מקצרי לינקים מעצבנים."
+		"message": "אל תבזבז את הזמן שלך! FastForward מדלג אוטומטית על מקצרי לינקים מעצבנים."
 	},
 	"firstrunTitle": {
-		"message": "תודה לך על כך שהתקנת את Universal Bypass!"
+		"message": "תודה לך על כך שהתקנת את FastForward!"
 	},
 	"firstrunNoScript": {
-		"message": "ככול הנראה אתה עושה שימוש ב-NoScript ודומיו, מה שלא מאפשר את פעולת Universal Bypass."
+		"message": "ככול הנראה אתה עושה שימוש ב-NoScript ודומיו, מה שלא מאפשר את פעולת FastForward."
 	},
 	"version": {
 		"message": "גרסה"
@@ -36,13 +36,13 @@
 		"message": "מעקף אוניברסלי כבר עקף % אתרים בשבילך."
 	},
 	"support": {
-		"message": "תמוך ב-Universal Bypass"
+		"message": "תמוך ב-FastForward"
 	},
 	"options": {
 		"message": "הגדרות"
 	},
 	"optionsLink": {
-		"message": "הגדר את Universal Bypass."
+		"message": "הגדר את FastForward."
 	},
 	"optionsEnabled": {
 		"message": "הפעל מעקף לאתר."
@@ -99,10 +99,10 @@
 		"message": "מנווט ל %"
 	},
 	"infoOutdated": {
-		"message": "האתר הזה יכול להיעקף בעזרת גרסה חדשה יותר של Universal Bypass."
+		"message": "האתר הזה יכול להיעקף בעזרת גרסה חדשה יותר של FastForward."
 	},
 	"crowdWait": {
-		"message": "לצערי, אתה הראשון שנתקל בקישור הזה, אבל אחרי שחיכית, משתמשי Universal Bypass אחרים לא יצטרכו לחכות יותר."
+		"message": "לצערי, אתה הראשון שנתקל בקישור הזה, אבל אחרי שחיכית, משתמשי FastForward אחרים לא יצטרכו לחכות יותר."
 	},
 	"crowdDisabled": {
 		"message": "אתר זה עוקף על ידי crowd bypass, אפשר לכבות אופציה זו בהגדרות."
@@ -138,6 +138,6 @@
 		"message": "עקיפה אוניברסלית מנעה את רישום ה- IP שלך."
 	},
 	"blockedSubtitle": {
-		"message": "לא רוצה שUniversal Bypass ימנע ממקורות רעים לקבל גישה לכתובת הIP שלך?"
+		"message": "לא רוצה שFastForward ימנע ממקורות רעים לקבל גישה לכתובת הIP שלך?"
 	}
 }

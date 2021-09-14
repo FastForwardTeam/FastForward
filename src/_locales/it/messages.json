@@ -1,12 +1,12 @@
 {
 	"appDesc": {
-		"message": "Non sprecare il tuo tempo con il conformismo. Universal Bypass salta automaticamente i fastidiosi link shortener."
+		"message": "Non sprecare il tuo tempo con il conformismo. FastForward salta automaticamente i fastidiosi link shortener."
 	},
 	"firstrunTitle": {
-		"message": "Grazie per aver installato Universal Bypass!"
+		"message": "Grazie per aver installato FastForward!"
 	},
 	"firstrunNoScript": {
-		"message": "Però, sembra che tu stia usando NoScript o simili, con le quali Universal Bypass non è compatibile."
+		"message": "Però, sembra che tu stia usando NoScript o simili, con le quali FastForward non è compatibile."
 	},
 	"version": {
 		"message": "Versione"
@@ -33,16 +33,16 @@
 		"message": "Domande frequenti (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass ha già superato % siti per te."
+		"message": "FastForward ha già superato % siti per te."
 	},
 	"support": {
-		"message": "Aiuta Universal Bypass ad essere migliore"
+		"message": "Aiuta FastForward ad essere migliore"
 	},
 	"options": {
 		"message": "Opzioni"
 	},
 	"optionsLink": {
-		"message": "Cambia le opzioni di Universal Bypass."
+		"message": "Cambia le opzioni di FastForward."
 	},
 	"optionsEnabled": {
 		"message": "Attiva i bypass dei siti web."
@@ -78,7 +78,7 @@
 		"message": "Bypass personalizzati"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "Questa è una funzionalità avanzata per gli sviluppatori per creare i propri script per bypassare i siti. Una volta perfezionati, possono poi essere inviati su GitHub per essere aggiunti a Universal Bypass, in modo che siani disponibili per tutti."
+		"message": "Questa è una funzionalità avanzata per gli sviluppatori per creare i propri script per bypassare i siti. Una volta perfezionati, possono poi essere inviati su GitHub per essere aggiunti a FastForward, in modo che siani disponibili per tutti."
 	},
 	"beforeNavigate": {
 		"message": "Sei quasi a destinazione."
@@ -87,7 +87,7 @@
 		"message": "La tua destinazione è %"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "Comunque, se tu navighi ora, loro individueranno Universal Bypass."
+		"message": "Comunque, se tu navighi ora, loro individueranno FastForward."
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "Non sarai più rilevato in % secondi."
@@ -114,7 +114,7 @@
 		"message": "Sfortunatamente, il server di download si assicurerà di aver aspettato prima di consentirti di scaricare il file."
 	},
 	"infoOutdated": {
-		"message": "Questo sito può essere bypassato da una versione più recente di Universal Bypass."
+		"message": "Questo sito può essere bypassato da una versione più recente di FastForward."
 	},
 	"crowdWait": {
 		"message": "Purtroppo, sei il primo ad incontrare questo link, ma dopo aver aspettato, altri utenti di Bypass universali non dovranno più farlo."
@@ -126,7 +126,7 @@
 		"message": "Forse non dovrai aspettare!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Altri utenti di Universal Bypass hanno già aspettato e hanno riferito che questo porta a %"
+		"message": "Altri utenti di FastForward hanno già aspettato e hanno riferito che questo porta a %"
 	},
 	"crowdBypassedTimer": {
 		"message": "Questo verrà aperto in una nuova scheda in % secondi."
@@ -150,9 +150,9 @@
 		"message": "Vuoi che questo sia aperto in una nuova scheda all'istante o in x secondi?"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass ha impedito la registrazione del tuo IP."
+		"message": "FastForward ha impedito la registrazione del tuo IP."
 	},
 	"blockedSubtitle": {
-		"message": "Non vuoi che Universal Bypass impedisca ai malintenzionati di ottenere il tuo indirizzo IP?"
+		"message": "Non vuoi che FastForward impedisca ai malintenzionati di ottenere il tuo indirizzo IP?"
 	}
 }

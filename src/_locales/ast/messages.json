@@ -3,10 +3,10 @@
 		"message": "No perdis el temps amb compliment. El bypass universal evita els molèstics acotadors."
 	},
 	"firstrunTitle": {
-		"message": "Gràcies per instal·lar Universal Bypass."
+		"message": "Gràcies per instal·lar FastForward."
 	},
 	"firstrunNoScript": {
-		"message": "Tanmateix, sembla que utilitzeu NoScript o similar, amb el qual Universal Bypass no és compatible."
+		"message": "Tanmateix, sembla que utilitzeu NoScript o similar, amb el qual FastForward no és compatible."
 	},
 	"version": {
 		"message": "versió"
@@ -78,7 +78,7 @@
 		"message": "Desviaments personalitzats"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "Aquesta és una característica avançada perquè els desenvolupadors puguin crear els seus propis scripts per deixar de banda els llocs. Un cop perfeccionats, es poden enviar a GitHub per afegir-los a Universal Bypass, de manera que estiguin a l’abast de tothom"
+		"message": "Aquesta és una característica avançada perquè els desenvolupadors puguin crear els seus propis scripts per deixar de banda els llocs. Un cop perfeccionats, es poden enviar a GitHub per afegir-los a FastForward, de manera que estiguin a l’abast de tothom"
 	},
 	"beforeNavigate": {
 		"message": "Gairebé estàs al vostre destí."
@@ -114,10 +114,10 @@
 		"message": "Malauradament, el servidor de descàrrega es garantirà que heu esperat abans de permetre-vos descarregar el fitxer."
 	},
 	"infoOutdated": {
-		"message": "Aquesta pàgina web és obviada per una versió més recent de Universal Bypass."
+		"message": "Aquesta pàgina web és obviada per una versió més recent de FastForward."
 	},
 	"crowdWait": {
-		"message": "Malauradament, ets el primer a trobar aquest enllaç, però després d’esperar, altres usuaris de Universal Bypass ja no hauran de fer-ho."
+		"message": "Malauradament, ets el primer a trobar aquest enllaç, però després d’esperar, altres usuaris de FastForward ja no hauran de fer-ho."
 	},
 	"crowdDisabled": {
 		"message": "Aquest lloc web es contempla el bypass multitudinari, que podeu habilitar en les opcions."
@@ -150,7 +150,7 @@
 		"message": "Voleu que s'obri en una pestanya nova a l'instant o en x segons?"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass va impedir que es registrés la vostra IP."
+		"message": "FastForward va impedir que es registrés la vostra IP."
 	},
 	"blockedSubtitle": {
 		"message": "No voleu que el bypass universal eviti que els actors negatius puguin obtenir la vostra IP?"

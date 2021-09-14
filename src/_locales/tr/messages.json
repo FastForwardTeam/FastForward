@@ -1,12 +1,12 @@
 {
 	"appDesc": {
-		"message": "Zamanınızı karmaşa ile harcamayın. Universal Bypass, rahatsız edici bağlantı kısaltıcıları kendiliğinden geçer."
+		"message": "Zamanınızı karmaşa ile harcamayın. FastForward, rahatsız edici bağlantı kısaltıcıları kendiliğinden geçer."
 	},
 	"firstrunTitle": {
-		"message": "Universal Bypass'i kurduğunuz için çok teşekkürler!"
+		"message": "FastForward'i kurduğunuz için çok teşekkürler!"
 	},
 	"firstrunNoScript": {
-		"message": "Görünen o ki Universal Bypass ile uyumlu olmayan benzeri bir eklenti, NoScript veya betik kullanıyorsunuz."
+		"message": "Görünen o ki FastForward ile uyumlu olmayan benzeri bir eklenti, NoScript veya betik kullanıyorsunuz."
 	},
 	"version": {
 		"message": "Sürüm"
@@ -33,16 +33,16 @@
 		"message": "Sıkça Sorulan Sorular (SSS)"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass sizin için şimdiye kadar % siteyi baypas etti."
+		"message": "FastForward sizin için şimdiye kadar % siteyi baypas etti."
 	},
 	"support": {
-		"message": "Universal Bypass'ı Destekleyin"
+		"message": "FastForward'ı Destekleyin"
 	},
 	"options": {
 		"message": "Ayarlar"
 	},
 	"optionsLink": {
-		"message": "Universal Bypass'ın seçeneklerini değiştir."
+		"message": "FastForward'ın seçeneklerini değiştir."
 	},
 	"optionsEnabled": {
 		"message": "Web sayfalarını es geçmeyi etkinleştir."
@@ -78,7 +78,7 @@
 		"message": "Özel Baypaslar"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "Bu, geliştiricilerin siteleri atlamak için kendi komut dosyalarını oluşturmaları için gelişmiş bir özelliktir. Kusursuz çalıştığında, GitHub'a Universal Bypass'a eklenmesi için gönderilebilirsiniz, böylece herkesin kullanımına açık olur."
+		"message": "Bu, geliştiricilerin siteleri atlamak için kendi komut dosyalarını oluşturmaları için gelişmiş bir özelliktir. Kusursuz çalıştığında, GitHub'a FastForward'a eklenmesi için gönderilebilirsiniz, böylece herkesin kullanımına açık olur."
 	},
 	"beforeNavigate": {
 		"message": "Neredeyse vardınız."
@@ -87,7 +87,7 @@
 		"message": "Hedefiniz: %"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "Hemen geçerseniz, bu web sitesi Universal Bypass'i algılayacaktır."
+		"message": "Hemen geçerseniz, bu web sitesi FastForward'i algılayacaktır."
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "% saniye sonra fark edilmeyeceksiniz."
@@ -114,10 +114,10 @@
 		"message": "İndirme sunucusu dosyayı indirmenize izin vermeden önce sizi biraz bekletecek."
 	},
 	"infoOutdated": {
-		"message": "Bu web sitesi Universal Bypass'ın daha yeni bir sürümü tarafından atlandı."
+		"message": "Bu web sitesi FastForward'ın daha yeni bir sürümü tarafından atlandı."
 	},
 	"crowdWait": {
-		"message": "Maalesef, bu bağlantıyla ilk karşılaşan sizsiniz, ancak siz bekledikten sonra, diğer Universal Bypass kullanıcılarının artık buna ihtiyacı kalmayacak."
+		"message": "Maalesef, bu bağlantıyla ilk karşılaşan sizsiniz, ancak siz bekledikten sonra, diğer FastForward kullanıcılarının artık buna ihtiyacı kalmayacak."
 	},
 	"crowdDisabled": {
 		"message": "Bu web sitesi, ayarlarda devre dışı bıraktığınız kitle baypası tarafından baypas edilmektedir."
@@ -126,7 +126,7 @@
 		"message": "Beklemek zorunda değilsiniz!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Diğer Universal Bypass kullanıcıları sizin yerinize zaten beklediler ve bunun şuraya yönlendiğini bildirdiler: %"
+		"message": "Diğer FastForward kullanıcıları sizin yerinize zaten beklediler ve bunun şuraya yönlendiğini bildirdiler: %"
 	},
 	"crowdBypassedTimer": {
 		"message": "Bu, % saniye içinde yeni bir sekmede açılacaktır."
@@ -150,9 +150,9 @@
 		"message": "Bu adresin hemen mi yoksa x saniye sonra mı yeni bir sekmede açılmasını istersiniz?"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass, IP adresinizin kayıtlara eklenmesini engelledi."
+		"message": "FastForward, IP adresinizin kayıtlara eklenmesini engelledi."
 	},
 	"blockedSubtitle": {
-		"message": "Universal Bypass'ın sizi kötü kişilerin IP adresinizi almasından korumasını istemiyor musunuz?"
+		"message": "FastForward'ın sizi kötü kişilerin IP adresinizi almasından korumasını istemiyor musunuz?"
 	}
 }

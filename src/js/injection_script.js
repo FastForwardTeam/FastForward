@@ -5,7 +5,7 @@
 //Variables
 let isGoodLink_allowSelf=false
 //Copying important functions to avoid interference from other extensions or the page
-const ODP=(t,p,o)=>{try{Object.defineProperty(t,p,o)}catch(e){console.trace("[Universal Bypass] Couldn't define",p)}},
+const ODP=(t,p,o)=>{try{Object.defineProperty(t,p,o)}catch(e){console.trace("[FastForward] Couldn't define",p)}},
 setTimeout=window.setTimeout,setInterval=window.setInterval,URL=window.URL,docSetAttribute=document.documentElement.setAttribute.bind(document.documentElement),
 transparentProperty=(name,valFunc)=>{
 	let real
@@ -110,7 +110,7 @@ domainBypass=(domain,f)=>{
 	}
 	if(typeof f!="function")
 	{
-		alert("Universal Bypass: Bypass for "+domain+" is not a function")
+		alert("FastForward: Bypass for "+domain+" is not a function")
 	}
 	if(typeof domain=="string")
 	{
@@ -130,7 +130,7 @@ domainBypass=(domain,f)=>{
 	}
 	else
 	{
-		console.error("[Universal Bypass] Invalid domain:",domain)
+		console.error("[FastForward] Invalid domain:",domain)
 	}
 },
 hrefBypass=(regex,f)=>{
@@ -140,7 +140,7 @@ hrefBypass=(regex,f)=>{
 	}
 	if(typeof f!="function")
 	{
-		alert("Universal Bypass: Bypass for "+domain+" is not a function")
+		alert("FastForward: Bypass for "+domain+" is not a function")
 	}
 	let res=regex.exec(location.href)
 	if(res)

@@ -1,12 +1,12 @@
 {
 	"appDesc": {
-		"message": "Ne gubite vreme na komplikacije. Universal Bypass zaobilazi dosadne link shortenere."
+		"message": "Ne gubite vreme na komplikacije. FastForward zaobilazi dosadne link shortenere."
 	},
 	"firstrunTitle": {
-		"message": "Hvala vam za instaliranje Universal Bypass!"
+		"message": "Hvala vam za instaliranje FastForward!"
 	},
 	"firstrunNoScript": {
-		"message": "Međutim, izgleda da koristite NoScript ili slično, s čime Universal Bypass nije kompatibilan."
+		"message": "Međutim, izgleda da koristite NoScript ili slično, s čime FastForward nije kompatibilan."
 	},
 	"version": {
 		"message": "Verzija"

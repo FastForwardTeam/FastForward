@@ -1,12 +1,12 @@
 {
 	"appDesc": {
-		"message": "Nestrácajte svoj drahocenný čas so súhlasom. Universal Bypass obchádza otravné funkcie skracovania linkov."
+		"message": "Nestrácajte svoj drahocenný čas so súhlasom. FastForward obchádza otravné funkcie skracovania linkov."
 	},
 	"firstrunTitle": {
-		"message": "Ďakujeme za inštaláciu Universal Bypass!"
+		"message": "Ďakujeme za inštaláciu FastForward!"
 	},
 	"firstrunNoScript": {
-		"message": "Vyzerá to ale tak, že používate NoScript alebo podobnú funkciu, ktorá nie je s Universal Bypass kompatibilná."
+		"message": "Vyzerá to ale tak, že používate NoScript alebo podobnú funkciu, ktorá nie je s FastForward kompatibilná."
 	},
 	"version": {
 		"message": "Verzia"
@@ -33,16 +33,16 @@
 		"message": "Často kladené otázky"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass pre Vás úspešne obišiel už % stránok."
+		"message": "FastForward pre Vás úspešne obišiel už % stránok."
 	},
 	"support": {
-		"message": "Podieľajte sa na Universal Bypass."
+		"message": "Podieľajte sa na FastForward."
 	},
 	"options": {
 		"message": "Možnosti"
 	},
 	"optionsLink": {
-		"message": "Zmeniť nastavenia Universal Bypass."
+		"message": "Zmeniť nastavenia FastForward."
 	},
 	"optionsEnabled": {
 		"message": "Povoliť obchádzanie webstránok."
@@ -78,7 +78,7 @@
 		"message": "Vlastné obtoky"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "Toto je pokročilá funkcia pre vývojárov, aby si mohli vytvárať vlastné skripty na obídenie stránok. Ak sú dokonalé, môžu byť predložené na GitHub aby boli pridané do Universal Bypass, takže sú dostupné pre každeho."
+		"message": "Toto je pokročilá funkcia pre vývojárov, aby si mohli vytvárať vlastné skripty na obídenie stránok. Ak sú dokonalé, môžu byť predložené na GitHub aby boli pridané do FastForward, takže sú dostupné pre každeho."
 	},
 	"beforeNavigate": {
 		"message": "Už ste skoro tam!"
@@ -87,7 +87,7 @@
 		"message": "Stranka, na ktorú sa pokúšate dostať je %"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "Ak pôjdete na stránku teraz, odhalia Universal Bypass."
+		"message": "Ak pôjdete na stránku teraz, odhalia FastForward."
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "Prechod bude bezpečný o % (sekúnd if 5-999, sekundy if 2-4)."
@@ -111,10 +111,10 @@
 		"message": "Nanešťastie, sťahovací server sa uistí, že ste čakali pred tým, ako Vám dovolil stiahnuť súbor."
 	},
 	"infoOutdated": {
-		"message": "Táto stránka už bola obijdená novšou verziou Universal Bypassu."
+		"message": "Táto stránka už bola obijdená novšou verziou FastForwardu."
 	},
 	"crowdWait": {
-		"message": "Ste prvý/á, kto navštívil túto stránku, ale ako ste Vy čakalim iný používatelia Universal Bypassu by už nemuseli."
+		"message": "Ste prvý/á, kto navštívil túto stránku, ale ako ste Vy čakalim iný používatelia FastForwardu by už nemuseli."
 	},
 	"crowdDisabled": {
 		"message": "Táto stránka sa obchádza spôsobom crowdm ktorý ste vypli v nastaveniach."
@@ -123,7 +123,7 @@
 		"message": "Už nemusíte čakať!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Iní používatelia Universal Bypassu už čakali namiesto Vás a nahlásili, že to vedie na %"
+		"message": "Iní používatelia FastForwardu už čakali namiesto Vás a nahlásili, že to vedie na %"
 	},
 	"crowdBypassedTimer": {
 		"message": "Totot bude otvorené v novom tabe o % (sekúnd if 5-999, sekundy if 2-4)."
@@ -147,9 +147,9 @@
 		"message": "Chcete aby sa stránka otvorila v novom okne okamžite alebo o X sekúnd?"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass Vás obránil pred uložením IP adresy na stránke."
+		"message": "FastForward Vás obránil pred uložením IP adresy na stránke."
 	},
 	"blockedSubtitle": {
-		"message": "Nechcete, aby Universal Bypass zabránil zlým hercom v získaní Vašej IP adresy?"
+		"message": "Nechcete, aby FastForward zabránil zlým hercom v získaní Vašej IP adresy?"
 	}
 }

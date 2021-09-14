@@ -1,12 +1,12 @@
 {
 	"appDesc": {
-		"message": "Musa ukuchitha isikhathi sakho ngokuhambisana. I-Universal Bypass ivimbela izifinyezo ezihluphayo zesixhumanisi."
+		"message": "Musa ukuchitha isikhathi sakho ngokuhambisana. I-FastForward ivimbela izifinyezo ezihluphayo zesixhumanisi."
 	},
 	"firstrunTitle": {
-		"message": "\nSiyabonga ngokufaka i-Universal Bypass!"
+		"message": "\nSiyabonga ngokufaka i-FastForward!"
 	},
 	"firstrunNoScript": {
-		"message": "Noma kunjalo, ubonakala ngathi usebenzisa i-NoScript noma efanayo, i-Universal Bypass engahambelani nayo."
+		"message": "Noma kunjalo, ubonakala ngathi usebenzisa i-NoScript noma efanayo, i-FastForward engahambelani nayo."
 	},
 	"version": {
 		"message": "ukuhumushela"
@@ -33,7 +33,7 @@
 		"message": "Eminye imibuzo ejwayelekile (EIE)"
 	},
 	"bypassCounter": {
-		"message": "I-Universal Bypass isivele idlule kuwe amasayithi we-%."
+		"message": "I-FastForward isivele idlule kuwe amasayithi we-%."
 	},
 	"support": {
 		"message": "Yenza umnikelo ku-Universal Diverter"
@@ -78,7 +78,7 @@
 		"message": "\nAmaBypasses enziwe ngokwezifiso"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "Lesi isici esithuthukisiwe sonjiniyela bokuzenzela imibhalo yabo ezizeni ezidlula. Lapho sebesetshenzisiwe, bangafakwa ku-GitHub ukuthi ingezwe ku-Universal Bypass, ngakho-ke batholakala kuwo wonke umuntu."
+		"message": "Lesi isici esithuthukisiwe sonjiniyela bokuzenzela imibhalo yabo ezizeni ezidlula. Lapho sebesetshenzisiwe, bangafakwa ku-GitHub ukuthi ingezwe ku-FastForward, ngakho-ke batholakala kuwo wonke umuntu."
 	},
 	"beforeNavigate": {
 		"message": "Usondele lapho uya khona."
@@ -87,7 +87,7 @@
 		"message": "\nIndawo yakho ngu-%"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "\nKodwa-ke, uma uzulazula manje, bazobona i-Universal Bypass."
+		"message": "\nKodwa-ke, uma uzulazula manje, bazobona i-FastForward."
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "\nNgeke usatholakala emasekhondini angu-%."
@@ -114,7 +114,7 @@
 		"message": "Le webhusayithi iphambukiswa yinguqulo entsha ye-Universal Diversion."
 	},
 	"crowdWait": {
-		"message": "Ngeshwa, ungowokuqala ukuhlangana nalesi sixhumanisi, kepha ngemuva kokuthi usulindile, abanye abasebenzisi be-Universal Bypass ngeke kusadingeka."
+		"message": "Ngeshwa, ungowokuqala ukuhlangana nalesi sixhumanisi, kepha ngemuva kokuthi usulindile, abanye abasebenzisi be-FastForward ngeke kusadingeka."
 	},
 	"crowdDisabled": {
 		"message": "Le webhusayithi idluliswa ukudlula kwesixuku, esikhubaze kukho ongakhetha kukho."
@@ -123,7 +123,7 @@
 		"message": "\nKungase kungadingeki ulinde!"
 	},
 	"crowdBypassedInfo": {
-		"message": "\nAbanye abasebenzisi be-Universal Bypass sebevele bakulindile futhi babika ukuthi lokhu kuholela ku-%"
+		"message": "\nAbanye abasebenzisi be-FastForward sebevele bakulindile futhi babika ukuthi lokhu kuholela ku-%"
 	},
 	"crowdBypassedTimer": {
 		"message": "Lokhu kuzovulwa kuthebhu entsha ngemizuzwana engu-%."
@@ -147,9 +147,9 @@
 		"message": "Ngabe ufuna ukuthi lokhu kuvulwe kuthebhu entsha ngokushesha noma ngemizuzwana eyi-x?"
 	},
 	"blockedTitle": {
-		"message": "\nI-Universal Bypass ivimbele i-IP yakho ukuthi ingangeni."
+		"message": "\nI-FastForward ivimbele i-IP yakho ukuthi ingangeni."
 	},
 	"blockedSubtitle": {
-		"message": "Ngabe awufuni i-Universal Bypass ukuvikela abenzi ababi ekutholeni i-IP yakho?"
+		"message": "Ngabe awufuni i-FastForward ukuvikela abenzi ababi ekutholeni i-IP yakho?"
 	}
 }

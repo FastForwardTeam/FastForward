@@ -1,12 +1,12 @@
 {
 	"appDesc": {
-		"message": "Ne vesztegesd az időd beleegyezésekkel. A Universal Bypass automatikusan kikerüli a bosszantó link-rövidítőket."
+		"message": "Ne vesztegesd az időd beleegyezésekkel. A FastForward automatikusan kikerüli a bosszantó link-rövidítőket."
 	},
 	"firstrunTitle": {
-		"message": "Köszönjük, hogy telepítetted a Universal Bypass-t!"
+		"message": "Köszönjük, hogy telepítetted a FastForward-t!"
 	},
 	"firstrunNoScript": {
-		"message": "Azonban úgy tünik hogy te NoScript-tett használsz vagy hasonlót, amivel a Universal Bypass nem kompatibilis."
+		"message": "Azonban úgy tünik hogy te NoScript-tett használsz vagy hasonlót, amivel a FastForward nem kompatibilis."
 	},
 	"version": {
 		"message": "Verzió"
@@ -33,16 +33,16 @@
 		"message": "Gyakran Ismételt Kérdések (GYIK)"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass már megkerülte az Ön számára szánt % webhelyeket."
+		"message": "FastForward már megkerülte az Ön számára szánt % webhelyeket."
 	},
 	"support": {
-		"message": "Hozzájárulás Universal Bypass számára."
+		"message": "Hozzájárulás FastForward számára."
 	},
 	"options": {
 		"message": "Beállítások"
 	},
 	"optionsLink": {
-		"message": "Változtassa meg az Universal Bypass beállításait."
+		"message": "Változtassa meg az FastForward beállításait."
 	},
 	"optionsEnabled": {
 		"message": "Engedélyezze a weboldal megkerülését."
@@ -78,7 +78,7 @@
 		"message": "Egyéni megkerülések"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "Ez egy fejlett szolgáltatás a fejlesztők számára, hogy saját szkripteket készítsenek a webhelyek megkerülésére. Miután tökéletesítették őket, elküldhetők a GitHub-on, hogy hozzáadják az Universal Bypass-hoz, hogy mindenki számára elérhetőek legyenek."
+		"message": "Ez egy fejlett szolgáltatás a fejlesztők számára, hogy saját szkripteket készítsenek a webhelyek megkerülésére. Miután tökéletesítették őket, elküldhetők a GitHub-on, hogy hozzáadják az FastForward-hoz, hogy mindenki számára elérhetőek legyenek."
 	},
 	"beforeNavigate": {
 		"message": "Már majdnem a célodon vagy"
@@ -87,7 +87,7 @@
 		"message": "A cél hely: %"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "Mindenesetre, ha most lépsz át, fel fogják ismerni az Universal Bypass-t."
+		"message": "Mindenesetre, ha most lépsz át, fel fogják ismerni az FastForward-t."
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "% másodperc múlva nem fogják észrevenni."
@@ -114,10 +114,10 @@
 		"message": "Sajnos a letöltő szerver ellenőrzi, hogy tényleg várt-e, mielőtt elkezdené letölteni a fájlt."
 	},
 	"infoOutdated": {
-		"message": "Ez az oldal csak az Universal Bypass egy újabb verziójával kerülhető meg."
+		"message": "Ez az oldal csak az FastForward egy újabb verziójával kerülhető meg."
 	},
 	"crowdWait": {
-		"message": "Sajnos, te vagy az első aki erre a linkre kattintott, emiatt sajnos az oldal nem megkerülhető a Crowd Bypass segítségével. Ha megvárod a linket, a többi Universal Bypass felhasználónak már nem kell. "
+		"message": "Sajnos, te vagy az első aki erre a linkre kattintott, emiatt sajnos az oldal nem megkerülhető a Crowd Bypass segítségével. Ha megvárod a linket, a többi FastForward felhasználónak már nem kell. "
 	},
 	"crowdDisabled": {
 		"message": "Ez a weboldal megkerülhető a Crowd Bypass funkcióval, amit a beállításokban tudsz engedélyezni."
@@ -126,7 +126,7 @@
 		"message": "Talán nem kell várakoznod!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Más Universal Bypass felhasználók már vártak helyetted, és szerintük ez a(z) % webhelyhez vezet"
+		"message": "Más FastForward felhasználók már vártak helyetted, és szerintük ez a(z) % webhelyhez vezet"
 	},
 	"crowdBypassedTimer": {
 		"message": "Az oldal egy új lapon lesz megnyitva % másodperc múlva."
@@ -150,9 +150,9 @@
 		"message": "Egyből vagy x másodperc múlva legyél átirányítva?"
 	},
 	"blockedTitle": {
-		"message": "A Universal Bypass megtiltotta, hogy az IP-t naplózható legyen."
+		"message": "A FastForward megtiltotta, hogy az IP-t naplózható legyen."
 	},
 	"blockedSubtitle": {
-		"message": "Nem szeretnéd hogy az Universal Bypass megakadályozza a rossz emberektől hogy hozzáférhessenek az IP-d hez?"
+		"message": "Nem szeretnéd hogy az FastForward megakadályozza a rossz emberektől hogy hozzáférhessenek az IP-d hez?"
 	}
 }

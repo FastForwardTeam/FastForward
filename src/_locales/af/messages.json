@@ -1,12 +1,12 @@
 {
 	"appDesc": {
-		"message": "Moenie jou tyd mors met voldoening nie. Universal Bypass irriterende skakelverkorters omseil."
+		"message": "Moenie jou tyd mors met voldoening nie. FastForward irriterende skakelverkorters omseil."
 	},
 	"firstrunTitle": {
-		"message": "Dankie dat u Universal Bypass geïnstalleer het!"
+		"message": "Dankie dat u FastForward geïnstalleer het!"
 	},
 	"firstrunNoScript": {
-		"message": "Dit lyk egter asof u NoScript of soortgelyk gebruik, waarmee Universal Bypass nie versoenbaar is nie."
+		"message": "Dit lyk egter asof u NoScript of soortgelyk gebruik, waarmee FastForward nie versoenbaar is nie."
 	},
 	"version": {
 		"message": "weergawe\nThose afrikaans translations are not accurate, those are made with a translator."
@@ -33,7 +33,7 @@
 		"message": "Meer algemene kwessies (MAK)"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass het reeds% -werwe vir u omseil."
+		"message": "FastForward het reeds% -werwe vir u omseil."
 	},
 	"support": {
 		"message": "Maak'n bydrae tot die Universele shunt"
@@ -114,10 +114,10 @@
 		"message": "Ongelukkig, die aflaai bediener sal verseker dat jy gewag het voordat jy die lêer af te laai."
 	},
 	"infoOutdated": {
-		"message": "Le webhusayithi idluliswa yinguqulo entsha ye-Universal Bypass."
+		"message": "Le webhusayithi idluliswa yinguqulo entsha ye-FastForward."
 	},
 	"crowdWait": {
-		"message": "U is die eerste om hierdie skakel teë te kom, so ander Universal Bypass-gebruikers sal dit nie meer hoef te doen nie."
+		"message": "U is die eerste om hierdie skakel teë te kom, so ander FastForward-gebruikers sal dit nie meer hoef te doen nie."
 	},
 	"crowdDisabled": {
 		"message": "Hierdie webwerf is omseil deur die skare omseil, wat jy gestremdes in die opsies."

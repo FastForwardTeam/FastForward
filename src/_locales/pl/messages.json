@@ -3,10 +3,10 @@
 		"message": "Nie marnuj czasu na przestrzeganie przepisów, Uniwersalny Bypass automatycznie pomija irytujące skróty linkowe."
 	},
 	"firstrunTitle": {
-		"message": "Dziękujemy za instalację Universal Bypass!"
+		"message": "Dziękujemy za instalację FastForward!"
 	},
 	"firstrunNoScript": {
-		"message": "Wygląda na to, że używasz NoScript lub czegoś podobnego co powoduje, że Universal Bypass nie jest kompatybilny."
+		"message": "Wygląda na to, że używasz NoScript lub czegoś podobnego co powoduje, że FastForward nie jest kompatybilny."
 	},
 	"version": {
 		"message": "Wersja"
@@ -21,7 +21,7 @@
 		"message": "Sprawdź dostępność aktualizacji"
 	},
 	"updating": {
-		"message": "Pobieranie definicji Universal Bypass'a..."
+		"message": "Pobieranie definicji FastForward'a..."
 	},
 	"updateYes": {
 		"message": "Pomyślnie pobrano definicje obejścia."
@@ -33,7 +33,7 @@
 		"message": "Najczęściej zadawane pytania (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass ominął dla Ciebie % stron."
+		"message": "FastForward ominął dla Ciebie % stron."
 	},
 	"support": {
 		"message": "Wesprzyj Uniwersalne Obejście."
@@ -78,7 +78,7 @@
 		"message": "Niestandardowe Obejścia"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "Jest to zaawansowana funkcja dla programistów do tworzenia własnych skryptów do omijania witryn. Po udoskonaleniu można je przesłać na GitHub i dodać do Universal Bypass, więc są one dostępne dla wszystkich."
+		"message": "Jest to zaawansowana funkcja dla programistów do tworzenia własnych skryptów do omijania witryn. Po udoskonaleniu można je przesłać na GitHub i dodać do FastForward, więc są one dostępne dla wszystkich."
 	},
 	"beforeNavigate": {
 		"message": "Jesteś prawie w miejscu docelowym."
@@ -114,10 +114,10 @@
 		"message": "Niestety, serwer pobierania upewni się, czy czekałeś, zanim pozwoli ci pobrać ten plik."
 	},
 	"infoOutdated": {
-		"message": "Ta strona jest omijana przez nowszą wersję Universal Bypass."
+		"message": "Ta strona jest omijana przez nowszą wersję FastForward."
 	},
 	"crowdWait": {
-		"message": "Ups... wydaje się, że jesteś pierwszym, który klika w ten link, ale po tym jak Ty zaczekasz, inni użytkownicy Universal bypass nie będą musieli już czekać, ale w tym przypadku także ty nie będziesz musiał czekać wchodząc następnym razem w ten link."
+		"message": "Ups... wydaje się, że jesteś pierwszym, który klika w ten link, ale po tym jak Ty zaczekasz, inni użytkownicy FastForward nie będą musieli już czekać, ale w tym przypadku także ty nie będziesz musiał czekać wchodząc następnym razem w ten link."
 	},
 	"crowdDisabled": {
 		"message": "Ta strona jest ominięta przez crowd bypass, którą masz wyłączoną w ustawieniach."

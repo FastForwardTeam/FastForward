@@ -3,22 +3,22 @@
 		"message": "Ná drámhail do am lé comhlíonadh. Seachnaíonn Seachbhóthar Uilíoch go huathoibríoch gearrshaolaithe naisc atá annamh."
 	},
 	"firstrunTitle": {
-		"message": "Go raibh maith agat chun Universal Bypass a shuiteáil!"
+		"message": "Go raibh maith agat chun FastForward a shuiteáil!"
 	},
 	"firstrunNoScript": {
-		"message": "Ach, Tá tú ag usaíd NoScript ná rúd againn éile agus ní feidir le Universal Bypass in an obair lé sin."
+		"message": "Ach, Tá tú ag usaíd NoScript ná rúd againn éile agus ní feidir le FastForward in an obair lé sin."
 	},
 	"faq": {
 		"message": "Ceisteanna Coitianta (CC)"
 	},
 	"support": {
-		"message": "Taspann do tachíocht le haghaidh Universal Bypass"
+		"message": "Taspann do tachíocht le haghaidh FastForward"
 	},
 	"options": {
 		"message": "Roghnna"
 	},
 	"optionsLink": {
-		"message": "Athrú ná roghnna de Universal Bypass."
+		"message": "Athrú ná roghnna de FastForward."
 	},
 	"optionsEnabled": {
 		"message": "Cumasaigh seachbhóithre láithreán gréasáin."

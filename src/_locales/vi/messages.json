@@ -1,12 +1,12 @@
 {
 	"appDesc": {
-		"message": "Đừng lãng phí thời gian của bạn. Universal Bypass tự động bỏ qua các liên kết rút gọn phiền phức."
+		"message": "Đừng lãng phí thời gian của bạn. FastForward tự động bỏ qua các liên kết rút gọn phiền phức."
 	},
 	"firstrunTitle": {
-		"message": "Cảm ơn bạn đã cài đặt Universal Bypass!"
+		"message": "Cảm ơn bạn đã cài đặt FastForward!"
 	},
 	"firstrunNoScript": {
-		"message": "Tuy nhiên, bạn dường như đang sử dụng NoScript hoặc những thứ tương tự mà Universal Bypass không tương thích."
+		"message": "Tuy nhiên, bạn dường như đang sử dụng NoScript hoặc những thứ tương tự mà FastForward không tương thích."
 	},
 	"version": {
 		"message": "Phiên bản"
@@ -33,16 +33,16 @@
 		"message": "Câu hỏi thường gặp (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass đã bỏ qua % trang cho bạn."
+		"message": "FastForward đã bỏ qua % trang cho bạn."
 	},
 	"support": {
-		"message": "Đóng góp cho Universal Bypass."
+		"message": "Đóng góp cho FastForward."
 	},
 	"options": {
 		"message": "Tùy chọn"
 	},
 	"optionsLink": {
-		"message": "Thay đổi thiết lập của Universal Bypass."
+		"message": "Thay đổi thiết lập của FastForward."
 	},
 	"optionsEnabled": {
 		"message": "Cho phép bỏ qua website."
@@ -78,7 +78,7 @@
 		"message": "Tùy chỉnh Bypasses"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "Đây là tính năng nâng cao cho những nhà phát triển để tạo những đoạn mã giúp bỏ qua các trang. Khi đã hoàn thành, họ có thể gửi chúng lên GitHub để được thêm vào Universal Bypass, để mọi người có thể sử dụng."
+		"message": "Đây là tính năng nâng cao cho những nhà phát triển để tạo những đoạn mã giúp bỏ qua các trang. Khi đã hoàn thành, họ có thể gửi chúng lên GitHub để được thêm vào FastForward, để mọi người có thể sử dụng."
 	},
 	"beforeNavigate": {
 		"message": "Bạn sắp được đưa đến trang đích."
@@ -87,7 +87,7 @@
 		"message": "Trang đích của bạn là %"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "Tuy nhiên, nếu bạn chọn chuyển hướng ngay bây giờ, trang web sẽ phát hiện được Universal Bypass."
+		"message": "Tuy nhiên, nếu bạn chọn chuyển hướng ngay bây giờ, trang web sẽ phát hiện được FastForward."
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "Bạn sẽ không còn bị phát hiện sau % giây."
@@ -114,10 +114,10 @@
 		"message": "Thật không may, máy chủ cần phải đảm bảo bạn đã chờ trước khi cho phép tải về tệp."
 	},
 	"infoOutdated": {
-		"message": "Trang web này đã được bỏ qua với một phiên bản mới hơn của Universal Bypass."
+		"message": "Trang web này đã được bỏ qua với một phiên bản mới hơn của FastForward."
 	},
 	"crowdWait": {
-		"message": "Thật không may, bạn là người đầu tiên gặp phải liên kết này, nhưng sau khi bạn chờ đợi, những người dùng Universal Bypass khác sẽ không còn phải làm như vậy nữa."
+		"message": "Thật không may, bạn là người đầu tiên gặp phải liên kết này, nhưng sau khi bạn chờ đợi, những người dùng FastForward khác sẽ không còn phải làm như vậy nữa."
 	},
 	"crowdDisabled": {
 		"message": "Trang web này được bỏ qua bởi chức năng Crowd Bypass mà bạn đã vô hiệu hóa trong tùy chọn."
@@ -126,7 +126,7 @@
 		"message": "Bạn có thể không cần phải đợi!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Người dùng Universal Bypass đã từng chờ như bạn và phản hồi rằng liên liên kết này sẽ dẫn đến %"
+		"message": "Người dùng FastForward đã từng chờ như bạn và phản hồi rằng liên liên kết này sẽ dẫn đến %"
 	},
 	"crowdBypassedTimer": {
 		"message": "Sẽ được mở trong tab mới sau % giây."
@@ -150,9 +150,9 @@
 		"message": "Bạn có muốn mở trang web trong tab mới ngay bây giờ hay trong x giây?"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass đã ngăn chặn IP của bạn bị ghi lại."
+		"message": "FastForward đã ngăn chặn IP của bạn bị ghi lại."
 	},
 	"blockedSubtitle": {
-		"message": "Không muốn Universal Bypass ngăn kẻ xấu lấy được IP của bạn?"
+		"message": "Không muốn FastForward ngăn kẻ xấu lấy được IP của bạn?"
 	}
 }

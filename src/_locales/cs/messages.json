@@ -1,12 +1,12 @@
 {
 	"appDesc": {
-		"message": "Neztrácejte čas. Universal Bypass automaticky přeskočí nepříjemné zkracovače odkazů."
+		"message": "Neztrácejte čas. FastForward automaticky přeskočí nepříjemné zkracovače odkazů."
 	},
 	"firstrunTitle": {
-		"message": "Děkujeme za instalaci Universal Bypass!"
+		"message": "Děkujeme za instalaci FastForward!"
 	},
 	"firstrunNoScript": {
-		"message": "Zdá se však, že používáte NoScript nebo podobné, se kterým Universal Bypass není kompatibilní."
+		"message": "Zdá se však, že používáte NoScript nebo podobné, se kterým FastForward není kompatibilní."
 	},
 	"version": {
 		"message": "Verze"
@@ -33,16 +33,16 @@
 		"message": "Často kladené otázky (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass již pro vás obešel % stránek."
+		"message": "FastForward již pro vás obešel % stránek."
 	},
 	"support": {
-		"message": "Přispějte k Universal Bypass."
+		"message": "Přispějte k FastForward."
 	},
 	"options": {
 		"message": "Možnosti"
 	},
 	"optionsLink": {
-		"message": "Změnit nastavení Universal Bypass."
+		"message": "Změnit nastavení FastForward."
 	},
 	"optionsEnabled": {
 		"message": "Povolit obcházení zkracovačů."
@@ -78,7 +78,7 @@
 		"message": "Vlastní obcházení"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "tohle je pokročilá možnost pro vývojáře aby si mohli dělat vlastní scripty na obcházení stránek, když zdokonalené, můzou být dány na GitHub aby byly přidány do Universal Bypass, takže budou přístupné pro všechny"
+		"message": "tohle je pokročilá možnost pro vývojáře aby si mohli dělat vlastní scripty na obcházení stránek, když zdokonalené, můzou být dány na GitHub aby byly přidány do FastForward, takže budou přístupné pro všechny"
 	},
 	"beforeNavigate": {
 		"message": "Jste téměř na destinaci."
@@ -114,10 +114,10 @@
 		"message": "Bohužel, stahující server se ujistí že počkáte než vám dovolí stáhnout složku"
 	},
 	"infoOutdated": {
-		"message": "Tahle stránka je obcházena novější verzí Universal Bypass"
+		"message": "Tahle stránka je obcházena novější verzí FastForward"
 	},
 	"crowdWait": {
-		"message": "Bohužel jste první, kdo narazil na tento odkaz, ale po čekání již nebudou muset čekat ostatní uživatelé Universal Bypass."
+		"message": "Bohužel jste první, kdo narazil na tento odkaz, ale po čekání již nebudou muset čekat ostatní uživatelé FastForward."
 	},
 	"crowdDisabled": {
 		"message": "Tato stránka je obcházena Crowd Bypass, který jste vypnuli v nastavení."
@@ -126,7 +126,7 @@
 		"message": "Nemusel byste čekat!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Ostatní uživatelé Universal Bypass na vás čekali a náhlasit to vede k %"
+		"message": "Ostatní uživatelé FastForward na vás čekali a náhlasit to vede k %"
 	},
 	"crowdBypassedTimer": {
 		"message": "Toto bude otevřeno na nové kartě za % sekund."
@@ -150,9 +150,9 @@
 		"message": "Přejete si, aby byla tato karta otevřena v nové kartě okamžitě nebo za x sekund?"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass ochránil vaši IP před zaznamenáním."
+		"message": "FastForward ochránil vaši IP před zaznamenáním."
 	},
 	"blockedSubtitle": {
-		"message": "Nechcete, aby Universal Bypass ochránil vaši IP?"
+		"message": "Nechcete, aby FastForward ochránil vaši IP?"
 	}
 }

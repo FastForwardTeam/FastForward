@@ -1,12 +1,12 @@
 {
 	"appDesc": {
-		"message": "Verschwende deine Zeit nicht mit Unterwerfung. Universal Bypass umgeht nervige Linkkürzer."
+		"message": "Verschwende deine Zeit nicht mit Unterwerfung. FastForward umgeht nervige Linkkürzer."
 	},
 	"firstrunTitle": {
-		"message": "Danke, dass du Universal Bypass installiert hast!"
+		"message": "Danke, dass du FastForward installiert hast!"
 	},
 	"firstrunNoScript": {
-		"message": "Jedoch sieht es so aus, als ob du NoScript oder ähnliches verwendest, womit Universal Bypass nicht kompatibel ist."
+		"message": "Jedoch sieht es so aus, als ob du NoScript oder ähnliches verwendest, womit FastForward nicht kompatibel ist."
 	},
 	"version": {
 		"message": "Version"
@@ -33,16 +33,16 @@
 		"message": "Häufig gestellte Fragen (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass hat bereits % Seiten für dich umgangen."
+		"message": "FastForward hat bereits % Seiten für dich umgangen."
 	},
 	"support": {
-		"message": "Unterstütze Universal Bypass."
+		"message": "Unterstütze FastForward."
 	},
 	"options": {
 		"message": "Optionen"
 	},
 	"optionsLink": {
-		"message": "Ändere die Optionen von Universal Bypass."
+		"message": "Ändere die Optionen von FastForward."
 	},
 	"optionsEnabled": {
 		"message": "Aktiviere Webseiten-Umgehungen."
@@ -78,7 +78,7 @@
 		"message": "Eigene Umgehungen"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "Dies ist eine erweiterte Funktion für Entwickler, um eigene Skripte zu erstellen, um Webseiten zu umgehen. Wenn perfektioniert, können diese auf GitHub eingereicht werden, um in Universal Bypass hinzugefügt zu werden und allen zur Verfügung zu stehen."
+		"message": "Dies ist eine erweiterte Funktion für Entwickler, um eigene Skripte zu erstellen, um Webseiten zu umgehen. Wenn perfektioniert, können diese auf GitHub eingereicht werden, um in FastForward hinzugefügt zu werden und allen zur Verfügung zu stehen."
 	},
 	"beforeNavigate": {
 		"message": "Du bist fast am Ziel."
@@ -87,7 +87,7 @@
 		"message": "Dein Ziel ist %"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "Jedoch, wenn du jetzt navigierst, wird Universal Bypass erkannt."
+		"message": "Jedoch, wenn du jetzt navigierst, wird FastForward erkannt."
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "Du wirst nicht mehr erkannt in % Sekunden."
@@ -114,10 +114,10 @@
 		"message": "Leider wird der Download-Server sicherstellen, dass du gewartet hast, bevor er dir erlaubt, die Datei herunterzuladen."
 	},
 	"infoOutdated": {
-		"message": "Diese Website ist in einer neueren Version von Universal Bypass umgangen."
+		"message": "Diese Website ist in einer neueren Version von FastForward umgangen."
 	},
 	"crowdWait": {
-		"message": "Leider bist du der erste, der auf diesen Link trifft, aber nachdem du gewartet hast, müssen andere Universal Bypass Nutzer es nicht mehr tun."
+		"message": "Leider bist du der erste, der auf diesen Link trifft, aber nachdem du gewartet hast, müssen andere FastForward Nutzer es nicht mehr tun."
 	},
 	"crowdDisabled": {
 		"message": "Diese Webseite ist durch Crowd Bypass umgänglich. Du kannst Crowd Bypass in den Optionen aktivieren."
@@ -126,7 +126,7 @@
 		"message": "Du musst vielleicht nicht warten!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Andere Universal Bypass-Nutzer haben bereits für dich gewartet und gemeldet, dass das zu % führt."
+		"message": "Andere FastForward-Nutzer haben bereits für dich gewartet und gemeldet, dass das zu % führt."
 	},
 	"crowdBypassedTimer": {
 		"message": "Dies wird in % Sekunden in einem neuen Tab geöffnet."
@@ -150,9 +150,9 @@
 		"message": "Möchtest du, dass dies in einem neuen Tab sofort oder in x Sekunden geöffnet wird?"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass hat dich vor einem IP-Logger geschützt."
+		"message": "FastForward hat dich vor einem IP-Logger geschützt."
 	},
 	"blockedSubtitle": {
-		"message": "Möchtest du nicht, dass Universal Bypass deine IP vor bösen Leuten schützt?"
+		"message": "Möchtest du nicht, dass FastForward deine IP vor bösen Leuten schützt?"
 	}
 }

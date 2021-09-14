@@ -1,12 +1,12 @@
 {
 	"appDesc": {
-		"message": "Universal Bypassは、迷惑な短縮リンクを回避します。コンプライアンスで時間を無駄にしないでください。"
+		"message": "FastForwardは、迷惑な短縮リンクを回避します。コンプライアンスで時間を無駄にしないでください。"
 	},
 	"firstrunTitle": {
-		"message": "Universal Bypassをインストールしていただき、ありがとうございます!"
+		"message": "FastForwardをインストールしていただき、ありがとうございます!"
 	},
 	"firstrunNoScript": {
-		"message": "NoScriptなどを使用しているようですが、Universal Bypassとは互換性がありません。"
+		"message": "NoScriptなどを使用しているようですが、FastForwardとは互換性がありません。"
 	},
 	"version": {
 		"message": "バージョン"
@@ -33,10 +33,10 @@
 		"message": "よくある質問と回答(FAQ)"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypassは、いままでに%件のサイトをバイパスしました。"
+		"message": "FastForwardは、いままでに%件のサイトをバイパスしました。"
 	},
 	"support": {
-		"message": "Universal Bypassに貢献する"
+		"message": "FastForwardに貢献する"
 	},
 	"options": {
 		"message": "オプション"
@@ -78,7 +78,7 @@
 		"message": "カスタムバイパス"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "これは、開発者が独自のスクリプトを作成してサイトをバイパスするための高度な機能です。完成後、誰でも使えるように、GitHubに投稿してUniversal Bypassに追加することもできます。"
+		"message": "これは、開発者が独自のスクリプトを作成してサイトをバイパスするための高度な機能です。完成後、誰でも使えるように、GitHubに投稿してFastForwardに追加することもできます。"
 	},
 	"beforeNavigate": {
 		"message": "リンク先まであと少しです。"
@@ -87,7 +87,7 @@
 		"message": "リンク先は%"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "ただし、いま移動すると、サイトはUniversal Bypassを検出してしまいます。"
+		"message": "ただし、いま移動すると、サイトはFastForwardを検出してしまいます。"
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "あと%秒で検出されなくなります。"
@@ -114,10 +114,10 @@
 		"message": "残念ながら、ダウンロードサーバーはファイルのダウンロードが許可される前に待機していることを確認します。"
 	},
 	"infoOutdated": {
-		"message": "このサイトは、Universal Bypassの新しいバージョンでバイパスされます。"
+		"message": "このサイトは、FastForwardの新しいバージョンでバイパスされます。"
 	},
 	"crowdWait": {
-		"message": "残念ながら、あなたはこのリンクの最初のアクセス者です。しばらくすれば、他のUniversal Bypassユーザーが待つ必要はなくなります。"
+		"message": "残念ながら、あなたはこのリンクの最初のアクセス者です。しばらくすれば、他のFastForwardユーザーが待つ必要はなくなります。"
 	},
 	"crowdDisabled": {
 		"message": "このサイトは、Crowd Bypassを有効にしているときのみバイパスできます。オプションからこの設定をオンにすることができます。"
@@ -126,7 +126,7 @@
 		"message": "もう待つ必要はありません!"
 	},
 	"crowdBypassedInfo": {
-		"message": "他のUniversal Bypassユーザーがこのページを訪れたことがあり、%に移動することを報告しています。"
+		"message": "他のFastForwardユーザーがこのページを訪れたことがあり、%に移動することを報告しています。"
 	},
 	"crowdBypassedTimer": {
 		"message": "%秒後に新しいタブで開きます。"
@@ -150,7 +150,7 @@
 		"message": "すぐに、または数秒後に新しいタブで開かれるようにしたいですか?"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypassは、あなたのIPアドレスがログされないように阻止しました。"
+		"message": "FastForwardは、あなたのIPアドレスがログされないように阻止しました。"
 	},
 	"blockedSubtitle": {
 		"message": "悪意のある人があなたのIPアドレスをログできないようにする機能をオフにしたいですか?"

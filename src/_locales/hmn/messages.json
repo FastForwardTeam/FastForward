@@ -6,7 +6,7 @@
 		"message": "感謝您安裝通用旁路！"
 	},
 	"firstrunNoScript": {
-		"message": "但是，您似乎正在使用與Universal Bypass不兼容的NoScript或類似腳本。"
+		"message": "但是，您似乎正在使用與FastForward不兼容的NoScript或類似腳本。"
 	},
 	"version": {
 		"message": "版"
@@ -33,7 +33,7 @@
 		"message": "常見問題解答 (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass % 已經為您繞過了站點。"
+		"message": "FastForward % 已經為您繞過了站點。"
 	},
 	"support": {
 		"message": "為通用旁路做貢獻。"
@@ -69,7 +69,7 @@
 		"message": "自定義繞過\n"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "這是開發人員可以創建自己的腳本來繞過站點的高級功能。完善後，可以將它們提交到GitHub上以添加到Universal Bypass，因此每個人都可以使用。"
+		"message": "這是開發人員可以創建自己的腳本來繞過站點的高級功能。完善後，可以將它們提交到GitHub上以添加到FastForward，因此每個人都可以使用。"
 	},
 	"beforeNavigate": {
 		"message": "您快要到目的地了。"
@@ -96,7 +96,7 @@
 		"message": "不幸的是，下載服務器將確保您等待之後才允許下載文件。"
 	},
 	"infoOutdated": {
-		"message": "較新版本的Universal Bypass繞過了該網站。"
+		"message": "較新版本的FastForward繞過了該網站。"
 	},
 	"crowdWait": {
 		"message": "不幸的是，您是第一個遇到此鏈接的人，但是在等待之後，其他通用繞過用戶將不再需要。"
@@ -135,6 +135,6 @@
 		"message": "通用旁路阻止您的IP被記錄。"
 	},
 	"blockedSubtitle": {
-		"message": "不想讓Universal Bypass阻止不良行為者獲取您的IP嗎？"
+		"message": "不想讓FastForward阻止不良行為者獲取您的IP嗎？"
 	}
 }

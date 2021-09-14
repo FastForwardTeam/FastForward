@@ -1,12 +1,12 @@
 {
 	"appDesc": {
-		"message": "不要费时等待，Universal Bypass 可以帮你规避烦人的短链接。"
+		"message": "不要费时等待，FastForward 可以帮你规避烦人的短链接。"
 	},
 	"firstrunTitle": {
-		"message": "感谢您安装 Universal Bypass!"
+		"message": "感谢您安装 FastForward!"
 	},
 	"firstrunNoScript": {
-		"message": "看起来您正在使用 NoScript 或类似工具，Universal Bypass 暂不与之兼容。"
+		"message": "看起来您正在使用 NoScript 或类似工具，FastForward 暂不与之兼容。"
 	},
 	"version": {
 		"message": "版本"
@@ -33,16 +33,16 @@
 		"message": "常见问题(FAQ)"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass已经帮你跳过了%的网站"
+		"message": "FastForward已经帮你跳过了%的网站"
 	},
 	"support": {
-		"message": "支持Universal Bypass."
+		"message": "支持FastForward."
 	},
 	"options": {
 		"message": "选项"
 	},
 	"optionsLink": {
-		"message": "更改Universal Bypass的选项"
+		"message": "更改FastForward的选项"
 	},
 	"optionsEnabled": {
 		"message": "启用网站跳过功能"
@@ -78,7 +78,7 @@
 		"message": "自定义跳过"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "此高级功能供开发者创建自己的绕过脚本。完善以后，这些脚本可以提交到GitHub上，再添加到Universal Bypass中，让所有人都能使用。"
+		"message": "此高级功能供开发者创建自己的绕过脚本。完善以后，这些脚本可以提交到GitHub上，再添加到FastForward中，让所有人都能使用。"
 	},
 	"beforeNavigate": {
 		"message": "您即将到达目的网址。"
@@ -87,7 +87,7 @@
 		"message": "您的目的网址为%"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "如果您马上跳转，他们将会检测到Universal Bypass。"
+		"message": "如果您马上跳转，他们将会检测到FastForward。"
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "%秒后，您将不再被检测到。"
@@ -114,10 +114,10 @@
 		"message": "很不辛的是，下载服务器会确保您已经等待，然后才允许您下载文件。"
 	},
 	"infoOutdated": {
-		"message": "该网站已被新版本的Universal Bypass跳转。"
+		"message": "该网站已被新版本的FastForward跳转。"
 	},
 	"crowdWait": {
-		"message": "很抱歉您是第一个点击此链接的人，过一段时间以后，其他Universal Bypass用户将不再需要等待。"
+		"message": "很抱歉您是第一个点击此链接的人，过一段时间以后，其他FastForward用户将不再需要等待。"
 	},
 	"crowdDisabled": {
 		"message": "该网站需使用群众分享跳过功能，但您已禁用此功能。"
@@ -126,7 +126,7 @@
 		"message": "您或许不必等待！"
 	},
 	"crowdBypassedInfo": {
-		"message": "其他Universal Bypass用户已经帮您导航，并报告该链接的目的网址为%"
+		"message": "其他FastForward用户已经帮您导航，并报告该链接的目的网址为%"
 	},
 	"crowdBypassedTimer": {
 		"message": "%秒后将会在新标签页打开。"
@@ -150,9 +150,9 @@
 		"message": "您想在新标签页中立刻打开还是在x秒后？"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass阻止了您的IP地址被记录"
+		"message": "FastForward阻止了您的IP地址被记录"
 	},
 	"blockedSubtitle": {
-		"message": "不想要Universal Bypass阻止不良分子获取您的IP地址？"
+		"message": "不想要FastForward阻止不良分子获取您的IP地址？"
 	}
 }

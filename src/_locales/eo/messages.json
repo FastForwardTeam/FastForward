@@ -1,6 +1,6 @@
 {
 	"firstrunNoScript": {
-		"message": "Vi ŝajne uzas NoScript, aŭ aferoj same. Universal Bypass bedaŭrinde ne povas kunfari kun tioj."
+		"message": "Vi ŝajne uzas NoScript, aŭ aferoj same. FastForward bedaŭrinde ne povas kunfari kun tioj."
 	},
 	"version": {
 		"message": "versio"
@@ -15,7 +15,7 @@
 		"message": "Ofta demandoj"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass preterpasinta % retpaĝojn. "
+		"message": "FastForward preterpasinta % retpaĝojn. "
 	},
 	"options": {
 		"message": "agordoj"
@@ -24,7 +24,7 @@
 		"message": "Vi estas navigita al %"
 	},
 	"infoOutdated": {
-		"message": "Ĉi tio retpaĝo estas uzanta pli nova versio de Universal Bypass"
+		"message": "Ĉi tio retpaĝo estas uzanta pli nova versio de FastForward"
 	},
 	"crowdWait": {
 		"message": "Bedaŭrinde, vi estas la unua vizitanto sur ĉi retpaĝo. Sed, se vi atendas, la aliaj uzantoj ne atendos."
@@ -45,6 +45,6 @@
 		"message": "Ĉu vi volas aperi tion instante, sur nova tabo?"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass haltis via IP adreso registrita."
+		"message": "FastForward haltis via IP adreso registrita."
 	}
 }

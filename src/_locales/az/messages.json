@@ -1,12 +1,12 @@
 {
 	"appDesc": {
-		"message": "Vaxtınızı uyğunlaşdırmaya xərcləməyin. Universal Bypass, zəhlətökən bağlantı qısaldıcılarını ötürür."
+		"message": "Vaxtınızı uyğunlaşdırmaya xərcləməyin. FastForward, zəhlətökən bağlantı qısaldıcılarını ötürür."
 	},
 	"firstrunTitle": {
-		"message": "Universal Bypass quraşdırdığınız üçün təşəkkürlər!"
+		"message": "FastForward quraşdırdığınız üçün təşəkkürlər!"
 	},
 	"firstrunNoScript": {
-		"message": "Buna baxmayaraq, Universal Bypass ilə uyğunlaşmayan NoScript və ya oxşarını istifadə edirsiniz."
+		"message": "Buna baxmayaraq, FastForward ilə uyğunlaşmayan NoScript və ya oxşarını istifadə edirsiniz."
 	},
 	"version": {
 		"message": "Versiya"
@@ -24,13 +24,13 @@
 		"message": "Tez-tez Soruşulan Suallar (FAQ)"
 	},
 	"support": {
-		"message": "Universal Bypass-ı Dəstəkləyin."
+		"message": "FastForward-ı Dəstəkləyin."
 	},
 	"options": {
 		"message": "Seçimlər"
 	},
 	"optionsLink": {
-		"message": "Universal Bypass seçimlərini dəyişdirin."
+		"message": "FastForward seçimlərini dəyişdirin."
 	},
 	"optionsEnabled": {
 		"message": "Veb saytlarının ötürülməsini fəallaşdır."
@@ -60,13 +60,13 @@
 		"message": "1 saniyə ərzində avtomatik yönləndiriləcəksiniz."
 	},
 	"crowdWait": {
-		"message": "Təəssüf ki, bu bağlantı ilə qarşılaşan ilk sizsiniz, ancaq siz gözlədikdən sonra, digər Universal Bypass istifadəçilərinin buna ehtiyacı olmayacaq."
+		"message": "Təəssüf ki, bu bağlantı ilə qarşılaşan ilk sizsiniz, ancaq siz gözlədikdən sonra, digər FastForward istifadəçilərinin buna ehtiyacı olmayacaq."
 	},
 	"crowdBypassed": {
 		"message": "Gözləməyinizə ehtiyac yoxdur!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Digər Universal Bypass istifadəçiləri artıq sizi gözlədilər və bunun % a çatdığı bildirildi"
+		"message": "Digər FastForward istifadəçiləri artıq sizi gözlədilər və bunun % a çatdığı bildirildi"
 	},
 	"crowdBypassedTimer": {
 		"message": "Bu, % saniyə ərzində yeni bir vərəqdə açılacaq."
@@ -81,9 +81,9 @@
 		"message": "Bunun indi ya x saniyə sonra yeni bir vərəqdə açılmasını istəyirsiniz?"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass, IP ünvanların qeydlərə əlavə edilməsinin qarşısı aldı."
+		"message": "FastForward, IP ünvanların qeydlərə əlavə edilməsinin qarşısı aldı."
 	},
 	"blockedSubtitle": {
-		"message": "Universal Bypass-ın, pisniyyətli insanların IP ünvanınızı oğurlamasının qarşısını almasını istəmirsiniz?"
+		"message": "FastForward-ın, pisniyyətli insanların IP ünvanınızı oğurlamasının qarşısını almasını istəmirsiniz?"
 	}
 }
