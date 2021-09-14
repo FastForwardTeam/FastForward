@@ -1,12 +1,12 @@
 {
 	"appDesc": {
-		"message": "Slösa inte bort din tid med samstämmighet. Universal Bypass hoppar automatiskt över irriterande länkförkortare."
+		"message": "Slösa inte bort din tid med samstämmighet. FastForward hoppar automatiskt över irriterande länkförkortare."
 	},
 	"firstrunTitle": {
-		"message": "Tack för att du installerat Universal Bypass!"
+		"message": "Tack för att du installerat FastForward!"
 	},
 	"firstrunNoScript": {
-		"message": "Det verkar som om du använder NoScript eller något liknande vilket Universal Bypass inte är kompatibel med."
+		"message": "Det verkar som om du använder NoScript eller något liknande vilket FastForward inte är kompatibel med."
 	},
 	"version": {
 		"message": "Version"
@@ -33,16 +33,16 @@
 		"message": "Vanliga frågor (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass har redan förbikopplat % webbplatser för dig."
+		"message": "FastForward har redan förbikopplat % webbplatser för dig."
 	},
 	"support": {
-		"message": "Stöd Universal Bypass."
+		"message": "Stöd FastForward."
 	},
 	"options": {
 		"message": "Alternativ"
 	},
 	"optionsLink": {
-		"message": "Ändra det i alternativen för Universal Bypass."
+		"message": "Ändra det i alternativen för FastForward."
 	},
 	"optionsEnabled": {
 		"message": "Aktivera förbikopplingar av webbplats."
@@ -78,7 +78,7 @@
 		"message": "Anpassade förbikopplingar"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "Detta är en avancerad funktion för utvecklare som vill skapa egna skript för att gå förbi webbplatser. När de fungerar, kan de sedan skickas in till GitHub för att läggas till Universal Bypass, så alla får tillgång till dem."
+		"message": "Detta är en avancerad funktion för utvecklare som vill skapa egna skript för att gå förbi webbplatser. När de fungerar, kan de sedan skickas in till GitHub för att läggas till FastForward, så alla får tillgång till dem."
 	},
 	"beforeNavigate": {
 		"message": "Du har nästan nått ditt mål."
@@ -87,7 +87,7 @@
 		"message": "Ditt mål är %"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "Om du navigerar nu kommer de att upptäcka Universal Bypass."
+		"message": "Om du navigerar nu kommer de att upptäcka FastForward."
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "Du kommer inte längre att bli upptäckt om % sekunder."
@@ -114,10 +114,10 @@
 		"message": "Tyvärr använder de backend-validering för att se till att du faktiskt väntar tiden ut innan du kan ladda ner filen."
 	},
 	"infoOutdated": {
-		"message": "Denna webbplats förbikopplas av en nyare version av Universal Bypass."
+		"message": "Denna webbplats förbikopplas av en nyare version av FastForward."
 	},
 	"crowdWait": {
-		"message": "Vilken otur du har som är den första som stöter på den här länken, men efter att du har väntat kommer andra Universal Bypass-användare inte längre att behöva vänta."
+		"message": "Vilken otur du har som är den första som stöter på den här länken, men efter att du har väntat kommer andra FastForward-användare inte längre att behöva vänta."
 	},
 	"crowdDisabled": {
 		"message": "Den här webbplatsen förbigås av crowd-bypass, som du har inaktiverat i alternativen."
@@ -126,7 +126,7 @@
 		"message": "Det är inte säkert du behöver vänta!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Andra användare av Universal Bypass har redan väntat på dig och rapporterat att denna leder till %"
+		"message": "Andra användare av FastForward har redan väntat på dig och rapporterat att denna leder till %"
 	},
 	"crowdBypassedTimer": {
 		"message": "Detta öppnas i en ny flik om % sekunder."
@@ -150,9 +150,9 @@
 		"message": "Vill du att detta ska öppnas i en ny flik direkt eller om x antal sekunder?"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass förhindrade din IP-adress från att loggas."
+		"message": "FastForward förhindrade din IP-adress från att loggas."
 	},
 	"blockedSubtitle": {
-		"message": "Vill du inte att Universal Bypass ska förhindra skurkar från att få tag på din IP-adress?"
+		"message": "Vill du inte att FastForward ska förhindra skurkar från att få tag på din IP-adress?"
 	}
 }

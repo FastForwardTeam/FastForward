@@ -1,12 +1,12 @@
 {
 	"appDesc": {
-		"message": "Verspil geen tijd met moeilijkheid. Universal Bypass slaat irritante link-verkorters automatisch over."
+		"message": "Verspil geen tijd met moeilijkheid. FastForward slaat irritante link-verkorters automatisch over."
 	},
 	"firstrunTitle": {
-		"message": "Bedankt voor het installeren van Universal Bypass!"
+		"message": "Bedankt voor het installeren van FastForward!"
 	},
 	"firstrunNoScript": {
-		"message": "U lijkt NoScript of dergelijke te gebruiken, daarmee werkt Universal Bypass niet."
+		"message": "U lijkt NoScript of dergelijke te gebruiken, daarmee werkt FastForward niet."
 	},
 	"version": {
 		"message": "Versie"
@@ -33,16 +33,16 @@
 		"message": "Veelgestelde Vragen (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass heeft al % sites voor je omzeild."
+		"message": "FastForward heeft al % sites voor je omzeild."
 	},
 	"support": {
-		"message": "Ondersteun Universal Bypass."
+		"message": "Ondersteun FastForward."
 	},
 	"options": {
 		"message": "Opties"
 	},
 	"optionsLink": {
-		"message": "Universal Bypass-opties wijzigen."
+		"message": "FastForward-opties wijzigen."
 	},
 	"optionsEnabled": {
 		"message": "Website bypass inschakelen."
@@ -87,7 +87,7 @@
 		"message": "Uw bestemming is %"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "Echter, als je nu navigeert, detecteren ze Universal Bypass."
+		"message": "Echter, als je nu navigeert, detecteren ze FastForward."
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "Je wordt niet langer gedetecteerd over % seconden."
@@ -114,7 +114,7 @@
 		"message": "Helaas zal de downloadserver ervoor zorgen dat je hebt gewacht voordat je dit bestand kan downloaden."
 	},
 	"infoOutdated": {
-		"message": "Deze website wordt overgeslagen in een nieuwere versie van Universal Bypass."
+		"message": "Deze website wordt overgeslagen in een nieuwere versie van FastForward."
 	},
 	"crowdWait": {
 		"message": "Helaas ben je de eerste die deze link tegenkomt, maar nadat je hebt gewacht hoeven anderen dat niet meer."
@@ -126,7 +126,7 @@
 		"message": "U hoeft misschien niet te wachten!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Andere Universal Bypass-gebruikers hebben al aangegeven dat dit aan % ligt"
+		"message": "Andere FastForward-gebruikers hebben al aangegeven dat dit aan % ligt"
 	},
 	"crowdBypassedTimer": {
 		"message": "Dit zal in % seconden worden geopend in een nieuw tabblad."
@@ -150,7 +150,7 @@
 		"message": "Wilt je dat dit direct, of na x seconden wordt geopend in een nieuw tabblad?"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass voorkwam dat uw IP werdt geregistreerd."
+		"message": "FastForward voorkwam dat uw IP werdt geregistreerd."
 	},
 	"blockedSubtitle": {
 		"message": "Weet u zeker dat u IP-Logger bescherming wilt uitschakelen?"

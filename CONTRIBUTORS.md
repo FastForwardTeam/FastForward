@@ -1,11 +1,11 @@
-# Universal Bypass Contributors
+# FastForward Contributors
 
-Thanks to everyone who helps make Universal Bypass:
+Thanks to everyone who helps make FastForward:
 
-- The [code contributors](https://github.com/Sainan/Universal-Bypass/graphs/contributors) right here at Github.
+- The [code contributors](https://github.com/FastForwardTeam/FastForward/graphs/contributors) right here at Github.
 - The translators over at [Crowdin](https://crowdin.com/project/bypass).
 
-## Libraries used by Universal Bypass
+## Libraries used by FastForward
 
-- Universal Bypass uses [UIkit](https://getuikit.com/) for its design.
+- FastForward uses [UIkit](https://getuikit.com/) for its design.
 - The custom bypass editor is powered by [Ace](https://ace.c9.io/).

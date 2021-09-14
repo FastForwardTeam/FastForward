@@ -1,12 +1,12 @@
 {
 	"appDesc": {
-		"message": "Peidiwch â gwastraffu eich amser gyda chydymffurfiaeth. Mae Universal Bypass yn osgoi linciau byr annifyr."
+		"message": "Peidiwch â gwastraffu eich amser gyda chydymffurfiaeth. Mae FastForward yn osgoi linciau byr annifyr."
 	},
 	"firstrunTitle": {
-		"message": "Diolch am lawrlwytho Universal Bypass!"
+		"message": "Diolch am lawrlwytho FastForward!"
 	},
 	"firstrunNoScript": {
-		"message": "Fodd bynnag, ni ydych yn defnyddio NoScript neu unrhyw beth tebyg, nad yw Universal Bypass yn addas ar gyfer."
+		"message": "Fodd bynnag, ni ydych yn defnyddio NoScript neu unrhyw beth tebyg, nad yw FastForward yn addas ar gyfer."
 	},
 	"version": {
 		"message": "Fersiwn"
@@ -33,16 +33,16 @@
 		"message": "Cwestiynau cyffredin (CC)"
 	},
 	"bypassCounter": {
-		"message": "Mae Universal Bypass wedi osgoi % gwefan yn barod i chi."
+		"message": "Mae FastForward wedi osgoi % gwefan yn barod i chi."
 	},
 	"support": {
-		"message": "Cyfrannu i Universal Bypass"
+		"message": "Cyfrannu i FastForward"
 	},
 	"options": {
 		"message": "Opsiynau"
 	},
 	"optionsLink": {
-		"message": "Newid opsiynau Universal Bypass."
+		"message": "Newid opsiynau FastForward."
 	},
 	"optionsEnabled": {
 		"message": "Caniatáu osgoi gwefanau"
@@ -78,7 +78,7 @@
 		"message": "Ffyrdd Osgoi Personol"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "Mae hon yn nodwedd uwch i ddatblygwyr greu sgriptiau eu hunain i osgoi safleoedd. Ar ôl eu perffeithio, gellir eu cyflwyno wedyn ar GitHub i'w hychwanegu at Universal Bypass, fel ei bod ar gael i bawb."
+		"message": "Mae hon yn nodwedd uwch i ddatblygwyr greu sgriptiau eu hunain i osgoi safleoedd. Ar ôl eu perffeithio, gellir eu cyflwyno wedyn ar GitHub i'w hychwanegu at FastForward, fel ei bod ar gael i bawb."
 	},
 	"beforeNavigate": {
 		"message": "Rydych bron ar eich cyrchfan."
@@ -87,7 +87,7 @@
 		"message": "Eich cyrchfan yw %"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "Fodd bynnag, os byddwch yn llywio nawr, byddant yn synhwyro Universal Bypass."
+		"message": "Fodd bynnag, os byddwch yn llywio nawr, byddant yn synhwyro FastForward."
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "Ni fyddwch yn cael eich synhywro mwyach mewn % eiliad."
@@ -114,10 +114,10 @@
 		"message": "Yn anffodus, bydd y gweinydd lawrlwytho yn sicrhau eich bod wedi aros cyn gadael i chi lawrlwytho'r ffeil."
 	},
 	"infoOutdated": {
-		"message": "Mae'r wefan hon yn gallu cael ei hosgoi gan fersiwn mwy newydd o Universal Bypass."
+		"message": "Mae'r wefan hon yn gallu cael ei hosgoi gan fersiwn mwy newydd o FastForward."
 	},
 	"crowdWait": {
-		"message": "Yn anffodus, chi yw'r cyntaf i ddod ar draws y linc hwn, ond ar ôl i chi aros, ni fydd yn rhaid i ddefnyddwyr eraill Universal Bypass wneud hynny."
+		"message": "Yn anffodus, chi yw'r cyntaf i ddod ar draws y linc hwn, ond ar ôl i chi aros, ni fydd yn rhaid i ddefnyddwyr eraill FastForward wneud hynny."
 	},
 	"crowdDisabled": {
 		"message": "Mae'r wefan hon yn cael ei hosgoi gan osgoi torfol, gallwch ei galluogi yn yr opsiynau."
@@ -126,7 +126,7 @@
 		"message": "Efallai ni fydd yn rhaid i chi aros!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Mae defnyddwyr eraill Universal Bypass eisoes wedi aros ac wedi dweud fod hwn yn arwain at %"
+		"message": "Mae defnyddwyr eraill FastForward eisoes wedi aros ac wedi dweud fod hwn yn arwain at %"
 	},
 	"crowdBypassedTimer": {
 		"message": "Bydd hwn yn cael ei agor mewn tab newydd mewn % eiliad."
@@ -150,9 +150,9 @@
 		"message": "Ydych chi am i hwn gael ei hagor mewn tab newydd ar unwaith neu mewn x eiliad?"
 	},
 	"blockedTitle": {
-		"message": "Rhwystrodd Universal Bypass eich IP rhag cael ei ddwyn."
+		"message": "Rhwystrodd FastForward eich IP rhag cael ei ddwyn."
 	},
 	"blockedSubtitle": {
-		"message": "Ddim am i Universal Bypass atal pobl gwael rhag cael eich IP?"
+		"message": "Ddim am i FastForward atal pobl gwael rhag cael eich IP?"
 	}
 }

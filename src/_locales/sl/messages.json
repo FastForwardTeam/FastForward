@@ -3,10 +3,10 @@
 		"message": "Ne zapravljajte časa s skladnostjo.  Univerzalni bypass obide nadležne krajšave povezav."
 	},
 	"firstrunTitle": {
-		"message": "Hvala, ker ste namestili Universal Bypass!"
+		"message": "Hvala, ker ste namestili FastForward!"
 	},
 	"firstrunNoScript": {
-		"message": "Vendar se zdi, da uporabljate NoScript ali podobno, s čimer Universal Bypass ni združljiv."
+		"message": "Vendar se zdi, da uporabljate NoScript ali podobno, s čimer FastForward ni združljiv."
 	},
 	"version": {
 		"message": "Različica"
@@ -33,7 +33,7 @@
 		"message": "Pogosta vprašanja (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass je že zaobšel% spletnih mest za vas."
+		"message": "FastForward je že zaobšel% spletnih mest za vas."
 	},
 	"support": {
 		"message": "Prispevajte k Univerzalni obvoznici."
@@ -42,7 +42,7 @@
 		"message": "Opcije"
 	},
 	"optionsLink": {
-		"message": "Spremeni možnosti Universal Bypass '."
+		"message": "Spremeni možnosti FastForward '."
 	},
 	"optionsEnabled": {
 		"message": "Omogoči obhode spletnih strani"
@@ -78,7 +78,7 @@
 		"message": "Obvoznice po meri"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "To je napredna funkcija za razvijalce, da ustvarijo svoje skripte za obhod spletnih mest.  Ko bodo izpopolnjeni, jih je mogoče nato poslati na GitHub in jih dodati Universal Bypass, tako da so na voljo vsem."
+		"message": "To je napredna funkcija za razvijalce, da ustvarijo svoje skripte za obhod spletnih mest.  Ko bodo izpopolnjeni, jih je mogoče nato poslati na GitHub in jih dodati FastForward, tako da so na voljo vsem."
 	},
 	"beforeNavigate": {
 		"message": "Skoraj že ste na svojem cilju."
@@ -87,7 +87,7 @@
 		"message": "Vaš cilj je%"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "Če pa greste zdaj, bodo zaznali Universal Bypass."
+		"message": "Če pa greste zdaj, bodo zaznali FastForward."
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "V% sekundah ne boste več zaznani."
@@ -111,10 +111,10 @@
 		"message": "Na žalost bo strežnik za prenos poskrbel, da ste čakali, preden boste dovolili prenos datoteke."
 	},
 	"infoOutdated": {
-		"message": "To spletno mesto obide novejša različica Universal Bypass."
+		"message": "To spletno mesto obide novejša različica FastForward."
 	},
 	"crowdWait": {
-		"message": "Na žalost ste prvič naleteli na to povezavo, vendar po tem, ko ste čakali, drugim uporabnikom Universal Bypass-a ne bo več treba."
+		"message": "Na žalost ste prvič naleteli na to povezavo, vendar po tem, ko ste čakali, drugim uporabnikom FastForward-a ne bo več treba."
 	},
 	"crowdDisabled": {
 		"message": "To spletno mesto obide množica bypass, kar lahko omogočite v možnostih."
@@ -123,7 +123,7 @@
 		"message": "Morda ne bo treba čakati!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Drugi uporabniki Universal Bypass-a so vas že čakali in sporočili, da to vodi do%"
+		"message": "Drugi uporabniki FastForward-a so vas že čakali in sporočili, da to vodi do%"
 	},
 	"crowdBypassedTimer": {
 		"message": "To se odpre v novem zavihku v% sekundah."

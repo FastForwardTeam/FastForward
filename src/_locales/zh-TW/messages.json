@@ -1,12 +1,12 @@
 {
 	"appDesc": {
-		"message": "別浪費時間在等待上！Universal Bypass 能夠全自動地繞過煩人的短連結！"
+		"message": "別浪費時間在等待上！FastForward 能夠全自動地繞過煩人的短連結！"
 	},
 	"firstrunTitle": {
-		"message": "感謝您安裝 Universal Bypass！"
+		"message": "感謝您安裝 FastForward！"
 	},
 	"firstrunNoScript": {
-		"message": "然而，您似乎安裝了 NoScript 或類似的插件，導致與 Universal Bypass 造成衝突。"
+		"message": "然而，您似乎安裝了 NoScript 或類似的插件，導致與 FastForward 造成衝突。"
 	},
 	"version": {
 		"message": "版本"
@@ -33,16 +33,16 @@
 		"message": "常見問答 (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass 已幫您繞過%個網站。"
+		"message": "FastForward 已幫您繞過%個網站。"
 	},
 	"support": {
-		"message": "幫助 Universal Bypass"
+		"message": "幫助 FastForward"
 	},
 	"options": {
 		"message": "選項"
 	},
 	"optionsLink": {
-		"message": "設定 Universal Bypass 的選項"
+		"message": "設定 FastForward 的選項"
 	},
 	"optionsEnabled": {
 		"message": "啟用網站繞過功能"
@@ -78,7 +78,7 @@
 		"message": "自定義繞過規則"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "這是讓開發者自己編寫程式繞過網站的進階功能。當修改至功能完好後，可以提交到 Github，以新增至 Universal Bypass 讓大家使用。"
+		"message": "這是讓開發者自己編寫程式繞過網站的進階功能。當修改至功能完好後，可以提交到 Github，以新增至 FastForward 讓大家使用。"
 	},
 	"beforeNavigate": {
 		"message": "您與目的地觸手可及。"
@@ -87,7 +87,7 @@
 		"message": "您的目的地是 %"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "但若您馬上跳轉，他們將會檢測到Universal Bypass。"
+		"message": "但若您馬上跳轉，他們將會檢測到FastForward。"
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "%秒後，您將不再被檢測到。"
@@ -114,10 +114,10 @@
 		"message": "很不幸，下載伺服器需要確保您在下載檔案前已等候"
 	},
 	"infoOutdated": {
-		"message": "此網站被更新版本的 Universal Bypass 繞過了。"
+		"message": "此網站被更新版本的 FastForward 繞過了。"
 	},
 	"crowdWait": {
-		"message": "很遺憾地，您是第一個遇到這個連結的人，但在您等候了以後，其他 Universal Bypass 的用戶就不用受苦了。"
+		"message": "很遺憾地，您是第一個遇到這個連結的人，但在您等候了以後，其他 FastForward 的用戶就不用受苦了。"
 	},
 	"crowdDisabled": {
 		"message": "這個網站是以用戶提供的連結繞過，而此功能已被您在設定中關閉。"
@@ -126,7 +126,7 @@
 		"message": "或許您可以不用再等待了。"
 	},
 	"crowdBypassedInfo": {
-		"message": "其他的 Universal Bypass 用戶已經替您省下寶貴的時間，並回報該短連結重導向 %"
+		"message": "其他的 FastForward 用戶已經替您省下寶貴的時間，並回報該短連結重導向 %"
 	},
 	"crowdBypassedTimer": {
 		"message": "將在%秒後以新分頁開啟。"
@@ -150,9 +150,9 @@
 		"message": "您希望立刻或是幾秒後以新分頁開啟嗎？"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass 防止您的IP被記錄。"
+		"message": "FastForward 防止您的IP被記錄。"
 	},
 	"blockedSubtitle": {
-		"message": "不希望Universal Bypass自動防止不法者獲取您的IP嗎?"
+		"message": "不希望FastForward自動防止不法者獲取您的IP嗎?"
 	}
 }

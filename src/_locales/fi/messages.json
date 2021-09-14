@@ -1,12 +1,12 @@
 {
 	"appDesc": {
-		"message": "Älä tuhlaa aikaa odottamiseen ja mainosten katseluun! Universal Bypass skippaa automaattisesti ärsyttävät linkin lyhentäjät."
+		"message": "Älä tuhlaa aikaa odottamiseen ja mainosten katseluun! FastForward skippaa automaattisesti ärsyttävät linkin lyhentäjät."
 	},
 	"firstrunTitle": {
-		"message": "Kiitos, kun asensit Universal Bypassin!"
+		"message": "Kiitos, kun asensit FastForwardin!"
 	},
 	"firstrunNoScript": {
-		"message": "Vaikuttaa kuitenkin siltä, että käytät NoScriptiä tai vastaavaa, jonka kanssa Universal Bypass ei ole yhteensopiva."
+		"message": "Vaikuttaa kuitenkin siltä, että käytät NoScriptiä tai vastaavaa, jonka kanssa FastForward ei ole yhteensopiva."
 	},
 	"version": {
 		"message": "Versio"
@@ -33,16 +33,16 @@
 		"message": "Usein Kysytyt Kysymykset (UKK)"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass on ohittanut % sivuja sinulle."
+		"message": "FastForward on ohittanut % sivuja sinulle."
 	},
 	"support": {
-		"message": "Tue Universal Bypassia"
+		"message": "Tue FastForwardia"
 	},
 	"options": {
 		"message": "Asetukset"
 	},
 	"optionsLink": {
-		"message": "Vaihda Universal Bypassin asetuksia."
+		"message": "Vaihda FastForwardin asetuksia."
 	},
 	"optionsEnabled": {
 		"message": "Aktivoi nettisivustojen ohitus."
@@ -78,7 +78,7 @@
 		"message": "Mukautetut Ohitukset"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "Tämä on edistynyt ominaisuus, joka on luotu ohjelmistokehittäjille voidakseen tehdä omia ohituksiaan. Kunnes ne ovat virheettömiä ja valmiita, ne voi julkaista GitHubissa lisättäväksi Universal Bypassiin. Näin ne ovat saatavilla kaikille."
+		"message": "Tämä on edistynyt ominaisuus, joka on luotu ohjelmistokehittäjille voidakseen tehdä omia ohituksiaan. Kunnes ne ovat virheettömiä ja valmiita, ne voi julkaista GitHubissa lisättäväksi FastForwardiin. Näin ne ovat saatavilla kaikille."
 	},
 	"beforeNavigate": {
 		"message": "Olet melkein määränpäässäsi."
@@ -87,7 +87,7 @@
 		"message": "Sinun määränpääsi on %."
 	},
 	"beforeNavigateUnsafe": {
-		"message": "Jos kuitenkin navigoit nyt, he havaitsevat Universal Bypassin."
+		"message": "Jos kuitenkin navigoit nyt, he havaitsevat FastForwardin."
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "Sinua ei enää havaita % sekunnin kuluttua."
@@ -114,10 +114,10 @@
 		"message": "Valitettavasti, latauspalvelin vaatii, että olet odottanut ennen kuin se antaa sinun ladata tiedostosi."
 	},
 	"infoOutdated": {
-		"message": "Tämä sivusto on ohitettavissa Universal Bypassin uudella versiolla."
+		"message": "Tämä sivusto on ohitettavissa FastForwardin uudella versiolla."
 	},
 	"crowdWait": {
-		"message": "Valitettavasti olet ensimmäinen, joka on törmännyt tähän linkkiin, mutta odottamisesi jälkeen muiden Universal Bypass käyttäjien ei tarvitse odottaa."
+		"message": "Valitettavasti olet ensimmäinen, joka on törmännyt tähän linkkiin, mutta odottamisesi jälkeen muiden FastForward käyttäjien ei tarvitse odottaa."
 	},
 	"crowdDisabled": {
 		"message": "Tämä sivusto on ohitettavissa joukoitetulla ohituksella, jonka pystyt laittamaan päälle asetuksissa."
@@ -126,7 +126,7 @@
 		"message": "Sinun ei välttämättä tarvitse odottaa!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Toiset Universal Bypassin käyttäjät ovat entuudestaan odottaneet sinulle ja ilmoittaneet, että tämä vie %"
+		"message": "Toiset FastForwardin käyttäjät ovat entuudestaan odottaneet sinulle ja ilmoittaneet, että tämä vie %"
 	},
 	"crowdBypassedTimer": {
 		"message": "Tämä tullaan avaamaan uudessa välilehdessä % sekunnin kuluttua."
@@ -150,9 +150,9 @@
 		"message": "Haluatko, että tämä avataan heti vai x sekunnin päästä?"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass esti IP-osoitteesi jäljittämisen."
+		"message": "FastForward esti IP-osoitteesi jäljittämisen."
 	},
 	"blockedSubtitle": {
-		"message": "Etkö halua Universal Bypassia estämästä huonoja yrityksiä saamasta IP-osoitettasi?"
+		"message": "Etkö halua FastForwardia estämästä huonoja yrityksiä saamasta IP-osoitettasi?"
 	}
 }

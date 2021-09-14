@@ -1,12 +1,12 @@
 {
 	"appDesc": {
-		"message": "시간을 낭비하지 마세요. Universal Bypass로 성가신 링크 단축 서비스를 자동 생략하세요."
+		"message": "시간을 낭비하지 마세요. FastForward로 성가신 링크 단축 서비스를 자동 생략하세요."
 	},
 	"firstrunTitle": {
-		"message": "Universal Bypass를 설치해 주셔서 감사합니다!"
+		"message": "FastForward를 설치해 주셔서 감사합니다!"
 	},
 	"firstrunNoScript": {
-		"message": "흠, NoScript나 비슷한 걸 쓰는 것 같지만, Universal Bypass는 그런 것들과 호환되지 않습니다."
+		"message": "흠, NoScript나 비슷한 걸 쓰는 것 같지만, FastForward는 그런 것들과 호환되지 않습니다."
 	},
 	"version": {
 		"message": "버전"
@@ -33,16 +33,16 @@
 		"message": "자주 묻는 질문"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass는 당신을 위해 %개의 사이트를 우회했어요."
+		"message": "FastForward는 당신을 위해 %개의 사이트를 우회했어요."
 	},
 	"support": {
-		"message": "Universal Bypass 돕기"
+		"message": "FastForward 돕기"
 	},
 	"options": {
 		"message": "설정"
 	},
 	"optionsLink": {
-		"message": "Universal Bypass의 설정을 바꾸기"
+		"message": "FastForward의 설정을 바꾸기"
 	},
 	"optionsEnabled": {
 		"message": "웹사이트 우회 켜기"
@@ -78,7 +78,7 @@
 		"message": "사용자 지정 우회책"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "개발자를 위한 고급 기능으로 자체 우회책을 만들 수 있습니다. 완벽하게 만들어졌다면, GitHub에 제안해 Universal Bypass에 추가되고 모두가 쓸 수 있게 됩니다."
+		"message": "개발자를 위한 고급 기능으로 자체 우회책을 만들 수 있습니다. 완벽하게 만들어졌다면, GitHub에 제안해 FastForward에 추가되고 모두가 쓸 수 있게 됩니다."
 	},
 	"beforeNavigate": {
 		"message": "거의 다 왔습니다."
@@ -87,7 +87,7 @@
 		"message": "목적지는 % 입니다."
 	},
 	"beforeNavigateUnsafe": {
-		"message": "잠깐!, 지금 바로 간다면 Universal Bypass가 들통날 거에요."
+		"message": "잠깐!, 지금 바로 간다면 FastForward가 들통날 거에요."
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "%초 후에 감지되지 않게 됩니다."
@@ -114,7 +114,7 @@
 		"message": "불행히도, 다운로드 서버가 당신이 실제로 파일을 받기 위해 기다렸는지 확인하기 때문에 건너뛸 수 없습니다."
 	},
 	"infoOutdated": {
-		"message": "이 사이트는 Universal Bypass를 업데이트 해야 건너뛸 수 있습니다."
+		"message": "이 사이트는 FastForward를 업데이트 해야 건너뛸 수 있습니다."
 	},
 	"crowdWait": {
 		"message": "안타깝게도 이 링크의 첫 발견자신 것 같군요. 기다려주신다면 다른 사용자 분들은 기다리지 않으실 수 있어요."
@@ -126,7 +126,7 @@
 		"message": "이제 기다릴 필요 없어요!"
 	},
 	"crowdBypassedInfo": {
-		"message": "다른 Universal Bypass 사용자가 이 페이지를 방문한 적이 있으며, % 로 이동하는걸로 알아냈습니다."
+		"message": "다른 FastForward 사용자가 이 페이지를 방문한 적이 있으며, % 로 이동하는걸로 알아냈습니다."
 	},
 	"crowdBypassedTimer": {
 		"message": "페이지가 새 탭에 %초 안에 열립니다."
@@ -150,9 +150,9 @@
 		"message": "자동으로 이동하고 싶나요?"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass가 당신의 IP를 기록하지 못하게 막았습니다."
+		"message": "FastForward가 당신의 IP를 기록하지 못하게 막았습니다."
 	},
 	"blockedSubtitle": {
-		"message": "Universal Bypass가 악성 사이트에서 IP를 가져가는것을 막기를 원하나요?"
+		"message": "FastForward가 악성 사이트에서 IP를 가져가는것을 막기를 원하나요?"
 	}
 }

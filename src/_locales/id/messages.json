@@ -1,12 +1,12 @@
 {
 	"appDesc": {
-		"message": "Jangan habiskan waktu anda dengan pemenuhan syarat (Iklan). Universal Bypass secara otomatis akan melompati pemendek tautan yang menyebalkan."
+		"message": "Jangan habiskan waktu anda dengan pemenuhan syarat (Iklan). FastForward secara otomatis akan melompati pemendek tautan yang menyebalkan."
 	},
 	"firstrunTitle": {
-		"message": "Terima kasih telah memasang Universal Bypass!"
+		"message": "Terima kasih telah memasang FastForward!"
 	},
 	"firstrunNoScript": {
-		"message": "Akan tetapi, anda sepertinya menggunakan ekstensi NoScript atau yang menyerupai itu, karena itu Universal Bypass tidak kompatibel dengannya."
+		"message": "Akan tetapi, anda sepertinya menggunakan ekstensi NoScript atau yang menyerupai itu, karena itu FastForward tidak kompatibel dengannya."
 	},
 	"version": {
 		"message": "Versi"
@@ -33,16 +33,16 @@
 		"message": "Pertanyaan yang Sering Diajukan (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass sudah mem-bypass % situs untuk anda."
+		"message": "FastForward sudah mem-bypass % situs untuk anda."
 	},
 	"support": {
-		"message": "Berkontribusi untuk Universal Bypass."
+		"message": "Berkontribusi untuk FastForward."
 	},
 	"options": {
 		"message": "Pengaturan"
 	},
 	"optionsLink": {
-		"message": "Ubah pengaturan Universal Bypass."
+		"message": "Ubah pengaturan FastForward."
 	},
 	"optionsEnabled": {
 		"message": "Aktifkan bypass situs web."
@@ -78,7 +78,7 @@
 		"message": "Kustom Bypass"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "Ini adalah fitur khusus bagi para pengembang untuk membuat skrip sendiri untuk mem-bypass situs. Setelah disempurnakan, dapat diajukan di GitHub untuk ditambahkan ke Universal Bypass, sehingga bypass tersebut tersedia untuk semua orang."
+		"message": "Ini adalah fitur khusus bagi para pengembang untuk membuat skrip sendiri untuk mem-bypass situs. Setelah disempurnakan, dapat diajukan di GitHub untuk ditambahkan ke FastForward, sehingga bypass tersebut tersedia untuk semua orang."
 	},
 	"beforeNavigate": {
 		"message": "Anda hampir sampai pada tujuan anda."
@@ -87,7 +87,7 @@
 		"message": "Tujuan anda adalah %"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "Namun, jika anda melewati secara langsung sekarang, mereka akan mendeteksi Universal Bypass."
+		"message": "Namun, jika anda melewati secara langsung sekarang, mereka akan mendeteksi FastForward."
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "Anda tidak akan lagi terdeteksi dalam % detik."
@@ -114,10 +114,10 @@
 		"message": "Sayangnya, server unduhannya akan memastikan bahwa anda telah menunggu sebelum mengizinkan anda untuk mengunduh file."
 	},
 	"infoOutdated": {
-		"message": "Situs web ini telah ter-bypass oleh versi yang paling baru dari Universal Bypass."
+		"message": "Situs web ini telah ter-bypass oleh versi yang paling baru dari FastForward."
 	},
 	"crowdWait": {
-		"message": "Sayangnya, anda adalah orang yang pertama kali mengakses tautan ini, akan tetapi setelah anda melewatinya, pengguna Universal Bypass lainnya tidak perlu lagi melakukannya."
+		"message": "Sayangnya, anda adalah orang yang pertama kali mengakses tautan ini, akan tetapi setelah anda melewatinya, pengguna FastForward lainnya tidak perlu lagi melakukannya."
 	},
 	"crowdDisabled": {
 		"message": "Situs web ini telah ter-bypass oleh fitur crowd bypass, yang dapat anda aktifkan fiturnya didalam pilihan pengaturan."
@@ -126,7 +126,7 @@
 		"message": "Anda mungkin tidak perlu melewati!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Pengguna Universal Bypass lainnya sudah melewatinya untuk anda dan melaporkan bahwa tautan ini menuju ke %"
+		"message": "Pengguna FastForward lainnya sudah melewatinya untuk anda dan melaporkan bahwa tautan ini menuju ke %"
 	},
 	"crowdBypassedTimer": {
 		"message": "Ini akan dibuka di tab baru dalam % detik."
@@ -150,9 +150,9 @@
 		"message": "Apakah anda ingin ini dibuka di tab baru secara langsung atau dalam x detik?"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass mencegah IP anda supaya tidak tercatat dalam log."
+		"message": "FastForward mencegah IP anda supaya tidak tercatat dalam log."
 	},
 	"blockedSubtitle": {
-		"message": "Tidak ingin Universal Bypass untuk mencegah peretas dari mendapatkan IP Anda?"
+		"message": "Tidak ingin FastForward untuk mencegah peretas dari mendapatkan IP Anda?"
 	}
 }

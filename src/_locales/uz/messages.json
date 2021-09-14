@@ -1,12 +1,12 @@
 {
 	"appDesc": {
-		"message": "Vaqtingizni moslashtirish uchun bekorga ketkazmang. Universal Bypass sizga veb manzillarni qisqartirishda ko'mak beradi."
+		"message": "Vaqtingizni moslashtirish uchun bekorga ketkazmang. FastForward sizga veb manzillarni qisqartirishda ko'mak beradi."
 	},
 	"firstrunTitle": {
-		"message": "Universal Bypassni o'rnatganingiz uchun rahmat!"
+		"message": "FastForwardni o'rnatganingiz uchun rahmat!"
 	},
 	"firstrunNoScript": {
-		"message": "Siz Universal Bypassga mos bo'lmagan NoScript yoki shunga o'xshash dasturdan foydalanayotgangan o'xshaysiz."
+		"message": "Siz FastForwardga mos bo'lmagan NoScript yoki shunga o'xshash dasturdan foydalanayotgangan o'xshaysiz."
 	},
 	"version": {
 		"message": "Versiya"

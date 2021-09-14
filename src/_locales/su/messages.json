@@ -1,12 +1,12 @@
 {
 	"appDesc": {
-		"message": "Ulah nyia-nyia keun waktos nurut kana aturan. Universal Bypass bakal otomatis ngalangkungan alamat nu matak ngagganggu. "
+		"message": "Ulah nyia-nyia keun waktos nurut kana aturan. FastForward bakal otomatis ngalangkungan alamat nu matak ngagganggu. "
 	},
 	"firstrunTitle": {
-		"message": "Hatur nuhun parantos masang Universal Bypass!"
+		"message": "Hatur nuhun parantos masang FastForward!"
 	},
 	"firstrunNoScript": {
-		"message": "Nanging, anjeun sigana nganggo ekstensi NoScript atawa nu sajabana, nyebabkeun Universal Bypass teu jalan."
+		"message": "Nanging, anjeun sigana nganggo ekstensi NoScript atawa nu sajabana, nyebabkeun FastForward teu jalan."
 	},
 	"version": {
 		"message": "Vérsi"

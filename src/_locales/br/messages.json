@@ -1,6 +1,6 @@
 {
 	"firstrunTitle": {
-		"message": "Trugarez evit ho staliañ Universal Bypass!"
+		"message": "Trugarez evit ho staliañ FastForward!"
 	},
 	"version": {
 		"message": "Handelv"
@@ -15,16 +15,16 @@
 		"message": "Foar ar Goulennoù (FAG)"
 	},
 	"bypassCounter": {
-		"message": "Bet oc'h e-biou da %s lec'hienn a-drugarez da Universal Bypass."
+		"message": "Bet oc'h e-biou da %s lec'hienn a-drugarez da FastForward."
 	},
 	"support": {
-		"message": "Kenoberiañ da Universal Bypass."
+		"message": "Kenoberiañ da FastForward."
 	},
 	"options": {
 		"message": "Dibarzhioù"
 	},
 	"optionsLink": {
-		"message": "Kemmañ dibarzhioù Universal Bypass."
+		"message": "Kemmañ dibarzhioù FastForward."
 	},
 	"optionsEnabled": {
 		"message": "Gweredekaat an tremen e-biou d'al lec'hiennoù."

@@ -3,10 +3,10 @@
 		"message": "Negaiškite laiko laikydamiesi reikalavimų. Universalus aplinkkelis apeina erzinančius jungčių trumpiklius."
 	},
 	"firstrunTitle": {
-		"message": "Dėkojame, kad įdiegėte „Universal Bypass“!"
+		"message": "Dėkojame, kad įdiegėte „FastForward“!"
 	},
 	"firstrunNoScript": {
-		"message": "Tačiau panašu, kad naudojate „NoScript“ ar panašius, su kuriais „Universal Bypass“ nesuderinamas."
+		"message": "Tačiau panašu, kad naudojate „NoScript“ ar panašius, su kuriais „FastForward“ nesuderinamas."
 	},
 	"version": {
 		"message": "Versija"
@@ -33,7 +33,7 @@
 		"message": "Dažnai užduodami klausimai"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass praleido % puslapių jums."
+		"message": "FastForward praleido % puslapių jums."
 	},
 	"support": {
 		"message": "Prisidėti prie Universalus apėjimo."
@@ -87,7 +87,7 @@
 		"message": "Jūsų tikslas yra %"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "Jeigu dabar pereisite, \"Universal Bypass\" bus aptiktas."
+		"message": "Jeigu dabar pereisite, \"FastForward\" bus aptiktas."
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "Jūs nebebūsite aptinkamas už % sekundžių."
@@ -117,7 +117,7 @@
 		"message": "Ši svetainė gali būti apeita naudojant tik naujesnės versijos Universalų Perėjimą."
 	},
 	"crowdWait": {
-		"message": "Deja, jūs esate pirmasis susidūręs su šiuo saitu. Jums palaukus, kitiems \"Universal Bypass\" vartotojams nereikės daugiau laukti."
+		"message": "Deja, jūs esate pirmasis susidūręs su šiuo saitu. Jums palaukus, kitiems \"FastForward\" vartotojams nereikės daugiau laukti."
 	},
 	"crowdDisabled": {
 		"message": "Šio saito tikslas yra pasidalintas, ir ji galima apeiti naudojant \"crowd bypass\", kuris įjungiamas nustatymuose."
@@ -126,7 +126,7 @@
 		"message": "Jums turbūt nereikės laukti!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Kiti \"Universal Bypass\" vartotojai jau buvo laukę šiame saite ir pranešė, kad tai veda į %."
+		"message": "Kiti \"FastForward\" vartotojai jau buvo laukę šiame saite ir pranešė, kad tai veda į %."
 	},
 	"crowdBypassedTimer": {
 		"message": "Šis turinys bus atidarytas naujoje kortelėje už % sekundžių."
@@ -153,6 +153,6 @@
 		"message": "Universalus Perėjimas neleido šiam puslapiui įrašyti jūsų IP adreso."
 	},
 	"blockedSubtitle": {
-		"message": "Nenorite, kad \"Universal Bypass\" užkirstų kelią sukčiam gauti jūsų IP adresą?"
+		"message": "Nenorite, kad \"FastForward\" užkirstų kelią sukčiam gauti jūsų IP adresą?"
 	}
 }

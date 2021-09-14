@@ -6,7 +6,7 @@
 		"message": "Faleminderit për  instalimin e Bypass Universal!"
 	},
 	"firstrunNoScript": {
-		"message": "Sidoqoftë, ju duket se po përdorni NoScript ose të ngjashëm, me të cilin Universal Bypass nuk është i pajtueshëm."
+		"message": "Sidoqoftë, ju duket se po përdorni NoScript ose të ngjashëm, me të cilin FastForward nuk është i pajtueshëm."
 	},
 	"version": {
 		"message": "Verzion"
@@ -87,7 +87,7 @@
 		"message": "Destinacioni juaj është%"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "Sidoqoftë, nëse navigoni tani, ata do të zbulojnë Universal Bypass."
+		"message": "Sidoqoftë, nëse navigoni tani, ata do të zbulojnë FastForward."
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "Ju nuk do të zbuloheni më në% sekonda."

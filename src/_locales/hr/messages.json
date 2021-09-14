@@ -1,12 +1,12 @@
 {
 	"appDesc": {
-		"message": "Ne gubite svoje vrijeme. Universal Bypass automatski preskače dosadne skraćivače veza."
+		"message": "Ne gubite svoje vrijeme. FastForward automatski preskače dosadne skraćivače veza."
 	},
 	"firstrunTitle": {
-		"message": "Hvala na instaliranju Universal Bypass!"
+		"message": "Hvala na instaliranju FastForward!"
 	},
 	"firstrunNoScript": {
-		"message": "Međutim, čini se da koristiš NoScript ili slično, sa čime Universal Bypass nije kompatibilan."
+		"message": "Međutim, čini se da koristiš NoScript ili slično, sa čime FastForward nije kompatibilan."
 	},
 	"version": {
 		"message": "Verzija"
@@ -33,16 +33,16 @@
 		"message": "Često Postavljena Pitanja (ČPP)"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass je već zaobišao % stranica za vas."
+		"message": "FastForward je već zaobišao % stranica za vas."
 	},
 	"support": {
-		"message": "Podržite Universal Bypass"
+		"message": "Podržite FastForward"
 	},
 	"options": {
 		"message": "Opcije"
 	},
 	"optionsLink": {
-		"message": "Promjeni Universal Bypass opcije."
+		"message": "Promjeni FastForward opcije."
 	},
 	"optionsEnabled": {
 		"message": "Omogući zaobilaženje stranice."
@@ -78,7 +78,7 @@
 		"message": "Prilagođeno zaobilaženje"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "Ovo je napredna mogućnost za developere kako bi stvorili nova zaobilaženja. Jednom kada su usavršena mogu se poslati na GitHub, kako bi bi bila dostupna svim korisnicima Universal Bypass-a."
+		"message": "Ovo je napredna mogućnost za developere kako bi stvorili nova zaobilaženja. Jednom kada su usavršena mogu se poslati na GitHub, kako bi bi bila dostupna svim korisnicima FastForward-a."
 	},
 	"beforeNavigate": {
 		"message": "Skoro ste na odredištu."
@@ -87,7 +87,7 @@
 		"message": "Vaše odredište je %"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "Međutim, ako se sada krećete, otkrivat će Universal Bypass."
+		"message": "Međutim, ako se sada krećete, otkrivat će FastForward."
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "Više nećete biti otkriveni za % sekundi."
@@ -114,10 +114,10 @@
 		"message": "Nažalost, poslužitelj za preuzimanja će se potruditi da ste pričekali prije no što ste u mogućnosti preuzeti datoteku."
 	},
 	"infoOutdated": {
-		"message": "Ova stranica je premošćena sa novom verzijom  of Universal Bypass."
+		"message": "Ova stranica je premošćena sa novom verzijom  of FastForward."
 	},
 	"crowdWait": {
-		"message": "Nažalost, vi ste prvi koji je naišao na ovaj link, ali nakon što ste čekali, ostali korisnici Universal Bypass-a više ne moraju čekati."
+		"message": "Nažalost, vi ste prvi koji je naišao na ovaj link, ali nakon što ste čekali, ostali korisnici FastForward-a više ne moraju čekati."
 	},
 	"crowdDisabled": {
 		"message": "Ova stranica je zaobiđena od stane drugih korisnika, no tu opciju ste onemogućili u postavkama."
@@ -126,7 +126,7 @@
 		"message": "Možda ne morate čekati!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Ostali Universal Bypass korisnici su već prijavili da ovo vodi prema %"
+		"message": "Ostali FastForward korisnici su već prijavili da ovo vodi prema %"
 	},
 	"crowdBypassedTimer": {
 		"message": "Ovo će biti otvoreno u novoj kartici za % sekundi."
@@ -150,9 +150,9 @@
 		"message": "Želite li da se ovo otvori u novoj kartici trenutačno ili za x sekundi?"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass spriječio je zapisivanje vaše IP adrese."
+		"message": "FastForward spriječio je zapisivanje vaše IP adrese."
 	},
 	"blockedSubtitle": {
-		"message": "Ne želite da Universal Bypass spriječi loše aktere da dobiju vašu IP adresu?"
+		"message": "Ne želite da FastForward spriječi loše aktere da dobiju vašu IP adresu?"
 	}
 }

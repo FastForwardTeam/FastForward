@@ -3,10 +3,10 @@
 		"message": "Ärge raisake oma aega järgimisega. Universaalne ümbersõit möödab tüütuid linkide lühendajaid."
 	},
 	"firstrunTitle": {
-		"message": "\nTäname universaalse ümbersõidu Universal Bypass!"
+		"message": "\nTäname universaalse ümbersõidu FastForward!"
 	},
 	"firstrunNoScript": {
-		"message": "\nTundub, et kasutate siiski NoScripti või muud sarnast, millega Universal Bypass ei ühildu."
+		"message": "\nTundub, et kasutate siiski NoScripti või muud sarnast, millega FastForward ei ühildu."
 	},
 	"version": {
 		"message": "Versioon"
@@ -33,16 +33,16 @@
 		"message": "Korduma Kippuvad Küsimused"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass-i välditud saidid: %."
+		"message": "FastForward-i välditud saidid: %."
 	},
 	"support": {
-		"message": "Panustage Universal Bypass-i."
+		"message": "Panustage FastForward-i."
 	},
 	"options": {
 		"message": "Valikud"
 	},
 	"optionsLink": {
-		"message": "Muutke Universal Bypass valikuid."
+		"message": "Muutke FastForward valikuid."
 	},
 	"optionsEnabled": {
 		"message": "Veebisaidi möödasõitude lubamine."
@@ -78,7 +78,7 @@
 		"message": "Kohandatud ümbersõidud"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "See on täiustatud funktsioon, mille abil arendajad saavad luua oma skripte saitide indekseerimiseks. Kui silumine on lõpule jõudnud, saab nad saata GitHubisse, et lisada need Universal Bypassisse, nii et need oleksid kõigile kättesaadavad."
+		"message": "See on täiustatud funktsioon, mille abil arendajad saavad luua oma skripte saitide indekseerimiseks. Kui silumine on lõpule jõudnud, saab nad saata GitHubisse, et lisada need FastForwardisse, nii et need oleksid kõigile kättesaadavad."
 	},
 	"beforeNavigate": {
 		"message": "Olete peaaegu sihtkohta jõudnud."
@@ -87,7 +87,7 @@
 		"message": "Sinu sihtkoht on %"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "Kui aga nüüd lähete, avastavad nad Universal Bypass-i."
+		"message": "Kui aga nüüd lähete, avastavad nad FastForward-i."
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "Teid ei tuvastata enam % sekundi jooksul."
@@ -114,10 +114,10 @@
 		"message": "Kahjuks tagab allalaadimisserver, et olete enne faili allalaadimist oodanud ,et lubada teil faili allalaadimine."
 	},
 	"infoOutdated": {
-		"message": "Sellest veebisaidist möödumiseks on Universal Bypass uuem versioon."
+		"message": "Sellest veebisaidist möödumiseks on FastForward uuem versioon."
 	},
 	"crowdWait": {
-		"message": "Kahjuks olete selle lingi kaudu esimestena kokku puutunud, kuid pärast teie ootust ei pea teised Universal Bypass'i kasutajad enam ootama."
+		"message": "Kahjuks olete selle lingi kaudu esimestena kokku puutunud, kuid pärast teie ootust ei pea teised FastForward'i kasutajad enam ootama."
 	},
 	"crowdDisabled": {
 		"message": "Sellest saidist mööda saamiseks rakendatakse kohandatud meetodit, mille olete seadetes keelanud."
@@ -126,7 +126,7 @@
 		"message": "Võimalik, et ei pea ootama!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Teised Universal Bypassi kasutajad on juba oodanud sinu järgi ning andnud teada et see viib %"
+		"message": "Teised FastForwardi kasutajad on juba oodanud sinu järgi ning andnud teada et see viib %"
 	},
 	"crowdBypassedTimer": {
 		"message": "See avatakse uuel vahekaardil % sekundi pärast."
@@ -150,9 +150,9 @@
 		"message": "Kas soovite, et see avataks kohe või x s pärast uuel vahelehel?"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass takistas teie IP logimist."
+		"message": "FastForward takistas teie IP logimist."
 	},
 	"blockedSubtitle": {
-		"message": "Kas te ei soovi, et Universal Bypass takistaks halbadel osalejatel teie IP-d saada?"
+		"message": "Kas te ei soovi, et FastForward takistaks halbadel osalejatel teie IP-d saada?"
 	}
 }

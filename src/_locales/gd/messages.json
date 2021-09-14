@@ -3,10 +3,10 @@
 		"message": "Na caith an ùine agad le gèilleadh. Tha seach-rathad uile-choitcheann dol timcheall air giorrachadh ceangail neònach."
 	},
 	"firstrunTitle": {
-		"message": "Tapadh leibh airson Universal Bypass a stàladh!"
+		"message": "Tapadh leibh airson FastForward a stàladh!"
 	},
 	"firstrunNoScript": {
-		"message": "Ach, tha e coltach gu bheil thu a ’cleachdadh NoScript no a leithid, nach eil Universal Bypass co-chòrdail ris."
+		"message": "Ach, tha e coltach gu bheil thu a ’cleachdadh NoScript no a leithid, nach eil FastForward co-chòrdail ris."
 	},
 	"version": {
 		"message": "Dreachan"
@@ -78,7 +78,7 @@
 		"message": "Seach-rathaidean gnàthaichte"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "Tha seo na fheart adhartach dha luchd-leasachaidh gus na sgriobtaichean aca fhèin a chruthachadh gus làraich a sheachnadh. Aon uair ‘s gu bheil iad air an dèanamh foirfe, faodar an uairsin a chuir a-steach air GitHub airson an cur ri Universal Bypass, gus am bi iad rim faighinn leis a h-uile duine."
+		"message": "Tha seo na fheart adhartach dha luchd-leasachaidh gus na sgriobtaichean aca fhèin a chruthachadh gus làraich a sheachnadh. Aon uair ‘s gu bheil iad air an dèanamh foirfe, faodar an uairsin a chuir a-steach air GitHub airson an cur ri FastForward, gus am bi iad rim faighinn leis a h-uile duine."
 	},
 	"beforeNavigate": {
 		"message": "Tha thu cha mhòr aig do cheann-uidhe."
@@ -87,7 +87,7 @@
 		"message": "Is e % an ceann-uidhe agad"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "Ach, ma nì thu seòladh a-nis, lorgaidh iad Universal Bypass."
+		"message": "Ach, ma nì thu seòladh a-nis, lorgaidh iad FastForward."
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "Cha tèid do lorg tuilleadh ann an % diogan."
@@ -114,7 +114,7 @@
 		"message": "Gu mì-fhortanach, nì an frithealaiche luchdachadh sìos cinnteach gu bheil thu air feitheamh mus leig thu leat am faidhle a luchdachadh sìos."
 	},
 	"infoOutdated": {
-		"message": "Tha an làrach-lìn seo air a sheachnadh le dreach nas ùire de Universal Bypass."
+		"message": "Tha an làrach-lìn seo air a sheachnadh le dreach nas ùire de FastForward."
 	},
 	"crowdWait": {
 		"message": "Gu mì-fhortanach, is tu a ’chiad neach a choinnich ris a’ cheangal seo, ach às deidh dhut feitheamh, cha bhith aig luchd-cleachdaidh Seach-rathad Uile-choitcheann eile tuilleadh."

@@ -1,12 +1,12 @@
 {
 	"appDesc": {
-		"message": "Spild ikke din tid med overholdelse. Universal Bypass overspringer automatisk irriterende link-afkortere."
+		"message": "Spild ikke din tid med overholdelse. FastForward overspringer automatisk irriterende link-afkortere."
 	},
 	"firstrunTitle": {
-		"message": "Tak fordi du installerede Universal Bypass!"
+		"message": "Tak fordi du installerede FastForward!"
 	},
 	"firstrunNoScript": {
-		"message": "Dog ser det ud til, at du benytter f.eks. NoScript, hvilket Universal Bypass ikke understøtter."
+		"message": "Dog ser det ud til, at du benytter f.eks. NoScript, hvilket FastForward ikke understøtter."
 	},
 	"version": {
 		"message": "Version"
@@ -33,16 +33,16 @@
 		"message": "Ofte stilte spørgsmål (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "Universal Bypass har allerede omgået % websteder for dig."
+		"message": "FastForward har allerede omgået % websteder for dig."
 	},
 	"support": {
-		"message": "Støt Universal Bypass"
+		"message": "Støt FastForward"
 	},
 	"options": {
 		"message": "Indstillinger"
 	},
 	"optionsLink": {
-		"message": "Ændr Universal Bypass-indstillinger."
+		"message": "Ændr FastForward-indstillinger."
 	},
 	"optionsEnabled": {
 		"message": "Aktivér websteds-bypass."
@@ -78,7 +78,7 @@
 		"message": "Tilpassede Omgåelser"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "Dette er en avanceret funktion, så udviklere kan oprette deres egne scripts til webstedsomgåelse. Når de er finpudsede, kan de derefter indsendes på GitHub for at blive føjet til Universal Bypass, og blive tilgængelige for alle."
+		"message": "Dette er en avanceret funktion, så udviklere kan oprette deres egne scripts til webstedsomgåelse. Når de er finpudsede, kan de derefter indsendes på GitHub for at blive føjet til FastForward, og blive tilgængelige for alle."
 	},
 	"beforeNavigate": {
 		"message": "Du er næsten på din destination."
@@ -87,7 +87,7 @@
 		"message": "Din destination er %"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "Navigerer du videre nu, registrerer de Universal Bypass."
+		"message": "Navigerer du videre nu, registrerer de FastForward."
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "Om % sekunder bliver du ikke længere opdaget."
@@ -114,10 +114,10 @@
 		"message": "Bemærk: Downloadserveren tvinger dig til at vente et øjeblik, inden filen kan downloades."
 	},
 	"infoOutdated": {
-		"message": "Dette websted kan omgås af en nyere version af Universal Bypass."
+		"message": "Dette websted kan omgås af en nyere version af FastForward."
 	},
 	"crowdWait": {
-		"message": "Desværre er du den første, der støder på dette link, men efter at du har ventet, vil ingen andre Universal Bypass-brugere længere skulle det."
+		"message": "Desværre er du den første, der støder på dette link, men efter at du har ventet, vil ingen andre FastForward-brugere længere skulle det."
 	},
 	"crowdDisabled": {
 		"message": "Dette websted omgås via masseomgåelse, som du har deaktiveret i indstillingerne."
@@ -126,7 +126,7 @@
 		"message": "Du behøver måske ikke at vente!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Andre Universal Bypass-brugere har allerede ventet for dig og rapporteret, at dette fører til %"
+		"message": "Andre FastForward-brugere har allerede ventet for dig og rapporteret, at dette fører til %"
 	},
 	"crowdBypassedTimer": {
 		"message": "Dette åbnes i en ny fane om % sekunder."
@@ -150,9 +150,9 @@
 		"message": "Skal dette åbnes i en ny fane straks eller om x sekunder?"
 	},
 	"blockedTitle": {
-		"message": "Universal Bypass forhindrede din IP i at blive logget."
+		"message": "FastForward forhindrede din IP i at blive logget."
 	},
 	"blockedSubtitle": {
-		"message": "Ønsker ikke, at Universal Bypass skal forhindre dårlige udbydere i at få din IP?"
+		"message": "Ønsker ikke, at FastForward skal forhindre dårlige udbydere i at få din IP?"
 	}
 }
