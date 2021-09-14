@@ -1,16 +1,5 @@
 const brws=(typeof browser=="undefined"?chrome:browser)
 document.documentElement.setAttribute("dir",brws.i18n.getMessage("@@bidi_dir"))
-if(window.matchMedia("(prefers-color-scheme: dark)").matches)
-{
-	document.documentElement.className="uk-light uk-background-secondary"
-}
-let link=document.createElement("link")
-link.rel="stylesheet"
-link.href="uikit/uikit-"+brws.i18n.getMessage("@@bidi_dir")+".css"
-document.head.appendChild(link)
-let style=document.createElement("style")
-style.textContent="p{font-size:1rem}"
-document.head.appendChild(style)
 const timer=(message,secondsLeft,cancelable,callback)=>{
 	if(secondsLeft>=0)
 	{
@@ -24,7 +13,7 @@ const timer=(message,secondsLeft,cancelable,callback)=>{
 		cancel=()=>{
 			clearInterval(tid)
 			titleElm.textContent=title
-			div.classList.add("uk-hidden")
+			div.classList.add("hidden")
 		},
 		tick=()=>{
 			if(secondsLeft<=0)
@@ -51,7 +40,7 @@ const timer=(message,secondsLeft,cancelable,callback)=>{
 				p.appendChild(a)
 			}
 		}
-		div.classList.remove("uk-hidden")
+		div.classList.remove("hidden")
 		tick()
 		return tid
 	}

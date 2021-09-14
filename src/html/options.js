@@ -3,6 +3,10 @@ document.querySelector("[data-message='optionsCrowdAutoOpen']").innerHTML=docume
 document.querySelector("[data-message='optionsCrowdAutoClose']").innerHTML=document.querySelector("[data-message='optionsCrowdAutoClose']").innerHTML.replace("%",'<input id="option-crowd-close-delay" type="number" min="3" skip="1" style="width:34px">')
 document.querySelector("[data-message='optionsUserscriptsDescription']").innerHTML=document.querySelector("[data-message='optionsUserscriptsDescription']").textContent.replace("GitHub","<a href='https://github.com/FastForwardTeam/FastForward/blob/main/src/js/injection_script.js' target='_blank'>GitHub</a>")
 
+function myFunction(a, b) {
+	return a * b;
+  }
+  
 const updateButton=document.querySelector("[data-message='update']"),
 enabledCheckbox=document.getElementById("option-enabled"),
 enabledLabel=document.querySelector("label[for='option-enabled']"),
@@ -82,14 +86,14 @@ if(hash)
 {
 	if(hash=="firstrun")
 	{
-		document.getElementById("firstrun-alert").classList.remove("uk-hidden")
+		document.getElementById("firstrun-alert").classList.remove("hidden")
 	}
 	else
 	{
 		let elm=document.querySelector("[for='"+hash+"']")
 		if(elm)
 		{
-			elm.classList.add("uk-text-warning")
+			elm.classList.add("text-hash")
 		}
 	}
 }
@@ -118,7 +122,7 @@ port.onMessage.addListener(data=>{
 	{
 		if(data.amo)
 		{
-			updateButton.classList.add("uk-hidden")
+			updateButton.classList.add("hidden")
 			amoVersion = true
 		}
 	}
@@ -128,13 +132,13 @@ port.onMessage.addListener(data=>{
 		{
 			devMode=false
 			document.getElementById("definitionsVersion").innerHTML=brws.i18n.getMessage("definitionsVersion")+" <code>"+data.upstreamCommit.substr(0,7)+"</code>"
-			document.getElementById("dev-alert").classList.add("uk-hidden")
+			document.getElementById("dev-alert").classList.add("hidden")
 		}
 		else
 		{
 			devMode=true
 			document.getElementById("definitionsVersion").textContent="Development Mode"
-			document.getElementById("dev-alert").classList.remove("uk-hidden")
+			document.getElementById("dev-alert").classList.remove("hidden")
 		}
 	}
 	if("bypassCounter" in data && data.bypassCounter > 1)
@@ -143,7 +147,7 @@ port.onMessage.addListener(data=>{
 		span=counter.querySelector("span")
 		span.textContent=brws.i18n.getMessage("bypassCounter")
 		span.innerHTML=span.innerHTML.replace("%","<b>"+data.bypassCounter+"</b>")
-		counter.classList.remove("uk-hidden")
+		counter.classList.remove("hidden")
 	}
 	if("userScript" in data)
 	{
@@ -183,7 +187,7 @@ port.onMessage.addListener(data=>{
 			updateButton.removeAttribute("disabled")
 			if(wasUpdating)
 			{
-				UIkit.notification({
+				notify({
 					message:devMode?"Successfully loaded local bypass definitions.":brws.i18n.getMessage("updateYes"),
 					status:"success",
 					timeout:3000
@@ -211,7 +215,7 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 	}
 	else
 	{
-		enabledLabel.classList.add("uk-text-danger")
+		enabledLabel.classList.add("text-danger")
 	}
 	if(res.navigation_delay<0)
 	{
@@ -262,7 +266,7 @@ brws.storage.sync.get(["disable","navigation_delay","no_tracker_bypass","no_inst
 	instantNavigationTrackersLogic()
 	enabledCheckbox.onchange=function()
 	{
-		enabledLabel.classList.remove("uk-text-danger")
+		enabledLabel.classList.remove("text-danger")
 		brws.storage.sync.set({
 			disable:(!this.checked).toString()
 		})

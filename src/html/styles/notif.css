@@ -1,0 +1,17 @@
+
+ .notif {
+    position: sticky;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+
+    display: inline-block;
+    background-color: #ff8c00; 
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+
+  }
+    

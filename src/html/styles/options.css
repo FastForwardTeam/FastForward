@@ -1,0 +1,36 @@
+@import url(toggle.css);
+@import url(nav.css);
+@import url(alert.css);
+@import url(warn.css);
+@import url(logo.css);
+@import url(notif.css);
+
+
+html {
+    background-color: #01222c;
+  }
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+;
+}
+
+.main {
+    padding-top: 2rem;
+    padding-right: 2rem;
+    color: #def9ff;
+    padding-left: 2rem;
+  }
+
+.hidden{
+    display:none;
+}
+
+.text-danger{
+    color: #ff5c10;
+}
+.text-hash{
+    color: #ccff9d; 
+}
+
