@@ -13,7 +13,6 @@ html {
 body {
     margin: 0;
     font-family: sans-serif;
-;
 }
 
 .main {
@@ -34,3 +33,18 @@ body {
     color: #ccff9d; 
 }
 
+.updateButton{
+    background-color: #316bad; 
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+    text-decoration: none;
+}
+
+.options{
+
+    display:flex; 
+    text-align: left; 
+    flex-direction: column; 
+}

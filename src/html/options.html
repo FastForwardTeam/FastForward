@@ -16,13 +16,12 @@
 			<a href="https://universal-bypass.org/contributors" target="_blank" data-message="contributors"></a>
 			</div>
 	</nav>
-	<div class="notif sticky">
+	<div class="notif sticky hidden" id="notif">
 		Notification
 	</div>
 	<div class="main">
-		<p><span data-message="version"></span> <span id="version"></span> &middot; <span id="definitionsVersion"></span> <a href="#" class="uk-button uk-button-small uk-button-primary" data-message="update"></a></p>
+		<p><span data-message="version"></span> <span id="version"></span> &middot; <span id="definitionsVersion"></span> <a href="#" class="updateButton" data-message="update"></a></p>
 		<div id="firstrun-alert" class="hidden">
-			<a class="uk-alert-close" uk-close></a>
 			<p data-message="firstrunTitle"></p>
 		</div>
 		<div id="dev-alert" class="alert hidden">
@@ -32,7 +31,7 @@
 			<p><span></span> <a href="https://discord.gg/RSAf7b5njt" target="_blank" data-message="support"></a></p>
 		</div>
 		<h2 data-message="options"></h2>
-		<p>
+		<p class="options">
 			<input type="checkbox" id="option-enabled"> 
 			<label for="option-enabled" data-message="optionsEnabled"></label>
 			<br>

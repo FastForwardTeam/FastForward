@@ -3,8 +3,12 @@ document.querySelector("[data-message='optionsCrowdAutoOpen']").innerHTML=docume
 document.querySelector("[data-message='optionsCrowdAutoClose']").innerHTML=document.querySelector("[data-message='optionsCrowdAutoClose']").innerHTML.replace("%",'<input id="option-crowd-close-delay" type="number" min="3" skip="1" style="width:34px">')
 document.querySelector("[data-message='optionsUserscriptsDescription']").innerHTML=document.querySelector("[data-message='optionsUserscriptsDescription']").textContent.replace("GitHub","<a href='https://github.com/FastForwardTeam/FastForward/blob/main/src/js/injection_script.js' target='_blank'>GitHub</a>")
 
-function myFunction(a, b) {
-	return a * b;
+function notify(mesaage, time) {
+	document.getElementById("notif").classList.remove("hidden")
+	document.getElementById("notif").innerHTML = mesaage;
+	setTimeout(function(){
+		document.getElementById("notif").classList.add("hidden")
+	}, time);
   }
   
 const updateButton=document.querySelector("[data-message='update']"),
@@ -164,11 +168,8 @@ port.onMessage.addListener(data=>{
 	}
 	if("updateSuccess" in data&&!devMode&&!amoVersion)
 	{
-		UIkit.notification({
-			message:brws.i18n.getMessage("updat"+(data.updateSuccess?"ing":"eNo")),
-			status:"primary",
-			timeout:3000
-		})
+		notify(
+		brws.i18n.getMessage("updat"+(data.updateSuccess?"ing":"eNo")), 3000)
 	}
 	if("updateStatus" in data&&!amoVersion)
 	{
@@ -187,11 +188,7 @@ port.onMessage.addListener(data=>{
 			updateButton.removeAttribute("disabled")
 			if(wasUpdating)
 			{
-				notify({
-					message:devMode?"Successfully loaded local bypass definitions.":brws.i18n.getMessage("updateYes"),
-					status:"success",
-					timeout:3000
-				})
+				notify(devMode?"Successfully loaded local bypass definitions.":brws.i18n.getMessage("updateYes"), 3000)
 				wasUpdating=false
 			}
 		}
