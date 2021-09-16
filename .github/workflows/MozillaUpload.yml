@@ -1,0 +1,24 @@
+name: Upload_to_store
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      
+      - name: Make package
+        run: bash scripts/firefox.sh nover
+        
+      - name: Upload xpi
+        uses: trmcnvn/firefox-addon@v1
+        with:
+          uuid: '{a9b6e295-9eef-451a-befb-696fbd8daa27}'
+          xpi: build/dist/*.xpi
+          manifest: build/FastForward.firefox/manifest.json
+          api-key: ${{ secrets.FIREFOX_API_KEY }}
+          api-secret: ${{ secrets.FIREFOX_API_SECRET }}
