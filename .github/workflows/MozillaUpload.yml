@@ -1,10 +1,10 @@
-name: Upload_to_store
+name: Upload to store
 
 on: 
   workflow_dispatch:
 
 jobs:
-  Build and upload:
+  Build_and_upload:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
