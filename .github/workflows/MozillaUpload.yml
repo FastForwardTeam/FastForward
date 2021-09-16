@@ -12,15 +12,16 @@ jobs:
           fetch-depth: 0
       
       - name: Make package
+        id: pack
         run: |
           bash scripts/firefox.sh nover
-          xpi_file=$(find ./build/dist -type f -name "*.xpi")
+          echo "::set-output name=xpi_path::$(find ./build/dist -type f -name "*.xpi")"
         
       - name: Upload xpi
         uses: trmcnvn/firefox-addon@v1
         with:
           uuid: '{a9b6e295-9eef-451a-befb-696fbd8daa27}'
-          xpi: $xpi_file
+          xpi: ${{steps.pack.outputs.xpi_path}}
           manifest: build/FastForward.firefox/manifest.json
           api-key: ${{ secrets.FIREFOX_API_KEY }}
           api-secret: ${{ secrets.FIREFOX_API_SECRET }}
