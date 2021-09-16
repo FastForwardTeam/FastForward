@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  Build:
+  Build and upload:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -12,13 +12,15 @@ jobs:
           fetch-depth: 0
       
       - name: Make package
-        run: bash scripts/firefox.sh nover
+        run: |
+          bash scripts/firefox.sh nover
+          xpi_file=$(find ./build/dist -type f -name "*.xpi")
         
       - name: Upload xpi
         uses: trmcnvn/firefox-addon@v1
         with:
           uuid: '{a9b6e295-9eef-451a-befb-696fbd8daa27}'
-          xpi: build/dist/*.xpi
+          xpi: $xpi_file
           manifest: build/FastForward.firefox/manifest.json
           api-key: ${{ secrets.FIREFOX_API_KEY }}
           api-secret: ${{ secrets.FIREFOX_API_SECRET }}
