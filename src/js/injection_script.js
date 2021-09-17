@@ -2299,6 +2299,8 @@ ensureDomLoaded(()=>{
 			}
 		})
 	})
+	domainBypass("techynroll.com",()=>safelyAssign(document.getElementById("enablebtn").href))
+
 	//Insertion point for bypasses detecting certain DOM elements. Bypasses here will no longer need to call ensureDomLoaded.
 	let t=document.querySelector("title")
 	if(!bypassed&&t)
