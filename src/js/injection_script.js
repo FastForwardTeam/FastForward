@@ -2326,6 +2326,7 @@ ensureDomLoaded(()=>{
 		})
 	})
 	domainBypass("techynroll.com", ()=>awaitElement("a#enablebtn", a=>safelyAssign(a.href)))
+	hrefBypass(/meostream\.com\/links\//,()=> ifElement("a#link",safelyNavigate))
 
 	//Insertion point for bypasses detecting certain DOM elements. Bypasses here will no longer need to call ensureDomLoaded.
 	let t=document.querySelector("title")
