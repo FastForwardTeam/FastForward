@@ -13,6 +13,7 @@
 	"homepage_url": "https://fastforward.team",
 	"version": "13.15.2",
 	"author": "FastForward Team",
+	"incognito": "split",
 	"permissions": [
 		"alarms",
 		"storage",
