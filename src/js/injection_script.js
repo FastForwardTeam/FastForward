@@ -1764,6 +1764,17 @@ ensureDomLoaded(()=>{
 		    })
 		})
 	})
+	domainBypass("egao.in", () => {
+	    ifElement("#SafelinkChecker", button => {
+		fetch("https://egao.in/safelink", {
+		  "headers": {
+		    "content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+		  },
+		  "body": "id="+button.dataset.id,
+		  "method": "POST"
+		}).then(r=>r.json()).then(j=>safelyNavigate(j.data.url))
+	    })
+	})
 	// Apparently broken, see PR #18 on UB
 	//domainBypass("duit.cc", () => {
 	//    ifElement("[name=short]", a => {
