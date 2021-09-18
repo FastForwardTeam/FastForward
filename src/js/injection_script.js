@@ -1784,6 +1784,11 @@ ensureDomLoaded(()=>{
           })
       })
   })
+	domainBypass("hairstyless.my.id", () => {
+	    ifElement("input[name=newwpsafelink]", input => {
+		safelyNavigate(decodeURIComponent(JSON.parse(atob(new URLSearchParams(JSON.parse(atob(input.value)).linkr.substr(25)).get("safelink_redirect"))).safelink)) // lmaoooo
+	    })
+	})
 	// Apparently broken, see PR #18 on UB
 	//domainBypass("duit.cc", () => {
 	//    ifElement("[name=short]", a => {
