@@ -1764,6 +1764,14 @@ ensureDomLoaded(()=>{
 		    })
 		})
 	})
+	domainBypass("benameiran.com", () => {
+	    ifElement(".su-button", () => {
+	        [...document.querySelectorAll(".su-button")].forEach(downloadLink => {
+		    downloadLink.href = downloadLink.id;
+		    downloadLink.removeAttribute("onclick");
+	        })
+	    })
+	})
 	// Apparently broken, see PR #18 on UB
 	//domainBypass("duit.cc", () => {
 	//    ifElement("[name=short]", a => {
