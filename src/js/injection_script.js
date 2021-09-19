@@ -2335,6 +2335,7 @@ ensureDomLoaded(()=>{
 		// remove zoom icon
 		img.parentElement.getElementsByClassName("roll")[0].remove()
 	})
+	domainBypass("metroupdate.biz", ()=>myFunction())
 
 	//Insertion point for bypasses detecting certain DOM elements. Bypasses here will no longer need to call ensureDomLoaded.
 	let t=document.querySelector("title")
