@@ -1755,6 +1755,7 @@ ensureDomLoaded(()=>{
 		safelyNavigate(location.origin + "?redir=" + atob(atob(atob(atob(Lnk)))))
 	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
+	domainBypass("kangapip.com", ()=>ensureDomLoaded(()=>myFunction()))
 	domainBypass("animestc.xyz", () => {
 		ifElement("#link-id", a => {
 		    fetch("https://protetor.animestc.xyz/api/link/" + a.getAttribute("value")).then(r=>r.json()).then(json=>{
