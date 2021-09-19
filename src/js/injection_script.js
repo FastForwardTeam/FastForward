@@ -2327,7 +2327,7 @@ ensureDomLoaded(()=>{
 	hrefBypass(/meostream\.com\/links\//,()=> ifElement("a#link",safelyNavigate))
 	//XImageSharing
 	ifElement('input[type=submit][value="Continue to image..."]', submit => {
-	    submit.click()
+		submit.click()
 	})
 	ifElement('span.roll ~ img.pic', img => {
 		// zoom image
