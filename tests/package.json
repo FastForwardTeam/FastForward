@@ -1,7 +1,7 @@
 {
   "name": "autotest",
   "version": "1.0.0",
-  "description": "A tool to automaticly test FastForward extension",
+  "description": "A tool to automatically test FastForward extension",
   "main": "index.js",
   "repository": "https://github.com/FastForwardTeam/AutoTest",
   "author": "Beaness",
