@@ -1,2 +1,4 @@
 .next_build_id.txt
 build/
+node_modules
+package-lock.json

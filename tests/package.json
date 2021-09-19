@@ -1,0 +1,17 @@
+{
+  "name": "autotest",
+  "version": "1.0.0",
+  "description": "A tool to automatically test FastForward extension",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FastForwardTeam/FastForward.git",
+    "directory": "tests"
+    }
+  }
+  "license" : "Unlicense",
+  "author": "Beaness",
+  "dependencies": {
+    "puppeteer": "^10.2.0"
+  }
+}
