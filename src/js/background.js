@@ -49,7 +49,7 @@ resetCounter=()=>{
 brws.runtime.onInstalled.addListener(details=>{
 	if(details.reason=="install")
 	{
-		brws.tabs.create({url:"https://universal-bypass.org/firstrun"})
+		brws.tabs.create({url:"https://fastforward.team/firstrun"})
 	}
 })
 
@@ -359,7 +359,7 @@ brws.runtime.onMessage.addListener((req, sender, respond) => {
 			console.warn("Unexpected message:", req)
 		}
 		break;
-		
+
 		case "bypass-clipboard":
 		bypassClipboard=req.data
 		break;
@@ -442,10 +442,10 @@ brws.runtime.onConnect.addListener(port => {
 // Internal redirects to extension URLs to bypass content script limitations
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	return {redirectUrl:brws.runtime.getURL("html/noscript.html")}
-},{types:["main_frame"],urls:["*://universal-bypass.org/firstrun?0"]},["blocking"])
+},{types:["main_frame"],urls:["*://fastforward.team/firstrun?0"]},["blocking"])
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	return {redirectUrl:brws.runtime.getURL("html/options.html#firstrun")}
-},{types:["main_frame"],urls:["*://universal-bypass.org/firstrun?1"]},["blocking"])
+},{types:["main_frame"],urls:["*://fastforward.team/firstrun?1"]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	let arr=details.url.substr(45).split("&referer="),url=arr[0],safe_in
