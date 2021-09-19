@@ -1755,6 +1755,15 @@ ensureDomLoaded(()=>{
 		safelyNavigate(location.origin + "?redir=" + atob(atob(atob(atob(Lnk)))))
 	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
+	domainBypass("duit.cc", () => {
+	    ifElement("#download", download => {
+		download.firstChild.submit.click()
+	    })
+	    ifElement(".btn-fast-download", button => {
+		button.click()
+	    })
+	    if (location.pathname == "/getlink.php") setTimeout(()=>location.reload(), 1000)
+	})
 	domainBypass("animestc.xyz", () => {
 		ifElement("#link-id", a => {
 		    fetch("https://protetor.animestc.xyz/api/link/" + a.getAttribute("value")).then(r=>r.json()).then(json=>{
