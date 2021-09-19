@@ -10,7 +10,7 @@
 As you may know, [Universal Bypass](https://github.com/Sainan/Universal-Bypass) is no longer maintained by its original developer, Sainan, who had worked on it for so long.
 Thanks Sainan for your hard work.
 
-If you are interested in assiting the development or need help, join our Discord server: https://discord.gg/RSAf7b5njt
+If you are interested in assisting the development or need help, join our Discord server: https://discord.gg/RSAf7b5njt
 
 [<img src="https://i.ibb.co/X70qCQx/Discord-Logo-Color.png" width="40" />](https://discord.gg/RSAf7b5njt)
 
