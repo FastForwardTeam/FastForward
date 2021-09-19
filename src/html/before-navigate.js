@@ -9,15 +9,20 @@ if(args.has("target"))
 		document.getElementById("unsafe").classList.add("uk-hidden")
 		a.href=referer&&referer!="tracker"?"https://universal-bypass.org/navigate"+location.search:args.get("target")
 		brws.storage.sync.get(["navigation_delay","no_instant_navigation_trackers"],res=>{
-			if(res.navigation_delay==0||(referer=="tracker"&&res.no_instant_navigation_trackers!=="true"))
+			const perfEntries = performance.getEntriesByType('navigation');
+			if(!(perfEntries.length && perfEntries[0].type === 'back_forward'))
 			{
-				document.querySelector("div").innerHTML="<p></p>"
-				document.querySelector("p").textContent=brws.i18n.getMessage("beforeNavigateInstant").replace("%",args.get("target"))
-				setTimeout(()=>location.href=a.href,10)
-			}
-			else
-			{
-				timer("beforeNavigateTimer",res.navigation_delay,true,()=>location.href=a.href)
+				if((res.navigation_delay==0||(referer=="tracker"&&res.no_instant_navigation_trackers!=="true")))
+				{
+					document.querySelector("div").innerHTML="<p></p>"
+					document.querySelector("p").textContent=brws.i18n.getMessage("beforeNavigateInstant").replace("%",args.get("target"))
+					setTimeout(()=>location.href=a.href,10)
+				}
+				else
+				{
+					timer("beforeNavigateTimer",res.navigation_delay,true,()=>location.href=a.href)
+				}
+
 			}
 		})
 	}
