@@ -7,5 +7,5 @@ Thanks to everyone who helps make FastForward:
 
 ## Libraries used by FastForward
 
-- FastForward uses [UIkit](https://getuikit.com/) for its design.
+- FastForward uses [Bootstrap](https://getbootstrap.com/) for its design.
 - The custom bypass editor is powered by [Ace](https://ace.c9.io/).
