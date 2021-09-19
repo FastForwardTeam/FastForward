@@ -2325,6 +2325,16 @@ ensureDomLoaded(()=>{
 	})
 	domainBypass("techynroll.com", ()=>awaitElement("a#enablebtn", a=>safelyAssign(a.href)))
 	hrefBypass(/meostream\.com\/links\//,()=> ifElement("a#link",safelyNavigate))
+	//XImageSharing
+	ifElement('input[type=submit][value="Continue to image..."]', submit => {
+	    submit.click()
+	})
+	ifElement('span.roll ~ img.pic', img => {
+		// zoom image
+		img.removeAttribute("style")
+		// remove zoom icon
+		img.parentElement.getElementsByClassName("roll")[0].remove()
+	})
 
 	//Insertion point for bypasses detecting certain DOM elements. Bypasses here will no longer need to call ensureDomLoaded.
 	let t=document.querySelector("title")
