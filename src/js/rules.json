@@ -303,7 +303,8 @@
 		"*://r20.rs6.net/tn.jsp?*",
 		"*://ay.link/i/*",
 		"*://*.disq.us/url?url=*",
-		"*://analytics.supplyframe.com/*"
+		"*://analytics.supplyframe.com/*",
+		"*://clg.am/*"
 	],
 	"tracker_force_http": [
 		"ow.ly",
