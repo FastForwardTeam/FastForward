@@ -1759,7 +1759,7 @@ ensureDomLoaded(()=>{
 	    ifElement("#download", download => {
 		download.firstChild.submit.click()
 	    })
-	    ifElement(".btn-fast-download", button => {
+	    ifElement("button.btn-fast-download", button => {
 		button.click()
 	    })
 	    if (location.pathname == "/getlink.php") setTimeout(()=>location.reload(), 1000)
