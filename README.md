@@ -20,7 +20,7 @@ If you are interested in assisting the development or need help, join our Discor
 
 | :information_source: Auto-updating builds for Kiwi(Android) and Ungoogled chromium are now avaiable |
 | :-: |
-| [Click here for instructions](https://github.com/FastForwardTeam/releases#installation-instruction) |
+| [Click here for instructions](https://github.com/FastForwardTeam/releases#installation-instructions) |
 
 NOTE: You will have to repeat the following process to update
 Chromium based browsers include Chrome, Edge and Brave
