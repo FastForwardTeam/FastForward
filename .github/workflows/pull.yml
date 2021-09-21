@@ -1,11 +1,6 @@
-name: Package
+name: Pull_req
 
-on:
-  push:
-    branches: [ main ]
-
-  workflow_dispatch:
-
+on: pull_request
 
 jobs:
   Chromium:
@@ -18,7 +13,7 @@ jobs:
           fetch-depth: 0
       
       - name: Make package
-        run: bash scripts/chromium.sh nover
+        run: bash scripts/chromium.sh
 
       - name: Upload Package Artifact
         uses: actions/upload-artifact@v2.2.4
@@ -36,7 +31,7 @@ jobs:
           fetch-depth: 0
       
       - name: Make package
-        run: bash scripts/firefox.sh nover
+        run: bash scripts/firefox.sh
 
       - name: Upload Package Artifact
         uses: actions/upload-artifact@v2.2.4
