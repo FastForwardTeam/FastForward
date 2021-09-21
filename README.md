@@ -18,12 +18,18 @@ If you are interested in assisting the development or need help, join our Discor
 
 ## Chromium based browsers
 
+| :information_source: Auto-updating builds for Kiwi(Android) and Ungoogled chromium are now avaiable |
+| :-: |
+| [Click here for instructions](https://github.com/FastForwardTeam/releases#installation-instructions) |
+
+NOTE: You will have to repeat the following process to update
 Chromium based browsers include Chrome, Edge and Brave
 
 1. Download the zip file using [this link](https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_chromium.zip).
 2. Unzip the file once, leaving you with another zip file.
 3. Open the manage extensions page on your borwser and turn on "Developer Mode"
 4. Drag and drop `FastForward_chromium_0.xxxx.zip` into the manage extensions page.
+
 
 ## Firefox
 
