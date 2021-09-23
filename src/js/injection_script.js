@@ -2345,6 +2345,9 @@ ensureDomLoaded(()=>{
 		img.parentElement.getElementsByClassName("roll")[0].remove()
 	})
 	domainBypass(/metroupdate\.biz|kangapip\.com/, ()=>myFunction())
+	// mmcryptos domains
+	domainBypass(/clickscoin\.com|dogeclick\.net|sl\.mcmfaucets\.xyz|short\.mcmcryptos\.xyz/, () => awaitElement("button#mdt", a => a.click()))
+	
 
 	//Insertion point for bypasses detecting certain DOM elements. Bypasses here will no longer need to call ensureDomLoaded.
 	let t=document.querySelector("title")
