@@ -2347,7 +2347,7 @@ ensureDomLoaded(()=>{
 	domainBypass(/metroupdate\.biz|kangapip\.com/, ()=>myFunction())
 	// mmcryptos domains
 	domainBypass(/clickscoin\.com|dogeclick\.net|sl\.mcmfaucets\.xyz|short\.mcmcryptos\.xyz/, () => awaitElement("button#mdt", a => a.click()))
-	
+	domainBypass("dutchycorp.space", () => ifElement("div#cl1", d => (safelyNavigate(d.getElementsByTagName("a")[0].href))))
 
 	//Insertion point for bypasses detecting certain DOM elements. Bypasses here will no longer need to call ensureDomLoaded.
 	let t=document.querySelector("title")
