@@ -2352,7 +2352,7 @@ ensureDomLoaded(()=>{
 		ifElement("form",form=>form.submit())
 		ifElement("#surl1",a=>a.click())
 	})
-	
+	domainBypass(/exey\.io/, () => ifElement("button.btn.btn-primary.btn-goo", a => a.click()))
 
 	//Insertion point for bypasses detecting certain DOM elements. Bypasses here will no longer need to call ensureDomLoaded.
 	let t=document.querySelector("title")
