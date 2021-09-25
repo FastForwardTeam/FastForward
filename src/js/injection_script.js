@@ -2347,6 +2347,7 @@ ensureDomLoaded(()=>{
 	domainBypass(/metroupdate\.biz|kangapip\.com/, ()=>myFunction())
 	// mmcryptos domains
 	domainBypass(/clickscoin\.com|dogeclick\.net|sl\.mcmfaucets\.xyz|short\.mcmcryptos\.xyz/, () => awaitElement("button#mdt", a => a.click()))
+	domainBypass("dutchycorp.space", () => ifElement("div#cl1", d => (safelyNavigate(d.getElementsByTagName("a")[0].href))))
 	domainBypass("noweconomy.live",()=>{
 		ifElement("form",form=>form.submit())
 		ifElement("#surl1",a=>a.click())
