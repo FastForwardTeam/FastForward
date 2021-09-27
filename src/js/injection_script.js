@@ -2353,6 +2353,12 @@ ensureDomLoaded(()=>{
 		ifElement("#surl1",a=>a.click())
 	})
 	domainBypass(/exey\.io/, () => ifElement("button.btn.btn-primary.btn-goo", a => a.click()))
+	domainBypass(/yoshare\.net/, () =>{ 
+    		ifElement("input.btn.btn-primary", a => a.click()) 
+    		ifElement("button#btn6", b => b.click())
+    	})
+
+
 
 	//Insertion point for bypasses detecting certain DOM elements. Bypasses here will no longer need to call ensureDomLoaded.
 	let t=document.querySelector("title")
