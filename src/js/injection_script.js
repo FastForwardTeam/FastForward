@@ -2363,6 +2363,14 @@ ensureDomLoaded(()=>{
 			safelyNavigate(b)
 		})
 	})
+	domainBypass("mynewsmedia.co", () => {
+		awaitElement('a#btn6', b => {
+			safelyNavigate(b.href)
+		})
+		ifElement("button.close.close-btn-open-window", a => {
+			a.click()
+		})
+	})
 
 
 
