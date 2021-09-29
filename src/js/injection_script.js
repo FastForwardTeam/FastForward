@@ -2371,6 +2371,11 @@ ensureDomLoaded(()=>{
 			a.click()
 		})
 	})
+	domainBypass("100count.net", () => {
+		awaitElement("button#mdt", a => (a.click()))
+		awaitElement("div#cl1", d => (safelyNavigate(d.getElementsByTagName("a")[0].href)))
+	})
+
 
 
 
