@@ -2357,6 +2357,12 @@ ensureDomLoaded(()=>{
     		ifElement("input.btn.btn-primary", a => a.click()) 
     		ifElement("button#btn6", b => b.click())
     	})
+	domainBypass("blog2share.com", () => {
+		ifElement("div.redirect-message", a => {
+			b = a.getElementsByTagName('strong')[0].innerHTML
+			safelyNavigate(b)
+		})
+	})
 
 
 
