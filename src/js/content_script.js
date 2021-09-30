@@ -116,10 +116,6 @@ if(document instanceof HTMLDocument)
 		let domain=simplifyDomain(location.hostname),
 		crowdPath=location.pathname.substr(1),
 		referer=location.href
-		if(domain=="api.rurafs.me")
-		{
-			return
-		}
 
 		let script=document.createElement("script")
 		script.innerHTML=`(()=>{
