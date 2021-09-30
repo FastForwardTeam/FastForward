@@ -458,12 +458,6 @@ domainBypass(/bc\.vc|bcvc\.live/,()=>{
 	window.setInterval=f=>setInterval(f,1)
 	awaitElement("a#getLink:not([style^='display'])",a=>a.click())
 })
-domainBypass("tei.ai", () => {
-	ensureDomLoaded(() => {
-	    var link = atob("aH" + document.querySelector("#link-view [name='token']").value.split("aH")[1]);
-	    safelyNavigate(link);
-	});
-});
 domainBypass("shortly.xyz",()=>{
 	if(location.pathname.substr(0,3)=="/r/")
 	{
