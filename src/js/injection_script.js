@@ -772,28 +772,6 @@ domainBypass("universal-bypass.org",()=>{
 	window.universalBypassInjectionVersion="UNIVERSAL_BYPASS_INJECTION_VERSION"
 })
 
-domainBypass(/linkvertise\.(com|net)|link-to\.net/, () => {
-    // dynamic
-    if (window.location.href.toString().indexOf("?r=") != -1) {
-        const urlParams = new URLSearchParams(window.location.search);
-        const r = urlParams.get('r')
-        safelyNavigate(atob(decodeURIComponent(r)));
-    }
-
-    // normal redirect
-    fetch(`https://publisher.linkvertise.com/api/v1/redirect/link/static${location.pathname}`).then(r => r.json()).then(json => {
-            if (json?.data.link.id) {
-                fetch(`https://publisher.linkvertise.com/api/v1/redirect/link${location.pathname}/target?serial=${btoa(JSON.stringify({timestamp:new Date().getTime(), random:"6548307", link_id:json.data.link.id}))}`, {
-                    "method": "POST"
-                }).then(r=>r.json()).then(json=>{
-                if (json?.data.target) {
-                    safelyNavigate(json.data.target)
-                }
-            })
-        }
-    })
-})
-
 ensureDomLoaded(()=>{
 	if(ignoreCrowdBypass)
 	{
