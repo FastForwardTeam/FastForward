@@ -2375,6 +2375,13 @@ ensureDomLoaded(()=>{
 		awaitElement("button#mdt", a => (a.click()))
 		awaitElement("div#cl1", d => (safelyNavigate(d.getElementsByTagName("a")[0].href)))
 	})
+	domainBypass("dl.freetutsdownload.net", () => {
+	ifElement("h3", a => {
+		b = a.getElementsByTagName('strong')[0].innerHTML
+		safelyNavigate(b)
+		})
+	})
+
 
 
 
