@@ -2381,7 +2381,19 @@ ensureDomLoaded(()=>{
 		safelyNavigate(b)
 		})
 	})
-
+	
+	//WPsafelink bypass
+	//landing bypass
+	ifElement('form#wpsafelink-landing', w => {
+		w.submit()
+        })    
+        //generate link bypass
+	ifElement('div#wpsafe-link', d => {
+		var onc = d.getElementsByTagName("a")[0].getAttribute("onclick") //get onclick attr of anchor in div
+		var bs64 = onc.split(/\?safelink_redirect=|',/)[1] //use .split with regex to get destination encoded in base64
+		var decoded = JSON.parse(atob(bs64)) //parse base64 to object
+		safelyNavigate(decoded.safelink)       
+        })
 
 
 
