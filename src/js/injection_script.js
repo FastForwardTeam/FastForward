@@ -2394,6 +2394,12 @@ ensureDomLoaded(()=>{
 		var decoded = JSON.parse(atob(bs64)) //parse base64 to object
 		safelyNavigate(decoded.safelink)       
         })
+	domainBypass(/newforex\.online|world-trips\.net/, () => {
+	ifElement("a.submitBtn.btn.btn-primary[href]", a => {
+		safelyNavigate(a.href)
+		})
+	})
+	
 
 
 
