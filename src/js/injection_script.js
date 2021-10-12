@@ -2381,6 +2381,7 @@ ensureDomLoaded(()=>{
 		safelyNavigate(b)
 		})
 	})
+	domainBypass("fc-lc.com",()=>awaitElement(".g-recaptcha.btn.btn-primary",b=>b.click()))
 	
 	//WPsafelink bypass
 	//landing bypass
