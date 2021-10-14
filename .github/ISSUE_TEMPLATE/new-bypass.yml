@@ -23,7 +23,7 @@ body:
   id: site
   attributes:
     label: Link
-    description: Submit the exact link you are on.
+    description: Submit the exact link you are on. Please mark as NSFW if the site contains material suitable for ages 18+ only.
     placeholder: 'Example: https://www.google.com/webhp'
   validations:
     required: true
