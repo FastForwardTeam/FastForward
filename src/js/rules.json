@@ -62,6 +62,7 @@
 		"*://*.itsbx.com/redirect/?url=*",
 		"*://*.forocoches.com/link.php?url=*",
 		"*://*.pixiv.net/jump.php?url=*",
+		"*://*.pixiv.net/jump.php?*",
 		"*://hdblurayindir.com/git.php?url=*",
 		"*://gate.sc/?url=*",
 		"*://freetutsdownload.net/redirect-to/?url=*",
