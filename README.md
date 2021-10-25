@@ -36,15 +36,15 @@ Chromium based browsers include Chrome, Edge and Brave
 ~~The addon is on the Firefox Addons store: https://addons.mozilla.org/en-US/firefox/addon/fastforwardteam/~~
 not currently avalable
 
-fastforward is only avalable on the [nightly version](https://www.mozilla.org/en-US/firefox/all/#product-desktop-nightly) of firefox. this will not work if you not have the nightly version.
+FastForward is only avalable on the [nightly version](https://www.mozilla.org/en-US/firefox/all/#product-desktop-nightly) of Firefox. this will not work if you not have the nightly version.
 
-1. download the zip using [this link](https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_firefox.zip).
-2. unzip the downloaded file so that you have FastForward_firefox_X.XXXX.xpi.
-3. open about:config
-4. search for xpinstall.signatures.required
-5. toggle xpinstall.signatures.required to false using the button on the right
-6. restart firefox
-7. open about:addons
-8. drag your FastForward_firefox_X.XXXX.xpi onto firefox, and click "add" when prompted
+1. Fownload the zip using [this link](https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_firefox.zip).
+2. Unzip the downloaded file so that you have FastForward_firefox_X.XXXX.xpi.
+3. Open about:config
+4. Search for xpinstall.signatures.required
+5. Toggle xpinstall.signatures.required to false using the button on the right.
+6. Restart firefox.
+7. Open about:addons
+8. Drag your FastForward_firefox_X.XXXX.xpi onto firefox, and click "add" when prompted.
 
-Sorry about that, Fastgorward should be back on the store in a week or two!
+Sorry about that, FastForward should be back on the store in a week or two!
