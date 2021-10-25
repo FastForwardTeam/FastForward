@@ -38,7 +38,7 @@ not currently avalable
 
 FastForward is only avalable on the [nightly version](https://www.mozilla.org/en-US/firefox/all/#product-desktop-nightly) of Firefox. this will not work if you not have the nightly version.
 
-1. Fownload the zip using [this link](https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_firefox.zip).
+1. Download the zip using [this link](https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_firefox.zip).
 2. Unzip the downloaded file so that you have FastForward_firefox_X.XXXX.xpi.
 3. Open about:config
 4. Search for xpinstall.signatures.required
