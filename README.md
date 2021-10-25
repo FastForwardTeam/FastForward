@@ -43,7 +43,7 @@ FastForward is only avalable on the [nightly version](https://www.mozilla.org/en
 3. Open about:config
 4. Search for xpinstall.signatures.required
 5. Toggle xpinstall.signatures.required to false using the button on the right.
-6. Restart firefox.
+6. Restart Firefox.
 7. Open about:addons
 8. Drag your FastForward_firefox_X.XXXX.xpi onto firefox, and click "add" when prompted.
 
