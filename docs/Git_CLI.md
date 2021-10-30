@@ -20,16 +20,22 @@ Into this:
 Open the terminal and run the following commands. 
 NOTE: Remember to substitue all `<things>`
 ```
-git clone https://github.com/<your username>/FastForward
+git clone https://github.com/<YOUR USERNAME>/FastForward
 ```
 ```
 cd FastForward
 ```
+
+<pre>
+If you didn't make the changes on main- 
+  git checkout &lt;YOUR BRANCH NAME&gt;
+</pre>
+
 ```
 git reset --soft HEAD~<number of commits you want to squash>
 ```
 ```
-git commit -m "<your message>"
+git commit -m "<YOUR MESSAGE>"
 ```
 NOTE: When git asks for your password use a [PAT](https://github.com/settings/tokens).
 ```
