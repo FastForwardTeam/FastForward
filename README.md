@@ -22,6 +22,8 @@ If you are interested in assisting the development or need help, join our Discor
 | :-: |
 | [Click here for instructions](https://github.com/FastForwardTeam/releases#installation-instructions) |
 
+The addon is on the Microsoft store: https://microsoftedge.microsoft.com/addons/detail/fastforward/ldcclmkclhomnpcnccgbgleikchbnecl
+
 NOTE: You will have to repeat the following process to update
 Chromium based browsers include Chrome, Edge and Brave
 
