@@ -18,14 +18,13 @@ If you are interested in assisting the development or need help, join our Discor
 
 ## Chromium based browsers
 
-| :information_source: Auto-updating builds for Kiwi(Android) and Ungoogled chromium are now available |
+| :information_source: Auto-updating builds for Google Chrome (Windows & Linux), Kiwi(Android), Ungoogled Chromium and Edge are now available |
 | :-: |
 | [Click here for instructions](https://github.com/FastForwardTeam/releases#installation-instructions) |
 
-The addon is on the Microsoft store: https://microsoftedge.microsoft.com/addons/detail/fastforward/ldcclmkclhomnpcnccgbgleikchbnecl
 
-NOTE: You will have to repeat the following process to update
-Chromium based browsers include Chrome, Edge and Brave
+NOTE: You will have to repeat the following installation process to update
+Chromium based browsers that are not mentioned above \[ie. Chrome (Mac), Brave, etc]
 
 1. Download the zip file using [this link](https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_chromium.zip).
 2. Unzip the file once, leaving you with another zip file.
