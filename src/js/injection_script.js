@@ -460,7 +460,7 @@ domainBypass(/bc\.vc|bcvc\.live/,()=>{
 })
 domainBypass("tei.ai", () => {
 	ensureDomLoaded(() => {
-	    var link = atob("aH" + document.querySelector("#link-view [name='token']").value.split("aH")[1]);
+	    var link = atob(document.querySelector("#link-view [name='token']").value).match(/https?:\/\/.*/i);
 	    safelyNavigate(link);
 	});
 });
