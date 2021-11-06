@@ -781,9 +781,9 @@ domainBypass(/linkvertise\.(com|net)|link-to\.net/, () => {
     }
 
     // normal redirect
-    fetch(`https://publisher.linkvertise.com/api/v1/redirect/link/static${location.pathname}`).then(r => r.json()).then(json => {
+    fetch(`https://publisher.linkvertise.com/api/v1/redirect/link/static${location.pathname.replace(/\/[0-9]$/, "")}`).then(r => r.json()).then(json => {
             if (json?.data.link.id) {
-                fetch(`https://publisher.linkvertise.com/api/v1/redirect/link${location.pathname}/target?serial=${btoa(JSON.stringify({timestamp:new Date().getTime(), random:"6548307", link_id:json.data.link.id}))}`, {
+                fetch(`https://publisher.linkvertise.com/api/v1/redirect/link${location.pathname.replace(/\/[0-9]$/, "")}/target?serial=${btoa(JSON.stringify({timestamp:new Date().getTime(), random:"6548307", link_id:json.data.link.id}))}`, {
                     "method": "POST"
                 }).then(r=>r.json()).then(json=>{
                 if (json?.data.target) {
