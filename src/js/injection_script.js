@@ -1755,6 +1755,11 @@ ensureDomLoaded(()=>{
 		safelyNavigate(location.origin + "?redir=" + atob(atob(atob(atob(Lnk)))))
 	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
+	hrefBypass(/https:\/\/fmoviesdl.com\/links\//, () => {
+		ifElement("#link", a => {
+		    safelyNavigate(a.href)
+		})
+	})
 	domainBypass("duit.cc", () => {
 	    ifElement("#download", download => {
 		download.firstChild.submit.click()
