@@ -464,12 +464,6 @@ domainBypass("tei.ai", () => {
 	    safelyNavigate(link);
 	});
 });
-domainBypass("iir.ai", () => {
-  ensureDomLoaded(() => {
-    var link = document.querySelector("#link-view > button[type='submit']").onclick.toString().match(/(https?:\/\/.*)('|")/i)[1];
-    safelyNavigate(link);
-  });
-});
 domainBypass("shortly.xyz",()=>{
 	if(location.pathname.substr(0,3)=="/r/")
 	{
