@@ -17,21 +17,13 @@ If you are interested in assisting the development or need help, join our Discor
 # Installation instructions
 
 ## Chromium based browsers
+The addon is on the Chrome Web Store: https://chrome.google.com/webstore/detail/fastforward/icallnadddjmdinamnolclfjanhfoafe
+And Microsoft Edge Addons: https://microsoftedge.microsoft.com/addons/detail/fastforward/ldcclmkclhomnpcnccgbgleikchbnecl
 
-| :information_source: Auto-updating builds for Google Chrome (Windows & Linux), Kiwi(Android), Ungoogled Chromium and Edge are now available |
-| :-: |
-| [Click here for instructions](https://github.com/FastForwardTeam/releases#installation-instructions) |
-
-
-NOTE: You will have to repeat the following installation process to update
-Chromium based browsers that are not mentioned above \[ie. Chrome (Mac), Brave, etc]
-
-1. Download the zip file using [this link](https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_chromium.zip).
-2. Unzip the file once, leaving you with another zip file.
-3. Open the manage extensions page on your browser and turn on "Developer Mode"
-4. Drag and drop `FastForward_chromium_0.xxxx.zip` into the manage extensions page.
-
+Or you can install it manully [here!](https://github.com/FastForwardTeam/FastForward/blob/main/INSTALLING.md)
 
 ## Firefox
 
 The addon is on the Firefox Addons store: https://addons.mozilla.org/en-US/firefox/addon/fastforwardteam/
+
+Or you can install it manully [here!](https://github.com/FastForwardTeam/FastForward/blob/main/INSTALLING.md)
