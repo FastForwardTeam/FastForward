@@ -17,8 +17,8 @@ If you are interested in assisting the development or need help, join our Discor
 # Installation instructions
 
 ## Chromium based browsers
-The addon is on the Chrome Web Store [here](https://chrome.google.com/webstore/detail/fastforward/icallnadddjmdinamnolclfjanhfoafe).
-And Microsoft Edge Addons [here](https://microsoftedge.microsoft.com/addons/detail/fastforward/ldcclmkclhomnpcnccgbgleikchbnecl).
+The addon is on the Chrome Web Store [here](https://chrome.google.com/webstore/detail/fastforward/icallnadddjmdinamnolclfjanhfoafe) 
+and Microsoft Edge Addons [here](https://microsoftedge.microsoft.com/addons/detail/fastforward/ldcclmkclhomnpcnccgbgleikchbnecl).
 
 Or you can install it manully [here](https://github.com/FastForwardTeam/FastForward/blob/main/INSTALLING.md).
 
