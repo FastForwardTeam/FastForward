@@ -2377,7 +2377,43 @@ ensureDomLoaded(()=>{
 			a.onclick()
 		})
 	})
-	
+
+	hrefBypass(/adguardteam\.github\.io\/AnonymousRedirect\/redirect\.html/, () => {
+		ifElement("#redirectButton", (a) => {
+			a.click()
+		})
+	})
+
+	domainBypass("download.id", () => {
+		// i am so sorry of this bad code
+		// but i still want to contribute it
+
+		var a = document.getElementsByClassName("eka")
+		if(a.length > 0)
+		{
+			for(let b of a)
+			{
+				var c = b.getElementsByTagName("form")
+				if(c.length > 0)
+				{
+					c = c[0]
+					var d = c.getElementsByTagName("input")
+					if(d.length > 0)
+					{
+						d = d[0]
+						d = d.getAttribute("value")
+						var e = b.getElementsByClassName("lidya")
+						if(e.length > 0)
+						{
+							e = e[0]
+							e.setAttribute("onclick", `window.location.href = \"${d}\"`)
+						}
+					}
+				}
+			}
+		}
+	})
+
 	domainBypass("mynewsmedia.co", () => {
 		awaitElement('a#btn6', b => {
 			safelyNavigate(b.href)
