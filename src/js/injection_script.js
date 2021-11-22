@@ -2371,6 +2371,13 @@ ensureDomLoaded(()=>{
 			safelyNavigate(b)
 		})
 	})
+	
+	hrefBypass(/downloadfreecourse\.com\/generate-link\//, () => {
+		ifElement("#downloadlink", (a) => {
+			a.onclick()
+		})
+	})
+	
 	domainBypass("mynewsmedia.co", () => {
 		awaitElement('a#btn6', b => {
 			safelyNavigate(b.href)
