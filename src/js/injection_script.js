@@ -2373,15 +2373,28 @@ ensureDomLoaded(()=>{
 	})
 	
 	hrefBypass(/downloadfreecourse\.com\/generate-link\//, () => {
+		// second stage
 		ifElement("#downloadlink", (a) => {
 			a.onclick()
 		})
 	})
 
-	hrefBypass(/adguardteam\.github\.io\/AnonymousRedirect\/redirect\.html/, () => {
-		ifElement("#redirectButton", (a) => {
-			a.click()
+	hrefBypass(/downloadfreecourse\.com\//, () => {
+		// first stage
+		ifElement("#btnCounter", (b) => {
+			safelyNavigate(b.getAttribute("href"))
 		})
+	})
+
+	hrefBypass(/adguardteam\.github\.io\/AnonymousRedirect\/redirect\.html/, () => {
+		var urlParams = new URLSearchParams(location.search)
+
+		if(urlParams.has("url"))
+		{
+			var redirectLink = urlParams.get("url")
+			
+			safelyNavigate(redirectLink)
+		}
 	})
 
 	domainBypass("download.id", () => {
