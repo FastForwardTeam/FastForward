@@ -625,6 +625,20 @@ domainBypass("biozkop21.my.id",()=>{
 		location.pathname=location.pathname.replace("/download.php","/download21.php")
 	}
 })
+//ouo.io or ouo.press
+domainBypass(/ouo\.(press|io)/, () => {
+	ensureDomLoaded(() => {
+		ifElement("form#form-captcha", () => {
+    		const WebpageUrl = new URL(document.URL)
+		
+    		let form = document.getElementById('form-captcha')
+    		form.action = `/xreallcygo${WebpageUrl.pathname}`
+    		form.submit()
+    	}, () => {
+    		// Optional function to be called if the given element is not available
+    	})
+	})
+})
 domainBypass("4shared.com",()=>{
 	if(document.cookie.indexOf("exUserId=")==-1)
 	{
