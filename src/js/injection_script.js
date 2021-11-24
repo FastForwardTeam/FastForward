@@ -967,6 +967,13 @@ ensureDomLoaded(()=>{
 		}
 		else
 		{
+			if(/ouo\.(io|press)/.test(location.hostname)){
+				ifElement("form#form-captcha", () => {
+					let form = document.querySelector("form#form-captcha")
+					form.action = `/xreallcygo${location.pathname}`
+					form.submit()
+				})
+			}
 			crowdBypass()
 		}
 	})
