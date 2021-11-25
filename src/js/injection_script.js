@@ -960,7 +960,7 @@ ensureDomLoaded(()=>{
 		document.cookie="referrer=1"
 		xhr.send()
 	})
-	domainBypass(/ouo\.(io|press)|lnk2\.cc/,()=>{
+	domainBypass(/lnk2\.cc/,()=>{
 		if(location.pathname.substr(0,4)=="/go/")
 		{
 			document.querySelector("form").submit()
@@ -968,6 +968,19 @@ ensureDomLoaded(()=>{
 		else
 		{
 			crowdBypass()
+		}
+	})
+	domainBypass(/ouo\.(press|io)/, () => {
+		if(location.pathname !== '/'){
+			if(/(go|fbc)/.test(location.pathname.split("/")[1])){
+				document.querySelector("form").submit()
+			}
+			else {
+				ifElement("form#form-captcha", form => {
+						form.action = `/xreallcygo${location.pathname}`
+						form.submit()
+				},() => crowdBypass())					
+			}
 		}
 	})
 	domainBypass("drivehub.link",()=>ifElement("a#proceed[href]",safelyNavigate))
