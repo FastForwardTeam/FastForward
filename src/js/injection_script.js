@@ -979,7 +979,7 @@ ensureDomLoaded(()=>{
 				ifElement("form#form-captcha", form => {
 						form.action = `/xreallcygo${location.pathname}`
 						form.submit()
-				},() => crowdBypass())					
+				},() => crowdBypass())
 			}
 		}
 	})
