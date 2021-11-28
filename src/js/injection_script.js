@@ -2353,7 +2353,7 @@ ensureDomLoaded(()=>{
 			}
 		})
 	})
-	domainBypass("techynroll.com", ()=>awaitElement("a#enablebtn", a=>safelyAssign(a.href)))
+	domainBypass(/(techynroll|threadbolts|techitease)\.com/, ()=>awaitElement("a#enablebtn", a=>safelyAssign(a.href)))
 	hrefBypass(/meostream\.com\/links\//,()=> ifElement("a#link",safelyNavigate))
 	//XImageSharing
 	ifElement('input[type=submit][value="Continue to image..."]', submit => {
