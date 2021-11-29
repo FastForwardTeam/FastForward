@@ -983,6 +983,39 @@ ensureDomLoaded(()=>{
 			}
 		}
 	})
+  domainBypass(/za\.(gl|uy)/, () => {
+		ifElement("form#link-view", form => {
+		  document.querySelector('#x').value = '192'
+			document.querySelector('#y').value = '114'
+			document.querySelector('input[name="givenX"]').value = 'VFl0utOEF6a7BiS8YJdqTg=='
+			document.querySelector('input[name="givenY"]').value = 'rsW06vBB1oIFVpnFz61t5Q=='
+			form.submit()
+			return
+		})
+
+		ifElement("form#go-link", () => {
+			window.setTimeout(() => {
+				let payload = new URLSearchParams(new FormData(document.querySelector("#go-link"))).toString();
+					fetch(`${location.origin}/links/go`, {
+						"headers": {
+              "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+              "x-requested-with": "XMLHttpRequest"
+						},
+						"body":payload,
+						"method": "POST",
+						"mode": "cors",
+					})
+					.then(res => res.json())
+					.then(res => {
+						if(res.status !== "error"){
+						  safelyNavigate(res.url)
+							return
+						}
+						crowdBypass()
+					})
+				}, 3500)
+		}, () => crowdBypass())
+	})
 	domainBypass("drivehub.link",()=>ifElement("a#proceed[href]",safelyNavigate))
 	domainBypass("oxy.st",()=>{awaitElement("a.btn.btn-primary.btn-lg",t=>{safelyAssign(t.href)}),ifElement("button#download[disabled]",t=>{awaitElement("button#download:not([disabled])",t=>{t.click()})})})
 	domainBypass("oxy.cloud",()=>{ifElement("button#download[disabled]",d=>{awaitElement("button#download:not([disabled])",d=>{d.click()})})})
