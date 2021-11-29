@@ -983,9 +983,9 @@ ensureDomLoaded(()=>{
 			}
 		}
 	})
-  domainBypass(/za\.(gl|uy)/, () => {
+	domainBypass(/za\.(gl|uy)/, () => {
 		ifElement("form#link-view", form => {
-		  document.querySelector('#x').value = '192'
+			document.querySelector('#x').value = '192'
 			document.querySelector('#y').value = '114'
 			document.querySelector('input[name="givenX"]').value = 'VFl0utOEF6a7BiS8YJdqTg=='
 			document.querySelector('input[name="givenY"]').value = 'rsW06vBB1oIFVpnFz61t5Q=='
@@ -998,8 +998,8 @@ ensureDomLoaded(()=>{
 				let payload = new URLSearchParams(new FormData(document.querySelector("#go-link"))).toString();
 					fetch(`${location.origin}/links/go`, {
 						"headers": {
-              "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-              "x-requested-with": "XMLHttpRequest"
+							"content-type":"application/x-www-form-urlencoded; charset=UTF-8",
+							"x-requested-with":"XMLHttpRequest"
 						},
 						"body":payload,
 						"method": "POST",
@@ -1008,7 +1008,7 @@ ensureDomLoaded(()=>{
 					.then(res => res.json())
 					.then(res => {
 						if(res.status !== "error"){
-						  safelyNavigate(res.url)
+							safelyNavigate(res.url)
 							return
 						}
 						crowdBypass()
