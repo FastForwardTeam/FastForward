@@ -2428,6 +2428,11 @@ ensureDomLoaded(()=>{
 		safelyNavigate(a.href)
 		})
 	})
+	domainBypass(/go\.akwam\.(cc|cx|net|im)/, () => {
+		awaitElement("a.download-link[href]", a => {
+			safelyNavigate(a.href)
+		})
+	})
 	
 
 
