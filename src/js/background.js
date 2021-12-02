@@ -460,7 +460,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	countIt()
 	return {redirectUrl:brws.runtime.getURL("html/crowd-bypassed.html")+details.url.substr(43)}
-},{types:["main_frame"],urls:["https://crowd.fastforward.team/crowd-bypassed?*"]},["blocking"])
+},{types:["main_frame"],urls:["https://fastforward.team/crowd-bypassed?*"]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	return {redirectUrl:brws.runtime.getURL("html/options.html")+details.url.substr(36)}
