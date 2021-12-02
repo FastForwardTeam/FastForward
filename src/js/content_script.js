@@ -68,7 +68,7 @@ if(document instanceof HTMLDocument)
 					}
 					else
 					{
-						location.assign("https://fastforward.team/crowd-bypassed?target="+encodeURIComponent(msg)+"&referer="+encodeURIComponent(referer))
+						location.assign("https://universal-bypass.org/crowd-bypassed?target="+encodeURIComponent(msg)+"&referer="+encodeURIComponent(referer))
 						//The background script will intercept the request and redirect to html/crowd-bypassed.html
 					}
 					port.disconnect()
