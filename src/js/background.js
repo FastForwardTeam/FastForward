@@ -350,7 +350,7 @@ brws.runtime.onMessage.addListener((req, sender, respond) => {
 		if(crowdEnabled)
 		{
 			let xhr=new XMLHttpRequest()
-			xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
+			xhr.open("POST","https://crowd.fastforward.team/crowd/contribute_v1",true)
 			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
 			xhr.send(req.data)
 		}
@@ -403,7 +403,7 @@ brws.runtime.onConnect.addListener(port => {
 					port.postMessage(xhr.status==200&&xhr.responseText!=""?xhr.responseText:"")
 				}
 			}
-			xhr.open("POST","https://universal-bypass.org/crowd/query_v1",true)
+			xhr.open("POST","https://crowd.fastforward.team/crowd/query_v1",true)
 			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
 			xhr.send("domain="+encodeURIComponent(msg.domain)+"&path="+encodeURIComponent(msg.crowdPath))
 		})
@@ -460,7 +460,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	countIt()
 	return {redirectUrl:brws.runtime.getURL("html/crowd-bypassed.html")+details.url.substr(43)}
-},{types:["main_frame"],urls:["https://universal-bypass.org/crowd-bypassed?*"]},["blocking"])
+},{types:["main_frame"],urls:["https://crowd.fastforward.team/crowd-bypassed?*"]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	return {redirectUrl:brws.runtime.getURL("html/options.html")+details.url.substr(36)}
@@ -847,7 +847,7 @@ onHeadersReceived_rules = {
 					if(header.name.toLowerCase()=="location"&&isGoodLink(header.value))
 					{
 						let xhr=new XMLHttpRequest()
-						xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
+						xhr.open("POST","https://crowd.fastforward.team/crowd/contribute_v1",true)
 						xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
 						xhr.send("domain="+url.host+"&path="+encodeURIComponent(url.hash.substr(1))+"&target="+encodeURIComponent(header.value))
 						break
@@ -937,7 +937,7 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 					domain="ouo.io"
 				}
 				path=(domain=="cshort.org"?url.pathname.substr(1):url.pathname.split("/")[2])
-				xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
+				xhr.open("POST","https://crowd.fastforward.team/crowd/contribute_v1",true)
 				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
 				xhr.send("domain="+domain+"&path="+encodeURIComponent(path)+"&target="+encodeURIComponent(header.value))
 				break
@@ -978,7 +978,7 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 					if(header.name.toLowerCase()=="location"&&isGoodLink(header.value))
 					{
 						let xhr=new XMLHttpRequest()
-						xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
+						xhr.open("POST","https://crowd.fastforward.team/crowd/contribute_v1",true)
 						xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
 						xhr.send("domain="+(new URL(details.url)).host+"&path="+encodeURIComponent(soralink_contribute[details.url])+"&target="+encodeURIComponent(header.value))
 						break
