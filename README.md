@@ -1,4 +1,4 @@
-# [<img src="https://i.ibb.co/bW37fgB/Fast-Forward.png" width="50" />](#) _FastForward_
+# [<img src="https://avatars.githubusercontent.com/u/88992224?s=200&v=4" width="50" />](#) _FastForward_
 
 [<img src="https://badgen.net/github/checks/FastForwardTeam/FastForward?label=Build" />](https://github.com/FastForwardTeam/FastForward/blob/main/.github/workflows/main.yml)
 [<img src="https://badgen.net/badge/icon/discord?icon=discord&label=Fast+Forward" />](https://discord.gg/RSAf7b5njt)
