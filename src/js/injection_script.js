@@ -286,6 +286,58 @@ persistHash=h=>ensureDomLoaded(()=>{
 	document.querySelectorAll("form[action]").forEach(e=>e.action+="#"+h)
 	document.querySelectorAll("a[href]").forEach(e=>e.href+="#"+h)
 })
+
+const ffClipboard = function() {}
+ffClipboard_stored = decodeURIComponent(ffClipboard_stored) //ffClipboard_stored is defined in content_script.js
+//returns an ffclipboard entry, if id does not exist, returns null
+ffClipboard.get =(id) => {
+	try {
+		var ffClipboardObj = JSON.parse(ffClipboard_stored) 
+	} catch(e) {
+		return e
+	}
+	if (ffClipboardObj === null) {
+		ffClipboardObj = {}
+	}
+	if (!(id in ffClipboardObj)) {
+		return null
+	}
+	return ffClipboardObj[id]
+}
+//sets ffclipboard contents, if id does not exist, creates it
+ffClipboard.set =(id, value) => {
+	try {
+		var ffClipboardObj = JSON.parse(ffClipboard_stored)
+	} catch(e) {
+		return e
+	}
+		
+	if (ffClipboardObj === null) {
+		ffClipboardObj = {}
+	}
+	ffClipboardObj[id] = value
+	let message = { type: "ffclipboardSet", text: JSON.stringify(ffClipboardObj) }
+	window.postMessage(message, "*") //send message to content script
+}
+//deletes ffclipboard contents and frees up storage , if id does not exist, does nothing
+ffClipboard.free =(id) => {
+	try {
+		var ffClipboardObj = JSON.parse(ffClipboard_stored)
+	} catch(e) {
+		return e
+	}
+		
+	if (ffClipboardObj === null) {
+		ffClipboardObj = {}
+	}
+	if (!(id in ffClipboardObj)) {
+		return
+	}
+	delete ffClipboardObj[id]
+	let message = { type: "ffclipboardSet", text: JSON.stringify(ffClipboardObj) }
+	window.postMessage(message, "*")
+}
+
 let navigated=false,
 bypassed=false,
 domain=location.hostname,
