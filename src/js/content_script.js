@@ -1,5 +1,5 @@
 //If you want to add your own bypass, go to injection_script.js
-if(document instanceof HTMLDocument)
+if(document instanceof Document)
 {
 	let clipboardIndex=location.hash.indexOf("#bypassClipboard="),ignoreCrowdBypass=false,bypassClipboard=""
 	if(location.hash.substr(-18)=="#ignoreCrowdBypass")
@@ -117,19 +117,34 @@ if(document instanceof HTMLDocument)
 		crowdPath=location.pathname.substr(1),
 		referer=location.href
 
-		let script=document.createElement("script")
-		script.innerHTML=`(()=>{
-			const crowdEnabled=`+(res.crowdEnabled?"true":"false")+`,
-			ignoreCrowdBypass=`+(ignoreCrowdBypass?"true":"false")+`,
-			bypassClipboard="`+bypassClipboard.split("\\").join("\\\\").split("\"").join("\\\"")+`"
-			if(location.href=="https://universal-bypass.org/firstrun")
-			{
-				location.replace("https://universal-bypass.org/firstrun?1")
-				return
+		//ffclipboard reciever
+		window.addEventListener("message", function(event) {
+			// We only accept messages from ourselves
+			if (event.source != window) {
+				return;
 			}
-			`+res.injectionScript+`
-		})()`
-		script=document.documentElement.appendChild(script)
-		setTimeout(()=>document.documentElement.removeChild(script),10)
+			if (event.data.type === "ffclipboardSet") {
+				brws.storage.local.set({ff_clipboard: event.data.text})
+			}
+		});
+		brws.storage.local.get('ff_clipboard', function(result) {
+			ffClipboard_stored = result.ff_clipboard
+			ffClipboard_stored = encodeURIComponent(ffClipboard_stored)
+			let script=document.createElement("script")
+			script.innerHTML=`(()=>{
+				const crowdEnabled=`+(res.crowdEnabled?"true":"false")+`,
+				ignoreCrowdBypass=`+(ignoreCrowdBypass?"true":"false")+`,
+				bypassClipboard="`+bypassClipboard.split("\\").join("\\\\").split("\"").join("\\\"")+`"
+				let ffClipboard_stored="`+ffClipboard_stored+`"
+				if(location.href=="https://universal-bypass.org/firstrun")
+				{
+					location.replace("https://universal-bypass.org/firstrun?1")
+					return
+				}
+				`+res.injectionScript+`
+			})()`
+			script=document.documentElement.appendChild(script)
+			setTimeout(()=>document.documentElement.removeChild(script),10)
+	});
 	})
 }
