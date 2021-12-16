@@ -21,13 +21,16 @@ getRedirect=(url,referer,safe_in)=>{
 },
 encodedRedirect=(url,referer,safe_in)=>getRedirect(decodeURIComponent(url),referer,safe_in),
 isGoodLink=link=>{
-	if(!link||link.substr(0,6)=="about:"||link.substr(0,11)=="javascript:")//jshint ignore:line
+	if(typeof link !== "string"||(link.split("#")[0]==location.href.split("#")[0]&&!isGoodLink_allowSelf))
 	{
 		return false
 	}
 	try
 	{
-		new URL(link)
+		let u = decodeURI(link).trim().toLocaleLowerCase()
+		if (u.startsWith("javascript:") || u.startsWith("data:") || u.startsWith("vbscript:") || u.startsWith("file:") || u.startsWith("about:") || u.startsWith("chrome:")) {
+			return false
+		}
 	}
 	catch(e)
 	{
