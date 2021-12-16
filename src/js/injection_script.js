@@ -285,10 +285,19 @@ backgroundScriptBypassClipboard=c=>{
 persistHash=h=>ensureDomLoaded(()=>{
 	document.querySelectorAll("form[action]").forEach(e=>e.action+="#"+h)
 	document.querySelectorAll("a[href]").forEach(e=>e.href+="#"+h)
-})
+}),
+//decodes https://stackoverflow.com/a/16435373/17117909
+decodeURIEncodedMod=(s)=>{
+    try{
+        return decodeURIComponent(s.replace(/\%2D/g, "-").replace(/\%5F/g, "_").replace(/\%2E/g, ".").replace(/\%21/g, "!").replace(/\%7E/g, "~").replace(/\%2A/g, "*").replace(/\%27/g, "'").replace(/\%28/g, "(").replace(/\%29/g, ")"));
+    }catch (e) {
+		return null
+    }
+}
+
 
 const ffClipboard = function() {}
-ffClipboard_stored = decodeURIComponent(ffClipboard_stored) //ffClipboard_stored is defined in content_script.js
+ffClipboard_stored = decodeURIEncodedMod(ffClipboard_stored) //ffClipboard_stored is defined in content_script.js
 //returns an ffclipboard entry, if id does not exist, returns null
 ffClipboard.get =(id) => {
 	try {
