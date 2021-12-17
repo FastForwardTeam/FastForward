@@ -21,9 +21,16 @@ isGoodLink=link=>{
 	}
 	try
 	{
-		let u = decodeURI(link).trim().toLocaleLowerCase()
-		if (u.startsWith("javascript:") || u.startsWith("data:") || u.startsWith("vbscript:") || u.startsWith("file:") || u.startsWith("about:") || u.startsWith("chrome:")) {
-		return false
+		let u = new URL(decodeURI(link).trim().toLocaleLowerCase())
+		//check if host is a private/internal ip
+		var parts = u.hostname.split('.');
+		if (parts[0] === '10' || (parts[0] === '172' && (parseInt(parts[1], 10) >= 16 && parseInt(parts[1], 10) <= 31)) || (parts[0] === '192' && parts[1] === '168')) {
+			return false
+		}
+		// Check if protocol is safe
+		let safeProtocols = ["http:", "https:", "mailto:", "irc:", "telnet:", "tel:", "svn:"]
+		if (!safeProtocols.includes(u.protocol)) {
+			return false
 		}
 	}
 	catch(e)
