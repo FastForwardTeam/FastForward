@@ -29,6 +29,9 @@ isGoodLink=link=>{
 	{
 		let u = new URL(decodeURI(link).trim().toLocaleLowerCase())
 		//check if host is a private/internal ip
+		if (u.hostname === 'localhost' || u.hostname === '[::1]' || /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/.test(u.hostname)) {
+			return false
+		}
 		var parts = u.hostname.split('.');
 		if (parts[0] === '10' || (parts[0] === '172' && (parseInt(parts[1], 10) >= 16 && parseInt(parts[1], 10) <= 31)) || (parts[0] === '192' && parts[1] === '168')) {
 			return false
