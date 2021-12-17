@@ -21,13 +21,26 @@ getRedirect=(url,referer,safe_in)=>{
 },
 encodedRedirect=(url,referer,safe_in)=>getRedirect(decodeURIComponent(url),referer,safe_in),
 isGoodLink=link=>{
-	if(!link||link.substr(0,6)=="about:"||link.substr(0,11)=="javascript:")//jshint ignore:line
+	if(typeof link !== "string"||(link.split("#")[0]==location.href.split("#")[0]&&!isGoodLink_allowSelf))
 	{
 		return false
 	}
 	try
 	{
-		new URL(link)
+		let u = new URL(decodeURI(link).trim().toLocaleLowerCase())
+		//check if host is a private/internal ip
+		if (u.hostname === 'localhost' || u.hostname === '[::1]' || /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/.test(u.hostname)) {
+			return false
+		}
+		var parts = u.hostname.split('.');
+		if (parts[0] === '10' || (parts[0] === '172' && (parseInt(parts[1], 10) >= 16 && parseInt(parts[1], 10) <= 31)) || (parts[0] === '192' && parts[1] === '168')) {
+			return false
+		}
+		// Check if protocol is safe
+		let safeProtocols = ["http:", "https:", "mailto:", "irc:", "telnet:", "tel:", "svn:"]
+		if (!safeProtocols.includes(u.protocol)) {
+			return false
+		}
 	}
 	catch(e)
 	{
