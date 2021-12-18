@@ -21,13 +21,26 @@ getRedirect=(url,referer,safe_in)=>{
 },
 encodedRedirect=(url,referer,safe_in)=>getRedirect(decodeURIComponent(url),referer,safe_in),
 isGoodLink=link=>{
-	if(!link||link.substr(0,6)=="about:"||link.substr(0,11)=="javascript:")//jshint ignore:line
+	if(typeof link !== "string"||(link.split("#")[0]==location.href.split("#")[0]&&!isGoodLink_allowSelf))
 	{
 		return false
 	}
 	try
 	{
-		new URL(link)
+		let u = new URL(decodeURI(link).trim().toLocaleLowerCase())
+		//check if host is a private/internal ip
+		if (u.hostname === 'localhost' || u.hostname === '[::1]' || /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/.test(u.hostname)) {
+			return false
+		}
+		var parts = u.hostname.split('.');
+		if (parts[0] === '10' || (parts[0] === '172' && (parseInt(parts[1], 10) >= 16 && parseInt(parts[1], 10) <= 31)) || (parts[0] === '192' && parts[1] === '168')) {
+			return false
+		}
+		// Check if protocol is safe
+		let safeProtocols = ["http:", "https:", "mailto:", "irc:", "telnet:", "tel:", "svn:"]
+		if (!safeProtocols.includes(u.protocol)) {
+			return false
+		}
 	}
 	catch(e)
 	{
@@ -51,6 +64,17 @@ brws.runtime.onInstalled.addListener(details=>{
 	{
 		brws.tabs.create({url:"https://fastforward.team/firstrun"})
 	}
+	//init clipboard
+	chrome.storage.local.get({ff_clipboard: "{}"}, function(data) {
+		chrome.storage.local.set({ff_clipboard: data.ff_clipboard}, function() {
+	})})
+})
+
+//clean clipboard on startup
+brws.runtime.onStartup.addListener(() => {
+	chrome.storage.local.get({ff_clipboard: "{}"}, function(data) {
+		chrome.storage.local.set({ff_clipboard: data.ff_clipboard}, function() {
+	})})
 })
 
 // Uninstall handler
@@ -350,7 +374,7 @@ brws.runtime.onMessage.addListener((req, sender, respond) => {
 		if(crowdEnabled)
 		{
 			let xhr=new XMLHttpRequest()
-			xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
+			xhr.open("POST","https://crowd.fastforward.team/crowd/contribute_v1",true)
 			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
 			xhr.send(req.data)
 		}
@@ -403,7 +427,7 @@ brws.runtime.onConnect.addListener(port => {
 					port.postMessage(xhr.status==200&&xhr.responseText!=""?xhr.responseText:"")
 				}
 			}
-			xhr.open("POST","https://universal-bypass.org/crowd/query_v1",true)
+			xhr.open("POST","https://crowd.fastforward.team/crowd/query_v1",true)
 			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
 			xhr.send("domain="+encodeURIComponent(msg.domain)+"&path="+encodeURIComponent(msg.crowdPath))
 		})
@@ -847,7 +871,7 @@ onHeadersReceived_rules = {
 					if(header.name.toLowerCase()=="location"&&isGoodLink(header.value))
 					{
 						let xhr=new XMLHttpRequest()
-						xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
+						xhr.open("POST","https://crowd.fastforward.team/crowd/contribute_v1",true)
 						xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
 						xhr.send("domain="+url.host+"&path="+encodeURIComponent(url.hash.substr(1))+"&target="+encodeURIComponent(header.value))
 						break
@@ -937,7 +961,7 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 					domain="ouo.io"
 				}
 				path=(domain=="cshort.org"?url.pathname.substr(1):url.pathname.split("/")[2])
-				xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
+				xhr.open("POST","https://crowd.fastforward.team/crowd/contribute_v1",true)
 				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
 				xhr.send("domain="+domain+"&path="+encodeURIComponent(path)+"&target="+encodeURIComponent(header.value))
 				break
@@ -978,7 +1002,7 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 					if(header.name.toLowerCase()=="location"&&isGoodLink(header.value))
 					{
 						let xhr=new XMLHttpRequest()
-						xhr.open("POST","https://universal-bypass.org/crowd/contribute_v1",true)
+						xhr.open("POST","https://crowd.fastforward.team/crowd/contribute_v1",true)
 						xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
 						xhr.send("domain="+(new URL(details.url)).host+"&path="+encodeURIComponent(soralink_contribute[details.url])+"&target="+encodeURIComponent(header.value))
 						break
