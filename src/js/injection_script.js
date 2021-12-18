@@ -298,7 +298,84 @@ backgroundScriptBypassClipboard=c=>{
 persistHash=h=>ensureDomLoaded(()=>{
 	document.querySelectorAll("form[action]").forEach(e=>e.action+="#"+h)
 	document.querySelectorAll("a[href]").forEach(e=>e.href+="#"+h)
-})
+}),
+//decodes https://stackoverflow.com/a/16435373/17117909
+decodeURIEncodedMod=(s)=>{
+    try{
+        return decodeURIComponent(s.replace(/\%2D/g, "-").replace(/\%5F/g, "_").replace(/\%2E/g, ".").replace(/\%21/g, "!").replace(/\%7E/g, "~").replace(/\%2A/g, "*").replace(/\%27/g, "'").replace(/\%28/g, "(").replace(/\%29/g, ")"));
+    }catch (e) {
+		return null
+    }
+}
+
+//Backwards compatibility for ffclipboard
+versionString = UNIVERSAL_BYPASS_EXTERNAL_VERSION + ''
+let versionPatchNumber = Number(versionString.split(".").pop())
+let ffClpbrdSupported = false
+if(versionPatchNumber >= 1924) { 
+	ffClpbrdSupported = true
+}
+if (ffClpbrdSupported) {
+	ffClipboard_stored = decodeURIEncodedMod(ffClipboard_stored) //ffClipboard_stored is defined in content_script.js
+} else {
+	ffClipboard_stored = '{}'
+}
+class ffClipboard {
+	constructor() { }
+	//returns an ffclipboard entry, if id does not exist, returns null
+	static get(id) {
+		try {
+			var ffClipboardObj = JSON.parse(ffClipboard_stored)
+		} catch (e) {
+			return null
+		}
+		if (ffClipboardObj) {
+			if (ffClipboardObj[id]) {
+				return ffClipboardObj[id]
+			} else {
+				return null
+			}
+		} else {
+			return null
+		}
+	}
+	//sets ffclipboard contents, if id does not exist, creates it
+	static set(id, value) {
+		try {
+			var ffClipboardObj = JSON.parse(ffClipboard_stored)
+		} catch (e) {
+			return null
+		}
+		if (ffClipboardObj) {
+			ffClipboardObj[id] = value
+			let message = { type: "ffclipboardSet", text: JSON.stringify(ffClipboardObj) }
+			window.postMessage(message, "*") //send message to content script
+			ffClipboard_stored = JSON.stringify(ffClipboardObj)
+		} else {
+			return null
+		}
+	}
+	//deletes ffclipboard contents and frees up storage, if id does not exist, does nothing
+	static free(id) {
+		try {
+			var ffClipboardObj = JSON.parse(ffClipboard_stored)
+		} catch (e) {
+			return null
+		}
+		if (ffClipboardObj) {
+			if (ffClipboardObj[id]) {
+				delete ffClipboardObj[id]
+				let message = { type: "ffclipboardSet", text: JSON.stringify(ffClipboardObj) }
+				window.postMessage(message, "*")
+				ffClipboard_stored = JSON.stringify(ffClipboardObj)
+			} else {
+				return
+			}
+		} else {
+			return
+		}
+	}
+}
 let navigated=false,
 bypassed=false,
 domain=location.hostname,
