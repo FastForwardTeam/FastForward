@@ -2556,6 +2556,13 @@ ensureDomLoaded(()=>{
 			safelyNavigate(a.href)
 		})
 	})
+	domainBypass("allkeyshop.com", () => {
+		if (location.pathname.includes("outgoinglink/link/")) {
+			ifElement("a", a => {
+				safelyNavigate(a.href)
+			})
+		}
+	})
 	
 
 
