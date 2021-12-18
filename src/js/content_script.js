@@ -1,5 +1,5 @@
 //If you want to add your own bypass, go to injection_script.js
-if(document instanceof Document)
+if(document instanceof HTMLDocument)
 {
 	let clipboardIndex=location.hash.indexOf("#bypassClipboard="),ignoreCrowdBypass=false,bypassClipboard=""
 	if(location.hash.substr(-18)=="#ignoreCrowdBypass")
@@ -117,36 +117,19 @@ if(document instanceof Document)
 		crowdPath=location.pathname.substr(1),
 		referer=location.href
 
-		//ffclipboard reciever
-		window.addEventListener("message", function(event) {
-			// We only accept messages from ourselves
-			if (event.source != window) {
-				return;
+		let script=document.createElement("script")
+		script.innerHTML=`(()=>{
+			const crowdEnabled=`+(res.crowdEnabled?"true":"false")+`,
+			ignoreCrowdBypass=`+(ignoreCrowdBypass?"true":"false")+`,
+			bypassClipboard="`+bypassClipboard.split("\\").join("\\\\").split("\"").join("\\\"")+`"
+			if(location.href=="https://universal-bypass.org/firstrun")
+			{
+				location.replace("https://universal-bypass.org/firstrun?1")
+				return
 			}
-			if (event.data.type === "ffclipboardSet") {
-				brws.storage.local.set({ff_clipboard: event.data.text})
-			}
-		});
-		brws.storage.local.get('ff_clipboard', function(result) {
-			ffClipboard_stored = result.ff_clipboard
-
-			//encodeURIcomponent and replace whatever's not encoded, https://stackoverflow.com/a/16435373/17117909
-			ffClipboard_stored = encodeURIComponent(ffClipboard_stored).replace(/\-/g, "%2D").replace(/\_/g, "%5F").replace(/\./g, "%2E").replace(/\!/g, "%21").replace(/\~/g, "%7E").replace(/\*/g, "%2A").replace(/\'/g, "%27").replace(/\(/g, "%28").replace(/\)/g, "%29")
-			let script=document.createElement("script")
-			script.innerHTML=`(()=>{
-				const crowdEnabled=`+(res.crowdEnabled?"true":"false")+`,
-				ignoreCrowdBypass=`+(ignoreCrowdBypass?"true":"false")+`,
-				bypassClipboard="`+bypassClipboard.split("\\").join("\\\\").split("\"").join("\\\"")+`"
-				let ffClipboard_stored="`+ffClipboard_stored+`"
-				if(location.href=="https://universal-bypass.org/firstrun")
-				{
-					location.replace("https://universal-bypass.org/firstrun?1")
-					return
-				}
-				`+res.injectionScript+`
-			})()`
-			script=document.documentElement.appendChild(script)
-			setTimeout(()=>document.documentElement.removeChild(script),10)
-	});
+			`+res.injectionScript+`
+		})()`
+		script=document.documentElement.appendChild(script)
+		setTimeout(()=>document.documentElement.removeChild(script),10)
 	})
 }

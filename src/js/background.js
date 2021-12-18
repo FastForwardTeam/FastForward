@@ -64,17 +64,6 @@ brws.runtime.onInstalled.addListener(details=>{
 	{
 		brws.tabs.create({url:"https://fastforward.team/firstrun"})
 	}
-	//init clipboard
-	chrome.storage.local.get({ff_clipboard: "{}"}, function(data) {
-		chrome.storage.local.set({ff_clipboard: data.ff_clipboard}, function() {
-	})})
-})
-
-//clean clipboard on startup
-brws.runtime.onStartup.addListener(() => {
-	chrome.storage.local.get({ff_clipboard: "{}"}, function(data) {
-		chrome.storage.local.set({ff_clipboard: data.ff_clipboard}, function() {
-	})})
 })
 
 // Uninstall handler
