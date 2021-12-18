@@ -295,58 +295,74 @@ decodeURIEncodedMod=(s)=>{
     }
 }
 
-
-const ffClipboard = function() {}
-ffClipboard_stored = decodeURIEncodedMod(ffClipboard_stored) //ffClipboard_stored is defined in content_script.js
-//returns an ffclipboard entry, if id does not exist, returns null
-ffClipboard.get =(id) => {
-	try {
-		var ffClipboardObj = JSON.parse(ffClipboard_stored) 
-	} catch(e) {
-		return e
-	}
-	if (ffClipboardObj === null) {
-		ffClipboardObj = {}
-	}
-	if (!(id in ffClipboardObj)) {
-		return null
-	}
-	return ffClipboardObj[id]
+//Backwards compatibility for ffclipboard
+versionString = UNIVERSAL_BYPASS_EXTERNAL_VERSION + ''
+let versionPatchNumber = Number(versionString.split(".").pop())
+let ffClpbrdSupported = false
+if(versionPatchNumber >= 1924) { 
+	ffClpbrdSupported = true
 }
-//sets ffclipboard contents, if id does not exist, creates it
-ffClipboard.set =(id, value) => {
-	try {
-		var ffClipboardObj = JSON.parse(ffClipboard_stored)
-	} catch(e) {
-		return e
-	}
-		
-	if (ffClipboardObj === null) {
-		ffClipboardObj = {}
-	}
-	ffClipboardObj[id] = value
-	let message = { type: "ffclipboardSet", text: JSON.stringify(ffClipboardObj) }
-	window.postMessage(message, "*") //send message to content script
+if (ffClpbrdSupported) {
+	ffClipboard_stored = decodeURIEncodedMod(ffClipboard_stored) //ffClipboard_stored is defined in content_script.js
+} else {
+	ffClipboard_stored = '{}'
 }
-//deletes ffclipboard contents and frees up storage , if id does not exist, does nothing
-ffClipboard.free =(id) => {
-	try {
-		var ffClipboardObj = JSON.parse(ffClipboard_stored)
-	} catch(e) {
-		return e
+class ffClipboard {
+	constructor() { }
+	//returns an ffclipboard entry, if id does not exist, returns null
+	static get(id) {
+		try {
+			var ffClipboardObj = JSON.parse(ffClipboard_stored)
+		} catch (e) {
+			return null
+		}
+		if (ffClipboardObj) {
+			if (ffClipboardObj[id]) {
+				return ffClipboardObj[id]
+			} else {
+				return null
+			}
+		} else {
+			return null
+		}
 	}
-		
-	if (ffClipboardObj === null) {
-		ffClipboardObj = {}
+	//sets ffclipboard contents, if id does not exist, creates it
+	static set(id, value) {
+		try {
+			var ffClipboardObj = JSON.parse(ffClipboard_stored)
+		} catch (e) {
+			return null
+		}
+		if (ffClipboardObj) {
+			ffClipboardObj[id] = value
+			let message = { type: "ffclipboardSet", text: JSON.stringify(ffClipboardObj) }
+			window.postMessage(message, "*") //send message to content script
+			ffClipboard_stored = JSON.stringify(ffClipboardObj)
+		} else {
+			return null
+		}
 	}
-	if (!(id in ffClipboardObj)) {
-		return
+	//deletes ffclipboard contents and frees up storage, if id does not exist, does nothing
+	static free(id) {
+		try {
+			var ffClipboardObj = JSON.parse(ffClipboard_stored)
+		} catch (e) {
+			return null
+		}
+		if (ffClipboardObj) {
+			if (ffClipboardObj[id]) {
+				delete ffClipboardObj[id]
+				let message = { type: "ffclipboardSet", text: JSON.stringify(ffClipboardObj) }
+				window.postMessage(message, "*")
+				ffClipboard_stored = JSON.stringify(ffClipboardObj)
+			} else {
+				return
+			}
+		} else {
+			return
+		}
 	}
-	delete ffClipboardObj[id]
-	let message = { type: "ffclipboardSet", text: JSON.stringify(ffClipboardObj) }
-	window.postMessage(message, "*")
 }
-
 let navigated=false,
 bypassed=false,
 domain=location.hostname,
