@@ -56,11 +56,7 @@ unsafelyNavigate=target=>{
 	let url="https://universal-bypass.org/bypassed?target="+encodeURIComponent(target)+"&referer="+encodeURIComponent(referer)
 	switch(target)//All values here have been tested using "Take me to destinations after 0 seconds."
 	{
-		case (/fluxteam|ksapi|oxygenu\.xyz/.exec(target)||{}).input:
-		url+="&safe_in=85"
-		break;
-
-		case (/krnl\.gg/.exec(target)||{}).input:
+		case (/krnl\.ca/.exec(target)||{}).input:
 		url+="&safe_in=15"
 		break;
 	}
