@@ -1889,7 +1889,20 @@ ensureDomLoaded(()=>{
 	domainBypass("work.ink", () => {
 		ifElement("#redirect-button", () => openFinalLink())
 	})
+	
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
+	
+	domainBypass("forexmab.com", () => {
+    		ifElement("#molien", a => {safelyNavigate(a.firstElementChild.href)})})
+		
+	domainBypass("forex-articles.com",()=>ifElement("#FilterSearch",f=>{
+		f.target="_self"
+		f.submit()}))
+    		
+	domainBypass("forexlap.com",()=>ifElement("#molien", a=>{
+    		let b=a.getElementsByTagName("form")
+    		b[0].submit()}))
+
 	hrefBypass(/https:\/\/fmoviesdl.com\/links\//, () => {
 		ifElement("#link", a => {
 		    safelyNavigate(a.href)
