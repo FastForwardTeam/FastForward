@@ -858,6 +858,9 @@ domainBypass("universal-bypass.org",()=>{
 	window.universalBypassInjectionVersion="UNIVERSAL_BYPASS_INJECTION_VERSION"
 })
 
+domainBypass("acortame.xyz", () => {
+    if (window.location.hash) unsafelyNavigate(atob(window.location.hash.substr(1)))
+})
 domainBypass(/linkvertise\.(com|net)|link-to\.net/, () => {
     // dynamic
     if (window.location.href.toString().indexOf("?r=") != -1) {
