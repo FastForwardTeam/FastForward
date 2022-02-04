@@ -546,7 +546,7 @@ domainBypass(/bc\.vc|bcvc\.live/,()=>{
 })
 domainBypass("tei.ai", () => {
 	ensureDomLoaded(() => {
-	    var link = atob("aH" + document.querySelector("#link-view [name='token']").value.split("aH")[1]);
+	    var link = atob(`aH${document.querySelector("#link-view [name='token']").value.split("aH").slice(1).join("aH")}`);
 	    safelyNavigate(link);
 	});
 });
@@ -858,6 +858,9 @@ domainBypass("universal-bypass.org",()=>{
 	window.universalBypassInjectionVersion="UNIVERSAL_BYPASS_INJECTION_VERSION"
 })
 
+domainBypass("acortame.xyz", () => {
+    if (window.location.hash) unsafelyNavigate(atob(window.location.hash.substr(1)))
+})
 domainBypass(/linkvertise\.(com|net)|link-to\.net/, () => {
     // dynamic
     if (window.location.href.toString().indexOf("?r=") != -1) {
