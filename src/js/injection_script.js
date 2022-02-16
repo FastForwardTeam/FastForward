@@ -2562,7 +2562,9 @@ ensureDomLoaded(()=>{
 			})
 		}
 	})
-	
+	hrefBypass(/sharemods\.com\/([a-z0-9]{12})\//, () => {
+		awaitElement("#dForm", a => (a.submit()));
+	})
 
 
 
