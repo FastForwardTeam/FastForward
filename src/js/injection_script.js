@@ -59,6 +59,9 @@ unsafelyNavigate=target=>{
 		case (/krnl\.ca/.exec(target)||{}).input:
 		url+="&safe_in=15"
 		break;
+		case (/hugegames\.io/.exec(target)||{}).input:
+		url+="&safe_in=15"
+		break;
 	}
 	unsafelyAssign(url)
 },
