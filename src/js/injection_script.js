@@ -1110,6 +1110,10 @@ ensureDomLoaded(()=>{
 	domainBypass("oxy.cloud",()=>{ifElement("button#download[disabled]",d=>{awaitElement("button#download:not([disabled])",d=>{d.click()})})})
 	domainBypass("daunshorte.teknologilink.com",()=>safelyAssign(document.querySelector("a[href^='https://teknosafe.teknologilink.com/linkteknolink/safelinkscript.php?']").href))
 	domainBypass("imgtaxi.com",()=>document.querySelector("a.overlay_ad_link").click())
+	domainBypass("imgkoc.buzz",()=>{ifElement("#newImgE",img=>{
+		wuLu()
+		safelyNavigate(img.src)
+	})})
 	domainBypass("do2unlock.com",()=>{
 		let a=document.querySelector("a#locked_action_link[href^='/getlink/']")
 		if(a)
