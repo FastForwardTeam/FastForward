@@ -1,0 +1,58 @@
+{
+  "name": "fasterforward",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@mantine/core": "^4.0.5",
+    "@mantine/hooks": "^4.0.5",
+    "@reduxjs/toolkit": "^1.8.0",
+    "@tabler/icons": "^1.56.0",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.4",
+    "@testing-library/user-event": "^13.5.0",
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.2.2",
+    "react-scripts": "5.0.0",
+    "redux": "^4.1.2",
+    "redux-persist": "^6.0.0",
+    "redux-persist-webextension-storage": "^1.0.2",
+    "tabler-icons-react": "^1.38.0",
+    "web-vitals": "^2.1.4",
+    "webextension-polyfill": "^0.8.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint ."
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.0"
+  }
+}

@@ -1,0 +1,41 @@
+.mantine-NumberInput-root{
+
+    width: 50px;
+    margin: 0;
+    padding: 0em;
+    margin-top: -0.9em;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    height: 0.8em;
+}
+.mantine-Checkbox-root{
+  
+    width: auto;
+    padding: 0em;
+    margin: 0em;
+    height: auto;
+  
+    font-size: 26em;
+    line-height: 15em;
+
+    white-space: nowrap;
+}
+
+.labeldiv{
+    margin-top: -0.1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.rootCheckboxWithNumber, .rootCheckbox {
+    margin: 1em;
+
+}
+
+.mantine-Tabs-root{
+    height: 100%;
+}
+

@@ -1,0 +1,44 @@
+{
+  "manifest_version": 2,
+  "name": "FastForward",
+  "description": "hi :)",
+  "homepage_url": "https://fastforward.team",
+  "version": "0.0.0.0",
+  "author": "FastForward Team",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "addon@fastforward.team",
+      "strict_min_version": "57.0"
+    }
+  },
+  "permissions": [
+    "alarms",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
+  "options_ui": {
+    "page": "index.html",
+    "open_in_tab": true
+  },
+  "background": {
+    "scripts": [
+      "./js/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "./js/content_script.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    "./index.html"
+  ]
+}
