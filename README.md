@@ -7,23 +7,32 @@
 
 #### Don't waste your time with compliance. FastForward automatically skips annoying link shorteners.
 
-As you may know, [Universal Bypass](https://github.com/Sainan/Universal-Bypass) is no longer maintained by its original developer, Sainan, who had worked on it for so long.
+As you may know, [Universal Bypass](https://github.com/Sainan/Universal-Bypass) is no longer maintained by its original developer, [Sainan](https://github.com/Sainan), who had worked on it for so long.\
 Thanks Sainan for your hard work.
 
-If you are interested in assisting the development or need help, join our Discord server: https://discord.gg/RSAf7b5njt
+If you are interested in assisting the development or need help, join in our [Discord server](https://discord.gg/RSAf7b5njt).
 
 [<img src="https://i.ibb.co/X70qCQx/Discord-Logo-Color.png" width="40" />](https://discord.gg/RSAf7b5njt)
 
-# Installation instructions
+# Installation Instructions
 
 ## Chromium based browsers
-The addon is on the Chrome Web Store [here](https://chrome.google.com/webstore/detail/fastforward/icallnadddjmdinamnolclfjanhfoafe) 
-and Microsoft Edge Addons [here](https://microsoftedge.microsoft.com/addons/detail/fastforward/ldcclmkclhomnpcnccgbgleikchbnecl).
 
-Or you can install it manually [here](https://github.com/FastForwardTeam/FastForward/blob/main/INSTALLING.md).
+### Recommended
+
+The addon is on the [Chrome Web Store](https://chrome.google.com/webstore/detail/fastforward/icallnadddjmdinamnolclfjanhfoafe) 
+and in the [Microsoft Edge Addons](https://microsoftedge.microsoft.com/addons/detail/fastforward/ldcclmkclhomnpcnccgbgleikchbnecl).
+
+### Advanced
+
+You can install it manually [here](https://github.com/FastForwardTeam/FastForward/blob/main/INSTALLING.md).
 
 ## Firefox
 
-The addon is on the Firefox Addons store: https://addons.mozilla.org/en-US/firefox/addon/fastforwardteam/
+### Recommended
 
-Or you can install it manually [here](https://github.com/FastForwardTeam/FastForward/blob/main/INSTALLING.md).
+The addon is on the [Firefox Addons Store](https://addons.mozilla.org/en-US/firefox/addon/fastforwardteam/).
+
+### Advanced
+
+You can install it manually [here](https://github.com/FastForwardTeam/FastForward/blob/main/INSTALLING.md).
