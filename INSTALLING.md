@@ -11,7 +11,7 @@ These are for manually installing the addon. if you do not wish to do this, [Add
 
 # Installation instructions
 ## Chromium based browsers:
-| :information_source: Auto-updating builds for Google Chrome (Windows & Linux), Kiwi(Android), Ungoogled Chromium and Edge are now available |
+| :information_source: Auto-updating builds for Google Chrome (Windows & Linux), Kiwi (Android), Ungoogled Chromium and Edge are now available |
 | :-: |
 | [Click here for instructions](https://github.com/FastForwardTeam/releases#installation-instructions) |
 
