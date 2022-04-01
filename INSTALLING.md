@@ -38,7 +38,7 @@ This will only work in the nightly version of Firefox.
 7. Open about:addons
 8. Drag your `FastForward_firefox_X.XXXX.xpi` into Firefox, and click "add" when prompted.
 
-### Android & iOS
+### Android
 
 1. Click [here](https://blog.mozilla.org/addons/2020/09/29/expanded-extension-support-in-firefox-for-android-nightly/) and follow the steps.
 2. When you are on the step 5, place this number: `17352072` on Collection Owner.
