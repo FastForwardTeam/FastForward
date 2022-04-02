@@ -4,5 +4,5 @@ contact_links:
     url: https://discord.gg/RSAf7b5njt
     about: Please ask for help and support there.
   - name: Issues
-    url: https://github.com/Universal-Bypass-Renewed/Universal-Bypass/labels/New-bypass
+    url: https://github.com/FastForwardTeam/FastForward/issues?q=label%3ANew-bypass
     about: Please search before issues to check if a site is already submitted.
