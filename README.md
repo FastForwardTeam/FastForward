@@ -34,7 +34,7 @@ You can install it manually [here](https://github.com/FastForwardTeam/FastForwar
 
 ### Recommended
 
-The addon is on the [Firefox Addons Store](https://addons.mozilla.org/en-US/firefox/addon/fastforwardteam/).
+The addon is on the [Firefox Addons Store](https://addons.mozilla.org/firefox/addon/fastforwardteam/).
 
 <a href="https://addons.mozilla.org/firefox/addon/fastforwardteam/"><img src="https://user-images.githubusercontent.com/585534/107280546-7b9b2a00-6a26-11eb-8f9f-f95932f4bfec.png" alt="Get uBlock Origin for Firefox"></a> 
 
