@@ -47,5 +47,5 @@ This will only work in the nightly version of Firefox.
 5. Open Firefox.
 6. Tap on the 3 dots.
 7. Tap on Extensions.
-8. Add FastForward.
-9. (Optional but recommended) Remove the Collection Owner and Collection Name.
+8. Find FastForward.
+9. Add FastForward.
