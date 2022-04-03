@@ -7,7 +7,7 @@ body:
     value: |
       ## Note
       Issues are not a place to go ask support questions.
-      Please ask support questions on the [discord](https://discord.gg/RSAf7b5njt).
+      Please ask support questions on the [Discord](https://discord.gg/RSAf7b5njt).
       
       ### **This form is not for reporting sites that are not bypassed**
       Thanks for taking the time to fill out this form!
@@ -56,11 +56,3 @@ body:
        Tip: You can attach images files by clicking this area to highlight it and then dragging files in.
   validations:
     required: false
-- type: checkboxes
-  id: terms
-  attributes:
-    label: Code of Conduct
-    description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-    options:
-      - label: I agree to follow this project's Code of Conduct
-        required: true
