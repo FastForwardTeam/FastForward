@@ -1918,6 +1918,12 @@ ensureDomLoaded(()=>{
 		    })
 		})
 	})
+	domainBypass("papermc.io", () => {
+		if (location.pathname.includes("legacy")) {
+			document.getElementById("quiz").style.display = 'none';
+			document.getElementById("content").style.display = 'block';
+		}
+	})
 	domainBypass("egao.in", () => {
       ifElement("#SafelinkChecker", button => {
           fetch("https://egao.in/safelink", {
