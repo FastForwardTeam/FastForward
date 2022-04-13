@@ -1862,7 +1862,7 @@ ensureDomLoaded(()=>{
 	domainBypass("adbull.me",()=>ifElement("form#setc",({action})=>{
 		unsafelyAssignWithReferer(location.href,action)
 	}))
-	domainBypass("tinyurl.is",()=>ifElement("a#skip-btn[href]",safelyNavigate))
+	domainBypass("tinyurl.is", () => ifElement('a[id^="newskip-btn"][href]', safelyAssign))
 	domainBypass("journaldupirate.net",()=>{
 		ifElement("div.alert a",safelyNavigate,()=>{
 			$(".button-blue").first().click()
