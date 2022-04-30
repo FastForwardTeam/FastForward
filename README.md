@@ -48,7 +48,7 @@ and in the [Microsoft Edge Addons](https://microsoftedge.microsoft.com/addons/de
 You can see how to [install manually here](https://github.com/FastForwardTeam/FastForward/blob/main/INSTALLING.md).
 
 ## Firefox Based Browsers
-This also include browsers like Waterfox. <br>
+This also includes browsers like Waterfox. <br>
 We recommend you to install from the Firefox Addons Store, just click on the image below to be redirected to the store.
 
 <a href="https://addons.mozilla.org/firefox/addon/fastforwardteam/"><img src="https://user-images.githubusercontent.com/585534/107280546-7b9b2a00-6a26-11eb-8f9f-f95932f4bfec.png" alt="Get FastForward for Firefox" width="126px"></a> 
