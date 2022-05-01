@@ -1106,7 +1106,7 @@ ensureDomLoaded(()=>{
 		}, () => crowdBypass())
 	})
 	domainBypass("drivehub.link",()=>ifElement("a#proceed[href]",safelyNavigate))
-	domainBypass("oxy.st",()=>{awaitElement("a.btn.btn-primary.btn-lg",t=>{safelyAssign(t.href)}),ifElement("button#download[disabled]",t=>{awaitElement("button#download:not([disabled])",t=>{t.click()})})})
+	domainBypass(/oxy\.st|healthyteeth\.tips/,()=>{awaitElement("a.btn.btn-primary.btn-lg",t=>{safelyAssign(t.href)}),ifElement("button#download[disabled]",t=>{awaitElement("button#download:not([disabled])",t=>{t.click()})})})
 	domainBypass("oxy.cloud",()=>{ifElement("button#download[disabled]",d=>{awaitElement("button#download:not([disabled])",d=>{d.click()})})})
 	domainBypass("daunshorte.teknologilink.com",()=>safelyAssign(document.querySelector("a[href^='https://teknosafe.teknologilink.com/linkteknolink/safelinkscript.php?']").href))
 	domainBypass("imgtaxi.com",()=>document.querySelector("a.overlay_ad_link").click())
@@ -2569,7 +2569,23 @@ ensureDomLoaded(()=>{
 	hrefBypass(/sharemods\.com\/([a-z0-9]{12})\//, () => {
 		awaitElement("#dForm", a => (a.submit()));
 	})
+//https://github.com/FastForwardTeam/FastForward/issues/446
+domainBypass('uprot.net', () => {
+  ifElement('.button.is-info', b => safelyNavigate(b.closest('a').href))
+})
+//https://github.com/FastForwardTeam/FastForward/issues/452
+domainBypass('apkadmin.com', () => {
+  ifElement('#downloadbtn', b => {
+    b.removeAttribute('disabled')
+    b.click()
+  })
+  ifElement('#countdown', c => {
+    c.innerHTML = ''
+  })
+})
 
+
+domainBypass("healthyteeth.tips",()=>{awaitElement("a.btn.btn-primary.btn-lg",t=>{safelyAssign(t.href)}),ifElement("button#download[disabled]",t=>{awaitElement("button#download:not([disabled])",t=>{t.click()})})})
 
 
 
