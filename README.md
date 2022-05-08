@@ -12,7 +12,7 @@
 </div>
 
 > **We need developers to work on FastForward!**
-> **If you're interessed, join our [Discord server](https://discord.gg/RSAf7b5njt) for more instructions.**
+> **If you're interested, join our [Discord server](https://discord.gg/RSAf7b5njt) for more instructions.**
 
 # About
 ## What is FastForward?
