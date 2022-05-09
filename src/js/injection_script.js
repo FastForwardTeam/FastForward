@@ -1114,11 +1114,11 @@ ensureDomLoaded(()=>{
 		wuLu()
 		safelyNavigate(img.src)
 	})})
-	domainBypass("anonym.ninja", () => {
-		window.setInterval = f => {}
-       		var a = window.location.href.split('/').slice(-1)[0]
-        	safelyNavigate(`https://anonym.ninja/download/file/request/${a}`)
-	})
+	    domainBypass("anonym.ninja", () => {
+            var a = window.location.href.split('/').slice(-1)[0]
+            safelyNavigate(`https://anonym.ninja/download/file/request/${a}`)
+            }) 
+
 	domainBypass("do2unlock.com",()=>{
 		let a=document.querySelector("a#locked_action_link[href^='/getlink/']")
 		if(a)
