@@ -9,7 +9,7 @@ present and future rights to this software under copyright law.
 
 Fixes: Link to issue
 
-<!-- A breif description of what you did -->
+<!-- A brief description of what you did -->
 
 <!--Add an x to mark as done-->
 - [ ] I made sure there are no unnecessary changes in the code*
