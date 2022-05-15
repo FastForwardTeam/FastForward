@@ -16,11 +16,11 @@
 
 # About
 ## What is FastForward?
-FastForward is the sucessor of Universal Bypass (see below), a browser extension that can bypass annoying link shorteners, so you don't need to waste your time _trying_ to get on the final link.
+FastForward is the successor of Universal Bypass (see below), a browser extension that can bypass annoying link shorteners, so you don't need to waste your time _trying_ to get on the final link.
 
 You can see the extension in action in [our official website](https://fastforward.team/example-links).
 
-## What happend to Universal Bypass?
+## What happened to Universal Bypass?
 As you may know, [Universal Bypass](https://github.com/Sainan/Universal-Bypass) is no longer maintained by its original developer, [Sainan](https://github.com/Sainan), who had worked on it for so long.\
 Thanks Sainan for your hard work.
 
@@ -49,7 +49,7 @@ You can see how to [install manually here](https://github.com/FastForwardTeam/Fa
 
 ## Firefox Based Browsers
 This also includes browsers like Waterfox. <br>
-We recommend you to install from the Firefox Addons Store, just click on the image below to be redirected to the store.
+We recommend you to install it from the Firefox Addons Store, just click on the image below to be redirected to the store.
 
 <a href="https://addons.mozilla.org/firefox/addon/fastforwardteam/"><img src="https://user-images.githubusercontent.com/585534/107280546-7b9b2a00-6a26-11eb-8f9f-f95932f4bfec.png" alt="Get FastForward for Firefox" width="126px"></a> 
 ### Automatic Install
