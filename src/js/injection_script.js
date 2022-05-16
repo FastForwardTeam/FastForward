@@ -305,7 +305,7 @@ decodeURIEncodedMod=(s)=>{
 }
 
 //Backwards compatibility for ffclipboard
-versionString = UNIVERSAL_BYPASS_EXTERNAL_VERSION + ''
+versionString = 'UNIVERSAL_BYPASS_EXTERNAL_VERSION'
 let versionPatchNumber = Number(versionString.split(".").pop())
 let ffClpbrdSupported = false
 if(versionPatchNumber >= 1924) { 
@@ -1887,7 +1887,7 @@ ensureDomLoaded(()=>{
 			partner_links = [...document.querySelectorAll('.partner_link')]
 				.map(x => `&partner_link_${x.dataset.lid}=${x.dataset.key}`)
 				.join('');
-	
+
 			const recaptchaCallbackOrig = recaptchaCallback;
 			globalThis.recaptchaCallback = response => {
 				recaptchaCallbackOrig(response);
@@ -1934,7 +1934,7 @@ ensureDomLoaded(()=>{
           }).then(r => r.json()).then(j => safelyNavigate(j.data.url))
       })
   })
-  
+
   domainBypass("benameiran.com", () => {
       ifElement(".su-button", () => {
           [...document.querySelectorAll(".su-button")].forEach(downloadLink => {
@@ -2505,8 +2505,8 @@ ensureDomLoaded(()=>{
 		ifElement("#surl1",a=>a.click())
 	})
 	domainBypass(/exey\.io/, () => ifElement("button.btn.btn-primary.btn-goo", a => a.click()))
-	domainBypass(/yoshare\.net/, () =>{ 
-    		ifElement("input.btn.btn-primary", a => a.click()) 
+	domainBypass(/yoshare\.net/, () =>{
+    		ifElement("input.btn.btn-primary", a => a.click())
     		ifElement("button#btn6", b => b.click())
     	})
 	domainBypass("blog2share.com", () => {
@@ -2515,13 +2515,13 @@ ensureDomLoaded(()=>{
 			safelyNavigate(b)
 		})
 	})
-	
+
 	hrefBypass(/downloadfreecourse\.com\/generate-link\//, () => {
 		ifElement("#downloadlink", (a) => {
 			a.onclick()
 		})
 	})
-	
+
 	domainBypass("mynewsmedia.co", () => {
 		awaitElement('a#btn6', b => {
 			safelyNavigate(b.href)
@@ -2541,18 +2541,18 @@ ensureDomLoaded(()=>{
 		})
 	})
 	domainBypass("fc-lc.com",()=>awaitElement(".g-recaptcha.btn.btn-primary",b=>b.click()))
-	
+
 	//WPsafelink bypass
 	//landing bypass
 	ifElement('form#wpsafelink-landing', w => {
 		w.submit()
-        })    
+        })
         //generate link bypass
 	ifElement('div#wpsafe-link', d => {
 		var onc = d.getElementsByTagName("a")[0].getAttribute("onclick") //get onclick attr of anchor in div
 		var bs64 = onc.split(/\?safelink_redirect=|',/)[1] //use .split with regex to get destination encoded in base64
 		var decoded = JSON.parse(atob(bs64)) //parse base64 to object
-		safelyNavigate(decoded.safelink)       
+		safelyNavigate(decoded.safelink)
         })
 	domainBypass(/newforex\.online|world-trips\.net/, () => {
 	ifElement("a.submitBtn.btn.btn-primary[href]", a => {
