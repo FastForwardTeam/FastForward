@@ -308,7 +308,7 @@ decodeURIEncodedMod=(s)=>{
 versionString = UNIVERSAL_BYPASS_EXTERNAL_VERSION + ''
 let versionPatchNumber = Number(versionString.split(".").pop())
 let ffClpbrdSupported = false
-if(versionPatchNumber >= 1924) { 
+if(versionPatchNumber >= 1924) {
 	ffClpbrdSupported = true
 }
 if (ffClpbrdSupported) {
@@ -861,26 +861,56 @@ domainBypass("universal-bypass.org",()=>{
 domainBypass("acortame.xyz", () => {
     if (window.location.hash) unsafelyNavigate(atob(window.location.hash.substr(1)))
 })
-domainBypass(/linkvertise\.(com|net)|link-to\.net/, () => {
-    // dynamic
-    if (window.location.href.toString().indexOf("?r=") != -1) {
-        const urlParams = new URLSearchParams(window.location.search);
-        const r = urlParams.get('r')
-        safelyNavigate(atob(decodeURIComponent(r)));
-    }
 
-    // normal redirect
-    fetch(`https://publisher.linkvertise.com/api/v1/redirect/link/static${location.pathname.replace(/\/[0-9]$/, "")}`).then(r => r.json()).then(json => {
-            if (json?.data.link.id) {
-                fetch(`https://publisher.linkvertise.com/api/v1/redirect/link${location.pathname.replace(/\/[0-9]$/, "")}/target?serial=${btoa(JSON.stringify({timestamp:new Date().getTime(), random:"6548307", link_id:json.data.link.id}))}`, {
-                    "method": "POST"
-                }).then(r=>r.json()).then(json=>{
-                if (json?.data.target) {
-                    safelyNavigate(json.data.target)
-                }
-            })
-        }
-    })
+domainBypass(/linkvertise\.(com|net)|link-to\.net/, () => {
+	if (window.location.href.toString().indexOf("?r=") != -1) {
+		const urlParams = new URLSearchParams(window.location.search);
+		const r = urlParams.get('r')
+		safelyNavigate(atob(decodeURIComponent(r)));
+	}
+
+	const rawOpen = XMLHttpRequest.prototype.open;
+
+	XMLHttpRequest.prototype.open = function() {
+		this.addEventListener('load', data => {
+			if (data.currentTarget.responseText.includes('tokens')) {
+				const response = JSON.parse(data.currentTarget.responseText);
+				if (!response.data.valid)
+					return insertInfoBox('Please solve the captcha, afterwards we can immediately redirect you');
+
+				const target_token = response.data.tokens['TARGET'];
+				const ut = localStorage.getItem("X-LINKVERTISE-UT");
+				const linkvertise_link = location.pathname.replace(/\/[0-9]$/, "");
+
+
+				fetch(`https://publisher.linkvertise.com/api/v1/redirect/link/static${linkvertise_link}?X-Linkvertise-UT=${ut}`).then(r => r.json()).then(json => {
+					if (json?.data.link.id) {
+						const json_body = {
+							serial: btoa(JSON.stringify({
+								timestamp:new Date().getTime(),
+								random:"6548307",
+								link_id:json.data.link.id
+							})),
+							token: target_token
+						}
+						fetch(`https://publisher.linkvertise.com/api/v1/redirect/link${linkvertise_link}/target?X-Linkvertise-UT=${ut}`, {
+							method: "POST",
+							body: JSON.stringify(json_body),
+							headers: {
+								"Accept": 'application/json',
+								"Content-Type": 'application/json'
+							}
+						}).then(r=>r.json()).then(json=>{
+							if (json?.data.target) {
+								safelyNavigate(json.data.target)
+							}
+						})
+					}
+				})
+			}
+		});
+		rawOpen.apply(this, arguments);
+	}
 })
 
 ensureDomLoaded(()=>{
@@ -1887,7 +1917,7 @@ ensureDomLoaded(()=>{
 			partner_links = [...document.querySelectorAll('.partner_link')]
 				.map(x => `&partner_link_${x.dataset.lid}=${x.dataset.key}`)
 				.join('');
-	
+
 			const recaptchaCallbackOrig = recaptchaCallback;
 			globalThis.recaptchaCallback = response => {
 				recaptchaCallbackOrig(response);
@@ -1934,7 +1964,7 @@ ensureDomLoaded(()=>{
           }).then(r => r.json()).then(j => safelyNavigate(j.data.url))
       })
   })
-  
+
   domainBypass("benameiran.com", () => {
       ifElement(".su-button", () => {
           [...document.querySelectorAll(".su-button")].forEach(downloadLink => {
@@ -2505,8 +2535,8 @@ ensureDomLoaded(()=>{
 		ifElement("#surl1",a=>a.click())
 	})
 	domainBypass(/exey\.io/, () => ifElement("button.btn.btn-primary.btn-goo", a => a.click()))
-	domainBypass(/yoshare\.net/, () =>{ 
-    		ifElement("input.btn.btn-primary", a => a.click()) 
+	domainBypass(/yoshare\.net/, () =>{
+    		ifElement("input.btn.btn-primary", a => a.click())
     		ifElement("button#btn6", b => b.click())
     	})
 	domainBypass("blog2share.com", () => {
@@ -2515,13 +2545,13 @@ ensureDomLoaded(()=>{
 			safelyNavigate(b)
 		})
 	})
-	
+
 	hrefBypass(/downloadfreecourse\.com\/generate-link\//, () => {
 		ifElement("#downloadlink", (a) => {
 			a.onclick()
 		})
 	})
-	
+
 	domainBypass("mynewsmedia.co", () => {
 		awaitElement('a#btn6', b => {
 			safelyNavigate(b.href)
@@ -2541,18 +2571,18 @@ ensureDomLoaded(()=>{
 		})
 	})
 	domainBypass("fc-lc.com",()=>awaitElement(".g-recaptcha.btn.btn-primary",b=>b.click()))
-	
+
 	//WPsafelink bypass
 	//landing bypass
 	ifElement('form#wpsafelink-landing', w => {
 		w.submit()
-        })    
+        })
         //generate link bypass
 	ifElement('div#wpsafe-link', d => {
 		var onc = d.getElementsByTagName("a")[0].getAttribute("onclick") //get onclick attr of anchor in div
 		var bs64 = onc.split(/\?safelink_redirect=|',/)[1] //use .split with regex to get destination encoded in base64
 		var decoded = JSON.parse(atob(bs64)) //parse base64 to object
-		safelyNavigate(decoded.safelink)       
+		safelyNavigate(decoded.safelink)
         })
 	domainBypass(/newforex\.online|world-trips\.net/, () => {
 	ifElement("a.submitBtn.btn.btn-primary[href]", a => {
