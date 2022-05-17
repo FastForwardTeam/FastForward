@@ -6,13 +6,13 @@
 		"message": "Bedankt voor het installeren van FastForward!"
 	},
 	"firstrunNoScript": {
-		"message": "U lijkt NoScript of dergelijke te gebruiken, daarmee werkt FastForward niet."
+		"message": "Het lijkt erop dat u NoScript of iets dergelijks gebruikt, hiermee werkt FastForward niet."
 	},
 	"version": {
 		"message": "Versie"
 	},
 	"definitionsVersion": {
-		"message": "Omzeiling definities"
+		"message": "Omzeilingings definities"
 	},
 	"changelog": {
 		"message": "Wijzigingslogboek"
@@ -21,10 +21,10 @@
 		"message": "Controleren op updates"
 	},
 	"updating": {
-		"message": "Omziel definities downloaden..."
+		"message": "Omzeilings definities downloaden..."
 	},
 	"updateYes": {
-		"message": "Omzeil definities succesvol gedownload."
+		"message": "Omzeilings definities zijn succesvol gedownload."
 	},
 	"updateNo": {
 		"message": "Het injectiescript is al bijgewerkt."
@@ -72,13 +72,13 @@
 		"message": "Privacy Verklaring"
 	},
 	"contributors": {
-		"message": "Bijdrragers"
+		"message": "Bijdragers"
 	},
 	"optionsUserscripts": {
 		"message": "Aangepaste omzeilingen"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "Dit is een geavanceerde functie voor ontwikkelaars om hun eigen scripts te maken om sites te omzeilen. Eenmaal geperfectioneerd, kunnen ze deze vervolgens indienen op GitHub om toe te voegen aan Universele Bypass, zodat ze voor iedereen beschikbaar zijn."
+		"message": "Dit is een geavanceerde functie voor ontwikkelaars om hun eigen scripts te maken om sites te omzeilen. Eenmaal geperfectioneerd, kunnen ze deze vervolgens indienen op GitHub om toe te voegen aan FastForward, zodat ze voor iedereen beschikbaar zijn."
 	},
 	"beforeNavigate": {
 		"message": "Je bent bijna op je bestemming."
