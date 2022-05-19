@@ -2628,7 +2628,7 @@ domainBypass("bowfile.com", () => {
 		let matches=regex.exec(script.textContent)
 		if(matches&&matches[1])
 		{
-			unsafelyNavigate(matches[1])
+			safelyNavigate(matches[1])
 		}
 	})
 })
@@ -2643,7 +2643,7 @@ domainBypass("acorta-link.com", () => {
             if (!/^(?:f|ht)tps?\:\/\//.test(url)) {
                 url = "http:" + url;
             }
-            contributeAndNavigate(url) 
+            safelyNavigate(url) 
         }
     })
 })
