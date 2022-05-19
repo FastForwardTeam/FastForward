@@ -2633,7 +2633,20 @@ domainBypass("bowfile.com", () => {
 	})
 })
 
-
+domainBypass("acorta-link.com", () => {
+    const regex=/([a-zA-Z]{1,})= decode_link/
+    document.querySelectorAll("script").forEach(script=>{
+        const matches=regex.exec(script.text)
+        if(matches&&matches[1])
+        {
+            let url = window[matches[1]]
+            if (!/^(?:f|ht)tps?\:\/\//.test(url)) {
+                url = "http:" + url;
+            }
+            contributeAndNavigate(url) 
+        }
+    })
+})
 
 	//Insertion point for bypasses detecting certain DOM elements. Bypasses here will no longer need to call ensureDomLoaded.
 	let t=document.querySelector("title")
