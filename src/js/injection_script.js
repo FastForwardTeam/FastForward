@@ -2649,6 +2649,9 @@ domainBypass("acorta-link.com", () => {
 })
 
 	//Insertion point for bypasses detecting certain DOM elements. Bypasses here will no longer need to call ensureDomLoaded.
+	domainBypass('letsboost.net', () => {
+		return safelyAssign(JSON.parse(stepDat).pop().url)
+	});
 	let t=document.querySelector("title")
 	if(!bypassed&&t)
 	{
