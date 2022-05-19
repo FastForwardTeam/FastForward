@@ -59,6 +59,9 @@ unsafelyNavigate=target=>{
 		case (/(krnl\.ca|hugegames\.io)/.exec(target)||{}).input:
 		url+="&safe_in=15"
 		break;
+		case (/(bowfile\.com)/.exec(target)||{}).input:
+		url+="&safe_in=20"
+		break;
 	}
 	unsafelyAssign(url)
 },
@@ -2619,7 +2622,31 @@ domainBypass('apkadmin.com', () => {
   })
 })
 
+domainBypass("bowfile.com", () => {
+	const regex=/.*let next = "(http[^"]+)";.*/
+	document.querySelectorAll("script").forEach(script=>{
+		let matches=regex.exec(script.textContent)
+		if(matches&&matches[1])
+		{
+			safelyNavigate(matches[1])
+		}
+	})
+})
 
+domainBypass("acorta-link.com", () => {
+    const regex=/([a-zA-Z]{1,})= decode_link/
+    document.querySelectorAll("script").forEach(script=>{
+        const matches=regex.exec(script.text)
+        if(matches&&matches[1])
+        {
+            let url = window[matches[1]]
+            if (!/^(?:f|ht)tps?\:\/\//.test(url)) {
+                url = "http:" + url;
+            }
+            safelyNavigate(url) 
+        }
+    })
+})
 
 	//Insertion point for bypasses detecting certain DOM elements. Bypasses here will no longer need to call ensureDomLoaded.
 	let t=document.querySelector("title")
