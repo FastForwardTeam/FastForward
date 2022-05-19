@@ -59,6 +59,9 @@ unsafelyNavigate=target=>{
 		case (/(krnl\.ca|hugegames\.io)/.exec(target)||{}).input:
 		url+="&safe_in=15"
 		break;
+		case (/(bowfile\.com)/.exec(target)||{}).input:
+		url+="&safe_in=20"
+		break;
 	}
 	unsafelyAssign(url)
 },
@@ -2617,6 +2620,17 @@ domainBypass('apkadmin.com', () => {
   ifElement('#countdown', c => {
     c.innerHTML = ''
   })
+})
+
+domainBypass("bowfile.com", () => {
+	const regex=/.*let next = "(http[^"]+)";.*/
+	document.querySelectorAll("script").forEach(script=>{
+		let matches=regex.exec(script.textContent)
+		if(matches&&matches[1])
+		{
+			unsafelyNavigate(matches[1])
+		}
+	})
 })
 
 
