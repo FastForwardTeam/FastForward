@@ -547,12 +547,6 @@ domainBypass(/bc\.vc|bcvc\.live/,()=>{
 	window.setInterval=f=>setInterval(f,1)
 	awaitElement("a#getLink:not([style^='display'])",a=>a.click())
 })
-domainBypass("tei.ai", () => {
-	ensureDomLoaded(() => {
-	    var link = atob(`aH${document.querySelector("#link-view [name='token']").value.split("aH").slice(1).join("aH")}`);
-	    safelyNavigate(link);
-	});
-});
 domainBypass("shortly.xyz",()=>{
 	if(location.pathname.substr(0,3)=="/r/")
 	{
@@ -2621,6 +2615,7 @@ domainBypass('apkadmin.com', () => {
 })
 
 
+
 	hrefBypass(/mirrored\.to\/files\//,()=> {
 		if (location.href.includes('hash')) return; // we already bypassed to here
 		const href = document.querySelector(`a[href^="${location.href}"]`).href;
@@ -2628,6 +2623,14 @@ domainBypass('apkadmin.com', () => {
 	})
 	hrefBypass(/mirrored\.to\/(down|get)link\//,()=>ifElement(".centered.highlight a[href]",safelyNavigate))
 
+
+	domainBypass("tei.ai", () => {
+		const token = document.querySelector('#link-view [name="token"]').value;
+		const decoded = atob(token);
+		const page = decoded.split('http').pop();
+		const link = `http${page}`;
+		safelyNavigate(link);
+	});
 
 domainBypass("bowfile.com", () => {
 	const regex=/.*let next = "(http[^"]+)";.*/
