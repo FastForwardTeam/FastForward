@@ -96,7 +96,7 @@ async function run_build(type, commit_number) {
         version = fs.readFileSync(`${process.cwd()}/src/version.txt`, {encoding: 'utf-8'});
 
     // replace windows OR linux style new lines if they are there
-    manifest_contents.version = version.replace('\r\n', '').replace('\n', '');
+    manifest_contents.version = version.replace(/\r\n/g, '').replace(/\n/g, '');
     fs.writeFileSync(`${process.cwd()}/${destination}/manifest.json`, JSON.stringify(manifest_contents, null, 4));
 
     await builders[type]({versioning, destination, commit_number, version: manifest_contents.version});
