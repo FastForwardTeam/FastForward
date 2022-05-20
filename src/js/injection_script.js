@@ -2,6 +2,7 @@
  // If you want to add your own bypass, add it above the relevant "Insertion point" comment //
 /////////////////////////////////////////////////////////////////////////////////////////////
 const bypass_definitions = new Map();
+const href_bypasses = new Map();
 class FastForwardBypassDefinition  {
 	constructor({url, is_regex, execution}) {
 		this.url = url;
@@ -160,6 +161,12 @@ domainBypass=(domain,f)=>{
 	}
 },
 hrefBypass=(regex,f)=>{
+	let FastForward_definition = new FastForwardBypassDefinition({url: domain, is_regex: true, execution: f});
+	if (href_bypasses.has(domain.toString())) {
+		FastForward_definition = href_bypasses.get(domain.toString());
+	}
+	FastForward_definition.update({url: domain, is_regex: true, execution: f});
+	href_bypasses.set(domain.toString(), FastForward_definition);
 	if(bypassed)
 	{
 		return
@@ -172,7 +179,7 @@ hrefBypass=(regex,f)=>{
 	if(res)
 	{
 		bypassed=true
-		f(res)
+		FastForward_definition.execution(res)
 	}
 },
 ensureDomLoaded=(f,if_not_bypassed)=>{
