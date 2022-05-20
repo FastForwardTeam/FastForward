@@ -9,11 +9,11 @@ module.exports = async function ({versioning, destination, commit_number, versio
     let output_file = `${process.cwd()}/build/dist/`;
 
     if (!versioning)
-        output_file += `FastForward_chromium_${commit_number}_dev.zip`;
+        output_file += `FastForward_chromium_${commit_number}_dev.crx`;
     else if ('nover' === versioning)
-        output_file += `FastForward_chromium_0.${commit_number}.zip`;
+        output_file += `FastForward_chromium_0.${commit_number}.crx`;
     else
-        output_file += `FastForward_${version}_chromium.zip`;
+        output_file += `FastForward_${version}_chromium.crx`;
 
     await z.writeZipPromise(output_file, {});
     console.log('[FastForward.build.chromium] Succesfull build the Chromium package: %s', output_file)
