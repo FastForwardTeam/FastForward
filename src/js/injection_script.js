@@ -1,7 +1,20 @@
   /////////////////////////////////////////////////////////////////////////////////////////////
  // If you want to add your own bypass, add it above the relevant "Insertion point" comment //
 /////////////////////////////////////////////////////////////////////////////////////////////
+const bypass_definitions = new Map();
+class FastForwardBypassDefinition  {
+	constructor({url, is_regex, execution}) {
+		this.url = url;
+		this.is_regex = is_regex;
+		this.execution = execution;
+	}
 
+	update({url, is_regex, execution}) {
+		this.url = url;
+		this.is_regex = is_regex;
+		this.execution = execution;
+	}
+}
 //Variables
 let isGoodLink_allowSelf=false
 //Copying important functions to avoid interference from other extensions or the page
@@ -116,28 +129,29 @@ keepLooking=f=>{
 	}
 }
 domainBypass=(domain,f)=>{
-	if(bypassed)
-	{
-		return
+	let FastForward_definition = new FastForwardBypassDefinition({url: domain, is_regex: typeof domain !== 'string' && 'test' in domain, execution: f});
+	if (bypass_definitions.has(domain.toString())) {
+		FastForward_definition = bypass_definitions.get(domain.toString());
 	}
+	FastForward_definition.update({url: domain, is_regex: typeof domain !== 'string' && 'test' in domain, execution: f});
+	bypass_definitions.set(domain.toString(), FastForward_definition);
+
 	if(typeof f!="function")
 	{
 		alert("FastForward: Bypass for "+domain+" is not a function")
 	}
 	if(typeof domain=="string")
 	{
-		if(location.hostname==domain||location.hostname.substr(location.hostname.length-(domain.length+1))=="."+domain)
+		if(location.hostname === domain || location.hostname.substr(location.hostname.length-(domain.length+1)) === "." + domain)
 		{
-			bypassed=true
-			f()
+			FastForward_definition.execution();
 		}
 	}
 	else if("test" in domain)
 	{
 		if(domain.test(location.hostname))
 		{
-			bypassed=true
-			f()
+			FastForward_definition.execution();
 		}
 	}
 	else
@@ -2654,7 +2668,7 @@ domainBypass("acorta-link.com", () => {
             if (!/^(?:f|ht)tps?\:\/\//.test(url)) {
                 url = "http:" + url;
             }
-            safelyNavigate(url) 
+            safelyNavigate(url)
         }
     })
 })
