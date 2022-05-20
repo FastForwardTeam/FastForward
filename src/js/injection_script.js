@@ -1285,8 +1285,6 @@ ensureDomLoaded(()=>{
 			f.action+="#bypassClipboard="+location.pathname.substr(1)
 		})
 	}))
-	hrefBypass(/mirrored\.to\/files\//,()=>ifElement("#dl_form button",b=>b.click()))
-	hrefBypass(/mirrored\.to\/(down|get)link\//,()=>ifElement(".centered.highlight a[href]",safelyNavigate))
 	hrefBypass(/new\.lewd\.ninja\/external\/game\/([0-9]+)\/([a-z0-9]{64})/,m=>{
 		let f=document.createElement("form")
 		f.method="POST"
@@ -2617,6 +2615,15 @@ domainBypass('apkadmin.com', () => {
 })
 
 
+
+	hrefBypass(/mirrored\.to\/files\//,()=> {
+		if (location.href.includes('hash')) return; // we already bypassed to here
+		const href = document.querySelector(`a[href^="${location.href}"]`).href;
+		safelyAssign(href);
+	})
+	hrefBypass(/mirrored\.to\/(down|get)link\//,()=>ifElement(".centered.highlight a[href]",safelyNavigate))
+
+
 	domainBypass("tei.ai", () => {
 		const token = document.querySelector('#link-view [name="token"]').value;
 		const decoded = atob(token);
@@ -2635,6 +2642,7 @@ domainBypass("bowfile.com", () => {
 		}
 	})
 })
+
 
 domainBypass("acorta-link.com", () => {
     const regex=/([a-zA-Z]{1,})= decode_link/
