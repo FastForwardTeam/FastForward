@@ -1,9 +1,9 @@
 {
 	"appDesc": {
-		"message": "अनुपालना में अपना समय बर्बाद ना करें। FastForward कष्टप्रद लिंक शॉर्टंरों को रोकता है।"
+		"message": "अनुपालना में अपना समय बर्बाद ना करें। FastForward कष्टप्रद लिंक शॉर्टनरों को रोकता है।"
 	},
 	"firstrunTitle": {
-		"message": "FastForward इनस्टॉल करने के लिए आपका धन्यवाद!"
+		"message": "FastForward इन्स्टॉल करने के लिए आपका धन्यवाद!"
 	},
 	"firstrunNoScript": {
 		"message": "हालाँकि, आप NoScript या इसी तरह का कुछ उपयोग करते प्रतीत होते हैं, जिसके साथ FastForward काम नहीं करता।"
