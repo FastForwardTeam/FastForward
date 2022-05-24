@@ -1179,8 +1179,17 @@ ensureDomLoaded(()=>{
 		document.querySelector("#captchaVerifiedStatus").click()
 		doTheThing(()=>doTheThing(()=>doTheThing(()=>document.querySelector("#template-contactform-submit").click())))
 	})
-	domainBypass(/^((www\.)?(((get-click2|informations-library|media-blue|akashirohige|aibouanimelink|wwwfotografgotlin|casperqu|safelinksencrypter)\.blogspot|business\.ominfoupdate|majidzhacker|citgratis|tekloggers|pro-bangla|ph\.(apps2app|samapkstore)|blog\.(hulblog|omgmusik|omglyrics))\.com|(pastikan|belajar-bersama2)\.me|ph\.tpaste\.net|(blog\.infolanjutan|jkoding)\.xyz|((safe\.onbatch|anonimfiles)\.my|google-playss\.sdetectives)\.id|jackofnine\.site|getlink\.animesanka\.club))$/,()=>{
-		let u=aesCrypto.decrypt(convertstr(location.href.substr(location.href.indexOf("?o=")+3)),convertstr("root"))
+	domainBypass(/^((www\.)?(((get-click2|informations-library|media-blue|akashirohige|aibouanimelink|wwwfotografgotlin|casperqu|safelinksencrypter)\.blogspot|business\.ominfoupdate|majidzhacker|citgratis|tekloggers|pro-bangla|ph\.(apps2app|samapkstore)|blog\.(hulblog|omgmusik|omglyrics))\.com|(pastikan|belajar-bersama2)\.me|(ph|fp)\.(tpaste|ontools)\.net|(blog\.infolanjutan|jkoding)\.xyz|((safe\.onbatch|anonimfiles)\.my|google-playss\.sdetectives)\.id|jackofnine\.site|getlink\.animesanka\.club))$/,()=>{
+		let convertfn
+		if (typeof convertstr=='function')
+		{
+			convertfn = convertstr
+		}
+		if (typeof apps2app=='function')
+		{
+			convertfn = apps2app
+		}
+		let u=aesCrypto.decrypt(convertfn(location.href.substr(location.href.indexOf("?o=")+3)),convertfn("root"))
 		if(isGoodLink(u))
 		{
 			location.hash=""
@@ -1188,17 +1197,17 @@ ensureDomLoaded(()=>{
 		}
 		else if(typeof uri=="string")
 		{
-			u=aesCrypto.decrypt(convertstr(uri.substr(uri.indexOf("?o=")+3)),convertstr("root"))
+			u=aesCrypto.decrypt(convertfn(uri.substr(uri.indexOf("?o=")+3)),convertfn("root"))
 			safelyNavigate(u)
 		}
 		else if(typeof get_link=="string")
 		{
-			u=aesCrypto.decrypt(convertstr(get_link),convertstr("root"))
+			u=aesCrypto.decrypt(convertfn(get_link),convertfn("root"))
 			safelyNavigate(u)
 		}
 		else if(location.href.indexOf("#go")>-1)
 		{
-			u=aesCrypto.decrypt(convertstr(location.href.substr(location.href.indexOf("#go")+3)),convertstr("root"))
+			u=aesCrypto.decrypt(convertfn(location.href.substr(location.href.indexOf("#go")+3)),convertfn("root"))
 			location.hash=""
 			safelyNavigate(u.split("UI=")[1].split("NF=")[0])
 		}
