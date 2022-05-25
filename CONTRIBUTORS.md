@@ -3,7 +3,7 @@
 Thanks to everyone who helps make FastForward:
 
 - The [code contributors](https://github.com/FastForwardTeam/FastForward/graphs/contributors) right here at Github.
-- The translators over at [Crowdin](https://crowdin.com/project/bypass).
+- The translators over at [Crowdin](https://crowdin.com/project/fastforward).
 
 ## Libraries used by FastForward
 
