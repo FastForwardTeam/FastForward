@@ -31,7 +31,7 @@ Yes! We do, and if you are interested in assisting the development, need help or
 
 # Installing the Extension
 ## Chromium based browsers
-Chromium based browser includes Chrome, Chromium, Opera, Opera GX, Edge, Brave, Vivaldi and Tor.
+Chromium based browser includes Chrome, Chromium, Opera, Opera GX, Edge, Brave, Vivaldi.
 
 We recommend installing the extension from the stores below:
 
