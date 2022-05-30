@@ -1927,6 +1927,9 @@ ensureDomLoaded(()=>{
 		ifElement("#redirect-button", () => openFinalLink())
 	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
+	hrefBypass(/enxf\.net\/resources\/[a-zA-Z-\.\d]+\/download/, () => {
+		ifElement(".XGT-Download-form", ex => safelyNavigate(ex.action));
+	})
 	hrefBypass(/https:\/\/fmoviesdl.com\/links\//, () => {
 		ifElement("#link", a => {
 		    safelyNavigate(a.href)
