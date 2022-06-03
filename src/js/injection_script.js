@@ -2631,7 +2631,7 @@ domainBypass('apkadmin.com', () => {
 		const link = `http${page}`;
 		safelyNavigate(link);
 	});
-
+domainBypass("filedm.com",()=>{awaitElement("a#dlbutton",a=>{safelyNavigate("http://directdl.xyz/dm.php?id="+a.href.split("_")[1])})})
 domainBypass("bowfile.com", () => {
 	const regex=/.*let next = "(http[^"]+)";.*/
 	document.querySelectorAll("script").forEach(script=>{
