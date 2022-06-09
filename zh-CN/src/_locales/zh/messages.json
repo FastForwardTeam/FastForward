@@ -30,7 +30,7 @@
 		"message": "Bypass definitions are up-to-date."
 	},
 	"faq": {
-		"message": "Frequently Asked Questions (FAQ)"
+		"message": "常见问题 (FAQ)"
 	},
 	"bypassCounter": {
 		"message": "FastForward has already bypassed % sites for you."
@@ -39,7 +39,7 @@
 		"message": "Contribute to FastForward."
 	},
 	"options": {
-		"message": "Options"
+		"message": "选项"
 	},
 	"optionsLink": {
 		"message": "Change FastForward' options."
@@ -69,7 +69,7 @@
 		"message": "Close tab containing the crowd-sourced destination after % second(s) of visiting it."
 	},
 	"privacyPolicy": {
-		"message": "Privacy Policy"
+		"message": "隐私政策"
 	},
 	"contributors": {
 		"message": "Contributors"
