@@ -1489,7 +1489,21 @@ ensureDomLoaded(()=>{
 		x=x.substring(4,x.length-kp)
 		safelyAssign(isSSL?"https://"+x:"http://"+x)
 	}))
-	domainBypass(/(kora4top|forexlap)\.com/,()=>ifElement("div#m1x2 a",safelyNavigate))
+	domainBypass(/(kora4top)\.com/,()=>ifElement("div#m1x2 a",safelyNavigate))
+	domainBypass(/(forexlap|forex-articles|forexmab)\.com/, () => {
+		ensureDomLoaded(() => {
+		ifElement("center.oto>a", a => { 
+			a.click() })
+		})
+	})
+	domainBypass("fx4vip.com", () => {
+		ensureDomLoaded(() => {
+		ifElement("#button1", a => {
+			a.removeAttribute("disabled");
+			a.click();
+		})
+		})
+	})
 	domainBypass("soft8ware.com",()=>{
 		if(typeof count=="number"&&typeof countdown=="function")
 		{
