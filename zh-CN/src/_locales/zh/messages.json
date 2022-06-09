@@ -1,15 +1,15 @@
 {
 	"appDesc": {
-		"message": "Don't waste your time with compliance. FastForward circumvents annoying link shorteners."
+		"message": "不需要再浪费时间。 FastForward可以绕过烦人的短链接。"
 	},
 	"firstrunTitle": {
-		"message": "Thank you for installing FastForward!"
+		"message": "感谢您安装 FastForward！"
 	},
 	"firstrunNoScript": {
-		"message": "However, you seem to be using NoScript or similar, which FastForward is not compatible with."
+		"message": "但是，您似乎使用了 NoScript 或类似的插件，FastForward 不兼容这些插件。"
 	},
 	"version": {
-		"message": "Version"
+		"message": "版本"
 	},
 	"definitionsVersion": {
 		"message": "Bypass definitions"
