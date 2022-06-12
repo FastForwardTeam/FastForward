@@ -1736,6 +1736,16 @@ ensureDomLoaded(()=>{
 			safelyNavigate(safelink)
 		}
 	}))
+	domainBypass("gaminplay.com",()=>{
+		const regex=/var YuideaLink = '(.+)';/
+		document.querySelectorAll("script").forEach(script=>{
+			let matches=regex.exec(script.textContent)
+			if(matches&&matches[1])
+			{
+				safelyNavigate(matches[1])
+			}
+		})
+	})
 	domainBypass("dl.helow.id",()=>ifElement("button#btn6",b=>b.onclick()))
 	domainBypass("dl.ocanoke.com",()=>{
 		crowdPath(location.pathname.split("/").pop())
