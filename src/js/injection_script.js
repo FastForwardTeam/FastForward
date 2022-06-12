@@ -1,7 +1,21 @@
   /////////////////////////////////////////////////////////////////////////////////////////////
  // If you want to add your own bypass, add it above the relevant "Insertion point" comment //
 /////////////////////////////////////////////////////////////////////////////////////////////
+const bypass_definitions = new Map();
+const href_bypasses = new Map();
+class FastForwardBypassDefinition  {
+	constructor({url, is_regex, execution}) {
+		this.url = url;
+		this.is_regex = is_regex;
+		this.execution = execution;
+	}
 
+	update({url, is_regex, execution}) {
+		this.url = url;
+		this.is_regex = is_regex;
+		this.execution = execution;
+	}
+}
 //Variables
 let isGoodLink_allowSelf=false
 //Copying important functions to avoid interference from other extensions or the page
@@ -116,28 +130,29 @@ keepLooking=f=>{
 	}
 }
 domainBypass=(domain,f)=>{
-	if(bypassed)
-	{
-		return
+	let FastForward_definition = new FastForwardBypassDefinition({url: domain, is_regex: typeof domain !== 'string' && 'test' in domain, execution: f});
+	if (bypass_definitions.has(domain.toString())) {
+		FastForward_definition = bypass_definitions.get(domain.toString());
 	}
+	FastForward_definition.update({url: domain, is_regex: typeof domain !== 'string' && 'test' in domain, execution: f});
+	bypass_definitions.set(domain.toString(), FastForward_definition);
+
 	if(typeof f!="function")
 	{
 		alert("FastForward: Bypass for "+domain+" is not a function")
 	}
 	if(typeof domain=="string")
 	{
-		if(location.hostname==domain||location.hostname.substr(location.hostname.length-(domain.length+1))=="."+domain)
+		if(location.hostname === domain || location.hostname.substr(location.hostname.length-(domain.length+1)) === "." + domain)
 		{
-			bypassed=true
-			f()
+			FastForward_definition.execution();
 		}
 	}
 	else if("test" in domain)
 	{
 		if(domain.test(location.hostname))
 		{
-			bypassed=true
-			f()
+			FastForward_definition.execution();
 		}
 	}
 	else
@@ -146,6 +161,12 @@ domainBypass=(domain,f)=>{
 	}
 },
 hrefBypass=(regex,f)=>{
+	let FastForward_definition = new FastForwardBypassDefinition({url: domain, is_regex: true, execution: f});
+	if (href_bypasses.has(domain.toString())) {
+		FastForward_definition = href_bypasses.get(domain.toString());
+	}
+	FastForward_definition.update({url: domain, is_regex: true, execution: f});
+	href_bypasses.set(domain.toString(), FastForward_definition);
 	if(bypassed)
 	{
 		return
@@ -158,7 +179,7 @@ hrefBypass=(regex,f)=>{
 	if(res)
 	{
 		bypassed=true
-		f(res)
+		FastForward_definition.execution(res)
 	}
 },
 ensureDomLoaded=(f,if_not_bypassed)=>{
@@ -1162,7 +1183,7 @@ ensureDomLoaded(()=>{
 	domainBypass(/sub2unlock\.(com|net)/,()=>safelyNavigate(document.getElementById("theGetLink").textContent))
 	domainBypass("boostme.gg",()=>safelyNavigate(document.querySelector("a[href]#go").href))
 	domainBypass(/(driverays|bioskopgo|01nonton|thetecnostar|curimovie|akltu)\.com|cinema21\.tv/,()=>ifElement("a#link[href]",safelyAssign))
-	domainBypass("wikitrik.com",()=>document.querySelector("#download > form[action='/getlink.php'] > input[type='submit'].button").click())
+	domainBypass(/(wikitrik|linkerload).com/,()=>document.querySelector("#download > form[action='/getlink.php'] > input[type='submit'].button").click())
 	domainBypass("dawnstation.com",()=>safelyNavigate(document.querySelector("#tidakakanselamanya.hiddenPlace > a").href))
 	domainBypass("hokiwikiped.net",()=>ifElement("a#DrRO[href]",safelyNavigate))
 	hrefBypass(/spaste\.com\/(s|site)\//,()=>{
@@ -1179,7 +1200,7 @@ ensureDomLoaded(()=>{
 		document.querySelector("#captchaVerifiedStatus").click()
 		doTheThing(()=>doTheThing(()=>doTheThing(()=>document.querySelector("#template-contactform-submit").click())))
 	})
-	domainBypass(/^((www\.)?(((get-click2|informations-library|media-blue|akashirohige|aibouanimelink|wwwfotografgotlin|casperqu|safelinksencrypter)\.blogspot|business\.ominfoupdate|majidzhacker|citgratis|tekloggers|pro-bangla|ph\.(apps2app|samapkstore)|blog\.(hulblog|omgmusik|omglyrics))\.com|(pastikan|belajar-bersama2)\.me|(ph|fp)\.(tpaste|ontools)\.net|(blog\.infolanjutan|jkoding)\.xyz|((safe\.onbatch|anonimfiles)\.my|google-playss\.sdetectives)\.id|jackofnine\.site|getlink\.animesanka\.club))$/,()=>{
+	domainBypass(/^((www\.)?(((get-click2|informations-library|media-blue|akashirohige|aibouanimelink|wwwfotografgotlin|casperqu|safelinksencrypter)\.blogspot|business\.ominfoupdate|insurance\.5ggyan|majidzhacker|citgratis|tekloggers|pro-bangla|ph\.(apps2app|samapkstore)|blog\.(hulblog|omgmusik|omglyrics))\.com|(pastikan|belajar-bersama2)\.me|(ph|fp)\.(tpaste|ontools)\.net|(blog\.infolanjutan|jkoding)\.xyz|((safe\.onbatch|anonimfiles)\.my|google-playss\.sdetectives)\.id|jackofnine\.site|getlink\.animesanka\.club))$/,()=>{
 		let convertfn
 		if (typeof convertstr=='function')
 		{
@@ -1190,6 +1211,7 @@ ensureDomLoaded(()=>{
 			convertfn = apps2app
 		}
 		let u=aesCrypto.decrypt(convertfn(location.href.substr(location.href.indexOf("?o=")+3)),convertfn("root"))
+		isGoodLink_allowSelf=true
 		if(isGoodLink(u))
 		{
 			location.hash=""
@@ -1477,7 +1499,21 @@ ensureDomLoaded(()=>{
 		x=x.substring(4,x.length-kp)
 		safelyAssign(isSSL?"https://"+x:"http://"+x)
 	}))
-	domainBypass(/(kora4top|forexlap)\.com/,()=>ifElement("div#m1x2 a",safelyNavigate))
+	domainBypass(/(kora4top)\.com/,()=>ifElement("div#m1x2 a",safelyNavigate))
+	domainBypass(/(forexlap|forex-articles|forexmab)\.com/, () => {
+		ensureDomLoaded(() => {
+		ifElement("center.oto>a", a => { 
+			a.click() })
+		})
+	})
+	domainBypass("fx4vip.com", () => {
+		ensureDomLoaded(() => {
+		ifElement("#button1", a => {
+			a.removeAttribute("disabled");
+			a.click();
+		})
+		})
+	})
 	domainBypass("soft8ware.com",()=>{
 		if(typeof count=="number"&&typeof countdown=="function")
 		{
@@ -1709,6 +1745,16 @@ ensureDomLoaded(()=>{
 			safelyNavigate(safelink)
 		}
 	}))
+	domainBypass("gaminplay.com",()=>{
+		const regex=/var YuideaLink = '(.+)';/
+		document.querySelectorAll("script").forEach(script=>{
+			let matches=regex.exec(script.textContent)
+			if(matches&&matches[1])
+			{
+				safelyNavigate(matches[1])
+			}
+		})
+	})
 	domainBypass("dl.helow.id",()=>ifElement("button#btn6",b=>b.onclick()))
 	domainBypass("dl.ocanoke.com",()=>{
 		crowdPath(location.pathname.split("/").pop())
@@ -1936,6 +1982,9 @@ ensureDomLoaded(()=>{
 		ifElement("#redirect-button", () => openFinalLink())
 	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
+	hrefBypass(/enxf\.net\/resources\/[a-zA-Z-\.\d]+\/download/, () => {
+		ifElement(".XGT-Download-form", ex => safelyNavigate(ex.action));
+	})
 	hrefBypass(/https:\/\/fmoviesdl.com\/links\//, () => {
 		ifElement("#link", a => {
 		    safelyNavigate(a.href)
@@ -2635,12 +2684,15 @@ domainBypass('apkadmin.com', () => {
 
 	domainBypass("tei.ai", () => {
 		const token = document.querySelector('#link-view [name="token"]').value;
-		const decoded = atob(token);
+		const decoded = atob(token.substring(token.indexOf("aH")));
 		const page = decoded.split('http').pop();
 		const link = `http${page}`;
 		safelyNavigate(link);
 	});
-
+domainBypass("filedm.com",()=>{awaitElement("a#dlbutton",a=>{
+    safelyNavigate("http://directdl.xyz/dm.php?id="+a.href.split("_")[1])}
+)})
+	
 domainBypass("bowfile.com", () => {
 	const regex=/.*let next = "(http[^"]+)";.*/
 	document.querySelectorAll("script").forEach(script=>{
@@ -2663,7 +2715,7 @@ domainBypass("acorta-link.com", () => {
             if (!/^(?:f|ht)tps?\:\/\//.test(url)) {
                 url = "http:" + url;
             }
-            safelyNavigate(url) 
+            safelyNavigate(url)
         }
     })
 })
