@@ -108,7 +108,7 @@
 		"message": "You are being navigated to %"
 	},
 	"infoLinkvertise": {
-		"message": "We're not allowed to bypass this website but we have negotiated the removal of their most annoying steps."
+		"message": "FastForward requires you to complete the captcha before we can bypass this site for you. after you do this, we can skip the annoying steps!"
 	},
 	"infoFileHoster": {
 		"message": "Unfortunately, the download server will ensure that you have waited before allowing you to download the file."
