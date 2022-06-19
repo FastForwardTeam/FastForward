@@ -1,18 +1,18 @@
 {
 	"appDesc": {
-		"message": "Don't waste your time with compliance. FastForward circumvents annoying link shorteners."
+		"message": "යටත් වීමෙන් ඔබගේ කාලය නාස්ති නොකරන්න. ෆාස්ට්ෆෝවර්ඩ් කරදරකාරී කෙටි සබැඳි මග හරියි."
 	},
 	"firstrunTitle": {
 		"message": "ෆාස්ට්ෆෝවර්ඩ් ස්ථාපනය කළාට ස්තූතියි!"
 	},
 	"firstrunNoScript": {
-		"message": "However, you seem to be using NoScript or similar, which FastForward is not compatible with."
+		"message": "ෆාස්ට්ෆෝවර්ඩ් සඳහා නොගැළපෙන නෝස්ක්‍රිප්ට් හෝ සමාන දෙයක් ඔබ භාවිතා කරන බව පෙනෙයි."
 	},
 	"version": {
 		"message": "අනුවාදය"
 	},
 	"definitionsVersion": {
-		"message": "Bypass definitions"
+		"message": "මඟහැරීමේ නිර්වචන"
 	},
 	"changelog": {
 		"message": "වෙනස්කම් සටහන"
@@ -21,52 +21,52 @@
 		"message": "යාවත්කාල බලන්න"
 	},
 	"updating": {
-		"message": "Downloading bypass definitions..."
+		"message": "මඟහැරීමේ නිර්වචන බාගැනෙමින්..."
 	},
 	"updateYes": {
-		"message": "Successfully downloaded bypass definitions."
+		"message": "මඟහැරීමේ නිර්වචන සාර්ථකව බාගැනිණි."
 	},
 	"updateNo": {
-		"message": "Bypass definitions are up-to-date."
+		"message": "මඟහැරීමේ නිර්වචන යාවත්කාලීනයි."
 	},
 	"faq": {
 		"message": "නිතර අසන ප්‍රශ්න"
 	},
 	"bypassCounter": {
-		"message": "FastForward has already bypassed % sites for you."
+		"message": "ෆාස්ට්ෆෝවර්ඩ් දැනටමත් ඔබ වෙනුවෙන් අඩවි % ක් මඟහැර ඇත."
 	},
 	"support": {
-		"message": "Contribute to FastForward."
+		"message": "ෆාස්ට්ෆෝවර්ඩ් සඳහා දායකවන්න."
 	},
 	"options": {
 		"message": "විකල්ප"
 	},
 	"optionsLink": {
-		"message": "Change FastForward' options."
+		"message": "ෆාස්ට්ෆෝවර්ඩ් විකල්ප සංශෝධනය."
 	},
 	"optionsEnabled": {
-		"message": "Enable website bypasses."
+		"message": "අඩවි මඟහැරීම සබල කරන්න."
 	},
 	"optionsNavigationDelay": {
-		"message": "Take me to destinations after % second(s)."
+		"message": "තත්. % කට පසුව මාව ගමනාන්තයට රැගෙන යන්න."
 	},
 	"optionsTrackerBypass": {
-		"message": "Bypass trackers (such as bit.ly and t.co) using Apimon.de."
+		"message": "ලුහුබැඳීම් මඟහරින්න. Apimon.de භාවිතයෙන් (bit.ly හා t.co)."
 	},
 	"optionsInstantNavigationTrackers": {
-		"message": "Instantly take me to destinations of trackers."
+		"message": "ලුහුබැඳීම්වල ගමනාන්තයට මාව ක්‍ෂණිකව රැගෙන යන්න."
 	},
 	"optionsBlockIPLoggers": {
-		"message": "Block IP loggers if they can't be bypassed."
+		"message": "මඟහැරීමට නොහැකි නම් අ.ජා.කෙ. සටහන්කරුවන් අවහිර කරන්න."
 	},
 	"optionsCrowdBypass": {
-		"message": "Crowd Bypass: Give and take the destinations of unbypassable shorteners."
+		"message": "සාමූහික මඟහැරීම: මග හැරීමට නොහැකි කෙටි සබැඳි සපයා ගමනාන්ත ලබාගන්න."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Open crowd-sourced destinations in a new tab after % second(s)."
+		"message": "තත්. % කට පසු නව පටිත්තකින් සමූහික-මූලාශ්‍රයේ ගමනාන්තය විවෘත කරන්න."
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Close tab containing the crowd-sourced destination after % second(s) of visiting it."
+		"message": "සමූහික-මූලාශ්‍රයේ අඩංගු ගමනාන්තය සහිත පටිත්ත පිවිසීමෙන් තත්. % කට පසු වසන්න."
 	},
 	"privacyPolicy": {
 		"message": "රහස්‍යතා ප්‍රතිපත්තිය"
@@ -75,58 +75,58 @@
 		"message": "දායකයින්"
 	},
 	"optionsUserscripts": {
-		"message": "Custom Bypasses"
+		"message": "අභිරුචි මඟහැරීම්"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "This is an advanced feature for developers to create their own scripts to bypass sites. Once perfected, they can then be submitted on GitHub to be added to FastForward, so they're available to everyone."
+		"message": "මෙය සංවර්ධකයින්ට අඩවි මඟ හැරීම සඳහා තමන්ගේම අත්පතක් සෑදීමට වැඩිදුර විශේෂාංගයකි. කදිම නම්, ඒවා සැවොමටම භාවිතය සඳහා ෆාස්ට්ෆෝවර්ඩ් වෙත එක් කිරීමට ගිට්හබ් හරහා යොමු කළ හැකිය."
 	},
 	"beforeNavigate": {
-		"message": "You're almost at your destination."
+		"message": "ඔබගේ ගමනාන්තයට ආසන්නයි."
 	},
 	"beforeNavigateDestination": {
-		"message": "Your destination is %"
+		"message": "ඔබගේ ගමනාන්තය වන්නේ %"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "However, if you navigate now, they will detect FastForward."
+		"message": "කෙසේ වුවද, ඔබ දැන් යාත්‍රණය කළහොත්, ඔවුන් ෆාස්ට්ෆෝවර්ඩ් හඳුනා ගනී."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "You will no longer be detected in % seconds."
+		"message": "තත්පර % කින් ඔබව තවදුරටත් අනාවරණය නොවනු ඇත."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
-		"message": "You will no longer be detected in 1 second."
+		"message": "තත්පරයකින් ඔබව තවදුරටත් අනාවරණය නොවනු ඇත."
 	},
 	"beforeNavigateTimer": {
-		"message": "You will be redirected automatically in % seconds."
+		"message": "තත්පර % කින් ඔබව ස්වයංක්‍රීයව හරවා යවනු ලැබේ."
 	},
 	"beforeNavigateTimerSingular": {
-		"message": "You will be redirected automatically in 1 second."
+		"message": "තත්පරයකින් ඔබව ස්වයංක්‍රීයව හරවා යවනු ලැබේ."
 	},
 	"beforeNavigateOptions": {
-		"message": "Do you want to be redirected instantly or in x seconds?"
+		"message": "ඔබට ක්‍ෂණිකව හෝ යම් කාලයකින් හරවා යැවීමට අවශ්‍යද?"
 	},
 	"beforeNavigateInstant": {
-		"message": "You are being navigated to %"
+		"message": "% වෙත ඔබ යාත්‍රණය වෙමින්"
 	},
 	"infoLinkvertise": {
-		"message": "FastForward requires you to complete the captcha before we can bypass this site for you. after you do this, we can skip the annoying steps!"
+		"message": "ඔබට මෙම අඩවිය මගහරවා දීමට පෙර මෙම අභියෝගය සම්පූර්ණ කළ යුතුය. මෙය කළ පසු, අපට කරදරකාරී පියවර මඟ හැරීමට හැකිය!"
 	},
 	"infoFileHoster": {
-		"message": "Unfortunately, the download server will ensure that you have waited before allowing you to download the file."
+		"message": "කණගාටුයි, බාගැනීමේ සේවාදායකය ගොනුව බාගැනීමට ඉඩදීමට පෙර ඔබ රැඳී සිටි බව සහතික කර ගැනෙයි."
 	},
 	"infoOutdated": {
-		"message": "This website is bypassed by a newer version of FastForward."
+		"message": "මෙම අඩවිය නවතම ෆාස්ට්ෆෝවර්ඩ් අනුවාදයකින් මඟහැර තිබේ."
 	},
 	"crowdWait": {
-		"message": "Unfortunately, you're the first to encounter this link, but after you've waited, other FastForward users will no longer have to."
+		"message": "අවාසනාවකට, මෙම සබැඳිය හමු වූ පළමු පුද්ගලයා ඔබයි, නමුත් ඔබ බලා සිටීමෙන් පසුව, අනෙකුත් පරිශීලකයින්ට තවදුරටත් එසේ කිරීමට සිදු නොවේ."
 	},
 	"crowdDisabled": {
-		"message": "This website is bypassed by crowd bypass, which you can enable in the options."
+		"message": "මෙම අඩවිය සාමූහික මඟහැරීම මගින් මඟ හරිනු ලබයි, ඔබට විකල්ප තුළ සබල කළ හැකිය."
 	},
 	"crowdBypassed": {
 		"message": "ඔබට රැඳී සිටීමට සිදු නොවනු ඇත!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Other FastForward users have already waited for you and reported that this leads to %"
+		"message": "අන් ෆාස්ට්ෆෝවර්ඩ් පරිශීලකයින් දැනටමත් ඔබ සඳහා රැඳී සිටි අතර මෙය % වෙත යොමු වන බව වාර්තා කර ඇත."
 	},
 	"crowdBypassedTimer": {
 		"message": "මෙය තත්. % කින් නව පටියකින් විවෘත වේ."
