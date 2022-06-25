@@ -70,7 +70,7 @@ unsafelyNavigate=target=>{
 	let url="https://universal-bypass.org/bypassed?target="+encodeURIComponent(target)+"&referer="+encodeURIComponent(referer)
 	switch(target)//All values here have been tested using "Take me to destinations after 0 seconds."
 	{
-		case (/(krnl\.ca|hugegames\.io)/.exec(target)||{}).input:
+		case (/(krnl\.place|hugegames\.io)/.exec(target)||{}).input:
 		url+="&safe_in=15"
 		break;
 		case (/(bowfile\.com)/.exec(target)||{}).input:
