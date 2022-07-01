@@ -2711,6 +2711,14 @@ domainBypass("acorta-link.com", () => {
     })
 })
 
+domainBypass("hagamix.blogspot.com", () => {
+    ensureDomLoaded(() => {
+      const getLinkButton = document.getElementById("btn-gotolink");
+      getLinkButton.className = "mb-1 btn btn-info";
+      getLinkButton.removeAttribute("disabled");
+    });
+  });
+
 	//Insertion point for bypasses detecting certain DOM elements. Bypasses here will no longer need to call ensureDomLoaded.
 	domainBypass('letsboost.net', () => {
 		return safelyAssign(JSON.parse(stepDat).pop().url)
