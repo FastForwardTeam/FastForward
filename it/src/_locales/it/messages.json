@@ -66,93 +66,93 @@
 		"message": "Apri le destinazioni crowd-sourced in una nuova scheda dopo % secondi."
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Close tab containing the crowd-sourced destination after % second(s) of visiting it."
+		"message": "Chiudi la scheda contenente la destinazione crowd-sourced dopo % secondi di visita."
 	},
 	"privacyPolicy": {
-		"message": "Privacy Policy"
+		"message": "Informativa sulla privacy"
 	},
 	"contributors": {
-		"message": "Contributors"
+		"message": "Contributori"
 	},
 	"optionsUserscripts": {
-		"message": "Custom Bypasses"
+		"message": "Bypass Personalizzati"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "This is an advanced feature for developers to create their own scripts to bypass sites. Once perfected, they can then be submitted on GitHub to be added to FastForward, so they're available to everyone."
+		"message": "Questa è una funzione avanzata per gli sviluppatori in modo che possano creare i loro script per bypassare i siti. Una volta perfezionati, possono essere inviati su GitHub per essere aggiunti a FastFoward, quindi disponibili per tutti."
 	},
 	"beforeNavigate": {
-		"message": "You're almost at your destination."
+		"message": "Sei quasi arrivato alla tua destinazione."
 	},
 	"beforeNavigateDestination": {
-		"message": "Your destination is %"
+		"message": "La tua destinazione è %"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "However, if you navigate now, they will detect FastForward."
+		"message": "Ma, se ci vai ora, rileveranno FastFoward."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "You will no longer be detected in % seconds."
+		"message": "FastFoward non sarà più rilevato in % secondi."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
-		"message": "You will no longer be detected in 1 second."
+		"message": "FastFoward non sarà più rilevato in 1 secondo."
 	},
 	"beforeNavigateTimer": {
-		"message": "You will be redirected automatically in % seconds."
+		"message": "Sarai reindirizzato automaticamente in % secondi."
 	},
 	"beforeNavigateTimerSingular": {
-		"message": "You will be redirected automatically in 1 second."
+		"message": "Sarai reindirizzato automaticamente in 1 secondo."
 	},
 	"beforeNavigateOptions": {
-		"message": "Do you want to be redirected instantly or in x seconds?"
+		"message": "Vuoi essere reindirizzato istantaneamente o in x secondi?"
 	},
 	"beforeNavigateInstant": {
-		"message": "You are being navigated to %"
+		"message": "Ti sto reindirizzando a %"
 	},
 	"infoLinkvertise": {
-		"message": "FastForward requires you to complete the captcha before we can bypass this site for you. after you do this, we can skip the annoying steps!"
+		"message": "FastFoward ha bisogno che tu completi il captcha prima di bypassare questo sito per te. Dopo averlo fatto, posso saltare i passaggi noiosi!"
 	},
 	"infoFileHoster": {
-		"message": "Unfortunately, the download server will ensure that you have waited before allowing you to download the file."
+		"message": "Sfortunatamente, il server del download si assicurerà che tu abbia aspettato prima di consentirti di scaricare il file."
 	},
 	"infoOutdated": {
-		"message": "This website is bypassed by a newer version of FastForward."
+		"message": "Questo sito è bypassato da una nuova versione di FastFoward."
 	},
 	"crowdWait": {
-		"message": "Unfortunately, you're the first to encounter this link, but after you've waited, other FastForward users will no longer have to."
+		"message": "Sfortunatamente, sei il primo a incontrare questo link, ma dopo aver aspettato, altri utenti FastFoward non dovranno più farlo."
 	},
 	"crowdDisabled": {
-		"message": "This website is bypassed by crowd bypass, which you can enable in the options."
+		"message": "Questo sito è bypassato dal Community Bypass, che puoi attivare nelle opzioni."
 	},
 	"crowdBypassed": {
-		"message": "You might not have to wait!"
+		"message": "Potresti non dover aspettare!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Other FastForward users have already waited for you and reported that this leads to %"
+		"message": "Altri utenti FastFoward hanno già aspettato per te e segnalato che questo porta a %"
 	},
 	"crowdBypassedTimer": {
-		"message": "This will be opened in a new tab in % seconds."
+		"message": "Questo verrà aperto in una nuova scheda in % secondi."
 	},
 	"crowdBypassedTimerSingular": {
-		"message": "This will be opened in a new tab in 1 second."
+		"message": "Questo verrà aperto in una nuova scheda in 1 secondo."
 	},
 	"crowdCloseTimer": {
-		"message": "This tab will close in % seconds."
+		"message": "Questa scheda si chiuderà in % secondi."
 	},
 	"crowdCloseTimerSingular": {
-		"message": "This tab will close in 1 second."
+		"message": "Questa scheda si chiuderà in 1 secondo."
 	},
 	"cancel": {
-		"message": "Cancel."
+		"message": "Annulla."
 	},
 	"crowdBypassedIgnore": {
-		"message": "Was this not correct?"
+		"message": "Non era corretto?"
 	},
 	"crowdBypassedOptions": {
-		"message": "Do you want this to be opened in a new tab instantly or in x seconds?"
+		"message": "Vuoi che questo si apra in una nuova scheda istantaneamente o dopo x secondi?"
 	},
 	"blockedTitle": {
-		"message": "FastForward prevented your IP from being logged."
+		"message": "FastFoward ha evitato che il tuo IP venisse loggato."
 	},
 	"blockedSubtitle": {
-		"message": "Don't want FastForward to prevent bad actors from getting your IP?"
+		"message": "Non vuoi che FastFoward impedisca a malintenzionati di prendere il tuo IP?"
 	}
 }
