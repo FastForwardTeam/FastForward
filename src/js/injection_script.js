@@ -299,15 +299,30 @@ contributeAndNavigate=target=>{
 	}
 },
 insertInfoBox=text=>ensureDomLoaded(()=>{
-	const div=document.createElement("div")
-	div.style='z-index:999999;position:fixed;bottom:20px;right:20px;margin-left:20px;background:#eee;border-radius:10px;padding:20px;color:#111;font-size:21px;box-shadow:#111 0px 5px 40px;max-width:500px;font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;line-height:normal;cursor:pointer'
+	// ffibv1 = FastForwardInfoBoxVersion1
+	let infobox_container = document.querySelector('div#ffibv1');
+
+	if (!infobox_container) {
+		infobox_container = document.createElement('div');
+		infobox_container.setAttribute('id', 'ffibv1');
+		infobox_container.setAttribute('style', `
+			z-index: 99999999; position: fixed; bottom: 0; line-height:normal;
+			right: 0; padding: 20px; color:#111; font-size:21px;
+			font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+			max-width:500px; display: flex; flex-direction: column-reverse;
+		`);
+
+		document.body.appendChild(infobox_container);
+	}
+	const div=document.createElement("div");
+	div.style='margin-left:20px; margin-bottom: 20px;background:#eee;border-radius:10px;padding:20px;box-shadow:#111 0px 5px 40px;cursor:pointer'
 	div.innerHTML='<img src="{{icon/48.png}}" style="width:24px;height:24px;margin-right:8px"><span style="display:inline"></span>'
 	div.setAttribute("tabindex","-1")
 	div.setAttribute("aria-hidden","true")
 	const span=div.querySelector("span")
 	span.textContent=text
 	div.onclick=()=>document.body.removeChild(div)
-	document.body.appendChild(div)
+	infobox_container.appendChild(div)
 }),
 backgroundScriptBypassClipboard=c=>{
 	if(c)
