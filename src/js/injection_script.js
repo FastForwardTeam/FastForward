@@ -1973,6 +1973,11 @@ ensureDomLoaded(()=>{
 		ifElement("#redirect-button", () => openFinalLink())
 	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
+	domainBypass("megadb.net", () => {
+    ifElement("form[name='F1']", function(a) {
+        a.submit();
+		});
+	});
 	hrefBypass(/enxf\.net\/resources\/[a-zA-Z-\.\d]+\/download/, () => {
 		ifElement(".XGT-Download-form", ex => safelyNavigate(ex.action));
 	})
@@ -2028,6 +2033,8 @@ ensureDomLoaded(()=>{
 	//	safelyNavigate(a.value)
 	//    })
 	//})
+
+	
 	domainBypass("theepochtimes.com", () => {
 	    awaitElement("#landing-page", subscriptionWall => {
 			subscriptionWall.remove()
