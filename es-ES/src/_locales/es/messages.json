@@ -45,7 +45,7 @@
 		"message": "Cambiar las opciones de FastForward."
 	},
 	"optionsEnabled": {
-		"message": "Enable website bypasses."
+		"message": "Activar bypasses de sitios web."
 	},
 	"optionsNavigationDelay": {
 		"message": "Llévame a los destinos después de % segundo(s)."
@@ -54,70 +54,70 @@
 		"message": "Evitar rastreadores (como bit.ly y t.co) utilizando Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
-		"message": "Instantly take me to destinations of trackers."
+		"message": "Llévame instantáneamente a los destinos de los rastreadores."
 	},
 	"optionsBlockIPLoggers": {
-		"message": "Block IP loggers if they can't be bypassed."
+		"message": "Bloquear IP logger si no pueden ser evitados."
 	},
 	"optionsCrowdBypass": {
 		"message": "Crowd Bypass: Dar y tomar los destinos de acortadores no evitables."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Open crowd-sourced destinations in a new tab after % second(s)."
+		"message": "Abrir los destinos de colaboradores en una nueva pestaña después de % segundo(s)."
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Close tab containing the crowd-sourced destination after % second(s) of visiting it."
+		"message": "Cierra la pestaña que contiene el destino de colaboradores después de % segundo(s) de visitarlo."
 	},
 	"privacyPolicy": {
-		"message": "Privacy Policy"
+		"message": "Política de privacidad"
 	},
 	"contributors": {
-		"message": "Contributors"
+		"message": "Contribuidores"
 	},
 	"optionsUserscripts": {
-		"message": "Custom Bypasses"
+		"message": "Bypasses personalizados"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "This is an advanced feature for developers to create their own scripts to bypass sites. Once perfected, they can then be submitted on GitHub to be added to FastForward, so they're available to everyone."
+		"message": "Esto se trata de una función avanzada para que los desarrolladores puedan crear sus propios scripts para evitar sitios. Una vez perfeccionados, se pueden enviar a GitHub para añadirlos a FastForward, para que estén disponibles para todo el mundo."
 	},
 	"beforeNavigate": {
-		"message": "You're almost at your destination."
+		"message": "Ya casi has llegado a tu destino."
 	},
 	"beforeNavigateDestination": {
-		"message": "Your destination is %"
+		"message": "Su destino es %"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "However, if you navigate now, they will detect FastForward."
+		"message": "Sin embargo, si navegas ahora, detectarán FastForward."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "You will no longer be detected in % seconds."
+		"message": "Ya no serás detectado en % segundos."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
-		"message": "You will no longer be detected in 1 second."
+		"message": "Ya no serás detectado en 1 segundos."
 	},
 	"beforeNavigateTimer": {
-		"message": "You will be redirected automatically in % seconds."
+		"message": "Serás redirigido automáticamente en % segundos."
 	},
 	"beforeNavigateTimerSingular": {
-		"message": "You will be redirected automatically in 1 second."
+		"message": "Serás redirigido automáticamente en 1 segundos."
 	},
 	"beforeNavigateOptions": {
-		"message": "Do you want to be redirected instantly or in x seconds?"
+		"message": "¿Quieres ser redirigido al instante o en x segundos?"
 	},
 	"beforeNavigateInstant": {
-		"message": "You are being navigated to %"
+		"message": "Estás siendo dirigido a %"
 	},
 	"infoLinkvertise": {
 		"message": "FastForward requiere que completes el captcha antes de que podamos evitar este sitio para usted. Después de hacer esto, ¡podemos omitir los molestos pasos!"
 	},
 	"infoFileHoster": {
-		"message": "Unfortunately, the download server will ensure that you have waited before allowing you to download the file."
+		"message": "Lamentablemente, el servidor de descargas se asegurará de que hayas esperado antes de permitirte descargar el archivo."
 	},
 	"infoOutdated": {
 		"message": "Este sitio web es evitado por una nueva versión de FastForward."
 	},
 	"crowdWait": {
-		"message": "Unfortunately, you're the first to encounter this link, but after you've waited, other FastForward users will no longer have to."
+		"message": "Lamentablemente, usted es el primero en encontrar este enlace, pero después de que haya esperado, otros usuarios de FastForward ya no tendrán que hacerlo."
 	},
 	"crowdDisabled": {
 		"message": "Este sitio web es evitado por el crowd bypass, que puedes activar en las opciones."
@@ -135,13 +135,13 @@
 		"message": "Se abrirá en una nueva pestaña en 1 segundo."
 	},
 	"crowdCloseTimer": {
-		"message": "This tab will close in % seconds."
+		"message": "Esta pestaña se cerrará en % segundo."
 	},
 	"crowdCloseTimerSingular": {
-		"message": "This tab will close in 1 second."
+		"message": "Esta pestaña se cerrará en 1 segundo."
 	},
 	"cancel": {
-		"message": "Cancel."
+		"message": "Cancelar."
 	},
 	"crowdBypassedIgnore": {
 		"message": "¿No era esto correcto?"
@@ -150,9 +150,9 @@
 		"message": "¿Quieres que se abra en una nueva pestaña al instante o en x segundos?"
 	},
 	"blockedTitle": {
-		"message": "FastForward prevented your IP from being logged."
+		"message": "FastForward impidió que se registrara su IP."
 	},
 	"blockedSubtitle": {
-		"message": "Don't want FastForward to prevent bad actors from getting your IP?"
+		"message": "¿No quieres que FastForward evite que los actores maliciosos obtengan tu IP?"
 	}
 }
