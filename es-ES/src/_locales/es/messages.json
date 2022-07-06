@@ -1,57 +1,57 @@
 {
 	"appDesc": {
-		"message": "Don't waste your time with compliance. FastForward circumvents annoying link shorteners."
+		"message": "No pierda el tiempo con acortadores. FastForward evita los molestos acortadores de links."
 	},
 	"firstrunTitle": {
-		"message": "Thank you for installing FastForward!"
+		"message": "¡Gracias por instalar FastForward!"
 	},
 	"firstrunNoScript": {
-		"message": "However, you seem to be using NoScript or similar, which FastForward is not compatible with."
+		"message": "Sin embargo, parece que está utilizando NoScript o similar, con el que FastForward no es compatible."
 	},
 	"version": {
-		"message": "Version"
+		"message": "Versión"
 	},
 	"definitionsVersion": {
-		"message": "Bypass definitions"
+		"message": "Definiciones de bypass"
 	},
 	"changelog": {
-		"message": "Changelog"
+		"message": "Registro de cambios"
 	},
 	"update": {
-		"message": "Check for updates"
+		"message": "Buscar actualizaciones"
 	},
 	"updating": {
-		"message": "Downloading bypass definitions..."
+		"message": "Descargando definiciones de bypass..."
 	},
 	"updateYes": {
-		"message": "Successfully downloaded bypass definitions."
+		"message": "Se han descargado con éxito las definiciones de bypass."
 	},
 	"updateNo": {
-		"message": "Bypass definitions are up-to-date."
+		"message": "Las definiciones de bypass están actualizadas."
 	},
 	"faq": {
-		"message": "Frequently Asked Questions (FAQ)"
+		"message": "Preguntas frecuentes (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "FastForward has already bypassed % sites for you."
+		"message": "FastForward ha evitado % sitios por ti."
 	},
 	"support": {
-		"message": "Contribute to FastForward."
+		"message": "Contribuye a FastForward."
 	},
 	"options": {
-		"message": "Options"
+		"message": "Opciones"
 	},
 	"optionsLink": {
-		"message": "Change FastForward' options."
+		"message": "Cambiar las opciones de FastForward."
 	},
 	"optionsEnabled": {
 		"message": "Enable website bypasses."
 	},
 	"optionsNavigationDelay": {
-		"message": "Take me to destinations after % second(s)."
+		"message": "Llévame a los destinos después de % segundo(s)."
 	},
 	"optionsTrackerBypass": {
-		"message": "Bypass trackers (such as bit.ly and t.co) using Apimon.de."
+		"message": "Evitar rastreadores (como bit.ly y t.co) utilizando Apimon.de."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Instantly take me to destinations of trackers."
@@ -60,7 +60,7 @@
 		"message": "Block IP loggers if they can't be bypassed."
 	},
 	"optionsCrowdBypass": {
-		"message": "Crowd Bypass: Give and take the destinations of unbypassable shorteners."
+		"message": "Crowd Bypass: Dar y tomar los destinos de acortadores no evitables."
 	},
 	"optionsCrowdAutoOpen": {
 		"message": "Open crowd-sourced destinations in a new tab after % second(s)."
@@ -108,31 +108,31 @@
 		"message": "You are being navigated to %"
 	},
 	"infoLinkvertise": {
-		"message": "FastForward requires you to complete the captcha before we can bypass this site for you. after you do this, we can skip the annoying steps!"
+		"message": "FastForward requiere que completes el captcha antes de que podamos evitar este sitio para usted. Después de hacer esto, ¡podemos omitir los molestos pasos!"
 	},
 	"infoFileHoster": {
 		"message": "Unfortunately, the download server will ensure that you have waited before allowing you to download the file."
 	},
 	"infoOutdated": {
-		"message": "This website is bypassed by a newer version of FastForward."
+		"message": "Este sitio web es evitado por una nueva versión de FastForward."
 	},
 	"crowdWait": {
 		"message": "Unfortunately, you're the first to encounter this link, but after you've waited, other FastForward users will no longer have to."
 	},
 	"crowdDisabled": {
-		"message": "This website is bypassed by crowd bypass, which you can enable in the options."
+		"message": "Este sitio web es evitado por el crowd bypass, que puedes activar en las opciones."
 	},
 	"crowdBypassed": {
-		"message": "You might not have to wait!"
+		"message": "Puede que no tenga que esperar!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Other FastForward users have already waited for you and reported that this leads to %"
+		"message": "Otros usuarios de FastForward ya han esperado por ti y han reportado que esto va a %"
 	},
 	"crowdBypassedTimer": {
-		"message": "This will be opened in a new tab in % seconds."
+		"message": "Se abrirá en una nueva pestaña en % segundo."
 	},
 	"crowdBypassedTimerSingular": {
-		"message": "This will be opened in a new tab in 1 second."
+		"message": "Se abrirá en una nueva pestaña en 1 segundo."
 	},
 	"crowdCloseTimer": {
 		"message": "This tab will close in % seconds."
@@ -144,10 +144,10 @@
 		"message": "Cancel."
 	},
 	"crowdBypassedIgnore": {
-		"message": "Was this not correct?"
+		"message": "¿No era esto correcto?"
 	},
 	"crowdBypassedOptions": {
-		"message": "Do you want this to be opened in a new tab instantly or in x seconds?"
+		"message": "¿Quieres que se abra en una nueva pestaña al instante o en x segundos?"
 	},
 	"blockedTitle": {
 		"message": "FastForward prevented your IP from being logged."
