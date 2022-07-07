@@ -2713,9 +2713,11 @@ domainBypass("acorta-link.com", () => {
 
 domainBypass("hagamix.blogspot.com", () => {
     ensureDomLoaded(() => {
-      const getLinkButton = document.getElementById("btn-gotolink");
-      getLinkButton.className = "mb-1 btn btn-info";
-      getLinkButton.removeAttribute("disabled");
+      const gotoLinkButon = document.getElementById("btn-gotolink");
+      setTimeout(function () {
+        document.getElementById("btngetlink").click();
+      }, 500);
+      gotoLinkButon.disabled = false;
     });
   });
 
