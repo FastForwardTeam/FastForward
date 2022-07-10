@@ -1,54 +1,54 @@
 {
 	"appDesc": {
-		"message": "Don't waste your time with compliance. FastForward circumvents annoying link shorteners."
+		"message": "コンプライアンスに時間を無駄にしないでください。FastForwardは迷惑な短縮リンクを回避します。"
 	},
 	"firstrunTitle": {
-		"message": "Thank you for installing FastForward!"
+		"message": "FastForwardをインストールいただきありがとうございます。"
 	},
 	"firstrunNoScript": {
-		"message": "However, you seem to be using NoScript or similar, which FastForward is not compatible with."
+		"message": "FastForwardが対応していないNoScriptやその他の拡張機能を利用しているようです。"
 	},
 	"version": {
-		"message": "Version"
+		"message": "バージョン"
 	},
 	"definitionsVersion": {
-		"message": "Bypass definitions"
+		"message": "バイパス定義"
 	},
 	"changelog": {
-		"message": "Changelog"
+		"message": "アップデート履歴"
 	},
 	"update": {
-		"message": "Check for updates"
+		"message": "アップデートを確認する"
 	},
 	"updating": {
-		"message": "Downloading bypass definitions..."
+		"message": "バイパス定義をダウンロードしています..."
 	},
 	"updateYes": {
-		"message": "Successfully downloaded bypass definitions."
+		"message": "バイパス定義のダウンロードに成功しました。"
 	},
 	"updateNo": {
-		"message": "Bypass definitions are up-to-date."
+		"message": "バイパス定義は最新です。"
 	},
 	"faq": {
-		"message": "Frequently Asked Questions (FAQ)"
+		"message": "よくある質問 (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "FastForward has already bypassed % sites for you."
+		"message": "FastForwardは今までに%件のサイトをバイパスしました。"
 	},
 	"support": {
-		"message": "Contribute to FastForward."
+		"message": "FastForwardに貢献する"
 	},
 	"options": {
-		"message": "Options"
+		"message": "オプション"
 	},
 	"optionsLink": {
-		"message": "Change FastForward' options."
+		"message": "FastForwardのオプションを変更する。"
 	},
 	"optionsEnabled": {
-		"message": "Enable website bypasses."
+		"message": "Webサイトのバイパスを有効化する。"
 	},
 	"optionsNavigationDelay": {
-		"message": "Take me to destinations after % second(s)."
+		"message": "%秒後にリンク先に移動する。"
 	},
 	"optionsTrackerBypass": {
 		"message": "Bypass trackers (such as bit.ly and t.co) using Apimon.de."
