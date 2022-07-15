@@ -1,3 +1,6 @@
+if (require.main === module)
+    throw new Error('This file is a build module, run the build.js file to actually build FastForward');
+
 const zipper = require('adm-zip');
 
 module.exports = async function ({versioning, destination, commit_number, version} = {}) {

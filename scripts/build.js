@@ -11,6 +11,17 @@ const path = require('path');
 
 const distribution = 'build/dist';
 
+let working_directory = process.cwd();
+
+function set_working_directory (cwd) {
+    if (fs.existsSync(path.join(cwd, 'LICENSE')))
+        working_directory = cwd;
+    else
+        set_working_directory(path.join(cwd, '..'));
+}
+
+set_working_directory(working_directory);
+
 const args = process.argv;
 args.shift();
 args.shift()
@@ -64,40 +75,40 @@ async function run_build(type, commit_number) {
 
     console.log(`[FastForward.build.${type}] copying files to ${destination}`);
     console.log(`[FastForward.build.${type}] copying html directory to ${destination}`);
-    copyFolderRecursiveSync(`${process.cwd()}/src/html`, destination);
+    copyFolderRecursiveSync(`${working_directory}/src/html`, destination);
     console.log(`[FastForward.build.${type}] copying _locales directory to ${destination}`);
-    copyFolderRecursiveSync(`${process.cwd()}/src/_locales`, destination);
+    copyFolderRecursiveSync(`${working_directory}/src/_locales`, destination);
     console.log(`[FastForward.build.${type}] copying icon directory to ${destination}`);
-    copyFolderRecursiveSync(`${process.cwd()}/src/icon`, destination);
+    copyFolderRecursiveSync(`${working_directory}/src/icon`, destination);
     console.log(`[FastForward.build.${type}] copying icon_disabled directory to ${destination}`);
-    copyFolderRecursiveSync(`${process.cwd()}/src/icon_disabled`, destination);
+    copyFolderRecursiveSync(`${working_directory}/src/icon_disabled`, destination);
     console.log(`[FastForward.build.${type}] copying js files to ${destination}`);
-    const js_files = fs.readdirSync(`${process.cwd()}/src/js`);
+    const js_files = fs.readdirSync(`${working_directory}/src/js`);
     for (const _f of js_files) {
         if (versioning && ['injection_script.js', 'rules.json'].includes(_f))
             continue; // dont copy, no need to remove later on
 
-        fs.copyFileSync(`${process.cwd()}/src/js/${_f}`, `${destination}/${_f}`);
+        fs.copyFileSync(`${working_directory}/src/js/${_f}`, `${destination}/${_f}`);
     }
     console.log(`[FastForward.build.${type}] copying PRIVACY.md to ${destination}`);
-    fs.copyFileSync(`${process.cwd()}/PRIVACY.md`, `${destination}/PRIVACY.md`);
+    fs.copyFileSync(`${working_directory}/PRIVACY.md`, `${destination}/PRIVACY.md`);
 
     console.log(`[FastForward.build.${type}] copying manifest to ${destination}`);
-    fs.copyFileSync(`${process.cwd()}/platform_spec/${type}/manifest.json`, `${destination}/manifest.json`);
+    fs.copyFileSync(`${working_directory}/platform_spec/${type}/manifest.json`, `${destination}/manifest.json`);
 
     console.log(`[FastForward.build.${type}] creating the manifest`);
-    const manifest_contents = require(`${process.cwd()}/${destination}/manifest.json`);
+    const manifest_contents = require(`${working_directory}/${destination}/manifest.json`);
     let version;
     if (!versioning)
         version = `0.${commit_number}.0`
     else if ('nover' === versioning)
         version = `0.${commit_number}`;
     else
-        version = fs.readFileSync(`${process.cwd()}/src/version.txt`, {encoding: 'utf-8'});
+        version = fs.readFileSync(`${working_directory}/src/version.txt`, {encoding: 'utf-8'});
 
     // replace windows OR linux style new lines if they are there
     manifest_contents.version = version.replace(/\r\n/g, '').replace(/\n/g, '');
-    fs.writeFileSync(`${process.cwd()}/${destination}/manifest.json`, JSON.stringify(manifest_contents, null, 4));
+    fs.writeFileSync(`${working_directory}/${destination}/manifest.json`, JSON.stringify(manifest_contents, null, 4));
 
     await builders[type]({versioning, destination, commit_number, version: manifest_contents.version});
 }
