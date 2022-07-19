@@ -1,7 +1,6 @@
 name: Upload to store
 
-on: 
-  workflow_dispatch:
+on: workflow_dispatch
 
 jobs:
   Build_and_upload:
