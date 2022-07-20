@@ -15,7 +15,7 @@ jobs:
         with:
           days-before-issue-stale: 30
           days-before-issue-close: 14
-          operations-per-run: 100
+          operations-per-run: 300
           stale-issue-label: "stale"
           exempt-issue-labels: "no stale"
           stale-issue-message: "This issue is stale because it has been open for 30 days with no activity. To undo this, make some activity on this issue or create a new one."
