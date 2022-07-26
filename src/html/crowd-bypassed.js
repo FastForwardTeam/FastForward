@@ -8,7 +8,7 @@ if(args.has("target")&&args.has("referer"))
 		brws.runtime.sendMessage({type: "close-tab"})
 	}))
 	a.textContent=args.get("target")
-	a.href=args.has("referer")?"https://universal-bypass.org/navigate"+location.search:args.get("target")
+	a.href=args.has("referer")?"https://fastforward.team/navigate"+location.search:args.get("target")
 	a.onclick=()=>{
 		clearInterval(opentimer)
 		closetimer()

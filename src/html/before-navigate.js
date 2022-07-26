@@ -7,7 +7,7 @@ if(args.has("target"))
 	a.textContent=args.get("target")
 	const when_safe=()=>{
 		document.getElementById("unsafe").classList.add("uk-hidden")
-		a.href=referer&&referer!="tracker"?"https://universal-bypass.org/navigate"+location.search:args.get("target")
+		a.href=referer&&referer!="tracker"?"https://fastforward.team/navigate"+location.search:args.get("target")
 		brws.storage.sync.get(["navigation_delay","no_instant_navigation_trackers"],res=>{
 			if(res.navigation_delay==0||(referer=="tracker"&&res.no_instant_navigation_trackers!=="true"))
 			{

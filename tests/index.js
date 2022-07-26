@@ -1,4 +1,4 @@
-const puppeteer = require('puppeteer') 
+const puppeteer = require('puppeteer')
 const path = require('path')
 
 const { EventEmitter } = require('events');
@@ -29,7 +29,7 @@ class TimeoutError extends Error {
 
   // We do not need to view the FastForward site
   browser.on('targetcreated', async target => {
-    if (target.url() === 'https://universal-bypass.org/firstrun') {
+    if (target.url() === 'https://fastforward.team/firstrun') {
       const targetPage = await target.page()
       targetPage.close()
       return;
@@ -78,6 +78,6 @@ class TimeoutError extends Error {
     }
     console.log('✓ All bypasses have passed the test!')
   }, 3000)
-  
+
 
 })()
