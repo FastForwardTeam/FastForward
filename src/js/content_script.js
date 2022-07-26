@@ -68,7 +68,7 @@ if(document instanceof Document)
 					}
 					else
 					{
-						location.assign("https://universal-bypass.org/crowd-bypassed?target="+encodeURIComponent(msg)+"&referer="+encodeURIComponent(referer))
+						location.assign("https://fastforward.team/crowd-bypassed?target="+encodeURIComponent(msg)+"&referer="+encodeURIComponent(referer))
 						//The background script will intercept the request and redirect to html/crowd-bypassed.html
 					}
 					port.disconnect()
@@ -138,9 +138,9 @@ if(document instanceof Document)
 				ignoreCrowdBypass=`+(ignoreCrowdBypass?"true":"false")+`,
 				bypassClipboard="`+bypassClipboard.split("\\").join("\\\\").split("\"").join("\\\"")+`"
 				let ffClipboard_stored="`+ffClipboard_stored+`"
-				if(location.href=="https://universal-bypass.org/firstrun")
+				if(location.href=="https://fastforward.team/firstrun")
 				{
-					location.replace("https://universal-bypass.org/firstrun?1")
+					location.replace("https://fastforward.team/firstrun?1")
 					return
 				}
 				`+res.injectionScript+`

@@ -67,7 +67,7 @@ unsafelyNavigate=target=>{
 		return
 	}
 	//The background script will intercept the request and redirect to html/before-navigate.html or to the target depending on the user's settings.
-	let url="https://universal-bypass.org/bypassed?target="+encodeURIComponent(target)+"&referer="+encodeURIComponent(referer)
+	let url="https://fastforward.team/bypassed?target="+encodeURIComponent(target)+"&referer="+encodeURIComponent(referer)
 	switch(target)//All values here have been tested using "Take me to destinations after 0 seconds."
 	{
 		case (/(krnl\.place|hugegames\.io)/.exec(target)||{}).input:
@@ -112,7 +112,7 @@ safelyAssign=target=>{
 },
 unsafelyAssignWithReferer=(target,referer)=>{
 	//The background script will intercept this request and handle it.
-	location.href="https://universal-bypass.org/navigate?target="+encodeURIComponent(target)+"&referer="+encodeURIComponent(referer)
+	location.href="https://fastforward.team/navigate?target="+encodeURIComponent(target)+"&referer="+encodeURIComponent(referer)
 },
 finish=()=>{
 	bypassed=true
@@ -344,7 +344,7 @@ decodeURIEncodedMod=(s)=>{
 }
 
 //Backwards compatibility for ffclipboard
-versionString = 'UNIVERSAL_BYPASS_EXTERNAL_VERSION'
+versionString = 'FAST_FORWARD_EXTERNAL_VERSION'
 let versionPatchNumber = Number(versionString.split(".").pop())
 let ffClpbrdSupported = false
 if(versionPatchNumber >= 1924) {
@@ -884,11 +884,11 @@ hrefBypass(/firefaucet\.win\/l\/|sfirmware\.com\/downloads-file\/|(apkily\.com\/
 hrefBypass(/emulator\.games\/download\.php|curseforge\.com\/.*\/download\/[0-9]*/,()=>window.setInterval=f=>setInterval(f,100))
 domainBypass(/^((www\.)?((racaty|longfiles|filepuma|portableapps)\.com|indishare\.org|datei\.to|keisekai\.fun|solvetube\.site))$/,()=>window.setTimeout=f=>setTimeout(f,1))
 domainBypass(/lkc21\.net|layarkacaxxi\.org/,()=>window.setTimeout=f=>setTimeout(f,100))
-domainBypass("universal-bypass.org",()=>{
-	window.universalBypassInstalled=true
-	window.universalBypassInternalVersion=UNIVERSAL_BYPASS_INTERNAL_VERSION
-	window.universalBypassExternalVersion="UNIVERSAL_BYPASS_EXTERNAL_VERSION"
-	window.universalBypassInjectionVersion="UNIVERSAL_BYPASS_INJECTION_VERSION"
+domainBypass("fastforward.team",()=>{
+	window.fastForwardInstalled=true
+	window.fastForwardInternalVersion=FAST_FORWARD_INTERNAL_VERSION
+	window.fastForwardExternalVersion="FAST_FORWARD_EXTERNAL_VERSION"
+	window.fastForwardInjectionVersion="FAST_FORWARD_INJECTION_VERSION"
 })
 
 domainBypass("acortame.xyz", () => {
@@ -952,7 +952,7 @@ ensureDomLoaded(()=>{
 		persistHash("ignoreCrowdBypass")
 	}
 	domainBypass(/^((www\.)?((file(factory|-upload)|asdfiles|mega4up)\.com|up-load\.io|cosmobox\.org|rockfile\.co|devdrive\.cloud))$/,()=>insertInfoBox("{{msg.infoFileHoster}}"))
-	domainBypass(/linkvertise\.(com|net)|link-to\.net/,()=>insertInfoBox(UNIVERSAL_BYPASS_INTERNAL_VERSION>=9?"{{msg.infoLinkvertise}}":"We're not allowed to bypass this website but we have negotiated the removal of their most annoying steps."))
+	domainBypass(/linkvertise\.(com|net)|link-to\.net/,()=>insertInfoBox(FAST_FORWARD_INTERNAL_VERSION>=9?"{{msg.infoLinkvertise}}":"We're not allowed to bypass this website but we have negotiated the removal of their most annoying steps."))
 	domainBypass("srt.am",()=>{
 		if(document.querySelector(".skip-container"))
 		{
@@ -1517,7 +1517,7 @@ ensureDomLoaded(()=>{
 	domainBypass(/(kora4top)\.com/,()=>ifElement("div#m1x2 a",safelyNavigate))
 	domainBypass(/(forexlap|forex-articles|forexmab)\.com/, () => {
 		ensureDomLoaded(() => {
-		ifElement("center.oto>a", a => { 
+		ifElement("center.oto>a", a => {
 			a.click() })
 		})
 	})
@@ -2058,7 +2058,7 @@ ensureDomLoaded(()=>{
 	//    })
 	//})
 
-	
+
 	domainBypass("theepochtimes.com", () => {
 	    awaitElement("#landing-page", subscriptionWall => {
 			subscriptionWall.remove()
@@ -2714,7 +2714,7 @@ domainBypass('apkadmin.com', () => {
 domainBypass("filedm.com",()=>{awaitElement("a#dlbutton",a=>{
     safelyNavigate("http://directdl.xyz/dm.php?id="+a.href.split("_")[1])}
 )})
-	
+
 domainBypass("bowfile.com", () => {
 	const regex=/.*let next = "(http[^"]+)";.*/
 	document.querySelectorAll("script").forEach(script=>{
@@ -2855,7 +2855,7 @@ domainBypass("acorta-link.com", () => {
 					let t=document.documentElement.getAttribute("{{channel.adlinkfly_target}}")
 					if(t=="")
 					{
-						if(UNIVERSAL_BYPASS_INTERNAL_VERSION>=10&&bypassClipboard.substr(0,8)=="psarips:")
+						if(FAST_FORWARD_INTERNAL_VERSION>=10&&bypassClipboard.substr(0,8)=="psarips:")
 						{
 							persistHash("bypassClipboard="+bypassClipboard)
 							crowdDomain("psarips.com")

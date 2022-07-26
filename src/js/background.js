@@ -317,9 +317,9 @@ refreshInjectionScript = () => {
 	if(enabled)
 	{
 		injectionScript = (upstreamInjectionScript + "\n" + userScript)
-		.split("UNIVERSAL_BYPASS_INTERNAL_VERSION").join("10")
-		.split("UNIVERSAL_BYPASS_EXTERNAL_VERSION").join(extension_version)
-		.split("UNIVERSAL_BYPASS_INJECTION_VERSION").join(upstreamCommit?upstreamCommit.substr(0,7):"dev")
+		.split("FAST_FORWARD_INTERNAL_VERSION").join("10")
+		.split("FAST_FORWARD_EXTERNAL_VERSION").join(extension_version)
+		.split("FAST_FORWARD_INJECTION_VERSION").join(upstreamCommit?upstreamCommit.substr(0,7):"dev")
 		Object.keys(preflightRules).forEach(name=>{
 			if(name in onBeforeRequest_rules)
 			{
@@ -479,16 +479,16 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		safe_in=arr[1]
 	}
 	return encodedRedirect(url,decodeURIComponent(arr[0]),safe_in)
-},{types:["main_frame"],urls:["*://universal-bypass.org/bypassed?target=*&referer=*"]},["blocking"])
+},{types:["main_frame"],urls:["*://fastforward.team/bypassed?target=*&referer=*"]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	countIt()
 	return {redirectUrl:brws.runtime.getURL("html/crowd-bypassed.html")+details.url.substr(43)}
-},{types:["main_frame"],urls:["https://universal-bypass.org/crowd-bypassed?*"]},["blocking"])
+},{types:["main_frame"],urls:["https://fastforward.team/crowd-bypassed?*"]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	return {redirectUrl:brws.runtime.getURL("html/options.html")+details.url.substr(36)}
-},{types:["main_frame"],urls:["https://universal-bypass.org/options*"]},["blocking"])
+},{types:["main_frame"],urls:["https://fastforward.team/options*"]},["blocking"])
 
 // Navigation handling including presenting referer header to destinations
 var refererCache={}
@@ -500,7 +500,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 		refererCache[arr[0]]=decodeURIComponent(arr[1].split("&")[0])
 	}
 	return {redirectUrl:arr[0]}
-},{types:["main_frame"],urls:["*://universal-bypass.org/navigate?target=*"]},["blocking"])
+},{types:["main_frame"],urls:["*://fastforward.team/navigate?target=*"]},["blocking"])
 
 let infoSpec=["blocking","requestHeaders"]
 if("EXTRA_HEADERS" in brws.webRequest.OnBeforeSendHeadersOptions)
