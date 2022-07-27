@@ -472,13 +472,12 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 },{types:["main_frame"],urls:["*://fastforward.team/firstrun?1"]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
-	let arr=details.url.substr(45).split("&referer="),url=arr[0],safe_in
-	arr=arr[1].split("&safe_in=")
-	if(arr.length>1)
-	{
-		safe_in=arr[1]
-	}
-	return encodedRedirect(url,decodeURIComponent(arr[0]),safe_in)
+	const parsed_url = new URL(details.url);
+	const referer = parsed_url.searchParams.get('referer');
+	const safe_in = parsed_url.searchParams.get('safe_in');
+	const target = parsed_url.searchParams.get('target');
+
+	return encodedRedirect(target, referer, safe_in)
 },{types:["main_frame"],urls:["*://fastforward.team/bypassed?target=*&referer=*"]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
@@ -493,13 +492,9 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 // Navigation handling including presenting referer header to destinations
 var refererCache={}
 brws.webRequest.onBeforeRequest.addListener(details=>{
-	let arr=details.url.substr(45).split("&referer=")
-	arr[0]=(new URL(decodeURIComponent(arr[0]))).toString()
-	if(arr.length>1)
-	{
-		refererCache[arr[0]]=decodeURIComponent(arr[1].split("&")[0])
-	}
-	return {redirectUrl:arr[0]}
+	const parsed_url = new URL(details.url);
+	const target = parsed_url.searchParams.get('target');
+	return {redirectUrl:target}
 },{types:["main_frame"],urls:["*://fastforward.team/navigate?target=*"]},["blocking"])
 
 let infoSpec=["blocking","requestHeaders"]

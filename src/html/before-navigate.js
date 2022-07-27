@@ -21,7 +21,7 @@ if(args.has("target"))
 			}
 		})
 	}
-	if(args.has("safe_in"))
+	if(args.has('safe_in') && args.get('safe_in') && args.get('safe_in') !== 'null')
 	{
 		document.getElementById("unsafe").classList.remove("uk-hidden")
 		document.getElementById("options-link").classList.add("uk-hidden")
