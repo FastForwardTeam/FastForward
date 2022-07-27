@@ -885,10 +885,14 @@ hrefBypass(/emulator\.games\/download\.php|curseforge\.com\/.*\/download\/[0-9]*
 domainBypass(/^((www\.)?((racaty|longfiles|filepuma|portableapps)\.com|indishare\.org|datei\.to|keisekai\.fun|solvetube\.site))$/,()=>window.setTimeout=f=>setTimeout(f,1))
 domainBypass(/lkc21\.net|layarkacaxxi\.org/,()=>window.setTimeout=f=>setTimeout(f,100))
 domainBypass("fastforward.team",()=>{
-	window.fastForwardInstalled=true
-	window.fastForwardInternalVersion=FAST_FORWARD_INTERNAL_VERSION
-	window.fastForwardExternalVersion="FAST_FORWARD_EXTERNAL_VERSION"
-	window.fastForwardInjectionVersion="FAST_FORWARD_INJECTION_VERSION"
+	try {
+		window.fastForwardInstalled = true
+		window.fastForwardInternalVersion = "FAST_FORWARD_INTERNAL_VERSION"
+		window.fastForwardExternalVersion = "FAST_FORWARD_EXTERNAL_VERSION"
+		window.fastForwardInjectionVersion = "FAST_FORWARD_INJECTION_VERSION"
+	} catch (e) {} // just do nothing this can fail
+	if (location.pathname.includes('bypassed') || location.pathname.includes('navigate'))
+		location.assign(`https://universal-bypass.org${location.pathname}${location.search}`)
 })
 
 domainBypass("acortame.xyz", () => {
@@ -1996,7 +2000,7 @@ ensureDomLoaded(()=>{
 	domainBypass("work.ink", () => {
 		ifElement("#redirect-button", () => openFinalLink())
 	})
-	
+
 	domainBypass("sub2unlock.com", () => {
 	    const url = document.URL;
 	    if (url.includes("sub2unlock.com/link/unlock")) {
