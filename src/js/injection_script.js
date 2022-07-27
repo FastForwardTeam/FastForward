@@ -1996,6 +1996,21 @@ ensureDomLoaded(()=>{
 	domainBypass("work.ink", () => {
 		ifElement("#redirect-button", () => openFinalLink())
 	})
+	
+	domainBypass("sub2unlock.com", () => {
+	    const url = document.URL;
+	    if (url.includes("sub2unlock.com/link/unlock")) {
+		console.log('URL is unlocked, skipping...')
+		return;
+	    } else {
+		console.log('URL is not unlocked, continuing...')
+		const urlSplit = url.split("/");
+		const urlLast = urlSplit[urlSplit.length - 1];
+		const newurl = 'https://sub2unlock.com/link/unlock/' + urlLast;
+		window.location.href = newurl;
+	    }
+	})
+
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	domainBypass("megadb.net", () => {
     ifElement("form[name='F1']", function(a) {
