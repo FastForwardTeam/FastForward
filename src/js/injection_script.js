@@ -885,12 +885,12 @@ hrefBypass(/emulator\.games\/download\.php|curseforge\.com\/.*\/download\/[0-9]*
 domainBypass(/^((www\.)?((racaty|longfiles|filepuma|portableapps)\.com|indishare\.org|datei\.to|keisekai\.fun|solvetube\.site))$/,()=>window.setTimeout=f=>setTimeout(f,1))
 domainBypass(/lkc21\.net|layarkacaxxi\.org/,()=>window.setTimeout=f=>setTimeout(f,100))
 domainBypass("fastforward.team",()=>{
-	try {
-		window.fastForwardInstalled = true
-		window.fastForwardInternalVersion = "FAST_FORWARD_INTERNAL_VERSION"
-		window.fastForwardExternalVersion = "FAST_FORWARD_EXTERNAL_VERSION"
-		window.fastForwardInjectionVersion = "FAST_FORWARD_INJECTION_VERSION"
-	} catch (e) {} // just do nothing this can fail
+
+	window.fastForwardInstalled = true
+	window.fastForwardInternalVersion = "FAST_FORWARD_INTERNAL_VERSION"
+	window.fastForwardExternalVersion = "FAST_FORWARD_EXTERNAL_VERSION"
+	window.fastForwardInjectionVersion = "FAST_FORWARD_INJECTION_VERSION"
+
 	if (location.pathname.includes('bypassed') || location.pathname.includes('navigate'))
 		location.assign(`https://universal-bypass.org${location.pathname}${location.search}`)
 })
