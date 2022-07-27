@@ -1,54 +1,54 @@
 {
 	"appDesc": {
-		"message": "Don't waste your time with compliance. FastForward circumvents annoying link shorteners."
+		"message": "Verspil geen tijd met onnodige stappen. FastForward omzijlt vervelende link verkorters."
 	},
 	"firstrunTitle": {
-		"message": "Thank you for installing FastForward!"
+		"message": "Hartelijk bedankt voor het installeren van FastForward!"
 	},
 	"firstrunNoScript": {
-		"message": "However, you seem to be using NoScript or similar, which FastForward is not compatible with."
+		"message": "Oops, het lijkt erop dat u NoScript of iets soortgelijks gebruikt, FastForward heeft JavaScript nodig om te werken."
 	},
 	"version": {
-		"message": "Version"
+		"message": "Versie"
 	},
 	"definitionsVersion": {
-		"message": "Bypass definitions"
+		"message": "Bypass definities"
 	},
 	"changelog": {
-		"message": "Changelog"
+		"message": "wijzigingen"
 	},
 	"update": {
-		"message": "Check for updates"
+		"message": "Controleer op updates"
 	},
 	"updating": {
-		"message": "Downloading bypass definitions..."
+		"message": "Bypass definities downloaden..."
 	},
 	"updateYes": {
-		"message": "Successfully downloaded bypass definitions."
+		"message": "Bypass definities zijn succesvol geupdated."
 	},
 	"updateNo": {
-		"message": "Bypass definitions are up-to-date."
+		"message": "Bypass definities zijn up-to-date."
 	},
 	"faq": {
-		"message": "Frequently Asked Questions (FAQ)"
+		"message": "Veel gestelde vragen (faq)"
 	},
 	"bypassCounter": {
-		"message": "FastForward has already bypassed % sites for you."
+		"message": "FastForwardheeft al % websites voor u omzijlt."
 	},
 	"support": {
-		"message": "Contribute to FastForward."
+		"message": "Bijdragen aan FastForward."
 	},
 	"options": {
-		"message": "Options"
+		"message": "Opties"
 	},
 	"optionsLink": {
-		"message": "Change FastForward' options."
+		"message": "Wijzig FastForward opties."
 	},
 	"optionsEnabled": {
-		"message": "Enable website bypasses."
+		"message": "Website bypasses aanzetten."
 	},
 	"optionsNavigationDelay": {
-		"message": "Take me to destinations after % second(s)."
+		"message": "Breng me naar de bestemming na % seconden."
 	},
 	"optionsTrackerBypass": {
 		"message": "Bypass trackers (such as bit.ly and t.co) using Apimon.de."
@@ -114,45 +114,45 @@
 		"message": "Unfortunately, the download server will ensure that you have waited before allowing you to download the file."
 	},
 	"infoOutdated": {
-		"message": "This website is bypassed by a newer version of FastForward."
+		"message": "Deze website bypass zit in een nieuwere versie van FastForward dan dat u gebruikt."
 	},
 	"crowdWait": {
-		"message": "Unfortunately, you're the first to encounter this link, but after you've waited, other FastForward users will no longer have to."
+		"message": "Helaas, u bent de eerste die op deze link terecht komt, nadat u gewacht heeft zullen andere FastForward gebruikers niet meer hoeven te wachten."
 	},
 	"crowdDisabled": {
-		"message": "This website is bypassed by crowd bypass, which you can enable in the options."
+		"message": "Deze website is door crowd bypass al omzeilt, dit kunt u aanzetten in de opties."
 	},
 	"crowdBypassed": {
-		"message": "You might not have to wait!"
+		"message": "U hoeft mogenlijk niet te wachten!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Other FastForward users have already waited for you and reported that this leads to %"
+		"message": "Andere FastForward gebruikers hebben al gewacht voor u en hebben gerapporteerd dat deze link verwijst naar %"
 	},
 	"crowdBypassedTimer": {
-		"message": "This will be opened in a new tab in % seconds."
+		"message": "Dit zal na % seconden in eeen nieuwe tab openen."
 	},
 	"crowdBypassedTimerSingular": {
-		"message": "This will be opened in a new tab in 1 second."
+		"message": "Dit zal na 1 seconden in een nieuwe tab openen."
 	},
 	"crowdCloseTimer": {
-		"message": "This tab will close in % seconds."
+		"message": "Deze tab zal na % seconden sluiten."
 	},
 	"crowdCloseTimerSingular": {
-		"message": "This tab will close in 1 second."
+		"message": "Deze tab zal na 1 seconde sluiten."
 	},
 	"cancel": {
-		"message": "Cancel."
+		"message": "Annuleren."
 	},
 	"crowdBypassedIgnore": {
-		"message": "Was this not correct?"
+		"message": "Was dit incorrect?"
 	},
 	"crowdBypassedOptions": {
-		"message": "Do you want this to be opened in a new tab instantly or in x seconds?"
+		"message": "Wilt u dat deze tab direct of na x seconden word geopend?"
 	},
 	"blockedTitle": {
-		"message": "FastForward prevented your IP from being logged."
+		"message": "FastForward heeft voorkomen dat uw IP wordt gelogged."
 	},
 	"blockedSubtitle": {
-		"message": "Don't want FastForward to prevent bad actors from getting your IP?"
+		"message": "Wilt u niet dat FastForward voorkomt dat schadelijke actoren uw IP verkrijgen?"
 	}
 }
