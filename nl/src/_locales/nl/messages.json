@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "Verspil geen tijd met onnodige stappen. FastForward omzijlt vervelende link verkorters."
+	},
+	"firstrunTitle": {
+		"message": "Hartelijk bedankt voor het installeren van FastForward!"
+	},
+	"firstrunNoScript": {
+		"message": "Oops, het lijkt erop dat u NoScript of iets soortgelijks gebruikt, FastForward heeft JavaScript nodig om te werken."
+	},
+	"version": {
+		"message": "Versie"
+	},
+	"definitionsVersion": {
+		"message": "Bypass definities"
+	},
+	"changelog": {
+		"message": "wijzigingen"
+	},
+	"update": {
+		"message": "Controleer op updates"
+	},
+	"updating": {
+		"message": "Bypass definities downloaden..."
+	},
+	"updateYes": {
+		"message": "Bypass definities zijn succesvol geupdated."
+	},
+	"updateNo": {
+		"message": "Bypass definities zijn up-to-date."
+	},
+	"faq": {
+		"message": "Veel gestelde vragen (faq)"
+	},
+	"bypassCounter": {
+		"message": "FastForwardheeft al % websites voor u omzijlt."
+	},
+	"support": {
+		"message": "Bijdragen aan FastForward."
+	},
+	"options": {
+		"message": "Opties"
+	},
+	"optionsLink": {
+		"message": "Wijzig FastForward opties."
+	},
+	"optionsEnabled": {
+		"message": "Website bypasses aanzetten."
+	},
+	"optionsNavigationDelay": {
+		"message": "Breng me naar de bestemming na % seconden."
+	},
+	"optionsTrackerBypass": {
+		"message": "Bypass trackers (such as bit.ly and t.co) using Apimon.de."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Instantly take me to destinations of trackers."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Block IP loggers if they can't be bypassed."
+	},
+	"optionsCrowdBypass": {
+		"message": "Crowd Bypass: Give and take the destinations of unbypassable shorteners."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Open crowd-sourced destinations in a new tab after % second(s)."
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Close tab containing the crowd-sourced destination after % second(s) of visiting it."
+	},
+	"privacyPolicy": {
+		"message": "Privacy Policy"
+	},
+	"contributors": {
+		"message": "Contributors"
+	},
+	"optionsUserscripts": {
+		"message": "Custom Bypasses"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "This is an advanced feature for developers to create their own scripts to bypass sites. Once perfected, they can then be submitted on GitHub to be added to FastForward, so they're available to everyone."
+	},
+	"beforeNavigate": {
+		"message": "You're almost at your destination."
+	},
+	"beforeNavigateDestination": {
+		"message": "Your destination is %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "However, if you navigate now, they will detect FastForward."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "You will no longer be detected in % seconds."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "You will no longer be detected in 1 second."
+	},
+	"beforeNavigateTimer": {
+		"message": "You will be redirected automatically in % seconds."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "You will be redirected automatically in 1 second."
+	},
+	"beforeNavigateOptions": {
+		"message": "Do you want to be redirected instantly or in x seconds?"
+	},
+	"beforeNavigateInstant": {
+		"message": "You are being navigated to %"
+	},
+	"infoLinkvertise": {
+		"message": "FastForward requires you to complete the captcha before we can bypass this site for you. after you do this, we can skip the annoying steps!"
+	},
+	"infoFileHoster": {
+		"message": "Unfortunately, the download server will ensure that you have waited before allowing you to download the file."
+	},
+	"infoOutdated": {
+		"message": "Deze website bypass zit in een nieuwere versie van FastForward dan dat u gebruikt."
+	},
+	"crowdWait": {
+		"message": "Helaas, u bent de eerste die op deze link terecht komt, nadat u gewacht heeft zullen andere FastForward gebruikers niet meer hoeven te wachten."
+	},
+	"crowdDisabled": {
+		"message": "Deze website is door crowd bypass al omzeilt, dit kunt u aanzetten in de opties."
+	},
+	"crowdBypassed": {
+		"message": "U hoeft mogenlijk niet te wachten!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Andere FastForward gebruikers hebben al gewacht voor u en hebben gerapporteerd dat deze link verwijst naar %"
+	},
+	"crowdBypassedTimer": {
+		"message": "Dit zal na % seconden in eeen nieuwe tab openen."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Dit zal na 1 seconden in een nieuwe tab openen."
+	},
+	"crowdCloseTimer": {
+		"message": "Deze tab zal na % seconden sluiten."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Deze tab zal na 1 seconde sluiten."
+	},
+	"cancel": {
+		"message": "Annuleren."
+	},
+	"crowdBypassedIgnore": {
+		"message": "Was dit incorrect?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Wilt u dat deze tab direct of na x seconden word geopend?"
+	},
+	"blockedTitle": {
+		"message": "FastForward heeft voorkomen dat uw IP wordt gelogged."
+	},
+	"blockedSubtitle": {
+		"message": "Wilt u niet dat FastForward voorkomt dat schadelijke actoren uw IP verkrijgen?"
+	}
+}
