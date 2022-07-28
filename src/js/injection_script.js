@@ -2016,6 +2016,16 @@ ensureDomLoaded(()=>{
 	})
 
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
+	domainBypass("maxurlz.com", () => {
+		const regex = /(?<="href=')(.*)(?='>Click here)/
+		for (const script of document.getElementsByTagName("script")) {
+			const source = script.innerHTML
+			if (source.includes("#timer")) {
+				safelyNavigate(regex.exec(source)[0])
+				break
+			}
+		}
+	})
 	domainBypass("megadb.net", () => {
     ifElement("form[name='F1']", function(a) {
         a.submit();
