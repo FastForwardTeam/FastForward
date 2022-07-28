@@ -2735,7 +2735,7 @@ domainBypass('apkadmin.com', () => {
 
 	domainBypass("tei.ai", () => {
 		const token = document.querySelector('#link-view [name="token"]').value;
-		const decoded = atob(token.substring(token.indexOf("aH")));
+		const decoded = atob(token.substring(token.indexOf("aHR0")));
 		const page = decoded.split('http').pop();
 		const link = `http${page}`;
 		safelyNavigate(link);
