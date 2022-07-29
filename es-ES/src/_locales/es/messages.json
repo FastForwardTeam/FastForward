@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "No pierda el tiempo con acortadores. FastForward evita los molestos acortadores de links."
+	},
+	"firstrunTitle": {
+		"message": "¡Gracias por instalar FastForward!"
+	},
+	"firstrunNoScript": {
+		"message": "Sin embargo, parece que está utilizando NoScript o similar, con el que FastForward no es compatible."
+	},
+	"version": {
+		"message": "Versión"
+	},
+	"definitionsVersion": {
+		"message": "Definiciones de bypass"
+	},
+	"changelog": {
+		"message": "Registro de cambios"
+	},
+	"update": {
+		"message": "Buscar actualizaciones"
+	},
+	"updating": {
+		"message": "Descargando definiciones de bypass..."
+	},
+	"updateYes": {
+		"message": "Se han descargado con éxito las definiciones de bypass."
+	},
+	"updateNo": {
+		"message": "Las definiciones de bypass están actualizadas."
+	},
+	"faq": {
+		"message": "Preguntas frecuentes (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "FastForward ha evitado % sitios por ti."
+	},
+	"support": {
+		"message": "Contribuye a FastForward."
+	},
+	"options": {
+		"message": "Opciones"
+	},
+	"optionsLink": {
+		"message": "Cambiar las opciones de FastForward."
+	},
+	"optionsEnabled": {
+		"message": "Activar bypasses de sitios web."
+	},
+	"optionsNavigationDelay": {
+		"message": "Llévame a los destinos después de % segundo(s)."
+	},
+	"optionsTrackerBypass": {
+		"message": "Evitar rastreadores (como bit.ly y t.co) utilizando Apimon.de."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Llévame instantáneamente a los destinos de los rastreadores."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Bloquear IP logger si no pueden ser evitados."
+	},
+	"optionsCrowdBypass": {
+		"message": "Crowd Bypass: Dar y tomar los destinos de acortadores no evitables."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Abrir los destinos de colaboradores en una nueva pestaña después de % segundo(s)."
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Cierra la pestaña que contiene el destino de colaboradores después de % segundo(s) de visitarlo."
+	},
+	"privacyPolicy": {
+		"message": "Política de privacidad"
+	},
+	"contributors": {
+		"message": "Contribuidores"
+	},
+	"optionsUserscripts": {
+		"message": "Bypasses personalizados"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Esto se trata de una función avanzada para que los desarrolladores puedan crear sus propios scripts para evitar sitios. Una vez perfeccionados, se pueden enviar a GitHub para añadirlos a FastForward, para que estén disponibles para todo el mundo."
+	},
+	"beforeNavigate": {
+		"message": "Ya casi has llegado a tu destino."
+	},
+	"beforeNavigateDestination": {
+		"message": "Su destino es %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "Sin embargo, si navegas ahora, detectarán FastForward."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Ya no serás detectado en % segundos."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Ya no serás detectado en 1 segundos."
+	},
+	"beforeNavigateTimer": {
+		"message": "Serás redirigido automáticamente en % segundos."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Serás redirigido automáticamente en 1 segundos."
+	},
+	"beforeNavigateOptions": {
+		"message": "¿Quieres ser redirigido al instante o en x segundos?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Estás siendo dirigido a %"
+	},
+	"infoLinkvertise": {
+		"message": "FastForward requiere que completes el captcha antes de que podamos evitar este sitio para usted. Después de hacer esto, ¡podemos omitir los molestos pasos!"
+	},
+	"infoFileHoster": {
+		"message": "Lamentablemente, el servidor de descargas se asegurará de que hayas esperado antes de permitirte descargar el archivo."
+	},
+	"infoOutdated": {
+		"message": "Este sitio web es evitado por una nueva versión de FastForward."
+	},
+	"crowdWait": {
+		"message": "Lamentablemente, usted es el primero en encontrar este enlace, pero después de que haya esperado, otros usuarios de FastForward ya no tendrán que hacerlo."
+	},
+	"crowdDisabled": {
+		"message": "Este sitio web es evitado por el crowd bypass, que puedes activar en las opciones."
+	},
+	"crowdBypassed": {
+		"message": "Puede que no tenga que esperar!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Otros usuarios de FastForward ya han esperado por ti y han reportado que esto va a %"
+	},
+	"crowdBypassedTimer": {
+		"message": "Se abrirá en una nueva pestaña en % segundo."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Se abrirá en una nueva pestaña en 1 segundo."
+	},
+	"crowdCloseTimer": {
+		"message": "Esta pestaña se cerrará en % segundo."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Esta pestaña se cerrará en 1 segundo."
+	},
+	"cancel": {
+		"message": "Cancelar."
+	},
+	"crowdBypassedIgnore": {
+		"message": "¿No era esto correcto?"
+	},
+	"crowdBypassedOptions": {
+		"message": "¿Quieres que se abra en una nueva pestaña al instante o en x segundos?"
+	},
+	"blockedTitle": {
+		"message": "FastForward impidió que se registrara su IP."
+	},
+	"blockedSubtitle": {
+		"message": "¿No quieres que FastForward evite que los actores maliciosos obtengan tu IP?"
+	}
+}

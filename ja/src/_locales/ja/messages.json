@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "コンプライアンスに時間を無駄にしないでください。FastForwardは迷惑な短縮リンクを回避します。"
+	},
+	"firstrunTitle": {
+		"message": "FastForwardをインストールいただきありがとうございます。"
+	},
+	"firstrunNoScript": {
+		"message": "FastForwardが対応していないNoScriptやその他の拡張機能を利用しているようです。"
+	},
+	"version": {
+		"message": "バージョン"
+	},
+	"definitionsVersion": {
+		"message": "バイパス定義"
+	},
+	"changelog": {
+		"message": "アップデート履歴"
+	},
+	"update": {
+		"message": "アップデートを確認する"
+	},
+	"updating": {
+		"message": "バイパス定義をダウンロードしています..."
+	},
+	"updateYes": {
+		"message": "バイパス定義のダウンロードに成功しました。"
+	},
+	"updateNo": {
+		"message": "バイパス定義は最新です。"
+	},
+	"faq": {
+		"message": "よくある質問 (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "FastForwardは今までに%件のサイトをバイパスしました。"
+	},
+	"support": {
+		"message": "FastForwardに貢献する"
+	},
+	"options": {
+		"message": "オプション"
+	},
+	"optionsLink": {
+		"message": "FastForwardのオプションを変更する。"
+	},
+	"optionsEnabled": {
+		"message": "Webサイトのバイパスを有効化する。"
+	},
+	"optionsNavigationDelay": {
+		"message": "%秒後にリンク先に移動する。"
+	},
+	"optionsTrackerBypass": {
+		"message": "Apimon.deを使用してトラッカー(bit.lyやt.coなど)をバイパスする"
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "即座にトラッカーのリンク先に移動する"
+	},
+	"optionsBlockIPLoggers": {
+		"message": "バイパスできない場合にIPロガーをブロックする"
+	},
+	"optionsCrowdBypass": {
+		"message": "Crowd Bypass: バイパスできない短縮リンクの移動先を共有し、取得する"
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Crowd Bypassの移動先に%秒後に移動する"
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Close tab containing the crowd-sourced destination after % second(s) of visiting it."
+	},
+	"privacyPolicy": {
+		"message": "Privacy Policy"
+	},
+	"contributors": {
+		"message": "Contributors"
+	},
+	"optionsUserscripts": {
+		"message": "Custom Bypasses"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "This is an advanced feature for developers to create their own scripts to bypass sites. Once perfected, they can then be submitted on GitHub to be added to FastForward, so they're available to everyone."
+	},
+	"beforeNavigate": {
+		"message": "You're almost at your destination."
+	},
+	"beforeNavigateDestination": {
+		"message": "Your destination is %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "However, if you navigate now, they will detect FastForward."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "You will no longer be detected in % seconds."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "You will no longer be detected in 1 second."
+	},
+	"beforeNavigateTimer": {
+		"message": "You will be redirected automatically in % seconds."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "You will be redirected automatically in 1 second."
+	},
+	"beforeNavigateOptions": {
+		"message": "Do you want to be redirected instantly or in x seconds?"
+	},
+	"beforeNavigateInstant": {
+		"message": "You are being navigated to %"
+	},
+	"infoLinkvertise": {
+		"message": "FastForward requires you to complete the captcha before we can bypass this site for you. after you do this, we can skip the annoying steps!"
+	},
+	"infoFileHoster": {
+		"message": "Unfortunately, the download server will ensure that you have waited before allowing you to download the file."
+	},
+	"infoOutdated": {
+		"message": "This website is bypassed by a newer version of FastForward."
+	},
+	"crowdWait": {
+		"message": "Unfortunately, you're the first to encounter this link, but after you've waited, other FastForward users will no longer have to."
+	},
+	"crowdDisabled": {
+		"message": "This website is bypassed by crowd bypass, which you can enable in the options."
+	},
+	"crowdBypassed": {
+		"message": "You might not have to wait!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Other FastForward users have already waited for you and reported that this leads to %"
+	},
+	"crowdBypassedTimer": {
+		"message": "This will be opened in a new tab in % seconds."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "This will be opened in a new tab in 1 second."
+	},
+	"crowdCloseTimer": {
+		"message": "This tab will close in % seconds."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "This tab will close in 1 second."
+	},
+	"cancel": {
+		"message": "Cancel."
+	},
+	"crowdBypassedIgnore": {
+		"message": "Was this not correct?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Do you want this to be opened in a new tab instantly or in x seconds?"
+	},
+	"blockedTitle": {
+		"message": "FastForward prevented your IP from being logged."
+	},
+	"blockedSubtitle": {
+		"message": "Don't want FastForward to prevent bad actors from getting your IP?"
+	}
+}

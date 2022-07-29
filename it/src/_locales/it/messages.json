@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "Non perdere tempo con la conformità. FastForward aggira i fastidiosi shortlink."
+	},
+	"firstrunTitle": {
+		"message": "Grazie per aver installato FastFoward!"
+	},
+	"firstrunNoScript": {
+		"message": "Tuttavia, sembra che stai utilizzando NoScript o simili, con cui FastForward non è compatibile."
+	},
+	"version": {
+		"message": "Versione"
+	},
+	"definitionsVersion": {
+		"message": "Definizioni bypass"
+	},
+	"changelog": {
+		"message": "Registro modifiche"
+	},
+	"update": {
+		"message": "Controlla aggiornamenti"
+	},
+	"updating": {
+		"message": "Scaricando le definizioni del bypass..."
+	},
+	"updateYes": {
+		"message": "Definizioni del bypass scaricate correttamente."
+	},
+	"updateNo": {
+		"message": "Le definizioni del bypass sono aggiornate."
+	},
+	"faq": {
+		"message": "Domande Chieste Frequentemente (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "FastFoward ha già bypassato % siti per te."
+	},
+	"support": {
+		"message": "Contribuisci a FastFoward."
+	},
+	"options": {
+		"message": "Opzioni"
+	},
+	"optionsLink": {
+		"message": "Cambia opzioni FastFoward'."
+	},
+	"optionsEnabled": {
+		"message": "Abilita bypass siti."
+	},
+	"optionsNavigationDelay": {
+		"message": "Portami alla destinazione dopo % secondi."
+	},
+	"optionsTrackerBypass": {
+		"message": "Bypassa traccianti (come bit.ly e t.co) usano Apimon.de."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Portami istantaneamente alla destinazione dei traccianti."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Blocca traccianti IP se non possono essere bypassati."
+	},
+	"optionsCrowdBypass": {
+		"message": "Community Bypass: Fornisci e ottieni le destinazioni degli shortlink non bypassabili."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Apri le destinazioni crowd-sourced in una nuova scheda dopo % secondi."
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Chiudi la scheda contenente la destinazione crowd-sourced dopo % secondi di visita."
+	},
+	"privacyPolicy": {
+		"message": "Informativa sulla privacy"
+	},
+	"contributors": {
+		"message": "Contributori"
+	},
+	"optionsUserscripts": {
+		"message": "Bypass Personalizzati"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Questa è una funzione avanzata per gli sviluppatori in modo che possano creare i loro script per bypassare i siti. Una volta perfezionati, possono essere inviati su GitHub per essere aggiunti a FastFoward, quindi disponibili per tutti."
+	},
+	"beforeNavigate": {
+		"message": "Sei quasi arrivato alla tua destinazione."
+	},
+	"beforeNavigateDestination": {
+		"message": "La tua destinazione è %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "Ma, se ci vai ora, rileveranno FastFoward."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "FastFoward non sarà più rilevato in % secondi."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "FastFoward non sarà più rilevato in 1 secondo."
+	},
+	"beforeNavigateTimer": {
+		"message": "Sarai reindirizzato automaticamente in % secondi."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Sarai reindirizzato automaticamente in 1 secondo."
+	},
+	"beforeNavigateOptions": {
+		"message": "Vuoi essere reindirizzato istantaneamente o in x secondi?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Ti sto reindirizzando a %"
+	},
+	"infoLinkvertise": {
+		"message": "FastFoward ha bisogno che tu completi il captcha prima di bypassare questo sito per te. Dopo averlo fatto, posso saltare i passaggi noiosi!"
+	},
+	"infoFileHoster": {
+		"message": "Sfortunatamente, il server del download si assicurerà che tu abbia aspettato prima di consentirti di scaricare il file."
+	},
+	"infoOutdated": {
+		"message": "Questo sito è bypassato da una nuova versione di FastFoward."
+	},
+	"crowdWait": {
+		"message": "Sfortunatamente, sei il primo a incontrare questo link, ma dopo aver aspettato, altri utenti FastFoward non dovranno più farlo."
+	},
+	"crowdDisabled": {
+		"message": "Questo sito è bypassato dal Community Bypass, che puoi attivare nelle opzioni."
+	},
+	"crowdBypassed": {
+		"message": "Potresti non dover aspettare!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Altri utenti FastFoward hanno già aspettato per te e segnalato che questo porta a %"
+	},
+	"crowdBypassedTimer": {
+		"message": "Questo verrà aperto in una nuova scheda in % secondi."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Questo verrà aperto in una nuova scheda in 1 secondo."
+	},
+	"crowdCloseTimer": {
+		"message": "Questa scheda si chiuderà in % secondi."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Questa scheda si chiuderà in 1 secondo."
+	},
+	"cancel": {
+		"message": "Annulla."
+	},
+	"crowdBypassedIgnore": {
+		"message": "Non era corretto?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Vuoi che questo si apra in una nuova scheda istantaneamente o dopo x secondi?"
+	},
+	"blockedTitle": {
+		"message": "FastFoward ha evitato che il tuo IP venisse loggato."
+	},
+	"blockedSubtitle": {
+		"message": "Non vuoi che FastFoward impedisca a malintenzionati di prendere il tuo IP?"
+	}
+}
