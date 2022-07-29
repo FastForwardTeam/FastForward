@@ -6,3 +6,6 @@ contact_links:
   - name: Issues
     url: https://github.com/FastForwardTeam/FastForward/issues?q=label%3ANew-bypass
     about: Please search before issues to check if a site is already submitted.
+  - name: New bypass
+    url: https://github.com/FastForwardTeam/FastForward/issues/656
+    about: You came here to suggest a new link shortner to be bypassed? If so, please click on the button on the right to read more about it. ➡
