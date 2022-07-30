@@ -1527,7 +1527,7 @@ ensureDomLoaded(()=>{
 	})
 	domainBypass("fx4vip.com", () => {
 		ensureDomLoaded(() => {
-		ifElement("#button1", a => {
+		ifElement("#get_link", a => {
 			a.removeAttribute("disabled");
 			a.click();
 		})
