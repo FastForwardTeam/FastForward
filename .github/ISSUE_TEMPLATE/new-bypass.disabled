@@ -10,7 +10,6 @@ body:
       Please ask support questions on the [Discord](https://discord.gg/RSAf7b5njt).
       
       ### **Please don't submit multiple issues about the same website. [Search](https://github.com/FastForwardTeam/FastForward/labels/New-bypass) if the domain has been reported before filing the issue.**
-      **We already know about link1s, [we are working on it.](https://github.com/FastForwardTeam/FastForward/issues/40)**
       Thanks for taking the time to fill out this form!
 - type: input
   id: domain
