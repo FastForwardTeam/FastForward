@@ -101,6 +101,12 @@ async function run_build(type, commit_number) {
     console.log(`[FastForward.build.${type}] copying manifest to ${destination}`);
     fs.copyFileSync(`${working_directory}/platform_spec/${type}/manifest.json`, `${destination}/manifest.json`);
 
+    console.log(`[FastForward.build.${type}] copying bypass files to ${destination}`)
+    copyFolderRecursiveSync(`${working_directory}/src/bypasses`, destination);
+
+    console.log(`[FastForward.build.${type}] copying helper files to ${destination}`)
+    copyFolderRecursiveSync(`${working_directory}/src/helpers`, destination);
+
     console.log(`[FastForward.build.${type}] creating the manifest`);
     const manifest_contents = require(`${destination}/manifest.json`);
     let version;
@@ -137,11 +143,36 @@ exec(`git rev-list HEAD --count`, async (error, stdout, stderr) => {
         const bypass = await import(`file:///${working_directory}/src/bypasses/${_}`);
         bypass.matches.map(match => { bypasses[match] = `bypasses/${_}`});
     }
+
     fs.writeFileSync(`${working_directory}/src/js/injection_script.js`, `const bypasses = ${JSON.stringify(bypasses)};
 
 if (bypasses.hasOwnProperty(location.host)) {
-  const bypass = import(bypasses[location.host]);
-  bypass.execute();
+    const bypass_url = bypasses[location.host];
+    
+    import(\`\${window.x8675309bp}\${bypass_url}\`).then(({default: bypass}) => {
+        import(\`\${window.x8675309bp}helpers/dom.js\`).then(({default: helpers}) => {
+            const bps = new bypass;
+            bps.set_helpers(helpers);
+            console.log('ensure_dom: %r', bps.ensure_dom);
+            if (bps.ensure_dom) {
+                let executed = false;
+                document.addEventListener('readystatechange', () => {
+                    if (['interactive', 'complete'].includes(document.readyState) && !executed) {
+                        executed = true;
+                        bps.execute();
+                    }
+                });
+                document.addEventListener("DOMContentLoaded",()=>{
+                    if (!executed) {
+                        executed = true;
+                        bps.execute();
+                    }
+                });
+            } else {
+                bps.execute();
+            }   
+        });
+    });
 }`)
     for (const _ of builds)
         await run_build(_, stdout.replace('\n', ''));

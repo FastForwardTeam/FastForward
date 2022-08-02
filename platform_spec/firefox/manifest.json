@@ -51,8 +51,7 @@
 				"<all_urls>"
 			],
 			"js": [
-				"content_script.js",
-				"injection_script.js"
+				"content_script.js"
 			],
 			"run_at": "document_start"
 		}
