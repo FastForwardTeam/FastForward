@@ -132,19 +132,24 @@ if(document instanceof Document)
 
 			//encodeURIcomponent and replace whatever's not encoded, https://stackoverflow.com/a/16435373/17117909
 			ffClipboard_stored = encodeURIComponent(ffClipboard_stored).replace(/\-/g, "%2D").replace(/\_/g, "%5F").replace(/\./g, "%2E").replace(/\!/g, "%21").replace(/\~/g, "%7E").replace(/\*/g, "%2A").replace(/\'/g, "%27").replace(/\(/g, "%28").replace(/\)/g, "%29")
+			const s = document.createElement('script');
+			s.innerHTML = `window.x8675309bp = '${brws.runtime.getURL('')}';`;
+			document.documentElement.appendChild(s);
+
 			let script=document.createElement("script")
-			script.innerHTML=`(()=>{
-				const crowdEnabled=`+(res.crowdEnabled?"true":"false")+`,
-				ignoreCrowdBypass=`+(ignoreCrowdBypass?"true":"false")+`,
-				bypassClipboard="`+bypassClipboard.split("\\").join("\\\\").split("\"").join("\\\"")+`"
-				let ffClipboard_stored="`+ffClipboard_stored+`"
-				if(location.href=="https://fastforward.team/firstrun")
-				{
-					location.replace("https://fastforward.team/firstrun?1")
-					return
-				}
-				`+res.injectionScript+`
-			})()`
+			script.setAttribute('type', 'module');
+			script.src = brws.runtime.getURL('injection_script.js');
+			// script.innerHTML=`(()=>{
+			// 	const crowdEnabled=`+(res.crowdEnabled?"true":"false")+`,
+			// 	ignoreCrowdBypass=`+(ignoreCrowdBypass?"true":"false")+`,
+			// 	bypassClipboard="`+bypassClipboard.split("\\").join("\\\\").split("\"").join("\\\"")+`"
+			// 	let ffClipboard_stored="`+ffClipboard_stored+`"
+			// 	if(location.href=="https://fastforward.team/firstrun")
+			// 	{
+			// 		location.replace("https://fastforward.team/firstrun?1")
+			// 		return
+			// 	}
+			// })()`
 			script=document.documentElement.appendChild(script)
 			setTimeout(()=>document.documentElement.removeChild(script),10)
 	});

@@ -478,7 +478,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	const target = parsed_url.searchParams.get('target');
 
 	return encodedRedirect(target, referer, safe_in)
-},{types:["main_frame"],urls:["*://fastforward.team/bypassed?target=*&referer=*"]},["blocking"])
+},{types:["main_frame"],urls:["*://fastforward.team/bypassed?target=*","*://fastforward.team/bypassed?target=*&referer=*"]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	countIt()

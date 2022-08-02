@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "adm-zip": "^0.5.9"
-  }
+    "adm-zip": "^0.5.9",
+    "es-main": "^1.2.0"
+  },
+  "type": "module"
 }

@@ -6,22 +6,24 @@
  *                  nover = Creates a package without version number
  *                  ver   = Creates a package with version number as specified in version.txt
  */
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+
 const fs = require('fs');
 const path = require('path');
-
-const distribution = 'build/dist';
 
 let working_directory = process.cwd();
 
 function set_working_directory (cwd) {
-    if (fs.existsSync(path.join(cwd, 'LICENSE')))
+
+    if (fs.existsSync(path.join(cwd, 'LICENSE'))) {
         working_directory = cwd;
-    else
+    } else
         set_working_directory(path.join(cwd, '..'));
 }
-
 set_working_directory(working_directory);
 
+const distribution = `${working_directory}/build/dist`;
 const args = process.argv;
 args.shift();
 args.shift()
@@ -35,13 +37,16 @@ const [build_type, versioning] = args;
 console.log(`[FastForward.build] ${build_type} (${versioning ? versioning : 'dev'}): Creating package...`);
 
 const builds = [];
+import ff_builder from './build_js/firefox.js';
+import chrm_builder from './build_js/chromium.js';
+
 const builders = {
-    firefox: require('./build_js/firefox.js'),
-    chromium: require('./build_js/chromium.js')
+    firefox: ff_builder,
+    chromium: chrm_builder
 };
 
-if (fs.existsSync('build'))
-    fs.rmSync('build', {recursive: true});
+if (fs.existsSync(`${working_directory}/build`))
+    fs.rmSync(`${working_directory}/build`, {recursive: true});
 
 fs.mkdirSync(distribution, {recursive: true});
 
@@ -69,7 +74,7 @@ function copyFolderRecursiveSync( source, target ) {
 }
 
 async function run_build(type, commit_number) {
-    const destination = `build/FastForward.${type}`;
+    const destination = `${working_directory}/build/FastForward.${type}`;
 
     fs.mkdirSync(destination, {recursive: true});
 
@@ -96,8 +101,14 @@ async function run_build(type, commit_number) {
     console.log(`[FastForward.build.${type}] copying manifest to ${destination}`);
     fs.copyFileSync(`${working_directory}/platform_spec/${type}/manifest.json`, `${destination}/manifest.json`);
 
+    console.log(`[FastForward.build.${type}] copying bypass files to ${destination}`)
+    copyFolderRecursiveSync(`${working_directory}/src/bypasses`, destination);
+
+    console.log(`[FastForward.build.${type}] copying helper files to ${destination}`)
+    copyFolderRecursiveSync(`${working_directory}/src/helpers`, destination);
+
     console.log(`[FastForward.build.${type}] creating the manifest`);
-    const manifest_contents = require(`${working_directory}/${destination}/manifest.json`);
+    const manifest_contents = require(`${destination}/manifest.json`);
     let version;
     if (!versioning)
         version = `0.${commit_number}.0`
@@ -108,7 +119,7 @@ async function run_build(type, commit_number) {
 
     // replace windows OR linux style new lines if they are there
     manifest_contents.version = version.replace(/\r\n/g, '').replace(/\n/g, '');
-    fs.writeFileSync(`${working_directory}/${destination}/manifest.json`, JSON.stringify(manifest_contents, null, 4));
+    fs.writeFileSync(`${destination}/manifest.json`, JSON.stringify(manifest_contents, null, 4));
 
     await builders[type]({versioning, destination, commit_number, version: manifest_contents.version});
 }
@@ -124,6 +135,45 @@ const {
 } = require('child_process');
 
 exec(`git rev-list HEAD --count`, async (error, stdout, stderr) => {
+    const bypasses = {};
+
+    for (const _ of fs.readdirSync(`${working_directory}/src/bypasses`)) {
+        if (_ === 'BypassDefinition.js') continue;
+
+        const bypass = await import(`file:///${working_directory}/src/bypasses/${_}`);
+        bypass.matches.map(match => { bypasses[match] = `bypasses/${_}`});
+    }
+
+    fs.writeFileSync(`${working_directory}/src/js/injection_script.js`, `const bypasses = ${JSON.stringify(bypasses)};
+
+if (bypasses.hasOwnProperty(location.host)) {
+    const bypass_url = bypasses[location.host];
+    
+    import(\`\${window.x8675309bp}\${bypass_url}\`).then(({default: bypass}) => {
+        import(\`\${window.x8675309bp}helpers/dom.js\`).then(({default: helpers}) => {
+            const bps = new bypass;
+            bps.set_helpers(helpers);
+            console.log('ensure_dom: %r', bps.ensure_dom);
+            if (bps.ensure_dom) {
+                let executed = false;
+                document.addEventListener('readystatechange', () => {
+                    if (['interactive', 'complete'].includes(document.readyState) && !executed) {
+                        executed = true;
+                        bps.execute();
+                    }
+                });
+                document.addEventListener("DOMContentLoaded",()=>{
+                    if (!executed) {
+                        executed = true;
+                        bps.execute();
+                    }
+                });
+            } else {
+                bps.execute();
+            }   
+        });
+    });
+}`)
     for (const _ of builds)
         await run_build(_, stdout.replace('\n', ''));
 })
