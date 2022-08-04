@@ -2712,14 +2712,14 @@ domainBypass("acorta-link.com", () => {
 })
 
 domainBypass("hagamix.blogspot.com", () => {
-    ensureDomLoaded(() => {
-      const gotoLinkButon = document.getElementById("btn-gotolink");
-      setTimeout(function () {
-        document.getElementById("btngetlink").click();
-      }, 500);
-      gotoLinkButon.disabled = false;
-    });
-  });
+    ensureDomLoaded(()=>{
+        var button = document.createElement("button")
+    button.id="btn-gotolink";
+    var body = document.getElementsByClassName('jumbotron')[0];
+    body.appendChild(button);
+    awaitElement("button#btn-gotolink", btn => btn.click())
+    })
+})
 
 	//Insertion point for bypasses detecting certain DOM elements. Bypasses here will no longer need to call ensureDomLoaded.
 	domainBypass('letsboost.net', () => {
