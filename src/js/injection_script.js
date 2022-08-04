@@ -877,6 +877,7 @@ hrefBypass(/(bluemediafiles\.com|pcgamestorrents.org)\/url-generator\.php\?url=/
 	awaitElement("input#nut[src]",i=>i.parentNode.submit())
 })
 //Insertion point for bypasses running before the DOM is loaded.
+hrefBypass(/https:\/\/crackedappsstore\.com\/(?:\\.|[^\\])*\/\?download.*/gm, () => ifElement("a.downloadAPK.dapk_b[href]", a => safelyAssign(a.href)))
 domainBypass("downloadr.in",()=>safelyNavigate(new URL(location.href).search.slice(1)))
 domainBypass(/^((www\.)?((njiir|healthykk|linkasm|dxdrive|getwallpapers|sammobile|ydfile|mobilemodsapk|dlandroid|download\.modsofapk)\.com|(punchsubs|zedge|fex)\.net|k2s\.cc|muhammadyoga\.me|u\.to|skiplink\.io|(uploadfree|freeupload)\.info|fstore\.biz))$/,()=>window.setInterval=f=>setInterval(f,1))
 hrefBypass(/thesimsresource\.com\/downloads\/details\/id\//,()=>window.setTimeout=f=>setTimeout(f,1))
