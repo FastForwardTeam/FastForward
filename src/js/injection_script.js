@@ -2016,6 +2016,7 @@ ensureDomLoaded(()=>{
 	})
 
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
+	domainBypass("chooyomi.com", () => awaitElement(".get-link > a:nth-child(1)", a => safelyNavigate(a.href)))
 	domainBypass("maxurlz.com", () => {
 		const regex = /(?<="href=')(.*)(?='>Click here)/
 		for (const script of document.getElementsByTagName("script")) {
