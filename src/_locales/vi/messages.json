@@ -108,7 +108,7 @@
 		"message": "Bạn đang được chuyển hướng đến %"
 	},
 	"infoLinkvertise": {
-		"message": "Chúng tôi không được phép vượt qua trang này nhưng chúng tôi đã gỡ bỏ các bước làm bạn khó chịu nhất."
+		"message": "FastForward cần bạn hoàn thành captcha trước khi chúng ta có thể bỏ qua những bước khó chịu!"
 	},
 	"infoFileHoster": {
 		"message": "Thật không may, máy chủ cần phải đảm bảo bạn đã chờ trước khi cho phép tải về tệp."
