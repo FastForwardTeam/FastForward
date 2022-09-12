@@ -31,6 +31,9 @@ export default class Linkvertise extends BypassDefinition {
 
 
                     fetch(`https://publisher.linkvertise.com/api/v1/redirect/link/static${linkvertise_link}?X-Linkvertise-UT=${ut}`).then(r => r.json()).then(json => {
+                        if (json?.data.link.target_type !== 'URL') {
+                            return insertInfoBox('Due to copyright reasons we are not bypassing linkvertise stored content (paste, download etc)');
+                        }
                         if (json?.data.link.id) {
                             const json_body = {
                                 serial: btoa(JSON.stringify({
