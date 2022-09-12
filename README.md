@@ -33,17 +33,18 @@ Yes! We do, and if you are interested in assisting the development, need help or
 ## Chromium based browsers
 Chromium based browser includes Chrome, Chromium, Opera, Opera GX, Edge, Brave, Vivaldi.
 
+We recommend installing the extension from the stores below:
 
+<a href="https://chrome.google.com/webstore/detail/fastforward/icallnadddjmdinamnolclfjanhfoafe"><img src="https://user-images.githubusercontent.com/585534/107280622-91a8ea80-6a26-11eb-8d07-77c548b28665.png" alt="Get FastForward on Chromium based browsers" width="126px"></a>
 <a href="https://microsoftedge.microsoft.com/addons/detail/fastforward/ldcclmkclhomnpcnccgbgleikchbnecl"><img src="https://user-images.githubusercontent.com/585534/107280673-a5ece780-6a26-11eb-9cc7-9fa9f9f81180.png" alt="Get FastForward on Microsoft Edge" width="126px"></a>
 
 ### Automatic Install
+FastForward is present on the [Chrome Web Store](https://chrome.google.com/webstore/detail/fastforward/icallnadddjmdinamnolclfjanhfoafe) 
 and in the [Microsoft Edge Addons](https://microsoftedge.microsoft.com/addons/detail/fastforward/ldcclmkclhomnpcnccgbgleikchbnecl).
 
 ### Manual Install
-
 [<img src="https://img.shields.io/badge/Chromium-Unstable-e77334" />](https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_chromium.zip)
 
-if you are using Chromium based browser that is not microsoft edge, you can install the extension manually by following these steps:
 You can see how to [install manually here](https://github.com/FastForwardTeam/FastForward/blob/main/INSTALLING.md).
 
 ## Firefox Based Browsers
