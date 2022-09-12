@@ -20,8 +20,9 @@ export function insertInfoBox(text) {
     div.setAttribute("aria-hidden","true");
     const span = div.querySelector("span");
     span.textContent=text;
-    div.onclick= () => document.body.removeChild(div);
+    div.onclick= () => infobox_container.removeChild(div);
     infobox_container.appendChild(div);
+    setTimeout(()=>infobox_container.removeChild(div), 7000);
 }
 
 export function unsafelyNavigate(target, referer=null) {
