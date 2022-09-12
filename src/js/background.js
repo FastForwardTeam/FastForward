@@ -478,7 +478,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 	const target = parsed_url.searchParams.get('target');
 
 	return encodedRedirect(target, referer, safe_in)
-},{types:["main_frame"],urls:["*://fastforward.team/bypassed?target=*&referer=*"]},["blocking"])
+},{types:["main_frame"],urls:["*://fastforward.team/bypassed?target=*","*://fastforward.team/bypassed?target=*&referer=*"]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	countIt()
@@ -1005,59 +1005,6 @@ brws.webRequest.onHeadersReceived.addListener(details=>{
 				}
 			}
 			delete soralink_contribute[details.url]
-		}
-		if(firefox)//Fixing Content-Security-Policy on Firefox because apparently extensions have no special privileges there
-		{
-			let csp = false
-			for(let i in details.responseHeaders)
-			{
-				if("value"in details.responseHeaders[i]&&["content-security-policy","x-content-security-policy"].indexOf(details.responseHeaders[i].name.toLowerCase())>-1)
-				{
-					csp = true
-					let _policies = details.responseHeaders[i].value.replace(";,",";").split(";"),
-					policies = {}
-					for(let j in _policies)
-					{
-						let policy = _policies[j].trim(),name=policy.split(" ")[0]
-						policies[name] = policy.substr(name.length).trim().split(" ")
-					}
-					if(!("script-src"in policies)&&"default-src"in policies)
-					{
-						policies["script-src"] = policies["default-src"]
-						let ni = policies["script-src"].indexOf("'none'")
-						if(ni > -1)
-						{
-							policies["script-src"].splice(ni, 1)
-						}
-					}
-					if("script-src"in policies)
-					{
-						if(policies["script-src"].indexOf("'unsafe-inline'")==-1)
-						{
-							policies["script-src"].push("'unsafe-inline'")
-						}
-					}
-					else
-					{
-						policies["script-src"]=["*","blob:","data:","'unsafe-inline'","'unsafe-eval'"]
-					}
-					let value=""
-					for(let name in policies)
-					{
-						value+=name
-						for(let j in policies[name])
-						{
-							value+=" "+policies[name][j]
-						}
-						value+="; "
-					}
-					details.responseHeaders[i].value=value.substr(0,value.length-2)
-				}
-			}
-			if(csp)
-			{
-				return{responseHeaders:details.responseHeaders}
-			}
 		}
 	}
 },{types:["main_frame"],urls:["<all_urls>"]},["blocking","responseHeaders"])
