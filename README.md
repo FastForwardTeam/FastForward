@@ -11,8 +11,8 @@
 <a href="https://addons.mozilla.org/firefox/addon/fastforwardteam/"><img src="https://user-images.githubusercontent.com/585534/107280546-7b9b2a00-6a26-11eb-8f9f-f95932f4bfec.png" alt="Get FastForward for Firefox" width="126px"></a> 
 </div>
 
-> **We need developers to work on FastForward!**
-> **If you're interested, join our [Discord server](https://discord.gg/RSAf7b5njt) for more instructions.**
+> **FastForward has been removed from Chrome Web Store.**
+> **Join our [Discord server](https://discord.gg/RSAf7b5njt) for more details about.**
 
 # About
 ## What is FastForward?
@@ -31,15 +31,20 @@ Yes! We do, and if you are interested in assisting the development, need help or
 
 # Installing the Extension
 ## Chromium based browsers
-Chromium based browser includes Chrome, Chromium, Opera, Opera GX, Edge, Brave, Vivaldi.
+Chromium based browsers includes Chrome, Opera, Opera GX, Edge, Brave, Vivaldi.
 
 We recommend installing the extension from the stores below:
 
-<a href="https://chrome.google.com/webstore/detail/fastforward/icallnadddjmdinamnolclfjanhfoafe"><img src="https://user-images.githubusercontent.com/585534/107280622-91a8ea80-6a26-11eb-8d07-77c548b28665.png" alt="Get FastForward on Chromium based browsers" width="126px"></a>
+****
+**FastForward was removed from Google Web Store, if you are not using Edge, you must [manually install](https://github.com/FastForwardTeam/FastForward/blob/main/INSTALLING.md) the extension. [See more details in our Discord Server](https://discord.gg/RSAf7b5njt).**
+****
+<!--<a href="https://chrome.google.com/webstore/detail/fastforward/icallnadddjmdinamnolclfjanhfoafe"><img src="https://user-images.githubusercontent.com/585534/107280622-91a8ea80-6a26-11eb-8d07-77c548b28665.png" alt="Get FastForward on Chromium based browsers" width="126px"></a>-->
+<br>
 <a href="https://microsoftedge.microsoft.com/addons/detail/fastforward/ldcclmkclhomnpcnccgbgleikchbnecl"><img src="https://user-images.githubusercontent.com/585534/107280673-a5ece780-6a26-11eb-9cc7-9fa9f9f81180.png" alt="Get FastForward on Microsoft Edge" width="126px"></a>
 
 ### Automatic Install
-FastForward is present on the [Chrome Web Store](https://chrome.google.com/webstore/detail/fastforward/icallnadddjmdinamnolclfjanhfoafe) 
+~~FastForward is present on the [Chrome Web Store](https://chrome.google.com/webstore/detail/fastforward/icallnadddjmdinamnolclfjanhfoafe)~~ **FastForward is no longer present on Chrome Web Store, see the notice above.**
+
 and in the [Microsoft Edge Addons](https://microsoftedge.microsoft.com/addons/detail/fastforward/ldcclmkclhomnpcnccgbgleikchbnecl).
 
 ### Manual Install
