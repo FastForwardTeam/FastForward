@@ -18,6 +18,9 @@ These are for manually installing the addon. if you do not wish to do this, [Add
 NOTE: You will have to repeat the following installation process to update
 Chromium based browsers that are not mentioned above \[ie. Chrome (Mac), Brave, etc]
 
+
+0. REMOVE any previous versions of FastForward!!!
+
 1. Download the zip file using [this link](https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_chromium.zip).
 2. Unzip the file once, leaving you with another zip file.
 3. Open the manage extensions page on your browser and turn on "Developer Mode"
@@ -28,6 +31,8 @@ Chromium based browsers that are not mentioned above \[ie. Chrome (Mac), Brave, 
 This will only work in the nightly version of Firefox.
 
 ### Windows, Linux & macOS
+
+0. REMOVE any previous versions of FastForward!!!
 
 1. Download the zip using [this link](https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_firefox.zip).
 2. Unzip the downloaded file so that you have `FastForward_firefox_X.XXXX.xpi`.
