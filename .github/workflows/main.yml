@@ -22,7 +22,7 @@ jobs:
           fetch-depth: 0
       
       - name: Install required node packages
-        run: npm ci
+        run: npm install
       
       - name: Make package
         run: node scripts/build.js firefox nover
@@ -47,7 +47,7 @@ jobs:
           fetch-depth: 0
       
       - name: Install required node packages
-        run: npm ci
+        run: npm install
       
       - name: Make package
         run: node scripts/build.js firefox nover
