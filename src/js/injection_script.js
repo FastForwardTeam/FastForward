@@ -1969,7 +1969,7 @@ ensureDomLoaded(()=>{
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	domainBypass("noon.khsm.io", () => {
 		const url = document.getElementsByClassName("download-link")[0].getAttribute("href")
-		window.location.href = url
+		safelyNavigate(url)
 	})
 	domainBypass("maxurlz.com", () => {
 		const regex = /(?<="href=')(.*)(?='>Click here)/
