@@ -25,7 +25,7 @@ jobs:
         run: npm install
       
       - name: Make package
-        run: node scripts/build.js chromium nover
+        run: node scripts/build.js chromium dev
 
       - name: Upload Package Artifact
         uses: actions/upload-artifact@v2.2.4
@@ -57,7 +57,7 @@ jobs:
         run: npm install
       
       - name: Make package
-        run: node scripts/build.js firefox nover
+        run: node scripts/build.js firefox dev
 
       - name: Upload Package Artifact
         uses: actions/upload-artifact@v2.2.4
