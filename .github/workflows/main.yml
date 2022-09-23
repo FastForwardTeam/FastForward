@@ -35,7 +35,7 @@ jobs:
           if-no-files-found: error
 
       - name: Upload the build bypasses core file
-        uses: actions/upload-artifact@2.2.4
+        uses: actions/upload-artifact@v2.2.4
         with:
           name: FastForward_chromium_bypasses.js
           path: build/FastForward.chromium/injection_script.js
@@ -67,7 +67,7 @@ jobs:
           if-no-files-found: error
       
       - name: Upload the build bypasses core file
-        uses: actions/upload-artifact@2.2.4
+        uses: actions/upload-artifact@v2.2.4
         with:
           name: FastForward_firefox_bypasses.js
           path: build/FastForward.firefox/injection_script.js
