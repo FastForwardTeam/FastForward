@@ -15,14 +15,14 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 14
-          
-      - name: Install required node packages
-        run: npm ci
-        
+      
       - uses: actions/checkout@v2
         with:
           # pulls all commits (needed for commits to version)
           fetch-depth: 0
+      
+      - name: Install required node packages
+        run: npm ci
       
       - name: Make package
         run: node scripts/build.js firefox nover
@@ -42,12 +42,12 @@ jobs:
         with:
           node-version: 14
       
-      - name: Install required node packages
-        run: npm ci
-      
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+      
+      - name: Install required node packages
+        run: npm ci
       
       - name: Make package
         run: node scripts/build.js firefox nover
