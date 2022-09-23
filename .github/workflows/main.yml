@@ -25,13 +25,20 @@ jobs:
         run: npm install
       
       - name: Make package
-        run: node scripts/build.js firefox nover
+        run: node scripts/build.js chromium nover
 
       - name: Upload Package Artifact
         uses: actions/upload-artifact@v2.2.4
         with:
           name: FastForward_chromium
           path: build/dist
+          if-no-files-found: error
+
+      - name: Upload the build bypasses core file
+        uses: actions/upload-artifact@2.2.4
+        with:
+          name: FastForward_chromium_bypasses.js
+          path: build/FastForward.chromium/injection_script.js
           if-no-files-found: error
 
   Firefox:
@@ -57,4 +64,11 @@ jobs:
         with:
           name: FastForward_firefox
           path: build/dist
+          if-no-files-found: error
+      
+      - name: Upload the build bypasses core file
+        uses: actions/upload-artifact@2.2.4
+        with:
+          name: FastForward_firefox_bypasses.js
+          path: build/FastForward.firefox/injection_script.js
           if-no-files-found: error
