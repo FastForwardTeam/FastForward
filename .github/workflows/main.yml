@@ -17,7 +17,7 @@ jobs:
           node-version: 14
           
       - name: Install required node packages
-        run: npm install
+        run: npm ci
         
       - uses: actions/checkout@v2
         with:
@@ -43,7 +43,7 @@ jobs:
           node-version: 14
       
       - name: Install required node packages
-        run: npm install
+        run: npm ci
       
       - uses: actions/checkout@v2
         with:
