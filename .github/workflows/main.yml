@@ -12,13 +12,20 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
+          
+      - name: Install required node packages
+        run: npm install
+        
       - uses: actions/checkout@v2
         with:
           # pulls all commits (needed for commits to version)
           fetch-depth: 0
       
       - name: Make package
-        run: bash scripts/chromium.sh nover
+        run: node scripts/build.js firefox nover
 
       - name: Upload Package Artifact
         uses: actions/upload-artifact@v2.2.4
@@ -31,12 +38,19 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
+      
+      - name: Install required node packages
+        run: npm install
+      
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
       
       - name: Make package
-        run: bash scripts/firefox.sh nover
+        run: node scripts/build.js firefox nover
 
       - name: Upload Package Artifact
         uses: actions/upload-artifact@v2.2.4
