@@ -2941,3 +2941,7 @@ domainBypass("clk.asia", () => {
 	},100)
 	setTimeout(()=>clearInterval(dT),10000)//
 },true)
+
+hrefBypass(/.*syosetu\.org\/\?mode=url_jump&url=.+/, () => {
+	safelyNavigate(decodeURIComponent(document.URL.match(/.*syosetu\.org\/\?mode=url_jump&url=(.+)/)[1]));
+})
