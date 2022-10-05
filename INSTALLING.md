@@ -15,12 +15,12 @@ These are for manually installing the addon. if you do not wish to do this, [Add
 
 # Installation instructions
 ## Chromium based browsers:
-| :information_source: Auto-updating builds for Google Chrome (Windows & Linux), Kiwi (Android), Ungoogled Chromium and Edge are now available |
+| :information_source: Auto-updating builds for Google Chrome (Windows, Linux & macOS), Brave (Windows, Linux & macOS), Kiwi (Android), Ungoogled Chromium and Edge are now available |
 | :-: |
 | [Click here for instructions](https://github.com/FastForwardTeam/releases#installation-instructions) |
 
 NOTE: You will have to repeat the following installation process to update
-Chromium based browsers that are not mentioned above \[ie. Chrome (Mac), Brave, etc]
+Chromium based browsers that are not mentioned above
 
 
 0. REMOVE any previous versions of FastForward!!!
