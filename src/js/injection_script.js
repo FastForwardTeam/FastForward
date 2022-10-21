@@ -540,6 +540,15 @@ ODP(window,"soralink",{
 ODP(window,"adtival_base64_encode",{
 	get:()=>{}
 })
+
+///////////////////////////////////////////////////////////////////////////////////////
+// New PRs with bypasses must be added below this comment //
+///////////////////////////////////////////////////////////////////////////////////////
+
+hrefBypass(/.*syosetu\.org\/\?mode=url_jump&url=.+/, () => {
+	safelyNavigate(decodeURIComponent(document.URL.match(/.*syosetu\.org\/\?mode=url_jump&url=(.+)/)[1]));
+})
+
 domainBypass(/ur\.ly|urly\.mobi/,()=>{
 	if(location.pathname.length>2&&location.pathname.substr(0,6)!="/goii/")
 	{
@@ -2731,6 +2740,8 @@ domainBypass("clk.asia", () => {
       safelyNavigate(link);
     });
   });
+  
+  
 
 	//Insertion point for bypasses detecting certain DOM elements. Bypasses here will no longer need to call ensureDomLoaded.
 	domainBypass('letsboost.net', () => {
