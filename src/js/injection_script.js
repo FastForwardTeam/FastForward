@@ -1993,6 +1993,18 @@ ensureDomLoaded(()=>{
 	domainBypass("bluemediafiles.com", () => {
 		document.getElementsByTagName("form")[0].submit()
 	})
+	domainBypass("indiainfo4u.in", () => {
+		if (window.location.href === "https://indiainfo4u.in/") {
+			ensureDomLoaded(() => {
+				document.getElementsByTagName("form")[1].submit()
+			})
+		} else {
+			ensureDomLoaded(() => {
+				document.getElementById("showlink").style = ""
+				window.scrollTo(0, document.body.scrollHeight);
+			})
+		}
+	})
 	domainBypass("maxurlz.com", () => {
 		const regex = /(?<="href=')(.*)(?='>Click here)/
 		for (const script of document.getElementsByTagName("script")) {
