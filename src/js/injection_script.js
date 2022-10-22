@@ -1980,6 +1980,10 @@ ensureDomLoaded(()=>{
 		const url = document.getElementsByClassName("download-link")[0].getAttribute("href")
 		safelyNavigate(url)
 	})
+	domainBypass("linkspy.cc", () => {
+		const url = document.getElementsByClassName("skipButton")[0].getAttribute("href")
+		safelyNavigate(url)
+	})
 	domainBypass("maxurlz.com", () => {
 		const regex = /(?<="href=')(.*)(?='>Click here)/
 		for (const script of document.getElementsByTagName("script")) {
