@@ -1966,11 +1966,10 @@ ensureDomLoaded(()=>{
 			const url = document.getElementById("link").getAttribute("href")
 			safelyNavigate(url)
 	    } else {
-			console.log('URL is not unlocked, continuing...')
 			const urlSplit = url.split("/");
 			const urlLast = urlSplit[urlSplit.length - 1];
 			const newurl = 'https://sub2unlock.com/link/unlock/' + urlLast;
-			window.location.href = newurl;
+			safelyNavigate(newurl)
 	    }
 	})
 
