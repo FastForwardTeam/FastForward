@@ -2888,21 +2888,21 @@ domainBypass("clk.asia", () => {
 			clearInterval(dT)
 		}
 			// Adshnk.com bypass
-	ifElement("meta[property='og:site_name'][content='adshnk.com']",()=>{
-		let iT=setInterval(()=>{
-			if(typeof _sharedData=="object"&&0 in _sharedData&&"destination"in _sharedData[0])
-			{
-				clearInterval(iT)
-				document.write(_sharedData[0].destination)
-				safelyNavigate(document.body.textContent)
-			}
-			else if(typeof ___reactjsD!="undefined"&&typeof window[___reactjsD.o]=="object"&&typeof window[___reactjsD.o].dest=="string")
-			{
-				clearInterval(iT)
-				safelyNavigate(window[___reactjsD.o].dest)
-			}
-		})
-	})// End of the adshnk.com bypass
+			domainBypass(/adshnk\.com/, () =>{
+				let iT=setInterval(()=>{
+					if(typeof _sharedData=="object"&&0 in _sharedData&&"destination"in _sharedData[0])
+					{
+						clearInterval(iT)
+						document.write(_sharedData[0].destination)
+						safelyNavigate(document.body.textContent)
+					}
+					else if(typeof ___reactjsD!="undefined"&&typeof window[___reactjsD.o]=="object"&&typeof window[___reactjsD.o].dest=="string")
+					{
+						clearInterval(iT)
+						safelyNavigate(window[___reactjsD.o].dest)
+					}
+				})
+				})// End of the adshnk.com bypass
 	
 		//GemPixel/KBRMedia Premium URL Shortener
 		if(typeof appurl=="string"&&typeof token=="string")
