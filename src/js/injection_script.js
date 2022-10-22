@@ -1994,16 +1994,15 @@ ensureDomLoaded(()=>{
 		document.getElementsByTagName("form")[0].submit()
 	})
 	domainBypass("indiainfo4u.in", () => {
-		if (window.location.href === "https://indiainfo4u.in/") {
+		ensureDomLoaded(() => {
+			document.getElementsByTagName("img")[0].click()
+		})
+		awaitElement("#generater", () => {
 			ensureDomLoaded(() => {
-				document.getElementsByTagName("form")[1].submit()
+				jQuery('.to').show();
+				jQuery('.wait').hide();
 			})
-		} else {
-			ensureDomLoaded(() => {
-				document.getElementById("showlink").style = ""
-				window.scrollTo(0, document.body.scrollHeight);
-			})
-		}
+		})
 	})
 	domainBypass("maxurlz.com", () => {
 		const regex = /(?<="href=')(.*)(?='>Click here)/
