@@ -1990,6 +1990,9 @@ ensureDomLoaded(()=>{
 		const url = window.location.href.split("?")[1]
 		safelyNavigate(url)
 	})
+	domainBypass("bluemediafiles.com", () => {
+		document.getElementsByTagName("form")[0].submit()
+	})
 	domainBypass("maxurlz.com", () => {
 		const regex = /(?<="href=')(.*)(?='>Click here)/
 		for (const script of document.getElementsByTagName("script")) {
