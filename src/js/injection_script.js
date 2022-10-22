@@ -2571,7 +2571,7 @@ ensureDomLoaded(()=>{
 		}
 	})
 	//adshrink.it
-	ifElement("meta[property='og:site_name'][content='Adshrink.it']",()=>{
+	domainBypass(/adshrink\.it/, () =>{
 		let iT=setInterval(()=>{
 			if(typeof _sharedData=="object"&&0 in _sharedData&&"destination"in _sharedData[0])
 			{
@@ -2585,7 +2585,7 @@ ensureDomLoaded(()=>{
 				safelyNavigate(window[___reactjsD.o].dest)
 			}
 		})
-	})
+    	})
 	domainBypass(/(techynroll|threadbolts|techitease)\.com/, ()=>awaitElement("a#enablebtn", a=>safelyAssign(a.href)))
 	hrefBypass(/meostream\.com\/links\//,()=> ifElement("a#link",safelyNavigate))
 	//XImageSharing
