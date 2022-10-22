@@ -1159,7 +1159,6 @@ ensureDomLoaded(()=>{
 			safelyNavigate(a.href)
 		}
 	})
-	domainBypass(/sub2unlock\.(com|net)/,()=>safelyNavigate(document.getElementById("theGetLink").textContent))
 	domainBypass("boostme.gg",()=>safelyNavigate(document.querySelector("a[href]#go").href))
 	domainBypass(/(driverays|bioskopgo|01nonton|thetecnostar|curimovie|akltu)\.com|cinema21\.tv/,()=>ifElement("a#link[href]",safelyAssign))
 	domainBypass(/(wikitrik|linkerload).com/,()=>document.querySelector("#download > form[action='/getlink.php'] > input[type='submit'].button").click())
@@ -1964,14 +1963,14 @@ ensureDomLoaded(()=>{
 	domainBypass("sub2unlock.com", () => {
 	    const url = document.URL;
 	    if (url.includes("sub2unlock.com/link/unlock")) {
-		console.log('URL is unlocked, skipping...')
-		return;
+			const url = document.getElementById("link").getAttribute("href")
+			safelyNavigate(url)
 	    } else {
-		console.log('URL is not unlocked, continuing...')
-		const urlSplit = url.split("/");
-		const urlLast = urlSplit[urlSplit.length - 1];
-		const newurl = 'https://sub2unlock.com/link/unlock/' + urlLast;
-		window.location.href = newurl;
+			console.log('URL is not unlocked, continuing...')
+			const urlSplit = url.split("/");
+			const urlLast = urlSplit[urlSplit.length - 1];
+			const newurl = 'https://sub2unlock.com/link/unlock/' + urlLast;
+			window.location.href = newurl;
 	    }
 	})
 
