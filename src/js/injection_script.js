@@ -2004,6 +2004,12 @@ ensureDomLoaded(()=>{
 			})
 		})
 	})
+	domainBypass("ytsubme.com", () => {
+		ensureDomLoaded(() => {
+			const url = document.querySelector("#msg-box3-o > div > div > div.col-md-4.text-center > div > div > div > div.col-md-8.col-md-offset-2.text-xs-center > div > div > script").innerHTML.split(';')[7].split('=')[1].replaceAll('\'', "")
+			safelyNavigate(url)
+		})
+	})
 	domainBypass("maxurlz.com", () => {
 		const regex = /(?<="href=')(.*)(?='>Click here)/
 		for (const script of document.getElementsByTagName("script")) {
