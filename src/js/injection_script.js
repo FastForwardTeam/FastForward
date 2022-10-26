@@ -2000,6 +2000,15 @@ ensureDomLoaded(()=>{
 			document.getElementsByTagName('body')[0].appendChild(overrideScript)
 		})
 	})
+	domainBypass("stfly.me", () => {
+		document.getElementById("submit_data").submit()
+	})
+	domainBypass("altblogger.net", () => {
+		awaitElement("#form", () => {
+			document.getElementById("form").submit()
+			document.getElementById("surl").click()
+		})
+	})
 	domainBypass("ytsubme.com", () => {
 		ensureDomLoaded(() => {
 			const url = document.querySelector("#msg-box3-o > div > div > div.col-md-4.text-center > div > div > div > div.col-md-8.col-md-offset-2.text-xs-center > div > div > script").innerHTML.split(';')[7].split('=')[1].replaceAll('\'', "")
