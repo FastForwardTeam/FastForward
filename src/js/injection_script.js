@@ -2775,7 +2775,11 @@ domainBypass("clk.asia", () => {
     });
   });
   
-  
+// go.adslinkfly.online
+domainBypass("informaxonline.com", () => {
+    const code = window.location.href.split("?link=")[1]
+    safelyNavigate("https://go.adslinkfly.online/" + code)
+})
 
 	//Insertion point for bypasses detecting certain DOM elements. Bypasses here will no longer need to call ensureDomLoaded.
 	domainBypass('letsboost.net', () => {
