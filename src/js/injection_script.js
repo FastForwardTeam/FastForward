@@ -1876,10 +1876,6 @@ ensureDomLoaded(()=>{
 		awaitElement("#method_free",btn=>btn.click())
 		awaitElement("[name=F1]",frm=>frm.submit())
 	})
-	domainBypass("techgeek.digital",()=>{
-		ifElement("form",form=>form.submit())
-		ifElement("#surl1",a=>a.click())
-	})
 	domainBypass("adshort.live",()=>{
 		let f=$("form#go-link")
 		$.ajax({
