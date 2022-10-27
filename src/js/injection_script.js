@@ -2004,7 +2004,7 @@ ensureDomLoaded(()=>{
 		document.getElementById("submit_data").submit()
 	})
 	domainBypass("altblogger.net", () => {
-		awaitElement("#form", () => {
+		ensureDomLoaded(() => {
 			document.getElementById("form").submit()
 			document.getElementById("surl").click()
 		})
