@@ -1819,10 +1819,6 @@ ensureDomLoaded(()=>{
 	domainBypass("anon.to",()=>ifElement("#redirect_button",safelyNavigate))
 	domainBypass("dl-protect1.co",()=>ifElement("#form_link",f=>f.submit(),()=>ifElement(".lienet > a[href]",safelyNavigate)))
 	domainBypass("linkdoni.soft98.ir",()=>ifElement(".actions a[href].button.primary",safelyNavigate))
-	domainBypass("stfly.me",()=>keepLooking(()=>ifElement("form#submit_data",f=>f.submit(),()=>ifElement("form#myform",f=>{
-		referer=f.action
-		unsafelyNavigate(location.href)
-	}))))
 	domainBypass("nbyts.online",()=>ifElement("form#form button[type='submit']",s=>{
 		s.removeAttribute("disabled")
 		s.click()
@@ -1879,10 +1875,6 @@ ensureDomLoaded(()=>{
 	domainBypass("thefileslocker.com",()=>{
 		awaitElement("#method_free",btn=>btn.click())
 		awaitElement("[name=F1]",frm=>frm.submit())
-	})
-	domainBypass("techgeek.digital",()=>{
-		ifElement("form",form=>form.submit())
-		ifElement("#surl1",a=>a.click())
 	})
 	domainBypass("adshort.live",()=>{
 		let f=$("form#go-link")
@@ -1993,15 +1985,24 @@ ensureDomLoaded(()=>{
 	domainBypass("bluemediafiles.com", () => {
 		document.getElementsByTagName("form")[0].submit()
 	})
-	domainBypass("indiainfo4u.in", () => {
-		ensureDomLoaded(() => {
-			document.getElementsByTagName("img")[0].click()
+	domainBypass(/(indiainfo4u.in|intercelestial.com)/, () => {
+		awaitElement("#landing", () => {
+			document.querySelector("#content > div.container > div > center:nth-child(1) > form").submit()
 		})
-		awaitElement("#generater", () => {
-			ensureDomLoaded(() => {
-				jQuery('.to').show();
-				jQuery('.wait').hide();
-			})
+		awaitElement("#pleasewait", () => {
+			var overrideScript = document.createElement('script')
+			overrideScript.type = 'text/javascript'
+			overrideScript.innerText = "var soramode = 'default';var threshold = 0;setTimeout(function(){jQuery('.to').show();jQuery('.wait').hide();},threshold);"
+			document.getElementsByTagName('body')[0].appendChild(overrideScript)
+		})
+	})
+	domainBypass("stfly.me", () => {
+		document.getElementById("submit_data").submit()
+	})
+	domainBypass("altblogger.net", () => {
+		ensureDomLoaded(() => {
+			document.getElementById("form").submit()
+			document.getElementById("surl").click()
 		})
 	})
 	domainBypass("ytsubme.com", () => {
