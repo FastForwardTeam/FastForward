@@ -1966,6 +1966,10 @@ ensureDomLoaded(()=>{
 	})
 
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
+	domainBypass(/olamovies/, () => {
+		const url =	document.getElementsByTagName("script")[1].innerText.split("\n")[8].split(" ")[3].split("\"")[1]
+		safelyNavigate(url)
+	})
 	domainBypass("noon.khsm.io", () => {
 		const url = document.getElementsByClassName("download-link")[0].getAttribute("href")
 		safelyNavigate(url)
@@ -2000,16 +2004,12 @@ ensureDomLoaded(()=>{
 		document.getElementById("submit_data").submit()
 	})
 	domainBypass("altblogger.net", () => {
-		ensureDomLoaded(() => {
 			document.getElementById("form").submit()
 			document.getElementById("surl").click()
-		})
 	})
 	domainBypass("ytsubme.com", () => {
-		ensureDomLoaded(() => {
 			const url = document.querySelector("#msg-box3-o > div > div > div.col-md-4.text-center > div > div > div > div.col-md-8.col-md-offset-2.text-xs-center > div > div > script").innerHTML.split(';')[7].split('=')[1].replaceAll('\'', "")
 			safelyNavigate(url)
-		})
 	})
 	domainBypass("maxurlz.com", () => {
 		const regex = /(?<="href=')(.*)(?='>Click here)/
