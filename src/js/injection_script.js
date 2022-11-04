@@ -886,6 +886,10 @@ hrefBypass(/(bluemediafiles\.com|pcgamestorrents.org)\/url-generator\.php\?url=/
 	transparentProperty("Time_Start",t=>t-5000)
 	awaitElement("input#nut[src]",i=>i.parentNode.submit())
 })
+const retrospringRegex = /\bretrospring\.net\/linkfilter\?url=/;
+hrefBypass(retrospringRegex, () => {
+	safelyNavigate(decodeURIComponent(document.URL.split(retrospringRegex)[1]))
+})
 //Insertion point for bypasses running before the DOM is loaded.
 hrefBypass(/https:\/\/crackedappsstore\.com\/(?:\\.|[^\\])*\/\?download.*/gm, () => ifElement("a.downloadAPK.dapk_b[href]", a => safelyAssign(a.href)))
 domainBypass("downloadr.in",()=>safelyNavigate(new URL(location.href).search.slice(1)))
