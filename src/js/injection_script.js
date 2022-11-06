@@ -1969,13 +1969,13 @@ ensureDomLoaded(()=>{
 	    }
 	})
 
-	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
+	// Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	domainBypass("cutin.it", () => {
-		const url = document.getElementsByTagName("script")[6].innerText.split("\n")[14].split(" ")[9].replace(";", "").replaceAll("\"", "")
+		const url = [...document.getElementsByTagName("script")].filter(elem => elem.innerText !== "")[3].innerText.split("\n")[14].split(" ")[9].replace(";", "").replaceAll("\"", "")
 		safelyNavigate(url)
 	})
 	domainBypass(/olamovies/, () => {
-		const url =	document.getElementsByTagName("script")[1].innerText.split("\n")[8].split(" ")[3].split("\"")[1]
+		const url = document.getElementsByTagName("script")[1].innerText.split("\n")[8].split(" ")[3].split("\"")[1]
 		safelyNavigate(url)
 	})
 	domainBypass("noon.khsm.io", () => {
