@@ -91,10 +91,26 @@ export function isGoodLink(link) {
     return true
 }
 
+export async function bypassRequests(execution_method) {
+    const rawOpen = XMLHttpRequest.prototype.open;
+    XMLHttpRequest.prototype.open = function () {
+        this.addEventListener('load', execution_method);
+        rawOpen.apply(this, arguments);
+    };
+
+    const rawFetch = window.fetch;
+    window.fetch = async (requestInfo, init) =>{
+        const result = await rawFetch(requestInfo, init);
+        execution_method(result);
+        return Promise.resolve(result);
+    };
+}
+
 export default {
     insertInfoBox,
     safelyNavigate,
     unsafelyNavigate,
     parseTarget,
-    isGoodLink
+    isGoodLink,
+    bypassRequests,
 }
