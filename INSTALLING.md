@@ -11,7 +11,7 @@
 > **Since FastForward has been removed from Chrome Web Store, you'll need to manually install the extension following the steps below.**
 ****
 
-These are for manually installing the addon. if you do not wish to do this, [Add if from the web stores](https://fastforward.team/install)
+These are for manually installing the addon. if you do not wish to do this, [Add if from the web stores](https://fastforward.team/)
 
 # Installation instructions
 ## Chromium based browsers:
