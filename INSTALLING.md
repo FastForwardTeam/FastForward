@@ -30,7 +30,7 @@ Chromium based browsers that are not mentioned above
 3. Open the manage extensions page on your browser and turn on "Developer Mode"
 4. Right click `FastForward_chromium_0.xxxx.crx` and click on "Extract to `FastForward_chromium_0.xxxx.crx\`"
 5. Go to your browser window, and click in "Load unpacked".
-6. Select the folder in step 5.
+6. Select the folder in step 4.
 
 ## Firefox and Firefox based browsers:
 
