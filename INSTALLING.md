@@ -26,11 +26,11 @@ Chromium based browsers that are not mentioned above
 0. REMOVE any previous versions of FastForward!!!
 
 1. Download the zip file using [this link](https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_chromium.zip).
-2. Unzip the file once, leaving you with another zip (or crx) file.
-3. Open the manage extensions page on your browser and turn on "Developer Mode"
-4. Right click `FastForward_chromium_0.xxxx.crx` and click on "Extract to `FastForward_chromium_0.xxxx.crx\`"
-5. Go to your browser window, and click in "Load unpacked".
-6. Select the folder in step 4.
+2. Unzip the file once, leaving you with a crx file.
+3. Open the manage extensions page on your browser (likely to be chrome://extensions/) and turn on "Developer Mode"
+4. Rename the `FastForward_chromium_xxxx_dev.crx` to `FastForward_chromium_xxxx_dev.zip`. (you have to have view file name extensions enabled)
+5. Right click `FastForward_chromium_xxxx_dev.zip` and click on "Extract to `FastForward_chromium_xxxx_dev\`"
+6. Go to your browser window, and click in "Load unpacked", and select the folder `FastForward_chromium_xxxx_dev` from step 5.
 
 ## Firefox and Firefox based browsers:
 
