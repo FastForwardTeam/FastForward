@@ -30,7 +30,7 @@
 ## Download unstable builds
 <div align="center">
 <a href="https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_chromium.zip"> <img src="https://img.shields.io/badge/Chrome-Dev%20builds-critical?style=for-the-badge&logo=googlechrome" /> </a>
-  <br> <br>
+  <br>
 <a href="https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_firefox.zip"> <img src="https://img.shields.io/badge/Firefox-Dev%20builds-critical?style=for-the-badge&logo=firefoxbrowser" /> </a>
 </div>
 
