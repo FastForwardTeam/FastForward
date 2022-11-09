@@ -73,6 +73,8 @@ hrefBypass(/example\\.(com|org)/, () => {
 	// Triggered if the regex matches any part of the URL
 })
 // Enjoy! Your changes will be saved automatically.
+
+// You can also find Custom Bypasses ready to be used on our Discord server: https://discord.gg/8QZ2qZm
 `
 
 let navigationDelayInputTimer,crowdOpenDelayInputTimer,crowdCloseDelayInputTimer,saveTimer
