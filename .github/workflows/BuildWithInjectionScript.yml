@@ -1,8 +1,4 @@
-name: Package
-
-on:
-  push:
-    branches: [ main ]
+name: Package with Injection Script
 
   workflow_dispatch:
 
