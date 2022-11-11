@@ -32,7 +32,7 @@ Yes! If you are interested in assisting the development, need help, or just wann
 
 ## Why is FastForward no longer on the Chrome Web Store?
 Google believes that FastForward bypasses paywalls and other restrictions, which is not true nor is the purpose of this extension. Specifically, Google did not approve of the Linkvertise bypass after alerts by the website.
-We are currently working with Google to get the extension back on the Chrome Web Store, but for now you can install it manually on Chromium-based browsers. As of right now, Microsoft and Firefox have kept FastForward up on their respective stores. Our [Discord server](https://discord.com/channels/876622516607656006/876951955841372181) has more information about the removal and how to reinstall FastForward and any necessary bypasses. Read below for steps on how to manually install FastForward,
+We are currently working with Google to get the extension back on the Chrome Web Store, but for now you can install it manually on Chromium-based browsers. As of right now, Microsoft and Firefox have kept FastForward up on their respective stores. Our [Discord server](https://discord.com/channels/876622516607656006/876951955841372181) has more information about the removal and how to reinstall FastForward and any necessary bypasses. Read below for steps on how to manually install FastForward.
 <div align="center">
 <img src="https://cdn.discordapp.com/attachments/876951955841372181/1018743189106085958/image0.jpg" width="256" />
 
