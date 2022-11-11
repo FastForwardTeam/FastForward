@@ -169,3 +169,8 @@ On Fast Forward settings, like on the screenshot below:
 
 <img src="https://i.imgur.com/OqG0Er8.png">
 </details>
+****
+
+<details> <summary> CRX_MISSING_PROOF error </summary>
+<br> Don't waste your time trying to install the .crx version of the install, just install the unpacked version on this guide.
+</details>
