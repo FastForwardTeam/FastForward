@@ -12,7 +12,7 @@
 </div>
 
 > **FastForward has been removed from the Chrome Web Store.**
-> **Read below for more details**
+> **Read below for more details.**
 
 # About
 ## What is FastForward?
@@ -62,7 +62,7 @@ FastForward is available in the [Microsoft Edge Addons](https://microsoftedge.mi
 ### Manual Install
 [<img src="https://img.shields.io/badge/Chromium-Unstable-e77334" />](https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_chromium.zip)
 
-You can see how to [install manually the extension here](https://github.com/FastForwardTeam/FastForward/blob/main/INSTALLING.md).
+You can see how to manually install FastForward on Chromium browsers [here](https://github.com/FastForwardTeam/FastForward/blob/main/INSTALLING.md).
 
 ## Firefox Based Browsers
 This includes browsers like Waterfox, Pale Moon, and LibreWolf. <br>
@@ -75,4 +75,4 @@ The extension is available in the [Firefox Addons Store](https://addons.mozilla.
 ### Manual Install
 [<img src="https://img.shields.io/badge/Firefox-Unstable-e77334" />](https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_firefox.zip)
 
-You can see how to [install manually here](https://github.com/FastForwardTeam/FastForward/blob/main/INSTALLING.md).
+You can see how to manually install FastForward on Firefox based browsers [here](https://github.com/FastForwardTeam/FastForward/blob/main/INSTALLING.md).
