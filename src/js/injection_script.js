@@ -890,6 +890,10 @@ const retrospringRegex = /\bretrospring\.net\/linkfilter\?url=/;
 hrefBypass(retrospringRegex, () => {
 	safelyNavigate(decodeURIComponent(document.URL.split(retrospringRegex)[1]))
 })
+const myDramaListRegex = /\bmydramalist\.com\/redirect\?q=/
+hrefBypass(myDramaListRegex, () => {
+	safelyNavigate(decodeURIComponent(document.URL.split(/\bmydramalist\.com\/redirect\?q=/)[1]))
+})
 //Insertion point for bypasses running before the DOM is loaded.
 hrefBypass(/https:\/\/crackedappsstore\.com\/(?:\\.|[^\\])*\/\?download.*/gm, () => ifElement("a.downloadAPK.dapk_b[href]", a => safelyAssign(a.href)))
 domainBypass("downloadr.in",()=>safelyNavigate(new URL(location.href).search.slice(1)))
