@@ -18,7 +18,6 @@
      - [Crx install](#crx-install)
   - [Firefox](#firefox-and-firefox-based-browsers)
     - [Firefox for Android](#firefox-for-android)
-  - [Edge](#edge)
 - [Installing from web store/addons store](#installing-from-web-stores)
 - [Troubleshooting](#troubleshooting)
 
@@ -103,11 +102,6 @@ Please follow https://github.com/FastForwardTeam/releases#installation-instructi
 8. Find FastForward.
 9. Add FastForward.
 
-## Edge
-If you use Microsoft Edge, you can install the extension via the store, by clicking on the image below: 
-
-<a href="https://microsoftedge.microsoft.com/addons/detail/fastforward/ldcclmkclhomnpcnccgbgleikchbnecl"><img src="https://user-images.githubusercontent.com/585534/107280673-a5ece780-6a26-11eb-9cc7-9fa9f9f81180.png" alt="Get FastForward on Microsoft Edge" width="126px"></a>
-
 ## Installing from web-stores
 
 Currently, Fast Forward is present on Firefox and Edge store.
@@ -174,4 +168,10 @@ Copy and paste the contents of this page: https://raw.githubusercontent.com/Fast
 On Fast Forward settings, like on the screenshot below:
 
 <img src="https://i.imgur.com/OqG0Er8.png">
+</details>
+
+****
+
+<details> <summary> CRX_MISSING_PROOF error </summary>
+<br> Don't waste your time trying to install the .crx version of the install, just install the unpacked version on this guide.
 </details>

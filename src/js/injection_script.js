@@ -545,6 +545,8 @@ ODP(window,"adtival_base64_encode",{
 // New PRs with bypasses must be added below this comment //
 ///////////////////////////////////////////////////////////////////////////////////////
 
+domainBypass(/earnme\.club|usanewstoday\.club/, () => {awaitElement("#tp-snp2", a => {a.click()})})
+
 hrefBypass(/.*syosetu\.org\/\?mode=url_jump&url=.+/, () => {
 	safelyNavigate(decodeURIComponent(document.URL.match(/.*syosetu\.org\/\?mode=url_jump&url=(.+)/)[1]));
 })
@@ -889,6 +891,10 @@ hrefBypass(/(bluemediafiles\.com|pcgamestorrents.org)\/url-generator\.php\?url=/
 const retrospringRegex = /\bretrospring\.net\/linkfilter\?url=/;
 hrefBypass(retrospringRegex, () => {
 	safelyNavigate(decodeURIComponent(document.URL.split(retrospringRegex)[1]))
+})
+const myDramaListRegex = /\bmydramalist\.com\/redirect\?q=/
+hrefBypass(myDramaListRegex, () => {
+	safelyNavigate(decodeURIComponent(document.URL.split(/\bmydramalist\.com\/redirect\?q=/)[1]))
 })
 //Insertion point for bypasses running before the DOM is loaded.
 hrefBypass(/https:\/\/crackedappsstore\.com\/(?:\\.|[^\\])*\/\?download.*/gm, () => ifElement("a.downloadAPK.dapk_b[href]", a => safelyAssign(a.href)))
