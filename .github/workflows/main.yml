@@ -3,6 +3,9 @@ name: Package
 on:
   push:
     branches: [ main ]
+    paths-ignore: 
+      - '**.MD'
+      - '**.md'
 
   workflow_dispatch:
 
