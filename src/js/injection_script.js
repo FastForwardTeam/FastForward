@@ -2025,6 +2025,8 @@ ensureDomLoaded(()=>{
 			const url = document.querySelector("#msg-box3-o > div > div > div.col-md-4.text-center > div > div > div > div.col-md-8.col-md-offset-2.text-xs-center > div > div > script").innerHTML.split(';')[7].split('=')[1].replaceAll('\'', "")
 			safelyNavigate(url)
 	})
+	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
+	domainBypass("chooyomi.com", () => awaitElement(".get-link > a:nth-child(1)", a => safelyNavigate(a.href)))
 	domainBypass("maxurlz.com", () => {
 		const regex = /(?<="href=')(.*)(?='>Click here)/
 		for (const script of document.getElementsByTagName("script")) {
@@ -2789,7 +2791,7 @@ domainBypass("clk.asia", () => {
       safelyNavigate(link);
     });
   });
-  
+
 // go.adslinkfly.online
 domainBypass("informaxonline.com", () => {
     const code = window.location.href.split("?link=")[1]
