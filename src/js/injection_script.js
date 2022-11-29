@@ -2797,6 +2797,16 @@ domainBypass("informaxonline.com", () => {
 })
 
 	//Insertion point for bypasses detecting certain DOM elements. Bypasses here will no longer need to call ensureDomLoaded.
+	domainBypass("www.thizissam.in", () => {
+		ifElement("button#downloadf", a => a.onclick(),
+			() => {
+			counter=0
+			awaitElement("button#btn", b => {
+				b.click()
+				awaitElement("a#download", a => a.click())
+			})
+		})
+	})
 	domainBypass('letsboost.net', () => {
 		return safelyAssign(JSON.parse(stepDat).pop().url)
 	});
