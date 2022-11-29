@@ -1737,7 +1737,7 @@ ensureDomLoaded(()=>{
 		if(window.location.href.substr(0,31)=="https://gaminplay.com/verify/?/")
 		{
 			const code = window.location.href.split("/?/")[1]
-    		safelyNavigate("https://go.adslinkfly.online/" + code)
+			safelyNavigate("https://go.adslinkfly.online/" + code)
 		}
 		
 		const regex=/var YuideaLink = '(.+)';/
