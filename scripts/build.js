@@ -85,7 +85,7 @@ async function run_build(type, commit_number) {
     console.log(`[FastForward.build.${type}] copying js files to ${destination}`);
     const js_files = fs.readdirSync(`${working_directory}/src/js`);
     for (const _f of js_files) {
-        if (versioning && ['injection_script.js', 'rules.json'].includes(_f))
+        if (versioning && 'rules.json' === _f)
             continue; // dont copy, no need to remove later on
 
         fs.copyFileSync(`${working_directory}/src/js/${_f}`, `${destination}/${_f}`);

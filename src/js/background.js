@@ -266,14 +266,14 @@ const updateBypassDefinitions = callback => {
 					let downloads = 0
 					xhr = new XMLHttpRequest()
 					xhr.onload = () => {
-						upstreamInjectionScript = xhr.responseText
-						if(++downloads == 2)
+						upstreamInjectionScript += xhr.responseText
+						if(++downloads == 3)
 						{
 							finishDownload()
 						}
 					}
 					xhr.onerror = () => {
-						if(++downloads == 2)
+						if(++downloads == 3)
 						{
 							finishDownload()
 						}
@@ -289,13 +289,34 @@ const updateBypassDefinitions = callback => {
 						}
 					}
 					xhr2.onerror = () => {
-						if(++downloads == 2)
+						if(++downloads == 3)
 						{
 							finishDownload()
 						}
 					}
 					xhr2.open("GET", "https://cdn.jsdelivr.net/gh/FastForwardTeam/FastForward@" + upstreamCommit + "/src/js/rules.json", true)
 					xhr2.send()
+
+					if (firefox) {
+						const lnk_bps_xhr = new XMLHttpRequest();
+						lnk_bps_xhr.onload = () => {
+							upstreamInjectionScript += lnk_bps_xhr.responseText
+							if(++downloads == 3)
+							{
+								finishDownload()
+							}
+						}
+
+						lnk_bps_xhr.onerror = () => {
+							if(++downloads == 3)
+							{
+								finishDownload()
+							}
+						}
+
+						lnk_bps_xhr.open("GET", "https://cdn.jsdelivr.net/gh/FastForwardTeam/FastForward@" + upstreamCommit + "/src/linkvertise.js", true)
+						lnk_bps_xhr.send()
+					}
 				}
 			}
 			xhr.onerror = () => {

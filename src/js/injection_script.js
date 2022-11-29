@@ -321,8 +321,9 @@ insertInfoBox=text=>ensureDomLoaded(()=>{
 	div.setAttribute("aria-hidden","true")
 	const span=div.querySelector("span")
 	span.textContent=text
-	div.onclick=()=>document.body.removeChild(div)
+	div.onclick=()=>infobox_container.removeChild(div)
 	infobox_container.appendChild(div)
+	setTimeout(()=>infobox_container.removeChild(div), 7000);
 }),
 backgroundScriptBypassClipboard=c=>{
 	if(c)
@@ -539,6 +540,17 @@ ODP(window,"soralink",{
 ODP(window,"adtival_base64_encode",{
 	get:()=>{}
 })
+
+///////////////////////////////////////////////////////////////////////////////////////
+// New PRs with bypasses must be added below this comment //
+///////////////////////////////////////////////////////////////////////////////////////
+
+domainBypass(/earnme\.club|usanewstoday\.club/, () => {awaitElement("#tp-snp2", a => {a.click()})})
+
+hrefBypass(/.*syosetu\.org\/\?mode=url_jump&url=.+/, () => {
+	safelyNavigate(decodeURIComponent(document.URL.match(/.*syosetu\.org\/\?mode=url_jump&url=(.+)/)[1]));
+})
+
 domainBypass(/ur\.ly|urly\.mobi/,()=>{
 	if(location.pathname.length>2&&location.pathname.substr(0,6)!="/goii/")
 	{
@@ -876,7 +888,16 @@ hrefBypass(/(bluemediafiles\.com|pcgamestorrents.org)\/url-generator\.php\?url=/
 	transparentProperty("Time_Start",t=>t-5000)
 	awaitElement("input#nut[src]",i=>i.parentNode.submit())
 })
+const retrospringRegex = /\bretrospring\.net\/linkfilter\?url=/;
+hrefBypass(retrospringRegex, () => {
+	safelyNavigate(decodeURIComponent(document.URL.split(retrospringRegex)[1]))
+})
+const myDramaListRegex = /\bmydramalist\.com\/redirect\?q=/
+hrefBypass(myDramaListRegex, () => {
+	safelyNavigate(decodeURIComponent(document.URL.split(/\bmydramalist\.com\/redirect\?q=/)[1]))
+})
 //Insertion point for bypasses running before the DOM is loaded.
+hrefBypass(/https:\/\/crackedappsstore\.com\/(?:\\.|[^\\])*\/\?download.*/gm, () => ifElement("a.downloadAPK.dapk_b[href]", a => safelyAssign(a.href)))
 domainBypass("downloadr.in",()=>safelyNavigate(new URL(location.href).search.slice(1)))
 domainBypass(/^((www\.)?((njiir|healthykk|linkasm|dxdrive|getwallpapers|sammobile|ydfile|mobilemodsapk|dlandroid|download\.modsofapk)\.com|(punchsubs|zedge|fex)\.net|k2s\.cc|muhammadyoga\.me|u\.to|skiplink\.io|(uploadfree|freeupload)\.info|fstore\.biz))$/,()=>window.setInterval=f=>setInterval(f,1))
 hrefBypass(/thesimsresource\.com\/downloads\/details\/id\//,()=>window.setTimeout=f=>setTimeout(f,1))
@@ -897,57 +918,6 @@ domainBypass("fastforward.team",()=>{
 
 domainBypass("acortame.xyz", () => {
     if (window.location.hash) unsafelyNavigate(atob(window.location.hash.substr(1)))
-})
-
-domainBypass(/linkvertise\.(com|net)|link-to\.net/, () => {
-	if (window.location.href.toString().indexOf("?r=") != -1) {
-		const urlParams = new URLSearchParams(window.location.search);
-		const r = urlParams.get('r')
-		safelyNavigate(atob(decodeURIComponent(r)));
-	}
-
-	const rawOpen = XMLHttpRequest.prototype.open;
-
-	XMLHttpRequest.prototype.open = function() {
-		this.addEventListener('load', data => {
-			if (data.currentTarget.responseText.includes('tokens')) {
-				const response = JSON.parse(data.currentTarget.responseText);
-				if (!response.data.valid)
-					return insertInfoBox('Please solve the captcha, afterwards we can immediately redirect you');
-
-				const target_token = response.data.tokens['TARGET'];
-				const ut = localStorage.getItem("X-LINKVERTISE-UT");
-				const linkvertise_link = location.pathname.replace(/\/[0-9]$/, "");
-
-
-				fetch(`https://publisher.linkvertise.com/api/v1/redirect/link/static${linkvertise_link}?X-Linkvertise-UT=${ut}`).then(r => r.json()).then(json => {
-					if (json?.data.link.id) {
-						const json_body = {
-							serial: btoa(JSON.stringify({
-								timestamp:new Date().getTime(),
-								random:"6548307",
-								link_id:json.data.link.id
-							})),
-							token: target_token
-						}
-						fetch(`https://publisher.linkvertise.com/api/v1/redirect/link${linkvertise_link}/target?X-Linkvertise-UT=${ut}`, {
-							method: "POST",
-							body: JSON.stringify(json_body),
-							headers: {
-								"Accept": 'application/json',
-								"Content-Type": 'application/json'
-							}
-						}).then(r=>r.json()).then(json=>{
-							if (json?.data.target) {
-								safelyNavigate(json.data.target)
-							}
-						})
-					}
-				})
-			}
-		});
-		rawOpen.apply(this, arguments);
-	}
 })
 
 ensureDomLoaded(()=>{
@@ -1199,7 +1169,6 @@ ensureDomLoaded(()=>{
 			safelyNavigate(a.href)
 		}
 	})
-	domainBypass(/sub2unlock\.(com|net)/,()=>safelyNavigate(document.getElementById("theGetLink").textContent))
 	domainBypass("boostme.gg",()=>safelyNavigate(document.querySelector("a[href]#go").href))
 	domainBypass(/(driverays|bioskopgo|01nonton|thetecnostar|curimovie|akltu)\.com|cinema21\.tv/,()=>ifElement("a#link[href]",safelyAssign))
 	domainBypass(/(wikitrik|linkerload).com/,()=>document.querySelector("#download > form[action='/getlink.php'] > input[type='submit'].button").click())
@@ -1860,10 +1829,6 @@ ensureDomLoaded(()=>{
 	domainBypass("anon.to",()=>ifElement("#redirect_button",safelyNavigate))
 	domainBypass("dl-protect1.co",()=>ifElement("#form_link",f=>f.submit(),()=>ifElement(".lienet > a[href]",safelyNavigate)))
 	domainBypass("linkdoni.soft98.ir",()=>ifElement(".actions a[href].button.primary",safelyNavigate))
-	domainBypass("stfly.me",()=>keepLooking(()=>ifElement("form#submit_data",f=>f.submit(),()=>ifElement("form#myform",f=>{
-		referer=f.action
-		unsafelyNavigate(location.href)
-	}))))
 	domainBypass("nbyts.online",()=>ifElement("form#form button[type='submit']",s=>{
 		s.removeAttribute("disabled")
 		s.click()
@@ -1920,10 +1885,6 @@ ensureDomLoaded(()=>{
 	domainBypass("thefileslocker.com",()=>{
 		awaitElement("#method_free",btn=>btn.click())
 		awaitElement("[name=F1]",frm=>frm.submit())
-	})
-	domainBypass("techgeek.digital",()=>{
-		ifElement("form",form=>form.submit())
-		ifElement("#surl1",a=>a.click())
 	})
 	domainBypass("adshort.live",()=>{
 		let f=$("form#go-link")
@@ -2004,17 +1965,66 @@ ensureDomLoaded(()=>{
 	domainBypass("sub2unlock.com", () => {
 	    const url = document.URL;
 	    if (url.includes("sub2unlock.com/link/unlock")) {
-		console.log('URL is unlocked, skipping...')
-		return;
+			const url = document.getElementById("link").getAttribute("href")
+			safelyNavigate(url)
 	    } else {
-		console.log('URL is not unlocked, continuing...')
-		const urlSplit = url.split("/");
-		const urlLast = urlSplit[urlSplit.length - 1];
-		const newurl = 'https://sub2unlock.com/link/unlock/' + urlLast;
-		window.location.href = newurl;
+			const urlSplit = url.split("/");
+			const urlLast = urlSplit[urlSplit.length - 1];
+			const newurl = 'https://sub2unlock.com/link/unlock/' + urlLast;
+			safelyNavigate(newurl)
 	    }
 	})
 
+	// Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
+	domainBypass("cutin.it", () => {
+		const url = [...document.getElementsByTagName("script")].filter(elem => elem.innerText !== "")[3].innerText.split("\n")[14].split(" ")[9].replace(";", "").replaceAll("\"", "")
+		safelyNavigate(url)
+	})
+	domainBypass(/olamovies/, () => {
+		const url = document.getElementsByTagName("script")[1].innerText.split("\n")[8].split(" ")[3].split("\"")[1]
+		safelyNavigate(url)
+	})
+	domainBypass("noon.khsm.io", () => {
+		const url = document.getElementsByClassName("download-link")[0].getAttribute("href")
+		safelyNavigate(url)
+	})
+	domainBypass("linkspy.cc", () => {
+		const url = document.getElementsByClassName("skipButton")[0].getAttribute("href")
+		safelyNavigate(url)
+	})
+	domainBypass(/mflixpo\.xyz|themflix\.xyz/, () => {
+		document.getElementsByClassName("timed-content-client_hide_0_05_0")[0].style = "display: none;"
+		document.getElementsByClassName("timed-content-client_show_0_05_0")[0].style = ""
+	})
+	domainBypass("dereferer.me", () => {
+		const url = window.location.href.split("?")[1]
+		safelyNavigate(url)
+	})
+	domainBypass("bluemediafiles.com", () => {
+		document.getElementsByTagName("form")[0].submit()
+	})
+	domainBypass(/(indiainfo4u.in|intercelestial.com)/, () => {
+		awaitElement("#landing", () => {
+			document.querySelector("#content > div.container > div > center:nth-child(1) > form").submit()
+		})
+		awaitElement("#pleasewait", () => {
+			var overrideScript = document.createElement('script')
+			overrideScript.type = 'text/javascript'
+			overrideScript.innerText = "var soramode = 'default';var threshold = 0;setTimeout(function(){jQuery('.to').show();jQuery('.wait').hide();},threshold);"
+			document.getElementsByTagName('body')[0].appendChild(overrideScript)
+		})
+	})
+	domainBypass("stfly.me", () => {
+		document.getElementById("submit_data").submit()
+	})
+	domainBypass("altblogger.net", () => {
+			document.getElementById("form").submit()
+			document.getElementById("surl").click()
+	})
+	domainBypass("ytsubme.com", () => {
+			const url = document.querySelector("#msg-box3-o > div > div > div.col-md-4.text-center > div > div > div > div.col-md-8.col-md-offset-2.text-xs-center > div > div > script").innerHTML.split(';')[7].split('=')[1].replaceAll('\'', "")
+			safelyNavigate(url)
+	})
 	//Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
 	domainBypass("chooyomi.com", () => awaitElement(".get-link > a:nth-child(1)", a => safelyNavigate(a.href)))
 	domainBypass("maxurlz.com", () => {
@@ -2603,8 +2613,8 @@ ensureDomLoaded(()=>{
 			}
 		}
 	})
-	//adshrink.it
-	ifElement("meta[property='og:site_name'][content='Adshrink.it']",()=>{
+	//adshrink.it and adshnk.com
+	domainBypass(/adshnk\.com|adshrink\.it/, () =>{
 		let iT=setInterval(()=>{
 			if(typeof _sharedData=="object"&&0 in _sharedData&&"destination"in _sharedData[0])
 			{
@@ -2618,7 +2628,7 @@ ensureDomLoaded(()=>{
 				safelyNavigate(window[___reactjsD.o].dest)
 			}
 		})
-	})
+		})
 	domainBypass(/(techynroll|threadbolts|techitease)\.com/, ()=>awaitElement("a#enablebtn", a=>safelyAssign(a.href)))
 	hrefBypass(/meostream\.com\/links\//,()=> ifElement("a#link",safelyNavigate))
 	//XImageSharing
@@ -2781,6 +2791,12 @@ domainBypass("clk.asia", () => {
       safelyNavigate(link);
     });
   });
+
+// go.adslinkfly.online
+domainBypass("informaxonline.com", () => {
+    const code = window.location.href.split("?link=")[1]
+    safelyNavigate("https://go.adslinkfly.online/" + code)
+})
 
 	//Insertion point for bypasses detecting certain DOM elements. Bypasses here will no longer need to call ensureDomLoaded.
 	domainBypass('letsboost.net', () => {
