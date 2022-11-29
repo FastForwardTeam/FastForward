@@ -1733,6 +1733,10 @@ ensureDomLoaded(()=>{
 			safelyNavigate(safelink)
 		}
 	}))
+	domainBypass("gaminplay.com\/verify", () => {
+		const code = window.location.href.split("\/?\/")[1]
+		safelyNavigate("https://go.adslinkfly.online/" + code)
+	})
 	domainBypass("gaminplay.com",()=>{
 		const regex=/var YuideaLink = '(.+)';/
 		document.querySelectorAll("script").forEach(script=>{
