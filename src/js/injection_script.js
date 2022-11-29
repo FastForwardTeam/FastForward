@@ -1734,6 +1734,12 @@ ensureDomLoaded(()=>{
 		}
 	}))
 	domainBypass("gaminplay.com",()=>{
+		if(window.location.href.substr(0,31)=="https://gaminplay.com/verify/?/")
+		{
+			const code = window.location.href.split("/?/")[1]
+			safelyNavigate("https://go.adslinkfly.online/" + code)
+		}
+		
 		const regex=/var YuideaLink = '(.+)';/
 		document.querySelectorAll("script").forEach(script=>{
 			let matches=regex.exec(script.textContent)
