@@ -1,6 +1,6 @@
 import BypassDefinition from "./BypassDefinition";
 
-export default class cbrun extends BypassDefinition {
+export default class Cbrun extends BypassDefinition {
     constructor() {
         super();
     }
