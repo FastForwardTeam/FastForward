@@ -2805,6 +2805,7 @@ domainBypass("informaxonline.com", () => {
 })
 
 	//Insertion point for bypasses detecting certain DOM elements. Bypasses here will no longer need to call ensureDomLoaded.
+	domainBypass(/cb\.(run|click)/, () => ifElement("a.btn", a => safelyAssign(a.href)))
 	domainBypass("www.thizissam.in", () => {
 		ifElement("button#downloadf", a => a.onclick(),
 			() => {
