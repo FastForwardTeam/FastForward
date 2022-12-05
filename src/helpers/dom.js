@@ -1,3 +1,7 @@
+//Constants needed for bypassing
+const ODP=(t,p,o)=>{try{Object.defineProperty(t,p,o)}catch(e){console.trace("[FastForward] Couldn't define",p)}}
+const setTimeout=window.setTimeout,setInterval=window.setInterval,URL=window.URL,docSetAttribute=document.documentElement.setAttribute.bind(document.documentElement)
+//Functions used in bypassing
 export function insertInfoBox(text) {
     let infobox_container = document.querySelector('div#ffibv1');
 
@@ -24,7 +28,88 @@ export function insertInfoBox(text) {
     infobox_container.appendChild(div);
     setTimeout(()=>infobox_container.removeChild(div), 7000);
 }
-
+export function ensureDomLoaded(f) {
+    if (["interactive", "complete"].indexOf(document.readyState)) {
+        f();
+    } 
+    else {
+        let triggered = false;
+        document.addEventListener("DOMContentLoaded", () => {
+            if (!triggered) {
+                triggered = true;
+                setTimeout(f, 1);
+            }
+        })
+    }
+}
+export function awaitElement(q,f) {
+    let t = setInterval(() => {
+        let el = document.querySelector(q);
+        if (el) {
+            f(el);
+            clearInterval(t);
+        }
+    },10)
+    setInterval(() => {clearInterval(t)}, 30000)
+}
+export function crowdDomain(d){
+    if(crowdEnabled&&d){
+        docSetAttribute("{{channel.crowd_domain}}",d)
+    }
+}
+export function crowdPath(p){
+    if(crowdEnabled&&p){
+        docSetAttribute("{{channel.crowd_path}}",p)
+    }
+}
+export function crowdReferer(q){
+    if(r){
+        docSetAttribute("{{channel.crowd_referer}}",q)
+    }
+}
+export function crowdBypass(f,a){
+    if(!f){
+        f=() => {}
+    }
+    if(crowdEnabled){
+        if(ignoreCrowdBypass){
+            f()
+        }
+        else{
+            docSetAttribute("{{channel.crowd_query}}","")
+            let youSee = setInterval(() => {
+                if(document.documentElement.getAttribute("{{channel.crowd_queried}}")){
+                    document.documentElement.removeAttribute("{{channel.crowd_queried}}")
+                    insertInfoBox("{{msg.crowdWait}}")
+                    f()
+                }
+            },20)
+        }
+    }
+    else if(a){
+        f()
+    }
+    else{
+        insertInfoBox("{{msg.crowdDisabled}}")
+    }
+}
+export function crowdContribute(target,f){
+    if(typeof f!= "function"){
+        f=() => {}
+    }
+    if(crowdEnabled && isGoodLink(target)){
+        docSetAttribute("{{channel.crowd_contribute}}",target)
+        setTimeout(f,10)
+    }
+    else{
+        f()
+    }
+}
+export function contributeAndNavigate(target){
+    if(!navigated&&isGoodLink(target)){
+        crowdContribute(target,() => unsafelyNavigate(target))
+    }
+}
 export function unsafelyNavigate(target, referer=null) {
     //The background script will intercept the request and redirect to html/before-navigate.html or to the target depending on the user's settings.
     let url = `https://fastforward.team/bypassed?target=${encodeURIComponent(target)}`;
@@ -38,6 +123,9 @@ export function unsafelyNavigate(target, referer=null) {
             break;
         case (/(bowfile\.com)/.exec(target)||{}).input:
             url+="&safe_in=20"
+            break;
+        case (/(flux\.li)/.exec(target)||{}).input:
+            url+="&safe_in=25"
             break;
     }
 
@@ -113,4 +201,11 @@ export default {
     parseTarget,
     isGoodLink,
     bypassRequests,
+    ensureDomLoaded,
+    awaitElement,
+    crowdBypass,
+    crowdContribute,
+    contributeAndNavigate,
+    crowdDomain,
+    crowdPath,
 }
