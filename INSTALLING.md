@@ -13,7 +13,7 @@
 
 # Table of Contents
 - [Unstable builds download](#download-unstable-builds)
-- [Manualually Installing](#manually-installing)
+- [Manually Installing](#manually-installing)
   - [Chrome, Chromium, Opera, Brave, Vivaldi, Kiwi](#chrome-chromium-kiwi-opera-opera-gx-vivaldi-brave-etc)
      - [Crx install](#crx-install)
   - [Firefox](#firefox-and-firefox-based-browsers)
