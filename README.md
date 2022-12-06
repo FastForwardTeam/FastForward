@@ -13,7 +13,7 @@
 <a href="https://addons.mozilla.org/firefox/addon/fastforwardteam/"><img src="https://user-images.githubusercontent.com/585534/107280546-7b9b2a00-6a26-11eb-8f9f-f95932f4bfec.png" alt="Get FastForward for Firefox" width="126px"></a> 
 </div>
 
-> **We need developers to work on bypasses! If you're insterested, join our Discord by clicking on the badge "Discord"**
+> **We need developers to work on bypasses! If you're interested, join our Discord by clicking on the badge "Discord"**
 
 # About
 ## What is FastForward?
@@ -42,7 +42,7 @@ We are currently working with Google to get the extension back on the Chrome Web
 As you've probally read, the extension as been removed from Chrome Web Store, so [here we provide a small guide](#manual-install) for installing it on your browser.
 
 ## Automatic install
-You can install Fast Forward in any browser you want, as long it support Chrome or Firefox extensions.
+You can install Fast Forward in any browser you want, as long it supports Chrome or Firefox extensions.
 
 Here we provide instructions for both browsers families on how to install, please read above.
 
