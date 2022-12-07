@@ -33,7 +33,7 @@
 <a href="https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_firefox.zip"> <img src="https://img.shields.io/badge/Firefox-Dev%20builds-critical?style=for-the-badge&logo=firefoxbrowser" /> </a>
 </div>
 
-## Manually installing
+## Manual Installation
 This are the instructions for installing the extension on "unpacked" mode.
 
 ### Chrome, Chromium, Kiwi, Opera, Opera GX, Vivaldi, Brave etc.
