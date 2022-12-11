@@ -1644,8 +1644,6 @@ ensureDomLoaded(() => {
                 }
 
             })
-
-
         })
     })
     domainBypass("forex1pro.com", () => safelyAssign("https://fx4vip.com" + location.pathname))
