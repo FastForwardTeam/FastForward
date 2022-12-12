@@ -1,6 +1,9 @@
 //Constants needed for bypassing
-const ODP=(t,p,o)=>{try{Object.defineProperty(t,p,o)}catch(e){console.trace("[FastForward] Couldn't define",p)}}
-const setTimeout=window.setTimeout,setInterval=window.setInterval,URL=window.URL,docSetAttribute=document.documentElement.setAttribute.bind(document.documentElement)
+export const ODP=(t,p,o)=>{try{Object.defineProperty(t,p,o)}catch(e){console.trace("[FastForward] Couldn't define",p)}}
+export const setTimeout=window.setTimeout
+export const setInterval=window.setInterval
+export const URL=window.URL
+export const docSetAttribute=document.documentElement.setAttribute.bind(document.documentElement)
 //Functions used in bypassing
 export function insertInfoBox(text) {
     let infobox_container = document.querySelector('div#ffibv1');
@@ -28,52 +31,52 @@ export function insertInfoBox(text) {
     infobox_container.appendChild(div);
     setTimeout(()=>infobox_container.removeChild(div), 7000);
 }
-export function ensureDomLoaded(f) {
+export function ensureDomLoaded(func) {
     if (["interactive", "complete"].indexOf(document.readyState)) {
-        f();
+        func();
     } 
     else {
         let triggered = false;
         document.addEventListener("DOMContentLoaded", () => {
             if (!triggered) {
                 triggered = true;
-                setTimeout(f, 1);
+                setTimeout(func, 1);
             }
         })
     }
 }
-export function awaitElement(q,f) {
-    let t = setInterval(() => {
-        let el = document.querySelector(q);
-        if (el) {
-            f(el);
-            clearInterval(t);
+export function awaitElement(thisQ,func) {
+    let time = setInterval(() => {
+        let element = document.querySelector(q);
+        if (element) {
+            func(element);
+            clearInterval(time);
         }
     },10)
-    setInterval(() => {clearInterval(t)}, 30000)
+    setInterval(() => {clearInterval(time)}, 30000)
 }
-export function crowdDomain(d){
-    if(crowdEnabled&&d){
-        docSetAttribute("{{channel.crowd_domain}}",d)
+export function crowdDomain(domain){
+    if(crowdEnabled&&domain){
+        docSetAttribute("{{channel.crowd_domain}}",domain)
     }
 }
-export function crowdPath(p){
-    if(crowdEnabled&&p){
-        docSetAttribute("{{channel.crowd_path}}",p)
+export function crowdPath(path){
+    if(crowdEnabled&&path){
+        docSetAttribute("{{channel.crowd_path}}",path)
     }
 }
-export function crowdReferer(q){
-    if(r){
-        docSetAttribute("{{channel.crowd_referer}}",q)
+export function crowdReferer(query){
+    if(remains){
+        docSetAttribute("{{channel.crowd_referer}}",query)
     }
 }
-export function crowdBypass(f,a){
-    if(!f){
-        f=() => {}
+export function crowdBypass(func,available){
+    if(!func){
+        func=() => {}
     }
     if(crowdEnabled){
         if(ignoreCrowdBypass){
-            f()
+            func()
         }
         else{
             docSetAttribute("{{channel.crowd_query}}","")
@@ -81,28 +84,28 @@ export function crowdBypass(f,a){
                 if(document.documentElement.getAttribute("{{channel.crowd_queried}}")){
                     document.documentElement.removeAttribute("{{channel.crowd_queried}}")
                     insertInfoBox("{{msg.crowdWait}}")
-                    f()
+                    func()
                 }
             },20)
         }
     }
-    else if(a){
-        f()
+    else if(available){
+        func()
     }
     else{
         insertInfoBox("{{msg.crowdDisabled}}")
     }
 }
-export function crowdContribute(target,f){
-    if(typeof f!= "function"){
-        f=() => {}
+export function crowdContribute(target,func){
+    if(typeof func!= "function"){
+        func=() => {}
     }
     if(crowdEnabled && isGoodLink(target)){
         docSetAttribute("{{channel.crowd_contribute}}",target)
-        setTimeout(f,10)
+        setTimeout(func,10)
     }
     else{
-        f()
+        func()
     }
 }
 export function contributeAndNavigate(target){
