@@ -253,4 +253,6 @@ export default {
   safelyAssign,
   isGoodLink,
   bypassRequests,
+  ODP,
+  URL
 }
