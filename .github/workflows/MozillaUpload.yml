@@ -9,13 +9,13 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-
+      
       - name: Make package
         id: pack
         run: bash scripts/firefox.sh nover
-
+        
       - name: Upload xpi
         run: |
-          npm install --global web-ext
-          cd ./build/FastForward.firefox
-          web-ext sign --channel=listed --api-key=${{ secrets.FIREFOX_API_KEY }} --api-secret=${{ secrets.FIREFOX_API_SECRET }}
+         npm install --global web-ext
+         cd ./build/FastForward.firefox
+         web-ext sign --channel=listed --api-key=${{ secrets.FIREFOX_API_KEY }} --api-secret=${{ secrets.FIREFOX_API_SECRET }}

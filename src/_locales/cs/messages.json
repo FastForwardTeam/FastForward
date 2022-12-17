@@ -1,158 +1,158 @@
 {
-  "appDesc": {
-    "message": "Neztrácejte čas. FastForward automaticky přeskočí nepříjemné zkracovače odkazů."
-  },
-  "firstrunTitle": {
-    "message": "Děkujeme za instalaci FastForward!"
-  },
-  "firstrunNoScript": {
-    "message": "Zdá se, že používáte NoScript nebo podobné pluginy, se kterým FastForward není kompatibilní."
-  },
-  "version": {
-    "message": "Verze"
-  },
-  "definitionsVersion": {
-    "message": "Definice přeskakování"
-  },
-  "changelog": {
-    "message": "Přehled změn"
-  },
-  "update": {
-    "message": "Zkontrolovat aktualizace"
-  },
-  "updating": {
-    "message": "Aktualizace definic přeskočení ..."
-  },
-  "updateYes": {
-    "message": "Definice přeskočení byly úspěšně aktualizovány."
-  },
-  "updateNo": {
-    "message": "Definice přeskočení jsou již aktuální."
-  },
-  "faq": {
-    "message": "Často kladené otázky (FAQ)"
-  },
-  "bypassCounter": {
-    "message": "FastForward již pro vás obešel % stránek."
-  },
-  "support": {
-    "message": "Přispějte k FastForward."
-  },
-  "options": {
-    "message": "Nastavení"
-  },
-  "optionsLink": {
-    "message": "Změnit nastavení FastForward."
-  },
-  "optionsEnabled": {
-    "message": "Povolit obcházení zkracovačů."
-  },
-  "optionsNavigationDelay": {
-    "message": "Přesuňte mě do destinací po % sekundách."
-  },
-  "optionsTrackerBypass": {
-    "message": "Přeskočit sledovače (jako bit.ly a t.co) pomocí Apimon.de."
-  },
-  "optionsInstantNavigationTrackers": {
-    "message": "Okamžitě mě přesuňtě na destinaci sledovačů."
-  },
-  "optionsBlockIPLoggers": {
-    "message": "Blokovat IP loggery pokud je nelze obejít."
-  },
-  "optionsCrowdBypass": {
-    "message": "Dávejte a berte destinace stránek které nejde obejít pomocí CrowdBypass"
-  },
-  "optionsCrowdAutoOpen": {
-    "message": "Otevřít crowd-sourced cíl v nové záložce po % vteřinách."
-  },
-  "optionsCrowdAutoClose": {
-    "message": "Zavřít záložku obsahující crowd-sorced cíl po % vteřinách po jejím navštívení"
-  },
-  "privacyPolicy": {
-    "message": "Zásady ochrany osobních údajů"
-  },
-  "contributors": {
-    "message": "Přispěvatelé"
-  },
-  "optionsUserscripts": {
-    "message": "Vlastní přeskočení"
-  },
-  "optionsUserscriptsDescription": {
-    "message": "Tohle je pokročilá možnost pro vývojáře aby si mohli dělat vlastní scripty na obcházení stránek, když zdokonalené, můzou být dány na GitHub aby byly přidány do FastForward, takže budou přístupné pro všechny"
-  },
-  "beforeNavigate": {
-    "message": "Jste téměř na destinaci."
-  },
-  "beforeNavigateDestination": {
-    "message": "Destinace tohoto zkráceného odkazu je %"
-  },
-  "beforeNavigateUnsafe": {
-    "message": "Jestliže obejdete stránku teď, tak FastFoward detekují."
-  },
-  "beforeNavigateUnsafeTimer": {
-    "message": "Už nebudete detekován v % sekundách"
-  },
-  "beforeNavigateUnsafeTimerSingular": {
-    "message": "Už nebudete detekován v 1 sekundě"
-  },
-  "beforeNavigateTimer": {
-    "message": "Budete automaticky přesměrován za % sekund."
-  },
-  "beforeNavigateTimerSingular": {
-    "message": "Budete automaticky přesměrován za 1 sekundu."
-  },
-  "beforeNavigateOptions": {
-    "message": "Chcete být přesměrován hned, nebo až za X sekund?"
-  },
-  "beforeNavigateInstant": {
-    "message": "Jste přesměrováni na %"
-  },
-  "infoLinkvertise": {
-    "message": "Nejsme oprávněni obejít tento web, ale zajistili jsme odstranění jejich nejotravnějších kroků."
-  },
-  "infoFileHoster": {
-    "message": "Bohužel, stahující server se ujistí že počkáte než vám dovolí stáhnout složku"
-  },
-  "infoOutdated": {
-    "message": "Tahle stránka se dá obejít s novější verzí FastForward"
-  },
-  "crowdWait": {
-    "message": "Bohužel jste první, kdo narazil na tento odkaz, ale po čekání již nebudou muset čekat ostatní uživatelé FastForward."
-  },
-  "crowdDisabled": {
-    "message": "Tato stránka se dá obejít pomocí CrowdBypass, který jste vypnuli v nastavení."
-  },
-  "crowdBypassed": {
-    "message": "Nemusel byste čekat!"
-  },
-  "crowdBypassedInfo": {
-    "message": "Ostatní uživatelé FastForward na vás čekali a náhlasili že link vede k %"
-  },
-  "crowdBypassedTimer": {
-    "message": "Toto bude otevřeno na nové kartě za % sekund."
-  },
-  "crowdBypassedTimerSingular": {
-    "message": "Toto bude otevřeno na nové kartě za 1 sekundu."
-  },
-  "crowdCloseTimer": {
-    "message": "Tato karta se uzavře za % sekund."
-  },
-  "crowdCloseTimerSingular": {
-    "message": "Tato karta se zavře za 1 sekundu."
-  },
-  "cancel": {
-    "message": "Zrušit."
-  },
-  "crowdBypassedIgnore": {
-    "message": "Nebylo to správně?"
-  },
-  "crowdBypassedOptions": {
-    "message": "Přejete si, aby byla tato karta otevřena v nové kartě okamžitě nebo za X sekund?"
-  },
-  "blockedTitle": {
-    "message": "FastForward vás ochránil před IP loggerem."
-  },
-  "blockedSubtitle": {
-    "message": "Nechcete, aby FastForward ochránil vaši IP?"
-  }
+	"appDesc": {
+		"message": "Neztrácejte čas. FastForward automaticky přeskočí nepříjemné zkracovače odkazů."
+	},
+	"firstrunTitle": {
+		"message": "Děkujeme za instalaci FastForward!"
+	},
+	"firstrunNoScript": {
+		"message": "Zdá se, že používáte NoScript nebo podobné pluginy, se kterým FastForward není kompatibilní."
+	},
+	"version": {
+		"message": "Verze"
+	},
+	"definitionsVersion": {
+		"message": "Definice přeskakování"
+	},
+	"changelog": {
+		"message": "Přehled změn"
+	},
+	"update": {
+		"message": "Zkontrolovat aktualizace"
+	},
+	"updating": {
+		"message": "Aktualizace definic přeskočení ..."
+	},
+	"updateYes": {
+		"message": "Definice přeskočení byly úspěšně aktualizovány."
+	},
+	"updateNo": {
+		"message": "Definice přeskočení jsou již aktuální."
+	},
+	"faq": {
+		"message": "Často kladené otázky (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "FastForward již pro vás obešel % stránek."
+	},
+	"support": {
+		"message": "Přispějte k FastForward."
+	},
+	"options": {
+		"message": "Nastavení"
+	},
+	"optionsLink": {
+		"message": "Změnit nastavení FastForward."
+	},
+	"optionsEnabled": {
+		"message": "Povolit obcházení zkracovačů."
+	},
+	"optionsNavigationDelay": {
+		"message": "Přesuňte mě do destinací po % sekundách."
+	},
+	"optionsTrackerBypass": {
+		"message": "Přeskočit sledovače (jako bit.ly a t.co) pomocí Apimon.de."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Okamžitě mě přesuňtě na destinaci sledovačů."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Blokovat IP loggery pokud je nelze obejít."
+	},
+	"optionsCrowdBypass": {
+		"message": "Dávejte a berte destinace stránek které nejde obejít pomocí CrowdBypass"
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Otevřít crowd-sourced cíl v nové záložce po % vteřinách."
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Zavřít záložku obsahující crowd-sorced cíl po % vteřinách po jejím navštívení"
+	},
+	"privacyPolicy": {
+		"message": "Zásady ochrany osobních údajů"
+	},
+	"contributors": {
+		"message": "Přispěvatelé"
+	},
+	"optionsUserscripts": {
+		"message": "Vlastní přeskočení"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Tohle je pokročilá možnost pro vývojáře aby si mohli dělat vlastní scripty na obcházení stránek, když zdokonalené, můzou být dány na GitHub aby byly přidány do FastForward, takže budou přístupné pro všechny"
+	},
+	"beforeNavigate": {
+		"message": "Jste téměř na destinaci."
+	},
+	"beforeNavigateDestination": {
+		"message": "Destinace tohoto zkráceného odkazu je %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "Jestliže obejdete stránku teď, tak FastFoward detekují."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Už nebudete detekován v % sekundách"
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Už nebudete detekován v 1 sekundě"
+	},
+	"beforeNavigateTimer": {
+		"message": "Budete automaticky přesměrován za % sekund."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Budete automaticky přesměrován za 1 sekundu."
+	},
+	"beforeNavigateOptions": {
+		"message": "Chcete být přesměrován hned, nebo až za X sekund?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Jste přesměrováni na %"
+	},
+	"infoLinkvertise": {
+		"message": "Nejsme oprávněni obejít tento web, ale zajistili jsme odstranění jejich nejotravnějších kroků."
+	},
+	"infoFileHoster": {
+		"message": "Bohužel, stahující server se ujistí že počkáte než vám dovolí stáhnout složku"
+	},
+	"infoOutdated": {
+		"message": "Tahle stránka se dá obejít s novější verzí FastForward"
+	},
+	"crowdWait": {
+		"message": "Bohužel jste první, kdo narazil na tento odkaz, ale po čekání již nebudou muset čekat ostatní uživatelé FastForward."
+	},
+	"crowdDisabled": {
+		"message": "Tato stránka se dá obejít pomocí CrowdBypass, který jste vypnuli v nastavení."
+	},
+	"crowdBypassed": {
+		"message": "Nemusel byste čekat!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Ostatní uživatelé FastForward na vás čekali a náhlasili že link vede k %"
+	},
+	"crowdBypassedTimer": {
+		"message": "Toto bude otevřeno na nové kartě za % sekund."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Toto bude otevřeno na nové kartě za 1 sekundu."
+	},
+	"crowdCloseTimer": {
+		"message": "Tato karta se uzavře za % sekund."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Tato karta se zavře za 1 sekundu."
+	},
+	"cancel": {
+		"message": "Zrušit."
+	},
+	"crowdBypassedIgnore": {
+		"message": "Nebylo to správně?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Přejete si, aby byla tato karta otevřena v nové kartě okamžitě nebo za X sekund?"
+	},
+	"blockedTitle": {
+		"message": "FastForward vás ochránil před IP loggerem."
+	},
+	"blockedSubtitle": {
+		"message": "Nechcete, aby FastForward ochránil vaši IP?"
+	}
 }

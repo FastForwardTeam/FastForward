@@ -1,155 +1,155 @@
 {
-  "appDesc": {
-    "message": "Netērē savu laiku ar piekāpšanos. \"FastForward\" apiet kaitinošos saišu saīsinātājus."
-  },
-  "firstrunTitle": {
-    "message": "Paldies, kad ieinstalējāt \"FastForward\"!"
-  },
-  "firstrunNoScript": {
-    "message": "Izskatās, ka tu izmanto NoScript vai ko līdzīgu, ar ko \"FastForward\" nav derīgs."
-  },
-  "version": {
-    "message": "Versija"
-  },
-  "definitionsVersion": {
-    "message": "Apiešanas definīcijas"
-  },
-  "changelog": {
-    "message": "Izmaiņu žurnāls"
-  },
-  "update": {
-    "message": "Pārbaudīt atjaunojumus"
-  },
-  "updating": {
-    "message": "Lejupielādē apiešanas definīcijas"
-  },
-  "updateYes": {
-    "message": "Veiksmīgi lejupielādētas apiešanas definīcijas"
-  },
-  "updateNo": {
-    "message": "Jums ir jaunākās apiešanas definīcijas."
-  },
-  "faq": {
-    "message": "Visbiežāk prasītie jautājumi (FAQ)"
-  },
-  "bypassCounter": {
-    "message": "\"FastForward\" jau ir apgājis % saites priekš tevīm."
-  },
-  "support": {
-    "message": "Ieguldiet \"FastForward\"."
-  },
-  "options": {
-    "message": "Opcijas"
-  },
-  "optionsLink": {
-    "message": "Mainīt \"FastForward\" opcijas."
-  },
-  "optionsEnabled": {
-    "message": "Ieslēgt saišu apeju."
-  },
-  "optionsNavigationDelay": {
-    "message": "Piegādāt mani uz galapunkta saiti pēc % sekundi(ēm)."
-  },
-  "optionsTrackerBypass": {
-    "message": "Apiet izsekotājus (piemēram, bit.ly un t.co) izmantojot Apimon.de."
-  },
-  "optionsInstantNavigationTrackers": {
-    "message": "Uzreiz ved mani uz izsekotāju galamērķiem."
-  },
-  "optionsBlockIPLoggers": {
-    "message": "Bloķēt IP reģistrētājus ja tos nevar apiet."
-  },
-  "optionsCrowdBypass": {
-    "message": "Dot un ņemt galapunktus no neapejamajiem saīsinātājiem."
-  },
-  "optionsCrowdAutoOpen": {
-    "message": "Atvērt pūļa izcelsmes galapunktus jaunā cilnē pēc % sekundes(ēm)."
-  },
-  "optionsCrowdAutoClose": {
-    "message": "Aizvērt cilni kas satur pūļa izcelsmes galapunktu pēc % sekundes(ēm) pēc tās apmeklēšanas."
-  },
-  "privacyPolicy": {
-    "message": "Privātuma Politika"
-  },
-  "contributors": {
-    "message": "Ieguldītāji"
-  },
-  "optionsUserscripts": {
-    "message": "Pielāgotas Apejas"
-  },
-  "optionsUserscriptsDescription": {
-    "message": "Šī ir advancētā funkcija izstrādātājiem, lai izveidotu savus skriptus, lai apietu vietnes. Pēc pilnveidošanas tos var iesniegt vietnē GitHub, lai tos pievienotu \"FastForward\", lai tie būtu pieejami visiem."
-  },
-  "beforeNavigate": {
-    "message": "Jūs esat gandrīz savā galapunktā."
-  },
-  "beforeNavigateDestination": {
-    "message": "Jūsu galapunkts ir %"
-  },
-  "beforeNavigateUnsafe": {
-    "message": "Bet, ja jūs navigēsiet tagat, viņi atklās \"FastForward\"."
-  },
-  "beforeNavigateUnsafeTimer": {
-    "message": "Jūs vairāk nebūsiet atklāti pēc % sekundēm."
-  },
-  "beforeNavigateUnsafeTimerSingular": {
-    "message": "Jūs vairāk nebūsiet atklāti pēc 1 sekundes."
-  },
-  "beforeNavigateTimer": {
-    "message": "Jūs būsiet pāradresēts automātiski pēc % sekundēm."
-  },
-  "beforeNavigateTimerSingular": {
-    "message": "Jūs būsiet pāradresēts automātiski pēc 1 sekundes."
-  },
-  "beforeNavigateOptions": {
-    "message": "Vai jūs vēlaties būt pāradresēts uzreiz vai pēc x sekundēm?"
-  },
-  "beforeNavigateInstant": {
-    "message": "Jūs tiekat navigēts uz %"
-  },
-  "infoFileHoster": {
-    "message": "Diemžēl, lejupielādes serveris pārliecināsies ka tu esi gaidījis pirms tas ļaus tev lādet failu."
-  },
-  "infoOutdated": {
-    "message": "Šī saite tiek apieta ar \"FastForward\" jaunāko versiju."
-  },
-  "crowdWait": {
-    "message": "Diemžēl, jūs esat pirmais kas ir šajā mājaslapā, bet kad jūs beigsiet gaidīt, citiem \"FastForward\" lietotājiem nevajadzēs gaidīt."
-  },
-  "crowdDisabled": {
-    "message": "Šo mājaslapu var apiet ar pūļa apeju, ko jūs esat izslēguši opcijās."
-  },
-  "crowdBypassed": {
-    "message": "Jums varbūt nevajag gaidīt!"
-  },
-  "crowdBypassedInfo": {
-    "message": "Citi \"FastForward\" lietotāji jau ir gaidījuši tavā vietā un ziņoja, ka šis aiziet uz %"
-  },
-  "crowdBypassedTimer": {
-    "message": "Šis būs atvērts jaunā cilnē pēc % sekundēm."
-  },
-  "crowdBypassedTimerSingular": {
-    "message": "Šis būs atvērts jaunā cilnē pēc 1 sekundes."
-  },
-  "crowdCloseTimer": {
-    "message": "Šī cilne aizvērsies pēc % sekundēm."
-  },
-  "crowdCloseTimerSingular": {
-    "message": "Šī cilne aizvērsies pēc 1 sekundes."
-  },
-  "cancel": {
-    "message": "Atcelt."
-  },
-  "crowdBypassedIgnore": {
-    "message": "Vai šis nebija pareizi?"
-  },
-  "crowdBypassedOptions": {
-    "message": "Vai tu gribi atvērt šo jaunā cilnē uzreiz vai pēc x sekundēm?"
-  },
-  "blockedTitle": {
-    "message": "\"FastForward\" neļāva jūsu IP reģistrēties."
-  },
-  "blockedSubtitle": {
-    "message": "Negribi lai \"FastForward\" neļauj sliktiem aktieriem dabūt tavu IP?"
-  }
+	"appDesc": {
+		"message": "Netērē savu laiku ar piekāpšanos. \"FastForward\" apiet kaitinošos saišu saīsinātājus."
+	},
+	"firstrunTitle": {
+		"message": "Paldies, kad ieinstalējāt \"FastForward\"!"
+	},
+	"firstrunNoScript": {
+		"message": "Izskatās, ka tu izmanto NoScript vai ko līdzīgu, ar ko \"FastForward\" nav derīgs."
+	},
+	"version": {
+		"message": "Versija"
+	},
+	"definitionsVersion": {
+		"message": "Apiešanas definīcijas"
+	},
+	"changelog": {
+		"message": "Izmaiņu žurnāls"
+	},
+	"update": {
+		"message": "Pārbaudīt atjaunojumus"
+	},
+	"updating": {
+		"message": "Lejupielādē apiešanas definīcijas"
+	},
+	"updateYes": {
+		"message": "Veiksmīgi lejupielādētas apiešanas definīcijas"
+	},
+	"updateNo": {
+		"message": "Jums ir jaunākās apiešanas definīcijas."
+	},
+	"faq": {
+		"message": "Visbiežāk prasītie jautājumi (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "\"FastForward\" jau ir apgājis % saites priekš tevīm."
+	},
+	"support": {
+		"message": "Ieguldiet \"FastForward\"."
+	},
+	"options": {
+		"message": "Opcijas"
+	},
+	"optionsLink": {
+		"message": "Mainīt \"FastForward\" opcijas."
+	},
+	"optionsEnabled": {
+		"message": "Ieslēgt saišu apeju."
+	},
+	"optionsNavigationDelay": {
+		"message": "Piegādāt mani uz galapunkta saiti pēc % sekundi(ēm)."
+	},
+	"optionsTrackerBypass": {
+		"message": "Apiet izsekotājus (piemēram, bit.ly un t.co) izmantojot Apimon.de."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Uzreiz ved mani uz izsekotāju galamērķiem."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Bloķēt IP reģistrētājus ja tos nevar apiet."
+	},
+	"optionsCrowdBypass": {
+		"message": "Dot un ņemt galapunktus no neapejamajiem saīsinātājiem."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Atvērt pūļa izcelsmes galapunktus jaunā cilnē pēc % sekundes(ēm)."
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Aizvērt cilni kas satur pūļa izcelsmes galapunktu pēc % sekundes(ēm) pēc tās apmeklēšanas."
+	},
+	"privacyPolicy": {
+		"message": "Privātuma Politika"
+	},
+	"contributors": {
+		"message": "Ieguldītāji"
+	},
+	"optionsUserscripts": {
+		"message": "Pielāgotas Apejas"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Šī ir advancētā funkcija izstrādātājiem, lai izveidotu savus skriptus, lai apietu vietnes. Pēc pilnveidošanas tos var iesniegt vietnē GitHub, lai tos pievienotu \"FastForward\", lai tie būtu pieejami visiem."
+	},
+	"beforeNavigate": {
+		"message": "Jūs esat gandrīz savā galapunktā."
+	},
+	"beforeNavigateDestination": {
+		"message": "Jūsu galapunkts ir %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "Bet, ja jūs navigēsiet tagat, viņi atklās \"FastForward\"."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Jūs vairāk nebūsiet atklāti pēc % sekundēm."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Jūs vairāk nebūsiet atklāti pēc 1 sekundes."
+	},
+	"beforeNavigateTimer": {
+		"message": "Jūs būsiet pāradresēts automātiski pēc % sekundēm."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Jūs būsiet pāradresēts automātiski pēc 1 sekundes."
+	},
+	"beforeNavigateOptions": {
+		"message": "Vai jūs vēlaties būt pāradresēts uzreiz vai pēc x sekundēm?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Jūs tiekat navigēts uz %"
+	},
+	"infoFileHoster": {
+		"message": "Diemžēl, lejupielādes serveris pārliecināsies ka tu esi gaidījis pirms tas ļaus tev lādet failu."
+	},
+	"infoOutdated": {
+		"message": "Šī saite tiek apieta ar \"FastForward\" jaunāko versiju."
+	},
+	"crowdWait": {
+		"message": "Diemžēl, jūs esat pirmais kas ir šajā mājaslapā, bet kad jūs beigsiet gaidīt, citiem \"FastForward\" lietotājiem nevajadzēs gaidīt."
+	},
+	"crowdDisabled": {
+		"message": "Šo mājaslapu var apiet ar pūļa apeju, ko jūs esat izslēguši opcijās."
+	},
+	"crowdBypassed": {
+		"message": "Jums varbūt nevajag gaidīt!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Citi \"FastForward\" lietotāji jau ir gaidījuši tavā vietā un ziņoja, ka šis aiziet uz %"
+	},
+	"crowdBypassedTimer": {
+		"message": "Šis būs atvērts jaunā cilnē pēc % sekundēm."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Šis būs atvērts jaunā cilnē pēc 1 sekundes."
+	},
+	"crowdCloseTimer": {
+		"message": "Šī cilne aizvērsies pēc % sekundēm."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Šī cilne aizvērsies pēc 1 sekundes."
+	},
+	"cancel": {
+		"message": "Atcelt."
+	},
+	"crowdBypassedIgnore": {
+		"message": "Vai šis nebija pareizi?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Vai tu gribi atvērt šo jaunā cilnē uzreiz vai pēc x sekundēm?"
+	},
+	"blockedTitle": {
+		"message": "\"FastForward\" neļāva jūsu IP reģistrēties."
+	},
+	"blockedSubtitle": {
+		"message": "Negribi lai \"FastForward\" neļauj sliktiem aktieriem dabūt tavu IP?"
+	}
 }
