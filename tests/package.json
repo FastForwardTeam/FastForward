@@ -7,9 +7,8 @@
     "type": "git",
     "url": "https://github.com/FastForwardTeam/FastForward.git",
     "directory": "tests"
-    }
-  }
-  "license" : "Unlicense",
+  },
+  "license": "Unlicense",
   "author": "Beaness",
   "dependencies": {
     "puppeteer": "^10.2.0"
