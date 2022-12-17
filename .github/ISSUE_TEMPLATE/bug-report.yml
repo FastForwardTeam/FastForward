@@ -2,57 +2,57 @@ name: Bug report
 description: Something is broken in the extension
 labels: [Bug]
 body:
-- type: markdown
-  attributes:
-    value: |
-      ## Note
-      Issues are not a place to go ask support questions.
-      Please ask support questions on the [Discord](https://discord.gg/RSAf7b5njt).
-      
-      ### **This form is not for reporting sites that are not bypassed**
-      Thanks for taking the time to fill out this form!
-- type: textarea
-  id: body
-  attributes:
-    label: Body
-    description: Description of the issue you are facing
-  validations:
-    required: true
-- type: dropdown
-  id: version
-  attributes:
-    label: Version
-    description: What version of the extension are you running?
-    options:
-      - 0.0.0
-  validations:
-    required: true
-- type: dropdown
-  id: browsers
-  attributes:
-    label: What browsers are you seeing the problem on?
-    multiple: true
-    options:
-      - Firefox
-      - Chrome
-      - Brave
-      - Microsoft Edge
-  validations:
-    required: true
-- type: dropdown
-  id: os
-  attributes:
-    label: What OS are you seeing the problem on?
-    options:
-      - Windows
-      - Linux
-      - MacOS 
-- type: textarea
-  attributes:
-    label: Anything else?
-    description: |
-       Images? Videos? Anything that will give us more context about the issue you are encountering!
+  - type: markdown
+    attributes:
+      value: |
+        ## Note
+        Issues are not a place to go ask support questions.
+        Please ask support questions on the [Discord](https://discord.gg/RSAf7b5njt).
 
-       Tip: You can attach images files by clicking this area to highlight it and then dragging files in.
-  validations:
-    required: false
+        ### **This form is not for reporting sites that are not bypassed**
+        Thanks for taking the time to fill out this form!
+  - type: textarea
+    id: body
+    attributes:
+      label: Body
+      description: Description of the issue you are facing
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: What version of the extension are you running?
+      options:
+        - 0.0.0
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Brave
+        - Microsoft Edge
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: What OS are you seeing the problem on?
+      options:
+        - Windows
+        - Linux
+        - MacOS
+  - type: textarea
+    attributes:
+      label: Anything else?
+      description: |
+        Images? Videos? Anything that will give us more context about the issue you are encountering!
+
+        Tip: You can attach images files by clicking this area to highlight it and then dragging files in.
+    validations:
+      required: false

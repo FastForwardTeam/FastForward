@@ -1,23 +1,23 @@
 {
-	"appDesc": {
-		"message": "Vaqtingizni moslashtirish uchun bekorga ketkazmang. FastForward sizga veb manzillarni qisqartirishda ko'mak beradi."
-	},
-	"firstrunTitle": {
-		"message": "FastForwardni o'rnatganingiz uchun rahmat!"
-	},
-	"firstrunNoScript": {
-		"message": "Siz FastForwardga mos bo'lmagan NoScript yoki shunga o'xshash dasturdan foydalanayotgangan o'xshaysiz."
-	},
-	"version": {
-		"message": "Versiya"
-	},
-	"definitionsVersion": {
-		"message": "Bypass ta'riflari"
-	},
-	"changelog": {
-		"message": "Holati"
-	},
-	"update": {
-		"message": "Yangilanishlar uchun tekshirish"
-	}
+  "appDesc": {
+    "message": "Vaqtingizni moslashtirish uchun bekorga ketkazmang. FastForward sizga veb manzillarni qisqartirishda ko'mak beradi."
+  },
+  "firstrunTitle": {
+    "message": "FastForwardni o'rnatganingiz uchun rahmat!"
+  },
+  "firstrunNoScript": {
+    "message": "Siz FastForwardga mos bo'lmagan NoScript yoki shunga o'xshash dasturdan foydalanayotgangan o'xshaysiz."
+  },
+  "version": {
+    "message": "Versiya"
+  },
+  "definitionsVersion": {
+    "message": "Bypass ta'riflari"
+  },
+  "changelog": {
+    "message": "Holati"
+  },
+  "update": {
+    "message": "Yangilanishlar uchun tekshirish"
+  }
 }

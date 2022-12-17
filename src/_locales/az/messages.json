@@ -1,89 +1,89 @@
 {
-	"appDesc": {
-		"message": "Vaxtınızı uyğunlaşdırmaya xərcləməyin. FastForward, zəhlətökən bağlantı qısaldıcılarını ötürür."
-	},
-	"firstrunTitle": {
-		"message": "FastForward quraşdırdığınız üçün təşəkkürlər!"
-	},
-	"firstrunNoScript": {
-		"message": "Buna baxmayaraq, FastForward ilə uyğunlaşmayan NoScript və ya oxşarını istifadə edirsiniz."
-	},
-	"version": {
-		"message": "Versiya"
-	},
-	"definitionsVersion": {
-		"message": "Bypass tərifləri"
-	},
-	"changelog": {
-		"message": "Dəyişiklik qeydi"
-	},
-	"update": {
-		"message": "Yeniləmələri yoxla"
-	},
-	"faq": {
-		"message": "Tez-tez Soruşulan Suallar (FAQ)"
-	},
-	"support": {
-		"message": "FastForward-ı Dəstəkləyin."
-	},
-	"options": {
-		"message": "Seçimlər"
-	},
-	"optionsLink": {
-		"message": "FastForward seçimlərini dəyişdirin."
-	},
-	"optionsEnabled": {
-		"message": "Veb saytlarının ötürülməsini fəallaşdır."
-	},
-	"optionsBlockIPLoggers": {
-		"message": "Ötürə bilməsə, IP qeydlərini əngəllə."
-	},
-	"optionsCrowdBypass": {
-		"message": "Ötürülə bilməyən qısaldıcıların yerlərini verin və aparın."
-	},
-	"privacyPolicy": {
-		"message": "Gizlilik Siyasəti"
-	},
-	"optionsUserscripts": {
-		"message": "Özəl Bypass-lar"
-	},
-	"beforeNavigate": {
-		"message": "Demək olar ki, təyinat yerindəsiniz."
-	},
-	"beforeNavigateDestination": {
-		"message": "Təyinat yeri %"
-	},
-	"beforeNavigateTimer": {
-		"message": "% saniyə ərzində avtomatik yönləndiriləcəksiniz."
-	},
-	"beforeNavigateTimerSingular": {
-		"message": "1 saniyə ərzində avtomatik yönləndiriləcəksiniz."
-	},
-	"crowdWait": {
-		"message": "Təəssüf ki, bu bağlantı ilə qarşılaşan ilk sizsiniz, ancaq siz gözlədikdən sonra, digər FastForward istifadəçilərinin buna ehtiyacı olmayacaq."
-	},
-	"crowdBypassed": {
-		"message": "Gözləməyinizə ehtiyac yoxdur!"
-	},
-	"crowdBypassedInfo": {
-		"message": "Digər FastForward istifadəçiləri artıq sizi gözlədilər və bunun % a çatdığı bildirildi"
-	},
-	"crowdBypassedTimer": {
-		"message": "Bu, % saniyə ərzində yeni bir vərəqdə açılacaq."
-	},
-	"crowdBypassedTimerSingular": {
-		"message": "Bu, 1 saniyə ərzində yeni bir vərəq açılacaq."
-	},
-	"crowdBypassedIgnore": {
-		"message": "Bu doğru deyil?"
-	},
-	"crowdBypassedOptions": {
-		"message": "Bunun indi ya x saniyə sonra yeni bir vərəqdə açılmasını istəyirsiniz?"
-	},
-	"blockedTitle": {
-		"message": "FastForward, IP ünvanların qeydlərə əlavə edilməsinin qarşısı aldı."
-	},
-	"blockedSubtitle": {
-		"message": "FastForward-ın, pisniyyətli insanların IP ünvanınızı oğurlamasının qarşısını almasını istəmirsiniz?"
-	}
+  "appDesc": {
+    "message": "Vaxtınızı uyğunlaşdırmaya xərcləməyin. FastForward, zəhlətökən bağlantı qısaldıcılarını ötürür."
+  },
+  "firstrunTitle": {
+    "message": "FastForward quraşdırdığınız üçün təşəkkürlər!"
+  },
+  "firstrunNoScript": {
+    "message": "Buna baxmayaraq, FastForward ilə uyğunlaşmayan NoScript və ya oxşarını istifadə edirsiniz."
+  },
+  "version": {
+    "message": "Versiya"
+  },
+  "definitionsVersion": {
+    "message": "Bypass tərifləri"
+  },
+  "changelog": {
+    "message": "Dəyişiklik qeydi"
+  },
+  "update": {
+    "message": "Yeniləmələri yoxla"
+  },
+  "faq": {
+    "message": "Tez-tez Soruşulan Suallar (FAQ)"
+  },
+  "support": {
+    "message": "FastForward-ı Dəstəkləyin."
+  },
+  "options": {
+    "message": "Seçimlər"
+  },
+  "optionsLink": {
+    "message": "FastForward seçimlərini dəyişdirin."
+  },
+  "optionsEnabled": {
+    "message": "Veb saytlarının ötürülməsini fəallaşdır."
+  },
+  "optionsBlockIPLoggers": {
+    "message": "Ötürə bilməsə, IP qeydlərini əngəllə."
+  },
+  "optionsCrowdBypass": {
+    "message": "Ötürülə bilməyən qısaldıcıların yerlərini verin və aparın."
+  },
+  "privacyPolicy": {
+    "message": "Gizlilik Siyasəti"
+  },
+  "optionsUserscripts": {
+    "message": "Özəl Bypass-lar"
+  },
+  "beforeNavigate": {
+    "message": "Demək olar ki, təyinat yerindəsiniz."
+  },
+  "beforeNavigateDestination": {
+    "message": "Təyinat yeri %"
+  },
+  "beforeNavigateTimer": {
+    "message": "% saniyə ərzində avtomatik yönləndiriləcəksiniz."
+  },
+  "beforeNavigateTimerSingular": {
+    "message": "1 saniyə ərzində avtomatik yönləndiriləcəksiniz."
+  },
+  "crowdWait": {
+    "message": "Təəssüf ki, bu bağlantı ilə qarşılaşan ilk sizsiniz, ancaq siz gözlədikdən sonra, digər FastForward istifadəçilərinin buna ehtiyacı olmayacaq."
+  },
+  "crowdBypassed": {
+    "message": "Gözləməyinizə ehtiyac yoxdur!"
+  },
+  "crowdBypassedInfo": {
+    "message": "Digər FastForward istifadəçiləri artıq sizi gözlədilər və bunun % a çatdığı bildirildi"
+  },
+  "crowdBypassedTimer": {
+    "message": "Bu, % saniyə ərzində yeni bir vərəqdə açılacaq."
+  },
+  "crowdBypassedTimerSingular": {
+    "message": "Bu, 1 saniyə ərzində yeni bir vərəq açılacaq."
+  },
+  "crowdBypassedIgnore": {
+    "message": "Bu doğru deyil?"
+  },
+  "crowdBypassedOptions": {
+    "message": "Bunun indi ya x saniyə sonra yeni bir vərəqdə açılmasını istəyirsiniz?"
+  },
+  "blockedTitle": {
+    "message": "FastForward, IP ünvanların qeydlərə əlavə edilməsinin qarşısı aldı."
+  },
+  "blockedSubtitle": {
+    "message": "FastForward-ın, pisniyyətli insanların IP ünvanınızı oğurlamasının qarşısını almasını istəmirsiniz?"
+  }
 }
