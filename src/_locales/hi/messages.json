@@ -1,158 +1,158 @@
 {
-  "appDesc": {
-    "message": "अनुपालना में अपना समय बर्बाद ना करें। FastForward कष्टप्रद लिंक शॉर्टनरों को रोकता है।"
-  },
-  "firstrunTitle": {
-    "message": "FastForward इन्स्टॉल करने के लिए आपका धन्यवाद!"
-  },
-  "firstrunNoScript": {
-    "message": "हालाँकि, आप NoScript या इसी तरह का कुछ उपयोग करते प्रतीत होते हैं, जिसके साथ FastForward काम नहीं करता।"
-  },
-  "version": {
-    "message": "संस्करण"
-  },
-  "definitionsVersion": {
-    "message": "बाईपास नियम"
-  },
-  "changelog": {
-    "message": "बदलाव लेख"
-  },
-  "update": {
-    "message": "अपडेट के लिए जांच करें"
-  },
-  "updating": {
-    "message": "बाईपास नियम डाउनलोड हो रहे हैं..."
-  },
-  "updateYes": {
-    "message": "बाईपास नियम सफलतापूर्वक डाउनलोड किये गए।"
-  },
-  "updateNo": {
-    "message": "बाईपास नियम अद्यतित हैं।"
-  },
-  "faq": {
-    "message": "अकसर पूछे जाने वाले प्रश्न (FAQ)"
-  },
-  "bypassCounter": {
-    "message": "FastForward ने आपके लिए पहले ही % साइटों को बाईपास कर दिया है।"
-  },
-  "support": {
-    "message": "FastForward में योगदान दें।"
-  },
-  "options": {
-    "message": "विकल्प"
-  },
-  "optionsLink": {
-    "message": "FastForward के विकल्प बदलें।"
-  },
-  "optionsEnabled": {
-    "message": "वेबसाइट बाईपास को चालू करें।"
-  },
-  "optionsNavigationDelay": {
-    "message": "% सेकंड के बाद मुझे गंतव्यों तक ले जाएं।"
-  },
-  "optionsTrackerBypass": {
-    "message": "Apimon.de का उपयोग करके ट्रैकरों (जैसे bit.ly और t.co) को बाईपास करें।"
-  },
-  "optionsInstantNavigationTrackers": {
-    "message": "बिना रुके ट्रैकरों को बाईपास करें।"
-  },
-  "optionsBlockIPLoggers": {
-    "message": "IP संग्राहको को ब्लॉक करें यदि उन्हें बाईपास नहीं किया जा सकता।"
-  },
-  "optionsCrowdBypass": {
-    "message": "क्राउड बाईपास: बाईपास न किये जा सकने वाले लिंक दे और लें।"
-  },
-  "optionsCrowdAutoOpen": {
-    "message": "% सेकंड के बाद नए टैब में क्राउड-सोर्सड वाले गंतव्यों को खोलें।"
-  },
-  "optionsCrowdAutoClose": {
-    "message": "क्राउड-सोर्सड वाले गंतव्यों पर जाने के % सेकंड बाद उस टैब को बंद कर दें।"
-  },
-  "privacyPolicy": {
-    "message": "गोपनीयता नीति"
-  },
-  "contributors": {
-    "message": "योगदानकर्ता"
-  },
-  "optionsUserscripts": {
-    "message": "कस्टम बाईपास"
-  },
-  "optionsUserscriptsDescription": {
-    "message": "यह एक उन्नत विकल्प है ऐसे डेवलपरों के लिए जो अपनी खुद की बाईपास स्क्रिप्ट लिखना चाहते है। एक बार पूरी तरह से काम करने पर इन्हे FastForward में जोड़ने के लिए Github पर डाला जा सकता हैं, ताकि सभी उनका लाभ ले सकें।"
-  },
-  "beforeNavigate": {
-    "message": "आप लगभग अपने गंतव्य पर हैं।"
-  },
-  "beforeNavigateDestination": {
-    "message": "ये रहा आपका लिंक %"
-  },
-  "beforeNavigateUnsafe": {
-    "message": "हालाँकि, यदि आप अभी इस पर जाते हैं, तो वे FastForward का पता लगा लेंगे।"
-  },
-  "beforeNavigateUnsafeTimer": {
-    "message": "% सेकंड में आपका पता नहीं चलेगा।"
-  },
-  "beforeNavigateUnsafeTimerSingular": {
-    "message": "1 सेकंड में आपका पता नहीं चलेगा।"
-  },
-  "beforeNavigateTimer": {
-    "message": "आप % सेकंड में आपने आप पुनर्निर्देशित हो जाएंगे।"
-  },
-  "beforeNavigateTimerSingular": {
-    "message": "आप 1 सेकंड में आपने आप पुनर्निर्देशित हो जाएंगे।"
-  },
-  "beforeNavigateOptions": {
-    "message": "क्या आप तुरंत या कुछ सेकंड में पुनर्निर्देशित होना चाहते हैं?"
-  },
-  "beforeNavigateInstant": {
-    "message": "आपको % पर ले जाया जा रहा है।"
-  },
-  "infoLinkvertise": {
-    "message": "हमें इस वेबसाइट पर बाईपास करने की अनुमति नहीं है लेकिन हमने उनके सबसे कष्टप्रद चरणों को हटाने के लिए बातचीत की है।"
-  },
-  "infoFileHoster": {
-    "message": "दुर्भाग्य से, डाउनलोड सर्वर यह सुनिश्चित करेगा कि आपको फ़ाइल डाउनलोड करने की अनुमति देने से पहले आपने इंतजार किया है।"
-  },
-  "infoOutdated": {
-    "message": "यह वेबसाइट FastForward के एक नए संस्करण द्वारा बाईपास की गई है।"
-  },
-  "crowdWait": {
-    "message": "दुर्भाग्य से, आप इस लिंक का सामना करने वाले पहले व्यक्ति हैं, लेकिन आपके इंतजार करने के बाद, अन्य FastForward उपयोगकर्ताओं को इंतज़ार नहीं रहना पड़ेगा।"
-  },
-  "crowdDisabled": {
-    "message": "यह वेबसाइट क्राउड बाईपास द्वारा बाईपास की गयी है, जिसे आप विकल्पों में सक्षम कर सकते हैं।"
-  },
-  "crowdBypassed": {
-    "message": "शायद आपको इंतज़ार ना करना पड़े!"
-  },
-  "crowdBypassedInfo": {
-    "message": "अन्य FastForward उपयोगकर्ता आपके लिए पहले ही इंतजार कर चुके हैं और रिपोर्ट कर चुके हैं कि यह लिंक इस पर जाता है %"
-  },
-  "crowdBypassedTimer": {
-    "message": "यह % सेकंड में एक नयी टैब में खोला जाएगा।"
-  },
-  "crowdBypassedTimerSingular": {
-    "message": "यह 1 सेकंड में एक नयी टैब में खोला जाएगा।"
-  },
-  "crowdCloseTimer": {
-    "message": "यह टैब % सेकंड में बंद हो जाएगी।"
-  },
-  "crowdCloseTimerSingular": {
-    "message": "यह टैब 1 सेकंड में बंद हो जाएगी।"
-  },
-  "cancel": {
-    "message": "रद्द करें।"
-  },
-  "crowdBypassedIgnore": {
-    "message": "क्या ये सही नहीं था?"
-  },
-  "crowdBypassedOptions": {
-    "message": "क्या आप चाहते हैं कि यह तुरंत एक नए टैब में या x सेकंड में खोला जाए?"
-  },
-  "blockedTitle": {
-    "message": "FastForward ने अपकी IP को साझा होने से बचाया।"
-  },
-  "blockedSubtitle": {
-    "message": "क्या आप नहीं चाहते कि FastForward आपकी IP को बुरे लोगो के पास जाने से बचाए?"
-  }
+	"appDesc": {
+		"message": "अनुपालना में अपना समय बर्बाद ना करें। FastForward कष्टप्रद लिंक शॉर्टनरों को रोकता है।"
+	},
+	"firstrunTitle": {
+		"message": "FastForward इन्स्टॉल करने के लिए आपका धन्यवाद!"
+	},
+	"firstrunNoScript": {
+		"message": "हालाँकि, आप NoScript या इसी तरह का कुछ उपयोग करते प्रतीत होते हैं, जिसके साथ FastForward काम नहीं करता।"
+	},
+	"version": {
+		"message": "संस्करण"
+	},
+	"definitionsVersion": {
+		"message": "बाईपास नियम"
+	},
+	"changelog": {
+		"message": "बदलाव लेख"
+	},
+	"update": {
+		"message": "अपडेट के लिए जांच करें"
+	},
+	"updating": {
+		"message": "बाईपास नियम डाउनलोड हो रहे हैं..."
+	},
+	"updateYes": {
+		"message": "बाईपास नियम सफलतापूर्वक डाउनलोड किये गए।"
+	},
+	"updateNo": {
+		"message": "बाईपास नियम अद्यतित हैं।"
+	},
+	"faq": {
+		"message": "अकसर पूछे जाने वाले प्रश्न (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "FastForward ने आपके लिए पहले ही % साइटों को बाईपास कर दिया है।"
+	},
+	"support": {
+		"message": "FastForward में योगदान दें।"
+	},
+	"options": {
+		"message": "विकल्प"
+	},
+	"optionsLink": {
+		"message": "FastForward के विकल्प बदलें।"
+	},
+	"optionsEnabled": {
+		"message": "वेबसाइट बाईपास को चालू करें।"
+	},
+	"optionsNavigationDelay": {
+		"message": "% सेकंड के बाद मुझे गंतव्यों तक ले जाएं।"
+	},
+	"optionsTrackerBypass": {
+		"message": "Apimon.de का उपयोग करके ट्रैकरों (जैसे bit.ly और t.co) को बाईपास करें।"
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "बिना रुके ट्रैकरों को बाईपास करें।"
+	},
+	"optionsBlockIPLoggers": {
+		"message": "IP संग्राहको को ब्लॉक करें यदि उन्हें बाईपास नहीं किया जा सकता।"
+	},
+	"optionsCrowdBypass": {
+		"message": "क्राउड बाईपास: बाईपास न किये जा सकने वाले लिंक दे और लें।"
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "% सेकंड के बाद नए टैब में क्राउड-सोर्सड वाले गंतव्यों को खोलें।"
+	},
+	"optionsCrowdAutoClose": {
+		"message": "क्राउड-सोर्सड वाले गंतव्यों पर जाने के % सेकंड बाद उस टैब को बंद कर दें।"
+	},
+	"privacyPolicy": {
+		"message": "गोपनीयता नीति"
+	},
+	"contributors": {
+		"message": "योगदानकर्ता"
+	},
+	"optionsUserscripts": {
+		"message": "कस्टम बाईपास"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "यह एक उन्नत विकल्प है ऐसे डेवलपरों के लिए जो अपनी खुद की बाईपास स्क्रिप्ट लिखना चाहते है। एक बार पूरी तरह से काम करने पर इन्हे FastForward में जोड़ने के लिए Github पर डाला जा सकता हैं, ताकि सभी उनका लाभ ले सकें।"
+	},
+	"beforeNavigate": {
+		"message": "आप लगभग अपने गंतव्य पर हैं।"
+	},
+	"beforeNavigateDestination": {
+		"message": "ये रहा आपका लिंक %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "हालाँकि, यदि आप अभी इस पर जाते हैं, तो वे FastForward का पता लगा लेंगे।"
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "% सेकंड में आपका पता नहीं चलेगा।"
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "1 सेकंड में आपका पता नहीं चलेगा।"
+	},
+	"beforeNavigateTimer": {
+		"message": "आप % सेकंड में आपने आप पुनर्निर्देशित हो जाएंगे।"
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "आप 1 सेकंड में आपने आप पुनर्निर्देशित हो जाएंगे।"
+	},
+	"beforeNavigateOptions": {
+		"message": "क्या आप तुरंत या कुछ सेकंड में पुनर्निर्देशित होना चाहते हैं?"
+	},
+	"beforeNavigateInstant": {
+		"message": "आपको % पर ले जाया जा रहा है।"
+	},
+	"infoLinkvertise": {
+		"message": "हमें इस वेबसाइट पर बाईपास करने की अनुमति नहीं है लेकिन हमने उनके सबसे कष्टप्रद चरणों को हटाने के लिए बातचीत की है।"
+	},
+	"infoFileHoster": {
+		"message": "दुर्भाग्य से, डाउनलोड सर्वर यह सुनिश्चित करेगा कि आपको फ़ाइल डाउनलोड करने की अनुमति देने से पहले आपने इंतजार किया है।"
+	},
+	"infoOutdated": {
+		"message": "यह वेबसाइट FastForward के एक नए संस्करण द्वारा बाईपास की गई है।"
+	},
+	"crowdWait": {
+		"message": "दुर्भाग्य से, आप इस लिंक का सामना करने वाले पहले व्यक्ति हैं, लेकिन आपके इंतजार करने के बाद, अन्य FastForward उपयोगकर्ताओं को इंतज़ार नहीं रहना पड़ेगा।"
+	},
+	"crowdDisabled": {
+		"message": "यह वेबसाइट क्राउड बाईपास द्वारा बाईपास की गयी है, जिसे आप विकल्पों में सक्षम कर सकते हैं।"
+	},
+	"crowdBypassed": {
+		"message": "शायद आपको इंतज़ार ना करना पड़े!"
+	},
+	"crowdBypassedInfo": {
+		"message": "अन्य FastForward उपयोगकर्ता आपके लिए पहले ही इंतजार कर चुके हैं और रिपोर्ट कर चुके हैं कि यह लिंक इस पर जाता है %"
+	},
+	"crowdBypassedTimer": {
+		"message": "यह % सेकंड में एक नयी टैब में खोला जाएगा।"
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "यह 1 सेकंड में एक नयी टैब में खोला जाएगा।"
+	},
+	"crowdCloseTimer": {
+		"message": "यह टैब % सेकंड में बंद हो जाएगी।"
+	},
+	"crowdCloseTimerSingular": {
+		"message": "यह टैब 1 सेकंड में बंद हो जाएगी।"
+	},
+	"cancel": {
+		"message": "रद्द करें।"
+	},
+	"crowdBypassedIgnore": {
+		"message": "क्या ये सही नहीं था?"
+	},
+	"crowdBypassedOptions": {
+		"message": "क्या आप चाहते हैं कि यह तुरंत एक नए टैब में या x सेकंड में खोला जाए?"
+	},
+	"blockedTitle": {
+		"message": "FastForward ने अपकी IP को साझा होने से बचाया।"
+	},
+	"blockedSubtitle": {
+		"message": "क्या आप नहीं चाहते कि FastForward आपकी IP को बुरे लोगो के पास जाने से बचाए?"
+	}
 }

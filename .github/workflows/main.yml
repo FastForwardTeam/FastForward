@@ -2,20 +2,21 @@ name: Package
 
 on:
   push:
-    branches: [main, prj-hatsune-miku]
+    branches: [ main, prj-hatsune-miku ]
 
   workflow_dispatch:
+
 
 jobs:
   Chromium:
     runs-on: ubuntu-latest
-
+    
     steps:
       - uses: actions/checkout@v2
         with:
           # pulls all commits (needed for commits to version)
           fetch-depth: 0
-
+      
       - name: Make package
         run: bash scripts/chromium.sh nover
 
@@ -28,12 +29,12 @@ jobs:
 
   Firefox:
     runs-on: ubuntu-latest
-
+    
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-
+      
       - name: Make package
         run: bash scripts/firefox.sh nover
 

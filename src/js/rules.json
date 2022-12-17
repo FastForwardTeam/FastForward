@@ -1,378 +1,378 @@
 {
-  "path_base64": [
-    "*://*.bursadrakor.com/protect-link/*",
-    "*://*.getfile.mobi/get/files/*",
-    "*://hikarinoakari.com/out/?*",
-    "*://*.itscybertech.com/*"
-  ],
-  "path_s_encoded": [
-    "*://*.gslink.co/e/*/s/*"
-  ],
-  "path_r_base64": [
-    "*://*.linkspy.cc/r/*"
-  ],
-  "path_dl_base64": [
-    "*://*.k2nblog.com/dl/*",
-    "*://*.filekita.me/page/dl/*"
-  ],
-  "path_u_id_base64": [
-    "*://*.shrink-service.it/u/*/*"
-  ],
-  "path_ads_hex": [
-    "*://*.leechall.com/ads/*"
-  ],
-  "query_raw": [
-    "*://*.anonym.to/?*",
-    "*://*.anonymz.com/?*",
-    "*://*.hidereferrer.com/?*",
-    "*://*.pixiv.net/jump.php?*"
-  ],
-  "query_base64": [
-    "*://*.hikarinoakariost.info/out/?*",
-    "*://*.p3dm.ru/download-en.html?*",
-    "*://*.iplhd.cf/*?*"
-  ],
-  "hash_base64": [
-    "*://*.acorme.com/*"
-  ],
-  "param_url_general": [
-    "*://*/st?api=*&url=*",
-    "*://*/st/?api=*&url=*",
-    "*://*/full?api=*&url=*",
-    "*://*/full/?api=*&url=*",
-    "*://*/full?api=*&url=*&type=*",
-    "*://*/full/?api=*&url=*&type=*",
-    "*://*/api/*/full-pages?api_key=*&url=*&type=*"
-  ],
-  "param_url_encoded": [
-    "*://*/safeme/?*",
-    "*://*/url/go.php?url=*",
-    "*://*.leechall.com/redirect.php?url=*",
-    "*://*.news-gg.com/l/?*",
-    "*://*.mobile01.com/redirect.php?*",
-    "*://*.nurhamka.com/*?url=*",
-    "*://*.linepc.site/*?url=*",
-    "*://*.adobedownload.org/redirect/?url=*",
-    "*://*.sopasti.com/anime.php?*",
-    "*://*.zxro.com/u/*?url=*",
-    "*://*.macdownload.org/redirect/?url=*",
-    "*://*.forek.info/*?url=*",
-    "*://*.creditcable.info/*/*?*",
-    "*://*.adfoc.us/serve/sitelinks/?*",
-    "*://*.made-by.org/redirection/?url=*",
-    "*://*.itsbx.com/redirect/?url=*",
-    "*://*.forocoches.com/link.php?url=*",
-    "*://*.pixiv.net/jump.php?url=*",
-    "*://hdblurayindir.com/git.php?url=*",
-    "*://gate.sc/?url=*",
-    "*://freetutsdownload.net/redirect-to/?url=*",
-    "*://mcpedl.com/leaving/?url=*",
-    "*://go.redirectingat.com/?id=*&url=*"
-  ],
-  "param_url_raw": [
-    "*://*.steamcommunity.com/linkfilter/?url=*"
-  ],
-  "param_q_encoded": [
-    "*://*.youtube.com/redirect?*"
-  ],
-  "param_aurl_encoded": [
-    "*://*.folderenius.com/*/*?*"
-  ],
-  "param_capital_url_encoded": [
-    "*://*.unlockapk.com/dl/mirror.php?*"
-  ],
-  "param_rel_base64": [
-    "*://*.kharismanews.com/?rel=*",
-    "*://out.x-forex.site/?rel=*"
-  ],
-  "param_link_encoded": [
-    "*://*.spaste.com/r/*link=*"
-  ],
-  "param_link_base64": [
-    "*://*.leechpremium.link/cheat/?link=*",
-    "*://*.bdzone.xyz/cheat.php?link=*",
-    "*://*.extramovies.casa/download.php?name=*&link=*",
-    "*://*.gilakerja.com/*/?link=*",
-    "*://sekolahgan.my.id/?link=*"
-  ],
-  "param_link_encoded_base64": [
-    "*://*.safelinkgratis.info/*?link=*"
-  ],
-  "param_kesehatan_base64": [
-    "*://*.infosia.xyz/?kesehatan=*"
-  ],
-  "param_wildcard_base64": [
-    "*://*.pafpaf.info/?*=*",
-    "*://*.binerfile.info/?*=*",
-    "*://kurosafety.menantisenja.com/?*=*",
-    "*://hightech.web.id/*?*=*"
-  ],
-  "param_r_base64": [
-    "*://*/?r=*",
-    "*://*/api?r=*",
-    "*://*/api/?r=*"
-  ],
-  "param_kareeI_base64_pipes": [
-    "*://*.blogspot.com/?kareeI=*"
-  ],
-  "param_cr_base64": [
-    "*://*.ouo.today/?*"
-  ],
-  "param_a_base64": [
-    "*://*.adsafelink.net/generate?a=*"
-  ],
-  "param_url_base64": [
-    "*://*/p/*.html?url=aHR0c*",
-    "*://*.blogspot.com/*/*/*?url=*",
-    "*://*/descargar/index.php?url=*",
-    "*://*/gotothedl.html?url=*",
-    "*://*.mispuani.xyz/*?url=*",
-    "*://*.safelinku.icu/*?url=*",
-    "*://*.ad4msan.win/safe?url=*",
-    "*://*.infotekno.net/vga?url=*",
-    "*://*.sehuruf.com/linkku/?url=*",
-    "*://*.novicearea.com/*/?url=*",
-    "*://*.dikatekno.com/go/?url=*",
-    "*://*.blackmod.net/dl/?url=*",
-    "*://*.hulblog.com/*/?url=*",
-    "*://*.omglyrics.com/*/?url=*",
-    "*://*.nyantaidulu.com/linknya/?url=*",
-    "*://*.pixelshost.com/?url=*"
-  ],
-  "param_id_base64": [
-    "*://*/p/*.html?id=*",
-    "*://*.newsdecorate.com/?id=*"
-  ],
-  "param_get_base64": [
-    "*://safelink.hargawebsite.com/?get=*",
-    "*://safelink.hargawebsite.com/*/?get=*"
-  ],
-  "param_u_base64": [
-    "*://*.rikucan.com/?u=*",
-    "*://*.noriskdomain.com/*/analyze?*"
-  ],
-  "param_go_base64": [
-    "*://*/api/index.php?go=*",
-    "*://*.telolet.in/?go=*",
-    "*://*.lompat.in/?go=*",
-    "*://*.grandmovie21.com/?go=*",
-    "*://*.postku.org/?go=*"
-  ],
-  "param_site_base64": [
-    "*://*.masreyhan.com/*?site=*",
-    "*://*.pasardownload.com/*?site=*",
-    "*://*.vius.info/*?site=*",
-    "*://*.cariskuy.com/*?site=*",
-    "*://*.losstor.com/ini/?site=*",
-    "*://*.giga74.com/*?site=*",
-    "*://*.hfiz.site/?site=*",
-    "*://*.cemiw.net/*?site=*"
-  ],
-  "param_reff_base64": [
-    "*://*.remiyu.me/*?reff=*",
-    "*://*.ceksite.id/*?reff=*",
-    "*://*.postku.org/*?reff=*"
-  ],
-  "param_s_encoded": [
-    "*://*.ouo.io/*?s=*",
-    "*://*.cpmlink.net/s/*?s=*",
-    "*://*.shon.xyz/s/*?s=*"
-  ],
-  "param_dl_encoded_base64": [
-    "*://*.nimebatch.net/download/?dl=*"
-  ],
-  "param_health_encoded_base64": [
-    "*://*.newhealthblog.com/?health=*"
-  ],
-  "param_id_reverse_base64": [
-    "*://*/instagram/campanha.php?*"
-  ],
-  "param_token_base64": [
-    "*://*.mundodocinema.ga/redirecionamento_final?*"
-  ],
-  "param_href_encoded": [
-    "*://*.maranhesduve.club/?*",
-    "*://*.sparbuttantowa.pro/*?*"
-  ],
-  "param_short_encoded": [
-    "*://*.duit.cc/*?*"
-  ],
-  "param_id_base64_replacements": [
-    "*://*.safelinkconverter.com/*?*",
-    "*://*.safelinkreview.com/*?*",
-    "*://*.safelinkreviewx.com/*?*",
-    "*://*.safelinkreview.co/*?*",
-    "*://*.awsubsco.ml/*?*",
-    "*://*.awsubsco.cf/*?*"
-  ],
-  "param_dest_encoded": [
-    "*://*.ecleneue.com/pushredirect/?*"
-  ],
-  "param_go_hex": [
-    "*://*.zflas.com/*?go=*",
-    "*://*.365myoffice.com/?go=*",
-    "*://*.shiroyasha.me/?go=*",
-    "*://*.copydev.com/?go=*"
-  ],
-  "param_to_base64": [
-    "*://*.beermoneyforum.com/redirect?*",
-    "*://*.instant-hack.to/redirect*?to=*"
-  ],
-  "param_data_base64": [
-    "*://*.magersari.web.id/?*",
-    "*://zodiark.xyz/?data=*",
-    "*://rahwana.xyz/?data=*",
-    "*://caraterbaik.my.id/?data=*",
-    "*://*.wisatamu.my.id/?data=*"
-  ],
-  "useragent_chrome": [
-    "*://*.fluxteam.xyz/*"
-  ],
-  "useragent_empty": [
-    "*://*.sh.st/*",
-    "*://*.ceesty.com/*",
-    "*://*.corneey.com/*"
-  ],
-  "useragent_iphone": [
-    "*://*.linkvertise.com/*"
-  ],
-  "redirect_persist_id_path": [
-    "*://*.bercara.com/*",
-    "*://*.semawur.com/*",
-    "*://*.in11.site/*",
-    "*://*.droidtamvan.me/*",
-    "*://*.haipedia.com/*",
-    "*://*.shrinkads.com/*",
-    "*://*.modebaca.com/*",
-    "*://*.liveshootv.com/*",
-    "*://*.shrink.world/*",
-    "*://*.mymastah.xyz/*",
-    "*://*.sportif.id/*",
-    "*://*.healthinsider.online/*",
-    "*://*.cararoot.id/*",
-    "*://*.gubukbisnis.me/*",
-    "*://*.sekilastekno.com/*",
-    "*://*.megaurl.in/*"
-  ],
-  "redirect_persist_id_path_1_letter": [
-    "*://*.wadooo.com/g/*",
-    "*://*.gotravelgo.space/g/*",
-    "*://*.pantauterus.me/g/*",
-    "*://*.liputannubi.net/g/*"
-  ],
-  "contribute_hash": [
-    "*://*.wadooo.com/*",
-    "*://*.gotravelgo.space/*",
-    "*://*.pantauterus.me/*",
-    "*://*.liputannubi.net/*",
-    "*://*.squidssh.com/user/links",
-    "*://*.goodssh.com/user/links"
-  ],
-  "tracker": [
-    "*://*.x.co/*",
-    "*://*.1w.tf/*",
-    "*://*.1b.yt/*",
-    "*://*.is.gd/*",
-    "*://*.ow.ly/*",
-    "*://*.po.st/*",
-    "*://*.b.link/*",
-    "*://*.plu.sh/*",
-    "*://*.zii.bz/*",
-    "*://*.dis.gd/*",
-    "*://*.t2m.io/*",
-    "*://*.bit.do/*",
-    "*://*.goo.gl/*",
-    "*://*.bit.ly/*",
-    "*://*.tiny.ie/*",
-    "*://*.cutt.ly/*",
-    "*://*.hive.am/*",
-    "*://*.snip.li/*",
-    "*://*.buff.ly/*",
-    "*://*.go2l.ink/*",
-    "*://*.page.link/*",
-    "*://*.shortcm.li/*",
-    "*://*.snipli.com/*",
-    "*://*.send.digital/*",
-    "*://*.great.social/*",
-    "*://*.t.co/*",
-    "*://analytics.twitter.com/mob_idsync_click?*",
-    "*://click.linksynergy.com/link?*",
-    "*://click.linksynergy.com/deeplink?*",
-    "*://track.flexlinkspro.com/a.ashx?*",
-    "*://shareasale.com/r.cfm?*",
-    "*://shareasale-analytics.com/r.cfm?*",
-    "*://r20.rs6.net/tn.jsp?*",
-    "*://ay.link/i/*",
-    "*://*.disq.us/url?url=*",
-    "*://analytics.supplyframe.com/*",
-    "*://clg.am/*",
-    "*://rebrand.ly/*"
-  ],
-  "tracker_force_http": [
-    "ow.ly",
-    "nzn.me"
-  ],
-  "ip_logger": [
-    "*://*.viral.over-blog.com/*",
-    "*://*.gyazo.in/*",
-    "*://*.ps3cfw.com/*",
-    "*://*.urlz.fr/*",
-    "*://*.webpanel.space/*",
-    "*://*.steamcommumity.com/*",
-    "*://*.imgur.com.de/*",
-    "*://*.fuglekos.com/*",
-    "*://*.discord.kim/*",
-    "*://*.prntcrs.com/*",
-    "*://*.grabify.link/*",
-    "*://*.leancoding.co/*",
-    "*://*.stopify.co/*",
-    "*://*.freegiftcards.co/*",
-    "*://*.joinmy.site/*",
-    "*://*.curiouscat.club/*",
-    "*://*.catsnthings.fun/*",
-    "*://*.catsnthings.com/*",
-    "*://*.xn--yutube-iqc.com/*",
-    "*://*.gyazo.nl/*",
-    "*://*.yip.su/*",
-    "*://*.iplogger.com/*",
-    "*://*.iplogger.co/*",
-    "*://*.iplogger.org/*",
-    "*://*.iplogger.ru/*",
-    "*://*.iplogger.info/*",
-    "*://*.ipgraber.ru/*",
-    "*://*.ipgrabber.ru/*",
-    "*://*.2no.co/*",
-    "*://*.02ip.ru/*",
-    "*://*.iplis.ru/*",
-    "*://*.iplo.ru/*",
-    "*://*.ezstat.ru/*",
-    "*://*.whatstheirip.com/*",
-    "*://*.partpicker.shop/*",
-    "*://*.sportshub.bar/*",
-    "*://*.locations.quest/*",
-    "*://*.lovebird.guru/*",
-    "*://*.trulove.guru/*",
-    "*://*.dateing.club/*",
-    "*://*.shrekis.life/*",
-    "*://*.headshot.monster/*",
-    "*://*.gaming-at-my.best/*",
-    "*://*.progaming.monster/*",
-    "*://*.yourmy.monster/*",
-    "*://*.imageshare.best/*",
-    "*://*.screenshot.best/*",
-    "*://*.gamingfun.me/*",
-    "*://*.catsnthing.com/*",
-    "*://*.fortnitechat.site/*",
-    "*://*.fortnight.space/*",
-    "*://*.hondachat.com/*",
-    "*://*.bvog.com/*",
-    "*://*.youramonkey.com/*",
-    "*://*.pronosparadise.com/*",
-    "*://*.freebooter.pro/*",
-    "*://*.blasze.com/*",
-    "*://*.blasze.tk/*",
-    "*://*.ipgrab.org/*",
-    "*://*.gyazos.com/*"
-  ],
-  "linkvertise_safe_in": {}
+	"path_base64": [
+		"*://*.bursadrakor.com/protect-link/*",
+		"*://*.getfile.mobi/get/files/*",
+		"*://hikarinoakari.com/out/?*",
+		"*://*.itscybertech.com/*"
+	],
+	"path_s_encoded": [
+		"*://*.gslink.co/e/*/s/*"
+	],
+	"path_r_base64": [
+		"*://*.linkspy.cc/r/*"
+	],
+	"path_dl_base64": [
+		"*://*.k2nblog.com/dl/*",
+		"*://*.filekita.me/page/dl/*"
+	],
+	"path_u_id_base64": [
+		"*://*.shrink-service.it/u/*/*"
+	],
+	"path_ads_hex": [
+		"*://*.leechall.com/ads/*"
+	],
+	"query_raw": [
+		"*://*.anonym.to/?*",
+		"*://*.anonymz.com/?*",
+		"*://*.hidereferrer.com/?*",
+		"*://*.pixiv.net/jump.php?*"
+	],
+	"query_base64": [
+		"*://*.hikarinoakariost.info/out/?*",
+		"*://*.p3dm.ru/download-en.html?*",
+		"*://*.iplhd.cf/*?*"
+	],
+	"hash_base64": [
+		"*://*.acorme.com/*"
+	],
+	"param_url_general": [
+		"*://*/st?api=*&url=*",
+		"*://*/st/?api=*&url=*",
+		"*://*/full?api=*&url=*",
+		"*://*/full/?api=*&url=*",
+		"*://*/full?api=*&url=*&type=*",
+		"*://*/full/?api=*&url=*&type=*",
+		"*://*/api/*/full-pages?api_key=*&url=*&type=*"
+	],
+	"param_url_encoded": [
+		"*://*/safeme/?*",
+		"*://*/url/go.php?url=*",
+		"*://*.leechall.com/redirect.php?url=*",
+		"*://*.news-gg.com/l/?*",
+		"*://*.mobile01.com/redirect.php?*",
+		"*://*.nurhamka.com/*?url=*",
+		"*://*.linepc.site/*?url=*",
+		"*://*.adobedownload.org/redirect/?url=*",
+		"*://*.sopasti.com/anime.php?*",
+		"*://*.zxro.com/u/*?url=*",
+		"*://*.macdownload.org/redirect/?url=*",
+		"*://*.forek.info/*?url=*",
+		"*://*.creditcable.info/*/*?*",
+		"*://*.adfoc.us/serve/sitelinks/?*",
+		"*://*.made-by.org/redirection/?url=*",
+		"*://*.itsbx.com/redirect/?url=*",
+		"*://*.forocoches.com/link.php?url=*",
+		"*://*.pixiv.net/jump.php?url=*",
+		"*://hdblurayindir.com/git.php?url=*",
+		"*://gate.sc/?url=*",
+		"*://freetutsdownload.net/redirect-to/?url=*",
+		"*://mcpedl.com/leaving/?url=*",
+		"*://go.redirectingat.com/?id=*&url=*"
+	],
+	"param_url_raw": [
+		"*://*.steamcommunity.com/linkfilter/?url=*"
+	],
+	"param_q_encoded": [
+		"*://*.youtube.com/redirect?*"
+	],
+	"param_aurl_encoded": [
+		"*://*.folderenius.com/*/*?*"
+	],
+	"param_capital_url_encoded": [
+		"*://*.unlockapk.com/dl/mirror.php?*"
+	],
+	"param_rel_base64": [
+		"*://*.kharismanews.com/?rel=*",
+		"*://out.x-forex.site/?rel=*"
+	],
+	"param_link_encoded": [
+		"*://*.spaste.com/r/*link=*"
+	],
+	"param_link_base64": [
+		"*://*.leechpremium.link/cheat/?link=*",
+		"*://*.bdzone.xyz/cheat.php?link=*",
+		"*://*.extramovies.casa/download.php?name=*&link=*",
+		"*://*.gilakerja.com/*/?link=*",
+		"*://sekolahgan.my.id/?link=*"
+	],
+	"param_link_encoded_base64": [
+		"*://*.safelinkgratis.info/*?link=*"
+	],
+	"param_kesehatan_base64": [
+		"*://*.infosia.xyz/?kesehatan=*"
+	],
+	"param_wildcard_base64": [
+		"*://*.pafpaf.info/?*=*",
+		"*://*.binerfile.info/?*=*",
+		"*://kurosafety.menantisenja.com/?*=*",
+		"*://hightech.web.id/*?*=*"
+	],
+	"param_r_base64": [
+		"*://*/?r=*",
+		"*://*/api?r=*",
+		"*://*/api/?r=*"
+	],
+	"param_kareeI_base64_pipes": [
+		"*://*.blogspot.com/?kareeI=*"
+	],
+	"param_cr_base64": [
+		"*://*.ouo.today/?*"
+	],
+	"param_a_base64": [
+		"*://*.adsafelink.net/generate?a=*"
+	],
+	"param_url_base64": [
+		"*://*/p/*.html?url=aHR0c*",
+		"*://*.blogspot.com/*/*/*?url=*",
+		"*://*/descargar/index.php?url=*",
+		"*://*/gotothedl.html?url=*",
+		"*://*.mispuani.xyz/*?url=*",
+		"*://*.safelinku.icu/*?url=*",
+		"*://*.ad4msan.win/safe?url=*",
+		"*://*.infotekno.net/vga?url=*",
+		"*://*.sehuruf.com/linkku/?url=*",
+		"*://*.novicearea.com/*/?url=*",
+		"*://*.dikatekno.com/go/?url=*",
+		"*://*.blackmod.net/dl/?url=*",
+		"*://*.hulblog.com/*/?url=*",
+		"*://*.omglyrics.com/*/?url=*",
+		"*://*.nyantaidulu.com/linknya/?url=*",
+		"*://*.pixelshost.com/?url=*"
+	],
+	"param_id_base64": [
+		"*://*/p/*.html?id=*",
+		"*://*.newsdecorate.com/?id=*"
+	],
+	"param_get_base64": [
+		"*://safelink.hargawebsite.com/?get=*",
+		"*://safelink.hargawebsite.com/*/?get=*"
+	],
+	"param_u_base64": [
+		"*://*.rikucan.com/?u=*",
+		"*://*.noriskdomain.com/*/analyze?*"
+	],
+	"param_go_base64": [
+		"*://*/api/index.php?go=*",
+		"*://*.telolet.in/?go=*",
+		"*://*.lompat.in/?go=*",
+		"*://*.grandmovie21.com/?go=*",
+		"*://*.postku.org/?go=*"
+	],
+	"param_site_base64": [
+		"*://*.masreyhan.com/*?site=*",
+		"*://*.pasardownload.com/*?site=*",
+		"*://*.vius.info/*?site=*",
+		"*://*.cariskuy.com/*?site=*",
+		"*://*.losstor.com/ini/?site=*",
+		"*://*.giga74.com/*?site=*",
+		"*://*.hfiz.site/?site=*",
+		"*://*.cemiw.net/*?site=*"
+	],
+	"param_reff_base64": [
+		"*://*.remiyu.me/*?reff=*",
+		"*://*.ceksite.id/*?reff=*",
+		"*://*.postku.org/*?reff=*"
+	],
+	"param_s_encoded": [
+		"*://*.ouo.io/*?s=*",
+		"*://*.cpmlink.net/s/*?s=*",
+		"*://*.shon.xyz/s/*?s=*"
+	],
+	"param_dl_encoded_base64": [
+		"*://*.nimebatch.net/download/?dl=*"
+	],
+	"param_health_encoded_base64": [
+		"*://*.newhealthblog.com/?health=*"
+	],
+	"param_id_reverse_base64": [
+		"*://*/instagram/campanha.php?*"
+	],
+	"param_token_base64": [
+		"*://*.mundodocinema.ga/redirecionamento_final?*"
+	],
+	"param_href_encoded": [
+		"*://*.maranhesduve.club/?*",
+		"*://*.sparbuttantowa.pro/*?*"
+	],
+	"param_short_encoded": [
+		"*://*.duit.cc/*?*"
+	],
+	"param_id_base64_replacements": [
+		"*://*.safelinkconverter.com/*?*",
+		"*://*.safelinkreview.com/*?*",
+		"*://*.safelinkreviewx.com/*?*",
+		"*://*.safelinkreview.co/*?*",
+		"*://*.awsubsco.ml/*?*",
+		"*://*.awsubsco.cf/*?*"
+	],
+	"param_dest_encoded": [
+		"*://*.ecleneue.com/pushredirect/?*"
+	],
+	"param_go_hex": [
+		"*://*.zflas.com/*?go=*",
+		"*://*.365myoffice.com/?go=*",
+		"*://*.shiroyasha.me/?go=*",
+		"*://*.copydev.com/?go=*"
+	],
+	"param_to_base64": [
+		"*://*.beermoneyforum.com/redirect?*",
+		"*://*.instant-hack.to/redirect*?to=*"
+	],
+	"param_data_base64": [
+		"*://*.magersari.web.id/?*",
+		"*://zodiark.xyz/?data=*",
+		"*://rahwana.xyz/?data=*",
+		"*://caraterbaik.my.id/?data=*",
+		"*://*.wisatamu.my.id/?data=*"
+	],
+	"useragent_chrome": [
+		"*://*.fluxteam.xyz/*"
+	],
+	"useragent_empty": [
+		"*://*.sh.st/*",
+		"*://*.ceesty.com/*",
+		"*://*.corneey.com/*"
+	],
+	"useragent_iphone": [
+		"*://*.linkvertise.com/*"
+	],
+	"redirect_persist_id_path": [
+		"*://*.bercara.com/*",
+		"*://*.semawur.com/*",
+		"*://*.in11.site/*",
+		"*://*.droidtamvan.me/*",
+		"*://*.haipedia.com/*",
+		"*://*.shrinkads.com/*",
+		"*://*.modebaca.com/*",
+		"*://*.liveshootv.com/*",
+		"*://*.shrink.world/*",
+		"*://*.mymastah.xyz/*",
+		"*://*.sportif.id/*",
+		"*://*.healthinsider.online/*",
+		"*://*.cararoot.id/*",
+		"*://*.gubukbisnis.me/*",
+		"*://*.sekilastekno.com/*",
+		"*://*.megaurl.in/*"
+	],
+	"redirect_persist_id_path_1_letter": [
+		"*://*.wadooo.com/g/*",
+		"*://*.gotravelgo.space/g/*",
+		"*://*.pantauterus.me/g/*",
+		"*://*.liputannubi.net/g/*"
+	],
+	"contribute_hash": [
+		"*://*.wadooo.com/*",
+		"*://*.gotravelgo.space/*",
+		"*://*.pantauterus.me/*",
+		"*://*.liputannubi.net/*",
+		"*://*.squidssh.com/user/links",
+		"*://*.goodssh.com/user/links"
+	],
+	"tracker": [
+		"*://*.x.co/*",
+		"*://*.1w.tf/*",
+		"*://*.1b.yt/*",
+		"*://*.is.gd/*",
+		"*://*.ow.ly/*",
+		"*://*.po.st/*",
+		"*://*.b.link/*",
+		"*://*.plu.sh/*",
+		"*://*.zii.bz/*",
+		"*://*.dis.gd/*",
+		"*://*.t2m.io/*",
+		"*://*.bit.do/*",
+		"*://*.goo.gl/*",
+		"*://*.bit.ly/*",
+		"*://*.tiny.ie/*",
+		"*://*.cutt.ly/*",
+		"*://*.hive.am/*",
+		"*://*.snip.li/*",
+		"*://*.buff.ly/*",
+		"*://*.go2l.ink/*",
+		"*://*.page.link/*",
+		"*://*.shortcm.li/*",
+		"*://*.snipli.com/*",
+		"*://*.send.digital/*",
+		"*://*.great.social/*",
+		"*://*.t.co/*",
+		"*://analytics.twitter.com/mob_idsync_click?*",
+		"*://click.linksynergy.com/link?*",
+		"*://click.linksynergy.com/deeplink?*",
+		"*://track.flexlinkspro.com/a.ashx?*",
+		"*://shareasale.com/r.cfm?*",
+		"*://shareasale-analytics.com/r.cfm?*",
+		"*://r20.rs6.net/tn.jsp?*",
+		"*://ay.link/i/*",
+		"*://*.disq.us/url?url=*",
+		"*://analytics.supplyframe.com/*",
+		"*://clg.am/*",
+		"*://rebrand.ly/*"
+	],
+	"tracker_force_http": [
+		"ow.ly",
+		"nzn.me"
+	],
+	"ip_logger": [
+		"*://*.viral.over-blog.com/*",
+		"*://*.gyazo.in/*",
+		"*://*.ps3cfw.com/*",
+		"*://*.urlz.fr/*",
+		"*://*.webpanel.space/*",
+		"*://*.steamcommumity.com/*",
+		"*://*.imgur.com.de/*",
+		"*://*.fuglekos.com/*",
+		"*://*.discord.kim/*",
+		"*://*.prntcrs.com/*",
+		"*://*.grabify.link/*",
+		"*://*.leancoding.co/*",
+		"*://*.stopify.co/*",
+		"*://*.freegiftcards.co/*",
+		"*://*.joinmy.site/*",
+		"*://*.curiouscat.club/*",
+		"*://*.catsnthings.fun/*",
+		"*://*.catsnthings.com/*",
+		"*://*.xn--yutube-iqc.com/*",
+		"*://*.gyazo.nl/*",
+		"*://*.yip.su/*",
+		"*://*.iplogger.com/*",
+		"*://*.iplogger.co/*",
+		"*://*.iplogger.org/*",
+		"*://*.iplogger.ru/*",
+		"*://*.iplogger.info/*",
+		"*://*.ipgraber.ru/*",
+		"*://*.ipgrabber.ru/*",
+		"*://*.2no.co/*",
+		"*://*.02ip.ru/*",
+		"*://*.iplis.ru/*",
+		"*://*.iplo.ru/*",
+		"*://*.ezstat.ru/*",
+		"*://*.whatstheirip.com/*",
+		"*://*.partpicker.shop/*",
+		"*://*.sportshub.bar/*",
+		"*://*.locations.quest/*",
+		"*://*.lovebird.guru/*",
+		"*://*.trulove.guru/*",
+		"*://*.dateing.club/*",
+		"*://*.shrekis.life/*",
+		"*://*.headshot.monster/*",
+		"*://*.gaming-at-my.best/*",
+		"*://*.progaming.monster/*",
+		"*://*.yourmy.monster/*",
+		"*://*.imageshare.best/*",
+		"*://*.screenshot.best/*",
+		"*://*.gamingfun.me/*",
+		"*://*.catsnthing.com/*",
+		"*://*.fortnitechat.site/*",
+		"*://*.fortnight.space/*",
+		"*://*.hondachat.com/*",
+		"*://*.bvog.com/*",
+		"*://*.youramonkey.com/*",
+		"*://*.pronosparadise.com/*",
+		"*://*.freebooter.pro/*",
+		"*://*.blasze.com/*",
+		"*://*.blasze.tk/*",
+		"*://*.ipgrab.org/*",
+		"*://*.gyazos.com/*"
+	],
+	"linkvertise_safe_in": {}
 }

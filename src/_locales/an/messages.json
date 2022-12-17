@@ -1,11 +1,11 @@
 {
-  "version": {
-    "message": "Versión"
-  },
-  "definitionsVersion": {
-    "message": "Omitir definiziónes"
-  },
-  "changelog": {
-    "message": "Rechistro de cambio."
-  }
+	"version": {
+		"message": "Versión"
+	},
+	"definitionsVersion": {
+		"message": "Omitir definiziónes"
+	},
+	"changelog": {
+		"message": "Rechistro de cambio."
+	}
 }
