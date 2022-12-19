@@ -1,18 +1,22 @@
-import BypassDefinition from "./BypassDefinition";
+import BypassDefinition from './BypassDefinition'
 
 export default class Rekonise extends BypassDefinition {
-    constructor() {
-        super();
-    }
+  constructor () {
+    super()
+  }
 
-    execute() {
-        let xhr = new XMLHttpRequest();
-        xhr.onload = () => {
-            let data = JSON.parse(xhr.responseText);
-            this.helpers.safelyNavigate(data.url);
-        }
-        xhr.open("GET", "https://api.rekonise.com/unlocks" + location.pathname, true);
-        xhr.send();
+  execute () {
+    let xhr = new XMLHttpRequest()
+    xhr.onload = () => {
+      let data = JSON.parse(xhr.responseText)
+      this.helpers.safelyNavigate(data.url)
     }
+    xhr.open(
+      'GET',
+      'https://api.rekonise.com/unlocks' + location.pathname,
+      true
+    )
+    xhr.send()
+  }
 }
-export const matches = ["rekonise.com"];
+export const matches = ['rekonise.com']
