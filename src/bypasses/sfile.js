@@ -6,7 +6,7 @@ export default class Sfile extends BypassDefinition {
   }
 
   execute () {
-    ODP(window, 'downloadButton', {
+    this.helpers.ODP(window, 'downloadButton', {
       set: a => {
         if (a && a.href) {
           this.helpers.safelyAssign(a.href)

@@ -6,7 +6,7 @@ export default class Akoam extends BypassDefinition {
   }
 
   execute () {
-    ODP(window, 'timer', {
+    this.helpers.ODP(window, 'timer', {
       value: 0,
       writable: false
     })
