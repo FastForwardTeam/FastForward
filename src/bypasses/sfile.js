@@ -1,19 +1,19 @@
 import BypassDefinition from './BypassDefinition'
 
 export default class Sfile extends BypassDefinition {
-  constructor () {
-    super()
-  }
+    constructor() {
+        super()
+    }
 
-  execute () {
-    this.helpers.ODP(window, 'downloadButton', {
-      set: a => {
-        if (a && a.href) {
-          this.helpers.safelyAssign(a.href)
-        }
-      }
-    })
-  }
+    execute() {
+        this.helpers.ODP(window, 'downloadButton', {
+            set: a => {
+                if (a?.href) {
+                    this.helpers.safelyAssign(a.href)
+                }
+            }
+        })
+    }
 }
 
 export const matches = ['sfile.mobi', 'sfile.xyz', 'apkmos.com']
