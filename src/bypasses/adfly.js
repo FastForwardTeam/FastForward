@@ -1,4 +1,4 @@
-import BypassDefinition from "./BypassDefinition";
+import BypassDefinition from "./BypassDefinition.js";
 
 export default class Adfly extends BypassDefinition {
     constructor() {

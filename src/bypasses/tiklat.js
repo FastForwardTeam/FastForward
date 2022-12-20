@@ -1,4 +1,4 @@
-import BypassDefinition from './BypassDefinition'
+import BypassDefinition from './BypassDefinition.js'
 
 export default class Tiklat extends BypassDefinition {
   constructor () {
