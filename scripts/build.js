@@ -98,6 +98,9 @@ async function run_build(type, commit_number) {
     console.log(`[FastForward.build.${type}] copying PRIVACY.md to ${destination}`);
     fs.copyFileSync(`${working_directory}/PRIVACY.md`, `${destination}/PRIVACY.md`);
 
+    console.log(`[FastForward.build.${type}] copying jszip.min.js to ${destination}`);
+    fs.copyFileSync(`${working_directory}/src/external/jszip.min.js`, `${destination}/jszip.min.js`);
+
     console.log(`[FastForward.build.${type}] copying manifest to ${destination}`);
     fs.copyFileSync(`${working_directory}/platform_spec/${type}/manifest.json`, `${destination}/manifest.json`);
 
