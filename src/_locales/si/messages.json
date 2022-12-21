@@ -1,0 +1,158 @@
+{
+	"appDesc": {
+		"message": "යටත් වීමෙන් ඔබගේ කාලය නාස්ති නොකරන්න. ෆාස්ට්ෆෝවර්ඩ් කරදරකාරී කෙටි සබැඳි මග හරියි."
+	},
+	"firstrunTitle": {
+		"message": "ෆාස්ට්ෆෝවර්ඩ් ස්ථාපනය කළාට ස්තූතියි!"
+	},
+	"firstrunNoScript": {
+		"message": "ෆාස්ට්ෆෝවර්ඩ් සඳහා නොගැළපෙන නෝස්ක්‍රිප්ට් හෝ සමාන දෙයක් ඔබ භාවිතා කරන බව පෙනෙයි."
+	},
+	"version": {
+		"message": "අනුවාදය"
+	},
+	"definitionsVersion": {
+		"message": "මඟහැරීමේ නිර්වචන"
+	},
+	"changelog": {
+		"message": "වෙනස්කම් සටහන"
+	},
+	"update": {
+		"message": "යාවත්කාල බලන්න"
+	},
+	"updating": {
+		"message": "මඟහැරීමේ නිර්වචන බාගැනෙමින්..."
+	},
+	"updateYes": {
+		"message": "මඟහැරීමේ නිර්වචන සාර්ථකව බාගැනිණි."
+	},
+	"updateNo": {
+		"message": "මඟහැරීමේ නිර්වචන යාවත්කාලීනයි."
+	},
+	"faq": {
+		"message": "නිතර අසන ප්‍රශ්න"
+	},
+	"bypassCounter": {
+		"message": "ෆාස්ට්ෆෝවර්ඩ් දැනටමත් ඔබ වෙනුවෙන් අඩවි % ක් මඟහැර ඇත."
+	},
+	"support": {
+		"message": "ෆාස්ට්ෆෝවර්ඩ් සඳහා දායකවන්න."
+	},
+	"options": {
+		"message": "විකල්ප"
+	},
+	"optionsLink": {
+		"message": "ෆාස්ට්ෆෝවර්ඩ් විකල්ප සංශෝධනය."
+	},
+	"optionsEnabled": {
+		"message": "අඩවි මඟහැරීම සබල කරන්න."
+	},
+	"optionsNavigationDelay": {
+		"message": "තත්. % කට පසුව මාව ගමනාන්තයට රැගෙන යන්න."
+	},
+	"optionsTrackerBypass": {
+		"message": "ලුහුබැඳීම් මඟහරින්න. Apimon.de භාවිතයෙන් (bit.ly හා t.co)."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "ලුහුබැඳීම්වල ගමනාන්තයට මාව ක්‍ෂණිකව රැගෙන යන්න."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "මඟහැරීමට නොහැකි නම් අ.ජා.කෙ. සටහන්කරුවන් අවහිර කරන්න."
+	},
+	"optionsCrowdBypass": {
+		"message": "සාමූහික මඟහැරීම: මග හැරීමට නොහැකි කෙටි සබැඳි සපයා ගමනාන්ත ලබාගන්න."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "තත්. % කට පසු නව පටිත්තකින් සමූහික-මූලාශ්‍රයේ ගමනාන්තය විවෘත කරන්න."
+	},
+	"optionsCrowdAutoClose": {
+		"message": "සමූහික-මූලාශ්‍රයේ අඩංගු ගමනාන්තය සහිත පටිත්ත පිවිසීමෙන් තත්. % කට පසු වසන්න."
+	},
+	"privacyPolicy": {
+		"message": "රහස්‍යතා ප්‍රතිපත්තිය"
+	},
+	"contributors": {
+		"message": "දායකයින්"
+	},
+	"optionsUserscripts": {
+		"message": "අභිරුචි මඟහැරීම්"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "මෙය සංවර්ධකයින්ට අඩවි මඟ හැරීම සඳහා තමන්ගේම අත්පතක් සෑදීමට වැඩිදුර විශේෂාංගයකි. කදිම නම්, ඒවා සැවොමටම භාවිතය සඳහා ෆාස්ට්ෆෝවර්ඩ් වෙත එක් කිරීමට ගිට්හබ් හරහා යොමු කළ හැකිය."
+	},
+	"beforeNavigate": {
+		"message": "ඔබගේ ගමනාන්තයට ආසන්නයි."
+	},
+	"beforeNavigateDestination": {
+		"message": "ඔබගේ ගමනාන්තය වන්නේ %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "කෙසේ වුවද, ඔබ දැන් යාත්‍රණය කළහොත්, ඔවුන් ෆාස්ට්ෆෝවර්ඩ් හඳුනා ගනී."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "තත්පර % කින් ඔබව තවදුරටත් අනාවරණය නොවනු ඇත."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "තත්පරයකින් ඔබව තවදුරටත් අනාවරණය නොවනු ඇත."
+	},
+	"beforeNavigateTimer": {
+		"message": "තත්පර % කින් ඔබව ස්වයංක්‍රීයව හරවා යවනු ලැබේ."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "තත්පරයකින් ඔබව ස්වයංක්‍රීයව හරවා යවනු ලැබේ."
+	},
+	"beforeNavigateOptions": {
+		"message": "ඔබට ක්‍ෂණිකව හෝ යම් කාලයකින් හරවා යැවීමට අවශ්‍යද?"
+	},
+	"beforeNavigateInstant": {
+		"message": "% වෙත ඔබ යාත්‍රණය වෙමින්"
+	},
+	"infoLinkvertise": {
+		"message": "ඔබට මෙම අඩවිය මගහරවා දීමට පෙර මෙම අභියෝගය සම්පූර්ණ කළ යුතුය. මෙය කළ පසු, අපට කරදරකාරී පියවර මඟ හැරීමට හැකිය!"
+	},
+	"infoFileHoster": {
+		"message": "කණගාටුයි, බාගැනීමේ සේවාදායකය ගොනුව බාගැනීමට ඉඩදීමට පෙර ඔබ රැඳී සිටි බව සහතික කර ගැනෙයි."
+	},
+	"infoOutdated": {
+		"message": "මෙම අඩවිය නවතම ෆාස්ට්ෆෝවර්ඩ් අනුවාදයකින් මඟහැර තිබේ."
+	},
+	"crowdWait": {
+		"message": "අවාසනාවකට, මෙම සබැඳිය හමු වූ පළමු පුද්ගලයා ඔබයි, නමුත් ඔබ බලා සිටීමෙන් පසුව, අනෙකුත් පරිශීලකයින්ට තවදුරටත් එසේ කිරීමට සිදු නොවේ."
+	},
+	"crowdDisabled": {
+		"message": "මෙම අඩවිය සාමූහික මඟහැරීම මගින් මඟ හරිනු ලබයි, ඔබට විකල්ප තුළ සබල කළ හැකිය."
+	},
+	"crowdBypassed": {
+		"message": "ඔබට රැඳී සිටීමට සිදු නොවනු ඇත!"
+	},
+	"crowdBypassedInfo": {
+		"message": "අන් ෆාස්ට්ෆෝවර්ඩ් පරිශීලකයින් දැනටමත් ඔබ සඳහා රැඳී සිටි අතර මෙය % වෙත යොමු වන බව වාර්තා කර ඇත."
+	},
+	"crowdBypassedTimer": {
+		"message": "මෙය තත්. % කින් නව පටියකින් විවෘත වේ."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "මෙය තත්පරයකින් නව පටියකින් විවෘත වේ."
+	},
+	"crowdCloseTimer": {
+		"message": "මෙම පටිය තත්. % කින් වැසෙයි."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "මෙම පටිය තත්පරයකින් වැසෙයි."
+	},
+	"cancel": {
+		"message": "අවලංගු."
+	},
+	"crowdBypassedIgnore": {
+		"message": "මෙය නිවරදි නැතිද?"
+	},
+	"crowdBypassedOptions": {
+		"message": "ඔබට මෙය නව පටියකින් ක්‍ෂණිකව හෝ යම් කාලයකින් විවෘත කිරීමට අවශ්‍යද?"
+	},
+	"blockedTitle": {
+		"message": "ෆාස්ට්ෆෝවර්ඩ් ඔබගේ අ.ජා.කෙ.(IP) සටහන් වීම වැළැක්විය."
+	},
+	"blockedSubtitle": {
+		"message": "නරක ක්‍රියාකරුවන් ඔබගේ අ.ජා.කෙ. ලබා ගැනීම වැළැක්වීමට අවශ්‍ය නොවේද?"
+	}
+}
