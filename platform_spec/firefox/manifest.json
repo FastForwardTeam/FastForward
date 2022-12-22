@@ -42,6 +42,7 @@
 	},
 	"background": {
 		"scripts": [
+			"jszip.min.js",
 			"background.js"
 		]
 	},
