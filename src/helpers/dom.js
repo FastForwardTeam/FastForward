@@ -57,6 +57,15 @@ export function ensureDomLoaded (func) {
     })
   }
 }
+export function ifElement(query, func, extraFunc){
+  let isHere = document.querySelector(query)
+  if (isHere){
+    func(isHere)
+  }
+  else if (extraFunc){
+    extraFunc()
+  }
+}
 export function awaitElement (elem, func) {
   let time = setInterval(() => {
     let element = document.querySelector(elem)
@@ -253,6 +262,7 @@ export default {
   safelyAssign,
   isGoodLink,
   bypassRequests,
+  ifElement,
   ODP,
   URL
 }
