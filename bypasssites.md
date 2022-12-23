@@ -19,7 +19,7 @@ uploaded.net X  <br />
 mylinks.xyz X  <br />
 mylinks.zone X  <br />
 mylink1.biz X  <br />
-shortmoz.link  <br />
+shortmoz.link C   <br />
 skinnycat.org X  <br />
 safelink.polrec.site X  <br />
 gamesmega.net  <br />
@@ -35,7 +35,7 @@ moon7.xyz/go X  <br />
 tlkm.id  <br />
 prox77.com/analyze/(id) X  <br />
 agdd5br.com/analyze/(id)  <br />
-sfile.mobi   <br />
+sfile.mobi  C   <br />
 sfile.xyz X  <br />
 apkmos.com  <br />
 gixen.com/home_1.php  <br />
@@ -87,7 +87,7 @@ lkc21.net  <br />
 layarkacaxxi.org X  <br />
 fastforward.team C <br />
 acortame.xyz X  <br />
-/linkvertise\.(com|net)|link-to\.net/  <br />
+/linkvertise\.(com|net)|link-to\.net/  C  <br />
 /^((www\.)?((file(factory|-upload)|asdfiles|mega4up)\.com|up-load\.io|cosmobox\.org|rockfile\.co X|devdrive\.cloud))$/  <br />
 srt.am   <br />
 complete2unlock.com C  <br />
@@ -109,7 +109,7 @@ goou.in X  <br />
 manualsbooks.com  <br />
 ryn.cc  <br />
 connect-trojan.net X  <br />
-binbox.io  <br />
+binbox.io X  <br />
 lnk2.cc   <br />
 ouo.press   <br />
 ouo.info X  <br />
@@ -122,7 +122,7 @@ oxy.cloud  <br />
 daunshorte.teknologilink.com X  <br />
 imgtaxi.com  <br />
 imgkoc.buzz X  <br />
-anonym.ninja  <br />
+anonym.ninja C <br />
 do2unlock.com X  <br />
 boostme.gg X  <br />
 /(driverays X|bioskopgo X|01nonton|thetecnostar|curimovie X|akltu X)\.com|cinema21\.tv/ X  <br />
@@ -134,7 +134,7 @@ spaste.com/s/  <br />
 spaste.com/site/  <br />
 /^((www\.)?(((get-click2|informations-library|media-blue|akashirohige|aibouanimelink|wwwfotografgotlin|casperqu|safelinksencrypter)\.blogspot|business\.ominfoupdate|insurance\.5ggyan|majidzhacker|citgratis|tekloggers|pro-bangla|ph\.(apps2app|samapkstore)|blog\.(hulblog|omgmusik|omglyrics))\.com|(pastikan|belajar-bersama2)\.me|(ph|fp)\.(tpaste|ontools)\.net|(blog\.infolanjutan|jkoding)\.xyz|((safe\.onbatch|anonimfiles)\.my|google-playss\.sdetectives)\.id|jackofnine\.site|getlink\.animesanka\.club))$/  <br />
 hello.tribuntekno.com X  <br />
-ytsubme.com  <br />
+ytsubme.com C   <br />
 shortlink.in X  <br />
 safe.doramaku.me X  <br />
 confile.net X  <br />
@@ -165,7 +165,7 @@ gsu.st X  <br />
 pucuktranslation.pw X  <br />
 mangalist.org  <br />
 (terbit|movies)21\.[a-z]+/  <br />
-onepieceex.net  <br />
+onepieceex.net C   <br />
 elanovia.com  <br />
 redir.animenine.net   <br />
 /download\.id\/thank-you\//  <br />
@@ -190,7 +190,7 @@ mi-globe.com/download/  <br />
 cpmlink.net  <br />
 subsvip.com X  <br />
 (shon|likn X)\.xyz|sloomp\.space/ X  <br />
-brpaper.com   <br />
+brpaper.com  C  <br />
 boo.tw X  <br />
 kora4top.com  <br />
 /(forexlap|forex-articles|forexmab)\.com/  <br />
@@ -257,7 +257,7 @@ favpng.com  <br />
 sh.st  <br />
 maukredit.online X  <br />
 /ay\.link|(shtms|aylink)\.co/ X  <br />
-forex1pro.com  <br />
+forex1pro.com  C  <br />
 sub4unlock.com  <br />
 oracle.com  <br />
 genlink.cc  <br />
@@ -266,7 +266,7 @@ rekonise.com C  <br />
 jwfinancas.club X  <br />
 saver.id  <br />
 androiddownload.net  <br />
-links.shortenbuddy.com  <br />
+links.shortenbuddy.com C   <br />
 anon.to  <br />
 dl-protect1.co X  <br />
 linkdoni.soft98.ir X  <br />
@@ -369,7 +369,7 @@ uprot.net  <br />
 apkadmin.com  <br />
 /mirrored\.to\/files\//  <br />
 tei.ai  <br />
-filedm.com  <br />
+filedm.com  C  <br />
 bowfile.com  <br />
 acorta-link.com X  <br />
 clk.asia  <br />

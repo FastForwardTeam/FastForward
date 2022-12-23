@@ -46,6 +46,49 @@ export function insertInfoBox(text) {
     setTimeout(() => infobox_container.removeChild(div), 7000)
 }
 
+export function transparentProperty(name, valFunc) {
+    let real
+    ODP(window, name, {
+        set: _ => real = _,
+        get: () => valFunc(real)
+    })
+}
+
+export function unsafelyAssignWithReferer(target, referer) {
+    location.href = `https://fastforward.team/navigate?target=${encodeURIComponent(target)}&referer=${encodeURIComponent(referer)}`
+}
+
+export function finish() {
+    bypassed = true
+    docSetAttribute("{{channel.stop_watching}}", "")
+}
+
+export function countIt(func) {
+    docSetAttribute("{{channel.count_it}}", "")
+    setTimeout(func, 10)
+}
+
+export function keepLooking(func) {
+    bypassed = false
+    if (typeof func == 'function') {
+        func()
+    }
+}
+export function persistHash(here) {
+    ensureDomLoaded(() => {
+        document.querySelectorAll("form[action]").forEach(e => e.action += "#" + here)
+        document.querySelectorAll("a[href]").forEach(e => e.href += "#" + here)
+    })
+}
+
+export function decodeURIEncodedMod(string) {
+    try {
+        return decodeURIComponent(s.replace(/\%2D/g, "-").replace(/\%5F/g, "_").replace(/\%2E/g, ".").replace(/\%21/g, "!").replace(/\%7E/g, "~").replace(/\%2A/g, "*").replace(/\%27/g, "'").replace(/\%28/g, "(").replace(/\%29/g, ")"))
+    } catch (e) {
+        return null
+    }
+}
+
 export function ensureDomLoaded(func) {
     if (['interactive', 'complete'].indexOf(document.readyState)) {
         func()
@@ -281,6 +324,11 @@ export default {
     isGoodLink,
     bypassRequests,
     ifElement,
+    transparentProperty,
+    unsafelyAssignWithReferer,
+    finish,
+    countIt,
+    keepLooking,
     ODP,
     URL
 }
