@@ -2550,7 +2550,7 @@ ensureDomLoaded(() => {
     });
     domainBypass("filedm.com", () => {
         awaitElement("a#dlbutton", a => {
-            safelyNavigate("http://directdl.xyz/dm.php?id=" + a.href.split("_")[1])
+            safelyNavigate("http://cdn.directdl.xyz/getfile?id=" + a.href.split("_")[1])
         }
         )
     })
