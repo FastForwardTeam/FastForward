@@ -3,7 +3,7 @@
 		"message": "Ne perdez pas votre temps avec la conformité. FastForward contourne automatiquement les raccourcisseurs de liens ennuyeux."
 	},
 	"firstrunTitle": {
-		"message": "Merci d\’avoir installé FastForward !"
+		"message": "Merci d'avoir installé FastForward !"
 	},
 	"firstrunNoScript": {
 		"message": "Cependant, il semble que vous utilisiez le module NoScript ou une extension similaire, avec lequel FastForward n'est pas compatible."
@@ -150,7 +150,7 @@
 		"message": "Voulez-vous que ce lien soit ouvert instantanément dans un nouvel onglet ou après x secondes ?"
 	},
 	"blockedTitle": {
-		"message": "FastForward a empêché l\’enregistrement de votre adresse IP."
+		"message": "FastForward a empêché l’enregistrement de votre adresse IP."
 	},
 	"blockedSubtitle": {
 		"message": "Vous ne souhaitez pas que FastForward empêche des personnes malveillantes d'obtenir votre adresse IP ?"
