@@ -11,7 +11,7 @@ https://ur.ly X
 https://urly.mobi X  
 https://akoam.net X  
 https://akoam.to C  
-(https://sourceforge.net/projects/.+/files/.+/download) C  
+(/https://sourceforge.net/projects/.+/files/.+/download/) C  
 https://bc.vc C  
 https://bcvc.live X  
 https://shortly.xyz/r/ C  
@@ -105,7 +105,7 @@ https://sfirmware.com/downloads-file/
 https://apkily.com/getapp$  
 https://androidtop.net/?do=downloads&id=  
 https://emulator.games/download.php  
-(https://curseforge.com/./download/[0-9])  
+(/https://curseforge.com/./download/[0-9]/)  
 https://racaty.com X
 https://longfiles.com  
 https://filepuma.com  
@@ -485,7 +485,7 @@ https://go.akwam.cx X
 https://go.akwam.net X  
 https://go.akwam.im X  
 https://allkeyshop.com  
-(sharemods\.com\/([a-z0-9]{12})\//)  
+(/sharemods\.com\/([a-z0-9]{12})\//)  
 https://uprot.net  
 https://apkadmin.com  
 https://mirrored.to/files/  
