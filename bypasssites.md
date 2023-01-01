@@ -7,7 +7,7 @@ Sites in brackets are those which require Regex to be implemented correctly; the
 https://earnme.club C  
 https://usanewstoday.club C  
 https://syosetu.org/?mode=url_jump&url=  C  
-https://ur.ly X   
+https://ur.ly X  
 https://urly.mobi X  
 https://akoam.net X  
 https://akoam.to C  
@@ -20,7 +20,7 @@ https://uploaded.net X
 https://mylinks.xyz X  
 https://mylinks.zone X  
 https://mylink1.biz X  
-https://shortmoz.link C   
+https://shortmoz.link C  
 https://skinnycat.org X  
 https://safelink.polrec.site X  
 https://gamesmega.net C  
@@ -36,13 +36,13 @@ https://moon7.xyz/go X
 https://tlkm.id  
 https://prox77.com/analyze/ X  
 https://agdd5br.com/analyze/  
-https://sfile.mobi  C   
+https://sfile.mobi  C  
 https://sfile.xyz X  
 https://apkmos.com  C  
 https://gixen.com/home_1.php  
 https://linkduit.net X  
 https://tik.lat C  
-https://acortalo.live X   
+https://acortalo.live X  
 https://acortalo.xyz X  
 https://acortalo.org X  
 https://apkpsp.com  
@@ -52,7 +52,7 @@ https://nofil.net S
 https://onnime.net X  
 https://biozkop21.my.id X  
 https://4shared.com  
-https://cheatsquad.gg   
+https://cheatsquad.gg  
 https://safe.anirocksite.com X  
 https://my-code4you.blogspot.com  
 https://jemerik.com X  
@@ -61,14 +61,14 @@ https://behealth-id.xyz X
 https://pirateproxy.wtf C  
 https://fouadmods.com  
 https://akwam.org  
-https://old.akwam.co   
+https://old.akwam.co  
 https://post.techtutors.site X  
 https://an1.com  
 https://online-fix.me/ext/  
 https://pahe.in  
 https://pahe.ph  
 https://pahe.me  
-https://boost.ink   
+https://boost.ink  
 https://linksunlocked.com X  
 https://samehadaku.vip X  
 https://playhindi.com  
@@ -134,9 +134,9 @@ https://complete2unlock.com C
 https://won.pe X  
 https://gotoo.loncat.in X  
 https://idnation.net  
-https://mazika2day.com   
-https://ux9.de   
-https://softpedia.com   
+https://mazika2day.com  
+https://ux9.de  
+https://softpedia.com  
 https://rapidcrypt.net X  
 https://rom.io X  
 https://show.co  
@@ -153,13 +153,13 @@ https://manualsbooks.com
 https://ryn.cc  
 https://connect-trojan.net X  
 https://binbox.io X  
-https://lnk2.cc   
-https://ouo.press   
+https://lnk2.cc  
+https://ouo.press  
 https://ouo.info X  
-https://za.gl   
+https://za.gl  
 https://za.uy X  
 https://drivehub.link X  
-https://oxy.si   
+https://oxy.si  
 https://healthyteeth.tips  
 https://oxy.cloud  
 https://daunshorte.teknologilink.com X  
@@ -212,7 +212,7 @@ https://google-playss.sdetectives.id X
 https://jackofnine.site X  
 https://getlink.animesanka.club X  
 https://hello.tribuntekno.com X  
-https://ytsubme.com C   
+https://ytsubme.com C  
 https://shortlink.in X  
 https://safe.doramaku.me X  
 https://confile.net X  
@@ -222,7 +222,7 @@ https://shrtn.link X
 https://linkpoi.in X  
 https://linkpoi.cc X  
 https://linkpoi.me  
-https://spacetica.com   
+https://spacetica.com  
 https://linegee.net  
 https://moon7.xyz X  
 (/new\.lewd\.ninja\/external\/game\/([0-9]+)\/([a-z0-9]{64})/)  
@@ -231,8 +231,8 @@ https://fc-lc.com
 https://lompat.in X  
 https://st.flashsubs.web.id  
 https://short-url.link  
-https://uploadrar.com   
-https://uploadrar.net   
+https://uploadrar.com  
+https://uploadrar.net  
 https://kuliahmatematika.my.id X  
 https://shortconnect.com  
 https://elil.cc  
@@ -244,9 +244,9 @@ https://gsu.st X
 https://pucuktranslation.pw X  
 https://mangalist.org  
 (terbit|movies)21\.[a-z]+/  
-https://onepieceex.net C   
+https://onepieceex.net C  
 https://elanovia.com  
-https://redir.animenine.net   
+https://redir.animenine.net  
 https://download.id/thank-you\/  
 https://squidssh.com/li/go.php  
 https://goodssh.com/li/go.php  
@@ -276,12 +276,12 @@ https://cpmlink.net
 https://subsvip.com X  
 https://shon.xyz  
 https://likn.xyz X  
-https://sloomp.space X   
+https://sloomp.space X  
 https://brpaper.com  C  
 https://boo.tw X  
 https://kora4top.com  
 https://forexlap.com  
-https://forex-articles.com   
+https://forex-articles.com  
 https://forexmab.com  
 https://fx4vip.com  
 https://soft8ware.com  
@@ -310,7 +310,7 @@ https://theartistunion.com X
 https://boomx5.com X  
 https://cloudgallery.net  
 https://tricxbd.com X  
-https://customercareal.com X   
+https://customercareal.com X  
 https://eduinstruct.net  
 https://medific.net X  
 https://newswala.net X  
@@ -355,7 +355,7 @@ https://sh.st
 https://maukredit.online X  
 https://ay.link X  
 https://shtms.co X  
-https://aylink.co X   
+https://aylink.co X  
 https://forex1pro.com  C  
 https://sub4unlock.com  
 https://oracle.com  
@@ -369,12 +369,12 @@ https://psarips.one/exit/ X
 https://psarips.xyz/exit/ X  
 https://psarips.uk/exit/ X  
 https://psa.one/exit/ X  
-https://psa.pm/exit/   
+https://psa.pm/exit/  
 https://rekonise.com C  
 https://jwfinancas.club X  
 https://saver.id  
 https://androiddownload.net  
-https://links.shortenbuddy.com C   
+https://links.shortenbuddy.com C  
 https://anon.to  
 https://dl-protect1.co X  
 https://linkdoni.soft98.ir X  
@@ -401,7 +401,7 @@ https://rexoxer.net X
 https://gplinks.co  
 https://adbull.me  
 https://tinyurl.is X  
-https://tinyurl.so   
+https://tinyurl.so  
 https://textovisia.com X  
 https://shortclicks.xyz X  
 https://work.ink X  
@@ -409,7 +409,7 @@ https://sub2unlock.com
 https://cutin.it  
 https://olamovies.cyou  
 https://noon.khsm.io X  
-https://linkspy.cc   
+https://linkspy.cc  
 https://mflixpo.xyz X  
 https://themflix.xyz X  
 https://dereferer.me  
@@ -457,18 +457,18 @@ https://codecomets.com X
 https://bakacan.id X  
 https://securitystickers.info  
 https://dl.ccbluex.net X  
-https://adshnk.com   
+https://adshnk.com  
 https://adshrink.it X  
 https://techynroll.com
-https://threadbolts.com X   
-https://techitease.com X    
-https://meostream.com/links/   
-https://metroupdate.biz X   
+https://threadbolts.com X  
+https://techitease.com X   
+https://meostream.com/links/  
+https://metroupdate.biz X  
 https://kangapip.com  
-https://clickscoin.com   
-https://dogeclick.net   
-https://sl.mcmfaucets.xyz X   
-https://short.mcmcryptos.xyz   
+https://clickscoin.com  
+https://dogeclick.net  
+https://sl.mcmfaucets.xyz X  
+https://short.mcmcryptos.xyz  
 https://dutchycorp.space  
 https://noweconomy.live  
 https://exev.io  
@@ -495,8 +495,8 @@ https://bowfile.com
 https://acorta-link.com X  
 https://clk.asia  
 https://informaxonline.com  
-https://cb.run C   
-https://cb.click C   
+https://cb.run C  
+https://cb.click C  
 https://thizissam.in  
 https://letsboost.net  
 https://Viid.su  
