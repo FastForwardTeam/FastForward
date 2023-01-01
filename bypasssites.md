@@ -243,7 +243,7 @@ https://ciustekno.me
 https://gsu.st X  
 https://pucuktranslation.pw X  
 https://mangalist.org  
-((terbit|movies)21\.[a-z]+/)  
+(/(terbit|movies)21\.[a-z]+/)  
 https://onepieceex.net C  
 https://elanovia.com  
 https://redir.animenine.net  
