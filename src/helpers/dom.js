@@ -329,6 +329,8 @@ export default {
     finish,
     countIt,
     keepLooking,
+    persistHash,
+    decodeURIEncodedMod,
     ODP,
     URL
 }
