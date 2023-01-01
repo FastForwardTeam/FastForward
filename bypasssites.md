@@ -6,7 +6,7 @@ Sites in brackets are those which require Regex to be implemented correctly; the
 
 https://earnme.club C  
 https://usanewstoday.club C  
-https://syosetu.org/?mode=url_jump&url=  C  
+https://syosetu.org/?mode=url_jump&url= C  
 https://ur.ly X  
 https://urly.mobi X  
 https://akoam.net X  
@@ -36,9 +36,9 @@ https://moon7.xyz/go X
 https://tlkm.id  
 https://prox77.com/analyze/ X  
 https://agdd5br.com/analyze/  
-https://sfile.mobi  C  
+https://sfile.mobi C  
 https://sfile.xyz X  
-https://apkmos.com  C  
+https://apkmos.com C  
 https://gixen.com/home_1.php  
 https://linkduit.net X  
 https://tik.lat C  
@@ -129,7 +129,7 @@ https://up-load.io
 https://cosmobox.org  
 https://rockfile.co X  
 https://devdrive.cloud  
-https://srt.am  C  
+https://srt.am C  
 https://complete2unlock.com C  
 https://won.pe X  
 https://gotoo.loncat.in X  
@@ -277,7 +277,7 @@ https://subsvip.com X
 https://shon.xyz  
 https://likn.xyz X  
 https://sloomp.space X  
-https://brpaper.com  C  
+https://brpaper.com C  
 https://boo.tw X  
 https://kora4top.com  
 https://forexlap.com  
@@ -356,7 +356,7 @@ https://maukredit.online X
 https://ay.link X  
 https://shtms.co X  
 https://aylink.co X  
-https://forex1pro.com  C  
+https://forex1pro.com C  
 https://sub4unlock.com  
 https://oracle.com  
 https://genlink.cc  
@@ -461,7 +461,7 @@ https://adshnk.com
 https://adshrink.it X  
 https://techynroll.com
 https://threadbolts.com X  
-https://techitease.com X   
+https://techitease.com X  
 https://meostream.com/links/  
 https://metroupdate.biz X  
 https://kangapip.com  
@@ -490,7 +490,7 @@ https://uprot.net
 https://apkadmin.com  
 https://mirrored.to/files/  
 https://tei.ai  
-https://filedm.com  C  
+https://filedm.com C  
 https://bowfile.com  
 https://acorta-link.com X  
 https://clk.asia  
