@@ -48,7 +48,7 @@ https://acortalo.org X
 https://apkpsp.com  
 https://ipeenk.id X  
 https://zt-protect.com X  
-https://nofil.net S  
+https://nofil.net X  
 https://onnime.net X  
 https://biozkop21.my.id X  
 https://4shared.com  
@@ -285,7 +285,7 @@ https://forex-articles.com
 https://forexmab.com  
 https://fx4vip.com  
 https://soft8ware.com  
-(/flarefiles\.com\/drive\/[A-Za-z0-9]+\/genLink\.php/ )  
+(/flarefiles\.com\/drive\/[A-Za-z0-9]+\/genLink\.php/)  
 https://mboost.me  
 https://go.geghost.com  
 https://shorte-st.online X  
