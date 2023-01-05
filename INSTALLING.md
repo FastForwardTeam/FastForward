@@ -47,7 +47,7 @@ The steps are simple, just read carefully.
 2. Now unzip the file, using any software you prefer. On the screenshot below, I used [7-zip](https://7-zip.org) to unzip the file.
 ![2](https://i.imgur.com/93GYoCm.png)
 
-3. Now you'll have a folder called "FastForward_chromium". Enter it and extract the file.
+3. Now you'll have a folder called "FastForward_chromium". Enter it and extract (again) the file.
 
 You can do this either using 7-zip:
 ![3-1](https://i.imgur.com/sQGRJXq.gif)
@@ -155,7 +155,7 @@ If you got this message:
 
 <img src="https://media.discordapp.net/attachments/886785290700730379/1039633828362330152/image.png">
 
-It's because you forgot to extract again the file. Please re-read the step 3.
+It's because you forgot to extract twice the file. Please re-read the step 3.
 
 </details>
 
