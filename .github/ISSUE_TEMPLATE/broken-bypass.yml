@@ -31,9 +31,7 @@ body:
   id: version
   attributes:
     label: Version
-    description: What version of the extension are you running?
-    options: |
-      You can check the extension version by clicking on the extension name and looking at the top left corner.
+    description: What version of the extension are you running? You can check the extension version by clicking on the extension name and looking at the top left corner.
   validations:
     required: true
 - type: dropdown
