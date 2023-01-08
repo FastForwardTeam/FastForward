@@ -2579,7 +2579,24 @@ ensureDomLoaded(() => {
             }
         })
     })
-
+	// acortalink.me or allcalidad.is url shortener Fabian222005
+	domainBypass("acortalink.me", () => {
+	    function rot13(str) {
+		  var input     = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+		  var output    = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
+		  var index     = x => input.indexOf(x);
+		  var translate = x => index(x) > -1 ? output[index(x)] : x;
+		  return str.split('').map(translate).join('');
+		}
+		// Triggered on example.com and subdomains (e.g. www.example.com)
+		ensureDomLoaded(() => {
+			// Triggered as soon as the DOM is ready
+			window.open = (linkacorta) => {
+			    safelyNavigate(rot13(atob(linkacorta.substring(30))));
+			};
+			GetLink();
+		})
+	})
     domainBypass("clk.asia", () => {
         ensureDomLoaded(() => {
             const token = document.querySelector('#link-view [name="token"]').value;
