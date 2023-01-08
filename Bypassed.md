@@ -525,7 +525,7 @@ This is a list of the currently website bypasses in Manifest Version 3 (MV3)
 | https://healthinsider.online | 🛑 | 
 | https://atv.pw | 🛑 | 
 | https://adlink.pw | 🛑 | 
-| https://safe.mirrordown.com 
+| https://safe.mirrordown.com | ❌ |
 | https://kabarviral.blog | 🛑 | 
 | https://123l.pw | 🛑 | 
 | https://123link | 🛑 | 
