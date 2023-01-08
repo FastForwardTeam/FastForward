@@ -1,11 +1,11 @@
 # Bypassed Sites
 
-This is a list of the currently website bypasses in Manifest Version 3 (MV3)
+This is a list of all sites FastForward bypasses in the Manifest Version 2 extension (MV2).
 
 | Emoji | Legend |
 | ----- | ------ |
-| ✅ | This website have a MV3 bypass.
-| 🛑 | This website no longer exists or its shown to be harmful. |
+| ✅ | This website has a MV3 bypass.
+| 🛑 | This website no longer exists or it's shown to be harmful. |
 | ❌ | This website doesn't have a MV3 bypass. |
 | \* | Requires regex to be implemented. |
 
