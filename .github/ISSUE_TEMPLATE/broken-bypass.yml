@@ -27,13 +27,13 @@ body:
     placeholder: 'Example: https://www.google.com/webhp'
   validations:
     required: true
-- type: dropdown
+- type: textarea
   id: version
   attributes:
     label: Version
     description: What version of the extension are you running?
-    options:
-      - 0.0.0
+    options: |
+      You can check the extension version by clicking on the extension name and looking at the top left corner.
   validations:
     required: true
 - type: dropdown
