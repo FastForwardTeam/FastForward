@@ -67,7 +67,7 @@ Or renaming the file extension, like on the gif below:
 6. If you got any errors, or a message like "You're using FastForward in development mode", see the [Troubleshooting session](#troubleshooting).
 
 #### CRX Install
-You can also use auto-updating builds for Google Chrome (Windows, Linux & macOS), Brave (Windows, Linux & macOS), Kiwi (Android), Ungoogled Chromium and Edge. We do not recommend installing from this method if you aren't an experience user. If you're having trouble installing this way, please install the extension manually.
+You can also use auto-updating builds for Google Chrome (Windows, Linux & macOS), Brave (Windows, Linux & macOS), Kiwi (Android), Ungoogled Chromium and Edge. We do not recommend installing from this method if you aren't an experienced user. If you're having trouble installing this way, please install the extension manually.
 
 <details> <summary> Click here for crx install instructions </summary>
 <br>
