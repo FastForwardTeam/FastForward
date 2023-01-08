@@ -1,11 +1,12 @@
 # Bypassed Sites
 
+
 This is a list of websites bypassed in the MV2 version of the extension.
 
 | Emoji | Legend                                                                                          |
 |-------|-------------------------------------------------------------------------------------------------|
 | ✅     | This website has a MV3 bypass.                                                                  |
-| 🛑    | This website no longer exists, has been shown to be harmful, or does not need a bypass anymore. |
+| 🛑    | This website no longer exists or has been shown to be harmful. |
 | ❌     | This website doesn't have a MV3 bypass.                                                         |
 | \*    | Requires regex to be implemented.                                                               |
 
