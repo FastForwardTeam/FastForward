@@ -4,6 +4,8 @@ If a mv3 bypass has been created for the site, add a C next to the website name.
 If the site no longer exists or is shown to be harmful, add an X next to the website name.  
 Sites in brackets are those which require Regex to be implemented correctly; these sites have their raw regex implemented.
 
+This is a crude and outdated version of the bypass list, please check Bypassed.md for an updated list. This is kept purely for development purposes.
+
 https://earnme.club C  
 https://usanewstoday.club C  
 https://syosetu.org/?mode=url_jump&url= C  
