@@ -56,7 +56,7 @@ Edge is supported through the Microsoft store.
 <a href="https://microsoftedge.microsoft.com/addons/detail/fastforward/ldcclmkclhomnpcnccgbgleikchbnecl"><img src="https://user-images.githubusercontent.com/585534/107280673-a5ece780-6a26-11eb-9cc7-9fa9f9f81180.png" alt="Get FastForward on Microsoft Edge" width="126px"></a>
 
 ### Firefox based browsers
-FastForward is officially supported by Firefox and it's also on their plugin store!
+FastForward is available on the Firefox Addons Store.
 
 To go to the store, click on the image below, [or click here](https://addons.mozilla.org/firefox/addon/fastforwardteam/).
 
