@@ -4,7 +4,7 @@ Thanks for taking the time to contribute to FastForward, it is volunteers like y
 ## Contibuting bypasses
 
 ### Making the bypass
-Initially, you may use the custom bypasses section on the extension's settings page to test out and formulate your bypass, but after that we reccomend using a code editor like [VSCode](https://code.visualstudio.com/download)/[Codium](https://vscodium.com/#install).
+Initially, you may use the custom bypasses section on the extension's settings page to test out and formulate your bypass, but after that we recommend using a code editor like [VSCode](https://code.visualstudio.com/download)/[Codium](https://vscodium.com/#install).
 
 ### Submitting a Pull Request
 
