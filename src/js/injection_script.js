@@ -2613,6 +2613,14 @@ ensureDomLoaded(() => {
         safelyNavigate("https://go.adslinkfly.online/" + code)
     })
 
+    // oxy.cloud
+    hrefBypass(/oxy\.cloud\/d\//, () => {
+        ifElement('div[data-source_url^="https://loader.oxy.st/"]', (div) => {
+            destination = div.dataset.source_url
+            safelyNavigate(destination)
+        })
+    })
+
     //Insertion point for bypasses detecting certain DOM elements. Bypasses here will no longer need to call ensureDomLoaded.
     domainBypass(/cb\.(run|click)/, () => ifElement("a.btn", a => safelyAssign(a.href)))
     domainBypass("www.thizissam.in", () => {
