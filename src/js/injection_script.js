@@ -2613,6 +2613,14 @@ ensureDomLoaded(() => {
         safelyNavigate("https://go.adslinkfly.online/" + code)
     })
 
+    // LeitUP
+    domainBypass("leitup.com", () => {
+        ifElement('input.form-control[type="text"]', (input) => {
+            destination = input.attributes.placeholder.value
+            safelyNavigate(destination)
+        })
+    })
+
     //Insertion point for bypasses detecting certain DOM elements. Bypasses here will no longer need to call ensureDomLoaded.
     domainBypass(/cb\.(run|click)/, () => ifElement("a.btn", a => safelyAssign(a.href)))
     domainBypass("www.thizissam.in", () => {
