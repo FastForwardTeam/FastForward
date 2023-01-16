@@ -2613,6 +2613,14 @@ ensureDomLoaded(() => {
         safelyNavigate("https://go.adslinkfly.online/" + code)
     })
 
+    // LeitUP
+    domainBypass("leitup.com", () => {
+        ifElement('input.form-control[type="text"]', (input) => {
+            destination = input.attributes.placeholder.value
+            safelyNavigate(destination)
+        })
+    })
+
     // oxy.cloud
     hrefBypass(/oxy\.cloud\/d\//, () => {
         ifElement('div[data-source_url^="https://loader.oxy.st/"]', (div) => {
