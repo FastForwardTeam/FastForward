@@ -2628,6 +2628,13 @@ ensureDomLoaded(() => {
             safelyNavigate(destination)
         })
     })
+    
+    // liblink.pl (Librus)
+    domainBypass("liblink.pl", () => {
+        ifElement("body > div > h1 > span", a => {
+	    safelyNavigate(a.innerHTML)
+        })
+    })
 
     //Insertion point for bypasses detecting certain DOM elements. Bypasses here will no longer need to call ensureDomLoaded.
     domainBypass(/cb\.(run|click)/, () => ifElement("a.btn", a => safelyAssign(a.href)))
