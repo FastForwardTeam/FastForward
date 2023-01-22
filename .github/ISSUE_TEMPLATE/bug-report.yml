@@ -18,13 +18,12 @@ body:
     description: Description of the issue you are facing
   validations:
     required: true
-- type: dropdown
+- type: input
   id: version
   attributes:
     label: Version
     description: What version of the extension are you running?
-    options:
-      - 0.0.0
+    placeholder: 'You can check the extension version by clicking on the extension name and looking at the top left corner.'
   validations:
     required: true
 - type: dropdown
@@ -37,6 +36,8 @@ body:
       - Chrome
       - Brave
       - Microsoft Edge
+      - Opera
+      - Other
   validations:
     required: true
 - type: dropdown
@@ -46,7 +47,9 @@ body:
     options:
       - Windows
       - Linux
-      - MacOS 
+      - MacOS
+      - Android
+      - Other
 - type: textarea
   attributes:
     label: Anything else?
@@ -55,4 +58,4 @@ body:
 
        Tip: You can attach images files by clicking this area to highlight it and then dragging files in.
   validations:
-    required: false
+    required: true
