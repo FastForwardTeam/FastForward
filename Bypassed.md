@@ -3,12 +3,12 @@
 
 This is a list of websites bypassed in the MV2 version of the extension.
 
-| Emoji | Legend                                                                                          |
-|-------|-------------------------------------------------------------------------------------------------|
-| ✅     | This website has a MV3 bypass.                                                                  |
+| Emoji | Legend                                                         |
+|-------|----------------------------------------------------------------|
+| ✅     | This website has a MV3 bypass.                                 |
 | 🛑    | This website no longer exists or has been shown to be harmful. |
-| ❌     | This website doesn't have a MV3 bypass.                                                         |
-| \*    | Requires regex to be implemented.                                                               |
+| ❌     | This website doesn't have a MV3 bypass.                        |
+| \*    | Requires regex to be implemented.                              |
 
 ****
 
@@ -42,19 +42,19 @@ This is a list of websites bypassed in the MV2 version of the extension.
 |              https://uiz.io/              |   ✅    |
 |             https://uiz.app/              |   ✅    |
 |            https://moon7.xyz/             |   🛑   | 
-|              https://tlkm.id              |   ❌    |
+|              https://tlkm.id              |   ✅    |
 |            https://prox77.com/            |   🛑   | 
 |           https://agdd5br.com/            |   🛑   |
 |            https://sfile.mobi             |   ✅    | 
 |             https://sfile.xyz             |   🛑   | 
 |            https://apkmos.com             |   ✅    | 
-|            https://gixen.com/             |   ❌    | 
+|            https://gixen.com/             |   ✅    | 
 |           https://linkduit.net            |   🛑   | 
 |              https://tik.lat              |   ✅    | 
 |           https://acortalo.live           |   🛑   | 
 |           https://acortalo.xyz            |   🛑   | 
 |           https://acortalo.org            |   🛑   | 
-|            https://apkpsp.com             |   ❌    |
+|            https://apkpsp.com             |   🛑   |
 |             https://ipeenk.id             |   🛑   | 
 |          https://zt-protect.com           |   🛑   | 
 |             https://nofil.net             |   🛑   | 
@@ -532,3 +532,7 @@ This is a list of websites bypassed in the MV2 version of the extension.
 |              https://123link              |   🛑   | 
 |            https://linksht.com            |   ❌    |
 |           https://icutlink.com            |   ❌    |
+|            https://oxy.cloud/             |   ❌    |
+|            https://leitup.com             |   ✅    |
+|           https://acortalink.me           |   ✅    |
+|            https://liblink.pl             |   ✅    |
