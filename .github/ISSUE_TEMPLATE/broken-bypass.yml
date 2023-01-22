@@ -1,5 +1,5 @@
 name: Broken Bypass
-description: A bypass is misbehaving or no-longer working
+description: A bypass is misbehaving or no longer working
 labels: [Broken-bypass]
 body:
 - type: markdown
@@ -10,6 +10,7 @@ body:
       Please ask support questions on the [Discord](https://discord.gg/RSAf7b5njt).
       
       ### **Please don't submit multiple issue about the same website. [Search](https://github.com/FastForwardTeam/FastForward/labels/Broken-bypass) if the domain has been reported before filing the issue.**
+      Please use [Ctrl+F](https://github.com/FastForwardTeam/FastForward/blob/manifest-v3/Bypassed.md) to see if your domain is currently bypassed; if not, please do not make an issue at this time.
       Thanks for taking the time to fill out this form!
 - type: input
   id: domain
@@ -23,7 +24,7 @@ body:
   id: site
   attributes:
     label: Link
-    description: Submit the exact link you are on.
+    description: Submit the exact link you are on. Please mark as NSFW if the site contains material suitable for ages 18+ only.
     placeholder: 'Example: https://www.google.com/webhp'
   validations:
     required: true
@@ -44,6 +45,8 @@ body:
       - Chrome
       - Brave
       - Microsoft Edge
+      - Opera
+      - Other
   validations:
     required: true
 - type: dropdown
@@ -53,7 +56,9 @@ body:
     options:
       - Windows
       - Linux
-      - MacOS 
+      - MacOS
+      - Android
+      - Other
 - type: textarea
   attributes:
     label: Anything else?
@@ -62,4 +67,4 @@ body:
 
        Tip: You can attach images files by clicking this area to highlight it and then dragging files in.
   validations:
-    required: false
+    required: true
