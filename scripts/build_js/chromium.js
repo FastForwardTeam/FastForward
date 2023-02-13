@@ -12,9 +12,9 @@ module.exports = async function ({versioning, destination, commit_number, versio
     let output_file = `${process.cwd()}/build/dist/`;
 
     if (!versioning)
-        output_file += `FastForward_chromium_${commit_number}_dev.crx`;
+        output_file += `FastForward_chromium_${commit_number}_dev.zip`;
     else if ('nover' === versioning)
-        output_file += `FastForward_chromium_0.${commit_number}.crx`;
+        output_file += `FastForward_chromium_0.${commit_number}.zip`;
     else
         output_file += `FastForward_${version}_chromium.crx`;
 

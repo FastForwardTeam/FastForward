@@ -1,0 +1,70 @@
+name: Package with Injection Script
+
+  workflow_dispatch:
+
+
+jobs:
+  Chromium:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/setup-node@v3.4.1
+        with:
+          node-version: 17
+      
+      - uses: actions/checkout@v2
+        with:
+          # pulls all commits (needed for commits to version)
+          fetch-depth: 0
+      
+      - name: Install required node packages
+        run: npm install
+      
+      - name: Make package
+        run: node scripts/build.js chromium
+
+      - name: Upload Package Artifact
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          name: FastForward_chromium
+          path: build/dist
+          if-no-files-found: error
+
+      - name: Upload the build bypasses core file
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          name: FastForward_chromium_bypasses.js
+          path: build/FastForward.chromium/injection_script.js
+          if-no-files-found: error
+
+  Firefox:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/setup-node@v3.4.1
+        with:
+          node-version: 17
+      
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      
+      - name: Install required node packages
+        run: npm install
+      
+      - name: Make package
+        run: node scripts/build.js firefox
+
+      - name: Upload Package Artifact
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          name: FastForward_firefox
+          path: build/dist
+          if-no-files-found: error
+      
+      - name: Upload the build bypasses core file
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          name: FastForward_firefox_bypasses.js
+          path: build/FastForward.firefox/injection_script.js
+          if-no-files-found: error
