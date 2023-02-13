@@ -19,5 +19,5 @@ module.exports = async function ({versioning, destination, commit_number, versio
         output_file += `FastForward_${version}_chromium.crx`;
 
     await z.writeZipPromise(output_file, {});
-    console.log('[FastForward.build.chromium] Succesfull build the Chromium package: %s', output_file)
+    console.log('[FastForward.build.chromium] Succesfully built the Chromium package: %s', output_file)
 }
