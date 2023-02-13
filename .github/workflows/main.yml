@@ -2,7 +2,10 @@ name: Package
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, manifest-v3 ]
+    paths-ignore: 
+      - '**.MD'
+      - '**.md'
 
   workflow_dispatch:
 
