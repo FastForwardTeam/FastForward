@@ -87,7 +87,8 @@ async function run_build(type, commit_number) {
     for (const _f of js_files) {
         if (versioning && 'rules.json' === _f) continue; // don't copy rules.json
       
-        if (_f === 'injection_script.js') continue; // don't copy injection_script.js
+        //dont copy injection_script.js if versioning is nover
+        if (versioning === 'nover' && _f === 'injection_script.js') continue;
       
         fs.copyFileSync(`${working_directory}/src/js/${_f}`, `${destination}/${_f}`);
     }      
