@@ -14,9 +14,15 @@ name: "CodeQL"
 on:
   push:
     branches: [ main ]
+    paths-ignore: # Ignore .MD (markdown) changes, as they are not needed to make the extension work.
+      - '**.MD'
+      - '**.md'
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [ main ]
+    paths-ignore: # Ignore .MD (markdown) changes, as they are not needed to make the extension work.
+      - '**.MD'
+      - '**.md'
   schedule:
     - cron: '39 5 * * 5'
 
