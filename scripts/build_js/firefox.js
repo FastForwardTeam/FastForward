@@ -9,11 +9,11 @@ module.exports = async function ({versioning, destination, commit_number, versio
     console.log(`[FastForward.build.firefox] building the FireFox package`);
     const z = new zipper();
 
-    console.log(`[FastForward.build.firefox] injecting the linkvertise bypass`);
-
-    const bypass = await fs.readFile(`${process.cwd()}/src/linkvertise.js`);
-
-    await fs.appendFile(`${process.cwd()}/build/FastForward.firefox/injection_script.js`, bypass);
+//    console.log(`[FastForward.build.firefox] injecting the linkvertise bypass`);
+//
+//    const bypass = await fs.readFile(`${process.cwd()}/src/linkvertise.js`);
+//
+//    await fs.appendFile(`${process.cwd()}/build/FastForward.firefox/injection_script.js`, bypass);
 
     z.addLocalFolder(`${process.cwd()}/${destination}`);
 
@@ -27,5 +27,5 @@ module.exports = async function ({versioning, destination, commit_number, versio
         output_file += `FastForward_${version}_firefox.xpi`;
 
     await z.writeZipPromise(output_file, {});
-    console.log('[FastForward.build.firefox] Succesfull build the FireFox package: %s', output_file)
+    console.log('[FastForward.build.firefox] Succesfully built the FireFox package: %s', output_file)
 }
