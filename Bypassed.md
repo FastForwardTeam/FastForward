@@ -81,7 +81,7 @@ This is a list of websites bypassed in the MV2 version of the extension.
 |         https://linksunlocked.com         |   🛑   | 
 |          https://samehadaku.vip           |   🛑   | 
 |           https://playhindi.com           |   ❌    |
-|          https://daominhha.com/           |   ❌    |
+|          https://daominhha.com/           |   ✅    |
 |        https://bluemediafiles.com/        |   🛑   | 
 |       https://pcgamestorrents.org/        |   ❌    |
 |          https://retrosping.net/          |   🛑   | 
@@ -282,7 +282,7 @@ This is a list of websites bypassed in the MV2 version of the extension.
 |         https://intifada1453.team         |   ❌    |
 |             https://ahref.co              |   ❌    |
 |      https://mi-globe.com/download/       |   ❌    |
-|            https://cpmlink.net            |   ❌    |
+|            https://cpmlink.net            |   ✅    |
 |            https://subsvip.com            |   🛑   | 
 |             https://shon.xyz              |   ❌    |
 |             https://likn.xyz              |   🛑   | 
@@ -368,8 +368,8 @@ This is a list of websites bypassed in the MV2 version of the extension.
 |             https://aylink.co             |   🛑   | 
 |           https://forex1pro.com           |   ✅    | 
 |          https://sub4unlock.com           |   ❌    |
-|            https://oracle.com             |   ❌    |
-|            https://genlink.cc             |   ❌    |
+|            https://oracle.com             |   ✅    |
+|            https://genlink.cc             |   🛑   |
 |             https://psarips.*             |   🛑   |  
 |              https://psa.one              |   🛑   | 
 |              https://psa.pm               |   ❌    |
