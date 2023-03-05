@@ -489,6 +489,10 @@ ODP(window, "adtival_base64_encode", {
 // New PRs with bypasses must be added below this comment //
 ///////////////////////////////////////////////////////////////////////////////////////
 
+hrefBypass(/vk\.com\/away\.php\?to=.+/, () => {
+    safelyNavigate(decodeURIComponent(document.URL.match(/vk\.com\/away\.php\?to=([^&]+)/)[1]));
+})
+
 domainBypass(/earnme\.club|usanewstoday\.club/, () => { awaitElement("#tp-snp2", a => { a.click() }) })
 
 hrefBypass(/.*syosetu\.org\/\?mode=url_jump&url=.+/, () => {
