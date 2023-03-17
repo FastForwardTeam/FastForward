@@ -2881,6 +2881,13 @@ ensureDomLoaded(() => {
                 rawOpen.apply(this, arguments);
             }
         })
+        domainBypass("fssquad.com", () => {
+          ensureDomLoaded(() => {
+            ifElement("div#wpsafe-link", d => {
+                    safelyNavigate(d.getElementsByTagName("a")[0].onclick())
+            })
+          })
+        })
     }, 100)
     setTimeout(() => clearInterval(dT), 10000)//
 }, true)
