@@ -1,18 +1,18 @@
 {
 	"appDesc": {
-		"message": "Zamanınızı karmaşa ile harcamayın. FastForward, rahatsız edici bağlantı kısaltıcıları kendiliğinden geçer."
+		"message": "Zamanınızı boşa harcamayın. FastForward, can sıkıcı bağlantı kısaltma servislerini atlatmanızı sağlar."
 	},
 	"firstrunTitle": {
-		"message": "FastForward'i kurduğunuz için çok teşekkürler!"
+		"message": "FastForward'ı kurduğunuz için teşekkür ederiz!"
 	},
 	"firstrunNoScript": {
-		"message": "Görünen o ki FastForward ile uyumlu olmayan benzeri bir eklenti, NoScript veya betik kullanıyorsunuz."
+		"message": "Ancak FastForward ile uyumlu olmayan NoScript veya benzeri bir uzantı kullandığınızı tespit ettik."
 	},
 	"version": {
 		"message": "Sürüm"
 	},
 	"definitionsVersion": {
-		"message": "Bypass tanımları"
+		"message": "Baypas tanımları"
 	},
 	"changelog": {
 		"message": "Değişiklik listesi"
@@ -21,52 +21,52 @@
 		"message": "Güncellemeleri denetle"
 	},
 	"updating": {
-		"message": "Baypas tanımları indiriliyor ..."
+		"message": "Baypas tanımları indiriliyor..."
 	},
 	"updateYes": {
 		"message": "Baypas tanımları başarıyla indirildi."
 	},
 	"updateNo": {
-		"message": "Bypass tanımları güncel."
+		"message": "Baypas tanımları güncel."
 	},
 	"faq": {
-		"message": "Sıkça Sorulan Sorular (SSS)"
+		"message": "Sık Sorulan Sorular (SSS)"
 	},
 	"bypassCounter": {
 		"message": "FastForward sizin için şimdiye kadar % siteyi baypas etti."
 	},
 	"support": {
-		"message": "FastForward'ı Destekleyin"
+		"message": "FastForward'a katkıda bulunun."
 	},
 	"options": {
-		"message": "Ayarlar"
+		"message": "Seçenekler"
 	},
 	"optionsLink": {
-		"message": "FastForward'ın seçeneklerini değiştir."
+		"message": "FastForward seçeneklerini değiştir."
 	},
 	"optionsEnabled": {
-		"message": "Web sayfalarını es geçmeyi etkinleştir."
+		"message": "Web sitelerini baypas etmeyi etkinleştir."
 	},
 	"optionsNavigationDelay": {
-		"message": "Beni hedeflere % saniye sonra yönlendir. (Hemen yönlendirilmek için 0 yazın.)"
+		"message": "Beni hedeflere % saniye sonra yönlendir."
 	},
 	"optionsTrackerBypass": {
-		"message": "Apimon.de kullanarak (bit.ly ve t.co) gibi izleyicileri  atla"
+		"message": "Apimon.de kullanarak izleyicileri (örn. bit.ly ve t.co) baypas et."
 	},
 	"optionsInstantNavigationTrackers": {
-		"message": "Beni anında izleyicilerin hedeflerine götür."
+		"message": "Beni anında izleyicilerin hedefine götür."
 	},
 	"optionsBlockIPLoggers": {
-		"message": "Eğer es geçilemezse IP kayıtçılarını engelle."
+		"message": "Baypas edilemeyen IP kayıtçılarını engelle."
 	},
 	"optionsCrowdBypass": {
-		"message": "Baypas edilemeyen adres kısaltıcıların hedeflerini geliştiriciyle paylaş."
+		"message": "Kitle kaynaklı baypas: Baypas edilemeyen kısaltıcıların hedeflerini sunucuya gönder ve sunucudakileri al."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Kitle kaynaklı hedefleri % saniye sonra yeni bir sekmede aç. (0 = hemen.)"
+		"message": "Kitle kaynaklı hedefleri % saniye sonra yeni sekmede aç."
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Ziyaretin % saniyesinden sonra kitle kaynaklı hedefi içeren sekmeyi kapat."
+		"message": "Kitle kaynaklı hedefi içeren sekmeyi ziyaret ettikten % saniye sonra kapat."
 	},
 	"privacyPolicy": {
 		"message": "Gizlilik Politikası"
@@ -78,81 +78,80 @@
 		"message": "Özel Baypaslar"
 	},
 	"optionsUserscriptsDescription": {
-		"message": "Bu, geliştiricilerin siteleri atlamak için kendi komut dosyalarını oluşturmaları için gelişmiş bir özelliktir. Kusursuz çalıştığında, GitHub'a FastForward'a eklenmesi için gönderilebilirsiniz, böylece herkesin kullanımına açık olur."
+		"message": "Geliştiriciler bu ileri düzey özelliği kullanarak siteleri baypas etmek için kendi script'lerini oluşturabilir. Çalıştığından emin olduğunuz script'leri FastForward'a eklememiz için GitHub üzerinden bize gönderilebilirsiniz. Böylece script'inizi herkes kullanabilir."
 	},
 	"beforeNavigate": {
-		"message": "Neredeyse vardınız."
+		"message": "Hedefe varmak üzeresiniz."
 	},
 	"beforeNavigateDestination": {
 		"message": "Hedefiniz: %"
 	},
 	"beforeNavigateUnsafe": {
-		"message": "Hemen geçerseniz, bu web sitesi FastForward'i algılayacaktır."
+		"message": "Ama hedefe hemen giderseniz bu site FastForward'ı algılayacaktır."
 	},
 	"beforeNavigateUnsafeTimer": {
 		"message": "% saniye sonra fark edilmeyeceksiniz."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
-		"message": "1 saniye içerisinde fark edilmeyeceksiniz."
+		"message": "1 saniye sonra fark edilmeyeceksiniz."
 	},
 	"beforeNavigateTimer": {
-		"message": "% saniye içinde otomatik olarak yönlendirileceksiniz."
+		"message": "% saniye sonra otomatik olarak yönlendirileceksiniz."
 	},
 	"beforeNavigateTimerSingular": {
-		"message": "1 saniye içinde otomatik olarak yönlendirileceksiniz."
+		"message": "1 saniye sonra otomatik olarak yönlendirileceksiniz."
 	},
 	"beforeNavigateOptions": {
-		"message": "Hemen mi yoksa x saniye içinde mi yönlendirilmek istersiniz?"
+		"message": "Hemen mi yoksa x saniye sonra mı yönlendirilmek istersiniz?"
 	},
 	"beforeNavigateInstant": {
 		"message": "% adresine yönlendiriliyorsunuz"
 	},
 	"infoLinkvertise": {
-		"message": "Bu web sitesini atlamamıza izin verilmiyor, ancak en can sıkıcı adımlarının kaldırılması konusunda görüştük."
-	},
+		"message": "FastForward'ın bu siteyi baypas etmesi için captcha'yı çözmeniz gerekiyor. Ondan sonra can sıkıcı adımları atlayabilirsiniz."	},
 	"infoFileHoster": {
-		"message": "İndirme sunucusu dosyayı indirmenize izin vermeden önce sizi biraz bekletecek."
+		"message": "Maalesef indirme sunucusu bu dosyayı indirmek için belli bir süre beklemenizi zorunlu tutuyor."
 	},
 	"infoOutdated": {
-		"message": "Bu web sitesi FastForward'ın daha yeni bir sürümü tarafından atlandı."
+		"message": "FastForward'ın yeni sürümleri bu web sitesini baypas edebilir."
 	},
 	"crowdWait": {
-		"message": "Maalesef, bu bağlantıyla ilk karşılaşan sizsiniz, ancak siz bekledikten sonra, diğer FastForward kullanıcılarının artık buna ihtiyacı kalmayacak."
+		"message": "Maalesef bu bağlantıyla ilk karşılaşan sizsiniz, ancak siz bekledikten sonra diğer FastForward kullanıcılarının beklemesine gerek kalmayacak."
 	},
 	"crowdDisabled": {
-		"message": "Bu web sitesi, ayarlarda devre dışı bıraktığınız kitle baypası tarafından baypas edilmektedir."
+		"message": "Bu sitesi kitle kaynaklı paypas edilebilir. Seçeneklerden bu ayarı açabilirsiniz."
 	},
 	"crowdBypassed": {
 		"message": "Beklemek zorunda değilsiniz!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Diğer FastForward kullanıcıları sizin yerinize zaten beklediler ve bunun şuraya yönlendiğini bildirdiler: %"
+		"message": "Sizden önce bekleyen FastForward kullanıcıları bu bağlantının % adresine yönlendirildiğini bildirdi"
 	},
 	"crowdBypassedTimer": {
-		"message": "Bu, % saniye içinde yeni bir sekmede açılacaktır."
+		"message": "Bu adres % saniye sonra yeni sekmede açılacak."
 	},
 	"crowdBypassedTimerSingular": {
-		"message": "Bu, 1 saniye içinde yeni bir sekmede açılacaktır."
+		"message": "Bu adres 1 saniye sonra yeni sekmede açılacak."
 	},
 	"crowdCloseTimer": {
-		"message": "Bu sekme % saniye içinde kapanacak."
+		"message": "Bu sekme % saniye sonra kapanacak."
 	},
 	"crowdCloseTimerSingular": {
-		"message": "Bu sekme 1 saniye içinde kapanacak."
+		"message": "Bu sekme 1 saniye sonra kapanacak."
 	},
 	"cancel": {
 		"message": "Vazgeç."
 	},
 	"crowdBypassedIgnore": {
-		"message": "Bu doğru değil miydi?"
+		"message": "Doğru değil miydi?"
 	},
 	"crowdBypassedOptions": {
-		"message": "Bu adresin hemen mi yoksa x saniye sonra mı yeni bir sekmede açılmasını istersiniz?"
+		"message": "Hemen mi yoksa x saniye sonra mı yeni sekmede açılsın?"
 	},
 	"blockedTitle": {
-		"message": "FastForward, IP adresinizin kayıtlara eklenmesini engelledi."
+		"message": "FastForward, IP adresinizin kaydedilmesini engelledi."
 	},
 	"blockedSubtitle": {
-		"message": "FastForward'ın sizi kötü kişilerin IP adresinizi almasından korumasını istemiyor musunuz?"
+		"message": "FastForward'ın sizi IP adresinizin toplanmasından korumasını istemiyor musunuz?"
 	}
 }
