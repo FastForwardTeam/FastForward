@@ -116,14 +116,14 @@ This is a list of websites bypassed in the MV2 version of the extension.
 |          https://emulator.games/          |   ❌    |
 |          https://curseforge.com/          |   ❌*   |
 |            https://racaty.com             |   🛑   | 
-|           https://longfiles.com           |   ✅    |
-|           https://filepuma.com            |   ✅    |
-|         https://portableapps.com          |   ✅    |
-|           https://indishare.org           |   ✅    |
+|           https://longfiles.com           |   ❌    |
+|           https://filepuma.com            |   ❌    |
+|         https://portableapps.com          |   ❌    |
+|           https://indishare.org           |   ❌    |
 |             https://datei.to              |   🛑   | 
 |           https://keisekai.fun            |   🛑   | 
-|          https://solvetube.site           |   ✅    |
-|             https://lkc21.net             |   ✅    |
+|          https://solvetube.site           |   ❌    |
+|             https://lkc21.net             |   ❌    |
 |         https://layarkacaxxi.org          |   🛑   | 
 |         https://fastforward.team          |   ✅    | 
 |           https://acortame.xyz            |   🛑   | 
@@ -251,15 +251,15 @@ This is a list of websites bypassed in the MV2 version of the extension.
 |           https://mirrorace.org           |   ❌*   |
 |              https://gsu.st               |   🛑   | 
 |        https://pucuktranslation.pw        |   🛑   | 
-|           https://mangalist.org           |   ✅    |
+|           https://mangalist.org           |   ❌    |
 |            https://terbit21.*             |   ❌*   |
 |            https://movies21.*             |   ❌*   |
 |          https://onepieceex.net           |   ✅    | 
 |           https://elanovia.com            |   ❌    |
 |        https://redir.animenine.net        |   ❌    |
 |      https://download.id/thank-you\/      |   ❌    |
-|      https://squidssh.com/li/go.php       |   ✅    |
-|       https://goodssh.com/li/go.php       |   ✅    |
+|      https://squidssh.com/li/go.php       |   ❌    |
+|       https://goodssh.com/li/go.php       |   ❌    |
 |            https://l.ndoqp.com            |   🛑   | 
 |           https://elnurtech.com           |   🛑   | 
 |            https://jo2win.com             |   ❌    |
@@ -536,3 +536,7 @@ This is a list of websites bypassed in the MV2 version of the extension.
 |            https://leitup.com             |   ✅    |
 |           https://acortalink.me           |   ✅    |
 |            https://liblink.pl             |   ✅    |
+|            https://fsquad.com             |   ✅    |
+|            https://clink1.com             |   ❌    |
+|              https://vk.com               |   ✅    |
+
