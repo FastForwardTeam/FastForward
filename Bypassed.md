@@ -536,3 +536,7 @@ This is a list of websites bypassed in the MV2 version of the extension.
 |            https://leitup.com             |   ✅    |
 |           https://acortalink.me           |   ✅    |
 |            https://liblink.pl             |   ✅    |
+|            https://fsquad.com             |   ✅    |
+|            https://clink1.com             |   ❌    |
+|              https://vk.com               |   ✅    |
+
