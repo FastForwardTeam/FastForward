@@ -58,6 +58,8 @@ resetCounter=()=>{
 	sendToOptions({bypassCounter})
 }
 
+if(typeof chrome !== 'undefined') console.warn("The message above can be ignored as it is not an issue. Press the 'Clear all' button.");
+
 // Install handler
 brws.runtime.onInstalled.addListener(details=>{
 	if(details.reason=="install")
