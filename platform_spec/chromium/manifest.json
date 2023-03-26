@@ -1,5 +1,5 @@
 {
-	"manifest_version": 2,
+	"manifest_version": 3,
 	"icons": {
 		"48": "icon/48.png",
 		"128": "icon/128.png",
@@ -36,7 +36,7 @@
 		"default_popup": "html/popup.html"
 	},
 	"background": {
-		"scripts": [
+		"service_worker": [
 			"background.js"
 		]
 	},
@@ -59,5 +59,6 @@
 		"html/firstrun-noscript.html",
 		"html/options.html",
 		"icon/48.png"
-	]
+	],
+	"actions" : []
 }
