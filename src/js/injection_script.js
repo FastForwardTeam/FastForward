@@ -1860,7 +1860,7 @@ ensureDomLoaded(() => {
         document.getElementsByClassName("timed-content-client_show_0_05_0")[0].style = ""
     })
     domainBypass("dereferer.me", () => {
-        const url = window.location.href.split("?")[1]
+        const url = window.location.href.split("?").slice(1).join("?")
         safelyNavigate(url)
     })
     domainBypass("bluemediafiles.com", () => {
