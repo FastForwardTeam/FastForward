@@ -1,339 +1,103 @@
-document.querySelector("[data-message='optionsNavigationDelay']").innerHTML =
-  document
-    .querySelector("[data-message='optionsNavigationDelay']")
-    .innerHTML.replace(
-      "%",
-      '<input id="option-navigation-delay" type="number" min="0" skip="1" style="width:34px">'
-    );
-document.querySelector("[data-message='optionsCrowdAutoOpen']").innerHTML =
-  document
-    .querySelector("[data-message='optionsCrowdAutoOpen']")
-    .innerHTML.replace(
-      "%",
-      '<input id="option-crowd-open-delay" type="number" min="0" skip="1" style="width:34px">'
-    );
-document.querySelector("[data-message='optionsCrowdAutoClose']").innerHTML =
-  document
-    .querySelector("[data-message='optionsCrowdAutoClose']")
-    .innerHTML.replace(
-      "%",
-      '<input id="option-crowd-close-delay" type="number" min="3" skip="1" style="width:34px">'
-    );
-document.querySelector(
-  "[data-message='optionsWhitelistedSitesDescription']"
-).innerHTML = document
-  .querySelector("[data-message='optionsWhitelistedSitesDescription']")
-  .textContent.replace(
-    "GitHub",
-    "<a href='https://github.com/FastForwardTeam/FastForward/blob/main/src/js/injection_script.js' target='_blank'>GitHub</a>"
-  );
-
-const updateButton = document.querySelector("[data-message='update']"),
-  enabledCheckbox = document.getElementById("option-enabled"),
-  enabledLabel = document.querySelector("label[for='option-enabled']"),
-  navigationDelayInput = document.getElementById("option-navigation-delay"),
-  navigationDelayCheckbox = document.getElementById("navigation-delay-toggle"),
-  trackerBypassCheckbox = document.getElementById("option-tracker-bypass"),
-  instantNavigationTrackersCheckbox = document.getElementById(
-    "option-instant-navigation-trackers"
-  ),
-  blockIPLoggersCheckbox = document.getElementById("option-block-ip-loggers"),
-  crowdBypassCheckbox = document.getElementById("option-crowd-bypass"),
-  crowdOpenDelayInput = document.getElementById("option-crowd-open-delay"),
-  crowdOpenDelayCheckbox = document.getElementById(
-    "option-crowd-open-delay-toggle"
-  ),
-  crowdCloseDelayInput = document.getElementById("option-crowd-close-delay"),
-  crowdCloseDelayCheckbox = document.getElementById(
-    "option-crowd-close-delay-toggle"
-  ),
-  instantNavigationTrackersLogic = () => {
-    if (
-      !trackerBypassCheckbox.checked ||
-      (navigationDelayCheckbox.checked && navigationDelayInput.value == 0)
-    ) {
-      instantNavigationTrackersCheckbox.setAttribute("disabled", "disabled");
-    } else {
-      instantNavigationTrackersCheckbox.removeAttribute("disabled");
-    }
-  },
-  crowdOpenDelayLogic = () => {
-    if (crowdOpenDelayCheckbox.checked) {
-      crowdOpenDelayInput.removeAttribute("disabled");
-    } else {
-      crowdOpenDelayInput.setAttribute("disabled", "disabled");
-    }
-  },
-  crowdCloseDelayLogic = () => {
-    if (crowdCloseDelayCheckbox.checked) {
-      crowdCloseDelayInput.removeAttribute("disabled");
-    } else {
-      crowdCloseDelayInput.setAttribute("disabled", "disabled");
-    }
-  },
-  defaultUserScript = `// Some examples of what you can do with custom bypasses:
-domainBypass("example.com", () => {
-	// Triggered on example.com and subdomains (e.g. www.example.com)
-	ensureDomLoaded(() => {
-		// Triggered as soon as the DOM is ready
-	})
-	// You can use ifElement to check if an element is available via document.querySelector:
-	ifElement("a#skip_button[href]", a => {
-		safelyNavigate(a.href)
-		// safelyNavigate asserts that given URL is valid before navigating and returns false if not
-	}, () => {
-		// Optional function to be called if the given element is not available
-	})
-	// You can also use awaitElement to wait until an element is available via a query selector:
-	awaitElement("a#skip_button[href]", a => {
-		safelyAssign(a.href)
-		// safelyAssign is the same as safelyNavigate but skips the
-		// "You're almost at your destination" page, should the user have it enabled
-	})
-})
-domainBypass(/example\\.(com|org)/, () => {
-	// Triggered if the regex matches any part of the hostname
-})
-hrefBypass(/example\\.(com|org)/, () => {
-	// Triggered if the regex matches any part of the URL
-})
-// Enjoy! Your changes will be saved automatically.
-`;
-
-let navigationDelayInputTimer,
-  crowdOpenDelayInputTimer,
-  crowdCloseDelayInputTimer;
-
-let port = brws.runtime.connect({ name: "options" }),
-  wasUpdating = false,
-  devMode = false,
-  amoVersion = false;
-port.onMessage.addListener((data) => {
-  if ("extension_version" in data) {
-    document.getElementById("version").textContent = data.extension_version;
-  }
-  if ("amo" in data) {
-    if (data.amo) {
-      updateButton.classList.add("uk-hidden");
-      amoVersion = true;
-    }
-  }
-  if ("upstreamCommit" in data) {
-    if (data.upstreamCommit) {
-      devMode = false;
-      document.getElementById("definitionsVersion").innerHTML =
-        brws.i18n.getMessage("definitionsVersion") +
-        " <code>" +
-        data.upstreamCommit.substr(0, 7) +
-        "</code>";
-      document.getElementById("dev-alert").classList.add("uk-hidden");
-    } else {
-      devMode = true;
-      document.getElementById("definitionsVersion").textContent =
-        "Development Mode";
-      document.getElementById("dev-alert").classList.remove("uk-hidden");
-    }
-  }
-  if ("bypassCounter" in data && data.bypassCounter > 1) {
-    const counter = document.getElementById("counter"),
-      span = counter.querySelector("span");
-    span.textContent = brws.i18n.getMessage("bypassCounter");
-    span.innerHTML = span.innerHTML.replace(
-      "%",
-      "<b>" + data.bypassCounter + "</b>"
-    );
-    counter.classList.remove("uk-hidden");
-  }
-  let textarea = document.querySelector("#whitelist");
-  textarea.value = "addons.mozilla.org";
-  if ("updateSuccess" in data && !devMode && !amoVersion) {
-    UIkit.notification({
-      message: brws.i18n.getMessage(
-        "updat" + (data.updateSuccess ? "ing" : "eNo")
-      ),
-      status: "primary",
-      timeout: 3000,
-    });
-  }
-  if ("updateStatus" in data && !amoVersion) {
-    if (data.updateStatus) {
-      updateButton.setAttribute("disabled", "disabled");
-      if (data.updateStatus == "updating") {
-        updateButton.textContent = brws.i18n.getMessage("updating");
-        wasUpdating = true;
-      }
-    } else {
-      updateButton.textContent = brws.i18n.getMessage("update");
-      updateButton.removeAttribute("disabled");
-      if (wasUpdating) {
-        UIkit.notification({
-          message: devMode
-            ? "Successfully loaded local bypass definitions."
-            : brws.i18n.getMessage("updateYes"),
-          status: "success",
-          timeout: 3000,
-        });
-        wasUpdating = false;
-      }
-    }
-  }
-});
-updateButton.onclick = () => {
-  if (!updateButton.hasAttribute("disabled")) {
-    port.postMessage({ type: "update" });
-  }
+let defaultOptions = {
+  navigationDelayToggle: true,
+  navigationDelay: 10,
+  optionTrackerBypass: false,
+  optionInstantNavigationTrackers: false,
+  optionBlockIpLoggers: true,
+  optionCrowdBypass: false,
+  optionCrowdOpenDelayToggle: false,
+  optionCrowdOpenDelay: 5,
+  optionCrowdCloseDelayToggle: false,
+  optionCrowdCloseDelay: 15,
+  whitelist: '',
 };
 
-brws.storage.sync.get(
-  [
-    "disable",
-    "navigation_delay",
-    "no_tracker_bypass",
-    "no_instant_navigation_trackers",
-    "allow_ip_loggers",
-    "crowd_bypass",
-    "crowd_open_delay",
-    "crowd_close_delay",
-    "no_info_box",
-  ],
-  (res) => {
-    if (res == undefined) {
-      res = {};
-    }
-    if (!res.disable || res.disable !== "true") {
-      enabledCheckbox.setAttribute("checked", "checked");
-    } else {
-      enabledLabel.classList.add("uk-text-danger");
-    }
-    if (res.navigation_delay < 0) {
-      navigationDelayInput.value = res.navigation_delay * -1 - 1;
-      navigationDelayInput.setAttribute("disabled", "disabled");
-    } else {
-      navigationDelayInput.value = res.navigation_delay;
-      navigationDelayCheckbox.setAttribute("checked", "checked");
-    }
-    if (res.no_tracker_bypass !== "true") {
-      trackerBypassCheckbox.setAttribute("checked", "checked");
-    }
-    if (res.no_instant_navigation_trackers !== "true") {
-      instantNavigationTrackersCheckbox.setAttribute("checked", "checked");
-    }
-    if (res.allow_ip_loggers !== "true") {
-      blockIPLoggersCheckbox.setAttribute("checked", "checked");
-    }
-    if (res.crowd_bypass === "true") {
-      crowdBypassCheckbox.setAttribute("checked", "checked");
-    }
-    if (res.crowd_open_delay < 0) {
-      crowdOpenDelayInput.value = res.crowd_open_delay * -1 - 1;
-      crowdOpenDelayInput.setAttribute("disabled", "disabled");
-    } else {
-      crowdOpenDelayInput.value = res.crowd_open_delay;
-      crowdOpenDelayCheckbox.setAttribute("checked", "checked");
-    }
-    if (res.crowd_close_delay < 0) {
-      crowdCloseDelayInput.value = res.crowd_close_delay * -1 - 1;
-      crowdCloseDelayInput.setAttribute("disabled", "disabled");
-    } else {
-      crowdCloseDelayInput.value = res.crowd_close_delay;
-      crowdCloseDelayCheckbox.setAttribute("checked", "checked");
-    }
-    instantNavigationTrackersLogic();
-    enabledCheckbox.onchange = function () {
-      enabledLabel.classList.remove("uk-text-danger");
-      brws.storage.sync.set({
-        disable: (!this.checked).toString(),
-      });
-    };
-    navigationDelayInput.oninput = () => {
-      clearTimeout(navigationDelayInputTimer);
-      navigationDelayInputTimer = setTimeout(() => {
-        brws.storage.sync.set({
-          navigation_delay: navigationDelayInput.value,
-        });
-        instantNavigationTrackersLogic();
-      }, 300);
-    };
-    navigationDelayCheckbox.onchange = function () {
-      let navigation_delay = parseInt(navigationDelayInput.value);
-      if (!this.checked) {
-        navigation_delay = (navigation_delay + 1) * -1;
-      }
-      brws.storage.sync.set({ navigation_delay });
-      if (this.checked) {
-        navigationDelayInput.removeAttribute("disabled");
-      } else {
-        navigationDelayInput.setAttribute("disabled", "disabled");
-      }
-      instantNavigationTrackersLogic();
-    };
-    trackerBypassCheckbox.onchange = function () {
-      brws.storage.sync.set({
-        no_tracker_bypass: (!this.checked).toString(),
-      });
-      instantNavigationTrackersLogic();
-    };
-    instantNavigationTrackersCheckbox.onchange = function () {
-      brws.storage.sync.set({
-        no_instant_navigation_trackers: (!this.checked).toString(),
-      });
-    };
-    blockIPLoggersCheckbox.onchange = function () {
-      brws.storage.sync.set({
-        allow_ip_loggers: (!this.checked).toString(),
-      });
-    };
-    crowdBypassCheckbox.onchange = function () {
-      brws.storage.sync.set({
-        crowd_bypass: this.checked.toString(),
-      });
-      if (this.checked) {
-        crowdOpenDelayCheckbox.removeAttribute("disabled");
-        crowdCloseDelayCheckbox.removeAttribute("disabled");
-        crowdOpenDelayLogic();
-        crowdCloseDelayLogic();
-      } else {
-        crowdOpenDelayCheckbox.setAttribute("disabled", "disabled");
-        crowdOpenDelayInput.setAttribute("disabled", "disabled");
-        crowdCloseDelayCheckbox.setAttribute("disabled", "disabled");
-        crowdCloseDelayInput.setAttribute("disabled", "disabled");
-      }
-    };
-    crowdOpenDelayCheckbox.onchange = function () {
-      let crowd_open_delay = parseInt(crowdOpenDelayInput.value);
-      if (!this.checked) {
-        crowd_open_delay = (crowd_open_delay + 1) * -1;
-      }
-      brws.storage.sync.set({ crowd_open_delay });
-      crowdOpenDelayLogic();
-    };
-    crowdOpenDelayInput.oninput = function () {
-      clearTimeout(crowdOpenDelayInputTimer);
-      crowdOpenDelayInputTimer = setTimeout(() => {
-        brws.storage.sync.set({
-          crowd_open_delay: crowdOpenDelayInput.value,
-        });
-      }, 300);
-    };
-    crowdCloseDelayCheckbox.onchange = function () {
-      let crowd_close_delay = parseInt(crowdCloseDelayInput.value);
-      if (!this.checked) {
-        crowd_close_delay = (crowd_close_delay + 1) * -1;
-      } else if (crowd_close_delay < 3) {
-        crowd_close_delay = 3;
-      }
-      brws.storage.sync.set({ crowd_close_delay });
-      crowdCloseDelayLogic();
-    };
-    crowdCloseDelayInput.oninput = function () {
-      clearTimeout(crowdCloseDelayInputTimer);
-      crowdCloseDelayInputTimer = setTimeout(() => {
-        let crowd_close_delay = parseInt(crowdCloseDelayInput.value);
-        if (crowd_close_delay < 3) {
-          crowd_close_delay = 3;
-        }
-        brws.storage.sync.set({ crowd_close_delay });
-      }, 300);
-    };
+async function saveOptions(options) {
+  return chrome.storage.local.set({ options: options });
+}
+
+async function getOptions() {
+  return new Promise((resolve) => {
+    chrome.storage.local.get('options').then((result) => {
+      resolve(result.options);
+    });
+  });
+}
+//Add number input boxes
+function addNumberInputs() {
+  const numberInputs = {
+    'option-navigation-delay': 'navigationDelay',
+    'option-crowd-open-delay': 'optionCrowdOpenDelay',
+    'option-crowd-close-delay': 'optionCrowdCloseDelay',
+  }; //key: for attribute of target, val: id of number input to be created
+  for (let [key, value] of Object.entries(numberInputs)) {
+    let element = document.querySelector(`[for="${key}"]`);
+    let numberInput = document.createElement('input');
+    numberInput.setAttribute('type', 'number');
+    numberInput.setAttribute('id', value);
+    numberInput.setAttribute('style', 'width:34px');
+    element.innerHTML = element.innerHTML.replace('%', numberInput.outerHTML);
   }
-);
+}
+
+function displayExtensionVersion() {
+  chrome.storage.local
+    .get('version')
+    .then(
+      (data) => (document.getElementById('version').textContent = data.version)
+    );
+}
+
+function addEventListeners() {
+  document
+    .querySelectorAll('#options-form input[type="checkbox"]')
+    .forEach(function (checkbox) {
+      checkbox.addEventListener('change', async function () {
+        let options = await getOptions();
+        options[this.id] = this.checked;
+        saveOptions(options);
+      });
+    });
+
+  document
+    .querySelector('#saveWhitelist')
+    .addEventListener('click', async function () {
+      let options = await getOptions();
+      options['whitelist'] = document.querySelector('#whitelist').value;
+      saveOptions(options);
+    });
+
+  document
+    .querySelectorAll('#options-form input[type="number"]')
+    .forEach(function (checkbox) {
+      checkbox.addEventListener('change', async function () {
+        let options = await getOptions();
+        options[this.id] = this.value;
+        saveOptions(options);
+      });
+    });
+}
+
+async function repopulateOptions() {
+  let options = Object.assign({}, defaultOptions, await getOptions());
+  for (let key in options) {
+    console.log(key);
+    let element = document.querySelector('#' + key);
+    if (element.type === 'checkbox') {
+      element.checked = options[key];
+    } else if (element.type === 'number') {
+      element.value = options[key];
+    } else if (element.tagName === 'TEXTAREA') {
+      element.value = options[key];
+      console.log(options[key]);
+    }
+  }
+  saveOptions(options);
+}
+
+document.addEventListener('DOMContentLoaded', async function () {
+  addNumberInputs();
+  await repopulateOptions();
+  addEventListeners();
+  displayExtensionVersion();
+});
