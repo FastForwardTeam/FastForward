@@ -40,14 +40,13 @@
 			<input type="checkbox" class="uk-checkbox" id="option-crowd-open-delay-toggle"> <span data-message="optionsCrowdAutoOpen" for="option-crowd-open-delay"></span><br>
 			<input type="checkbox" class="uk-checkbox" id="option-crowd-close-delay-toggle"> <span data-message="optionsCrowdAutoClose" for="option-crowd-close-delay"></span><br>
 		</p>
-		<h2 data-message="optionsUserscripts"></h2>
-		<a name="userscripts"></a>
-		<p><span data-message="optionsUserscriptsDescription"></span></p>
+		<h2 data-message="optionsWhitelistedSites"></h2>
+			<textarea class="uk-textarea" id="whitelist"></textarea>
+		<p><span data-message="optionsWhitelistedSitesDescription"></span></p>
 		<div id="userscript" style="font-family:'DejaVu Sans Mono',monospace;min-height:500px;height:calc(100vh - 200px)"></div>
 	</div>
 	<script src="i18n.js"></script>
 	<script src="uikit/uikit.js"></script>
-	<script src="ace/ace.js"></script>
 	<script src="options.js"></script>
 </body>
 </html>

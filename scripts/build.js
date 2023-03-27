@@ -192,12 +192,15 @@ exec(`git rev-list HEAD --count`, async (error, stdout, stderr) => {
   fs.writeFileSync(
     `${working_directory}/src/js/injection_script.js`,
     `const bypasses = ${JSON.stringify(bypasses)};
+    const script_src = new URL(document.currentScript.src)
+    const ext_base_URL = script_src.searchParams.get("ext_base_URL")
 
-if (bypasses.hasOwnProperty(location.host)) {
+if (location.host in bypasses) {
     const bypass_url = bypasses[location.host];
     
-    import(\`\${window.x8675309bp}\${bypass_url}\`).then(({default: bypass}) => {
-        import(\`\${window.x8675309bp}helpers/dom.js\`).then(({default: helpers}) => {
+    
+    import(\`\${ext_base_URL}/\${bypass_url}\`).then(({default: bypass}) => {
+        import(\`\${ext_base_URL}/helpers/dom.js\`).then(({default: helpers}) => {
             const bps = new bypass;
             bps.set_helpers(helpers);
             console.log('ensure_dom: %r', bps.ensure_dom);

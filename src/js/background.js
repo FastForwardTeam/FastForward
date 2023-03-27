@@ -26,7 +26,7 @@ function preflight(details) {
   }
 }
 
-brws.browserAction.onClicked.addListener(handleClick);
+brws.action.onClicked.addListener(handleClick);
 brws.runtime.onInstalled.addListener(firstrun);
 brws.runtime.onStartup.addListener(ffclipboardClear);
 brws.webNavigation.onCompleted.addListener((details) => preflight(details), {
