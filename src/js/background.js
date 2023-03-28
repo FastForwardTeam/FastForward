@@ -27,7 +27,9 @@ function preflight(details) {
   }
   //navigate
   if (url.pathname === '/bypassed') {
-    url.href = brws.runtime.getURL('html'.concat(url.pathname));
+    url.hostname = brws.runtime.id;
+    url.protocol = brws.runtime.getURL('').split(':')[0] + ':';
+    url.pathname = '/html' + url.pathname;
     if (url.searchParams.get('crowd') === 'true') {
       url.pathname =
         url.pathname.split('/').slice(0, -1).join('/') + '/crowd-bypassed.html';

@@ -6,8 +6,8 @@ if (location.host in bypasses) {
     const bypass_url = bypasses[location.host];
     
     
-    import(`${ext_base_URL}/${bypass_url}`).then(({default: bypass}) => {
-        import(`${ext_base_URL}/helpers/dom.js`).then(({default: helpers}) => {
+    import(`${ext_base_URL}${bypass_url}`).then(({default: bypass}) => {
+        import(`${ext_base_URL}helpers/dom.js`).then(({default: helpers}) => {
             const bps = new bypass;
             bps.set_helpers(helpers);
             console.log('ensure_dom: %r', bps.ensure_dom);

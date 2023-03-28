@@ -7,6 +7,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const targetUrl = urlParams.get('target');
 
 function escapeHtml(unsafe) {
+  if (!unsafe) return unsafe; //prevents null objects from throwing an error
   return unsafe
     .replaceAll('&', '&amp;')
     .replaceAll('<', '&lt;')
