@@ -1900,11 +1900,11 @@ ensureDomLoaded(() => {
             }
         }
     })
-    domainBypass("megadb.net", () => {
-        ifElement("form[name='F1']", function (a) {
-            a.submit();
-        });
-    });
+//     domainBypass("megadb.net", () => {
+//         ifElement("form[name='F1']", function (a) {
+//             a.submit();
+//         });
+//     });
     hrefBypass(/enxf\.net\/resources\/[a-zA-Z-\.\d]+\/download/, () => {
         ifElement(".XGT-Download-form", ex => safelyNavigate(ex.action));
     })
