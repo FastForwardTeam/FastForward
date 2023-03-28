@@ -139,14 +139,22 @@ export function crowdContribute(domain, path, target) {
   );
 }
 
-export function unsafelyNavigate(target, referer = null) {
+export function unsafelyNavigate(target, referer = null, crowd = false) {
   //The background script will intercept the request and redirect to html/before-navigate.html or to the target depending on the user's settings.
   if (navigated) {
     return;
   }
-  let url = `https://fastforward.team/bypassed?target=${encodeURIComponent(
-    target
-  )}`;
+  let url;
+  if (crowd) {
+    url = `https://fastforward.team/bypassed?crowd=true&target=${encodeURIComponent(
+      target
+    )}`;
+  } else {
+    url = `https://fastforward.team/bypassed?target=${encodeURIComponent(
+      target
+    )}`;
+  }
+
   if (referer) url += `&referer=${encodeURIComponent(referer)}`;
 
   switch (

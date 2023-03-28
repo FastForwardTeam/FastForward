@@ -1,3 +1,4 @@
+/*global brws*/
 let defaultOptions = {
   navigationDelayToggle: true,
   navigationDelay: 10,
@@ -12,13 +13,18 @@ let defaultOptions = {
   whitelist: '',
 };
 
+const crowdTempDisabledMessage = document.querySelector(
+  '#crowdTempDisabledMessage'
+);
+const optionCrowdBypass = document.querySelector('#optionCrowdBypass');
+
 async function saveOptions(options) {
-  return chrome.storage.local.set({ options: options });
+  return brws.storage.local.set({ options: options });
 }
 
 async function getOptions() {
   return new Promise((resolve) => {
-    chrome.storage.local.get('options').then((result) => {
+    brws.storage.local.get('options').then((result) => {
       resolve(result.options);
     });
   });
@@ -41,7 +47,7 @@ function addNumberInputs() {
 }
 
 function displayExtensionVersion() {
-  chrome.storage.local
+  brws.storage.local
     .get('version')
     .then(
       (data) => (document.getElementById('version').textContent = data.version)
@@ -105,10 +111,44 @@ async function repopulateOptions() {
   saveOptions(options);
 }
 
+//only refresh the checkboxes otherwise the user won't be able to type anything
+async function refreshOptions() {
+  let options = Object.assign({}, defaultOptions, await getOptions());
+  for (let key in options) {
+    let element = document.querySelector('#' + key);
+    if (element.type === 'checkbox') {
+      element.checked = options[key];
+    }
+    saveOptions(options);
+  }
+}
+function refCrowdTempDisabledMsg() {
+  brws.storage.local.get(['tempDisableCrowd']).then((result) => {
+    if (result.tempDisableCrowd === 'true') {
+      crowdTempDisabledMessage.hidden = false;
+    } else {
+      crowdTempDisabledMessage.hidden = true;
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', async function () {
   addNumberInputs();
   await repopulateOptions();
+  refCrowdTempDisabledMsg();
   addEventListeners();
   formatWhitelistDesc();
   displayExtensionVersion();
+  setInterval(() => {
+    refCrowdTempDisabledMsg();
+    refreshOptions();
+  }, 1000);
+});
+
+// If the user manually checks optionCrowdBypass, set tempDisableCrowd to false
+optionCrowdBypass.addEventListener('change', () => {
+  if (optionCrowdBypass.checked) {
+    brws.storage.local.set({ tempDisableCrowd: 'false' });
+    refCrowdTempDisabledMsg();
+  }
 });

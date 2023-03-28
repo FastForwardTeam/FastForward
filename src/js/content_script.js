@@ -1,14 +1,14 @@
 const brws = typeof browser !== 'undefined' ? browser : chrome;
 async function getOptions() {
   return new Promise((resolve) => {
-    chrome.storage.local.get('options').then((result) => {
+    brws.storage.local.get('options').then((result) => {
       resolve(result.options);
     });
   });
 }
 
-function getBaseURL() {
-  return 'chrome-extension://' + chrome.runtime.id;
+function getExtBaseURL() {
+  return 'chrome-extension://' + brws.runtime.id;
 }
 
 async function injectScript() {
@@ -22,9 +22,9 @@ async function injectScript() {
   }
   let script = document.createElement('script');
   script.src =
-    chrome.runtime.getURL('injection_script.js') +
+    brws.runtime.getURL('injection_script.js') +
     '?' +
-    new URLSearchParams({ ext_base_URL: getBaseURL() }); //pass base url to injection script https://stackoverflow.com/a/9517879
+    new URLSearchParams({ ext_base_URL: getExtBaseURL() }); //pass base url to injection script https://stackoverflow.com/a/9517879
   script.onload = function () {
     script.remove();
   };
@@ -36,7 +36,7 @@ document.addEventListener('ff53054c0e13_crowdQuery', async function (event) {
   //we shoudn't receive an event if it's disabled but double checking anyway
   let options = await getOptions();
   if (options.optionCrowdBypass === false) {
-    const src = chrome.runtime.getURL('helpers/infobox.js');
+    const src = brws.runtime.getURL('helpers/infobox.js');
     const insertInfoBox = await import(src);
     insertInfoBox(brws.i18n.getMessage('crowdDisabled'));
     return;

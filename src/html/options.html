@@ -40,14 +40,8 @@
       </div>
     </nav>
     <div class="uk-margin-top uk-margin-bottom uk-margin-left uk-margin-right">
-      <p>
-        <span data-message="version"></span> <span id="version"></span> &middot;
-      </p>
-      <div id="firstrun-alert" uk-alert class="uk-alert-primary uk-hidden">
-        <a class="uk-alert-close" uk-close></a>
-        <p data-message="firstrunTitle"></p>
-      </div>
-      <div id="counter" class="uk-alert uk-alert-primary uk-hidden">
+      <p><span data-message="version"></span> <span id="version"></span></p>
+      <div id="counter" class="uk-alert uk-alert-primary" hidden>
         <p>
           <span></span>
           <a
@@ -104,7 +98,13 @@
           target="_blank"
           data-message="privacyPolicy"
         ></a
-        >)<br />
+        >)<span id="crowdTempDisabledMessage">
+          (<span
+            data-message="crowdBypassTempDisabled"
+            class="uk-text-warning"
+          ></span
+          >)</span
+        ><br />
         <input
           type="checkbox"
           class="uk-checkbox"
