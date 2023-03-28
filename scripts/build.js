@@ -6,18 +6,18 @@
  *                  nover = Creates a package without version number
  *                  ver   = Creates a package with version number as specified in version.txt
  */
-import { createRequire } from "module";
+import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 
-const fs = require("fs");
-const path = require("path");
+const fs = require('fs');
+const path = require('path');
 
 let working_directory = process.cwd();
 
 function set_working_directory(cwd) {
-  if (fs.existsSync(path.join(cwd, "LICENSE"))) {
+  if (fs.existsSync(path.join(cwd, 'LICENSE'))) {
     working_directory = cwd;
-  } else set_working_directory(path.join(cwd, ".."));
+  } else set_working_directory(path.join(cwd, '..'));
 }
 set_working_directory(working_directory);
 
@@ -28,21 +28,21 @@ args.shift();
 // skip first 2, they are: node and build.js
 if (!args.length) {
   console.error(
-    "[FastForward.build] No build type passed defaulting to all, usage: node scripts/build.js {firefox|chromium|all} {none|nover|ver}"
+    '[FastForward.build] No build type passed defaulting to all, usage: node scripts/build.js {firefox|chromium|all} {none|nover|ver}'
   );
-  args[0] = "all";
+  args[0] = 'all';
 }
 
 const [build_type, versioning] = args;
 console.log(
   `[FastForward.build] ${build_type} (${
-    versioning ? versioning : "dev"
+    versioning ? versioning : 'dev'
   }): Creating package...`
 );
 
 const builds = [];
-import ff_builder from "./build_js/firefox.js";
-import chrm_builder from "./build_js/chromium.js";
+import ff_builder from './build_js/firefox.js';
+import chrm_builder from './build_js/chromium.js';
 
 const builders = {
   firefox: ff_builder,
@@ -146,14 +146,14 @@ async function run_build(type, commit_number) {
   const manifest_contents = require(`${destination}/manifest.json`);
   let version;
   if (!versioning) version = `0.${commit_number}.0`;
-  else if ("nover" === versioning) version = `0.${commit_number}`;
+  else if ('nover' === versioning) version = `0.${commit_number}`;
   else
     version = fs.readFileSync(`${working_directory}/src/version.txt`, {
-      encoding: "utf-8",
+      encoding: 'utf-8',
     });
 
   // replace windows OR linux style new lines if they are there
-  manifest_contents.version = version.replace(/\r\n/g, "").replace(/\n/g, "");
+  manifest_contents.version = version.replace(/\r\n/g, '').replace(/\n/g, '');
   fs.writeFileSync(
     `${destination}/manifest.json`,
     JSON.stringify(manifest_contents, null, 4)
@@ -167,19 +167,19 @@ async function run_build(type, commit_number) {
   });
 }
 
-if ("all" === build_type) {
-  builds.push("firefox", "chromium");
+if ('all' === build_type) {
+  builds.push('firefox', 'chromium');
 } else {
   builds.push(build_type);
 }
 
-const { exec } = require("child_process");
+const { exec } = require('child_process');
 
 exec(`git rev-list HEAD --count`, async (error, stdout, stderr) => {
   const bypasses = {};
 
   for (const _ of fs.readdirSync(`${working_directory}/src/bypasses`)) {
-    if (_ === "BypassDefinition.js") continue;
+    if (_ === 'BypassDefinition.js') continue;
 
     const bypass = await import(
       `file:///${working_directory}/src/bypasses/${_}`
@@ -199,8 +199,8 @@ if (location.host in bypasses) {
     const bypass_url = bypasses[location.host];
     
     
-    import(\`\${ext_base_URL}/\${bypass_url}\`).then(({default: bypass}) => {
-        import(\`\${ext_base_URL}/helpers/dom.js\`).then(({default: helpers}) => {
+    import(\`\${ext_base_URL}\${bypass_url}\`).then(({default: bypass}) => {
+        import(\`\${ext_base_URL}helpers/dom.js\`).then(({default: helpers}) => {
             const bps = new bypass;
             bps.set_helpers(helpers);
             console.log('ensure_dom: %r', bps.ensure_dom);
@@ -225,5 +225,5 @@ if (location.host in bypasses) {
     });
 }`
   );
-  for (const _ of builds) await run_build(_, stdout.replace("\n", ""));
+  for (const _ of builds) await run_build(_, stdout.replace('\n', ''));
 });

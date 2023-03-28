@@ -8,7 +8,7 @@ async function getOptions() {
 }
 
 function getExtBaseURL() {
-  return 'chrome-extension://' + brws.runtime.id;
+  return brws.runtime.getURL('/');
 }
 
 async function injectScript() {
