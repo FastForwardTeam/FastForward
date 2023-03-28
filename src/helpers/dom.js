@@ -134,7 +134,6 @@ export function crowdContribute(domain, path, target) {
     path: path,
     target: target,
   };
-  //ff + first 10 characters of SHA256 of fastforward to prevent collisions
   document.dispatchEvent(
     new CustomEvent('ff53054c0e13_crowdContribute', { detail: data })
   );

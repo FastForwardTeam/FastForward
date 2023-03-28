@@ -48,6 +48,18 @@ function displayExtensionVersion() {
     );
 }
 
+function formatWhitelistDesc() {
+  document.querySelector(
+    "[data-message='optionsWhitelistDescription']"
+  ).innerHTML = document
+    .querySelector("[data-message='optionsWhitelistDescription']")
+    .textContent.replace(
+      'subdomain.domain.tld',
+      '<code>subdomain.domain.tld</code>'
+    )
+    .replace('domain.tld', '<code>domain.tld</code>');
+}
+
 function addEventListeners() {
   document
     .querySelectorAll('#options-form input[type="checkbox"]')
@@ -97,5 +109,6 @@ document.addEventListener('DOMContentLoaded', async function () {
   addNumberInputs();
   await repopulateOptions();
   addEventListeners();
+  formatWhitelistDesc();
   displayExtensionVersion();
 });

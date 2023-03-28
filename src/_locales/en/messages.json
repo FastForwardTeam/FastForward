@@ -157,5 +157,11 @@
 	},
 	"optionsWhitelistSave":{
 		"message": "Save Whitelist"
+	},
+	"optionsWhitelist": {
+		"message": "Whitelist"
+	},
+	  "optionsWhitelistDescription": {
+		"message": "A list of sites formatted as domain.tld or subdomain.domain.tld separated with a newline that will not be bypassed by FastForward. You can use * as a wildcard."
 	}
 }
