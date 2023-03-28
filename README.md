@@ -51,10 +51,13 @@ Edge is supported through [the Microsoft Store](https://microsoftedge.microsoft.
 <a href="https://microsoftedge.microsoft.com/addons/detail/fastforward/ldcclmkclhomnpcnccgbgleikchbnecl"><img src="https://user-images.githubusercontent.com/585534/107280673-a5ece780-6a26-11eb-9cc7-9fa9f9f81180.png" alt="Get FastForward on Microsoft Edge" width="126px"></a>
 
 ### Firefox-based browsers
+<!--
 FastForward is available on the [Firefox Add-ons Store](https://addons.mozilla.org/firefox/addon/fastforwardteam/).
 
 <a href="https://addons.mozilla.org/firefox/addon/fastforwardteam/"><img src="https://user-images.githubusercontent.com/585534/107280546-7b9b2a00-6a26-11eb-8f9f-f95932f4bfec.png" alt="Get FastForward for Firefox" width="128px"></a> 
 
+-->
+Firefox can only be manually installed now, check our Discord server for more details.
 ## Manual Installation
 See instructions for [manually installing the extension here](https://github.com/FastForwardTeam/FastForward/blob/main/INSTALLING.md).  
 This page has instructions for both Chrome/Chromium-based browsers AND Firefox.
