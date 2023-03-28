@@ -81,7 +81,6 @@ function addEventListeners() {
 async function repopulateOptions() {
   let options = Object.assign({}, defaultOptions, await getOptions());
   for (let key in options) {
-    console.log(key);
     let element = document.querySelector('#' + key);
     if (element.type === 'checkbox') {
       element.checked = options[key];
@@ -89,7 +88,6 @@ async function repopulateOptions() {
       element.value = options[key];
     } else if (element.tagName === 'TEXTAREA') {
       element.value = options[key];
-      console.log(options[key]);
     }
   }
   saveOptions(options);
