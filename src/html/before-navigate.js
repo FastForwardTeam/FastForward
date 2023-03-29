@@ -13,11 +13,17 @@ if(args.has("target"))
 			{
 				document.querySelector("div").innerHTML="<p></p>"
 				document.querySelector("p").textContent=brws.i18n.getMessage("beforeNavigateInstant").replace("%",args.get("target"))
-				setTimeout(()=>location.href=a.href,10)
+				setTimeout(()=>{
+					chrome.runtime.sendMessage({ type: "open-tab", url: a.href })
+					chrome.runtime.sendMessage({ type: "close-tab" })
+				},10)
 			}
 			else
 			{
-				timer("beforeNavigateTimer",res.navigation_delay,true,()=>location.href=a.href)
+				timer("beforeNavigateTimer",res.navigation_delay,true,()=>{
+					chrome.runtime.sendMessage({ type: "open-tab", url: a.href })
+					chrome.runtime.sendMessage({ type: "close-tab" })
+				})
 			}
 		})
 	}
