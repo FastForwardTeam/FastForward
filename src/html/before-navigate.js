@@ -1,38 +1,51 @@
-const args=new URLSearchParams(location.search)
-if(args.has("target"))
-{
-	let span=document.querySelector("[data-message='beforeNavigateDestination']")
-	span.innerHTML=span.innerHTML.replace("%",'<a href="#"></a>')
-	const a=span.querySelector("a"),referer=args.get("referer")
-	a.textContent=args.get("target")
-	const when_safe=()=>{
-		document.getElementById("unsafe").classList.add("uk-hidden")
-		a.href=referer&&referer!="tracker"?"https://fastforward.team/navigate"+location.search:args.get("target")
-		brws.storage.sync.get(["navigation_delay","no_instant_navigation_trackers"],res=>{
-			if(res.navigation_delay==0||(referer=="tracker"&&res.no_instant_navigation_trackers!=="true"))
-			{
-				document.querySelector("div").innerHTML="<p></p>"
-				document.querySelector("p").textContent=brws.i18n.getMessage("beforeNavigateInstant").replace("%",args.get("target"))
-				setTimeout(()=>location.href=a.href,10)
-			}
-			else
-			{
-				timer("beforeNavigateTimer",res.navigation_delay,true,()=>location.href=a.href)
-			}
-		})
-	}
-	if(args.has('safe_in') && args.get('safe_in') && args.get('safe_in') !== 'null')
-	{
-		document.getElementById("unsafe").classList.remove("uk-hidden")
-		document.getElementById("options-link").classList.add("uk-hidden")
-		timer("beforeNavigateUnsafeTimer",args.get("safe_in"),false,when_safe)
-	}
-	else
-	{
-		when_safe()
-	}
+/*global brws*/
+const timerElement = document.getElementById('timer');
+const timerText = timerElement.querySelector('p');
+
+// Get target URL from search parameter
+const urlParams = new URLSearchParams(window.location.search);
+const targetUrl = urlParams.get('target');
+
+function escapeHtml(unsafe) {
+  if (!unsafe) return unsafe; //prevents null objects from throwing an error
+  return unsafe
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#039;');
 }
-else
-{
-	history.back()
-}
+
+// Update destination message with target URL
+const destinationElement = document.querySelector('#destination');
+destinationElement.innerHTML = brws.i18n.getMessage(
+  'beforeNavigateDestination',
+  '<a><code>'.concat(escapeHtml(targetUrl), '</a></code>')
+);
+
+brws.storage.local.get('options', (result) => {
+  if (!result.options.navigationDelayToggle) {
+    return;
+  }
+  const delay = result.options.navigationDelay;
+  let timeLeft = delay;
+
+  timerElement.classList.remove('uk-hidden');
+  timerText.textContent = brws.i18n.getMessage(
+    timeLeft === 1 ? 'beforeNavigateTimerSingular' : 'beforeNavigateTimer',
+    [timeLeft]
+  );
+
+  const interval = setInterval(() => {
+    timeLeft--;
+    if (timeLeft <= 0) {
+      clearInterval(interval);
+      window.location.href = targetUrl;
+    } else {
+      timerText.textContent = brws.i18n.getMessage(
+        timeLeft === 1 ? 'beforeNavigateTimerSingular' : 'beforeNavigateTimer',
+        [timeLeft]
+      );
+    }
+  }, 1000);
+});

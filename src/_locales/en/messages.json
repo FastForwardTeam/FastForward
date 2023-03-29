@@ -17,18 +17,6 @@
 	"changelog": {
 		"message": "Changelog"
 	},
-	"update": {
-		"message": "Check for updates"
-	},
-	"updating": {
-		"message": "Downloading bypass definitions..."
-	},
-	"updateYes": {
-		"message": "Successfully downloaded bypass definitions."
-	},
-	"updateNo": {
-		"message": "Bypass definitions are up-to-date."
-	},
 	"faq": {
 		"message": "Frequently Asked Questions (FAQ)"
 	},
@@ -84,19 +72,10 @@
 		"message": "You're almost at your destination."
 	},
 	"beforeNavigateDestination": {
-		"message": "Your destination is %"
-	},
-	"beforeNavigateUnsafe": {
-		"message": "However, if you navigate now, they will detect FastForward."
-	},
-	"beforeNavigateUnsafeTimer": {
-		"message": "You will no longer be detected in % seconds."
-	},
-	"beforeNavigateUnsafeTimerSingular": {
-		"message": "You will no longer be detected in 1 second."
+		"message": "Your destination is $1"
 	},
 	"beforeNavigateTimer": {
-		"message": "You will be redirected automatically in % seconds."
+		"message": "You will be redirected automatically in $1 seconds."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "You will be redirected automatically in 1 second."
@@ -105,7 +84,7 @@
 		"message": "Do you want to be redirected instantly or in x seconds?"
 	},
 	"beforeNavigateInstant": {
-		"message": "You are being navigated to %"
+		"message": "You are being navigated to $1"
 	},
 	"infoLinkvertise": {
 		"message": "FastForward requires you to complete the captcha before we can bypass this site for you. after you do this, we can skip the annoying steps!"
@@ -126,25 +105,22 @@
 		"message": "You might not have to wait!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Other FastForward users have already waited for you and reported that this leads to %"
+		"message": "Other FastForward users have already waited for you and reported that this leads to $1"
 	},
 	"crowdBypassedTimer": {
-		"message": "This will be opened in a new tab in % seconds."
+		"message": "This will be opened in a new tab in $1 seconds."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "This will be opened in a new tab in 1 second."
 	},
 	"crowdCloseTimer": {
-		"message": "This tab will close in % seconds."
+		"message": "This tab will close in $1 seconds."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "This tab will close in 1 second."
 	},
 	"cancel": {
 		"message": "Cancel."
-	},
-	"crowdBypassedIgnore": {
-		"message": "Was this not correct?"
 	},
 	"crowdBypassedOptions": {
 		"message": "Do you want this to be opened in a new tab instantly or in x seconds?"
@@ -154,5 +130,24 @@
 	},
 	"blockedSubtitle": {
 		"message": "Don't want FastForward to prevent bad actors from getting your IP?"
+	},
+	"optionsWhitelistSave":{
+		"message": "Save Whitelist"
+	},
+	"optionsWhitelist": {
+		"message": "Whitelist"
+	},
+	  "optionsWhitelistDescription": {
+		"message": "A list of sites formatted as domain.tld or subdomain.domain.tld separated with a newline that will not be bypassed by FastForward. You can use * as a wildcard."
+	},
+	"tempDisableCrowdBypassButton": {
+		"message": "Temporarily disable crowd bypass"
+	},
+	"tempDisableCrowdBypassDesc": {
+		"message": "Was this not correct?"
+	},
+	"crowdBypassTempDisabled":{
+		"message":"Crowd bypass has been temporarily disabled"
 	}
+	
 }
