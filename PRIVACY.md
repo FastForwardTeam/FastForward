@@ -1,11 +1,5 @@
 # FastForward Privacy Policy
 
-## Auto-updating
-
-In order to provide up-to-date bypasses, FastForward sends a request to Github every hour, and if a new commit is found, it will download the latest "injection script."
-
-For this, [Github's privacy policy](https://help.github.com/en/github/site-policy/github-privacy-statement) applies.
-
 ## Crowd Bypass
 
 When Crowd Bypass (Options > "Give and take the destinations of unbypassable shorteners.") is enabled, ocassionally the extension will send requests to our server:
