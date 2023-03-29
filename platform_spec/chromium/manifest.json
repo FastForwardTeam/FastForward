@@ -1,5 +1,5 @@
 {
-	"manifest_version": 2,
+	"manifest_version": 3,
 	"icons": {
 		"48": "icon/48.png",
 		"128": "icon/128.png",
@@ -17,29 +17,17 @@
 	"permissions": [
 		"alarms",
 		"storage",
-		"webRequest",
-		"webRequestBlocking",
-		"<all_urls>"
+		"webNavigation"
 	],
 	"options_ui": {
 		"page": "html/options.html",
 		"open_in_tab": true
 	},
-	"browser_action": {
-		"default_icon": {
-			"48": "icon/48.png",
-			"128": "icon/128.png",
-			"150": "icon/150.png",
-			"176": "icon/176.png",
-			"512": "icon/512.png"
-		},
-		"default_popup": "html/popup.html"
-	},
 	"background": {
-		"scripts": [
-			"background.js"
-		]
+		"service_worker": "background.js"
+		
 	},
+	"action": {},
 	"content_scripts": [
 		{
 			"matches": [
@@ -51,13 +39,19 @@
 			"run_at": "document_start"
 		}
 	],
-	"web_accessible_resources": [
+	
+	"web_accessible_resources": [{
+		"resources": [
 		"html/before-navigate.html",
 		"html/blocked.html",
 		"html/crowd-bypassed.html",
 		"html/firstrun.html",
 		"html/firstrun-noscript.html",
 		"html/options.html",
-		"icon/48.png"
-	]
+		"icon/48.png",
+		"injection_script.js",
+		"bypasses/*",
+		"helpers/*"],
+		"matches": ["<all_urls>"]
+}]
 }
