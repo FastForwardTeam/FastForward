@@ -13,7 +13,7 @@ jobs:
           fetch-depth: 0
       
       - name: Make package
-        run: bash scripts/chromium.sh
+        run: node .\scripts\build.js chromium
 
       - name: Upload Package Artifact
         uses: actions/upload-artifact@v2.2.4
@@ -31,7 +31,7 @@ jobs:
           fetch-depth: 0
       
       - name: Make package
-        run: bash scripts/firefox.sh
+        run: node .\scripts\build.js firefox
 
       - name: Upload Package Artifact
         uses: actions/upload-artifact@v2.2.4
