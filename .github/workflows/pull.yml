@@ -5,13 +5,18 @@ on: pull_request
 jobs:
   Chromium:
     runs-on: ubuntu-latest
-    
+
     steps:
       - uses: actions/checkout@v2
         with:
           # pulls all commits (needed for commits to version)
           fetch-depth: 0
-      
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 'lts/*'
+          cache: 'npm'
+
       - name: Make package
         run: node ./scripts/build.js chromium
 
@@ -24,12 +29,12 @@ jobs:
 
   Firefox:
     runs-on: ubuntu-latest
-    
+
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      
+
       - name: Make package
         run: node ./scripts/build.js firefox
 
