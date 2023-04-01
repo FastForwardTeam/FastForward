@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           # pulls all commits (needed for commits to version)
           fetch-depth: 0
@@ -20,6 +20,9 @@ jobs:
         with:
           node-version: 'lts/*'
           cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
 
       - name: Make package
         run: node ./scripts/build.js chromium
@@ -38,6 +41,14 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 'lts/*'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
 
       - name: Make package
         run: node ./scripts/build.js firefox
