@@ -1,0 +1,30 @@
+name: Deploy to all web stores
+
+on: workflow_dispatch
+
+jobs:
+  Build_and_upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: manifest-v3
+      - name: Make package
+        run: |
+          npm install
+          node ./scripts/build.js
+      - name: Read commit number
+        id: read_commit_number
+        run: |
+          VERSION=$(jq -r '.version' manifest.json)
+          COMMIT_NUMBER=$(echo $VERSION | cut -d '.' -f 2)
+          echo "::set-output name=commit_number::$COMMIT_NUMBER"
+      - name: Browser Platform Publisher
+        uses: PlasmoHQ/bpp@v3.2.1
+        with:
+          keys: ${{ secrets.BPP_KEYS }}
+          chrome-file: ./build/dist/FastForward_chromium_${{ steps.read_commit_number.outputs.commit_number }}_dev.zip
+          edge-file: ./build/dist/FastForward_chromium_${{ steps.read_commit_number.outputs.commit_number }}_dev.zip
+          firefox-file: ./build/dist/FastForward_firefox_${{ steps.read_commit_number.outputs.commit_number }}_dev.xpi
+          version-file: ./build/dist/FastForward.firefox/manifest.json

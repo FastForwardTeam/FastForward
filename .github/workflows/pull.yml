@@ -5,15 +5,23 @@ on: pull_request
 jobs:
   Chromium:
     runs-on: ubuntu-latest
-    
+
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           # pulls all commits (needed for commits to version)
           fetch-depth: 0
-      
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 'lts/*'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
       - name: Make package
-        run: bash scripts/chromium.sh
+        run: node ./scripts/build.js chromium
 
       - name: Upload Package Artifact
         uses: actions/upload-artifact@v2.2.4
@@ -24,14 +32,22 @@ jobs:
 
   Firefox:
     runs-on: ubuntu-latest
-    
+
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 'lts/*'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
       - name: Make package
-        run: bash scripts/firefox.sh
+        run: node ./scripts/build.js firefox
 
       - name: Upload Package Artifact
         uses: actions/upload-artifact@v2.2.4

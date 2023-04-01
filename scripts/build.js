@@ -114,8 +114,8 @@ async function run_build(type, commit_number) {
     `[FastForward.build.${type}] copying PRIVACY.md to ${destination}`
   );
   fs.copyFileSync(
-    `${working_directory}/PRIVACY.md`,
-    `${destination}/PRIVACY.md`
+      `${working_directory}/docs/PRIVACY.md`,
+      `${destination}/PRIVACY.md`
   );
 
   console.log(

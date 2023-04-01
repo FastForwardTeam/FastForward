@@ -13,13 +13,13 @@ jobs:
     steps:
       - uses: actions/stale@v5
         with:
-          days-before-issue-stale: 30
-          days-before-issue-close: 14
+          days-before-issue-stale: 14
+          days-before-issue-close: 30
           operations-per-run: 700
           stale-issue-label: "stale"
           exempt-issue-labels: "no stale"
           stale-issue-message: "This issue is stale because it has been open for 30 days with no activity. To undo this, make some activity on this issue or create a new one."
           close-issue-message: "This issue was automatically closed because it has been inactive for 14 days since being marked as stale. If you bypass/problem wasn't solved, please create a new issue."
-          days-before-pr-stale: -1
-          days-before-pr-close: -1
+          days-before-pr-stale: 14
+          days-before-pr-close: 30
           repo-token: ${{ secrets.GITHUB_TOKEN }}
