@@ -13,7 +13,7 @@ jobs:
       - name: Make package
         run: |
           npm install
-          node .\scripts\build.js
+          node ./scripts/build.js
       - name: Read commit number
         id: read_commit_number
         run: |
@@ -24,7 +24,7 @@ jobs:
         uses: PlasmoHQ/bpp@v3.2.1
         with:
           keys: ${{ secrets.BPP_KEYS }}
-          chrome-file: .\build\dist\FastForward_chromium_${{ steps.read_commit_number.outputs.commit_number }}_dev.zip
-          edge-file: .\build\dist\FastForward_chromium_${{ steps.read_commit_number.outputs.commit_number }}_dev.zip
-          firefox-file: .\build\dist\FastForward_firefox_${{ steps.read_commit_number.outputs.commit_number }}_dev.xpi
-          version-file: .\build\dist\FastForward.firefox\manifest.json
+          chrome-file: ./build/dist/FastForward_chromium_${{ steps.read_commit_number.outputs.commit_number }}_dev.zip
+          edge-file: ./build/dist/FastForward_chromium_${{ steps.read_commit_number.outputs.commit_number }}_dev.zip
+          firefox-file: ./build/dist/FastForward_firefox_${{ steps.read_commit_number.outputs.commit_number }}_dev.xpi
+          version-file: ./build/dist/FastForward.firefox/manifest.json
