@@ -1,0 +1,37 @@
+name: Build and sign Firefox extension
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version'
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 'lts/*'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Update version
+        run: echo '${{ github.event.inputs.version }}' > src/version.txt
+
+      - name: Build extension
+        run: node ./scripts/build.js firefox ver
+
+      - name: Sign extension
+        run: npx web-ext sign --source-dir /builds/FastForward.firefox --api-key ${{ secrets.WEB_EXT_API_KEY }} --api-secret ${{ secrets.WEB_EXT_API_SECRET }}
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: signed-extension
+          path: web-ext-artifacts/*.xpi
