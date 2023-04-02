@@ -14,7 +14,7 @@ import {
   copyArray,
   changeCwdtoRoot,
   getNumberOfCommits,
-} from './build_js/utilis.js';
+} from './build_js/utils.js';
 
 changeCwdtoRoot();
 let working_directory = process.cwd();

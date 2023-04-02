@@ -31,7 +31,7 @@ jobs:
         run: npx web-ext sign --source-dir /builds/FastForward.firefox --api-key ${{ secrets.FIREFOX_API_KEY }} --api-secret ${{ secrets.FIREFOX_API_SECRET }}
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: signed-extension
           path: web-ext-artifacts/*.xpi
