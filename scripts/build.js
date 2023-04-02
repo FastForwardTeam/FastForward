@@ -20,7 +20,7 @@ changeCwdtoRoot();
 let working_directory = process.cwd();
 const distribution = `${working_directory}/build/dist`;
 const tempDir = `${working_directory}/build/commontemp`;
-const [browser, version] = process.argv.slice(2);
+let [browser, version] = process.argv.slice(2);
 
 if (!['firefox', 'chromium', 'all'].includes(browser)) {
   console.error(
@@ -30,8 +30,7 @@ if (!['firefox', 'chromium', 'all'].includes(browser)) {
 }
 
 if (!['nover', 'ver'].includes(version)) {
-  console.error('Invalid version argument. Must be "nover" or "ver".');
-  process.exit(1);
+  version = 'nover';
 }
 
 if (fs.existsSync(`${working_directory}/build`))
