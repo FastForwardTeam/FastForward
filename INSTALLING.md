@@ -147,7 +147,7 @@ Then click "Download bypass definitions" on the settings page.
 <details> <summary> Infinite "Downloading bypass definitions...." </summary>
   <br>
 
-We have identified the issue and are working to fix this problem!
+This issue will be fixed on the next FastForward version, with the manifest version 3.
 
 </details>
 
