@@ -27,8 +27,9 @@ function preflight(details) {
   }
   //navigate
   if (url.pathname === '/bypassed') {
-    url.hostname = brws.runtime.id;
-    url.protocol = brws.runtime.getURL('').split(':')[0] + ':';
+    let ext_url = new URL(brws.runtime.getURL(''));
+    url.hostname = ext_url.hostname;
+    url.protocol = ext_url.protocol;
     url.pathname = '/html' + url.pathname;
     if (url.searchParams.get('crowd') === 'true') {
       url.pathname =

@@ -45,8 +45,6 @@
 		"html/before-navigate.html",
 		"html/blocked.html",
 		"html/crowd-bypassed.html",
-		"html/firstrun.html",
-		"html/firstrun-noscript.html",
 		"html/options.html",
 		"icon/48.png",
 		"injection_script.js",

@@ -25,10 +25,10 @@ jobs:
         run: npm ci
 
       - name: Make package
-        run: node ./scripts/build.js chromium
+        run: node ./scripts/build.js chromium nover
 
       - name: Upload Package Artifact
-        uses: actions/upload-artifact@v2.2.4
+        uses: actions/upload-artifact@v3
         with:
           name: FastForward_chromium
           path: build/dist
@@ -38,7 +38,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
@@ -51,10 +51,10 @@ jobs:
         run: npm ci
 
       - name: Make package
-        run: node ./scripts/build.js firefox
+        run: node ./scripts/build.js firefox nover
 
       - name: Upload Package Artifact
-        uses: actions/upload-artifact@v2.2.4
+        uses: actions/upload-artifact@v3
         with:
           name: FastForward_firefox
           path: build/dist

@@ -50,7 +50,8 @@ function displayExtensionVersion() {
   brws.storage.local
     .get('version')
     .then(
-      (data) => (document.getElementById('version').textContent = data.version)
+      (data) =>
+        (document.getElementById('version').textContent = data.version + '-Mv3')
     );
 }
 
