@@ -77,6 +77,27 @@ brws.alarms.onAlarm.addListener((alarm) => {
   });
 });
 
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+  fetch(request.input, request.init).then(
+    function (response) {
+      return response.text().then(function (text) {
+        sendResponse([
+          {
+            body: text,
+            status: response.status,
+            statusText: response.statusText,
+          },
+          null,
+        ]);
+      });
+    },
+    function (error) {
+      sendResponse([null, error]);
+    }
+  );
+  return true;
+});
+
 brws.action.onClicked.addListener(handleClick);
 brws.runtime.onInstalled.addListener(firstrun);
 brws.runtime.onStartup.addListener(() => {
