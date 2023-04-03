@@ -115,10 +115,66 @@ export function awaitElement(elem, func) {
   });
 }
 
-/*example: www.fastforward.team/hmm?s=53, domain=fastforward.team path=hmm?s=53
-Include subdomain if it's not www. */
+export const ffclipboard = {
+  /**
+   * Sets a value in the ffclipboard.
+   * @param {string} key - The key to set the value for.
+   * @param {any} value - The value to set.
+   */
+  set: function (key, value) {
+    const event = new CustomEvent('ff53054c0e13_ffclipboardSet', {
+      detail: { key, value },
+    });
+    document.dispatchEvent(event);
+  },
+  /**
+   * Clears a value from the ffclipboard.
+   * @param {string} key - The key to clear the value for.
+   */
+
+  clear: function (key) {
+    const event = new CustomEvent('ff53054c0e13_ffclipboardClear', {
+      detail: { key },
+    });
+    document.dispatchEvent(event);
+  },
+  /**
+   * Gets a value from the ffclipboard.
+   * @param {string} key - The key to get the value for.
+   * @returns {Promise<any>} A promise that resolves with the value.
+   */
+  get: function (key) {
+    return new Promise((resolve) => {
+      function onFFClipboardResponse(event) {
+        if (event.detail.key === key) {
+          resolve(event.detail.value);
+          document.removeEventListener(
+            'ff53054c0e13_ffclipboardResponse',
+            onFFClipboardResponse
+          );
+        }
+      }
+      document.addEventListener(
+        'ff53054c0e13_ffclipboardResponse',
+        onFFClipboardResponse
+      );
+      const event = new CustomEvent('ff53054c0e13_ffclipboardGet', {
+        detail: { key },
+      });
+      document.dispatchEvent(event);
+    });
+  },
+};
+
+/**
+ * Dispatch a crowdQuery event.
+ * @param {string} domain - The domain to include in the event detail.
+ * Include subdomain if not www.
+ * @param {string} path - The path to include in the event detail.
+ * Query string also goes here like a?b=c. Drop the first slash 'a' not '/a'
+ */
 export function crowdQuery(domain, path) {
-  var data = {
+  let data = {
     domain: domain,
     path: path,
   };
@@ -127,7 +183,13 @@ export function crowdQuery(domain, path) {
     new CustomEvent('ff53054c0e13_crowdQuery', { detail: data })
   );
 }
-//target must be a fully qualified URL with protocol
+/**
+ * Dispatch a crowdContribute event.
+ * @param {string} domain - The domain. Include subdomain if not www.
+ * @param {string} path - The path. Query string also goes here like a?b=c.
+ * Drop the first slash.
+ * @param {string} target - The target must be a fully qualified URL including the protocol
+ */
 export function crowdContribute(domain, path, target) {
   var data = {
     domain: domain,
@@ -137,6 +199,19 @@ export function crowdContribute(domain, path, target) {
   document.dispatchEvent(
     new CustomEvent('ff53054c0e13_crowdContribute', { detail: data })
   );
+}
+
+export function listenForCrowdResponse() {
+  return new Promise((resolve, reject) => {
+    const timeout = setTimeout(() => {
+      reject(new Error('Timeout: crowd response not received'));
+    }, 5000); //5 sec timeout
+
+    document.addEventListener('ff53054c0e13_crowdResponse', function (event) {
+      clearTimeout(timeout);
+      resolve(event.detail);
+    });
+  });
 }
 
 export function unsafelyNavigate(target, referer = null, crowd = false) {
@@ -270,8 +345,10 @@ export default {
   insertInfoBox,
   ensureDomLoaded,
   awaitElement,
+  ffclipboard,
   crowdQuery,
   crowdContribute,
+  listenForCrowdResponse,
   unsafelyNavigate,
   parseTarget,
   safelyNavigate,
