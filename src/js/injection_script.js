@@ -2853,9 +2853,9 @@ ensureDomLoaded(() => {
                             let target_type = json?.data.link.target_type
                             const make_serial = () => {
                                 return btoa(JSON.stringify({
-                                    timestamp:new Date().getTime(),
-                                    random:"6548307",
-                                    link_id:json.data.link.id
+                                    timestamp: new Date().getTime(),
+                                    random: "6548307",
+                                    link_id: json.data.link.id
                                 }))
                             }
                             const pathmap = {
@@ -2898,7 +2898,7 @@ ensureDomLoaded(() => {
                                                 setTimeout(() => {
                                                     window.location.href =
                                                     URL.createObjectURL(
-                                                        new Blob([json?.data.paste], { type: "text/plain" })
+                                                        new Blob([json.data.paste], { type: "text/plain" })
                                                     )
                                                 }, 3000)
                                             }
@@ -2907,7 +2907,7 @@ ensureDomLoaded(() => {
                                 }
                             }
                             if (!pathmap.hasOwnProperty(target_type))
-                                return insertInfoBox('Due to copyright reasons we are not bypassing linkvertise stored content (paste, download etc)');
+                                return insertInfoBox(`We currently do not support the "${target_type}" linkvertise type.\nOpen an issue on github to request that we add this type.`);
                             return pathmap[target_type]()
                         })
                     }
