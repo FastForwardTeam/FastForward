@@ -41,7 +41,7 @@ function preflight(details) {
     }
 
     brws.tabs.update(details.tabId, {
-      url: decodeURIComponent(url.href),
+      url: url.href,
     });
   }
 }

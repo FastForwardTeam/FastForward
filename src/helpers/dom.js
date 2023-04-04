@@ -200,7 +200,10 @@ export function crowdContribute(domain, path, target) {
     new CustomEvent('ff53054c0e13_crowdContribute', { detail: data })
   );
 }
-
+/**
+ * To be used after dispatching crowdQuery event,
+ * @returns {Promise<any>} Promise will resolve into the path
+ */
 export function listenForCrowdResponse() {
   return new Promise((resolve, reject) => {
     const timeout = setTimeout(() => {
