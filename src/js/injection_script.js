@@ -2850,31 +2850,65 @@ ensureDomLoaded(() => {
         
         
                         fetch(`https://publisher.linkvertise.com/api/v1/redirect/link/static${linkvertise_link}?X-Linkvertise-UT=${ut}`).then(r => r.json()).then(json => {
-                            if (json?.data.link.target_type !== 'URL') {
-                                return insertInfoBox('Due to copyright reasons we are not bypassing linkvertise stored content (paste, download etc)');
+                            let target_type = json?.data.link.target_type
+                            const make_serial = () => {
+                                return btoa(JSON.stringify({
+                                    timestamp: new Date().getTime(),
+                                    random: "6548307",
+                                    link_id: json.data.link.id
+                                }))
                             }
-                            if (json?.data.link.id) {
-                                const json_body = {
-                                    serial: btoa(JSON.stringify({
-                                        timestamp:new Date().getTime(),
-                                        random:"6548307",
-                                        link_id:json.data.link.id
-                                    })),
-                                    token: target_token
+                            const pathmap = {
+                                "URL": () => {
+                                    if (json?.data.link.id) {
+                                        const json_body = {
+                                            serial: make_serial(),
+                                            token: target_token
+                                        }
+                                        fetch(`https://publisher.linkvertise.com/api/v1/redirect/link${linkvertise_link}/target?X-Linkvertise-UT=${ut}`, {
+                                            method: "POST",
+                                            body: JSON.stringify(json_body),
+                                            headers: {
+                                                "Accept": 'application/json',
+                                                "Content-Type": 'application/json'
+                                            }
+                                        }).then(r=>r.json()).then(json=>{
+                                            if (json?.data.target) {
+                                                safelyNavigate(json.data.target)
+                                            }
+                                        })
+                                    }
+                                },
+                                "PASTE": () => {
+                                    if (json?.data.link.id) {
+                                        const json_body = {
+                                            serial: make_serial(),
+                                            token: target_token
+                                        }
+                                        fetch(`https://publisher.linkvertise.com/api/v1/redirect/link${linkvertise_link}/paste?X-Linkvertise-UT=${ut}`, {
+                                            method: "POST",
+                                            body: JSON.stringify(json_body),
+                                            headers: {
+                                                "Accept": 'application/json',
+                                                "Content-Type": 'application/json'
+                                            }
+                                        }).then(r=>r.json()).then(json=>{
+                                            if (json?.data.paste) {
+                                                insertInfoBox('Bypassed paste! Opening in 3 seconds..')
+                                                setTimeout(() => {
+                                                    window.location.href =
+                                                    URL.createObjectURL(
+                                                        new Blob([json.data.paste], { type: "text/plain" })
+                                                    )
+                                                }, 3000)
+                                            }
+                                        })
+                                    }
                                 }
-                                fetch(`https://publisher.linkvertise.com/api/v1/redirect/link${linkvertise_link}/target?X-Linkvertise-UT=${ut}`, {
-                                    method: "POST",
-                                    body: JSON.stringify(json_body),
-                                    headers: {
-                                        "Accept": 'application/json',
-                                        "Content-Type": 'application/json'
-                                    }
-                                }).then(r=>r.json()).then(json=>{
-                                    if (json?.data.target) {
-                                        safelyNavigate(json.data.target)
-                                    }
-                                })
                             }
+                            if (!pathmap.hasOwnProperty(target_type))
+                                return insertInfoBox(`We currently do not support the "${target_type}" linkvertise type.\nOpen an issue on github to request that we add this type.`);
+                            return pathmap[target_type]()
                         })
                     }
                 });
