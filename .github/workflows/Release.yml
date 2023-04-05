@@ -28,7 +28,7 @@ jobs:
         run: node ./scripts/build.js all ver
 
       - name: Sign for Firefox
-        run: npx web-ext sign --source-dir ./build/FastForward.firefox --api-key ${{ secrets.FIREFOX_API_KEY }} --api-secret ${{ secrets.FIREFOX_API_SECRET }}
+        run: npx web-ext sign --channel=unlisted --source-dir ./build/FastForward.firefox --api-key ${{ secrets.FIREFOX_API_KEY }} --api-secret ${{ secrets.FIREFOX_API_SECRET }}
 
       - name: Tag
         env:
