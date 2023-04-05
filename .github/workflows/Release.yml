@@ -30,18 +30,7 @@ jobs:
       - name: Sign for Firefox
         run: npx web-ext sign --channel=unlisted --source-dir ./build/FastForward.firefox --api-key ${{ secrets.FIREFOX_API_KEY }} --api-secret ${{ secrets.FIREFOX_API_SECRET }}
 
-      - name: Tag
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git config --global user.email "git@fastforward.team"
-          git config --global user.name "FastForward Team"
-          git tag -a ${{ github.event.inputs.version }} -m "Version ${{ github.event.inputs.version }}"
-          git push origin ${{ github.event.inputs.version }}
-
       - name: Release
-        uses: softprops/action-gh-release@v1
-        with:
-          files: |
-            web-ext-artifacts/*.xpi
-            build/dist/FastForward_chromium*
+        run: |
+          export GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
+          hub release create -p -a "./web-ext-artifacts/fastforwardteam-${{ github.event.inputs.version }}.xpi#FastForward_Firefox" -a "./build/dist/FastForward_${{ github.event.inputs.version }}_chromium.crx#FastForward_Chromium" -m "Release ${{ github.event.inputs.version }}" ${{ github.event.inputs.version }}
