@@ -41,6 +41,7 @@ function addNumberInputs() {
     let numberInput = document.createElement('input');
     numberInput.setAttribute('type', 'number');
     numberInput.setAttribute('id', value);
+    numberInput.setAttribute('min', '0');
     numberInput.setAttribute('style', 'width:34px');
     element.innerHTML = element.innerHTML.replace('%', numberInput.outerHTML);
   }

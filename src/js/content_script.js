@@ -56,7 +56,7 @@ document.addEventListener('ff53054c0e13_crowdQuery', async function (event) {
   if (options.optionCrowdBypass === false) {
     const src = brws.runtime.getURL('helpers/infobox.js');
     const insertInfoBox = await import(src);
-    insertInfoBox(brws.i18n.getMessage('crowdDisabled'));
+    this.helpers.insertInfoBox(brws.i18n.getMessage('crowdDisabled'));
     return;
   }
   let data = event.detail;
