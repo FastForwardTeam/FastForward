@@ -140,7 +140,7 @@ export default class Workink extends BypassDefinition {
             case "s_link_destination":
                 const url = new URL(payload.url);
                 if (url.searchParams.has("duf")) {
-                    return this.helpers.safelyNavigate(atob(url.searchParams.get("duf").split("").reverse().join("")))
+                    return this.helpers.safelyNavigate(window.atob(url.searchParams.get("duf").split("").reverse().join("")))
                 };
                 this.helpers.safelyNavigate(payload.url);
                 break;

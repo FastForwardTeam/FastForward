@@ -14,7 +14,7 @@ export default class Workclick extends BypassDefinition {
     const { destination } = await fetch(`https://redirect-api.work.ink/externalPopups/${uuid}/destination`).then(r => r.json());
     const url = new URL(destination);
     if (url.searchParams.has('duf')) {
-      const finalUrl = atob(url.searchParams.get('duf').split('').reverse().join(''));
+      const finalUrl = window.atob(url.searchParams.get('duf').split('').reverse().join(''));
       this.helpers.crowdContribute("workink.click", window.location.pathname.substring(1), finalUrl);
       return this.helpers.safelyNavigate(finalUrl);
     }
