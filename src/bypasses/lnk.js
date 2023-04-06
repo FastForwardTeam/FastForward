@@ -10,7 +10,6 @@ export default class Lnk extends BypassDefinition {
     if (!window.location.href.includes('/go/')) {
       window.location.href = window.location.href.replace('lnk.parts', 'lnk.parts/go');
     }
-    setTimeout(500);
     document.getElementById('get_link_btn').click();
   }
 }
