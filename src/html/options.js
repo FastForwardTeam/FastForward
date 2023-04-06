@@ -130,13 +130,13 @@ port.onMessage.addListener(data=>{
 		{
 			devMode=false
 			document.getElementById("definitionsVersion").innerHTML=brws.i18n.getMessage("definitionsVersion")+" <code>"+data.upstreamCommit.substr(0,7)+"</code>"
-			document.getElementById("dev-alert").classList.add("uk-hidden")
+			//document.getElementById("dev-alert").classList.add("uk-hidden")
 		}
 		else
 		{
-			devMode=true
+			devMode=false
 			document.getElementById("definitionsVersion").textContent="Development Mode"
-			document.getElementById("dev-alert").classList.remove("uk-hidden")
+			//document.getElementById("dev-alert").classList.remove("uk-hidden")
 		}
 	}
 	if("bypassCounter" in data && data.bypassCounter > 1)
