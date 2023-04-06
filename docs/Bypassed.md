@@ -38,7 +38,7 @@ This is a list of websites bypassed in the MV2 version of the extension.
 |         https://gotravelgo.space          |   🛑   | 
 |         https://pantauterus.mode          |   🛑   | 
 |          https://liputannubi.net          |   🛑   | 
-|             https://lnk.news              |   ❌    |
+|             https://lnk.news              |   ✅    |
 |              https://uiz.io/              |   ✅    |
 |             https://uiz.app/              |   ✅    |
 |            https://moon7.xyz/             |   🛑   | 
@@ -539,4 +539,5 @@ This is a list of websites bypassed in the MV2 version of the extension.
 |            https://fsquad.com             |   ✅    |
 |            https://clink1.com             |   ❌    |
 |              https://vk.com               |   ✅    |
+|             https://work.ink              |   ✅    |
 
