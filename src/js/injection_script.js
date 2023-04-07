@@ -1997,7 +1997,7 @@ ensureDomLoaded(() => {
     })
 
     // Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
-    hrefBypass(/.*\/s\?[A-Za-z]{3}/, () => {
+    hrefBypass(/.*\/s\?[A-Za-z0-9]{3}/, () => {
         safelyNavigate(document.scripts[0].textContent.split("link: '")[1].split("'")[0])
     })
     domainBypass("cutin.it", () => {
