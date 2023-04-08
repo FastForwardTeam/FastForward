@@ -8,7 +8,7 @@ export default class Admaven extends BypassDefinition {
 
     execute() {
         //Execute only if the regex matches /.*\/s\?[A-Za-z]{3}/
-        if (window.location.pathname.match(/.*\/s\?[A-Za-z]{3}/)) {
+        if (window.location.pathname.match(/.*\/s\?[A-Za-z0-9]{3}/)) {
             this.helpers.safelyNavigate(document.scripts[0].textContent.split("link: '")[1].split("'")[0])
         }
     }

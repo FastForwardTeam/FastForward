@@ -1,6 +1,5 @@
 # Bypassed Sites
 
-
 This is a list of websites bypassed in the MV2 version of the extension.
 
 | Emoji | Legend                                                         |
@@ -540,4 +539,30 @@ This is a list of websites bypassed in the MV2 version of the extension.
 |            https://clink1.com             |   ❌    |
 |              https://vk.com               |   ✅    |
 |             https://work.ink              |   ✅    |
+|           https://mega-guy.com            |   	✅   |
+|         https://ofpacksmega.com	          |   ✅    |
+|         https://depravityweb.co	          |   ✅    |
+|       https://secretpack-links.com	       |   ✅    |
+|         https://secret-links.com	         |   ✅    |
+|         https://tavernleaks.com	          |   ✅    |
+|          https://free-leaks.com	          |   ✅    |
+|        https://hotstars-leaks.com	        |   ✅    |
+|        https://thepremium.online	         |   ✅    |
+|       https://admiregirls-byme.com	       |   ✅    |
+|         https://all-fans.online	          |   ✅    |
+|           https://pnp-drops.me	           |   ✅    |
+|          https://megadropz.com	           |   ✅    |
+|         https://goldmega.online	          |   ✅    |
+|         https://badgirlsdrop.com	         |   ✅    |
+|          https://rareofhub.com	           |   ✅    |
+|           https://only-fun.xyz	           |   ✅    |
+|          https://megadumpz.com	           |   ✅    |
+|         https://leakutopia.site	          |   ✅    |
+|          https://xprmpacks.com	           |   ✅    |
+|           https://onlymega.co	            |   ✅    |
+|         https://tomxcontent.com	          |   ✅    |
+|          https://newsociety0.co	          |   ✅    |
+|         https://cemendemons.com	          |   ✅    |
+|           https://fansmega.com	           |   ✅    |
+|       https://premiumstashdrop.com	       |   ✅    |
 
