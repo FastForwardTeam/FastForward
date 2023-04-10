@@ -10,7 +10,7 @@ export default class Akoam extends BypassDefinition {
             value: 0,
             writable: false
         })
-        awaitElement('.download_button[href]', a => {
+        this.helpers.awaitElement('.download_button[href]', a => {
             this.helpers.safelyNavigate(a.href)
         })
     }
