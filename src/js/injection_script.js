@@ -820,6 +820,15 @@ hrefBypass(myDramaListRegex, () => {
     safelyNavigate(decodeURIComponent(document.URL.split(/\bmydramalist\.com\/redirect\?q=/)[1]))
 })
 //Insertion point for bypasses running before the DOM is loaded.
+domainBypass("bstlar.com", () => {
+    // boostellar bypass too easy
+    const boostellar_link = encodeURIComponent(location.pathname.slice(1))
+    fetch(`https://bstlar.com/api/link?url=${boostellar_link}`).then(res=>res.json().then((res) => {
+        if (res?.link?.destination_url) {
+            safelyNavigate(res.link.destination_url)
+        }
+    }))
+})
 domainBypass("work.ink", () => {
     const websocketUrl = "wss://redirect-api.work.ink/v1/ws";
 
