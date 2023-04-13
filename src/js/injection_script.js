@@ -2680,13 +2680,15 @@ ensureDomLoaded(() => {
             safelyNavigate(a.href)
         })
     })
-    domainBypass("allkeyshop.com", () => {
-        if (location.pathname.includes("outgoinglink/link/")) {
-            ifElement("a", a => {
+
+    domainBypass("click.allkeyshop.com", () => {
+        if (location.pathname.includes("/offer/")) {
+            awaitElement("body a", a => {
                 safelyNavigate(a.href)
             })
         }
     })
+
     hrefBypass(/sharemods\.com\/([a-z0-9]{12})\//, () => {
         awaitElement("#dForm", a => (a.submit()));
     })
