@@ -2671,13 +2671,7 @@ ensureDomLoaded(() => {
             safelyNavigate(a.href)
         })
     })
-    domainBypass("allkeyshop.com", () => {
-        if (location.pathname.includes("outgoinglink/link/")) {
-            ifElement("a", a => {
-                safelyNavigate(a.href)
-            })
-        }
-    })
+
     domainBypass("click.allkeyshop.com", () => {
         if (location.pathname.includes("/offer/")) {
             awaitElement("body a", a => {
