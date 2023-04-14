@@ -505,7 +505,7 @@ brws.webRequest.onBeforeRequest.addListener(details=>{
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
 	countIt()
-	return {redirectUrl:brws.runtime.getURL("html/crowd-bypassed.html")+details.url.substr(43)}
+	return {redirectUrl:brws.runtime.getURL("html/crowd-bypassed.html")+details.url.substr(39)}
 },{types:["main_frame"],urls:["https://fastforward.team/crowd-bypassed?*"]},["blocking"])
 
 brws.webRequest.onBeforeRequest.addListener(details=>{
