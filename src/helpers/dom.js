@@ -172,6 +172,7 @@ export const ffclipboard = {
  * Include subdomain if not www.
  * @param {string} path - The path to include in the event detail.
  * Query string also goes here like a?b=c. Drop the first slash 'a' not '/a'
+ * @returns {Promise<string>} Promise will resolve into the path
  */
 export function crowdQuery(domain, path) {
   let data = {
@@ -182,6 +183,16 @@ export function crowdQuery(domain, path) {
   document.dispatchEvent(
     new CustomEvent('ff53054c0e13_crowdQuery', { detail: data })
   );
+  return new Promise((resolve, reject) => {
+    const timeout = setTimeout(() => {
+      reject(new Error('Timeout: crowd response not received'));
+    }, 5000); //5 sec timeout
+
+    document.addEventListener('ff53054c0e13_crowdResponse', function (event) {
+      clearTimeout(timeout);
+      resolve(event.detail);
+    });
+  });
 }
 /**
  * Dispatch a crowdContribute event.
@@ -200,21 +211,23 @@ export function crowdContribute(domain, path, target) {
     new CustomEvent('ff53054c0e13_crowdContribute', { detail: data })
   );
 }
-/**
- * To be used after dispatching crowdQuery event,
- * @returns {Promise<any>} Promise will resolve into the path
- */
-export function listenForCrowdResponse() {
-  return new Promise((resolve, reject) => {
-    const timeout = setTimeout(() => {
-      reject(new Error('Timeout: crowd response not received'));
-    }, 5000); //5 sec timeout
 
-    document.addEventListener('ff53054c0e13_crowdResponse', function (event) {
-      clearTimeout(timeout);
-      resolve(event.detail);
-    });
-  });
+/**
+ * Dispatch a followAndContribute event. To be used when target redirects to the final destination
+ * @param {string} domain - The domain. Include subdomain if not www.
+ * @param {string} path - The path. Query string also goes here like a?b=c.
+ * Drop the first slash.
+ * @param {string} target - The target must be a fully qualified URL including the protocol
+ */
+export function followAndContribute(domain, path, target) {
+  var data = {
+    domain: domain,
+    path: path,
+    target: target,
+  };
+  document.dispatchEvent(
+    new CustomEvent('ff53054c0e13_followAndContribute', { detail: data })
+  );
 }
 
 export function unsafelyNavigate(target, referer = null, crowd = false) {
@@ -264,6 +277,18 @@ export function safelyNavigate(target, drophash) {
   if (!drophash && (!url || !url.hash)) target += location.hash;
 
   unsafelyNavigate(target);
+  return true;
+}
+
+export function crowdNavigate(target, drophash) {
+  target = parseTarget(target);
+  if (!isGoodLink(target)) return false;
+
+  // bypassed=true
+  let url = new URL(target);
+  if (!drophash && (!url || !url.hash)) target += location.hash;
+
+  unsafelyNavigate(target, null, true);
   return true;
 }
 
@@ -351,10 +376,11 @@ export default {
   ffclipboard,
   crowdQuery,
   crowdContribute,
-  listenForCrowdResponse,
+  followAndContribute,
   unsafelyNavigate,
   parseTarget,
   safelyNavigate,
+  crowdNavigate,
   unsafelyAssign,
   safelyAssign,
   isGoodLink,
