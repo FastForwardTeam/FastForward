@@ -19,7 +19,6 @@ import {
 changeCwdtoRoot();
 let working_directory = process.cwd();
 const distribution = `${working_directory}/build/dist`;
-const tempDir = `${working_directory}/build/commontemp`;
 let [browser, version] = process.argv.slice(2);
 
 if (!['firefox', 'chromium', 'all'].includes(browser)) {
@@ -29,21 +28,27 @@ if (!['firefox', 'chromium', 'all'].includes(browser)) {
   process.exit(1);
 }
 
-if (!['nover', 'ver'].includes(version)) {
-  version = 'nover';
+if (!['nover', 'ver'].includes(version) && version) {
+  console.error('Invalid version argument. Must be "nover", "ver" or none.');
+  process.exit(1);
 }
+if (version === undefined) version = 'nover';
 
 if (fs.existsSync(`${working_directory}/build`))
   fs.rmSync(`${working_directory}/build`, { recursive: true });
 
 fs.mkdirSync(distribution, { recursive: true });
-fs.mkdirSync(tempDir);
+
+let browserDir;
+if (browser !== 'all')
+  browserDir = `${working_directory}/build/FastForward.${browser}`;
+else browserDir = `${working_directory}/build/FastForward.firefox`; //If building for both browsers build for the better one first and then copy it to chromium
+fs.mkdirSync(browserDir);
 
 // Copy privacy.md and src except js
 let src = ['./src', './docs/PRIVACY.md'];
 let exceptions = ['./src/js/', 'version.txt'];
-const dest = `./build/commontemp`;
-await copyArray(src, dest, exceptions);
+await copyArray(src, browserDir, exceptions);
 
 //copy js
 src = ['./src/js'];
@@ -52,7 +57,7 @@ exceptions = [
   'injection_script.js',
   'rules.json',
 ];
-await copyArray(src, dest, exceptions);
+await copyArray(src, browserDir, exceptions);
 
 let bypasses = {};
 for (const i of fs.readdirSync(`${working_directory}/src/bypasses`)) {
@@ -76,8 +81,14 @@ bypasses = JSON.stringify(bypasses);
 const result = ejs.render(template, { bypasses });
 
 // Write the result to the injection_script.js file
-const outputPath = path.join('./build/commontemp/injection_script.js');
+const outputPath = path.join(`${browserDir}/injection_script.js`);
 fs.writeFileSync(outputPath, result);
+
+if (browser === 'all') {
+  const chromiumDir = `${working_directory}/build/FastForward.chromium`;
+  fs.mkdirSync(chromiumDir);
+  await copyArray([browserDir], chromiumDir);
+}
 
 /*Compile*/
 let packageVersion = '';
@@ -92,7 +103,6 @@ async function buildExtension(browser) {
   const targetBrowser = browser === 'firefox' ? 'firefox-desktop' : 'chromium';
   const browserDir = `${working_directory}/build/FastForward.${browser}`;
   const manfistFile = `${working_directory}/platform_spec/${browser}/manifest.json`;
-  await copyArray([tempDir], browserDir);
   await copyArray([manfistFile], browserDir);
   fs.writeFileSync(
     `${browserDir}/manifest.json`,
@@ -123,8 +133,6 @@ async function buildExtension(browser) {
 if (browser === 'all') {
   await buildExtension('firefox');
   await buildExtension('chromium');
-  fs.rmSync(`${working_directory}/build/commontemp`, { recursive: true });
 } else {
   await buildExtension(browser);
-  fs.rmSync(`${working_directory}/build/commontemp`, { recursive: true });
 }
