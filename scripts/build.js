@@ -58,7 +58,7 @@ let bypasses = {};
 for (const i of fs.readdirSync(`${working_directory}/src/bypasses`)) {
   if (i === 'BypassDefinition.js') continue;
 
-  const bypass = await import(`${working_directory}/src/bypasses/${i}`);
+  const bypass = await import(`file://${working_directory}/src/bypasses/${i}`);
   bypass.matches.map((match) => {
     bypasses[match] = `bypasses/${i}`;
   });

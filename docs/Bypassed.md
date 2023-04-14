@@ -1,6 +1,5 @@
 # Bypassed Sites
 
-
 This is a list of websites bypassed in the MV2 version of the extension.
 
 | Emoji | Legend                                                         |
@@ -38,7 +37,7 @@ This is a list of websites bypassed in the MV2 version of the extension.
 |         https://gotravelgo.space          |   🛑   | 
 |         https://pantauterus.mode          |   🛑   | 
 |          https://liputannubi.net          |   🛑   | 
-|             https://lnk.news              |   ❌    |
+|             https://lnk.news              |   ✅    |
 |              https://uiz.io/              |   ✅    |
 |             https://uiz.app/              |   ✅    |
 |            https://moon7.xyz/             |   🛑   | 
@@ -60,24 +59,24 @@ This is a list of websites bypassed in the MV2 version of the extension.
 |             https://nofil.net             |   🛑   | 
 |            https://onnime.net             |   🛑   | 
 |          https://biozkop21.my.id          |   🛑   | 
-|            https://4shared.com            |   ❌    |
-|           https://cheatsquad.gg           |   ❌    |
+|            https://4shared.com            |   ✅    |
+|           https://cheatsquad.gg           |   ✅    |
 |       https://safe.anirocksite.com        |   🛑   | 
-|     https://my-code4you.blogspot.com      |   ❌    |
+|     https://my-code4you.blogspot.com      |   ✅    |
 |            https://jemerik.com            |   🛑   | 
 |         https://busyfinance.site          |   🛑   | 
 |          https://behealth-id.xyz          |   🛑   | 
 |          https://pirateproxy.wtf          |   ✅    | 
-|           https://fouadmods.com           |   ❌    |
-|             https://akwam.org             |   ❌    |
-|           https://old.akwam.co            |   ❌    |
+|           https://fouadmods.com           |   🛑   |
+|             https://akwam.org             |   ✅    |
+|           https://old.akwam.co            |   ✅    |
 |       https://post.techtutors.site        |   🛑   | 
-|              https://an1.com              |   ❌    |
+|              https://an1.com              |   ✅    |
 |        https://online-fix.me/ext/         |   ✅    |
 |              https://pahe.in              |   ❌    |
 |              https://pahe.ph              |   ❌    |
 |              https://pahe.me              |   ❌    |
-|             https://boost.ink             |   ❌    |
+|             https://boost.ink             |   ✅    |
 |         https://linksunlocked.com         |   🛑   | 
 |          https://samehadaku.vip           |   🛑   | 
 |           https://playhindi.com           |   ❌    |
@@ -539,4 +538,31 @@ This is a list of websites bypassed in the MV2 version of the extension.
 |            https://fsquad.com             |   ✅    |
 |            https://clink1.com             |   ❌    |
 |              https://vk.com               |   ✅    |
+|             https://work.ink              |   ✅    |
+|           https://mega-guy.com            |   	✅   |
+|         https://ofpacksmega.com	          |   ✅    |
+|         https://depravityweb.co	          |   ✅    |
+|       https://secretpack-links.com	       |   ✅    |
+|         https://secret-links.com	         |   ✅    |
+|         https://tavernleaks.com	          |   ✅    |
+|          https://free-leaks.com	          |   ✅    |
+|        https://hotstars-leaks.com	        |   ✅    |
+|        https://thepremium.online	         |   ✅    |
+|       https://admiregirls-byme.com	       |   ✅    |
+|         https://all-fans.online	          |   ✅    |
+|           https://pnp-drops.me	           |   ✅    |
+|          https://megadropz.com	           |   ✅    |
+|         https://goldmega.online	          |   ✅    |
+|         https://badgirlsdrop.com	         |   ✅    |
+|          https://rareofhub.com	           |   ✅    |
+|           https://only-fun.xyz	           |   ✅    |
+|          https://megadumpz.com	           |   ✅    |
+|         https://leakutopia.site	          |   ✅    |
+|          https://xprmpacks.com	           |   ✅    |
+|           https://onlymega.co	            |   ✅    |
+|         https://tomxcontent.com	          |   ✅    |
+|          https://newsociety0.co	          |   ✅    |
+|         https://cemendemons.com	          |   ✅    |
+|           https://fansmega.com	           |   ✅    |
+|       https://premiumstashdrop.com	       |   ✅    |
 
