@@ -12,7 +12,7 @@ export default class Workink extends BypassDefinition {
         this.helpers.crowdNavigate(dest);
       });
 
-    this.helpers.ffclipboard.set('workink', window.location.pathname.slice(1)); //will be used in workclick link to contribute
+    this.helpers.ffclipboard.set('workink', window.location.pathname.slice(1)); //will be used in workclick script to contribute
     const websocketUrl = 'wss://redirect-api.work.ink/v1/ws';
 
     const [encodedUserId, linkCustom] = window.location.pathname

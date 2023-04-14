@@ -24,6 +24,7 @@ export default class Workclick extends BypassDefinition {
       destination = finalUrl;
     }
     let path = await this.helpers.ffclipboard.get('workink');
+    this.helpers.ffclipboard.clear('workink');
     this.helpers.followAndContribute('work.ink', path, destination);
 
     return this.helpers.safelyNavigate(destination);
