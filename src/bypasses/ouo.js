@@ -5,7 +5,6 @@ export default class Ouo extends BypassDefinition {
         super()
     }
     execute() {
-        //Bypassing stuff goes here
         if (location.pathname !== '/') {
             if (/(go|fbc)/.test(location.pathname.split("/")[1])) {
                 document.querySelector("form").submit()
@@ -16,9 +15,10 @@ export default class Ouo extends BypassDefinition {
                     document.querySelector("form#form-captcha").submit()
                 }
                 else {
-                    this.helpers.crowdBypass()
+                    //this.helpers.crowdBypass()
                 }
             }
         }
     }
 }
+export const matches = ['ouo.press', 'ouo.io']
