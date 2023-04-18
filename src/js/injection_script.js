@@ -2707,7 +2707,10 @@ ensureDomLoaded(() => {
         })
     })
 
-
+    hrefBypass(/blitly\.io\/st/, () => {
+        const target_url = new URLSearchParams(window.location.search).get('url')
+        safelyNavigate(target_url)
+    })
 
     hrefBypass(/mirrored\.to\/files\//, () => {
         if (location.href.includes('hash')) return; // we already bypassed to here
