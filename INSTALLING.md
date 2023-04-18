@@ -121,11 +121,9 @@ Then click "Download bypass definitions" on the settings page.
 <details> <summary> Infinite "Downloading bypass definitions...." </summary>
   <br>
 
-<<<<<<< Updated upstream
-This issue will be fixed on the next FastForward version, with the manifest version 3.
-=======
+
 This is caused by the current bypass definitions version being the same as the downloaded version. you can solve this issue by closing all browser windows and opening them. If this does not work, or the issue persists, please contact us on our [Discord server](https://discord.gg/8Z3Z9Z9).
->>>>>>> Stashed changes
+This issue will be fixed on the next FastForward version, with the manifest version 3.
 
 </details>
 
