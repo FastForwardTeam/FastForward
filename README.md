@@ -44,34 +44,6 @@ Google believes that FastForward bypasses paywalls and other restrictions, which
 
 We are currently working with Google to get the extension back on the Chrome Web Store, but for now, you can install it manually on Chromium-based browsers. Microsoft and Firefox have kept FastForward up on their respective stores. Our [Discord server](https://discord.com/channels/876622516607656006/876951955841372181) has more information about the removal and how to reinstall FastForward and any necessary bypasses.
 
-<<<<<<< Updated upstream
-# Installing the Extension
-As you've probably read, the extension has been removed from Chrome Web Store, so [here we provide a small guide](#manual-installation) for installing it on your browser.
-
-## Automatic Installation
-You can install FastForward in any browser you want as long it supports Chrome or Firefox extensions.
-
-### Chromium-based browsers
-FastForward does not currently support automatic installation on Chromium-based browsers (except Edge); read above for why.
-
-Edge is supported through [the Microsoft Store](https://microsoftedge.microsoft.com/addons/detail/fastforward/ldcclmkclhomnpcnccgbgleikchbnecl).  
-
-
-<a href="https://microsoftedge.microsoft.com/addons/detail/fastforward/ldcclmkclhomnpcnccgbgleikchbnecl"><img src="https://user-images.githubusercontent.com/585534/107280673-a5ece780-6a26-11eb-9cc7-9fa9f9f81180.png" alt="Get FastForward on Microsoft Edge" width="126px"></a>
-
-### Firefox-based browsers
-<!--
-FastForward is available on the [Firefox Add-ons Store](https://addons.mozilla.org/firefox/addon/fastforwardteam/).
-
-<a href="https://addons.mozilla.org/firefox/addon/fastforwardteam/"><img src="https://user-images.githubusercontent.com/585534/107280546-7b9b2a00-6a26-11eb-8f9f-f95932f4bfec.png" alt="Get FastForward for Firefox" width="128px"></a> 
-
--->
-Firefox can only be manually installed now, check our Discord server for more details.
-## Manual Installation
-See instructions for [manually installing the extension here](https://github.com/FastForwardTeam/FastForward/blob/main/INSTALLING.md).  
-This page has instructions for both Chrome/Chromium-based browsers AND Firefox.
-=======
 #### What happened to Universal Bypass?
 As you may know, [Universal Bypass](https://github.com/Sainan/Universal-Bypass) is no longer maintained by its original developer, [Sainan](https://github.com/Sainan), who had worked on it for so long. 
 ____
->>>>>>> Stashed changes
