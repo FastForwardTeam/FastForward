@@ -13,86 +13,61 @@
 <a href="https://addons.mozilla.org/firefox/addon/fastforwardteam/"><img src="https://user-images.githubusercontent.com/585534/107280546-7b9b2a00-6a26-11eb-8f9f-f95932f4bfec.png" alt="Get FastForward for Firefox" width="126px"></a> 
 </div>
 
+****
+
 # Table of Contents
-- [Unstable Builds](#download-unstable-builds)
-- [Manual Installation](#manual-installation)
-  - [Chrome, Chromium, Opera, Brave, Vivaldi, Kiwi](#chrome-chromium-kiwi-opera-opera-gx-vivaldi-brave-etc)
-     - [CRX install](#crx-install)
-  - [Firefox](#firefox-and-firefox-based-browsers)
-    - [Firefox for Android](#firefox-for-android)
+- [Desktop Browsers (Windows, MacOS, Linux)](#desktop-browsers-windows-macos-linux)
+  - [Chromium Based Browsers (Chrome, Kiwi, Opera, Opera GX, Vivaldi, Brave etc.)](#chromium-based-browsers-chrome-kiwi-opera-opera-gx-vivaldi-brave-etc)
+  - [Firefox-based browsers (Firefox, Waterfox, Pale Moon, Librewolf etc.)](#firefox-based-browsers-firefox-waterfox-pale-moon-librewolf-etc)
+- [Mobile Browsers (Android, iOS)](#mobile-browsers-android-ios)
+  - [Firefox Nightly for Android](#firefox-nightly-for-android)
+  - [Kiwi Browser for Android](#kiwi-browser-for-android)
 - [Installing from web stores](#installing-from-web-stores)
 - [Troubleshooting](#troubleshooting)
 
 
-****
-> **Since FastForward has been removed from Chrome Web Store, you'll need to manually install the extension following the steps below.**
-****
+____
+## Desktop Browsers (Windows, MacOS, Linux)
+These are the instructions for installing the extension in "unpacked" mode. Make sure to read carefully to avoid any errors.
 
-## Download unstable builds
-<div align="center">
-<a href="https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_chromium.zip"> <img src="https://img.shields.io/badge/Chrome-Dev%20builds-critical?style=for-the-badge&logo=googlechrome" /> </a>
-  <br>
-<a href="https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_firefox.zip"> <img src="https://img.shields.io/badge/Firefox-Dev%20builds-critical?style=for-the-badge&logo=firefoxbrowser" /> </a>
-</div>
-
-## Manual Installation
-These are the instructions for installing the extension in "unpacked" mode.
-
-### Chrome, Chromium, Kiwi, Opera, Opera GX, Vivaldi, Brave etc.
-Make sure to read carefully to avoid any errors.
+#### Chromium Based Browsers (Chrome, Kiwi, Opera, Opera GX, Vivaldi, Brave etc.)
+_⚠️⚠️⚠️ MICROSOFT EDGE USERS, we reccomend installing the entention from the Edge Addons Store [HERE](https://microsoftedge.microsoft.com/addons/detail/fastforward/ldcclmkclhomnpcnccgbgleikchbnecl) ⚠️⚠️⚠️_
 
 0. **REMOVE any previous versions of FastForward.**
+1. Download the zip using [this link](https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_chromium.zip).
+2. Unzip the downloaded file so that you have `FastForward_chromium_0.XXXX.zip`. You may now delete  `FastForward_chromium.zip`, as it is no longer needed.
+3. Back in your browser, go to `chrome://extensions/`.
+4. Use the toggle in the top right corner to enable "Developer mode".
+5. Drag the `FastForward_chromium_0.XXXX.zip` file into the extensions page. You should now see the extensions options page, with a message saying "Thank you for installing FastForward!". If this is not the case, and you are prompted to save the file, or it downloaded to your downloads folder, see [Troubleshooting](#troubleshooting)
+6.  You may now delete the `FastForward_chromium_0.XXXX.zip` file, as it is no longer needed.
 
-1. Download the extension using [this link](https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_chromium.zip). You'll end with a .zip file on your downloads, like on the screenshot below:
-![1](https://i.imgur.com/Nrdgd7R.png)
+Fastforward should now be installed. If you have any issues, **please view the troubleshooting section below before contacting us**. If the issue persistes, please contact us on our [Discord server](https://discord.gg/8Z3Z9Z9) for immediate support, or [open and issue on our github](https://github.com/FastForwardTeam/FastForward/issues/new/choose).
 
-2. Now unzip the file, using any software you prefer. In the screenshot below, I used [7-zip](https://7-zip.org) to unzip the file.
-![2](https://i.imgur.com/93GYoCm.png)
-
-3. Now you'll have a folder called "FastForward_chromium". Enter it and extract (again) the file.
-
-You can do this either using 7-zip:
-![3-1](https://i.imgur.com/sQGRJXq.gif)
-
-
-Or renaming the file extension, like on the gif below:
-![3-2](https://i.imgur.com/JkhCV4q.gif)
-
-
-4. Open the extensions page on your browser (type `chrome://extensions/` on the address bar) and turn on "Developer Mode", like in the image below.
-![4](https://i.imgur.com/R1E7LlO.png)
-
-
-5. Now click on "Load unpacked", and select the folder where Fast Forward was extracted.
-![5](https://i.imgur.com/FFQGC2F.gif)
-
-6. If you got any errors, or a message like "You're using FastForward in development mode", see the [Troubleshooting section](#troubleshooting).
-
-#### CRX Install
-You can also use auto-updating builds for Google Chrome (Windows, Linux & macOS), Brave (Windows, Linux & macOS), Kiwi (Android), Ungoogled Chromium and Edge. We do not recommend installing from this method if you aren't an experienced user. If you're having trouble installing this way, please install the extension manually.
-
-<details> <summary> Click here for crx install instructions </summary>  
-
-Please follow [the instructions here](https://github.com/FastForwardTeam/releases#installation-instructions) to install the extension using CRX mode.
-</details>
-
-### Firefox and Firefox-based browsers
-
-⚠️ This will only work in the nightly or developer version of Firefox.
-
+#### Firefox-based browsers (Firefox, Waterfox, Pale Moon, Librewolf etc.)
+_⚠️⚠️⚠️ This will only work in the nightly or developer version of Firefox, or other versions that allow unsigned extentions. ⚠️⚠️⚠️
+⚠️⚠️⚠️If you do not have one of these browsers, please see our releases page [HERE](https://github.com/FastForwardTeam/FastForward/releases). ⚠️⚠️⚠️_
 
 0. **REMOVE any previous versions of FastForward.**
-
 1. Download the zip using [this link](https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_firefox.zip).
-2. Unzip the downloaded file so that you have `FastForward_firefox_X.XXXX.xpi`.
+2. Unzip the downloaded file so that you have `FastForward_firefox_0.XXXX.xpi`.
 3. Open `about:config`
 4. Search for `xpinstall.signatures.required`
-5. Toggle `xpinstall.signatures.required` to `false` using the button on the right.
-6. Restart Firefox.
+5. Toggle `xpinstall.signatures.required` to `false` using the button on the right. It may already be set to false, if this is the case, skip this step.
+6. Restart Firefox by closing all browser windows and opening it again.
 7. Open `about:addons`
 8. Drag your `FastForward_firefox_X.XXXX.xpi` into Firefox, and click "add" when prompted.
 
-#### Firefox for Android
+Fastforward should now be installed. If you have any issues, **please view the troubleshooting section below before contacting us**. If the issue persistes, please contact us on our [Discord server](https://discord.gg/8Z3Z9Z9) for immediate support, or [open and issue on our github](https://github.com/FastForwardTeam/FastForward/issues/new/choose).
+
+____
+
+
+## Mobile Browsers (Android, iOS)
+Fastforward is not avaliable on Apple iOS at this time due to restrictions by apple, and is only avalible for some Android browsers.
+
+
+#### Firefox Nightly for Android 
+⚠️⚠️⚠️ CURRENTLY UNAVAILABLE, see [Issue #920](https://github.com/FastForwardTeam/FastForward/issues/920) ⚠️⚠️⚠️
 
 1. Click [here](https://blog.mozilla.org/addons/2020/09/29/expanded-extension-support-in-firefox-for-android-nightly/) and follow the steps.
 2. When you are on step 5, place this number: `17352072` on Collection Owner.
@@ -104,19 +79,19 @@ Please follow [the instructions here](https://github.com/FastForwardTeam/release
 8. Find FastForward.
 9. Add FastForward.
 
-## Installing from Web-Stores
+#### Kiwi Browser for Android
 
-Currently, FastForward is present on the Firefox and Edge web stores.
+0. **REMOVE any previous versions of FastForward.**
+1. Download the zip using [this link](https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_chromium.zip).
+2. Use your phones file manager to unzip the downloaded file so that you have `FastForward_chromium_0.XXXX.zip`. You may now delete  `FastForward_chromium.zip`, as it is no longer needed.
+3. Back in your browser, go to `chrome://extensions/`.
+4. Use the toggle in the top right corner to enable "Developer mode".
+5. Click the `+ (from .zip/.crx/.user.js)` button near the top of the page, and select the `FastForward_chromium_0.XXXX.zip` file.
+6.  You may now delete the `FastForward_chromium_0.XXXX.zip` file, as it is no longer needed.
 
-### Firefox
-<a href="https://addons.mozilla.org/firefox/addon/fastforwardteam/"> <img alt="Mozilla Add-on" src="https://img.shields.io/amo/v/fastforwardteam?label=get%20the%20addon&logo=firefoxbrowser&style=for-the-badge"/> </a>
+Fastforward should now be installed. If you have any issues, **please view the troubleshooting section below before contacting us**. If the issue persistes, please contact us on our [Discord server](https://discord.gg/8Z3Z9Z9) for immediate support, or [open and issue on our github](https://github.com/FastForwardTeam/FastForward/issues/new/choose).
 
-### Edge
-<a href="https://microsoftedge.microsoft.com/addons/detail/fastforward/ldcclmkclhomnpcnccgbgleikchbnecl"> <img src="https://img.shields.io/badge/Edge-Get%20the%20addon-informational?style=for-the-badge&logoColor=white&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgUHJvIDYuMi4wIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlIChDb21tZXJjaWFsIExpY2Vuc2UpIENvcHlyaWdodCAyMDIyIEZvbnRpY29ucywgSW5jLiAtLT48cGF0aCBkPSJNMTkyIDEwNC44YzAtOS4yLTUuOC0xNy4zLTEzLjItMjIuOEMxNjcuMiA3My4zIDE2MCA2MS4zIDE2MCA0OGMwLTI2LjUgMjguNy00OCA2NC00OHM2NCAyMS41IDY0IDQ4YzAgMTMuMy03LjIgMjUuMy0xOC44IDM0Yy03LjQgNS41LTEzLjIgMTMuNi0xMy4yIDIyLjhjMCAxMi44IDEwLjQgMjMuMiAyMy4yIDIzLjJIMzM2YzI2LjUgMCA0OCAyMS41IDQ4IDQ4djU2LjhjMCAxMi44IDEwLjQgMjMuMiAyMy4yIDIzLjJjOS4yIDAgMTcuMy01LjggMjIuOC0xMy4yYzguNy0xMS42IDIwLjctMTguOCAzNC0xOC44YzI2LjUgMCA0OCAyOC43IDQ4IDY0cy0yMS41IDY0LTQ4IDY0Yy0xMy4zIDAtMjUuMy03LjItMzQtMTguOGMtNS41LTcuNC0xMy42LTEzLjItMjIuOC0xMy4yYy0xMi44IDAtMjMuMiAxMC40LTIzLjIgMjMuMlY0NjRjMCAyNi41LTIxLjUgNDgtNDggNDhIMjc5LjJjLTEyLjggMC0yMy4yLTEwLjQtMjMuMi0yMy4yYzAtOS4yIDUuOC0xNy4zIDEzLjItMjIuOGMxMS42LTguNyAxOC44LTIwLjcgMTguOC0zNGMwLTI2LjUtMjguNy00OC02NC00OHMtNjQgMjEuNS02NCA0OGMwIDEzLjMgNy4yIDI1LjMgMTguOCAzNGM3LjQgNS41IDEzLjIgMTMuNiAxMy4yIDIyLjhjMCAxMi44LTEwLjQgMjMuMi0yMy4yIDIzLjJINDhjLTI2LjUgMC00OC0yMS41LTQ4LTQ4VjM0My4yQzAgMzMwLjQgMTAuNCAzMjAgMjMuMiAzMjBjOS4yIDAgMTcuMyA1LjggMjIuOCAxMy4yQzU0LjcgMzQ0LjggNjYuNyAzNTIgODAgMzUyYzI2LjUgMCA0OC0yOC43IDQ4LTY0cy0yMS41LTY0LTQ4LTY0Yy0xMy4zIDAtMjUuMyA3LjItMzQgMTguOEM0MC41IDI1MC4yIDMyLjQgMjU2IDIzLjIgMjU2QzEwLjQgMjU2IDAgMjQ1LjYgMCAyMzIuOFYxNzZjMC0yNi41IDIxLjUtNDggNDgtNDhIMTY4LjhjMTIuOCAwIDIzLjItMTAuNCAyMy4yLTIzLjJ6Ii8+PC9zdmc+" /> </a>
-<!-- this base64 icon is from https://fontawesome.com -->
-
-### Chrome
-Sadly, we've been removed from the Chrome Web Store. See issue [704](https://github.com/FastForwardTeam/FastForward/issues/704).
+___
 
 ## Troubleshooting
 <details> <summary> "Manifest version 2 is deprecated, and support will be removed in 2023. See https://developer.chrome.com/blog/mv2-transition/ for more details." </summary>
@@ -129,8 +104,7 @@ To read more about this, [click here](https://developer.chrome.com/blog/mv2-tran
 <img src="https://i.imgur.com/zSYDpY0.png"/>
 
 </details>
-
-****
+<br>
 
 <details> <summary> "You're using FastForward in development mode, which means that bypass definitions are loaded from your local injection_script.js and rules.json. If you would like to use the auto-updating system, delete those files and then check for updates." </summary>
   <br>
@@ -142,41 +116,40 @@ Go to the folder where you extracted Fast Forward, and delete the two files belo
 Then click "Download bypass definitions" on the settings page.
 </details>
 
-****
+<br>
 
 <details> <summary> Infinite "Downloading bypass definitions...." </summary>
   <br>
 
+<<<<<<< Updated upstream
 This issue will be fixed on the next FastForward version, with the manifest version 3.
+=======
+This is caused by the current bypass definitions version being the same as the downloaded version. you can solve this issue by closing all browser windows and opening them. If this does not work, or the issue persists, please contact us on our [Discord server](https://discord.gg/8Z3Z9Z9).
+>>>>>>> Stashed changes
 
 </details>
 
-****
+<br>
 
 <details> <summary> "Manifest file is missing or unreadable" </summary>
   <br>
-If you got this message:
-
-<img src="https://media.discordapp.net/attachments/886785290700730379/1039633828362330152/image.png">
-
-It's because you forgot to extract twice the file. Please re-read step 3.
+This issue happens whe you attempt to install the `FastForward_chromium.zip` file rather than the `FastForward_chromium_0.XXXX.zip` file. Please follow the installation instructions above, ensuring that you carefully follow all steps. If this does not work, or the issue persists, please contact us on our [Discord server](https://discord.gg/8Z3Z9Z9).
 
 </details>
-
-****
+<br>
 
 <details> <summary> Linkvertise is not being bypassed </summary>
+Some versions of Fastforward may not come with the linkvertise bypass by default. If you are having issues with linkvertise, please add the Linkvertise bypass manually by folling the steps below.
 
+1. Copy the contents of [this page](https://raw.githubusercontent.com/FastForwardTeam/FastForward/main/src/linkvertise.js). be sure to select all of the text, from the first "d" of `domainBypass`, all the way to (and including) the last `})`. you may also us `ctrl+a` to select all of the text. copy the text by pressing `ctrl+c`.
+2. Open the settings page for FastForward. this can be done by clicking the extention icon in the top right of your browser. this may be in a extentions sub-menu.
+3. paste the text you copied in step 1 into the "Custom bypasses" box. take care to do this all the way at the bottom of the custom bypasses box, and not in the middle of any existing custom bypasses.
+4. your changes will be saved automatically. if you have a open linkvertise page, please refresh it to be bypassed. 
 
-Copy and paste the contents of [this page](https://raw.githubusercontent.com/FastForwardTeam/FastForward/main/src/linkvertise.js).
-
-Go to the extension settings and paste the contents of the file into the "Custom Bypasses" field, as shown below.
-
-<img src="https://i.imgur.com/OqG0Er8.png">
+If this does not work, or the issue persists, please contact us on our [Discord server](https://discord.gg/8Z3Z9Z9).
 </details>
-
-****
+<br>
 
 <details> <summary> CRX_MISSING_PROOF error </summary>
-<br> Don't waste your time trying to install the .crx version of the install, just install the unpacked version on this guide.
+<br> Don't waste your time trying to install the .crx version of the install, just install the .zip version on this guide.
 </details>
