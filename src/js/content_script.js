@@ -30,59 +30,18 @@ async function injectScript() {
   };
   (document.head || document.documentElement).appendChild(script);
 }
-function fetchResource(input, init) {
-  return new Promise((resolve, reject) => {
-    chrome.runtime.sendMessage({ input, init }, (messageResponse) => {
-      const [response, error] = messageResponse;
-      if (response === null) {
-        reject(error);
-      } else {
-        // Use undefined on a 204 - No Content
-        const body = response.body ? new Blob([response.body]) : undefined;
-        resolve(
-          new Response(body, {
-            status: response.status,
-            statusText: response.statusText,
-          })
-        );
-      }
-    });
-  });
-}
 
 //ff + first 10 characters of SHA256 of fastforward to prevent collisions
-document.addEventListener('ff53054c0e13_crowdQuery', async function (event) {
-  let options = await getOptions();
-  if (options.optionCrowdBypass === false) {
-    const src = brws.runtime.getURL('helpers/infobox.js');
-    const insertInfoBox = await import(src);
-    insertInfoBox(brws.i18n.getMessage('crowdDisabled'));
-    return;
-  }
+document.addEventListener('ff53054c0e13_crowdQuery', async (event) => {
   let data = event.detail;
-  let url = 'https://crowd.fastforward.team/crowd/query_v1';
-  let params = new URLSearchParams();
-  params.append('domain', data.domain);
-  params.append('path', data.path);
-  fetchResource(url, {
-    method: 'POST',
-    body: params.toString(),
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
-    },
-  })
-    .then(function (response) {
-      if (response.status === 200) {
-        response.text().then(function (text) {
-          document.dispatchEvent(
-            new CustomEvent('ff53054c0e13_crowdResponse', { detail: text })
-          );
-        });
-      }
-    })
-    .catch(function (error) {
-      console.trace(error);
-    });
+  const response = await chrome.runtime.sendMessage({
+    type: 'crowdQuery',
+    detail: data,
+  });
+  console.log(response);
+  document.dispatchEvent(
+    new CustomEvent('ff53054c0e13_crowdResponse', { detail: response })
+  );
 });
 
 function matchDomains(inputString, domains) {
@@ -96,33 +55,20 @@ function matchDomains(inputString, domains) {
   return false;
 }
 
-document.addEventListener(
-  'ff53054c0e13_crowdContribute',
-  async function (event) {
-    let options = await getOptions();
-    if (options.optionCrowdBypass === false) {
-      const src = brws.runtime.getURL('helpers/infobox.js');
-      const insertInfoBox = await import(src);
-      insertInfoBox('Enable crowd bypass');
-      return;
-    }
-    let data = event.detail;
-    let url = 'https://crowd.fastforward.team/crowd/contribute_v1';
-    let params = new URLSearchParams();
-    params.append('domain', data.domain);
-    params.append('path', data.path);
-    params.append('target', data.target);
-    fetchResource(url, {
-      method: 'POST',
-      body: params.toString(),
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-    }).catch(function (error) {
-      console.trace(error);
-    });
-  }
-);
+document.addEventListener('ff53054c0e13_crowdContribute', (event) => {
+  let data = event.detail;
+  chrome.runtime.sendMessage({
+    type: 'crowdContribute',
+    detail: data,
+  });
+});
+document.addEventListener('ff53054c0e13_followAndContribute', (event) => {
+  let data = event.detail;
+  chrome.runtime.sendMessage({
+    type: 'followAndContribute',
+    detail: data,
+  });
+});
 
 function onFFClipboardSet(event) {
   const { key, value } = event.detail;

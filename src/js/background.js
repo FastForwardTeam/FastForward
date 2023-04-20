@@ -1,4 +1,13 @@
 const brws = typeof browser !== 'undefined' ? browser : chrome;
+const fetchDomains = ['crowd.fastforward.team', 'redirect-api.work.ink']; //only allow requests to these domains
+
+async function getOptions() {
+  return new Promise((resolve) => {
+    brws.storage.local.get('options').then((result) => {
+      resolve(result.options);
+    });
+  });
+}
 
 function handleClick() {
   brws.runtime.openOptionsPage();
@@ -77,27 +86,6 @@ brws.alarms.onAlarm.addListener((alarm) => {
   });
 });
 
-chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-  fetch(request.input, request.init).then(
-    function (response) {
-      return response.text().then(function (text) {
-        sendResponse([
-          {
-            body: text,
-            status: response.status,
-            statusText: response.statusText,
-          },
-          null,
-        ]);
-      });
-    },
-    function (error) {
-      sendResponse([null, error]);
-    }
-  );
-  return true;
-});
-
 brws.action.onClicked.addListener(handleClick);
 brws.runtime.onInstalled.addListener(firstrun);
 brws.runtime.onStartup.addListener(() => {
@@ -112,3 +100,57 @@ brws.webNavigation.onBeforeNavigate.addListener(
     url: [{ hostContains: 'fastforward.team' }],
   }
 );
+
+brws.runtime.onMessage.addListener((request, _, sendResponse) => {
+  (async () => {
+    let options = await getOptions();
+    if (options.optionCrowdBypass === false) {
+      const src = brws.runtime.getURL('helpers/infobox.js');
+      const insertInfoBox = await import(src);
+      insertInfoBox(brws.i18n.getMessage('crowdDisabled'));
+      return;
+    }
+    let url;
+    request.type === 'crowdQuery'
+      ? (url = 'https://crowd.fastforward.team/crowd/query_v1')
+      : (url = 'https://crowd.fastforward.team/crowd/contribute_v1');
+
+    let params = new URLSearchParams();
+
+    if (request.type !== 'followAndContribute') {
+      for (let key in request.detail) {
+        params.append(key, request.detail[key]);
+      }
+    } else {
+      //use fetch api to get final url after redirects from detail.target
+      for (let key in request.detail) {
+        if (key === 'target') {
+          let dest = new URL(request.detail[key]);
+          if (!fetchDomains.includes(dest.hostname)) {
+            return;
+          }
+          let res = await fetch(dest.href, {
+            method: 'GET',
+            redirect: 'follow',
+          });
+          params.append(key, res.url);
+        } else {
+          params.append(key, request.detail[key]);
+        }
+      }
+    }
+
+    let response = await fetch(url, {
+      method: 'POST',
+      body: params.toString(),
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+    });
+    if (request.type === 'crowdQuery')
+      response.text().then((res) => {
+        sendResponse(res);
+      });
+  })();
+  return true;
+});
