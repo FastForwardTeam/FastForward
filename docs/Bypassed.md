@@ -162,8 +162,9 @@ This is a list of websites bypassed in the MV2 version of the extension.
 |        https://connect-trojan.net         |   🛑   | 
 |             https://binbox.io             |   🛑   | 
 |              https://lnk2.cc              |   ❌    |
-|             https://ouo.press             |   ❌    |
+|             https://ouo.press             |   ✅    |
 |             https://ouo.info              |   🛑   | 
+|             https://ouo.io                |   ✅    |
 |               https://za.gl               |   ❌    |
 |               https://za.uy               |   🛑   | 
 |           https://drivehub.link           |   🛑   | 
