@@ -5,43 +5,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="base.js"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav
-      class="uk-navbar-container uk-light"
-      style="background: #1e87f0"
-      uk-navbar
-    >
-      <div class="uk-navbar-left">
-        <a class="uk-navbar-item uk-logo" href="#">FastForward</a>
-        <ul class="uk-navbar-nav">
-          <li>
-            <a
-              href="https://fastforward.team/changelog"
-              target="_blank"
-              data-message="changelog"
-            ></a>
-          </li>
-          <li>
-            <a
-              href="https://fastforward.team/faq"
-              target="_blank"
-              data-message="faq"
-            ></a>
-          </li>
-          <li>
-            <a
-              href="https://fastforward.team/contributors"
-              target="_blank"
-              data-message="contributors"
-            ></a>
-          </li>
-        </ul>
-      </div>
+    <nav>
+      <ul>
+        <div class="logo-wrapper">FastForward</div>
+        <div class="spacer"></div>
+        <li>
+          <a
+            href="https://fastforward.team/changelog"
+            target="_blank"
+            data-message="changelog"
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://fastforward.team/faq"
+            target="_blank"
+            data-message="faq"
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://fastforward.team/contributors"
+            target="_blank"
+            data-message="contributors"
+          ></a>
+        </li>
+      </ul>
     </nav>
-    <div class="uk-margin-top uk-margin-bottom uk-margin-left uk-margin-right">
+    <div>
       <p><span data-message="version"></span> <span id="version"></span></p>
-      <div id="counter" class="uk-alert uk-alert-primary" hidden>
+      <div id="counter" hidden>
         <p>
           <span></span>
           <a
@@ -53,88 +49,73 @@
       </div>
       <h2 data-message="options"></h2>
       <form id="options-form" style="font-size: 1rem">
-        <input type="checkbox" class="uk-checkbox" id="navigationDelayToggle" />
-        <span
-          data-message="optionsNavigationDelay"
-          for="option-navigation-delay"
-        ></span
-        ><br />
-        <input type="checkbox" class="uk-checkbox" id="optionTrackerBypass" />
-        <label style="cursor: pointer" for="option-tracker-bypass"
-          ><span data-message="optionsTrackerBypass"></span
-        ></label>
-        (<a
-          href="https://apimon.de/privacy"
-          target="_blank"
-          data-message="privacyPolicy"
-        ></a
-        >)<br />
-        <input
-          type="checkbox"
-          class="uk-checkbox"
-          id="optionInstantNavigationTrackers"
-        />
-        <label
-          style="cursor: pointer"
-          for="option-instant-navigation-trackers"
-          data-message="optionsInstantNavigationTrackers"
-        ></label
-        ><br />
-        <input type="checkbox" class="uk-checkbox" id="optionBlockIpLoggers" />
-        <label
-          style="cursor: pointer"
-          for="option-block-ip-loggers"
-          data-message="optionsBlockIPLoggers"
-        ></label
-        ><br />
-        <input type="checkbox" class="uk-checkbox" id="optionCrowdBypass" />
-        <label
-          style="cursor: pointer"
-          for="option-crowd-bypass"
-          data-message="optionsCrowdBypass"
-        ></label>
-        (<a
-          href="https://github.com/FastForwardTeam/FastForward/blob/master/PRIVACY.md#crowd-bypass"
-          target="_blank"
-          data-message="privacyPolicy"
-        ></a
-        >)<span id="crowdTempDisabledMessage">
-          (<span
-            data-message="crowdBypassTempDisabled"
-            class="uk-text-warning"
+        <section>
+          <input type="checkbox" id="navigationDelayToggle" />
+          <span
+            data-message="optionsNavigationDelay"
+            for="option-navigation-delay"
           ></span
-          >)</span
-        ><br />
-        <input
-          type="checkbox"
-          class="uk-checkbox"
-          id="optionCrowdOpenDelayToggle"
-        />
-        <span
-          data-message="optionsCrowdAutoOpen"
-          for="option-crowd-open-delay"
-        ></span
-        ><br />
-        <input
-          type="checkbox"
-          class="uk-checkbox"
-          id="optionCrowdCloseDelayToggle"
-        />
-        <span
-          data-message="optionsCrowdAutoClose"
-          for="option-crowd-close-delay"
-        ></span
-        ><br />
+          ><br />
+          <input type="checkbox" id="optionTrackerBypass" />
+          <label style="cursor: pointer" for="option-tracker-bypass"
+            ><span data-message="optionsTrackerBypass"></span
+          ></label>
+          (<a
+            href="https://apimon.de/privacy"
+            target="_blank"
+            data-message="privacyPolicy"
+          ></a
+          >)<br />
+          <input type="checkbox" id="optionInstantNavigationTrackers" />
+          <label
+            style="cursor: pointer"
+            for="option-instant-navigation-trackers"
+            data-message="optionsInstantNavigationTrackers"
+          ></label
+          ><br />
+          <input type="checkbox" id="optionBlockIpLoggers" />
+          <label
+            style="cursor: pointer"
+            for="option-block-ip-loggers"
+            data-message="optionsBlockIPLoggers"
+          ></label
+          ><br />
+          <input type="checkbox" id="optionCrowdBypass" />
+          <label
+            style="cursor: pointer"
+            for="option-crowd-bypass"
+            data-message="optionsCrowdBypass"
+          ></label>
+          (<a
+            href="https://github.com/FastForwardTeam/FastForward/blob/master/PRIVACY.md#crowd-bypass"
+            target="_blank"
+            data-message="privacyPolicy"
+          ></a
+          >)<span id="crowdTempDisabledMessage">
+            (<span data-message="crowdBypassTempDisabled"></span>)</span
+          ><br />
+          <input type="checkbox" id="optionCrowdOpenDelayToggle" />
+          <span
+            data-message="optionsCrowdAutoOpen"
+            for="option-crowd-open-delay"
+          ></span
+          ><br />
+          <input type="checkbox" id="optionCrowdCloseDelayToggle" />
+          <span
+            data-message="optionsCrowdAutoClose"
+            for="option-crowd-close-delay"
+          ></span>
+        </section>
+        <br />
+
         <h2 data-message="optionsWhitelist"></h2>
-        <p><span data-message="optionsWhitelistDescription"></span></p>
-        <button
-          type="button"
-          class="uk-button uk-button-primary"
-          id="saveWhitelist"
-        >
-          <span data-message="optionsWhitelistSave"></span>
-        </button>
-        <textarea class="uk-textarea" id="whitelist"></textarea>
+        <section>
+          <p><span data-message="optionsWhitelistDescription"></span></p>
+          <button type="button" id="saveWhitelist">
+            <span data-message="optionsWhitelistSave"></span>
+          </button>
+          <textarea id="whitelist"></textarea>
+        </section>
       </form>
     </div>
     <script src="i18n.js"></script>
