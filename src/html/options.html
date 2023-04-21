@@ -10,113 +10,48 @@
   <body>
     <nav>
       <ul>
-        <div class="logo-wrapper">FastForward</div>
+        <div class="logo-wrapper"><img class="logo" src="../icon/branding.png" alt="FastForward"></div>
         <div class="spacer"></div>
-        <li>
-          <a
-            href="https://fastforward.team/changelog"
-            target="_blank"
-            data-message="changelog"
-          ></a>
-        </li>
-        <li>
-          <a
-            href="https://fastforward.team/faq"
-            target="_blank"
-            data-message="faq"
-          ></a>
-        </li>
-        <li>
-          <a
-            href="https://fastforward.team/contributors"
-            target="_blank"
-            data-message="contributors"
-          ></a>
-        </li>
+        <li class="navlink"><a href="https://fastforward.team/changelog" target="_blank" data-message="changelog"></a></li>
+        <li class="navlink"><a href="https://fastforward.team/faq" target="_blank" data-message="faq"></a></li>
+        <li class="navlink"><a href="https://fastforward.team/contributors" target="_blank" data-message="contributors"></a></li>
       </ul>
     </nav>
     <div>
-      <p><span data-message="version"></span> <span id="version"></span></p>
       <div id="counter" hidden>
         <p>
           <span></span>
-          <a
-            href="https://discord.gg/RSAf7b5njt"
-            target="_blank"
-            data-message="support"
-          ></a>
+          <a href="https://discord.gg/RSAf7b5njt" target="_blank" data-message="support"></a>
         </p>
       </div>
-      <h2 data-message="options"></h2>
       <form id="options-form" style="font-size: 1rem">
         <section>
-          <input type="checkbox" id="navigationDelayToggle" />
-          <span
-            data-message="optionsNavigationDelay"
-            for="option-navigation-delay"
-          ></span
-          ><br />
-          <input type="checkbox" id="optionTrackerBypass" />
-          <label style="cursor: pointer" for="option-tracker-bypass"
-            ><span data-message="optionsTrackerBypass"></span
-          ></label>
-          (<a
-            href="https://apimon.de/privacy"
-            target="_blank"
-            data-message="privacyPolicy"
-          ></a
-          >)<br />
-          <input type="checkbox" id="optionInstantNavigationTrackers" />
-          <label
-            style="cursor: pointer"
-            for="option-instant-navigation-trackers"
-            data-message="optionsInstantNavigationTrackers"
-          ></label
-          ><br />
-          <input type="checkbox" id="optionBlockIpLoggers" />
-          <label
-            style="cursor: pointer"
-            for="option-block-ip-loggers"
-            data-message="optionsBlockIPLoggers"
-          ></label
-          ><br />
-          <input type="checkbox" id="optionCrowdBypass" />
-          <label
-            style="cursor: pointer"
-            for="option-crowd-bypass"
-            data-message="optionsCrowdBypass"
-          ></label>
-          (<a
-            href="https://github.com/FastForwardTeam/FastForward/blob/master/PRIVACY.md#crowd-bypass"
-            target="_blank"
-            data-message="privacyPolicy"
-          ></a
-          >)<span id="crowdTempDisabledMessage">
-            (<span data-message="crowdBypassTempDisabled"></span>)</span
-          ><br />
-          <input type="checkbox" id="optionCrowdOpenDelayToggle" />
-          <span
-            data-message="optionsCrowdAutoOpen"
-            for="option-crowd-open-delay"
-          ></span
-          ><br />
-          <input type="checkbox" id="optionCrowdCloseDelayToggle" />
-          <span
-            data-message="optionsCrowdAutoClose"
-            for="option-crowd-close-delay"
-          ></span>
+          <h2 data-message="options"></h2>
+          <label class="ffInput"><input type="checkbox" id="navigationDelayToggle"><span class="checkmark"></span></label>
+          <span data-message="optionsNavigationDelay" for="option-navigation-delay"></span><br />
+          <label class="ffInput"><input type="checkbox" id="optionTrackerBypass"><span class="checkmark"></span></label>
+          <label style="cursor: pointer" for="option-tracker-bypass"><span data-message="optionsTrackerBypass"></span></label>
+          (<a href="https://apimon.de/privacy" target="_blank" data-message="privacyPolicy" class="link"></a>)<br />
+          <label class="ffInput"><input type="checkbox" id="optionInstantNavigationTrackers"><span class="checkmark"></span></label>
+          <label style="cursor: pointer" for="option-instant-navigation-trackers" data-message="optionsInstantNavigationTrackers"></label><br />
+          <label class="ffInput"><input type="checkbox" id="optionBlockIpLoggers"><span class="checkmark"></span></label>
+          <label style="cursor: pointer" for="option-block-ip-loggers" data-message="optionsBlockIPLoggers"></label><br />
+          <label class="ffInput"><input type="checkbox" id="optionCrowdBypass"><span class="checkmark"></span></label>
+          <label style="cursor: pointer" for="option-crowd-bypass" data-message="optionsCrowdBypass"></label>
+          (<a href="https://github.com/FastForwardTeam/FastForward/blob/master/PRIVACY.md#crowd-bypass" target="_blank" data-message="privacyPolicy" class="link"></a>)<span id="crowdTempDisabledMessage">
+            (<span data-message="crowdBypassTempDisabled"></span>)</span><br />
+            <label class="ffInput"><input type="checkbox" id="optionCrowdOpenDelayToggle"><span class="checkmark"></span></label>
+          <span data-message="optionsCrowdAutoOpen" for="option-crowd-open-delay"></span><br />
+          <label class="ffInput"><input type="checkbox" id="optionCrowdCloseDelayToggle"><span class="checkmark"></span></label>
+          <span data-message="optionsCrowdAutoClose" for="option-crowd-close-delay"></span>
         </section>
-        <br />
-
-        <h2 data-message="optionsWhitelist"></h2>
         <section>
+          <h2 data-message="optionsWhitelist"></h2>
           <p><span data-message="optionsWhitelistDescription"></span></p>
-          <button type="button" id="saveWhitelist">
-            <span data-message="optionsWhitelistSave"></span>
-          </button>
-          <textarea id="whitelist"></textarea>
+          <textarea id="whitelist" class="ffInput" spellcheck="false"></textarea>
         </section>
       </form>
+      <p class="version"><span data-message="version"></span> <span id="version"></span></p>
     </div>
     <script src="i18n.js"></script>
     <script src="options.js"></script>
