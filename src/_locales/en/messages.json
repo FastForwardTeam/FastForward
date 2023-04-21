@@ -131,9 +131,6 @@
 	"blockedSubtitle": {
 		"message": "Don't want FastForward to prevent bad actors from getting your IP?"
 	},
-	"optionsWhitelistSave":{
-		"message": "Save Whitelist"
-	},
 	"optionsWhitelist": {
 		"message": "Whitelist"
 	},
