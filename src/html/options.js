@@ -100,8 +100,8 @@ function addEventListeners() {
 }
 
 function checkTextareaValidity() {
-  textarea = document.querySelector('#whitelist');
-  if(textarea.value.includes('/')) {
+  let textarea = document.querySelector('#whitelist');
+  if (textarea.value.includes('/')) {
     textarea.classList.add('invalid');
   } else {
     textarea.classList.remove('invalid');
