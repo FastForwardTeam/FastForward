@@ -42,7 +42,7 @@ function addNumberInputs() {
     numberInput.setAttribute('type', 'number');
     numberInput.setAttribute('id', value);
     numberInput.setAttribute('min', '0');
-    numberInput.setAttribute('style', 'width:34px');
+    numberInput.setAttribute('class', 'ffInput');
     element.innerHTML = element.innerHTML.replace('%', numberInput.outerHTML);
   }
 }
@@ -80,11 +80,12 @@ function addEventListeners() {
     });
 
   document
-    .querySelector('#saveWhitelist')
-    .addEventListener('click', async function () {
+    .querySelector('#whitelist')
+    .addEventListener('input', async function () {
       let options = await getOptions();
-      options['whitelist'] = document.querySelector('#whitelist').value;
+      options['whitelist'] = this.value;
       saveOptions(options);
+      checkTextareaValidity();
     });
 
   document
@@ -96,6 +97,15 @@ function addEventListeners() {
         saveOptions(options);
       });
     });
+}
+
+function checkTextareaValidity() {
+  textarea = document.querySelector('#whitelist');
+  if(textarea.value.includes('/')) {
+    textarea.classList.add('invalid');
+  } else {
+    textarea.classList.remove('invalid');
+  }
 }
 
 async function repopulateOptions() {
@@ -139,6 +149,7 @@ document.addEventListener('DOMContentLoaded', async function () {
   await repopulateOptions();
   refCrowdTempDisabledMsg();
   addEventListeners();
+  checkTextareaValidity();
   formatWhitelistDesc();
   displayExtensionVersion();
   setInterval(() => {
