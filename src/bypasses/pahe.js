@@ -1,6 +1,6 @@
 import BypassDefinition from './BypassDefinition.js';
 
-export default class Lnk extends BypassDefinition {
+export default class Pahe extends BypassDefinition {
     constructor() {
         super();
     }
