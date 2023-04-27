@@ -2036,7 +2036,7 @@ ensureDomLoaded(() => {
     domainBypass("bluemediafiles.com", () => {
         document.getElementsByTagName("form")[0].submit()
     })
-    domainBypass(/(indiainfo4u.in|intercelestial.com)/, () => {
+    domainBypass("indiainfo4u.in", () => {
         awaitElement("#landing", () => {
             document.querySelector("#content > div.container > div > center:nth-child(1) > form").submit()
         })
