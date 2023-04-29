@@ -1,12 +1,12 @@
 * {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 :root {
-  --ff-aqua: #00C0FA;
-  --ff-blue: #4261ED;
-  --ff-purple: #6717CC;
-  --ff-lightred: #FF4D4D;
+  --ff-aqua: #00c0fa;
+  --ff-blue: #4261ed;
+  --ff-purple: #6717cc;
+  --ff-lightred: #ff4d4d;
   --ff-lightpurplebg: rgb(194, 162, 235);
   --ff-text: #fff;
   --ff-background: #111;
@@ -18,13 +18,14 @@
 }
 
 body {
-  background-color: var(--ff-background);;
+  background-color: var(--ff-background);
   margin: 0px;
   padding: 0px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   color: var(--ff-text);
+  font-size: 1rem;
 }
 
 /*================header css================*/
@@ -49,7 +50,13 @@ body {
 
 nav {
   background-color: var(--ff-module-background);
-  border-image: linear-gradient(135deg, var(--ff-aqua) 0%, var(--ff-blue) 50%, var(--ff-purple) 100%) 0 0 1 0;
+  border-image: linear-gradient(
+      135deg,
+      var(--ff-aqua) 0%,
+      var(--ff-blue) 50%,
+      var(--ff-purple) 100%
+    )
+    0 0 1 0;
   border-bottom: 3px solid;
   justify-content: space-between;
   height: 89px;
@@ -63,14 +70,15 @@ nav ul {
   padding-right: 15px;
 }
 
-nav .spacer{
+nav .spacer {
   flex: 1;
 }
 
-nav a {
+nav a,
+#options-link > a {
   color: var(--ff-link);
   text-decoration: none;
-  transition: color .15s ease-in-out;
+  transition: color 0.15s ease-in-out;
   font-weight: 600;
   padding: 10px;
   font-size: 1rem;
@@ -84,18 +92,18 @@ nav a.active {
   color: var(--ff-text);
 }
 
-nav a.active:hover {
+nav a.active {
   color: var(--ff-text);
 }
 
-nav a:hover {
+nav a:hover,
+#options-link > a:hover {
   color: var(--ff-link-hover);
 }
 
 nav a:hover:disabled {
   color: var(--ff-link);
 }
-
 
 /*=================content css================*/
 
@@ -112,7 +120,12 @@ section {
 
 h1 {
   font-size: calc(150% + 3vw);
-  background-image: linear-gradient(135deg, var(--ff-aqua) 0%, var(--ff-blue) 50%, var(--ff-purple) 100%);
+  background-image: linear-gradient(
+    135deg,
+    var(--ff-aqua) 0%,
+    var(--ff-blue) 50%,
+    var(--ff-purple) 100%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -125,7 +138,12 @@ h1 {
 
 h2 {
   font-size: calc(100% + 2vw);
-  background-image: linear-gradient(135deg, var(--ff-aqua) 0%, var(--ff-blue) 50%, var(--ff-purple) 100%);
+  background-image: linear-gradient(
+    135deg,
+    var(--ff-aqua) 0%,
+    var(--ff-blue) 50%,
+    var(--ff-purple) 100%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -145,14 +163,25 @@ h2 {
 
 .ffInput {
   border: 2px solid;
-  border-image: linear-gradient(135deg, var(--ff-aqua) 0%, var(--ff-blue) 50%, var(--ff-purple) 100%) 1;
+  border-image: linear-gradient(
+      135deg,
+      var(--ff-aqua) 0%,
+      var(--ff-blue) 50%,
+      var(--ff-purple) 100%
+    )
+    1;
   display: inline-block;
   text-decoration: none;
-  background-image: linear-gradient(135deg, var(--ff-aqua) 0%, var(--ff-blue) 50%, var(--ff-purple) 100%);
+  background-image: linear-gradient(
+    135deg,
+    var(--ff-aqua) 0%,
+    var(--ff-blue) 50%,
+    var(--ff-purple) 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: padding .15s ease-in-out, margin .15s ease-in-out;
+  transition: padding 0.15s ease-in-out, margin 0.15s ease-in-out;
   margin-bottom: -2px;
   margin-top: 0.5vh;
   outline: none;
@@ -161,7 +190,7 @@ h2 {
 
 ::placeholder {
   -webkit-text-fill-color: initial;
-  color: rgba(0,0,0,0.25);
+  color: rgba(0, 0, 0, 0.25);
 }
 
 @-moz-document url-prefix() {
@@ -170,14 +199,13 @@ h2 {
   }
 }
 
-code {
-  background-color: var(--ff-module-background); 
-  color: var(--ff-aqua);
-}
-
 .link {
   text-decoration: none;
-  background-image: linear-gradient(135deg, var(--ff-aqua) 0%, var(--ff-blue) 100%);
+  background-image: linear-gradient(
+    135deg,
+    var(--ff-aqua) 0%,
+    var(--ff-blue) 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -215,7 +243,7 @@ label.ffInput:hover {
 }
 
 label.ffInput .checkmark:after {
-  content: "";
+  content: '';
   position: absolute;
   display: none;
 }
@@ -234,7 +262,7 @@ label.ffInput input:checked ~ .checkmark:after {
   transform: rotate(45deg);
 }
 
-.ffInput[type=number] {
+.ffInput[type='number'] {
   width: 34px;
 }
 
@@ -243,7 +271,7 @@ textarea.ffInput {
   width: -webkit-fill-available;
   height: 80px;
   resize: vertical;
-  transition: all .15s linear, background 1s linear;
+  transition: all 0.15s linear, background 1s linear;
 }
 
 .invalid {
@@ -254,4 +282,47 @@ textarea.ffInput {
   text-align: right;
   padding-right: 20px;
   color: var(--ff-link);
+}
+
+/*=================crowd-bypassed and before-navigate css================*/
+
+code {
+  color: var(--ff-aqua);
+  -webkit-text-fill-color: var(--ff-aqua);
+  background-color: var(--ff-module-background);
+  font-family: monospace;
+}
+
+button {
+  border: 2px solid;
+  border-image: linear-gradient(
+      135deg,
+      var(--ff-aqua) 0%,
+      var(--ff-blue) 50%,
+      var(--ff-purple) 100%
+    )
+    1;
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0.5vh 1vw;
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 0.5vh;
+  margin-top: 0.5vh;
+  outline: none;
+  color: var(--ff-aqua);
+  transition: background-color 0.1s ease-in-out;
+}
+
+button:hover {
+  background-color: #222;
+  cursor: pointer;
+}
+
+a .link-preview:hover {
+  text-decoration: underline;
+}
+
+#options-link > a {
+  padding: 0;
 }
