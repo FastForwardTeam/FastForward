@@ -179,6 +179,17 @@ function addBottomNavbar() {
     });
 
     bottomNavbar.classList.add('bottom-navbar');
+  } else {
+    const bottomNavbar = document.querySelector('.bottom-navbar');
+    if (bottomNavbar) {
+      const navLinks = bottomNavbar.querySelectorAll('.navlink');
+      const nav = document.querySelector('nav:not(.bottom-navbar)');
+      const navUl = nav.querySelector('ul');
+      navLinks.forEach((link) => {
+        navUl.appendChild(link);
+      });
+      bottomNavbar.remove();
+    }
   }
 }
 

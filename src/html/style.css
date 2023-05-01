@@ -315,6 +315,7 @@ label.ffInput input:checked ~ .checkmark:after {
 textarea.ffInput {
   max-width: 733px;
   width: -webkit-fill-available;
+  width: -moz-available;
   height: 80px;
   resize: vertical;
   transition: all 0.15s linear, background 1s linear;
