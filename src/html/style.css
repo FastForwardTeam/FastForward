@@ -331,6 +331,10 @@ textarea.ffInput {
   color: var(--ff-link);
 }
 
+.text-warn {
+  color: #faa05a;
+}
+
 /*=================crowd-bypassed and before-navigate css================*/
 
 code {
