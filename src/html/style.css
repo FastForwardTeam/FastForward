@@ -33,6 +33,7 @@ body {
 .logo-wrapper {
   align-self: center;
   outline: none;
+  order: -1;
 }
 
 .img {
@@ -105,6 +106,43 @@ nav a:hover:disabled {
   color: var(--ff-link);
 }
 
+@media screen and (max-width: 768px) {
+  nav .spacer {
+    display: none;
+  }
+  nav ul {
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .bottom-navbar {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 0;
+    border-image: linear-gradient(
+        135deg,
+        var(--ff-aqua) 0%,
+        var(--ff-blue) 50%,
+        var(--ff-purple) 100%
+      )
+      1 0 0 0;
+    border-top: 3px solid;
+    height: auto;
+  }
+  .bottom-navbar ul {
+    height: inherit;
+    padding: 5px;
+  }
+  nav.bottom-navbar li {
+    padding-top: 0;
+    text-align: center;
+  }
+}
+
 /*=================content css================*/
 
 section {
@@ -116,6 +154,14 @@ section {
   margin-right: auto;
   padding-left: 5px;
   padding-right: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 15px;
+  }
 }
 
 h1 {

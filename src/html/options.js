@@ -165,3 +165,23 @@ optionCrowdBypass.addEventListener('change', () => {
     refCrowdTempDisabledMsg();
   }
 });
+
+function addBottomNavbar() {
+  if (window.innerWidth < 768 && !document.querySelector('.bottom-navbar')) {
+    const bottomNavbar = document.createElement('nav');
+    document.body.appendChild(bottomNavbar);
+    const bottomNavbarUl = document.createElement('ul');
+    bottomNavbar.appendChild(bottomNavbarUl);
+
+    const navLinks = document.querySelectorAll('.navlink');
+    navLinks.forEach((link) => {
+      bottomNavbarUl.appendChild(link);
+    });
+
+    bottomNavbar.classList.add('bottom-navbar');
+  }
+}
+
+window.addEventListener('resize', addBottomNavbar);
+
+addBottomNavbar();
