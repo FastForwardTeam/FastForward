@@ -5,7 +5,7 @@ updates:
       push:
       pull_request:
         types: [opened]
-    directory: "/.github/workflows"
+    directory: ".github/workflows"
     schedule:
       interval: "weekly"
   - package-ecosystem: "npm"
