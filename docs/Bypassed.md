@@ -164,13 +164,13 @@ This is a list of websites bypassed in the MV2 version of the extension.
 |              https://lnk2.cc              |   ❌    |
 |             https://ouo.press             |   ✅    |
 |             https://ouo.info              |   🛑   | 
-|             https://ouo.io                |   ✅    |
+|              https://ouo.io               |   ✅    |
 |               https://za.gl               |   ❌    |
 |               https://za.uy               |   🛑   | 
 |           https://drivehub.link           |   🛑   | 
 |              https://oxy.si               |   ❌    |
 |         https://healthyteeth.tips         |   ❌    |
-|             https://oxy.cloud             |   ❌    |
+|             https://oxy.cloud             |   ✅    |
 |   https://daunshorte.teknologilink.com    |   🛑   | 
 |            https://imgtaxi.com            |   ❌    |
 |            https://imgkoc.buzz            |   🛑   | 
@@ -239,8 +239,8 @@ This is a list of websites bypassed in the MV2 version of the extension.
 |             https://lompat.in             |   🛑   | 
 |        https://st.flashsubs.web.id        |   ❌    |
 |          https://short-url.link           |   ❌    |
-|           https://uploadrar.com           |   ❌    |
-|           https://uploadrar.net           |   ❌    |
+|           https://uploadrar.com           |   ✅    |
+|           https://uploadrar.net           |   ✅    |
 |      https://kuliahmatematika.my.id       |   🛑   | 
 |         https://shortconnect.com          |   ❌    |
 |              https://elil.cc              |   ❌    |
@@ -367,7 +367,7 @@ This is a list of websites bypassed in the MV2 version of the extension.
 |             https://shtms.co              |   🛑   | 
 |             https://aylink.co             |   🛑   | 
 |           https://forex1pro.com           |   ✅    | 
-|          https://sub4unlock.com           |   ❌    |
+|          https://sub4unlock.com           |   ✅    |
 |            https://oracle.com             |   ✅    |
 |            https://genlink.cc             |   🛑   |
 |             https://psarips.*             |   🛑   |  
@@ -407,7 +407,7 @@ This is a list of websites bypassed in the MV2 version of the extension.
 |            https://tinyurl.so             |   ❌    |
 |          https://textovisia.com           |   🛑   | 
 |          https://shortclicks.xyz          |   🛑   | 
-|             https://work.ink              |   🛑   | 
+|             https://work.ink              |   ✅    | 
 |          https://sub2unlock.com           |   ❌    |
 |             https://cutin.it              |   ❌    |
 |          https://olamovies.cyou           |   ❌    |
@@ -481,8 +481,8 @@ This is a list of websites bypassed in the MV2 version of the extension.
 |          https://mynewsmedia.co           |   ❌    |
 |           https://100count.net            |   ❌    |
 |      https://dl.freetutsdownload.net      |   ❌    |
-|          https://newforex.online          |   ❌    |
-|          https://world-trips.net          |   ❌    |
+|          https://newforex.online          |   ✅    |
+|          https://world-trips.net          |   ✅    |
 |            https://go.akwam.cc            |   🛑   | 
 |            https://go.akwam.cx            |   🛑   | 
 |           https://go.akwam.net            |   🛑   | 
@@ -532,7 +532,7 @@ This is a list of websites bypassed in the MV2 version of the extension.
 |              https://123link              |   🛑   | 
 |            https://linksht.com            |   ❌    |
 |           https://icutlink.com            |   ❌    |
-|            https://oxy.cloud/             |   ❌    |
+|            https://oxy.cloud/             |   ✅    |
 |            https://leitup.com             |   ✅    |
 |           https://acortalink.me           |   ✅    |
 |            https://liblink.pl             |   ✅    |
@@ -566,4 +566,15 @@ This is a list of websites bypassed in the MV2 version of the extension.
 |         https://cemendemons.com	          |   ✅    |
 |           https://fansmega.com	           |   ✅    |
 |       https://premiumstashdrop.com	       |   ✅    |
-
+|             https://blitly.io             |   ✅    |
+|         https:/healthy4pepole.com         |   ✅    |
+|          https://forex-gold.net           |   ✅    |
+|            https://healdad.com            |   ✅    |
+|           https://world2our.com           |   ✅    |
+|         https://gamalk-sehetk.com         |   ✅    |
+|           https://mobitaak.com            |   ✅    |
+|          https://forexit.online           |   ✅    |
+|         https://shopforex.online          |   ✅    |
+|              https://oko.sh               |   ✅    |
+|          https://bluetechno.net           |   ✅    |
+|            https://work.click             |   ✅    |

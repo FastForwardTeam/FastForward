@@ -8,11 +8,12 @@ export default class Lnk extends BypassDefinition {
 
   execute() {
     if (!window.location.href.includes('/go/')) {
-      window.location.href = window.location.href.replace('lnk.parts', 'lnk.parts/go');
+      //Insert /go/ inbetween the domain and the rest of the url
+      this.helpers.safelyNavigate(window.location.href.replace(/(https?:\/\/[^/]+)(\/.*)/, '$1/go$2'));
     }
     document.getElementById('get_link_btn').click();
   }
 }
 
-export const matches = ['lnk.parts'];
+export const matches = ['lnk.parts', 'icerik.site'];
 

@@ -1,4 +1,8 @@
-export function insertInfoBox(text){
+/**
+ * Inserts an info box into the DOM. This is used to show the user information or to complete a specific step (do a captcha, for example).
+ * @param {string} text - The text to show in the info box.
+ */
+export function insertInfoBox(text) {
     let infobox_container = document.querySelector('div#ffibv1');
 
     if (!infobox_container) {
@@ -19,7 +23,9 @@ export function insertInfoBox(text){
     const div = document.createElement('div');
     div.style =
         'margin-left:20px; margin-bottom: 20px;background:#eee;border-radius:10px;padding:20px;box-shadow:#111 0px 5px 40px;cursor:pointer';
-    div.innerHTML = `<img src="https://raw.githubusercontent.com/FastForwardTeam/FastForward/main/src/icon/48.png" style="width:24px;height:24px;margin-right:8px"><span style="display:inline"></span>`;    div.setAttribute('tabindex', '-1');
+    const extensionID = 'bjfcinpjmgnmbdphcblepakkciilkdac'; // Replace with your extension ID
+    const imageUrl = `chrome-extension://${extensionID}/icon/48.png`;
+    div.innerHTML = `<img src="${imageUrl}" style="width:24px;height:24px;margin-right:8px"><span style="display:inline"></span>`;
     div.setAttribute('aria-hidden', 'true');
     const span = div.querySelector('span');
     span.textContent = text;
