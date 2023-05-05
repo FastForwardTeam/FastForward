@@ -94,6 +94,7 @@ brws.runtime.onStartup.addListener(() => {
   reEnableCrowdBypassStartup();
   brws.storage.local.set({ version: brws.runtime.getManifest().version });
 });
+
 brws.webNavigation.onBeforeNavigate.addListener(
   (details) => preflight(details),
   {
@@ -154,3 +155,22 @@ brws.runtime.onMessage.addListener((request, _, sendResponse) => {
   })();
   return true;
 });
+
+//If on chrome, add listener for change in local storage
+if (typeof browser === 'undefined') {
+  chrome.storage.onChanged.addListener(() => {
+    getOptions().then((options) => {
+      if (options.optionBlockIpLoggers === false) {
+        chrome.declarativeNetRequest.updateEnabledRulesets({
+          disableRulesetIds: ['ruleset_1'],
+          enableRulesetIds: [],
+        });
+      } else if (options.optionBlockIpLoggers === true) {
+        chrome.declarativeNetRequest.updateEnabledRulesets({
+          disableRulesetIds: [],
+          enableRulesetIds: ['ruleset_1'],
+        });
+      }
+    });
+  });
+}

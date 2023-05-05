@@ -10,6 +10,6 @@
   },
   "scripts": {
     "lint": "eslint",
-    "build": "./scripts/build.js"
+    "build": "node ./scripts/build.js"
   }
 }

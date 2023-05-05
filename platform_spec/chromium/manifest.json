@@ -17,8 +17,12 @@
 	"permissions": [
 		"alarms",
 		"storage",
-		"webNavigation"
+		"webNavigation",
+		"declarativeNetRequestWithHostAccess"
 	],
+	"host_permissions": [
+		"<all_urls>"
+	  ],
 	"options_ui": {
 		"page": "html/options.html",
 		"open_in_tab": true
@@ -51,5 +55,14 @@
 		"bypasses/*",
 		"helpers/*"],
 		"matches": ["<all_urls>"]
-}]
+	}],
+
+	"declarative_net_request": {
+		"rule_resources": [{
+		  "id": "ruleset_1",
+		  "enabled": true,
+		  "path": "rules.json"
+		}]
+	  }
+	
 }

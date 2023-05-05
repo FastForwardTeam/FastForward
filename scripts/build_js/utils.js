@@ -70,3 +70,36 @@ export function getNumberOfCommits() {
     console.error(error);
   }
 }
+
+/**
+ * Converts a rules.json file to be suitable for use as a declarativeNetRequest ruleset and writes the result to an output file.
+ *
+ * @async
+ * @function convertRulesToDeclarativeNetRequest
+ * @param {string} rulesFilePath - The path to the input JSON file containing the rules to be converted.
+ * @param {string} [outputFilePath=rulesFilePath] - The path to the output file where the result will be written.
+ * If not provided, the result will be written to the same file as the input.
+ * @returns {Promise<void>}
+ */
+export async function convertRulesToDeclarativeNetRequest(
+  rulesFilePath,
+  outputFilePath = rulesFilePath
+) {
+  const rules = JSON.parse(await fs.readFile(rulesFilePath));
+  const domainRegex = /:\/\/\*?\.?([^/]+)/;
+  const convertedRules = rules.ip_logger.map((urlPattern, index) => {
+    const domainMatch = urlPattern.match(domainRegex);
+    const domain = domainMatch ? domainMatch[1] : '';
+    return {
+      id: index + 1,
+      priority: 1,
+      action: {
+        type: 'redirect',
+        redirect: { extensionPath: '/html/blocked.html' },
+      },
+      condition: { urlFilter: `||${domain}`, resourceTypes: ['main_frame'] },
+    };
+  });
+
+  return fs.writeFile(outputFilePath, JSON.stringify(convertedRules));
+}
