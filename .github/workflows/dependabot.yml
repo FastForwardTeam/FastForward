@@ -4,6 +4,7 @@ updates:
     # Look for any GitHub Actions workflow files in '.github/workflows'
     # Run this every time a new pull request is opened
     on:
+      push:
       pull_request:
         types: [ opened ]
     directory: "/.github/workflows"
@@ -11,6 +12,7 @@ updates:
       interval: "weekly"
   - package-ecosystem: "npm"
     on:
+      push:
       pull_request:
         types: [ opened ]
     # Look for 'package.json' and 'package-lock.json' in the main directory
