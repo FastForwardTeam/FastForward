@@ -42,7 +42,7 @@ function addNumberInputs() {
     numberInput.setAttribute('type', 'number');
     numberInput.setAttribute('id', value);
     numberInput.setAttribute('min', '0');
-    numberInput.setAttribute('style', 'width:34px');
+    numberInput.setAttribute('class', 'ffInput');
     element.innerHTML = element.innerHTML.replace('%', numberInput.outerHTML);
   }
 }
@@ -80,11 +80,12 @@ function addEventListeners() {
     });
 
   document
-    .querySelector('#saveWhitelist')
-    .addEventListener('click', async function () {
+    .querySelector('#whitelist')
+    .addEventListener('input', async function () {
       let options = await getOptions();
-      options['whitelist'] = document.querySelector('#whitelist').value;
+      options['whitelist'] = this.value;
       saveOptions(options);
+      checkTextareaValidity();
     });
 
   document
@@ -96,6 +97,15 @@ function addEventListeners() {
         saveOptions(options);
       });
     });
+}
+
+function checkTextareaValidity() {
+  let textarea = document.querySelector('#whitelist');
+  if (textarea.value.includes('/')) {
+    textarea.classList.add('invalid');
+  } else {
+    textarea.classList.remove('invalid');
+  }
 }
 
 async function repopulateOptions() {
@@ -139,6 +149,7 @@ document.addEventListener('DOMContentLoaded', async function () {
   await repopulateOptions();
   refCrowdTempDisabledMsg();
   addEventListeners();
+  checkTextareaValidity();
   formatWhitelistDesc();
   displayExtensionVersion();
   setInterval(() => {
@@ -154,3 +165,34 @@ optionCrowdBypass.addEventListener('change', () => {
     refCrowdTempDisabledMsg();
   }
 });
+
+function addBottomNavbar() {
+  if (window.innerWidth < 768 && !document.querySelector('.bottom-navbar')) {
+    const bottomNavbar = document.createElement('nav');
+    document.body.appendChild(bottomNavbar);
+    const bottomNavbarUl = document.createElement('ul');
+    bottomNavbar.appendChild(bottomNavbarUl);
+
+    const navLinks = document.querySelectorAll('.navlink');
+    navLinks.forEach((link) => {
+      bottomNavbarUl.appendChild(link);
+    });
+
+    bottomNavbar.classList.add('bottom-navbar');
+  } else {
+    const bottomNavbar = document.querySelector('.bottom-navbar');
+    if (bottomNavbar) {
+      const navLinks = bottomNavbar.querySelectorAll('.navlink');
+      const nav = document.querySelector('nav:not(.bottom-navbar)');
+      const navUl = nav.querySelector('ul');
+      navLinks.forEach((link) => {
+        navUl.appendChild(link);
+      });
+      bottomNavbar.remove();
+    }
+  }
+}
+
+window.addEventListener('resize', addBottomNavbar);
+
+addBottomNavbar();

@@ -20,7 +20,9 @@ function escapeHtml(unsafe) {
 function updateDestinationMessage() {
   let msg = brws.i18n.getMessage(
     'crowdBypassedInfo',
-    '<a><code>'.concat(escapeHtml(targetUrl), '</a></code>')
+    `<br><a href="${escapeHtml(
+      targetUrl
+    )}" class="link link-preview"><code> ${escapeHtml(targetUrl)} </a></code>`
   );
   document.querySelector('#crowd-bypass-info').innerHTML = msg;
 }
@@ -36,6 +38,7 @@ tempDisableCrowdButton.addEventListener('click', () => {
     brws.storage.local.set({ tempDisableCrowd: 'true' });
     // Create an alarm that will trigger after 10 minutes
     brws.alarms.create('enableCrowdBypass', { delayInMinutes: 10 });
+    history.back();
   });
 });
 

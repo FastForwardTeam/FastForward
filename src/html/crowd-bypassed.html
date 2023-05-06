@@ -4,13 +4,19 @@
     <title data-message="crowdBypassed"></title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="base.js"></script>
   </head>
   <body>
-    <div class="uk-margin-top uk-margin-bottom uk-margin-left uk-margin-right">
-      <h1 data-message="crowdBypassed"></h1>
+    <nav class="mobile-only">
+      <ul>
+        <div class="logo-wrapper"><img class="logo" src="../icon/branding.png" alt="FastForward"></div>
+      </ul>
+    </nav>
+    <section>
+      <h2 data-message="crowdBypassed"></h1>
       <p id="crowd-bypass-info"></p>
-      <div id="timer" class="uk-alert uk-alert-primary uk-hidden">
+      <div id="timer">
         <p></p>
       </div>
       <p data-message="tempDisableCrowdBypassDesc"></p>
@@ -18,15 +24,16 @@
         <span data-message="tempDisableCrowdBypassButton"></span>
       </button>
       <br />
-      <p>
+      <p id="options-link">
         <span data-message="crowdBypassedOptions"></span>
         <a
           href="options.html#option-crowd-open-delay"
           target="_blank"
-          data-message="optionsLink"
-        ></a>
+          data-message="optionsLink"></a>
       </p>
-    </div>
+
+    </section>
+
     <script src="i18n.js"></script>
     <script src="crowd-bypassed.js"></script>
   </body>
