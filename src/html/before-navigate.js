@@ -20,9 +20,9 @@ function escapeHtml(unsafe) {
 const destinationElement = document.querySelector('#destination');
 destinationElement.innerHTML = brws.i18n.getMessage(
   'beforeNavigateDestination',
-  `<a href="${escapeHtml(targetUrl)}"><code> ${escapeHtml(
+  `<br><a href="${escapeHtml(
     targetUrl
-  )} </a></code>`
+  )}" class="link link-preview"><code> ${escapeHtml(targetUrl)} </a></code>`
 );
 
 brws.storage.local.get('options', (result) => {

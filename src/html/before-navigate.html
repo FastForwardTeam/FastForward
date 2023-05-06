@@ -4,13 +4,21 @@
     <title data-message="beforeNavigate"></title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="./base.js"></script>
   </head>
   <body>
-    <div class="uk-margin-top uk-margin-bottom uk-margin-left uk-margin-right">
-      <h1 data-message="beforeNavigate"></h1>
+    <nav class="mobile-only">
+      <ul>
+        <div class="logo-wrapper">
+          <img class="logo" src="../icon/branding.png" alt="FastForward" />
+        </div>
+      </ul>
+    </nav>
+    <section>
+      <h2 data-message="beforeNavigate"></h2>
       <p id="destination"></p>
-      <div id="timer" class="uk-alert uk-alert-primary uk-hidden">
+      <div id="timer">
         <p></p>
       </div>
       <p id="options-link">
@@ -18,10 +26,9 @@
         <a
           href="options.html#option-navigation-delay"
           target="_blank"
-          data-message="optionsLink"
-        ></a>
+          data-message="optionsLink"></a>
       </p>
-    </div>
+    </section>
 
     <script src="./i18n.js"></script>
     <script src="./before-navigate.js"></script>
