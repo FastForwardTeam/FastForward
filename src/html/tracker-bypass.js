@@ -44,10 +44,9 @@ function updateTrackerMessage(url) {
 }
 
 async function resolveTracker(url) {
+  url = url.replace(/(^\w+:|^)\/\//, '');
   try {
-    const response = await fetch(
-      `https://api.unshorten.me/v1/unshorten?url=${encodeURIComponent(url)}`
-    );
+    const response = await fetch(`https://unshorten.me/json/${url}`);
     const data = await response.json();
     if (data.success && data.resolved_url) {
       updateTrackerMessage(data.resolved_url);
