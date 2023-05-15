@@ -1,9 +1,11 @@
 /*global brws*/
+import { isGoodLink } from '../helpers/dom.js';
 const trackerInfoElement = document.getElementById('tracker-info');
 
 // Get tracker URL from search parameter
 const urlParams = new URLSearchParams(window.location.search);
-const trackerUrl = urlParams.get('tracker');
+let trackerUrl = null;
+if (isGoodLink(urlParams.get('tracker'))) trackerUrl = urlParams.get('tracker');
 
 function escapeHtml(unsafe) {
   if (!unsafe) return unsafe; //prevents null objects from throwing an error
@@ -48,7 +50,7 @@ async function resolveTracker(url) {
   try {
     const response = await fetch(`https://unshorten.me/json/${url}`);
     const data = await response.json();
-    if (data.success && data.resolved_url) {
+    if (data.success && data.resolved_url && isGoodLink(data.resolved_url)) {
       updateTrackerMessage(data.resolved_url);
     } else {
       showError();
