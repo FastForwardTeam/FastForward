@@ -131,7 +131,7 @@ brws.storage.onChanged.addListener(() => {
       brws.declarativeNetRequest.updateEnabledRulesets({
         disableRulesetIds: ['ipLoggerRuleset'],
       });
-    } else if (options.optionBlockIpLoggers === true) {
+    } else {
       brws.declarativeNetRequest.updateEnabledRulesets({
         enableRulesetIds: ['ipLoggerRuleset'],
       });
@@ -140,7 +140,7 @@ brws.storage.onChanged.addListener(() => {
       brws.declarativeNetRequest.updateEnabledRulesets({
         disableRulesetIds: ['trackerRuleset'],
       });
-    } else if (options.optionTrackerBypass === true) {
+    } else {
       brws.declarativeNetRequest.updateEnabledRulesets({
         enableRulesetIds: ['trackerRuleset'],
       });

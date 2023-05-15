@@ -111,7 +111,7 @@ export async function convertRulesToDNRRulesets(
     const domainMatch = urlPattern.match(domainRegex);
     if (!domainMatch) console.error('Unable to parse domain for', urlPattern);
     return {
-      id: ip_loggerRules.length + index + 1,
+      id: index + 1,
       priority: 1,
       action: {
         type: 'redirect',

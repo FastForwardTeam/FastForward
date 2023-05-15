@@ -22,9 +22,7 @@
 	"permissions": [
 		"alarms",
 		"storage",
-		"webNavigation",
-		"declarativeNetRequestWithHostAccess",
-		"declarativeNetRequestFeedback"
+		"declarativeNetRequestWithHostAccess"
 	],
 	"host_permissions": [
 		"<all_urls>"
@@ -34,8 +32,9 @@
 		"open_in_tab": true
 	},
 	"background": {
-		"scripts": ["background.js"]
-		},
+		"scripts": ["background.js"],
+		"type": "module"
+	},
 	"action": {},
 	"content_scripts": [
 		{
@@ -54,6 +53,7 @@
 		"html/before-navigate.html",
 		"html/blocked.html",
 		"html/crowd-bypassed.html",
+		"html/tracker-bypass.html",
 		"html/options.html",
 		"icon/48.png",
 		"injection_script.js",
@@ -65,9 +65,15 @@
 	}],
 	"declarative_net_request": {
 		"rule_resources": [{
-		  "id": "ip_logger_ruleset",
+		  "id": "ipLoggerRuleset",
 		  "enabled": true,
 		  "path": "ip_logger_blocker.json"
+		},
+		{
+			"id": "trackerRuleset",
+			"enabled": false,
+			"path": "tracker_bypass.json"
 		}]
+		  
 	}
 }

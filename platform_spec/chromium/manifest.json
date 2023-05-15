@@ -48,6 +48,7 @@
 		"html/before-navigate.html",
 		"html/blocked.html",
 		"html/crowd-bypassed.html",
+		"html/tracker-bypass.html",
 		"html/options.html",
 		"icon/48.png",
 		"injection_script.js",
@@ -68,5 +69,4 @@
 			"path": "tracker_bypass.json"
 		}]
 	  }
-	
 }
