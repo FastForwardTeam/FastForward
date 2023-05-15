@@ -93,11 +93,12 @@ if (version === 'ver') {
 
 async function buildExtension(browser) {
   const targetBrowser = browser === 'firefox' ? 'firefox-desktop' : 'chromium';
-  const browserDir = `${working_directory}/build/FastForward.${browser}`;
-  const manfistFile = `${working_directory}/platform_spec/${browser}/manifest.json`;
-  await utils.copyArray([manfistFile], browserDir);
+  const browserOutDir = `${working_directory}/build/FastForward.${browser}`;
+  const browserSrcDir = `${working_directory}/platform_spec/${browser}`;
+  const manfistFile = `${browserSrcDir}/manifest.json`;
+  await utils.copyArray([manfistFile], browserOutDir);
   fs.writeFileSync(
-    `${browserDir}/manifest.json`,
+    `${browserOutDir}/manifest.json`,
     JSON.stringify(
       Object.assign(JSON.parse(fs.readFileSync(manfistFile, 'utf8')), {
         version: packageVersion,
@@ -106,13 +107,14 @@ async function buildExtension(browser) {
       4 //pretty print
     )
   );
-  if (targetBrowser == 'chromium') {
-    await utils.convertRulesToDeclarativeNetRequest(`${browserDir}/rules.json`);
-  }
+  await utils.convertRulesToDeclarativeNetRequest(
+    `${browserOutDir}/rules.json`,
+    `${browserOutDir}/ip_logger_blocker.json`
+  );
 
   await webExt.cmd.build(
     {
-      sourceDir: browserDir,
+      sourceDir: browserOutDir,
       artifactsDir: `${distribution}`,
       overwriteDest: true,
       browser: targetBrowser,

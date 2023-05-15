@@ -1,3 +1,4 @@
+import * as constants from './constants.js';
 const brws = typeof browser !== 'undefined' ? browser : chrome;
 const fetchDomains = ['crowd.fastforward.team', 'redirect-api.work.ink']; //only allow requests to these domains
 
@@ -27,32 +28,10 @@ function firstrun() {
   brws.storage.local.set({ tempDisableCrowd: 'false' });
   brws.storage.local.set({ version: brws.runtime.getManifest().version });
   brws.runtime.openOptionsPage(); //required for loading default options, to do: implement a better way
-}
-
-function preflight(details) {
-  let url = new URL(details.url);
-  if (url.hostname !== 'fastforward.team') {
-    return;
-  }
-  //navigate
-  if (url.pathname === '/bypassed') {
-    let ext_url = new URL(brws.runtime.getURL(''));
-    url.hostname = ext_url.hostname;
-    url.protocol = ext_url.protocol;
-    url.pathname = '/html' + url.pathname;
-    if (url.searchParams.get('crowd') === 'true') {
-      url.pathname =
-        url.pathname.split('/').slice(0, -1).join('/') + '/crowd-bypassed.html';
-    } else {
-      url.pathname =
-        url.pathname.split('/').slice(0, -1).join('/') +
-        '/before-navigate.html';
-    }
-
-    brws.tabs.update(details.tabId, {
-      url: url.href,
-    });
-  }
+  brws.declarativeNetRequest.updateDynamicRules({
+    addRules: constants.beforeNavigateRules,
+    removeRuleIds: constants.beforeNavigateRules.map((rule) => rule.id),
+  });
 }
 
 // If user restarts the browser before the is alarm triggered
@@ -95,20 +74,10 @@ brws.runtime.onStartup.addListener(() => {
   brws.storage.local.set({ version: brws.runtime.getManifest().version });
 });
 
-brws.webNavigation.onBeforeNavigate.addListener(
-  (details) => preflight(details),
-  {
-    url: [{ hostContains: 'fastforward.team' }],
-  }
-);
-
 brws.runtime.onMessage.addListener((request, _, sendResponse) => {
   (async () => {
     let options = await getOptions();
     if (options.optionCrowdBypass === false) {
-      const src = brws.runtime.getURL('helpers/infobox.js');
-      const insertInfoBox = await import(src);
-      insertInfoBox(brws.i18n.getMessage('crowdDisabled'));
       return;
     }
     let url;
@@ -156,21 +125,16 @@ brws.runtime.onMessage.addListener((request, _, sendResponse) => {
   return true;
 });
 
-//If on chrome, add listener for change in local storage
-if (typeof browser === 'undefined') {
-  chrome.storage.onChanged.addListener(() => {
-    getOptions().then((options) => {
-      if (options.optionBlockIpLoggers === false) {
-        chrome.declarativeNetRequest.updateEnabledRulesets({
-          disableRulesetIds: ['ruleset_1'],
-          enableRulesetIds: [],
-        });
-      } else if (options.optionBlockIpLoggers === true) {
-        chrome.declarativeNetRequest.updateEnabledRulesets({
-          disableRulesetIds: [],
-          enableRulesetIds: ['ruleset_1'],
-        });
-      }
-    });
+brws.storage.onChanged.addListener(() => {
+  getOptions().then((options) => {
+    if (options.optionBlockIpLoggers === false) {
+      brws.declarativeNetRequest.updateEnabledRulesets({
+        disableRulesetIds: ['ip_logger_ruleset'],
+      });
+    } else if (options.optionBlockIpLoggers === true) {
+      brws.declarativeNetRequest.updateEnabledRulesets({
+        enableRulesetIds: ['ip_logger_ruleset'],
+      });
+    }
   });
-}
+});

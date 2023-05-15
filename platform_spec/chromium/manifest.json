@@ -28,8 +28,8 @@
 		"open_in_tab": true
 	},
 	"background": {
-		"service_worker": "background.js"
-		
+		"service_worker": "background.js",
+		"type": "module"
 	},
 	"action": {},
 	"content_scripts": [
@@ -61,7 +61,7 @@
 		"rule_resources": [{
 		  "id": "ruleset_1",
 		  "enabled": true,
-		  "path": "rules.json"
+		  "path": "ip_logger_blocker.json"
 		}]
 	  }
 	

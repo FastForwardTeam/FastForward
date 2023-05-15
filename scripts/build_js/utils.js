@@ -72,7 +72,7 @@ export function getNumberOfCommits() {
 }
 
 /**
- * Converts a rules.json file to be suitable for use as a declarativeNetRequest ruleset and writes the result to an output file.
+ * Converts a rules.json file to a declarativeNetRequest ruleset and writes the result to an output file.
  *
  * @async
  * @function convertRulesToDeclarativeNetRequest
@@ -83,13 +83,13 @@ export function getNumberOfCommits() {
  */
 export async function convertRulesToDeclarativeNetRequest(
   rulesFilePath,
-  outputFilePath = rulesFilePath
+  outputFilePath
 ) {
   const rules = JSON.parse(await fs.readFile(rulesFilePath));
   const domainRegex = /:\/\/\*?\.?([^/]+)/;
-  const convertedRules = rules.ip_logger.map((urlPattern, index) => {
+  const ip_loggerRules = rules.ip_logger.map((urlPattern, index) => {
     const domainMatch = urlPattern.match(domainRegex);
-    const domain = domainMatch ? domainMatch[1] : '';
+    if (!domainMatch) console.error('Unable to parse domain for', urlPattern);
     return {
       id: index + 1,
       priority: 1,
@@ -97,9 +97,32 @@ export async function convertRulesToDeclarativeNetRequest(
         type: 'redirect',
         redirect: { extensionPath: '/html/blocked.html' },
       },
-      condition: { urlFilter: `||${domain}`, resourceTypes: ['main_frame'] },
+      condition: {
+        urlFilter: `||${domainMatch[1]}`,
+        resourceTypes: ['main_frame'],
+      },
     };
   });
+
+  const trackerRules = rules.tracker.map((urlPattern, index) => {
+    const domainMatch = urlPattern.match(domainRegex);
+    if (!domainMatch) console.error('Unable to parse domain for', urlPattern);
+    return {
+      id: ip_loggerRules.length + index + 1,
+      priority: 1,
+      action: {
+        type: 'redirect',
+        redirect: {
+          regexSubstitution: `https://fastforward.team/bypassed?tracker=true&url=\\0`,
+        },
+      },
+      condition: {
+        regexFilter: '^https?://' + domainMatch[1] + '.*',
+        resourceTypes: ['main_frame'],
+      },
+    };
+  });
+  const convertedRules = [...ip_loggerRules, ...trackerRules];
 
   return fs.writeFile(outputFilePath, JSON.stringify(convertedRules));
 }

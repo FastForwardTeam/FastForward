@@ -145,6 +145,12 @@
 	},
 	"crowdBypassTempDisabled":{
 		"message":"Crowd bypass has been temporarily disabled"
+	},
+	"trackerBypass": {
+		"message": "Bypassing tracker..."
+	},
+	"trackerBypassedError": {
+		"message": "Oops! Something went wrong. Redirecting to the original link..."
 	}
 	
 }

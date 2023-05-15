@@ -237,7 +237,7 @@ export function unsafelyNavigate(target, referer = null, crowd = false) {
   }
   let url;
   if (crowd) {
-    url = `https://fastforward.team/bypassed?crowd=true&target=${encodeURIComponent(
+    url = `https://fastforward.team/bypassed?type=crowd&target=${encodeURIComponent(
       target
     )}`;
   } else {
