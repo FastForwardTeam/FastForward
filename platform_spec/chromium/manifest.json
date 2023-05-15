@@ -17,7 +17,6 @@
 	"permissions": [
 		"alarms",
 		"storage",
-		"webNavigation",
 		"declarativeNetRequestWithHostAccess"
 	],
 	"host_permissions": [
@@ -59,9 +58,14 @@
 
 	"declarative_net_request": {
 		"rule_resources": [{
-		  "id": "ruleset_1",
+		  "id": "ipLoggerRuleset",
 		  "enabled": true,
 		  "path": "ip_logger_blocker.json"
+		},
+		{
+			"id": "trackerRuleset",
+			"enabled": false,
+			"path": "tracker_bypass.json"
 		}]
 	  }
 	

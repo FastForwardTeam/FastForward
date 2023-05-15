@@ -107,9 +107,10 @@ async function buildExtension(browser) {
       4 //pretty print
     )
   );
-  await utils.convertRulesToDeclarativeNetRequest(
+  await utils.convertRulesToDNRRulesets(
     `${browserOutDir}/rules.json`,
-    `${browserOutDir}/ip_logger_blocker.json`
+    `${browserOutDir}/ip_logger_blocker.json`,
+    `${browserOutDir}/tracker_bypass.json`
   );
 
   await webExt.cmd.build(

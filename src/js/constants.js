@@ -1,7 +1,7 @@
 export const beforeNavigateRules = [
   {
     id: 1,
-    priority: 1,
+    priority: 2,
     action: {
       type: 'redirect',
       redirect: {
@@ -17,7 +17,7 @@ export const beforeNavigateRules = [
   },
   {
     id: 2,
-    priority: 1,
+    priority: 2,
     action: {
       type: 'redirect',
       redirect: {
@@ -33,7 +33,7 @@ export const beforeNavigateRules = [
   },
   {
     id: 3,
-    priority: 2,
+    priority: 1,
     action: {
       type: 'redirect',
       redirect: {
@@ -45,19 +45,5 @@ export const beforeNavigateRules = [
       regexFilter: '^https?://fastforward\\.team/bypassed(\\?.*)',
       resourceTypes: ['main_frame'],
     },
-  },
-  {
-    action: {
-      redirect: {
-        url: 'https://example.org',
-      },
-      type: 'redirect',
-    },
-    condition: {
-      urlFilter: 'https://example.com',
-      resourceTypes: ['main_frame'],
-    },
-    id: 4,
-    priority: 1,
   },
 ];

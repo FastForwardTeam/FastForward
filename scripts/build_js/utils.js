@@ -72,18 +72,21 @@ export function getNumberOfCommits() {
 }
 
 /**
- * Converts a rules.json file to a declarativeNetRequest ruleset and writes the result to an output file.
+ * Converts a rules.json with trackers and ip_loggers file into two
+ * separate declarativeNetRequest rulesets and writes the resulting JSONs to file.
  *
  * @async
  * @function convertRulesToDeclarativeNetRequest
  * @param {string} rulesFilePath - The path to the input JSON file containing the rules to be converted.
- * @param {string} [outputFilePath=rulesFilePath] - The path to the output file where the result will be written.
- * If not provided, the result will be written to the same file as the input.
+ * @param {string} ipLoggerOutputFile - The path to the output file where the ip logger rules will be written.
+ * @param {string} trackerOutputFile - The path to the output file where the tracker rules will be written.
+ *
  * @returns {Promise<void>}
  */
-export async function convertRulesToDeclarativeNetRequest(
+export async function convertRulesToDNRRulesets(
   rulesFilePath,
-  outputFilePath
+  ipLoggerOutputFile,
+  trackerOutputFile
 ) {
   const rules = JSON.parse(await fs.readFile(rulesFilePath));
   const domainRegex = /:\/\/\*?\.?([^/]+)/;
@@ -113,7 +116,7 @@ export async function convertRulesToDeclarativeNetRequest(
       action: {
         type: 'redirect',
         redirect: {
-          regexSubstitution: `https://fastforward.team/bypassed?tracker=true&url=\\0`,
+          regexSubstitution: `https://fastforward.team/bypassed?type=tracker&url=\\0`,
         },
       },
       condition: {
@@ -122,7 +125,7 @@ export async function convertRulesToDeclarativeNetRequest(
       },
     };
   });
-  const convertedRules = [...ip_loggerRules, ...trackerRules];
 
-  return fs.writeFile(outputFilePath, JSON.stringify(convertedRules));
+  await fs.writeFile(ipLoggerOutputFile, JSON.stringify(ip_loggerRules));
+  await fs.writeFile(trackerOutputFile, JSON.stringify(trackerRules));
 }
