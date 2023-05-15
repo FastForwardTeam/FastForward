@@ -20,7 +20,8 @@ function showError(err) {
   trackerInfoElement.textContent = brws.i18n.getMessage('trackerBypassedError');
   trackerInfoElement.classList.add('text-warn');
   setTimeout(() => {
-    window.location.replace(trackerUrl);
+    if (trackerUrl) window.location.replace(trackerUrl);
+    else console.error('no url param found');
   }, 3000);
 }
 
