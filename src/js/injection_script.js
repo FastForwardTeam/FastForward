@@ -2761,11 +2761,19 @@ ensureDomLoaded(() => {
 	// acortalink.me
     domainBypass('acortalink.me', () => {
 	ensureDomLoaded(() => {
-	    let script = document.querySelector('body > script').text.trim();
-	    let lines = script.split('\n');
-	    let i = lines.findIndex(x => x.includes('acortalink.me'))
-	    let link = lines[i+2].trim().split(',')[6].trim();
-	    safelyNavigate(window[link])
+	    let check = setInterval(() => {
+	        let script = document.querySelector('body > script');
+    	    	if(script) {
+    	            let text = script.text.trim()
+        	    let lines = text.split('\n');
+        	    let i = lines.findIndex(x => x.includes('acortalink.me'))
+        	    let link = lines[i+2].trim().split(',')[6].trim();
+            	    if(window[link]) {
+            	    	clearInterval(check)
+            	    	safelyNavigate(window[link])
+                    }
+    	       }
+	    }, 100)
 	})
     })
 	
