@@ -2759,14 +2759,14 @@ ensureDomLoaded(() => {
         })
     })
 	// acortalink.me
-    domainBypass("acortalink.me", () => {
-	    ensureDomLoaded(() => {
-		let script = document.querySelector('body > script').text.trim();
-		let lines = script.split('\n');
-		let i = lines.findIndex(x => x.includes('acortalink.me'))
-		let link = lines[i+2].trim().split(',')[6].trim();
-        	safelyNavigate(link)
-   	 })
+    domainBypass('acortalink.me', () => {
+	ensureDomLoaded(() => {
+	    let script = document.querySelector('body > script').text.trim();
+	    let lines = script.split('\n');
+	    let i = lines.findIndex(x => x.includes('acortalink.me'))
+	    let link = lines[i+2].trim().split(',')[6].trim();
+	    safelyNavigate(window[link])
+	})
     })
 	
     domainBypass("clk.asia", () => {
