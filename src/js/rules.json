@@ -306,7 +306,8 @@
 		"*://*.disq.us/url?url=*",
 		"*://analytics.supplyframe.com/*",
 		"*://clg.am/*",
-		"*://rebrand.ly/*"
+		"*://rebrand.ly/*",
+		"*://rb.gy/*"
 	],
 	"tracker_force_http": [
 		"ow.ly",
