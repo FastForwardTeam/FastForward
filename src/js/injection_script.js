@@ -2707,7 +2707,7 @@ ensureDomLoaded(() => {
         })
     })
 
-    hrefBypass(/blitly\.io\/st/, () => {
+    hrefBypass(/(blitly\.io|smartlink\.vip)\/st/, () => {
         const target_url = new URLSearchParams(window.location.search).get('url')
         safelyNavigate(target_url)
     })
