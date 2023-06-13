@@ -2075,6 +2075,13 @@ ensureDomLoaded(() => {
 //             a.submit();
 //         });
 //     });
+    domainBypass(/^megaup.net$/, () => {
+        seconds = 0
+	
+        awaitElement("input#btnsubmit", btn => {
+            btn.click()
+        })
+    })
     hrefBypass(/enxf\.net\/resources\/[a-zA-Z-\.\d]+\/download/, () => {
         ifElement(".XGT-Download-form", ex => safelyNavigate(ex.action));
     })
