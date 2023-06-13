@@ -2821,6 +2821,15 @@ ensureDomLoaded(() => {
 	    safelyNavigate(a.innerHTML)
         })
     })
+    
+    // otomi-games.com
+     domainBypass("otomi-games.com", () => {
+        ensureDomLoaded(() => {
+            ifElement("#wpsafe-link a", a => {
+                safelyNavigate(a.href) 
+            })
+        })      
+    })
 
     //Insertion point for bypasses detecting certain DOM elements. Bypasses here will no longer need to call ensureDomLoaded.
     domainBypass(/cb\.(run|click)/, () => ifElement("a.btn", a => safelyAssign(a.href)))
