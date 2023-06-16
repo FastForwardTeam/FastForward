@@ -307,7 +307,8 @@
 		"*://analytics.supplyframe.com/*",
 		"*://clg.am/*",
 		"*://rebrand.ly/*",
-		"*://rb.gy/*"
+		"*://rb.gy/*",
+		"*://trib.al/*"
 	],
 	"tracker_force_http": [
 		"ow.ly",
