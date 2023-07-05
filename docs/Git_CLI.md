@@ -37,7 +37,7 @@ Into this:
 
 
 Open the terminal and run the following commands. 
-NOTE: Remember to substitue all `<things>`
+NOTE: Remember to substitute all `<things>`
 ```
 git clone https://github.com/<YOUR USERNAME>/FastForward
 ```
