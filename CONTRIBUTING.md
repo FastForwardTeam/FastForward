@@ -26,7 +26,7 @@ Initially, you may use the custom bypasses section on the extension's settings p
 When submitting a pull please take care that:
 - Your code follows [the code style](docs/CODE_STYLE.md#code-style)
 - Commit messages should be descriptive
-- If its a small change [squash all your commits](docs/Git_CLI.md#squashing-commits)
+- If it's a small change [squash all your commits](docs/Git_CLI.md#squashing-commits)
 - Follow the pull request template
 
 Consider joining the [Discord](https://discord.gg/RSAf7b5njt) so that we can discuss the PR in real time.

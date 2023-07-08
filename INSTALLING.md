@@ -31,20 +31,20 @@ ____
 These are the instructions for installing the extension in "unpacked" mode. Make sure to read carefully to avoid any errors.
 
 #### Chromium Based Browsers (Chrome, Kiwi, Opera, Opera GX, Vivaldi, Brave etc.)
-_⚠️⚠️⚠️ MICROSOFT EDGE USERS, we reccomend installing the entention from the Edge Addons Store [HERE](https://microsoftedge.microsoft.com/addons/detail/fastforward/ldcclmkclhomnpcnccgbgleikchbnecl) ⚠️⚠️⚠️_
+_⚠️⚠️⚠️ MICROSOFT EDGE USERS, we recommend installing the extension from the Edge Addons Store [HERE](https://microsoftedge.microsoft.com/addons/detail/fastforward/ldcclmkclhomnpcnccgbgleikchbnecl) ⚠️⚠️⚠️_
 
 0. **REMOVE any previous versions of FastForward.**
 1. Download the zip using [this link](https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_chromium.zip).
-2. Unzip the downloaded file so that you have `FastForward_chromium_0.XXXX.zip`. You may now delete  `FastForward_chromium.zip`, as it is no longer needed.
+2. Unzip the downloaded file so that you have `FastForward_chromium_0.XXXX.zip`. You may now delete `FastForward_chromium.zip`, as it is no longer needed.
 3. Back in your browser, go to `chrome://extensions/`.
 4. Use the toggle in the top right corner to enable "Developer mode".
 5. Drag the `FastForward_chromium_0.XXXX.zip` file into the extensions page. You should now see the extensions options page, with a message saying "Thank you for installing FastForward!". If this is not the case, and you are prompted to save the file, or it downloaded to your downloads folder, see [Troubleshooting](#troubleshooting)
 6.  You may now delete the `FastForward_chromium_0.XXXX.zip` file, as it is no longer needed.
 
-Fastforward should now be installed. If you have any issues, **please view the troubleshooting section below before contacting us**. If the issue persistes, please contact us on our [Discord server](https://discord.gg/8Z3Z9Z9) for immediate support, or [open and issue on our github](https://github.com/FastForwardTeam/FastForward/issues/new/choose).
+Fastforward should now be installed. If you have any issues, **please view the troubleshooting section below before contacting us**. If the issue persists, please contact us on our [Discord server](https://discord.gg/8Z3Z9Z9) for immediate support, or [open and issue on our github](https://github.com/FastForwardTeam/FastForward/issues/new/choose).
 
 #### Firefox-based browsers (Firefox, Waterfox, Pale Moon, Librewolf etc.)
-_⚠️⚠️⚠️ This will only work in the nightly or developer version of Firefox, or other versions that allow unsigned extentions. ⚠️⚠️⚠️
+_⚠️⚠️⚠️ This will only work in the nightly or developer version of Firefox, or other versions that allow unsigned available. ⚠️⚠️⚠️
 ⚠️⚠️⚠️If you do not have one of these browsers, please see our releases page [HERE](https://github.com/FastForwardTeam/FastForward/releases). ⚠️⚠️⚠️_
 
 0. **REMOVE any previous versions of FastForward.**
@@ -57,13 +57,13 @@ _⚠️⚠️⚠️ This will only work in the nightly or developer version of F
 7. Open `about:addons`
 8. Drag your `FastForward_firefox_X.XXXX.xpi` into Firefox, and click "add" when prompted.
 
-Fastforward should now be installed. If you have any issues, **please view the troubleshooting section below before contacting us**. If the issue persistes, please contact us on our [Discord server](https://discord.gg/8Z3Z9Z9) for immediate support, or [open and issue on our github](https://github.com/FastForwardTeam/FastForward/issues/new/choose).
+Fastforward should now be installed. If you have any issues, **please view the troubleshooting section below before contacting us**. If the issue persists, please contact us on our [Discord server](https://discord.gg/8Z3Z9Z9) for immediate support, or [open and issue on our github](https://github.com/FastForwardTeam/FastForward/issues/new/choose).
 
 ____
 
 
 ## Mobile Browsers (Android, iOS)
-Fastforward is not avaliable on Apple iOS at this time due to restrictions by apple, and is only avalible for some Android browsers.
+Fastforward is not available on Apple iOS at this time due to restrictions by apple, and is only available for some Android browsers.
 
 
 #### Firefox Nightly for Android 
@@ -89,7 +89,7 @@ Fastforward is not avaliable on Apple iOS at this time due to restrictions by ap
 5. Click the `+ (from .zip/.crx/.user.js)` button near the top of the page, and select the `FastForward_chromium_0.XXXX.zip` file.
 6.  You may now delete the `FastForward_chromium_0.XXXX.zip` file, as it is no longer needed.
 
-Fastforward should now be installed. If you have any issues, **please view the troubleshooting section below before contacting us**. If the issue persistes, please contact us on our [Discord server](https://discord.gg/8Z3Z9Z9) for immediate support, or [open and issue on our github](https://github.com/FastForwardTeam/FastForward/issues/new/choose).
+Fastforward should now be installed. If you have any issues, **please view the troubleshooting section below before contacting us**. If the issue persists, please contact us on our [Discord server](https://discord.gg/8Z3Z9Z9) for immediate support, or [open and issue on our github](https://github.com/FastForwardTeam/FastForward/issues/new/choose).
 
 ___
 
@@ -140,7 +140,7 @@ This issue happens whe you attempt to install the `FastForward_chromium.zip` fil
 Some versions of Fastforward may not come with the linkvertise bypass by default. If you are having issues with linkvertise, please add the Linkvertise bypass manually by folling the steps below.
 
 1. Copy the contents of [this page](https://raw.githubusercontent.com/FastForwardTeam/FastForward/main/src/linkvertise.js). be sure to select all of the text, from the first "d" of `domainBypass`, all the way to (and including) the last `})`. you may also us `ctrl+a` to select all of the text. copy the text by pressing `ctrl+c`.
-2. Open the settings page for FastForward. this can be done by clicking the extention icon in the top right of your browser. this may be in a extentions sub-menu.
+2. Open the settings page for FastForward. this can be done by clicking the extensions icon in the top right of your browser. this may be in a extensions sub-menu.
 3. paste the text you copied in step 1 into the "Custom bypasses" box. take care to do this all the way at the bottom of the custom bypasses box, and not in the middle of any existing custom bypasses.
 4. your changes will be saved automatically. if you have a open linkvertise page, please refresh it to be bypassed. 
 
