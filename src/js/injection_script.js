@@ -820,6 +820,13 @@ hrefBypass(myDramaListRegex, () => {
     safelyNavigate(decodeURIComponent(document.URL.split(/\bmydramalist\.com\/redirect\?q=/)[1]))
 })
 //Insertion point for bypasses running before the DOM is loaded.
+domainBypass("gocmod.com", () => {
+    const url = new URL(window.location.href);
+    const actualLink = url.searchParams.get("urls");
+    if (actualLink) {
+        safelyNavigate(actualLink);
+    }
+})
 domainBypass("bstlar.com", () => {
     // boostellar bypass too easy
     const boostellar_link = encodeURIComponent(location.pathname.slice(1))
