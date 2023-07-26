@@ -1,14 +1,17 @@
-import BypassDefinition from './BypassDefinition.js'
+import BypassDefinition from './BypassDefinition.js';
 
 export default class Linegee extends BypassDefinition {
-    constructor() {
-        super()
-        // custom bypass required bases can be set here
-    }
+  constructor() {
+    super();
+  }
 
-    execute() {
-        // todo: make execute function
-    }
+  execute() {
+    const continueLink = Array.from(document.getElementsByTagName('a')).find(a => a.textContent.trim() === 'Continue');
+    const href = continueLink.getAttribute('href');
+    this.helpers.safelyNavigate(href);
+
+
+  }
 }
 
-export const matches = ['example.com']
+export const matches = ['linegee.net'];
