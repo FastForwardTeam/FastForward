@@ -1,14 +1,18 @@
 version: 2
 updates:
   - package-ecosystem: "github-actions"
-    # Look for any GitHub Actions workflow files in '.github/workflows'
-    directory: "/.github/workflows"
+    on:
+      push:
+      pull_request:
+        types: [opened]
+    directory: ".github/workflows"
     schedule:
       interval: "weekly"
   - package-ecosystem: "npm"
-    # Look for 'package.json' and 'package-lock.json' in the main directory
+    on:
+      push:
+      pull_request:
+        types: [opened]
     directory: "/"
     schedule:
       interval: "weekly"
-
-

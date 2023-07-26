@@ -1,3 +1,4 @@
+
 import BypassDefinition from './BypassDefinition.js'
 
 export default class Cheatsquad extends BypassDefinition {
