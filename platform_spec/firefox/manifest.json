@@ -16,7 +16,7 @@
 	"browser_specific_settings": {
 		"gecko": {
 		  "id": "addon@fastforward.team",
-		  "strict_min_version": "101.0"
+		  "strict_min_version": "109.0"
 		}
 	},
 	"permissions": [
