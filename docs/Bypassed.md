@@ -232,7 +232,7 @@ This is a list of websites bypassed in the MV2 version of the extension.
 |             https://linkpoi.cc             |   🛑   | 
 |             https://linkpoi.me             |   ❌    |
 |           https://spacetica.com            |   ❌    |
-|            https://linegee.net             |   ❌    |
+|            https://linegee.net             |   ✅    |
 |             https://moon7.xyz              |   🛑   | 
 |            https://*.lewd.ninja            |   ❌*   |
 |             https://fc-lc.com              |   ✅    |
@@ -417,7 +417,7 @@ This is a list of websites bypassed in the MV2 version of the extension.
 |            https://themflix.xyz            |   🛑   | 
 |            https://dereferer.me            |   ❌    |
 |           https://indiainfo4u.in           |   ❌    |
-|         https://intercelestial.com         |   ❌    |
+|         https://intercelestial.com         |   ✅    | (partial bypass, you still need to wait on 1 button)
 |              https://stfly.me              |   🛑   | 
 |           https://altblogger.net           |   ❌    |
 |            https://chooyomi.com            |   ❌    |
