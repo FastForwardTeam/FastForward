@@ -22,7 +22,8 @@
 	"permissions": [
 		"alarms",
 		"storage",
-		"webNavigation"
+		"webNavigation",
+    "tabs"
 	],
 	"options_ui": {
 		"page": "html/options.html",
@@ -31,7 +32,9 @@
 	"background": {
 		"scripts": ["background.js"]
 	},
-	"action": {},
+	"action": {
+    "default_popup": "html/popup.html"
+  },
 	"content_scripts": [
 		{
 			"matches": [
@@ -43,7 +46,6 @@
 			"run_at": "document_start"
 		}
 	],
-	
 	"web_accessible_resources": [{
 		"resources": [
 		"html/before-navigate.html",

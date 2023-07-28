@@ -9,10 +9,6 @@ async function getOptions() {
   });
 }
 
-function handleClick() {
-  brws.runtime.openOptionsPage();
-}
-
 function ffclipboardClear() {
   brws.storage.local.set({ ff_clipboard: '{}' });
 }
@@ -86,7 +82,6 @@ brws.alarms.onAlarm.addListener((alarm) => {
   });
 });
 
-brws.action.onClicked.addListener(handleClick);
 brws.runtime.onInstalled.addListener(firstrun);
 brws.runtime.onStartup.addListener(() => {
   ffclipboardClear();

@@ -1,1 +1,67 @@
-<script src="base.js"></script><script src="popup.js"></script>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FastForward</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="base.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <div class="logo-wrapper"><img class="logo" src="../icon/branding.png" alt="FastForward"></div>
+        <div class="spacer"></div>
+        <li class="navlink"><a href="https://fastforward.team/changelog" target="_blank" data-message="changelog"></a></li>
+        <li class="navlink"><a href="https://fastforward.team/faq" target="_blank" data-message="faq"></a></li>
+        <li class="navlink"><a href="https://fastforward.team/contributors" target="_blank" data-message="contributors"></a></li>
+      </ul>
+    </nav>
+    <div>
+      <div id="counter" hidden>
+        <p>
+          <span></span>
+          <a href="https://discord.gg/RSAf7b5njt" target="_blank" data-message="support"></a>
+        </p>
+      </div>
+      <form id="options-form">
+        <section>
+          <input id="openOptions" class="ffInput" type="button" value="Options Page">
+        </section>
+        <section>
+          <h2 data-message="optionsWhitelist"></h2>
+          <p id="whitelistDesc"><span data-message="optionsWhitelistDescription"></span></p>
+          <textarea id="whitelist" class="ffInput" spellcheck="false"></textarea>
+          <input id="addToWhitelist" class="ffInput" type="button" value="Add Current Page To Whitelist">
+        </section>
+      </form>
+      <p class="version"><span data-message="version"></span> <span id="version"></span></p>
+    </div>
+    <script src="i18n.js"></script>
+    <script src="popup.js"></script>
+    <style>
+      body {
+        width: 400px;
+      }
+
+      #openOptions {
+        cursor: pointer;
+        font-size: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-bottom: 0px;
+      }
+
+      #addToWhitelist {
+        cursor: pointer;
+        width: -webkit-fill-available;
+        width: -moz-available;
+      }
+
+      *:not(textarea) {
+        transition: none !important;
+      }
+    </style>
+  </body>
+</html>

@@ -10,6 +10,7 @@ let defaultOptions = {
   optionCrowdOpenDelay: 5,
   optionCrowdCloseDelayToggle: false,
   optionCrowdCloseDelay: 15,
+  displayContributeBanner: true,
   whitelist: '',
 };
 
@@ -70,6 +71,15 @@ function formatWhitelistDesc() {
 
 function addEventListeners() {
   document
+  .querySelector("#close")
+  .addEventListener('click', async function () {
+    document.querySelector("#contribute").remove();
+    let options = await getOptions();
+    options["displayContributeBanner"] = false;
+    saveOptions(options);
+  });
+
+  document
     .querySelectorAll('#options-form input[type="checkbox"]')
     .forEach(function (checkbox) {
       checkbox.addEventListener('change', async function () {
@@ -110,7 +120,9 @@ function checkTextareaValidity() {
 
 async function repopulateOptions() {
   let options = Object.assign({}, defaultOptions, await getOptions());
+  if(options["displayContributeBanner"]) {document.querySelector("#contribute").hidden = false;}
   for (let key in options) {
+    if(key == "displayContributeBanner") continue;
     let element = document.querySelector('#' + key);
     if (element.type === 'checkbox') {
       element.checked = options[key];
@@ -127,6 +139,7 @@ async function repopulateOptions() {
 async function refreshOptions() {
   let options = Object.assign({}, defaultOptions, await getOptions());
   for (let key in options) {
+    if(key == "displayContributeBanner") continue;
     let element = document.querySelector('#' + key);
     if (element.type === 'checkbox') {
       element.checked = options[key];
@@ -192,7 +205,5 @@ function addBottomNavbar() {
     }
   }
 }
-
-window.addEventListener('resize', addBottomNavbar);
 
 addBottomNavbar();
