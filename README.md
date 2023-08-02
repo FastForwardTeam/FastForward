@@ -30,6 +30,11 @@ ____
 #### What is FastForward?
 FastForward is the successor of Universal Bypass (see below), a browser extension that can bypass annoying link shorteners, so you don't need to waste your time _trying_ to get to the final link. You can see the extension in action on [our official website](https://fastforward.team/example-links).
 
+#### What happened to Universal Bypass?
+As you may know, [Universal Bypass](https://github.com/Sainan/Universal-Bypass) is no longer maintained by its original developer, [Sainan](https://github.com/Sainan), who had worked on it for so long. 
+____
+
+
 
 
 
