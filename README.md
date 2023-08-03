@@ -20,7 +20,7 @@ ____
 # Installing the Extension
 If you are using Microsoft Edge, you can install FastForward from the [Microsoft Store](https://microsoftedge.microsoft.com/addons/detail/fastforward/ldcclmkclhomnpcnccgbgleikchbnecl).
 
-If you are using a Chromium-based browser (e.g. Google Chrome), you can install FastForward from the [Chrome Web Store](https://chrome.google.com/webstore/detail/fastforward/icallnadddjmdinamnolclfjanhfoafe).
+If you are using a Chromium-based browser such as Google Chrome, Microsoft Edge, Opera, Brave, or Kiwi, you can install FastForward from the [Chrome Web Store](https://chrome.google.com/webstore/detail/fastforward/icallnadddjmdinamnolclfjanhfoafe).
 
 If you are using any other browser, please view our [installation guide](https://github.com/FastForwardTeam/FastForward/blob/main/INSTALLING.md).
 
