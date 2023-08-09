@@ -2743,7 +2743,7 @@ ensureDomLoaded(() => {
     });
     domainBypass("filedm.com", () => {
         awaitElement("a#dlbutton", a => {
-            safelyNavigate("http://cdn.directdl.xyz/getfile?id=" + a.href.split("_")[1])
+            safelyNavigate("http://cdn.directfiledl.com/getfile?id=" + a.href.split("_")[1])
         }
         )
     })
