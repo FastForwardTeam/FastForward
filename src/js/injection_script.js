@@ -489,20 +489,26 @@ ODP(window, "adtival_base64_encode", {
 // New PRs with bypasses must be added below this comment //
 ///////////////////////////////////////////////////////////////////////////////////////
 
-domainBypass("howtofree.org", () => {
-    document.getElementsByClassName("hide")[1].className = "show";
+domainBypass("www.howtofree.org", () => {
+    ensureDomLoaded(() => {
+        document.getElementsByClassName("hide")[1].className = "show";
+    })
 })
 
 domainBypass("download.howtofree.org", () => {
-    [...document.getElementsByClassName("timer-button")].forEach((elem, index) => {
-        const button = document.createElement("button");
-        button.innerHTML = `Download Part ${index + 1}`;
-        button.style.margin = "12px";
-        button.onclick = () => {
-          window.open(elem.getAttribute("data-redirect"), "_blank");
-        };
-        elem.replaceWith(button);
-    });
+    ensureDomLoaded(() => {
+        [...document.getElementsByClassName("timer-button")].forEach((elem, index) => {
+            const button = document.createElement("button");
+
+            button.innerHTML = `Download Part ${index + 1}`;
+            button.style.margin = "12px";
+            button.onclick = () => {
+              window.open(elem.getAttribute("data-redirect"), "_blank");
+            };
+            
+            elem.replaceWith(button);
+        });
+    })
 })
 
 hrefBypass(/vk\.com\/away\.php\?to=.+/, () => {
