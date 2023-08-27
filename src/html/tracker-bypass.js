@@ -5,7 +5,7 @@ const trackerInfoElement = document.getElementById('tracker-info');
 // Get tracker URL from search parameter
 const urlParams = new URLSearchParams(window.location.search);
 let trackerUrl = null;
-if (isGoodLink(urlParams.get('tracker'))) trackerUrl = urlParams.get('tracker');
+trackerUrl = urlParams.get('tracker');
 
 function escapeHtml(unsafe) {
   if (!unsafe) return unsafe; //prevents null objects from throwing an error
@@ -28,13 +28,26 @@ function showError(err) {
 }
 
 function updateTrackerMessage(url) {
-  let msg = brws.i18n.getMessage(
-    'beforeNavigateDestination',
-    `<br><a href="${escapeHtml(
-      url
-    )}" class="link link-preview"><code> ${escapeHtml(url)} </a></code>`
-  );
-  trackerInfoElement.innerHTML = msg;
+  const trackerInfoElement = document.getElementById('tracker-info');
+  const msg = brws.i18n.getMessage('beforeNavigateDestination', url);
+  const newDiv = document.createElement('div');
+
+  const aElement = document.createElement('a');
+  aElement.href = url;
+  aElement.className = 'link link-preview';
+
+  const codeElement = document.createElement('code');
+  codeElement.textContent = escapeHtml(url);
+
+  aElement.appendChild(codeElement);
+  newDiv.appendChild(document.createElement('br'));
+  newDiv.appendChild(aElement);
+
+  newDiv.appendChild(document.createTextNode(msg));
+
+  trackerInfoElement.textContent = '';
+  trackerInfoElement.appendChild(newDiv);
+
   if (
     brws.storage.local.get(
       'options',
@@ -61,3 +74,4 @@ async function resolveTracker(url) {
 }
 
 resolveTracker(trackerUrl);
+updateTrackerMessage('https://helloc.om');
