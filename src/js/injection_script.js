@@ -811,6 +811,11 @@ hrefBypass(/(bluemediafiles\.com|pcgamestorrents\.org|bluemediafile\.sbs)\/url-g
     transparentProperty("Time_Start", t => t - 5000)
     awaitElement("input#nut[src]", i => i.parentNode.submit())
 })
+hrefBypass(/(bluemediafile\.site)\/url-generator-1\.php\?url=/, () => {
+    window.setInterval = f => setInterval(f, 1)
+    transparentProperty("Time_Start", t => t - 5000)
+    awaitElement("input#nut[src]", i => i.parentNode.submit())
+})
 const retrospringRegex = /\bretrospring\.net\/linkfilter\?url=/;
 hrefBypass(retrospringRegex, () => {
     safelyNavigate(decodeURIComponent(document.URL.split(retrospringRegex)[1]))
