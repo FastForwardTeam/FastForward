@@ -17,12 +17,14 @@ function clearCrowdIgnoredURLs() {
   brws.storage.local.set({ crowd_ignore: '{}' });
 }
 
-function firstrun() {
-  brws.tabs.create({ url: 'https://fastforward.team/firstrun' });
-  ffclipboardClear();
-  brws.storage.local.set({ tempDisableCrowd: 'false' });
-  brws.storage.local.set({ version: brws.runtime.getManifest().version });
-  brws.runtime.openOptionsPage(); //required for loading default options, to do: implement a better way
+function firstrun(details) {
+  if(details.reason == "install") {
+    brws.tabs.create({ url: 'https://fastforward.team/firstrun' });
+    ffclipboardClear();
+    brws.storage.local.set({ tempDisableCrowd: 'false' });
+    brws.storage.local.set({ version: brws.runtime.getManifest().version });
+    brws.runtime.openOptionsPage(); //required for loading default options, to do: implement a better way
+  }
 }
 
 function preflight(details) {
