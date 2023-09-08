@@ -16,21 +16,26 @@
 	"browser_specific_settings": {
 		"gecko": {
 		  "id": "addon@fastforward.team",
-		  "strict_min_version": "109.0"
+		  "strict_min_version": "113.0"
 		}
 	},
 	"permissions": [
 		"alarms",
 		"storage",
 		"webNavigation",
-    "tabs"
+		"tabs",
+		"declarativeNetRequestWithHostAccess"
+	],
+	"host_permissions": [
+		"<all_urls>"
 	],
 	"options_ui": {
 		"page": "html/options.html",
 		"open_in_tab": true
 	},
 	"background": {
-		"scripts": ["background.js"]
+		"scripts": ["background.js"],
+		"type": "module"
 	},
 	"action": {
     "default_popup": "html/popup.html"
@@ -51,11 +56,27 @@
 		"html/before-navigate.html",
 		"html/blocked.html",
 		"html/crowd-bypassed.html",
+		"html/tracker-bypass.html",
 		"html/options.html",
 		"icon/48.png",
 		"injection_script.js",
 		"bypasses/*",
-		"helpers/*"],
+		"helpers/*",
+		"rules.json"
+	],
 		"matches": ["<all_urls>"]
-}]
+	}],
+	"declarative_net_request": {
+		"rule_resources": [{
+		  "id": "ipLoggerRuleset",
+		  "enabled": true,
+		  "path": "ip_logger_blocker.json"
+		},
+		{
+			"id": "trackerRuleset",
+			"enabled": false,
+			"path": "tracker_bypass.json"
+		}]
+		  
+	}
 }

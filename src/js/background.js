@@ -1,3 +1,4 @@
+import * as constants from './constants.js';
 const brws = typeof browser !== 'undefined' ? browser : chrome;
 const fetchDomains = ['crowd.fastforward.team', 'redirect-api.work.ink']; //only allow requests to these domains
 
@@ -18,12 +19,16 @@ function clearCrowdIgnoredURLs() {
 }
 
 function firstrun(details) {
-  if(details.reason == "install") {
+  if (details.reason == 'install') {
     brws.tabs.create({ url: 'https://fastforward.team/firstrun' });
     ffclipboardClear();
     brws.storage.local.set({ tempDisableCrowd: 'false' });
     brws.storage.local.set({ version: brws.runtime.getManifest().version });
     brws.runtime.openOptionsPage(); //required for loading default options, to do: implement a better way
+    brws.declarativeNetRequest.updateDynamicRules({
+      addRules: constants.beforeNavigateRules,
+      removeRuleIds: constants.beforeNavigateRules.map((rule) => rule.id),
+    });
   }
 }
 
@@ -91,20 +96,11 @@ brws.runtime.onStartup.addListener(() => {
   reEnableCrowdBypassStartup();
   brws.storage.local.set({ version: brws.runtime.getManifest().version });
 });
-brws.webNavigation.onBeforeNavigate.addListener(
-  (details) => preflight(details),
-  {
-    url: [{ hostContains: 'fastforward.team' }],
-  }
-);
 
 brws.runtime.onMessage.addListener((request, _, sendResponse) => {
   (async () => {
     let options = await getOptions();
     if (options.optionCrowdBypass === false) {
-      const src = brws.runtime.getURL('helpers/infobox.js');
-      const insertInfoBox = await import(src);
-      insertInfoBox(brws.i18n.getMessage('crowdDisabled'));
       return;
     }
     let url;
@@ -150,4 +146,27 @@ brws.runtime.onMessage.addListener((request, _, sendResponse) => {
       });
   })();
   return true;
+});
+
+brws.storage.onChanged.addListener(() => {
+  getOptions().then((options) => {
+    if (options.optionBlockIpLoggers === false) {
+      brws.declarativeNetRequest.updateEnabledRulesets({
+        disableRulesetIds: ['ipLoggerRuleset'],
+      });
+    } else {
+      brws.declarativeNetRequest.updateEnabledRulesets({
+        enableRulesetIds: ['ipLoggerRuleset'],
+      });
+    }
+    if (options.optionTrackerBypass === false) {
+      brws.declarativeNetRequest.updateEnabledRulesets({
+        disableRulesetIds: ['trackerRuleset'],
+      });
+    } else {
+      brws.declarativeNetRequest.updateEnabledRulesets({
+        enableRulesetIds: ['trackerRuleset'],
+      });
+    }
+  });
 });

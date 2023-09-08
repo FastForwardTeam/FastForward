@@ -70,3 +70,62 @@ export function getNumberOfCommits() {
     console.error(error);
   }
 }
+
+/**
+ * Converts a rules.json with trackers and ip_loggers file into two
+ * separate declarativeNetRequest rulesets and writes the resulting JSONs to file.
+ *
+ * @async
+ * @function convertRulesToDeclarativeNetRequest
+ * @param {string} rulesFilePath - The path to the input JSON file containing the rules to be converted.
+ * @param {string} ipLoggerOutputFile - The path to the output file where the ip logger rules will be written.
+ * @param {string} trackerOutputFile - The path to the output file where the tracker rules will be written.
+ *
+ * @returns {Promise<void>}
+ */
+export async function convertRulesToDNRRulesets(
+  rulesFilePath,
+  ipLoggerOutputFile,
+  trackerOutputFile
+) {
+  const rules = JSON.parse(await fs.readFile(rulesFilePath));
+  const domainRegex = /:\/\/\*?\.?([^/]+)/;
+  const ip_loggerRules = rules.ip_logger.map((urlPattern, index) => {
+    const domainMatch = urlPattern.match(domainRegex);
+    if (!domainMatch) console.error('Unable to parse domain for', urlPattern);
+    return {
+      id: index + 1,
+      priority: 1,
+      action: {
+        type: 'redirect',
+        redirect: { extensionPath: '/html/blocked.html' },
+      },
+      condition: {
+        urlFilter: `||${domainMatch[1]}`,
+        resourceTypes: ['main_frame'],
+      },
+    };
+  });
+
+  const trackerRules = rules.tracker.map((urlPattern, index) => {
+    const domainMatch = urlPattern.match(domainRegex);
+    if (!domainMatch) console.error('Unable to parse domain for', urlPattern);
+    return {
+      id: index + 1,
+      priority: 1,
+      action: {
+        type: 'redirect',
+        redirect: {
+          regexSubstitution: `https://fastforward.team/bypassed?type=tracker&url=\\0`,
+        },
+      },
+      condition: {
+        regexFilter: '^https?://' + domainMatch[1] + '.*',
+        resourceTypes: ['main_frame'],
+      },
+    };
+  });
+
+  await fs.writeFile(ipLoggerOutputFile, JSON.stringify(ip_loggerRules));
+  await fs.writeFile(trackerOutputFile, JSON.stringify(trackerRules));
+}
