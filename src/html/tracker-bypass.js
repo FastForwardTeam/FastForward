@@ -3,7 +3,7 @@ const trackerInfoElement = document.getElementById('tracker-info');
 
 // Get tracker URL from search parameter
 const urlParams = new URLSearchParams(window.location.search);
-let trackerUrl = urlParams.get('tracker');
+let trackerUrl = urlParams.get('url');
 if (!trackerUrl) showError('no url param found');
 
 function escapeHtml(str) {
@@ -41,7 +41,7 @@ function updateTrackerMessage(url) {
 
   newDiv.appendChild(document.createElement('br'));
 
-  newDiv.appendChild(document.createTextNode(msg));
+  newDiv.innerHTML = msg;
 
   trackerInfoElement.textContent = '';
   trackerInfoElement.appendChild(newDiv);
