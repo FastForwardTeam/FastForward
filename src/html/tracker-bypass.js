@@ -6,9 +6,9 @@ const urlParams = new URLSearchParams(window.location.search);
 let trackerUrl = urlParams.get('tracker');
 if (!trackerUrl) showError('no url param found');
 
-function escapeHtml(unsafe) {
-  if (!unsafe) return unsafe; //prevents null objects from throwing an error
-  return unsafe
+function escapeHtml(str) {
+  if (!str) return str; //prevents null objects from throwing an error
+  return str
     .replaceAll('&', '&amp;')
     .replaceAll('<', '&lt;')
     .replaceAll('>', '&gt;')
@@ -28,19 +28,18 @@ function showError(err) {
 
 function updateTrackerMessage(url) {
   const trackerInfoElement = document.getElementById('tracker-info');
-  const msg = brws.i18n.getMessage('beforeNavigateDestination', url);
+  const msg = brws.i18n.getMessage(
+    'beforeNavigateDestination',
+    `
+    <code>
+      <a href="${escapeHtml(url)}" class="link link-preview">
+      ${escapeHtml(url)}
+      </a>
+    </code>`
+  );
   const newDiv = document.createElement('div');
 
-  const aElement = document.createElement('a');
-  aElement.href = url;
-  aElement.className = 'link link-preview';
-
-  const codeElement = document.createElement('code');
-  codeElement.textContent = escapeHtml(url);
-
-  aElement.appendChild(codeElement);
   newDiv.appendChild(document.createElement('br'));
-  newDiv.appendChild(aElement);
 
   newDiv.appendChild(document.createTextNode(msg));
 
