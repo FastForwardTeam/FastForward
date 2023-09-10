@@ -46,14 +46,10 @@ function updateTrackerMessage(url) {
   trackerInfoElement.textContent = '';
   trackerInfoElement.appendChild(newDiv);
 
-  if (
-    brws.storage.local.get(
-      'options',
-      (result) => result.options.optionInstantNavigationTrackers
-    )
-  ) {
+  brws.storage.local.get('options').then((result) => {
+    if (!result.options.optionInstantNavigationTrackers) return;
     window.location.replace(url);
-  }
+  });
 }
 
 async function resolveTracker(url) {
