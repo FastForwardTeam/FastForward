@@ -2011,6 +2011,34 @@ ensureDomLoaded(() => {
             safelyNavigate(newurl)
         }
     })
+	hrefBypass(/linkvip\.io\/v\//, async () => {
+		var campId = document.querySelector('input[name="campId"]').value;
+		var linkId = document.querySelector('input[name="linkId"]').value;
+
+		var frmData = new FormData();
+		frmData.append('campId', campId);
+		var res = await fetch('https://linkvip.io/graph/api?action=getCodeCamp', {
+			method: 'POST',
+			body: frmData,
+		});
+		var data = await res.json();
+		if (!data.status) return console.error('getCodeCamp');
+
+		var codeOTP = data.message;
+
+		var frmData = new FormData();
+		frmData.append('campId', campId);
+		frmData.append('linksId', linkId);
+		frmData.append('codeOTP', codeOTP);
+		var res = await fetch('https://linkvip.io/graph/api?action=confirmCode', {
+			method: 'POST',
+			body: frmData,
+		});
+		var data = await res.json();
+		if (!data.status) return console.error('confirmCode');
+
+		safelyNavigate(data.message);
+	})
 
     // Insertion point for domain-or-href-specific bypasses running after the DOM is loaded. Bypasses here will no longer need to call ensureDomLoaded.
     hrefBypass(/.*\/s\?[A-Za-z0-9]{3}/, () => {
