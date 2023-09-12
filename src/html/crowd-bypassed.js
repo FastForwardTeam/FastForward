@@ -49,7 +49,7 @@ brws.storage.local.get('options', (result) => {
   const delay = result.options.optionCrowdOpenDelay;
   // Show countdown timer
   let timeLeft = delay;
-  timerElement.classList.remove('uk-hidden');
+  timerElement.hidden = false;
   timerText.textContent = brws.i18n.getMessage(
     timeLeft === 1 ? 'crowdBypassedTimerSingular' : 'crowdBypassedTimer',
     [timeLeft]
