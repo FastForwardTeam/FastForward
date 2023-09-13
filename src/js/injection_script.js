@@ -828,7 +828,7 @@ hrefBypass(/daominhha\.com\/download/, () => {
     str = str.replaceAll(",", "=");
     safelyAssign(atob(str));
 });
-hrefBypass(/(bluemediafiles\.com|pcgamestorrents\.org|bluemediafile\.sbs)\/url-generator\.php\?url=/, () => {
+hrefBypass(/(bluemediafiles\.com|pcgamestorrents\.org|bluemediafile\.sbs|bluemediafile\.site)\/url-generator(-\d+)?\.php\?url=/, () => {
     window.setInterval = f => setInterval(f, 1)
     transparentProperty("Time_Start", t => t - 5000)
     awaitElement("input#nut[src]", i => i.parentNode.submit())
