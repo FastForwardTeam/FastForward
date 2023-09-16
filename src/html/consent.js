@@ -1,35 +1,35 @@
-const consentStatus = localStorage.getItem('consentStatus');
+browser.storage.local.get('consentStatus').then(function (data) {
+    const consentStatus = data.consentStatus;
 
-document.getElementById("consentButton").addEventListener("click", function () {
-    localStorage.setItem('consentStatus', 'granted');
-    window.location.href = 'options.html';
-});
+    document.getElementById("consentButton").addEventListener("click", function () {
+        browser.storage.local.set({ 'consentStatus': 'granted' }).then(function () {
+            window.location.href = 'options.html';
+        });
+    });
 
-document.getElementById("declineButton").addEventListener("click", function () {
-    localStorage.setItem('consentStatus', 'declined');
-    console.log("Decline button clicked");
- 
-    const popup = document.getElementById("popup");
-    popup.style.display = "block";
+    document.getElementById("declineButton").addEventListener("click", function () {
+        browser.storage.local.set({ 'consentStatus': 'declined' }).then(function () {
+            document.getElementById("consentStatusMessage").textContent = "You have declined consent. Some features of the extension may not be available.";
 
-    let countdownValue = 5;
-    const countdownElement = document.getElementById("countdown");
-    const countdownInterval = setInterval(function () {
-        countdownValue -= 1;
-        countdownElement.textContent = countdownValue;
+            const popup = document.getElementById("popup");
+            popup.style.display = "block";
 
-        if (countdownValue === 0) {
-            browser.management.uninstallSelf();
+            let countdownValue = 5;
+            const countdownElement = document.getElementById("countdown");
+            const countdownInterval = setInterval(function () {
+                countdownValue -= 1;
+                countdownElement.textContent = countdownValue;
 
-            popup.style.display = "none";
-            
-            clearInterval(countdownInterval);
-        }
-    }, 1000);
+                if (countdownValue === 0) {
+                    browser.management.uninstallSelf();
+                }
+            }, 1000);
 
-    document.getElementById("cancelButton").addEventListener("click", function () {
-        popup.style.display = "none";
-        
-        clearInterval(countdownInterval);
+            document.getElementById("cancelButton").addEventListener("click", function () {
+                popup.style.display = "none";
+
+                clearInterval(countdownInterval);
+            });
+        });
     });
 });

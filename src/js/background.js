@@ -5,14 +5,15 @@ function checkConsentStatus() {
   return consentStatus || 'undefined';
 }
 
-browser.runtime.onInstalled.addListener(async (details) => {
+browser.runtime.onInstalled.addListener((details) => {
   if (details.reason === "install") {
-      const consentStatus = await checkConsentStatus();
-      if (consentStatus !== 'granted') {
-          browser.tabs.create({
-              url: "html/consent.html"
-          });
-      } else {
+      browser.storage.local.get('consentStatus').then(function (data) {
+          const consentStatus = data.consentStatus;
+          if (consentStatus !== 'granted') {
+              browser.tabs.create({
+                  url: "html/consent.html"
+              });
+          } else {
   const brws = typeof browser !== 'undefined' ? browser : chrome;
   const fetchDomains = ['crowd.fastforward.team', 'redirect-api.work.ink']; //only allow requests to these domains
 
@@ -185,5 +186,6 @@ browser.runtime.onInstalled.addListener(async (details) => {
     });
   });
 }
+});
 }
 });
