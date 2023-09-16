@@ -1,21 +1,6 @@
-import * as constants from './constants.js';
-
-function checkConsentStatus() {
-  const consentStatus = localStorage.getItem('consentStatus');
-  return consentStatus || 'undefined';
-}
 const isFirefox = /Firefox/i.test(navigator.userAgent);
 
-if (isFirefox) {
-browser.runtime.onInstalled.addListener((details) => {
-  if (details.reason === "install") {
-      browser.storage.local.get('consentStatus').then(function (data) {
-          const consentStatus = data.consentStatus;
-          if (consentStatus !== 'granted') {
-              browser.tabs.create({
-                  url: "html/consent.html"
-              });
-          } else {
+function executeBackgroundScript() {
   const brws = typeof browser !== 'undefined' ? browser : chrome;
   const fetchDomains = ['crowd.fastforward.team', 'redirect-api.work.ink']; //only allow requests to these domains
 
@@ -75,7 +60,6 @@ browser.runtime.onInstalled.addListener((details) => {
     }
   }
 
-  // If user restarts the browser before the is alarm triggered
   function reEnableCrowdBypassStartup() {
     brws.storage.local.get(['tempDisableCrowd']).then((result) => {
       if (result.tempDisableCrowd === 'true') {
@@ -89,7 +73,6 @@ browser.runtime.onInstalled.addListener((details) => {
     });
   }
 
-  // Add a listener for the temp crowd disable alarm
   brws.alarms.onAlarm.addListener((alarm) => {
     brws.storage.local.get(['tempDisableCrowd']).then((result) => {
       if (
@@ -132,7 +115,6 @@ browser.runtime.onInstalled.addListener((details) => {
           params.append(key, request.detail[key]);
         }
       } else {
-        //use fetch api to get final url after redirects from detail.target
         for (let key in request.detail) {
           if (key === 'target') {
             let dest = new URL(request.detail[key]);
@@ -188,7 +170,24 @@ browser.runtime.onInstalled.addListener((details) => {
     });
   });
 }
-});
-}
-});
+
+// Check if the browser is Firefox
+if (isFirefox) {
+  browser.runtime.onInstalled.addListener((details) => {
+    if (details.reason === "install") {
+      browser.storage.local.get('consentStatus').then(function (data) {
+        const consentStatus = data.consentStatus;
+        if (consentStatus !== 'granted') {
+          browser.tabs.create({
+            url: "html/consent.html"
+          });
+        } else {
+          executeBackgroundScript();
+        }
+      });
+    }
+  });
+} else {
+  // For non-Firefox browsers, execute background script
+  executeBackgroundScript();
 }
