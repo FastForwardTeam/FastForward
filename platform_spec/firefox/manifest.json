@@ -38,7 +38,7 @@
 		"type": "module"
 	},
 	"action": {
-		"default_popup": "html/consent.html"
+		"default_popup": "html/popup.html"
 	},
 	"content_scripts": [
 		{
