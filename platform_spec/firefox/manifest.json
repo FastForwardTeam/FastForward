@@ -38,8 +38,8 @@
 		"type": "module"
 	},
 	"action": {
-		"default_popup": "html/popup.html"
-	},
+    "default_popup": "html/popup.html"
+  },
 	"content_scripts": [
 		{
 			"matches": [
