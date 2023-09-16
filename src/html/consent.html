@@ -7,31 +7,25 @@
 	<script src="base.js"></script>
     <style>
         /* Add your custom CSS styles here */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            margin: 20px;
-        }
         .container {
-            background-color: #ffffff;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             padding: 20px;
-            max-width: 500px;
+            width: 80%;
+            max-width: 600px;
             margin: 0 auto;
             text-align: center;
         }
         h1 {
-            color: #333;
+            color: #ffffff;
         }
         p {
-            color: #555;
-            font-size: 16px;
+            color: #ffffff;
+            font-size: 32px;
             line-height: 1.5;
         }
         button {
-            background-color: #0073e6;
-            color: #fff;
+            background-color: #1E87F0;
             border: none;
             padding: 10px 20px;
             font-size: 18px;
@@ -39,16 +33,21 @@
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
+
+        cancel {
+            background-color: black;
+        }
+
         button:hover {
             background-color: #005bbd;
         }
         .popup {
+            background-color: #1e87f0;
             display: none;
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: #fff;
             padding: 20px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
             z-index: 1000;
@@ -58,33 +57,33 @@
 <body>
 	<nav class="uk-navbar-container uk-light" style="background:#1e87f0" uk-navbar>
 		<div class="uk-navbar-left">
-			<a class="uk-navbar-item uk-logo" href="#">FastForward</a>
+			<a class="uk-navbar-item uk-logo">FastForward</a>
 			<ul class="uk-navbar-nav">
-				<li><a href="https://fastforward.team/changelog" target="_blank" data-message="changelog"></a></li>
-				<li><a href="https://fastforward.team/faq" target="_blank" data-message="faq"></a></li>
-				<li><a href="https://fastforward.team/contributors" target="_blank" data-message="contributors"></a></li>
 			</ul>
 		</div>
 	</nav>
-    <div class="container">
-        <h1>Welcome to Your FastForward</h1>
+    <div class="uk-margin-top uk-margin-bottom uk-margin-left uk-margin-right">
+        <div class="container">
+        <h1>Thank you for installing FastForward</h1>
         <p>
-            warning!! are you sure you want this extension to do what it says it does? here at fastforward we care about your privacy and want to make sure you don't accidentally use this extension because that could be disastrous. are you sure you want this button that you don't have to press to function when you press it?
+            This extension collects the tab url to detect and apply the correct bypass. 
         </p>
         <p>
-            this message was brought to you because of mozilla"
+            If you consent to this data collection hit "Agree". Otherwise hit "Refuse"
         </p>
-        <button id="consentButton">I Agree</button>
-        <button id="declineButton">I Decline</button>
+        <button id="consentButton">Agree</button>
+        <button id="declineButton">Refuse</button>
     
         <div id="popup" class="popup">
-            <p>You have declined consent. This extension cannot work.</p>
-            <button id="uninstallPopupButton">Uninstall Extension</button>
+            <p>You have declined consent. This extension cannot work and will be uninstalled in <span id="countdown">5</span> seconds.</p>
+            <button class="cancel" id="cancelButton">Cancel</button>
         </div>
         
     </div>
 
 <script src="consent.js"></script>
+<script src="uikit/uikit.js"></script>
+<script src="ace/ace.js"></script>
 
 </body>
 </html>

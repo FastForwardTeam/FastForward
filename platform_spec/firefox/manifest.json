@@ -30,16 +30,16 @@
 		"<all_urls>"
 	],
 	"options_ui": {
-		"page": "html/options.html",
-		"open_in_tab": true
+		"page": "html/consent.html",
+		"open_in_tab": false
 	},
 	"background": {
 		"scripts": ["background.js"],
 		"type": "module"
 	},
 	"action": {
-    "default_popup": "html/popup.html"
-  },
+		"default_popup": "html/consent.html"
+	},
 	"content_scripts": [
 		{
 			"matches": [
