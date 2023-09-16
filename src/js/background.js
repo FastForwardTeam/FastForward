@@ -1,3 +1,5 @@
+import * as constants from './constants.js';
+
 function checkConsentStatus() {
   const consentStatus = localStorage.getItem('consentStatus');
   return consentStatus || 'undefined';
@@ -11,7 +13,6 @@ browser.runtime.onInstalled.addListener(async (details) => {
               url: "html/consent.html"
           });
       } else {
-  import * as constants from './constants.js';
   const brws = typeof browser !== 'undefined' ? browser : chrome;
   const fetchDomains = ['crowd.fastforward.team', 'redirect-api.work.ink']; //only allow requests to these domains
 
