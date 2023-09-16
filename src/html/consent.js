@@ -36,5 +36,5 @@ if (isFirefox) {
             });
         });
     });
-} else {return 0;}
+} else {window.location.href = 'options.html';}
 
