@@ -30,7 +30,7 @@
 		"<all_urls>"
 	],
 	"options_ui": {
-		"page": "html/consent.html",
+		"page": "html/options.html",
 		"open_in_tab": false
 	},
 	"background": {
