@@ -4,7 +4,9 @@ function checkConsentStatus() {
   const consentStatus = localStorage.getItem('consentStatus');
   return consentStatus || 'undefined';
 }
+const isFirefox = /Firefox/i.test(navigator.userAgent);
 
+if (isFirefox) {
 browser.runtime.onInstalled.addListener((details) => {
   if (details.reason === "install") {
       browser.storage.local.get('consentStatus').then(function (data) {
@@ -189,3 +191,4 @@ browser.runtime.onInstalled.addListener((details) => {
 });
 }
 });
+}
