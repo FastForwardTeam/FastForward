@@ -12,7 +12,6 @@ if (isFirefox) {
 
         document.getElementById("declineButton").addEventListener("click", function () {
             browser.storage.local.set({ 'consentStatus': 'declined' }).then(function () {
-                document.getElementById("consentStatusMessage").textContent = "You have declined consent. Some features of the extension may not be available.";
 
                 const popup = document.getElementById("popup");
                 popup.style.display = "block";
