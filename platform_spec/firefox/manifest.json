@@ -15,7 +15,7 @@
 	"author": "FastForward Team",
 	"browser_specific_settings": {
 		"gecko": {
-		  "id": "contact@dd.com",
+		  "id": "addon@fastforward.team",
 		  "strict_min_version": "113.0"
 		}
 	},
