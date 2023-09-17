@@ -58,6 +58,7 @@ body:
     options:
       - Computer (Windows, Linux, MacOS)
       - Phone (Android)
+    required: true
 - type: textarea
   attributes:
     label: Anything else?
