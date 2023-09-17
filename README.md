@@ -16,7 +16,7 @@
 ____
 
 ## Installing the Extension
-Please refer to our [installation guide](https://github.com/FastForwardTeam/FastForward/blob/main/INSTALLING.md).
+Please refer to our [installation guide](./docs/INSTALLING.md).
 
 ## About
 ### What is FastForward?
