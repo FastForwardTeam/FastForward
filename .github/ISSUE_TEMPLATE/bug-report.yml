@@ -1,5 +1,6 @@
 name: Bug report
-description: Something is broken in the extension
+title: "[Bug] "
+description: Something is not working in the extension
 labels: [Bug]
 body:
 - type: markdown
@@ -24,29 +25,29 @@ body:
     label: Version
     description: What version of the extension are you running?
     options:
-      - 0.0.0
+      - Manifest-v2
+      - Manifest-v3
   validations:
     required: true
 - type: dropdown
   id: browsers
   attributes:
-    label: What browsers are you seeing the problem on?
+    label: What browser(s) are you seeing the problem on?
     multiple: true
     options:
-      - Firefox
-      - Chrome
-      - Brave
-      - Microsoft Edge
+      - Firefox browsers
+      - Chrome browsers (includes brave, edge, opera, etc)
   validations:
     required: true
 - type: dropdown
   id: os
   attributes:
-    label: What OS are you seeing the problem on?
+    label: What platform are you seeing the problem on?
     options:
-      - Windows
-      - Linux
-      - MacOS 
+      - Computer (Windows, Linux, MacOS)
+      - Phone (Android)
+  validations:
+    required: true
 - type: textarea
   attributes:
     label: Anything else?

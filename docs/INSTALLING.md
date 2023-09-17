@@ -1,32 +1,25 @@
 <div align="center">
-<img src="https://avatars.githubusercontent.com/u/88992224?s=200&v=4" width="128" />
-<h1> FastForward </h1>
+<h1><img src="https://fastforward.team/img/branding.png" width="256"></h1>
 <p> Don't waste your time with compliance. FastForward automatically skips annoying link shorteners. </p>
 
-
-
-[<img src="https://img.shields.io/github/actions/workflow/status/fastforwardteam/fastforward/main.yml?branch=main&label=Builds&style=for-the-badge" />](https://github.com/FastForwardTeam/FastForward/blob/main/.github/workflows/main.yml)
+<a href="https://github.com/FastForwardTeam/FastForward/blob/main/.github/workflows/main.yml" target="_blank"> <img alt="Builds" src="https://img.shields.io/github/actions/workflow/status/fastforwardteam/fastforward/main.yml?branch=main&label=Builds&style=for-the-badge&logo=githubactions"> </a>
 <a href="https://discord.gg/RSAf7b5njt" target="_blank"> <img alt="Discord" src="https://img.shields.io/discord/876622516607656006?label=Our%20Discord&logo=discord&style=for-the-badge"> </a>
-<br> <br>
-<a href="https://github.com/FastForwardTeam/FastForward#why-is-fastforward-no-longer-on-the-chrome-web-store"><img src="https://user-images.githubusercontent.com/585534/107280622-91a8ea80-6a26-11eb-8d07-77c548b28665.png" alt="Get FastForward on Chromium based browsers" width="126px"></a>
+
+
+<a href="https://chromewebstore.google.com/detail/fastforward/icallnadddjmdinamnolclfjanhfoafe"><img src="https://user-images.githubusercontent.com/585534/107280622-91a8ea80-6a26-11eb-8d07-77c548b28665.png" alt="Get FastForward on Chromium based browsers" width="177"> </a>
 <a href="https://microsoftedge.microsoft.com/addons/detail/fastforward/ldcclmkclhomnpcnccgbgleikchbnecl"><img src="https://user-images.githubusercontent.com/585534/107280673-a5ece780-6a26-11eb-9cc7-9fa9f9f81180.png" alt="Get FastForward on Microsoft Edge" width="126px"></a>
 <a href="https://addons.mozilla.org/firefox/addon/fastforwardteam/"><img src="https://user-images.githubusercontent.com/585534/107280546-7b9b2a00-6a26-11eb-8f9f-f95932f4bfec.png" alt="Get FastForward for Firefox" width="126px"></a> 
 </div>
 
 # Table of Contents
 - [Unstable Builds](#download-unstable-builds)
+- [Installing from web stores](#installing-from-web-stores)
 - [Manual Installation](#manual-installation)
   - [Chrome, Chromium, Opera, Brave, Vivaldi, Kiwi](#chrome-chromium-kiwi-opera-opera-gx-vivaldi-brave-etc)
      - [CRX install](#crx-install)
   - [Firefox](#firefox-and-firefox-based-browsers)
     - [Firefox for Android](#firefox-for-android)
-- [Installing from web stores](#installing-from-web-stores)
 - [Troubleshooting](#troubleshooting)
-
-
-****
-> **Since FastForward has been removed from Chrome Web Store, you'll need to manually install the extension following the steps below.**
-****
 
 ## Download unstable builds
 <div align="center">
@@ -34,6 +27,24 @@
   <br>
 <a href="https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_firefox.zip"> <img src="https://img.shields.io/badge/Firefox-Dev%20builds-critical?style=for-the-badge&logo=firefoxbrowser" /> </a>
 </div>
+
+## Installing from Web-Stores
+
+Currently, FastForward is present on the Firefox, Chrome and Edge Addons Store.
+
+### Chrome
+<a href="https://chromewebstore.google.com/detail/fastforward/icallnadddjmdinamnolclfjanhfoafe"> <img alt="Mozilla Add-on" src="https://img.shields.io/badge/get%20the%20extension-5648de?logo=googlechrome&style=for-the-badge&logoColor=white"/> </a>
+
+### Firefox
+We have been removed from Firefox store!
+We'll get back to it shortly.
+
+<a href="https://addons.mozilla.org/firefox/addon/fastforwardteam/"> <img alt="Mozilla Add-on" src="https://img.shields.io/badge/get%20the%20extension-5648de?logo=firefoxbrowser&style=for-the-badge"/> </a>
+
+### Edge
+<a href="https://microsoftedge.microsoft.com/addons/detail/fastforward/ldcclmkclhomnpcnccgbgleikchbnecl"> <img src="https://img.shields.io/badge/get%20the%20extension-5648de?style=for-the-badge&logo=microsoftedge&logoColor=blue" /> </a>
+
+
 
 ## Manual Installation
 These are the instructions for installing the extension in "unpacked" mode.
@@ -103,20 +114,6 @@ Please follow [the instructions here](https://github.com/FastForwardTeam/release
 7. Tap on Extensions.
 8. Find FastForward.
 9. Add FastForward.
-
-## Installing from Web-Stores
-
-Currently, FastForward is present on the Firefox and Edge web stores.
-
-### Firefox
-<a href="https://addons.mozilla.org/firefox/addon/fastforwardteam/"> <img alt="Mozilla Add-on" src="https://img.shields.io/amo/v/fastforwardteam?label=get%20the%20addon&logo=firefoxbrowser&style=for-the-badge"/> </a>
-
-### Edge
-<a href="https://microsoftedge.microsoft.com/addons/detail/fastforward/ldcclmkclhomnpcnccgbgleikchbnecl"> <img src="https://img.shields.io/badge/Edge-Get%20the%20addon-informational?style=for-the-badge&logoColor=white&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgUHJvIDYuMi4wIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlIChDb21tZXJjaWFsIExpY2Vuc2UpIENvcHlyaWdodCAyMDIyIEZvbnRpY29ucywgSW5jLiAtLT48cGF0aCBkPSJNMTkyIDEwNC44YzAtOS4yLTUuOC0xNy4zLTEzLjItMjIuOEMxNjcuMiA3My4zIDE2MCA2MS4zIDE2MCA0OGMwLTI2LjUgMjguNy00OCA2NC00OHM2NCAyMS41IDY0IDQ4YzAgMTMuMy03LjIgMjUuMy0xOC44IDM0Yy03LjQgNS41LTEzLjIgMTMuNi0xMy4yIDIyLjhjMCAxMi44IDEwLjQgMjMuMiAyMy4yIDIzLjJIMzM2YzI2LjUgMCA0OCAyMS41IDQ4IDQ4djU2LjhjMCAxMi44IDEwLjQgMjMuMiAyMy4yIDIzLjJjOS4yIDAgMTcuMy01LjggMjIuOC0xMy4yYzguNy0xMS42IDIwLjctMTguOCAzNC0xOC44YzI2LjUgMCA0OCAyOC43IDQ4IDY0cy0yMS41IDY0LTQ4IDY0Yy0xMy4zIDAtMjUuMy03LjItMzQtMTguOGMtNS41LTcuNC0xMy42LTEzLjItMjIuOC0xMy4yYy0xMi44IDAtMjMuMiAxMC40LTIzLjIgMjMuMlY0NjRjMCAyNi41LTIxLjUgNDgtNDggNDhIMjc5LjJjLTEyLjggMC0yMy4yLTEwLjQtMjMuMi0yMy4yYzAtOS4yIDUuOC0xNy4zIDEzLjItMjIuOGMxMS42LTguNyAxOC44LTIwLjcgMTguOC0zNGMwLTI2LjUtMjguNy00OC02NC00OHMtNjQgMjEuNS02NCA0OGMwIDEzLjMgNy4yIDI1LjMgMTguOCAzNGM3LjQgNS41IDEzLjIgMTMuNiAxMy4yIDIyLjhjMCAxMi44LTEwLjQgMjMuMi0yMy4yIDIzLjJINDhjLTI2LjUgMC00OC0yMS41LTQ4LTQ4VjM0My4yQzAgMzMwLjQgMTAuNCAzMjAgMjMuMiAzMjBjOS4yIDAgMTcuMyA1LjggMjIuOCAxMy4yQzU0LjcgMzQ0LjggNjYuNyAzNTIgODAgMzUyYzI2LjUgMCA0OC0yOC43IDQ4LTY0cy0yMS41LTY0LTQ4LTY0Yy0xMy4zIDAtMjUuMyA3LjItMzQgMTguOEM0MC41IDI1MC4yIDMyLjQgMjU2IDIzLjIgMjU2QzEwLjQgMjU2IDAgMjQ1LjYgMCAyMzIuOFYxNzZjMC0yNi41IDIxLjUtNDggNDgtNDhIMTY4LjhjMTIuOCAwIDIzLjItMTAuNCAyMy4yLTIzLjJ6Ii8+PC9zdmc+" /> </a>
-<!-- this base64 icon is from https://fontawesome.com -->
-
-### Chrome
-Sadly, we've been removed from the Chrome Web Store. See issue [704](https://github.com/FastForwardTeam/FastForward/issues/704).
 
 ## Troubleshooting
 <details> <summary> "Manifest version 2 is deprecated, and support will be removed in 2023. See https://developer.chrome.com/blog/mv2-transition/ for more details." </summary>
