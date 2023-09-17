@@ -381,6 +381,7 @@ button {
     1;
   background-color: transparent;
   border-radius: 0;
+  cursor: pointer;
   padding: 0.5vh 1vw;
   display: inline-block;
   text-decoration: none;
