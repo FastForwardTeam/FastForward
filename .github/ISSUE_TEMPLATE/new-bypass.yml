@@ -11,14 +11,16 @@ body:
       
       ### **Please don't submit multiple issues about the same website. [Search](https://github.com/FastForwardTeam/FastForward/labels/New-bypass) if the domain has been reported before filing the issue.**
       Thanks for taking the time to fill out this form!
-- type: input
-  id: domain
-  attributes:
-    label: Domain
-    description: Submit one website only.
-    placeholder: 'Just the name of the site. example: https://google.com'
-  validations:
-    required: true
+### Disabled: duplicated field
+#- type: input
+  #id: domain
+  #attributes:
+    #label: Domain
+    #description: Submit one website only.
+    #placeholder: 'Just the name of the site. example: https://google.com'
+  #validations:
+    #required: true
+### Disabled: duplicated field
 - type: input
   id: site
   attributes:
@@ -33,29 +35,29 @@ body:
     label: Version
     description: What version of the extension are you running?
     options:
-      - 0.0.0
+      - Manifest-v2
+      - Manifest-v3
   validations:
     required: true
 - type: dropdown
   id: browsers
   attributes:
-    label: What browsers are you seeing the problem on?
+    label: What browser(s) are you using?
     multiple: true
     options:
-      - Firefox
-      - Chrome
-      - Brave
-      - Microsoft Edge
+      - Firefox browsers
+      - Chrome browsers (includes brave, edge, opera, etc)
   validations:
     required: true
 - type: dropdown
   id: os
   attributes:
-    label: What OS are you seeing the problem on?
+    label: What platform are you using?
     options:
-      - Windows
-      - Linux
-      - MacOS 
+      - Computer (Windows, Linux, MacOS)
+      - Phone (Android)
+  validations:
+    required: true
 - type: textarea
   attributes:
     label: (Optional) Anything else?
