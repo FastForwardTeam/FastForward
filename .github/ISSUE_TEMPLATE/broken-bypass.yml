@@ -58,6 +58,7 @@ body:
     options:
       - Computer (Windows, Linux, MacOS)
       - Phone (Android)
+validations:
     required: true
 - type: textarea
   attributes:
