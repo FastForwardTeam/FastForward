@@ -5,12 +5,12 @@ const isFirefox = /Firefox/i.test(navigator.userAgent);
 // Check if the browser is Firefox
 if (isFirefox) {
   browser.runtime.onInstalled.addListener((details) => {
-    if (details.reason === "install") {
+    if (details.reason === 'install') {
       browser.storage.local.get('consentStatus').then(function (data) {
         const consentStatus = data.consentStatus;
         if (consentStatus !== 'granted') {
           browser.tabs.create({
-            url: "html/consent.html"
+            url: 'html/consent.html',
           });
         } else {
           // If consent has been already granted, execute background script
@@ -71,7 +71,8 @@ function executeBackgroundScript() {
       url.pathname = '/html' + url.pathname;
       if (url.searchParams.get('crowd') === 'true') {
         url.pathname =
-          url.pathname.split('/').slice(0, -1).join('/') + '/crowd-bypassed.html';
+          url.pathname.split('/').slice(0, -1).join('/') +
+          '/crowd-bypassed.html';
       } else {
         url.pathname =
           url.pathname.split('/').slice(0, -1).join('/') +
@@ -173,6 +174,9 @@ function executeBackgroundScript() {
 
   brws.storage.onChanged.addListener(() => {
     getOptions().then((options) => {
+      if (typeof options === 'undefined') {
+        return;
+      }
       if (options.optionBlockIpLoggers === false) {
         brws.declarativeNetRequest.updateEnabledRulesets({
           disableRulesetIds: ['ipLoggerRuleset'],
