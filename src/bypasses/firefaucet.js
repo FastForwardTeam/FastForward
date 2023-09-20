@@ -1,6 +1,6 @@
 import BypassDefinition from './BypassDefinition.js'
 
-export default class CustomBypass extends BypassDefinition {
+export default class Firefaucet extends BypassDefinition {
     constructor() {
         super()
         // Custom bypass required bases can be set here

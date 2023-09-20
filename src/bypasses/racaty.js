@@ -1,6 +1,6 @@
 import BypassDefinition from './BypassDefinition.js'
 
-export default class CustomDomainBypass extends BypassDefinition {
+export default class Racaty extends BypassDefinition {
     constructor() {
         super()
         // Custom bypass required bases can be set here
