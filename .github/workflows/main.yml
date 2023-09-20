@@ -2,7 +2,7 @@ name: Package
 
 on:
   push:
-    branches: [main, manifest-v3]
+    branches: [main, manifest-v3, porting-to-mv3]
 
   workflow_dispatch:
 
