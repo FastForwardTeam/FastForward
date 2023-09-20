@@ -1,6 +1,6 @@
 import BypassDefinition from './BypassDefinition.js';
 
-export default class DownloadrIn extends BypassDefinition {
+export default class Downloadrin extends BypassDefinition {
     constructor() {
         super();
         // Custom bypass required bases can be set here
