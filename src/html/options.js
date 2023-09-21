@@ -1,13 +1,13 @@
 /*global brws*/
 let defaultOptions = {
   navigationDelayToggle: true,
-  navigationDelay: 10,
+  navigationDelay: 3,
   optionTrackerBypass: false,
   optionInstantNavigationTrackers: false,
   optionBlockIpLoggers: true,
   optionCrowdBypass: false,
   optionCrowdOpenDelayToggle: false,
-  optionCrowdOpenDelay: 5,
+  optionCrowdOpenDelay: 3,
   optionCrowdCloseDelayToggle: false,
   optionCrowdCloseDelay: 15,
   displayContributeBanner: true,
