@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FastForward</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="base.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <style>
+            .container {
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                padding: 20px;
+                width: 80%;
+                max-width: 600px;
+                margin: 0 auto;
+                text-align: center;
+            }
+            p {
+                color: #ffffff;
+                font-size: 28px;
+                line-height: 1.5;
+            }
+            .buttons {
+                border: none; /* Increase border width for better visibility */
+                border-image: linear-gradient(
+                    135deg,
+                    var(--ff-aqua) 0%,
+                    var(--ff-blue) 50%,
+                    var(--ff-purple) 100%
+                ) 1;
+                background-color: transparent;
+                border: none;
+                padding: 18px 36px; /* Increase padding for a larger button */
+                font-size: 24px; /* Use a font size of 24px for better readability */
+                cursor: pointer;
+                border-radius: 8px; /* Increase border radius for a softer look */
+                transition: background-color 0.3s ease;
+            }
+
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+            <div class="logo-wrapper"><img class="logo" src="../icon/branding.png" alt="FastForward"></div>
+            </ul>
+        </nav>
+        <div class="uk-margin-top uk-margin-bottom uk-margin-left uk-margin-right">
+            <div class="container">
+            <h2>Thank you for installing FastForward</h2>
+            <p>
+                This extension collects the tab url when you choose to add a website to the whitelist.  
+            </p>
+            <p>
+                If you consent to this data collection hit "Agree" to continue. Otherwise hit "Refuse" and the extension will be uninstalled.
+            </p>
+            <button id="agree" class="buttons">Agree</button>
+            <button id="refuse" class="buttons">Refuse</button>
+        </div>
+        <script src="consent.js"></script>
+    </body>
+</html>
