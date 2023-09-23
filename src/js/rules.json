@@ -285,7 +285,9 @@
 		"*://shareasale.com/r.cfm?*",
 		"*://shareasale-analytics.com/r.cfm?*",
 		"*://*.disq.us/url?url=*",
-		"*://rebrand.ly/*"
+		"*://rebrand.ly/*",
+		"*://rb.gy/*",
+		"*://buff.ly/*"
 	],
 	"tracker_force_http": [
 		"ow.ly",
