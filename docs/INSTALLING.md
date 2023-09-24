@@ -115,6 +115,14 @@ Please follow [the instructions here](https://github.com/FastForwardTeam/release
 8. Find FastForward.
 9. Add FastForward.
 
+## Building the extension
+1. Clone this reposirory;
+2. Navigate to `scripts` folder;
+3. Run `npm ci`, make sure you have both latest node.js and npm installed;
+4. Build the extension by running `node build.js {firefox|chromium|all} {none|nover|ver}`.
+
+Example: Building for chrome: `node build.js chromium nover`.
+
 ## Troubleshooting
 <details> <summary> "Manifest version 2 is deprecated, and support will be removed in 2023. See https://developer.chrome.com/blog/mv2-transition/ for more details." </summary>
   <br>
@@ -164,8 +172,17 @@ It's because you forgot to extract twice the file. Please re-read step 3.
 
 <details> <summary> Linkvertise is not being bypassed </summary>
 
+**If you're using Chrome:** Builds for Chrome doesn't include Linkvertise bypass, you need to manually build the extension, using [this guide](#building-the-extension).
 
-Copy and paste the contents of [this page](https://raw.githubusercontent.com/FastForwardTeam/FastForward/main/src/linkvertise.js).
+**If you're using Firefox:**
+Firefox builds includes Linkvertise bypass.
+
+***
+
+**If you're using MV2 version of the extension:**
+
+Copy and paste the contents of [this page](https://raw.githubusercontent.com/FastForwardTeam/FastForward/manifest-v2/src/linkvertise.js).
+
 
 Go to the extension settings and paste the contents of the file into the "Custom Bypasses" field, as shown below.
 
