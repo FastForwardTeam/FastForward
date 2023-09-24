@@ -119,9 +119,9 @@ Please follow [the instructions here](https://github.com/FastForwardTeam/release
 1. Clone this reposirory;
 2. Navigate to `scripts` folder;
 3. Run `npm ci`, make sure you have both latest node.js and npm installed;
-4. Build the extension by running `node build.js {firefox|chromium|all} {none|nover|ver}`.
+4. Build the extension by running `npm run build {firefox|chromium|all} {none|nover|ver}`.
 
-Example: Building for chrome: `node build.js chromium nover`.
+Example: Building for chrome: `npm run build chromium nover`.
 
 ## Troubleshooting
 <details> <summary> "Manifest version 2 is deprecated, and support will be removed in 2023. See https://developer.chrome.com/blog/mv2-transition/ for more details." </summary>
