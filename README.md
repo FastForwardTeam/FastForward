@@ -17,26 +17,30 @@
 
 ____
 
-# Installing the Extension
-If you are using Microsoft Edge, you can install FastForward from the [Microsoft Store](https://microsoftedge.microsoft.com/addons/detail/fastforward/ldcclmkclhomnpcnccgbgleikchbnecl).
+# Fastforward Mv2
 
-If you are using a Chromium-based browser such as Google Chrome, Microsoft Edge, Opera, Brave, or Kiwi, you can install FastForward from the [Chrome Web Store](https://chrome.google.com/webstore/detail/fastforward/icallnadddjmdinamnolclfjanhfoafe).
+The older version of Fastforward is no longer being actively updated. We strongly recommend using the latest version of Fastforward, which can be found in the main branch. However, if you still wish to use this older version, you can install it. You might want to do this if you require certain bypasses that have not yet been converted to the new version, or if you prefer the old UI. We do not recommend this.
 
-If you are using any other browser, please view our [installation guide](https://github.com/FastForwardTeam/FastForward/blob/main/INSTALLING.md).
+### Installation
+If you do want to install this older version, you can do so by following these steps for each platform
 
-____
+##### Chromium based browsers (Chrome, Edge, Brave, etc.):
+1. Download the latest release from the [releases page](https://github.com/FastForwardTeam/FastForward/releases/tag/manifest-v2-release)
+2. Open Chrome (or your other chromium based browser) and go type `chrome://extensions` into the address bar
+3. Enable developer mode in the top right corner, using the switch.
+4. Drag the downloaded file from step 1 into the browser window.
 
-# About
-#### What is FastForward?
-FastForward is the successor of Universal Bypass (see below), a browser extension that can bypass annoying link shorteners, so you don't need to waste your time _trying_ to get to the final link. You can see the extension in action on [our official website](https://fastforward.team/example-links).
+##### Firefox:
+1. in the browser you wish to install FastForward on, open the latest signed release from the [releases page](https://github.com/FastForwardTeam/FastForward/releases/tag/0.2237)
+2. Click the `FastForward_Firefox` files in the assets section
+3. click allow on the popup that appears
+4. click install on the popup that appears
 
-#### What happened to Universal Bypass?
-As you may know, [Universal Bypass](https://github.com/Sainan/Universal-Bypass) is no longer maintained by its original developer, [Sainan](https://github.com/Sainan), who had worked on it for so long. 
-____
+##### Firefox Nightly and other Firefox based browsers (librewolf, waterfox, etc.):
+⚠️⚠️⚠️ This will not work on the normal version of Firefox, please see the above instructions.
+1. Download the latest release from the [releases page](https://github.com/FastForwardTeam/FastForward/rel)
+2. Open the browser you wish to install FastForward on and type `about:addons` into the address bar
+3. Click the gear icon in the top right corner
+4. Click `Install Add-on From File...`
+5. Select the downloaded file from step 1
 
-
-
-
-
-#### Does FastForward have a Discord server?
-Yes! If you are interested in assisting the development, need help, or just wanna hang out, you can [click here to join](https://discord.gg/RSAf7b5njt) our server.
