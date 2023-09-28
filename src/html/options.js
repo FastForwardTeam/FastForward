@@ -49,12 +49,11 @@ function addNumberInputs() {
 }
 
 function displayExtensionVersion() {
-  brws.storage.local
-    .get('version')
-    .then(
-      (data) =>
-        (document.getElementById('version').textContent = data.version + '-Mv3')
-    );
+  const versionElement = document.getElementById('version');
+  if (versionElement) {
+    const extensionVersion = brws.runtime.getManifest().version + '-Mv3';
+    versionElement.textContent = extensionVersion;
+  }
 }
 
 function formatWhitelistDesc() {
