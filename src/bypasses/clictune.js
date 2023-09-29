@@ -16,4 +16,4 @@ export default class Clictune extends BypassDefinition {
     }
 }
 
-export const matches = ['www.dlink2.com']
+export const matches = ['www.dlink2.net', 'www.dlink2.com', 'www.clictune.com']
