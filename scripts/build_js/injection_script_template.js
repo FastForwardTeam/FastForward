@@ -6,12 +6,14 @@ function matchingBypass(bypasses) {
   for (const [key] of Object.entries(bypasses)) {
     if (key.charAt(0) === '/' && key.charAt(key.length - 1) === '/') {
       let pattern = new RegExp(key.substring(1, key.length - 1));
-      return pattern.test(location.href) ? key : null;
+      if (pattern.test(location.href)) {
+        return key;
+      }
     } else if (key === location.host) {
       return key;
     }
-    return null;
   }
+  return null;
 }
 
 if (matchingBypass(bypasses)) {

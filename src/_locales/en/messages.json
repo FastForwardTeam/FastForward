@@ -36,25 +36,49 @@
 		"message": "Enable website bypasses."
 	},
 	"optionsNavigationDelay": {
-		"message": "Take me to destinations after % second(s)."
+		"message": "Bypass Link Shorteners after % second(s)."
 	},
 	"optionsTrackerBypass": {
-		"message": "Bypass trackers (such as bit.ly and goo.gl) using Unshorten.me."
+		"message": "Bypass trackers"
 	},
 	"optionsInstantNavigationTrackers": {
-		"message": "Instantly take me to destinations of trackers."
+		"message": "Bypass Trackers immediately."
 	},
 	"optionsBlockIPLoggers": {
-		"message": "Block IP loggers if they can't be bypassed."
+		"message": "Block IP loggers."
 	},
 	"optionsCrowdBypass": {
-		"message": "Crowd Bypass: Give and take the destinations of unbypassable shorteners."
+		"message": "Crowd Bypass."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Open crowd-sourced destinations in a new tab after % second(s)."
+		"message": "Open Crowd destinations after % second(s)."
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Close tab containing the crowd-sourced destination after % second(s) of visiting it."
+		"message": "Close Crowd destination after % second(s)."
+	},
+	"optionsNavigationDelayDescription": {
+		"message": "Automatically bypass link shorteners such as Adf.ly, sub2unlock.com, after a certain amount of seconds. Recommended: On, 0 seconds."
+	},
+	"optionsTrackerBypassDescription": {
+		"message": "Automatically bypass trackers such as t.co and goo.gl using the Unshorten.me API. Recommended: On."
+	},
+	"optionsInstantNavigationTrackersDescription": {
+		"message": "Bypass trackers immediately and automatically, instead of providing a link to the destination. Recommended: On."
+	},
+	"optionsBlockIPLoggersDescription": {
+		"message": "If FastForward can't bypass a link that will log your IP, we will block it instead. Recommended: On."
+	},
+	"optionsCrowdBypassDescription": {
+		"message": "Crowd Bypass: Use FastForward's online database of bypassed links to instantly bypass popular sites. Recommended: On."
+	},
+	"optionsCrowdAutoOpenDescription": {
+		"message": "Open Crowd Bypass destinations in a new tab rather than the current one, so you don't lose your place. Recommended: Off"
+	},
+	"optionsCrowdAutoCloseDescription": {
+		"message": "Close Crowd Bypass destination after a few seconds. Useful if most of the sites you visit have a direct download link. Recommended: Off"
+	},
+	"crowdBypassTempDisabledDescription": {
+		"message": "Crowd bypass has been temporarily disabled when FastForward was updated. Please re-enable it."
 	},
 	"privacyPolicy": {
 		"message": "Privacy Policy"
@@ -134,8 +158,8 @@
 	"optionsWhitelist": {
 		"message": "Whitelist"
 	},
-	  "optionsWhitelistDescription": {
-		"message": "A list of sites formatted as domain.tld or subdomain.domain.tld separated with a newline that will not be bypassed by FastForward. You can use * as a wildcard."
+	"optionsWhitelistDescription": {
+		"message": "A list of sites formatted as domain.tld or subdomain.domain.tld that won't be bypassed by FastForward. Seperate domains with new lines. Use * as a wildcard."
 	},
 	"tempDisableCrowdBypassButton": {
 		"message": "Temporarily disable crowd bypass"
@@ -152,5 +176,5 @@
 	"trackerBypassedError": {
 		"message": "Oops! Something went wrong. Redirecting to the original link..."
 	}
-	
+
 }

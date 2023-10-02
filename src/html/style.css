@@ -395,17 +395,22 @@ a .link-preview:hover {
 #contribute {
   position: absolute;
   /* display: none; */
-  width: calc(100vw - 6px);
+  width: 60%;
   background-image: linear-gradient(135deg, var(--ff-aqua) 0%, var(--ff-blue) 50%, var(--ff-purple) 100%);
   padding: 3px;
   padding-left: 6px;
+  margin: auto;
   margin-top: 5px;
   z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
 }
 
 #contribute p {
   width: fit-content;
   display: inline-block;
+  margin-left: 20px;
 }
 
 #contribute a {
@@ -416,9 +421,9 @@ a .link-preview:hover {
   cursor: pointer;
   width: fit-content;
   float: right;
-  vertical-align: top;
-  margin-right: 6px;
-  font-size: 20px;
+  vertical-align: middle;
+  margin-right: 20px;
+  font-size: 40px;
 }
 
 #close:after {
@@ -429,4 +434,13 @@ a .link-preview:hover {
 #whitelistDesc {
   margin-left: 27.055px;
   margin-right: 27.055px;
+}
+.option p {
+  color: #7a7a7a;
+}
+.indentedOption {
+  margin-left: 54.11px;
+}
+.indentedOption p {
+  color: #7a7a7a;
 }

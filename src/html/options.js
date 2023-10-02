@@ -11,7 +11,7 @@ let defaultOptions = {
   optionCrowdCloseDelayToggle: false,
   optionCrowdCloseDelay: 15,
   displayContributeBanner: true,
-  whitelist: '',
+  whitelist: 'example.com\n*.example.com',
 };
 
 const crowdTempDisabledMessage = document.querySelector(
