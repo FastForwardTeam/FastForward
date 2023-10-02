@@ -16,7 +16,7 @@ async function getConsentStatus() {
 document.querySelector('#agree').addEventListener('click', async function () {
     console.log("Agree button clicked.");
     await saveConsentStatus('consent-granted');
-    window.location.href = 'options.html';
+    window.close();
 });
 
 // Event listener for "Refuse" button
