@@ -435,3 +435,12 @@ a .link-preview:hover {
   margin-left: 27.055px;
   margin-right: 27.055px;
 }
+.option p {
+  color: #7a7a7a;
+}
+.indentedOption {
+  margin-left: 54.11px;
+}
+.indentedOption p {
+  color: #7a7a7a;
+}
