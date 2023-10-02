@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f7333f23-b6a1-4883-b413-72e9d0e66e4f" name="Changes" comment="Removed adfly (linkvertise now) and added shortly">
+      <change afterPath="$PROJECT_DIR$/src/bypasses/androidtop.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bypasses/curseforge.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bypasses/filefactory.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bypasses/filepuma.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bypasses/firefaucet.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bypasses/get2clickblogspot.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bypasses/getwallpapers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bypasses/idnation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bypasses/indishare.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bypasses/lkc21.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bypasses/lnk2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bypasses/manualsbooks.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bypasses/onelink.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bypasses/portableapps.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bypasses/ryn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bypasses/softpedia.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bypasses/spaste.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bypasses/ux9.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Bypassed.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Bypassed.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="FastForward Bypass" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2O1uudA129gE9373MZ2Bty6kveP" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;manifest-v3&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\sanka\\OneDrive\\Documents\\Github Repositories\\FastForward\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sanka\OneDrive\Documents\Github Repositories\FastForward\.github" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Build Extension" type="NodeJSConfigurationType" temporary="true" application-parameters="all" path-to-js-file="build.js" working-dir="$PROJECT_DIR$/scripts">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.Build Extension" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f7333f23-b6a1-4883-b413-72e9d0e66e4f" name="Changes" comment="" />
+      <created>1680740637358</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680740637358</updated>
+      <workItem from="1680740639496" duration="869000" />
+      <workItem from="1680741709365" duration="4946000" />
+      <workItem from="1680750041923" duration="1056000" />
+      <workItem from="1680751216653" duration="590000" />
+      <workItem from="1680751821904" duration="24000" />
+      <workItem from="1680752474188" duration="53000" />
+      <workItem from="1680986137506" duration="5446000" />
+      <workItem from="1681080273937" duration="5113000" />
+      <workItem from="1681671570178" duration="5671000" />
+      <workItem from="1681785052167" duration="81000" />
+      <workItem from="1681953961400" duration="1935000" />
+      <workItem from="1682024729827" duration="5353000" />
+      <workItem from="1682042054980" duration="1066000" />
+      <workItem from="1682559276190" duration="171000" />
+      <workItem from="1682645529736" duration="3000" />
+      <workItem from="1683250638650" duration="593000" />
+      <workItem from="1683327103517" duration="260000" />
+      <workItem from="1683327408482" duration="1866000" />
+      <workItem from="1683329550996" duration="1473000" />
+      <workItem from="1683387722167" duration="4582000" />
+      <workItem from="1683428139056" duration="2989000" />
+      <workItem from="1684017223671" duration="343000" />
+      <workItem from="1684017584388" duration="515000" />
+      <workItem from="1684109557732" duration="1212000" />
+      <workItem from="1684111311779" duration="681000" />
+      <workItem from="1684195196718" duration="5886000" />
+      <workItem from="1684278104876" duration="991000" />
+      <workItem from="1684543320185" duration="2000" />
+      <workItem from="1684543920302" duration="689000" />
+      <workItem from="1684694418925" duration="120000" />
+      <workItem from="1685574126844" duration="151000" />
+      <workItem from="1685574296385" duration="6327000" />
+      <workItem from="1685755204533" duration="15530000" />
+      <workItem from="1685979377646" duration="1171000" />
+      <workItem from="1686272047416" duration="4352000" />
+      <workItem from="1690407669740" duration="32000" />
+      <workItem from="1690407725274" duration="2097000" />
+      <workItem from="1690411419814" duration="26000" />
+      <workItem from="1690422218213" duration="149000" />
+      <workItem from="1690853319110" duration="4876000" />
+      <workItem from="1690904404116" duration="5517000" />
+      <workItem from="1691024735776" duration="369000" />
+      <workItem from="1691030519877" duration="3604000" />
+      <workItem from="1691084446394" duration="593000" />
+      <workItem from="1691110340795" duration="2172000" />
+      <workItem from="1691193307080" duration="241000" />
+      <workItem from="1691193564729" duration="3187000" />
+      <workItem from="1691204381453" duration="2671000" />
+      <workItem from="1691264666188" duration="4828000" />
+      <workItem from="1691284862715" duration="1203000" />
+      <workItem from="1691286503041" duration="931000" />
+      <workItem from="1694969880535" duration="40000" />
+      <workItem from="1694969945062" duration="91000" />
+    </task>
+    <task id="LOCAL-00001" summary="Added Bypassed.md">
+      <created>1680752523031</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680752523031</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Changed in line with mv2">
+      <created>1680991072830</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680991072830</updated>
+    </task>
+    <task id="LOCAL-00003" summary="New bypasses and Dependabot integration">
+      <created>1681084826220</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1681084826220</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added Bypassed.md" />
+    <MESSAGE value="Changed in line with mv2" />
+    <MESSAGE value="New bypasses and Dependabot integration" />
+    <MESSAGE value="Removed adfly (linkvertise now) and added shortly" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed adfly (linkvertise now) and added shortly" />
+  </component>
+</project>
