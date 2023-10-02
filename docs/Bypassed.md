@@ -576,7 +576,7 @@ This is a list of websites bypassed in the MV2 version of the extension.
 |           https://fansmega.com	            |   ✅    |
 |       https://premiumstashdrop.com	        |   ✅    |
 |             https://blitly.io              |   ✅    |
-|         https:/healthy4pepole.com          |   ✅    |
+|         https://healthy4pepole.com          |   ✅    |
 |           https://forex-gold.net           |   ✅    |
 |            https://healdad.com             |   ✅    |
 |           https://world2our.com            |   ✅    |

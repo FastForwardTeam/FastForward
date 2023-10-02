@@ -23,7 +23,6 @@ body {
   padding: 0px;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   color: var(--ff-text);
   font-size: 1rem;
 }
@@ -156,7 +155,7 @@ nav a:hover:disabled {
 /*=================content css================*/
 
 section {
-  padding: 60px 0 0 0;
+  padding: 50px 0 0 0;
   background-color: var(--ff-background);
   text-align: left;
   max-width: 740px;
@@ -328,7 +327,12 @@ textarea.ffInput {
   width: -moz-available;
   height: 80px;
   resize: vertical;
-  transition: all 0.15s linear, background 1s linear;
+  min-height: 17px;
+  -webkit-text-fill-color: unset !important;
+  background-image: none;
+  background-color: var(--ff-background);
+  background-clip: unset;
+  transition: border 0.15s linear;
 }
 
 .invalid {
@@ -386,4 +390,43 @@ a .link-preview:hover {
 
 #options-link > a {
   padding: 0;
+}
+
+#contribute {
+  position: absolute;
+  /* display: none; */
+  width: calc(100vw - 6px);
+  background-image: linear-gradient(135deg, var(--ff-aqua) 0%, var(--ff-blue) 50%, var(--ff-purple) 100%);
+  padding: 3px;
+  padding-left: 6px;
+  margin-top: 5px;
+  z-index: 1;
+}
+
+#contribute p {
+  width: fit-content;
+  display: inline-block;
+}
+
+#contribute a {
+  color: var(--ff-aqua);
+}
+
+#close {
+  cursor: pointer;
+  width: fit-content;
+  float: right;
+  vertical-align: top;
+  margin-right: 6px;
+  font-size: 20px;
+}
+
+#close:after {
+  display: inline-block;
+  content: "\00d7";
+}
+
+#whitelistDesc {
+  margin-left: 27.055px;
+  margin-right: 27.055px;
 }

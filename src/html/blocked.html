@@ -4,13 +4,21 @@
 	<title data-message="blockedTitle"></title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css" />
 	<script src="base.js"></script>
 </head>
 <body>
-	<div class="uk-margin-top uk-margin-bottom uk-margin-left uk-margin-right">
-		<h1 data-message="blockedTitle"></h1>
-		<p><span data-message="blockedSubtitle"></span> <a href="options.html#option-block-ip-loggers" target="_blank" data-message="optionsLink"></a></p>
-	</div>
+	<nav class="mobile-only">
+		<ul>
+			<div class="logo-wrapper">
+				<img class="logo" src="../icon/branding.png" alt="FastForward" />
+			</div>
+		</ul>
+	</nav>
+	<section>
+		<h2 data-message="blockedTitle"></h2>
+		<p><span data-message="blockedSubtitle"></span> <a class="link" href="options.html#option-block-ip-loggers" target="_blank" data-message="optionsLink"></a></p>
+	</section>
 	<script src="i18n.js"></script>
 </body>
 </html>

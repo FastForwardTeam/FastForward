@@ -17,17 +17,24 @@
 	"permissions": [
 		"alarms",
 		"storage",
-		"webNavigation"
+		"webNavigation",
+		"tabs",
+		"declarativeNetRequestWithHostAccess"
 	],
+	"host_permissions": [
+		"<all_urls>"
+	  ],
 	"options_ui": {
 		"page": "html/options.html",
 		"open_in_tab": true
 	},
 	"background": {
-		"service_worker": "background.js"
-		
+		"service_worker": "background.js",
+		"type": "module"
 	},
-	"action": {},
+	"action": {
+    "default_popup": "html/popup.html"
+  },
 	"content_scripts": [
 		{
 			"matches": [
@@ -39,17 +46,30 @@
 			"run_at": "document_start"
 		}
 	],
-	
 	"web_accessible_resources": [{
 		"resources": [
 		"html/before-navigate.html",
 		"html/blocked.html",
 		"html/crowd-bypassed.html",
+		"html/tracker-bypass.html",
 		"html/options.html",
 		"icon/48.png",
 		"injection_script.js",
 		"bypasses/*",
 		"helpers/*"],
 		"matches": ["<all_urls>"]
-}]
+	}],
+
+	"declarative_net_request": {
+		"rule_resources": [{
+		  "id": "ipLoggerRuleset",
+		  "enabled": true,
+		  "path": "ip_logger_blocker.json"
+		},
+		{
+			"id": "trackerRuleset",
+			"enabled": false,
+			"path": "tracker_bypass.json"
+		}]
+	  }
 }

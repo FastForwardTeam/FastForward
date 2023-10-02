@@ -13,7 +13,7 @@ export default class Rekonise extends BypassDefinition {
         }
         xhr.open(
             'GET',
-            `https://api.rekonise.com/unlocks${location.pathname}`,
+            `https://api.rekonise.com/social-unlocks${location.pathname}`,
             true
         )
         xhr.send()

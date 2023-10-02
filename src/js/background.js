@@ -1,3 +1,25 @@
+import * as constants from './constants.js';
+
+const isFirefox = /Firefox/i.test(navigator.userAgent);
+
+// Check if the browser is Firefox
+if (isFirefox) {
+  browser.runtime.onInstalled.addListener((details) => {
+    if (details.reason === 'install') {
+      browser.storage.local.get('consentStatus').then(function (data) {
+        const consentStatus = data.consentStatus;
+        if (consentStatus !== 'granted') {
+          browser.tabs.create({
+            url: 'html/consent.html',
+          });
+          return;
+        }
+      });
+      return;
+    }
+  });
+}
+
 const brws = typeof browser !== 'undefined' ? browser : chrome;
 const fetchDomains = ['crowd.fastforward.team', 'redirect-api.work.ink']; //only allow requests to these domains
 
@@ -9,10 +31,6 @@ async function getOptions() {
   });
 }
 
-function handleClick() {
-  brws.runtime.openOptionsPage();
-}
-
 function ffclipboardClear() {
   brws.storage.local.set({ ff_clipboard: '{}' });
 }
@@ -21,12 +39,18 @@ function clearCrowdIgnoredURLs() {
   brws.storage.local.set({ crowd_ignore: '{}' });
 }
 
-function firstrun() {
-  brws.tabs.create({ url: 'https://fastforward.team/firstrun' });
-  ffclipboardClear();
-  brws.storage.local.set({ tempDisableCrowd: 'false' });
-  brws.storage.local.set({ version: brws.runtime.getManifest().version });
-  brws.runtime.openOptionsPage(); //required for loading default options, to do: implement a better way
+function firstrun(details) {
+  if (details.reason == 'install' || details.reason == 'update') {
+    brws.tabs.create({ url: 'https://fastforward.team/firstrun' });
+    ffclipboardClear();
+    brws.storage.local.set({ tempDisableCrowd: 'false' });
+    brws.storage.local.set({ version: brws.runtime.getManifest().version });
+    brws.runtime.openOptionsPage(); //required for loading default options, to do: implement a better way
+    brws.declarativeNetRequest.updateDynamicRules({
+      addRules: constants.beforeNavigateRules,
+      removeRuleIds: constants.beforeNavigateRules.map((rule) => rule.id),
+    });
+  }
 }
 
 function preflight(details) {
@@ -42,7 +66,8 @@ function preflight(details) {
     url.pathname = '/html' + url.pathname;
     if (url.searchParams.get('crowd') === 'true') {
       url.pathname =
-        url.pathname.split('/').slice(0, -1).join('/') + '/crowd-bypassed.html';
+        url.pathname.split('/').slice(0, -1).join('/') +
+        '/crowd-bypassed.html';
     } else {
       url.pathname =
         url.pathname.split('/').slice(0, -1).join('/') +
@@ -55,7 +80,6 @@ function preflight(details) {
   }
 }
 
-// If user restarts the browser before the is alarm triggered
 function reEnableCrowdBypassStartup() {
   brws.storage.local.get(['tempDisableCrowd']).then((result) => {
     if (result.tempDisableCrowd === 'true') {
@@ -69,7 +93,6 @@ function reEnableCrowdBypassStartup() {
   });
 }
 
-// Add a listener for the temp crowd disable alarm
 brws.alarms.onAlarm.addListener((alarm) => {
   brws.storage.local.get(['tempDisableCrowd']).then((result) => {
     if (
@@ -86,7 +109,6 @@ brws.alarms.onAlarm.addListener((alarm) => {
   });
 });
 
-brws.action.onClicked.addListener(handleClick);
 brws.runtime.onInstalled.addListener(firstrun);
 brws.runtime.onStartup.addListener(() => {
   ffclipboardClear();
@@ -94,27 +116,6 @@ brws.runtime.onStartup.addListener(() => {
   reEnableCrowdBypassStartup();
   brws.storage.local.set({ version: brws.runtime.getManifest().version });
 });
-brws.webNavigation.onBeforeNavigate.addListener(
-  (details) => preflight(details),
-  {
-    url: [{ hostContains: 'fastforward.team' }],
-  }
-);
-let requestFilter = {
-  urls: [
-    "http://sh.st/*",
-    "https://sh.st/*",
-    "http://clkmein.com/*",
-    "http://viid.me/*",
-    "http://xiw34.com/*",
-    "http://corneey.com/*",
-    "http://gestyy.com/*",
-    "http://cllkme.com/*",
-    "http://festyy.com/*",
-    "http://destyy.com/*",
-    "http://ceesty.com/*",
-  ],
-};
 
 brws.webRequest.onBeforeSendHeaders.addListener(
   function (details) {
@@ -136,9 +137,6 @@ brws.runtime.onMessage.addListener((request, _, sendResponse) => {
   (async () => {
     let options = await getOptions();
     if (options.optionCrowdBypass === false) {
-      const src = brws.runtime.getURL('helpers/infobox.js');
-      const insertInfoBox = await import(src);
-      insertInfoBox(brws.i18n.getMessage('crowdDisabled'));
       return;
     }
     let url;
@@ -153,7 +151,6 @@ brws.runtime.onMessage.addListener((request, _, sendResponse) => {
         params.append(key, request.detail[key]);
       }
     } else {
-      //use fetch api to get final url after redirects from detail.target
       for (let key in request.detail) {
         if (key === 'target') {
           let dest = new URL(request.detail[key]);
@@ -185,3 +182,30 @@ brws.runtime.onMessage.addListener((request, _, sendResponse) => {
   })();
   return true;
 });
+
+brws.storage.onChanged.addListener(() => {
+  getOptions().then((options) => {
+    if (typeof options === 'undefined') {
+      return;
+    }
+    if (options.optionBlockIpLoggers === false) {
+      brws.declarativeNetRequest.updateEnabledRulesets({
+        disableRulesetIds: ['ipLoggerRuleset'],
+      });
+    } else {
+      brws.declarativeNetRequest.updateEnabledRulesets({
+        enableRulesetIds: ['ipLoggerRuleset'],
+      });
+    }
+    if (options.optionTrackerBypass === false) {
+      brws.declarativeNetRequest.updateEnabledRulesets({
+        disableRulesetIds: ['trackerRuleset'],
+      });
+    } else {
+      brws.declarativeNetRequest.updateEnabledRulesets({
+        enableRulesetIds: ['trackerRuleset'],
+      });
+    }
+  });
+});
+

@@ -39,7 +39,7 @@
 		"message": "Take me to destinations after % second(s)."
 	},
 	"optionsTrackerBypass": {
-		"message": "Bypass trackers (such as bit.ly and t.co) using Apimon.de."
+		"message": "Bypass trackers (such as bit.ly and goo.gl) using Unshorten.me."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Instantly take me to destinations of trackers."
@@ -145,6 +145,12 @@
 	},
 	"crowdBypassTempDisabled":{
 		"message":"Crowd bypass has been temporarily disabled"
+	},
+	"trackerBypass": {
+		"message": "Bypassing tracker..."
+	},
+	"trackerBypassedError": {
+		"message": "Oops! Something went wrong. Redirecting to the original link..."
 	}
 	
 }

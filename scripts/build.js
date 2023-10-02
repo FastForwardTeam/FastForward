@@ -10,13 +10,9 @@ import fs from 'fs-extra';
 import ejs from 'ejs';
 import process from 'process';
 import path from 'path';
-import {
-  copyArray,
-  changeCwdtoRoot,
-  getNumberOfCommits,
-} from './build_js/utils.js';
+import * as utils from './build_js/utils.js';
 
-changeCwdtoRoot();
+utils.changeCwdtoRoot();
 let working_directory = process.cwd();
 const distribution = `${working_directory}/build/dist`;
 let [browser, version] = process.argv.slice(2);
@@ -48,16 +44,12 @@ fs.mkdirSync(browserDir);
 // Copy privacy.md and src except js
 let src = ['./src', './docs/PRIVACY.md'];
 let exceptions = ['./src/js/', 'version.txt'];
-await copyArray(src, browserDir, exceptions);
+await utils.copyArray(src, browserDir, exceptions);
 
 //copy js
 src = ['./src/js'];
-exceptions = [
-  'injection_script-original.js',
-  'injection_script.js',
-  'rules.json',
-];
-await copyArray(src, browserDir, exceptions);
+exceptions = ['injection_script-original.js', 'injection_script.js'];
+await utils.copyArray(src, browserDir, exceptions);
 
 let bypasses = {};
 for (const i of fs.readdirSync(`${working_directory}/src/bypasses`)) {
@@ -87,25 +79,26 @@ fs.writeFileSync(outputPath, result);
 if (browser === 'all') {
   const chromiumDir = `${working_directory}/build/FastForward.chromium`;
   fs.mkdirSync(chromiumDir);
-  await copyArray([browserDir], chromiumDir);
+  await utils.copyArray([browserDir], chromiumDir);
 }
 
-/*Compile*/
+/*version*/
 let packageVersion = '';
 if (version === 'ver') {
   packageVersion = fs.readFileSync('version.txt', 'utf-8').trim();
 } else if (version === 'nover') {
-  const lastCommit = getNumberOfCommits();
+  const lastCommit = utils.getNumberOfCommits();
   packageVersion = `0.${lastCommit}`;
 }
 
 async function buildExtension(browser) {
   const targetBrowser = browser === 'firefox' ? 'firefox-desktop' : 'chromium';
-  const browserDir = `${working_directory}/build/FastForward.${browser}`;
-  const manfistFile = `${working_directory}/platform_spec/${browser}/manifest.json`;
-  await copyArray([manfistFile], browserDir);
+  const browserOutDir = `${working_directory}/build/FastForward.${browser}`;
+  const browserSrcDir = `${working_directory}/platform_spec/${browser}`;
+  const manfistFile = `${browserSrcDir}/manifest.json`;
+  await utils.copyArray([manfistFile], browserOutDir);
   fs.writeFileSync(
-    `${browserDir}/manifest.json`,
+    `${browserOutDir}/manifest.json`,
     JSON.stringify(
       Object.assign(JSON.parse(fs.readFileSync(manfistFile, 'utf8')), {
         version: packageVersion,
@@ -114,10 +107,15 @@ async function buildExtension(browser) {
       4 //pretty print
     )
   );
+  await utils.convertRulesToDNRRulesets(
+    `${browserOutDir}/rules.json`,
+    `${browserOutDir}/ip_logger_blocker.json`,
+    `${browserOutDir}/tracker_bypass.json`
+  );
 
   await webExt.cmd.build(
     {
-      sourceDir: browserDir,
+      sourceDir: browserOutDir,
       artifactsDir: `${distribution}`,
       overwriteDest: true,
       browser: targetBrowser,

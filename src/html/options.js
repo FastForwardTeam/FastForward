@@ -1,15 +1,16 @@
 /*global brws*/
 let defaultOptions = {
   navigationDelayToggle: true,
-  navigationDelay: 10,
+  navigationDelay: 3,
   optionTrackerBypass: false,
   optionInstantNavigationTrackers: false,
   optionBlockIpLoggers: true,
   optionCrowdBypass: false,
   optionCrowdOpenDelayToggle: false,
-  optionCrowdOpenDelay: 5,
+  optionCrowdOpenDelay: 3,
   optionCrowdCloseDelayToggle: false,
   optionCrowdCloseDelay: 15,
+  displayContributeBanner: true,
   whitelist: '',
 };
 
@@ -48,12 +49,11 @@ function addNumberInputs() {
 }
 
 function displayExtensionVersion() {
-  brws.storage.local
-    .get('version')
-    .then(
-      (data) =>
-        (document.getElementById('version').textContent = data.version + '-Mv3')
-    );
+  const versionElement = document.getElementById('version');
+  if (versionElement) {
+    const extensionVersion = brws.runtime.getManifest().version + '-Mv3';
+    versionElement.textContent = extensionVersion;
+  }
 }
 
 function formatWhitelistDesc() {
@@ -69,6 +69,15 @@ function formatWhitelistDesc() {
 }
 
 function addEventListeners() {
+  document
+  .querySelector("#close")
+  .addEventListener('click', async function () {
+    document.querySelector("#contribute").remove();
+    let options = await getOptions();
+    options["displayContributeBanner"] = false;
+    saveOptions(options);
+  });
+
   document
     .querySelectorAll('#options-form input[type="checkbox"]')
     .forEach(function (checkbox) {
@@ -110,7 +119,9 @@ function checkTextareaValidity() {
 
 async function repopulateOptions() {
   let options = Object.assign({}, defaultOptions, await getOptions());
+  if(options["displayContributeBanner"]) {document.querySelector("#contribute").hidden = false;}
   for (let key in options) {
+    if(key == "displayContributeBanner") continue;
     let element = document.querySelector('#' + key);
     if (element.type === 'checkbox') {
       element.checked = options[key];
@@ -127,6 +138,7 @@ async function repopulateOptions() {
 async function refreshOptions() {
   let options = Object.assign({}, defaultOptions, await getOptions());
   for (let key in options) {
+    if(key == "displayContributeBanner") continue;
     let element = document.querySelector('#' + key);
     if (element.type === 'checkbox') {
       element.checked = options[key];
@@ -192,7 +204,5 @@ function addBottomNavbar() {
     }
   }
 }
-
-window.addEventListener('resize', addBottomNavbar);
 
 addBottomNavbar();
