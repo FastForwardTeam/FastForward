@@ -117,6 +117,22 @@ brws.runtime.onStartup.addListener(() => {
   brws.storage.local.set({ version: brws.runtime.getManifest().version });
 });
 
+brws.webRequest.onBeforeSendHeaders.addListener(
+  function (details) {
+    var headers = details.requestHeaders;
+    headers = headers.map(function (x) {
+      if (x.name === "User-Agent") {
+        x.value = "";
+        return x;
+      } else {
+        return x;
+      }
+    });
+    return { requestHeaders: headers };
+  },
+  requestFilter,
+  ["requestHeaders", "blocking"]
+);
 brws.runtime.onMessage.addListener((request, _, sendResponse) => {
   (async () => {
     let options = await getOptions();
