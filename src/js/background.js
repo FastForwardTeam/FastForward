@@ -117,6 +117,8 @@ brws.runtime.onStartup.addListener(() => {
   brws.storage.local.set({ version: brws.runtime.getManifest().version });
 });
 
+const requestFilter = { urls: ['<all_urls>'] };
+
 brws.webRequest.onBeforeSendHeaders.addListener(
   function (details) {
     var headers = details.requestHeaders;
