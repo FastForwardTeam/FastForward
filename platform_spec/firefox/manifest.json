@@ -24,9 +24,7 @@
 		"storage",
 		"webNavigation",
 		"tabs",
-		"declarativeNetRequestWithHostAccess",
-		"webRequest",
-		"webRequestBlocking"
+		"declarativeNetRequestWithHostAccess"
 	],
 	"host_permissions": [
 		"<all_urls>"
