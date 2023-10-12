@@ -32,5 +32,4 @@ For this, [Github's privacy policy](https://help.github.com/en/github/site-polic
 When Crowd Bypass (Options > "Give and take the destinations of unbypassable shorteners.") is enabled, occasionally the extension will send requests to our server.
 
 When you visit a known unbypassable shortener website, the URL is sent so it can check against the database if someone else has already reported its destination.   
-When you complete your visit on such a website, the URL and destination URL are sent so it can be recorded for future visitors.  
-We keep no request logs. We use Cloudflare and their [privacy policy](https://www.cloudflare.com/privacypolicy/) applies to you as an "End User."
+When you complete your visit on such a website, the URL and destination URL are sent so it can be recorded for future visitors. We store a hashed version of your IP address along with the destination to prevent spam. We may record your user-agent and other headers to analyse errors on our server. Access to this database is restricted to only those developers and administrators who require it for the purpose of maintenance. We never share this data with anyone else. We use Cloudflare to protect and improve the performance of our server. Their [privacy policy](https://www.cloudflare.com/privacypolicy/) applies to you as an "End User".
