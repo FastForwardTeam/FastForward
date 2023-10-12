@@ -10,7 +10,7 @@ export default class Clictune extends BypassDefinition {
         seconde = 0;
         Compteur();
 
-        this.helpers.awaitElement('#compteur a[href]', a => {
+        this.helpers.awaitElement('#compteur2 a[href]', a => {
             this.helpers.safelyNavigate(new URL(a.href).searchParams.get("url"))
         })
     }
