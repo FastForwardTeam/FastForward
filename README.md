@@ -6,9 +6,9 @@
 <a href="https://discord.gg/RSAf7b5njt" target="_blank"> <img alt="Discord" src="https://img.shields.io/discord/876622516607656006?label=Our%20Discord&logo=discord&style=for-the-badge"> </a>
 
 
-<a href="https://chromewebstore.google.com/detail/fastforward/icallnadddjmdinamnolclfjanhfoafe"><img src="https://user-images.githubusercontent.com/585534/107280622-91a8ea80-6a26-11eb-8d07-77c548b28665.png" alt="Get FastForward on Chromium based browsers" width="177"> </a>
+<a href="https://chromewebstore.google.com/detail/fastforward/icallnadddjmdinamnolclfjanhfoafe"><img src="https://i.imgur.com/pS1Vldh.png" alt="Get FastForward on Chromium based browsers" width="177"> </a>
 <a href="https://microsoftedge.microsoft.com/addons/detail/fastforward/ldcclmkclhomnpcnccgbgleikchbnecl"><img src="https://user-images.githubusercontent.com/585534/107280673-a5ece780-6a26-11eb-9cc7-9fa9f9f81180.png" alt="Get FastForward on Microsoft Edge" width="126px"></a>
-<a href="https://addons.mozilla.org/firefox/addon/fastforwardteam/"><img src="https://user-images.githubusercontent.com/585534/107280546-7b9b2a00-6a26-11eb-8f9f-f95932f4bfec.png" alt="Get FastForward for Firefox" width="126px"></a> 
+<a href="https://addons.mozilla.org/firefox/addon/fastforwardteam/"><img src="https://i.imgur.com/LzGz6jo.png" alt="Get FastForward for Firefox" width="126px"></a> 
 </div>
 
 > **We need developers to work on bypasses! If you're interested, [join our Discord](https://discord.gg/RSAf7b5njt).**
