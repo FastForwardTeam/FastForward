@@ -1,180 +1,158 @@
 {
-"appDesc": {
-"message": "Não perca seu tempo com conformidade. FastForward contorna encurtadores de links irritantes."
-},
-"firstrunTitle": {
-"message": "Obrigado por instalar o FastForward!"
-},
-"firstrunNoScript": {
-"message": "No entanto, parece que você está usando NoScript ou similar, com o qual FastForward não é compatível."
-},
-"version": {
-"message": "Versão"
-},
-"definitionsVersion": {
-"message": "Definições de desvios"
-},
-"changelog": {
-"message": "Registro de alterações"
-},
-"faq": {
-"message": "Perguntas frequentes (FAQ)"
-},
-"bypassCounter": {
-"message": "FastForward já desviou % sites para você."
-},
-"support": {
-"message": "Contribua para o FastForward."
-},
-"options": {
-"message": "Opções"
-},
-"optionsLink": {
-"message": "Alterar as opções do FastForward."
-},
-"optionsEnabled": {
-"message": "Ativar desvios de site."
-},
-"optionsNavigationDelay": {
-"message": "Desviar encurtadores de link após % segundo(s)."
-},
-"optionsTrackerBypass": {
-"message": "Desviar rastreadores"
-},
-"optionsInstantNavigationTrackers": {
-"message": "Desviar os rastreadores imediatamente."
-},
-"optionsBlockIPLoggers": {
-"message": "Bloquear registradores de IP."
-},
-"optionsCrowdBypass": {
-"message": "Desvio Público."
-},
-"optionsCrowdAutoOpen": {
-"message": "Abrir o desvio público após % segundo(s)."
-},
-"optionsCrowdAutoClose": {
-"message": "Fechar o desvio público após % segundo(s)."
-},
-"optionsNavigationDelayDescription": {
-"message": "Desviar automaticamente encurtadores de link, como Adf.ly, sub2unlock.com, após um determinado período de segundos. Recomendado: ativado, 0 segundos."
-},
-"optionsTrackerBypassDescription": {
-"message": "Desviar automaticamente rastreadores como t.co e goo.gl usando a API Unshorten.me. Recomendado: ativado."
-},
-"optionsInstantNavigationTrackersDescription": {
-"message": "Desviar os rastreadores imediata e automaticamente, em vez de fornecer um link para o destino. Recomendado: Ativado."
-},
-"optionsBlockIPLoggersDescription": {
-"message": "Se o FastForward não puder desvia um link que registrará seu IP, nós o bloquearemos. Recomendado: Ativado."
-},
-"optionsCrowdBypassDescription": {
-"message": "Desvio público: Use o banco de dados online de links desviados do FastForward para ignorar instantaneamente sites populares. Recomendado: Ativado."
-},
-"optionsCrowdAutoOpenDescription": {
-"message": "Abrir o desvio público em uma nova aba em vez da atual, para não perder o que você está vendo. Recomendado: Desativado"
-},
-"optionsCrowdAutoCloseDescription": {
-"message": "Fechar o desvio público após alguns segundos. Útil se a maioria dos sites que você visita tiver um link direto para download. Recomendado: Desativado"
-},
-"crowdBypassTempDisabledDescription": {
-"message": "Desvio público foi temporariamente desativado quando o FastForward foi atualizado. Por favor, reative-o."
-},
-"privacyPolicy": {
-"message": "Política de Privacidade"
-},
-"contributors": {
-"message": "Contribuidores"
-},
-"optionsUserscripts": {
-"message": "Desvios personalizadas"
-},
-"optionsUserscriptsDescription": {
-"message": "Este é um recurso avançado para os desenvolvedores criarem seus próprios scripts para contornar sites. Uma vez aperfeiçoados, eles podem ser enviados no GitHub para serem adicionados ao FastForward, para que estejam disponíveis para todos."
-},
-"beforeNavigate": {
-"message": "Você está quase no seu destino."
-},
-"beforeNavigateDestination": {
-"message": "Seu destino é $1"
-},
-"beforeNavigateTimer": {
-"message": "Você será redirecionado automaticamente em $1 segundos."
-},
-"beforeNavigateTimerSingular": {
-"message": "Você será redirecionado automaticamente em 1 segundo."
-},
-"beforeNavigateOptions": {
-"message": "Você deseja ser redirecionado instantaneamente ou em x segundos?"
-},
-"beforeNavigateInstant": {
-"message": "Você está sendo direcionado para $1"
-},
-"infoLinkvertise": {
-"message": "FastForward exige que você complete o captcha antes que possamos ignorar este site para você. Depois de fazer isso, podemos pular as etapas irritantes!"
-},
-"infoFileHoster": {
-"message": "Infelizmente, o servidor de download garantirá que você esperou antes de permitir o download do arquivo."
-},
-"infoOutdated": {
-"message": "Este site foi desviado por uma versão mais recente do FastForward."
-},
-"crowdWait": {
-"message": "Infelizmente, você é o primeiro a encontrar este link, mas depois de esperar, outros usuários do FastForward não precisarão mais."
-},
-"crowdDisabled": {
-"message": "Este site é desviado pelo desvio público, que você pode ativar nas opções."
-},
-"crowdBypassed": {
-"message": "Talvez você não precise esperar!"
-},
-"crowdBypassedInfo": {
-"message": "Outros usuários do FastForward já esperaram por você e relataram que isso leva a $1"
-},
-"crowdBypassedTimer": {
-"message": "Isto será aberto em uma nova aba em $1 segundos."
-},
-"crowdBypassedTimerSingular": {
-"message": "Isto será aberto em uma nova aba em 1 segundo."
-},
-"crowdCloseTimer": {
-"message": "Esta aba será fechada em $1 segundos."
-},
-"crowdCloseTimerSingular": {
-"message": "Esta aba será fechada em 1 segundo."
-},
-"cancel": {
-"message": "Cancelar."
-},
-"crowdBypassedOptions": {
-"message": "Deseja que isso seja aberto em uma nova aba instantaneamente ou em x segundos?"
-},
-"blockedTitle": {
-"message": "FastForward impediu que seu IP fosse registrado."
-},
-"blockedSubtitle": {
-"message": "Não deseja que o FastForward evite que pessoas mal-intencionadas obtenham seu IP?"
-},
-"optionsWhitelist": {
-"message": "Lista de liberados"
-},
-"optionsWhitelistDescription": {
-"message": "Uma lista de sites formatados como domínio.tld ou subdomínio.domínio.tld que não serão desviados pelo FastForward. Domínios separados com novas linhas. Use * como curinga."
-},
-"tempDisableCrowdBypassButton": {
-"message": "Desativar temporariamente o desvio público"
-},
-"tempDisableCrowdBypassDesc": {
-"message": "Isso não estava certo?"
-},
-"crowdBypassTempDisabled":{
-"message":"Desvio público foi temporariamente desativado"
-},
-"trackerBypass": {
-"message": "Desviando rastreador..."
-},
-"trackerBypassedError": {
-"message": "Ops! Algo deu errado. Redirecionando para o link original..."
-}
-
+	"appDesc": {
+		"message": "Não perca tempo com conformidades. O FastForward ultrapassa automaticamente encurtadores de links irritantes."
+	},
+	"firstrunTitle": {
+		"message": "Obrigado por instalar o FastForward!"
+	},
+	"firstrunNoScript": {
+		"message": "No entanto, parece que você está usando o NoScript ou algo similar, com o qual o FastForward não é compatível."
+	},
+	"version": {
+		"message": "Versão"
+	},
+	"definitionsVersion": {
+		"message": "Definições de Bypass"
+	},
+	"changelog": {
+		"message": "Registo de alterações"
+	},
+	"update": {
+		"message": "Verificar atualizações"
+	},
+	"updating": {
+		"message": "Baixando definições de bypass..."
+	},
+	"updateYes": {
+		"message": "Definições de bypass baixadas com sucesso."
+	},
+	"updateNo": {
+		"message": "Definições de bypass está atualizadas. "
+	},
+	"faq": {
+		"message": "Perguntas Frequentes (FAQ)"
+	},
+	"bypassCounter": {
+		"message": "O FastForward já ''Bypassou'' % sites para você."
+	},
+	"support": {
+		"message": "Apoie o FastForward."
+	},
+	"options": {
+		"message": "Opções"
+	},
+	"optionsLink": {
+		"message": "Alterar as opções do FastForward."
+	},
+	"optionsEnabled": {
+		"message": "Ativar bypass de websites."
+	},
+	"optionsNavigationDelay": {
+		"message": "Me leve aos destinos após % segundo(s). (Use 0 para ir instantaneamente.)"
+	},
+	"optionsTrackerBypass": {
+		"message": "Trackers de bypass (como bit.ly e t.co) usando Apimon.de."
+	},
+	"optionsInstantNavigationTrackers": {
+		"message": "Leve-me instantaneamente para destinos de rastreadores."
+	},
+	"optionsBlockIPLoggers": {
+		"message": "Bloqueie os registradores de IP se eles não puderem ser ignorados."
+	},
+	"optionsCrowdBypass": {
+		"message": "Dê e pegue o destino de encurtadores não-passáveis."
+	},
+	"optionsCrowdAutoOpen": {
+		"message": "Abrir destinos de colaboração coletiva em uma nova aba após % segundo(s). (0 = instantâneo)"
+	},
+	"optionsCrowdAutoClose": {
+		"message": "Fechar aba contendo destino de colaboração coletiva após visitá-lo por % segundo(s)."
+	},
+	"privacyPolicy": {
+		"message": "Política de Privacidade"
+	},
+	"contributors": {
+		"message": "Colaboradores"
+	},
+	"optionsUserscripts": {
+		"message": "Bypasses Personalizados"
+	},
+	"optionsUserscriptsDescription": {
+		"message": "Este é um recurso avançado para que os desenvolvedores criem seus próprios scripts para ignorar sites. Uma vez aperfeiçoados, eles podem ser enviados no GitHub para serem adicionados ao FastForward, então eles estarão disponíveis para todos."
+	},
+	"beforeNavigate": {
+		"message": "Você está quase no seu destino."
+	},
+	"beforeNavigateDestination": {
+		"message": "Seu destino é %"
+	},
+	"beforeNavigateUnsafe": {
+		"message": "No entanto, se você navegar agora, eles detectarão o FastForward."
+	},
+	"beforeNavigateUnsafeTimer": {
+		"message": "Você não será mais detectado em % segundos."
+	},
+	"beforeNavigateUnsafeTimerSingular": {
+		"message": "Você não será mais detectado em 1 segundo."
+	},
+	"beforeNavigateTimer": {
+		"message": "Você será redirecionado automaticamente em % segundos."
+	},
+	"beforeNavigateTimerSingular": {
+		"message": "Você será redirecionado automaticamente em 1 segundo."
+	},
+	"beforeNavigateOptions": {
+		"message": "Você quer ser redirecionado instantaneamente ou em x segundos?"
+	},
+	"beforeNavigateInstant": {
+		"message": "Você está sendo redirecionado para %"
+	},
+	"infoLinkvertise": {
+		"message": "Não nos é permitido contornar este site, mas negociamos a eliminação dos seus passos mais incômodos."
+	},
+	"infoFileHoster": {
+		"message": "Infelizmente, o servidor de download irá garantir que você esperou antes de lhe permitir baixar o arquivo"
+	},
+	"infoOutdated": {
+		"message": "Este site é ignorado por uma versão mais recente do FastForward."
+	},
+	"crowdWait": {
+		"message": "Infelizmente, você é o primeiro a encontrar este link, mas depois de esperar, outros usuários do FastForward não precisarão esperar também."
+	},
+	"crowdDisabled": {
+		"message": "Este site foi liberado por crowd bypass, que está desabilitado nas opções."
+	},
+	"crowdBypassed": {
+		"message": "Talvez você não precise esperar!"
+	},
+	"crowdBypassedInfo": {
+		"message": "Outros usuários do FastForward já esperaram para você e reportaram que isto leva para %"
+	},
+	"crowdBypassedTimer": {
+		"message": "Isto vai ser aberto numa nova janela em % segundos."
+	},
+	"crowdBypassedTimerSingular": {
+		"message": "Isto vai ser aberto numa nova janela em 1 segundo."
+	},
+	"crowdCloseTimer": {
+		"message": "Esta aba fechará em % segundos."
+	},
+	"crowdCloseTimerSingular": {
+		"message": "Esta aba fechará em 1 segundo."
+	},
+	"cancel": {
+		"message": "Cancelar."
+	},
+	"crowdBypassedIgnore": {
+		"message": "Isto não estava correto?"
+	},
+	"crowdBypassedOptions": {
+		"message": "Você quer que isto seja aberto numa nova janela instantaneamente ou em x segundos?"
+	},
+	"blockedTitle": {
+		"message": "O FastForward preveniu que seu IP fosse registrado."
+	},
+	"blockedSubtitle": {
+		"message": "Você quer que o FastForward previna que pessoas mal intencionadas obtenham seu IP?"
+	}
 }
