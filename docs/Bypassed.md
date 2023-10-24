@@ -526,8 +526,8 @@ This is a list of websites bypassed in the MV2 version of the extension.
 |           https://liveshootv.com           |   🛑   | 
 |            https://modebaca.com            |   ❌    |
 |            https://haipedia.com            |   ❌    |
-|          https://sekilastekno.com          |   ❌    |
-|             https://miuiku.com             |   ❌    |
+|          https://sekilastekno.com          |   ✅    |
+|             https://miuiku.com             |   ✅    |
 |            https://shrink.world            |   🛑   | 
 |         https://link.mymastah.xyz          |   🛑   | 
 |             https://sportif.id             |   ❌    |
@@ -587,3 +587,4 @@ This is a list of websites bypassed in the MV2 version of the extension.
 |               https://oko.sh               |   ✅    |
 |           https://bluetechno.net           |   ✅    |
 |             https://work.click             |   ✅    |
+|             https://vebma.com             |   ✅    |
