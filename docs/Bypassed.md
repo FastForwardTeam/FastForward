@@ -588,3 +588,4 @@ This is a list of websites bypassed in the MV2 version of the extension.
 |           https://bluetechno.net           |   ✅    |
 |             https://work.click             |   ✅    |
 |             https://vebma.com             |   ✅    |
+|             https://adtival.network             |   ✅    |
