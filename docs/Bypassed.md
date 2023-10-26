@@ -587,3 +587,4 @@ This is a list of websites bypassed in the MV2 version of the extension.
 |               https://oko.sh               |   ✅    |
 |           https://bluetechno.net           |   ✅    |
 |             https://work.click             |   ✅    |
+|             https://dilink.net             |   ✅    |
