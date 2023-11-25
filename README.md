@@ -1,3 +1,11 @@
+---
+
+# UNMAINTAINED. Use something else
+FastForward is no longer maintained by the developers and/or maintainers. We are having trouble maintaining this project and our lives.
+Sorry for this.
+
+---
+
 <div align="center">
 <h1><img src="https://fastforward.team/img/branding.png" width="256"></h1>
 <p> Don't waste your time with compliance. FastForward automatically skips annoying link shorteners. </p>
