@@ -82,6 +82,7 @@ This is a list of websites bypassed in the MV2 version of the extension.
 |           https://playhindi.com            |   🛑   |
 |           https://daominhha.com/           |   ✅    |
 |        https://bluemediafiles.com/         |   🛑   | 
+|        https://bluemediafile.site/         |   ✅   |
 |        https://pcgamestorrents.org/        |   ✅    |
 |          https://retrosping.net/           |   🛑   | 
 |          https://mydramalist.com/          |   ✅    | 
