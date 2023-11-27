@@ -53,7 +53,16 @@ function updateTrackerMessage(url) {
 }
 
 async function resolveTracker(url) {
+  //special case for out.reddit.com
+  const urlObj = new URL(url);
+  if (urlObj.host === 'out.reddit.com') {
+    const newUrl = urlObj.searchParams.get('url');
+    if (newUrl) updateTrackerMessage(newUrl);
+    else showError();
+  }
+
   url = url.replace(/(^\w+:|^)\/\//, '');
+
   try {
     const response = await fetch(`https://unshorten.me/json/${url}`);
     const data = await response.json();

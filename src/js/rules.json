@@ -287,7 +287,8 @@
 		"*://*.disq.us/url?url=*",
 		"*://rebrand.ly/*",
 		"*://rb.gy/*",
-		"*://buff.ly/*"
+		"*://buff.ly/*",
+		"*://out.reddit.com/*"
 	],
 	"tracker_force_http": [
 		"ow.ly",
