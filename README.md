@@ -1,8 +1,7 @@
 ---
 
-# UNMAINTAINED. Use something else
-FastForward is no longer maintained by the developers and/or maintainers. We are having trouble maintaining this project and our lives.
-Sorry for this.
+## We are actively looking for new maintainers to take over FastForward development
+Join the Discord if you can help
 
 ---
 
