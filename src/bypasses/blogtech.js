@@ -3,7 +3,6 @@ import BypassDefinition from './BypassDefinition.js';
 export default class BlogTechh extends BypassDefinition {
   constructor() {
     super();
-    // custom bypass required bases can be set here
   }
 
   execute() {

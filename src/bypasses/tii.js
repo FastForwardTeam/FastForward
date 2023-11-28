@@ -4,7 +4,6 @@ export default class TiiLa extends BypassDefinition {
   constructor() {
     super();
     this.ensure_dom = true;
-    // custom bypass required bases can be set here
   }
 
   execute() {
