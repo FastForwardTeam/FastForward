@@ -9,12 +9,12 @@ export default class TiiLa extends BypassDefinition {
   execute() {
     const urlObj = new URL(window.location.href)
     this.helpers.crowdQuery('tii.la', urlObj.pathname.slice(1)).then((dest) => {
-        this.helpers.crowdNavigate(dest);
+        this.helpers.crowdNavigate(dest)
       });
       /*keep checking for the button*/
-      setInterval(() => {
+    setInterval(() => {
         const button = document.querySelector("a.btn.btn-success.btn-lg.get-link");
-        if (button.href) {
+        if (button && button.href) {
             this.helpers.crowdContribute('tii.la', urlObj.pathname.slice(1), button.href)
             this.helpers.safelyNavigate(button.href)
         }
