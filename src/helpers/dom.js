@@ -247,7 +247,7 @@ export function crowdQuery(domain, path) {
   return new Promise((resolve, reject) => {
     const timeout = setTimeout(() => {
       reject(new Error('Timeout: crowd response not received'));
-    }, 5000); //5 sec timeout
+    }, 10000); //10 sec timeout
 
     document.addEventListener('ff53054c0e13_crowdResponse', function (event) {
       clearTimeout(timeout);
@@ -443,6 +443,13 @@ export async function bypassRequests(execution_method) {
     return Promise.resolve(result);
   };
 }
+/**
+ * Navigates to the specified URL. To be used for crowd sourced bypasses.
+ * @param {string} target - The target URL to navigate to.
+ */
+export function crowdNavigate(target) {
+  unsafelyNavigate(target, null, true);
+}
 
 export default {
   insertInfoBox,
@@ -451,6 +458,7 @@ export default {
   ffclipboard,
   crowdQuery,
   crowdContribute,
+  crowdNavigate,
   followAndContribute,
   unsafelyNavigate,
   parseTarget,
