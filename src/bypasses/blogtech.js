@@ -6,7 +6,6 @@ export default class BlogTechh extends BypassDefinition {
   }
 
   execute() {
-    console.log('blogtechh bypass running');
     this.helpers.awaitElement("button#getlink", button => {
         button.click()
     })
