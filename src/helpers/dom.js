@@ -493,6 +493,7 @@ export default {
   insertInfoBox,
   ensureDomLoaded,
   awaitElement,
+  watchForElement,
   ffclipboard,
   crowdQuery,
   crowdContribute,
