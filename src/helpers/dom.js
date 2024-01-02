@@ -182,16 +182,15 @@ export function awaitElement(elem, func) {
 }
 
 /**
- * Watch for an element to appear on the page and then call a function immediately. This is used to prevent the script from running if the element doesn't exist. Improved version of waitForElement.
+ * Watch for an element to appear on the page. This is used to prevent the script from running if the element doesn't exist. Improved version of waitForElement.
  * @param {string} e - The element to watch.
- * @param {function} f - The function to call.
+ * @returns {Promise<any>} A promise that resolves with the element.
  */
-export function watchForElement (selector, callback) {
+export function watchForElement (selector) {
   return new Promise(resolve => {
     const element = document.querySelector(selector)
     if (element) {
       console.log(`[FastForward] Element found: ${element} | Selector: ${selector}`)
-      callback(element)
       resolve(element)
       return
     }
@@ -199,7 +198,6 @@ export function watchForElement (selector, callback) {
     const observer = new MutationObserver(() => {
       Array.from(document.querySelectorAll(selector)).forEach(el => {
         console.log(`[FastForward] Element found: ${el} | Selector: ${selector}`)
-        callback(el)
         resolve(el)
         observer.disconnect()
       })
