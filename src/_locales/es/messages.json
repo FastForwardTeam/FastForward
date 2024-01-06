@@ -50,23 +50,44 @@
 	"optionsNavigationDelay": {
 		"message": "Llévame a mi página de destino después de % segundo(s)."
 	},
+	"optionsNavigationDelayDescription": {
+		"message": "Evadir automáticamente acortadores de enlaces, como Adf.ly, sub2unlock.com, etc.., después de cierta cantidad de segundos. Recomendación: Encendido, 0 segundos."
+	},
 	"optionsTrackerBypass": {
 		"message": "Evadir rastreadores (como bit.ly y t.co) usando Apimon.de."
+	},
+	"optionsTrackerBypassDescription": {
+		"message": "Evadir automáticamente trackers como t.co y goo.gl utilizando la API de Unshorten.me. Recomendación: Encendido."
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Llévame instantáneamente a los destinos de los rastreadores."
 	},
+	"optionsInstantNavigationTrackersDescription": {
+		"message": "Evadir los trackers automática e instantaneamente, en vez de recibir el enlace de destino. Recomendación: Encendido."
+	},
 	"optionsBlockIPLoggers": {
 		"message": "Bloquear registradores de IP si no pueden ser evadidos."
 	},
+	"optionsBlockIPLoggersDescription": {
+		"message": "Si FastForward no puede evadir un enlace que registrará tu IP, se bloqueará el enlace. Recomendación: Encendido."
+	},
 	"optionsCrowdBypass": {
-		"message": "Evasión múltiple: Dar y tomar los destinos de los acortadores que no se pueden evadir."
+		"message": "Evasión en grupo. Enviar URLs de rastreadores inevitables para otros usuarios, y recibir las de ellos."
+	},
+	"optionsCrowdBypassDescription": {
+		"message": "Utiliza la base de datos de FastForward para evadir enlaces que no se pueden evadir de forma automática cuyo destino ya ha sido descubierto por otro usuario. Recomendación: Encendido."
 	},
 	"optionsCrowdAutoOpen": {
 		"message": "Abrir los destinos que ya fueron descubiertos en una pestaña nueva después de % segundo(s)."
 	},
+	"optionsCrowdAutoOpenDescription": {
+		"message": "Abrir los destinos en una pestaña nueva para que no pierdas el lugar donde estabas. Recomendación: Apagado"
+	},
 	"optionsCrowdAutoClose": {
-		"message": "Cerrar la pestaña que contiene el destino descubierto después de % segundo(s) de haberlo visitado."
+		"message": "Cerrar la pestaña que contiene el destino después de % segundo(s) de haberlo visitado."
+	},
+	"optionsCrowdAutoCloseDescription": {
+		"message": "Cerrar la pestaña que contiene el destino tras unos segudnos. Util si la mayoría de sitios que visitas de este tipo son enlaces de descarga directa. Recomendación: Encendido."
 	},
 	"privacyPolicy": {
 		"message": "Política de privacidad"
@@ -90,10 +111,10 @@
 		"message": "Sin embargo, si navegas ahora, FastForward será detectado."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "Ya no serás detectado en % segundos."
+		"message": "No podrás ser detectado en % segundos."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
-		"message": "Ya no serás detectado en 1 segundo."
+		"message": "No podrás ser detectado en 1 segundo."
 	},
 	"beforeNavigateTimer": {
 		"message": "Serás redirigido automáticamente en % segundos."
@@ -114,13 +135,13 @@
 		"message": "Desafortunadamente, el servidor de descarga se asegurará de que hayas esperado antes de permitirte descargar el archivo."
 	},
 	"infoOutdated": {
-		"message": "Este sitio web ya fue evadido por una nueva versión de FastForward."
+		"message": "Este sitio web se puede evadir con la última versión de FastForward."
 	},
 	"crowdWait": {
 		"message": "Desafortunadamente, eres el primero en encontrar este enlace, pero después de haber esperado, otros usuarios de FastForward ya no tendrán que hacerlo."
 	},
 	"crowdDisabled": {
-		"message": "Este sitio web ya fue evadido por evasión múltiple, el cual puedes habilitar en las opciones."
+		"message": "Este sitio web se puede evadir por evasión multiple. Puedes activarlo en las opciones."
 	},
 	"crowdBypassed": {
 		"message": "¡Puede que no tengas que esperar!"
@@ -144,10 +165,10 @@
 		"message": "Cancelar"
 	},
 	"crowdBypassedIgnore": {
-		"message": "¿No era eso correcto?"
+		"message": "¿El enlace no era correcto?"
 	},
 	"crowdBypassedOptions": {
-		"message": "¿Quieres que esto se abra en una pestaña nueva al instante, o en x segundos?"
+		"message": "¿Quieres que esto se abra en una pestaña nueva al instante, o tras x segundos?"
 	},
 	"blockedTitle": {
 		"message": "FastForward impidió que tu IP se registrara."
