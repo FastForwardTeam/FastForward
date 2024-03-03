@@ -1,9 +1,22 @@
 > [!IMPORTANT]  
-> FastForward has been oficially unmaintained by it's developers. You can fork this project and continue the development. <br>
-> If you're looking for an alternative, we recommend: [bypass-all-shortlinks debloated (userscript)](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated) | [ads-bypasser (userscript)](https://adsbypasser.github.io) <br>
-> Also a plus, if you have an adblocker on your browser: [yokoffing's filterlists](https://github.com/yokoffing/filterlists) | [Actually Legitimate URL Shortener Tool](https://github.com/DandelionSprout/adfilt/blob/master/LegitimateURLShortener.txt) <br>
-> If the link you got can't be skipped, there is surely another way to get to your destination.<br> <br>
-> maybe give the devs a hug, they all deserve one: [AliahX](https://github.com/AliahX) | [reashetyrr](https://github.com/reashetyrr) | [0xc60f](https://github.com/0xc60f) | [jess <3](https://github.com/undeadjess) | [NotAProton](https://github.com/NotAProton) | [lem6ns](https://github.com/lem6ns) | [driedpampas](https://github.com/driedpampas) | [lostdusty](https://github.com/lostdusty)
+> FastForward is no longer being actively maintained. <br>
+> You can fork this project and continue the development if you wish, or contact @undeadjess to take over this repo. <br>
+> We are still accepting some pull requests! <br> <br>
+> If you're looking for an alternative, we recommend: [bypass-all-shortlinks debloated (userscript)](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated) or [ads-bypasser (userscript)](https://adsbypasser.github.io). <br>
+> If you have an adblocker on your browser, these filter lists can help: [yokoffing's filterlists](https://github.com/yokoffing/filterlists) | [Actually Legitimate URL Shortener Tool](https://github.com/DandelionSprout/adfilt/blob/master/LegitimateURLShortener.txt). <br> <br>
+> The Croud-Bypass server is still running, you can see the api documentation [here](https://github.com/FastForwardTeam/Server/wiki), and anyone is free to use it. <br> <br>
+> Maybe give the devs a hug, they all deserve one:
+> - [0xc60f](https://github.com/0xc60f)
+> - [AliahX](https://github.com/AliahX)
+> - [driedpampas](https://github.com/driedpampas)
+> - [jess <3](https://github.com/undeadjess)
+> - [lem6ns](https://github.com/lem6ns)
+> - [lostdusty](https://github.com/lostdusty)
+> - [NotAProton](https://github.com/NotAProton)
+> - [reashetyrr](https://github.com/reashetyrr) <br> <br>
+>
+> Thanks for your support over the years! <br>
+> The FastForward Team <3
 
 ---
 
