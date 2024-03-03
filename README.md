@@ -1,8 +1,9 @@
 > [!IMPORTANT]  
 > FastForward has been oficially unmaintained by it's developers. You can fork this project and continue the development. <br>
 > If you're looking for an alternative, we recommend: [bypass-all-shortlinks debloated (userscript)](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated) | [ads-bypasser (userscript)](https://adsbypasser.github.io) <br>
-> Also a plus, if you have an adblocker on your browser: [yokoffing's filterlists](https://github.com/yokoffing/filterlists) | [Actually Legitimate URL Shortener Tool](https://github.com/DandelionSprout/adfilt/blob/master/LegitimateURLShortener.txt) <br> <br>
-> maybe give the devs a hug, they all deserve one: [AliahX](https://github.com/AliahX) | [reashetyrr](https://github.com/reashetyrr) | [0xc60f](https://github.com/0xc60f) | [jess <3](https://github.com/undeadjess) | [NotAProton](https://github.com/NotAProton)
+> Also a plus, if you have an adblocker on your browser: [yokoffing's filterlists](https://github.com/yokoffing/filterlists) | [Actually Legitimate URL Shortener Tool](https://github.com/DandelionSprout/adfilt/blob/master/LegitimateURLShortener.txt) <br>
+> If the link you got can't be skipped, there is surely another way to get to your destination.<br> <br>
+> maybe give the devs a hug, they all deserve one: [AliahX](https://github.com/AliahX) | [reashetyrr](https://github.com/reashetyrr) | [0xc60f](https://github.com/0xc60f) | [jess <3](https://github.com/undeadjess) | [NotAProton](https://github.com/NotAProton) | [lem6ns](https://github.com/lem6ns) | [driedpampas](https://github.com/driedpampas) | [lostdusty](https://github.com/lostdusty)
 
 ---
 
