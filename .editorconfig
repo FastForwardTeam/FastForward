@@ -1,0 +1,17 @@
+# VS Code user, install: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
+# Sublime Text user, install: https://github.com/sindresorhus/editorconfig-sublime#readme
+# See https://editorconfig.org/ for more information.
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+insert_final_newline = true
+
+[*.md]
+indent_size = 2
+trim_trailing_whitespace = false
