@@ -4,7 +4,7 @@
 > We are still accepting some pull requests! <br> <br>
 > If you're looking for an alternative, we recommend: [bypass-all-shortlinks debloated (userscript)](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated) or [ads-bypasser (userscript)](https://adsbypasser.github.io). <br>
 > If you have an adblocker on your browser, these filter lists can help: [yokoffing's filterlists](https://github.com/yokoffing/filterlists) | [Actually Legitimate URL Shortener Tool](https://github.com/DandelionSprout/adfilt/blob/master/LegitimateURLShortener.txt). <br> <br>
-> The Croud-Bypass server is still running, you can see the api documentation [here](https://github.com/FastForwardTeam/Server/wiki), and anyone is free to use it. <br> <br>
+> The Crowd-Bypass server is still running, you can see the api documentation [here](https://github.com/FastForwardTeam/Server/wiki), and anyone is free to use it. <br> <br>
 > Maybe give the devs a hug, they all deserve one:
 > - [0xc60f](https://github.com/0xc60f)
 > - [AliahX](https://github.com/AliahX)
