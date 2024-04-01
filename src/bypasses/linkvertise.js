@@ -7,7 +7,7 @@ export default class Linkvertise extends BypassDefinition {
   }
 
   execute () {
-    if (window.location.href.toString().includes('?r=')) {
+    if (/[\?&]r=/.test(window.location.href.toString())) {
       const urlParams = new URLSearchParams(window.location.search)
       const r = urlParams.get('r')
       this.helpers.safelyNavigate(atob(decodeURIComponent(r)))
