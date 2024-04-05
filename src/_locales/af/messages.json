@@ -33,7 +33,7 @@
 		"message": "Meer algemene kwessies (MAK)"
 	},
 	"bypassCounter": {
-		"message": "FastForward het reeds% -werwe vir u omseil."
+		"message": "FastForward het reeds$1 -werwe vir u omseil."
 	},
 	"support": {
 		"message": "Maak'n bydrae tot die Universele shunt"
@@ -48,7 +48,7 @@
 		"message": "In staat stel om die web site afleidings."
 	},
 	"optionsNavigationDelay": {
-		"message": "Neem my na% sekonde (s) na bestemmings."
+		"message": "Neem my na$1 sekonde (s) na bestemmings."
 	},
 	"optionsTrackerBypass": {
 		"message": "Drif te spoorsnyers (soos bietjie.ly en t.co) deur gebruik te maak van Apimon.de ."
@@ -63,10 +63,10 @@
 		"message": "Ruil die bestemmings van nie-circumventable shorteners"
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Oop skare-verkry bestemmings in'n nuwe blad na % tweede(s)."
+		"message": "Oop skare-verkry bestemmings in'n nuwe blad na $1 tweede(s)."
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Naby blad met die skare-verkry bestemming na % tweede(s) van die besoek van dit."
+		"message": "Naby blad met die skare-verkry bestemming na $1 tweede(s) van die besoek van dit."
 	},
 	"privacyPolicy": {
 		"message": "Privaatheidsbeleid"
@@ -84,19 +84,19 @@
 		"message": "Jy is amper by jou bestemming."
 	},
 	"beforeNavigateDestination": {
-		"message": "Jou bestemming is %"
+		"message": "Jou bestemming is $1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "Egter, as jy navigeer nou, hulle sal opspoor Universele Omseil."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "Jy sal nie meer opgespoor word in % sekondes."
+		"message": "Jy sal nie meer opgespoor word in $1 sekondes."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "Jy sal nie meer opgespoor word in 1 sekonde."
 	},
 	"beforeNavigateTimer": {
-		"message": "Jy sal outomaties herlei word in % sekondes."
+		"message": "Jy sal outomaties herlei word in $1 sekondes."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Jy sal outomaties herlei word in 1 sekonde."
@@ -105,7 +105,7 @@
 		"message": "Wil jy herlei word onmiddellik of in die x sekondes?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Jy word navigator te %"
+		"message": "Jy word navigator te $1"
 	},
 	"infoLinkvertise": {
 		"message": "Ons mag nie hierdie webwerf omseil nie, maar ons het onderhandel oor die verwydering van hul mees irriterende stappe."
@@ -126,16 +126,16 @@
 		"message": "Jy kan nie te wag!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Ander Universele Omseil gebruikers het reeds wag vir jou en berig dat dit lei tot %"
+		"message": "Ander Universele Omseil gebruikers het reeds wag vir jou en berig dat dit lei tot $1"
 	},
 	"crowdBypassedTimer": {
-		"message": "Dit sal oopgemaak word in'n nuwe blad in % sekondes."
+		"message": "Dit sal oopgemaak word in'n nuwe blad in $1 sekondes."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Dit sal oopgemaak word in'n nuwe blad in 1 sekonde."
 	},
 	"crowdCloseTimer": {
-		"message": "Hierdie blad sal sluit in % sekondes."
+		"message": "Hierdie blad sal sluit in $1 sekondes."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "Hierdie blad sal sluit in 1 sekonde."

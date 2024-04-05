@@ -21,7 +21,7 @@
 		"message": "Frequently Asked Questions (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "FastForward has already bypassed % sites for you."
+		"message": "FastForward has already bypassed $1 sites for you."
 	},
 	"support": {
 		"message": "Contribute to FastForward."
@@ -36,7 +36,7 @@
 		"message": "Enable website bypasses."
 	},
 	"optionsNavigationDelay": {
-		"message": "Bypass Link Shorteners after % second(s)."
+		"message": "Bypass Link Shorteners after $1 second(s)."
 	},
 	"optionsTrackerBypass": {
 		"message": "Bypass trackers"
@@ -51,10 +51,10 @@
 		"message": "Crowd Bypass."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Open Crowd destinations after % second(s)."
+		"message": "Open Crowd destinations after $1 second(s)."
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Close Crowd destination after % second(s)."
+		"message": "Close Crowd destination after $1 second(s)."
 	},
 	"optionsNavigationDelayDescription": {
 		"message": "Automatically bypass link shorteners such as Adf.ly, sub2unlock.com, after a certain amount of seconds. Recommended: On, 0 seconds."

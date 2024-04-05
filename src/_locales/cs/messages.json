@@ -33,7 +33,7 @@
 		"message": "Často kladené otázky (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "FastForward již pro vás obešel % stránek."
+		"message": "FastForward již pro vás obešel $1 stránek."
 	},
 	"support": {
 		"message": "Přispějte k FastForward."
@@ -48,7 +48,7 @@
 		"message": "Povolit obcházení zkracovačů."
 	},
 	"optionsNavigationDelay": {
-		"message": "Přesuňte mě do destinací po % sekundách."
+		"message": "Přesuňte mě do destinací po $1 sekundách."
 	},
 	"optionsTrackerBypass": {
 		"message": "Přeskočit sledovače (jako bit.ly a t.co) pomocí Apimon.de."
@@ -63,10 +63,10 @@
 		"message": "Dávejte a berte destinace stránek které nejde obejít pomocí CrowdBypass"
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Otevřít crowd-sourced cíl v nové záložce po % vteřinách."
+		"message": "Otevřít crowd-sourced cíl v nové záložce po $1 vteřinách."
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Zavřít záložku obsahující crowd-sorced cíl po % vteřinách po jejím navštívení"
+		"message": "Zavřít záložku obsahující crowd-sorced cíl po $1 vteřinách po jejím navštívení"
 	},
 	"privacyPolicy": {
 		"message": "Zásady ochrany osobních údajů"
@@ -84,19 +84,19 @@
 		"message": "Jste téměř na destinaci."
 	},
 	"beforeNavigateDestination": {
-		"message": "Destinace tohoto zkráceného odkazu je %"
+		"message": "Destinace tohoto zkráceného odkazu je $1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "Jestliže obejdete stránku teď, tak FastFoward detekují."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "Už nebudete detekován v % sekundách"
+		"message": "Už nebudete detekován v $1 sekundách"
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "Už nebudete detekován v 1 sekundě"
 	},
 	"beforeNavigateTimer": {
-		"message": "Budete automaticky přesměrován za % sekund."
+		"message": "Budete automaticky přesměrován za $1 sekund."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Budete automaticky přesměrován za 1 sekundu."
@@ -105,7 +105,7 @@
 		"message": "Chcete být přesměrován hned, nebo až za X sekund?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Jste přesměrováni na %"
+		"message": "Jste přesměrováni na $1"
 	},
 	"infoLinkvertise": {
 		"message": "Nejsme oprávněni obejít tento web, ale zajistili jsme odstranění jejich nejotravnějších kroků."
@@ -126,16 +126,16 @@
 		"message": "Nemusel byste čekat!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Ostatní uživatelé FastForward na vás čekali a náhlasili že link vede k %"
+		"message": "Ostatní uživatelé FastForward na vás čekali a náhlasili že link vede k $1"
 	},
 	"crowdBypassedTimer": {
-		"message": "Toto bude otevřeno na nové kartě za % sekund."
+		"message": "Toto bude otevřeno na nové kartě za $1 sekund."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Toto bude otevřeno na nové kartě za 1 sekundu."
 	},
 	"crowdCloseTimer": {
-		"message": "Tato karta se uzavře za % sekund."
+		"message": "Tato karta se uzavře za $1 sekund."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "Tato karta se zavře za 1 sekundu."

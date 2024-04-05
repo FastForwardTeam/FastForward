@@ -33,7 +33,7 @@
 		"message": "Häufig gestellte Fragen (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "FastForward hat bereits % Seiten für dich umgangen."
+		"message": "FastForward hat bereits $1 Seiten für dich umgangen."
 	},
 	"support": {
 		"message": "Unterstütze FastForward."
@@ -48,7 +48,7 @@
 		"message": "Aktiviere Webseiten-Umgehungen."
 	},
 	"optionsNavigationDelay": {
-		"message": "Bring mich nach % Sekunde(n) ans Ziel."
+		"message": "Bring mich nach $1 Sekunde(n) ans Ziel."
 	},
 	"optionsTrackerBypass": {
 		"message": "Umgehe Tracker (wie bit.ly und t.co) mit Apimon.de."
@@ -63,10 +63,10 @@
 		"message": "Crowd Bypass: Gebe und nehme die Ziel-Urls von unumgänglichen Linkkürzern."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Nutzer-geteilte Ziele nach % Sekunde(n) in einem neuen Tab öffnen."
+		"message": "Nutzer-geteilte Ziele nach $1 Sekunde(n) in einem neuen Tab öffnen."
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Schließe den Tab, der das Nuzer-geteilte Ziel beinhaltet % Sekunde(n) nachdem das Ziel geöffnet wurde."
+		"message": "Schließe den Tab, der das Nuzer-geteilte Ziel beinhaltet $1 Sekunde(n) nachdem das Ziel geöffnet wurde."
 	},
 	"privacyPolicy": {
 		"message": "Datenschutzerklärung"
@@ -84,19 +84,19 @@
 		"message": "Du bist fast am Ziel."
 	},
 	"beforeNavigateDestination": {
-		"message": "Dein Ziel ist %"
+		"message": "Dein Ziel ist $1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "Jedoch, wenn du jetzt navigierst, wird FastForward erkannt."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "Du wirst nicht mehr erkannt in % Sekunden."
+		"message": "Du wirst nicht mehr erkannt in $1 Sekunden."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "Du wirst nicht mehr erkannt in einer Sekunde."
 	},
 	"beforeNavigateTimer": {
-		"message": "Du wirst in % Sekunden automatisch weitergeleitet."
+		"message": "Du wirst in $1 Sekunden automatisch weitergeleitet."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Du wirst in einer Sekunde automatisch weitergeleitet."
@@ -105,7 +105,7 @@
 		"message": "Möchtest du sofort oder in x Sekunden weitergeleitet werden?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Du wirst navigiert zu %"
+		"message": "Du wirst navigiert zu $1"
 	},
 	"infoLinkvertise": {
 		"message": "Wir dürfen diese Website nicht umgehen, aber wir haben die Beseitigung der nervigsten Schritte ausgehandelt."
@@ -126,16 +126,16 @@
 		"message": "Du musst vielleicht nicht warten!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Andere FastForward-Nutzer haben bereits für dich gewartet und gemeldet, dass das zu % führt."
+		"message": "Andere FastForward-Nutzer haben bereits für dich gewartet und gemeldet, dass das zu $1 führt."
 	},
 	"crowdBypassedTimer": {
-		"message": "Dies wird in % Sekunden in einem neuen Tab geöffnet."
+		"message": "Dies wird in $1 Sekunden in einem neuen Tab geöffnet."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Dies wird in einer Sekunde in einem neuen Tab geöffnet."
 	},
 	"crowdCloseTimer": {
-		"message": "Dieser Tab wird in % Sekunden geschlossen."
+		"message": "Dieser Tab wird in $1 Sekunden geschlossen."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "Dieser Tab wird in einer Sekunde geschlossen."

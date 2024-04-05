@@ -33,7 +33,7 @@
 		"message": "Pyetjet e bëra më shpesh (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "Bypass Universal tashmë ka anashkaluar% faqet për ju."
+		"message": "Bypass Universal tashmë ka anashkaluar$1 faqet për ju."
 	},
 	"support": {
 		"message": "Kontriboni në Bypass Universal."
@@ -48,7 +48,7 @@
 		"message": "Aktivizo anashkalimet e faqes në internet."
 	},
 	"optionsNavigationDelay": {
-		"message": "Më çoni në destinacione pas% sekondë (s)."
+		"message": "Më çoni në destinacione pas$1 sekondë (s)."
 	},
 	"optionsTrackerBypass": {
 		"message": "Ndjekës të anashkalimeve (të tilla si bit.ly dhe t.co) duke përdorur Apimon.de."
@@ -63,10 +63,10 @@
 		"message": "Crowd Bypass: Jepni dhe merrni destinacionet e shkurtuesve të pakontestueshëm."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Hapni destinacionet me burim të turmës në një skedë të re pas% sekondës (a)."
+		"message": "Hapni destinacionet me burim të turmës në një skedë të re pas$1 sekondës (a)."
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Close tab containing the crowd-sourced destination after % second(s) of visiting it."
+		"message": "Close tab containing the crowd-sourced destination after $1 second(s) of visiting it."
 	},
 	"privacyPolicy": {
 		"message": "Politika e privatësisë"
@@ -84,19 +84,19 @@
 		"message": "Ju jeni pothuajse në destinacionin tuaj."
 	},
 	"beforeNavigateDestination": {
-		"message": "Destinacioni juaj është%"
+		"message": "Destinacioni juaj është$1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "Sidoqoftë, nëse navigoni tani, ata do të zbulojnë FastForward."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "Ju nuk do të zbuloheni më në% sekonda."
+		"message": "Ju nuk do të zbuloheni më në$1 sekonda."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "Ju nuk do të zbuloheni më në 1 sekondë."
 	},
 	"beforeNavigateTimer": {
-		"message": "Do të ridrejtoheni automatikisht në% sekonda."
+		"message": "Do të ridrejtoheni automatikisht në$1 sekonda."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Do të ridrejtoheni automatikisht në 1 sekondë."
@@ -105,7 +105,7 @@
 		"message": "Dëshironi të ridrejtoheni menjëherë ose në x sekonda?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Ju jeni duke u lundruar në%"
+		"message": "Ju jeni duke u lundruar në$1"
 	},
 	"infoLinkvertise": {
 		"message": "Nuk na lejohet të anashkalojmë këtë faqe interneti por kemi negociuar heqjen e hapave të tyre më të bezdisshëm."
@@ -126,16 +126,16 @@
 		"message": "Ndoshta nuk duhet të prisni!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Përdoruesit e tjerë të Bypass Universal tashmë kanë pritur për ju dhe kanë raportuar se kjo çon në%"
+		"message": "Përdoruesit e tjerë të Bypass Universal tashmë kanë pritur për ju dhe kanë raportuar se kjo çon në$1"
 	},
 	"crowdBypassedTimer": {
-		"message": "Kjo do të hapet në një skedë të re brenda% sekondave."
+		"message": "Kjo do të hapet në një skedë të re brenda$1 sekondave."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Kjo do të hapet në një skedë të re në 1 sekondë."
 	},
 	"crowdCloseTimer": {
-		"message": "Kjo skedë do të mbyllet në% sekonda."
+		"message": "Kjo skedë do të mbyllet në$1 sekonda."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "Kjo skedë do të mbyllet në 1 sekondë."

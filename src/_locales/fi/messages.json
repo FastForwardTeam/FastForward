@@ -33,7 +33,7 @@
 		"message": "Usein Kysytyt Kysymykset (UKK)"
 	},
 	"bypassCounter": {
-		"message": "FastForward on ohittanut % sivuja sinulle."
+		"message": "FastForward on ohittanut $1 sivuja sinulle."
 	},
 	"support": {
 		"message": "Tue FastForwardia"
@@ -48,7 +48,7 @@
 		"message": "Aktivoi nettisivustojen ohitus."
 	},
 	"optionsNavigationDelay": {
-		"message": "Vie minut ohitettuihin nettisivustoihin % sekunnin jälkeen."
+		"message": "Vie minut ohitettuihin nettisivustoihin $1 sekunnin jälkeen."
 	},
 	"optionsTrackerBypass": {
 		"message": "Estä seurantapalvelimet (kuten bit.ly ja t.co) käyttäen Apimon.de palvelua."
@@ -63,10 +63,10 @@
 		"message": "Joukko Ohitus: Anna ja ota ohittamattomien lyhentäjien määränpäät."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Avaa joukoitetut kohteet uudessa välilehdessä % sekuntin jälkeen."
+		"message": "Avaa joukoitetut kohteet uudessa välilehdessä $1 sekuntin jälkeen."
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Sulje joukoitettu välilehti % sekunnin jälkeen käytyäsi siellä."
+		"message": "Sulje joukoitettu välilehti $1 sekunnin jälkeen käytyäsi siellä."
 	},
 	"privacyPolicy": {
 		"message": "Tietosuojakäytäntö"
@@ -84,19 +84,19 @@
 		"message": "Olet melkein määränpäässäsi."
 	},
 	"beforeNavigateDestination": {
-		"message": "Sinun määränpääsi on %."
+		"message": "Sinun määränpääsi on $1."
 	},
 	"beforeNavigateUnsafe": {
 		"message": "Jos kuitenkin navigoit nyt, he havaitsevat FastForwardin."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "Sinua ei enää havaita % sekunnin kuluttua."
+		"message": "Sinua ei enää havaita $1 sekunnin kuluttua."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "Sinua ei enää havaita sekuntin kuluttua."
 	},
 	"beforeNavigateTimer": {
-		"message": "Sinut uudelleenohjataan automaattisesti % sekuntin päästä."
+		"message": "Sinut uudelleenohjataan automaattisesti $1 sekuntin päästä."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Sinut uudelleenohjataan automaattisesti yhdessä sekunnissa."
@@ -105,7 +105,7 @@
 		"message": "Haluatko, että sinut uudelleenohjataan heti tai x sekunnissa?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Sinua ohjataan nettisivulle %"
+		"message": "Sinua ohjataan nettisivulle $1"
 	},
 	"infoLinkvertise": {
 		"message": "Emme saa ohittaa tätä verkkosivustoa, mutta olemme neuvotelleet heidän ärsyttävimpien vaiheidensa poistamisesta."
@@ -126,16 +126,16 @@
 		"message": "Sinun ei välttämättä tarvitse odottaa!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Toiset FastForwardin käyttäjät ovat entuudestaan odottaneet sinulle ja ilmoittaneet, että tämä vie %"
+		"message": "Toiset FastForwardin käyttäjät ovat entuudestaan odottaneet sinulle ja ilmoittaneet, että tämä vie $1"
 	},
 	"crowdBypassedTimer": {
-		"message": "Tämä tullaan avaamaan uudessa välilehdessä % sekunnin kuluttua."
+		"message": "Tämä tullaan avaamaan uudessa välilehdessä $1 sekunnin kuluttua."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Tämä tullaan avaamaan uudessa välilehdessä yhden sekunnin kuluttua."
 	},
 	"crowdCloseTimer": {
-		"message": "Tämä välilehti sulkeutuu % sekunnin kuluttua."
+		"message": "Tämä välilehti sulkeutuu $1 sekunnin kuluttua."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "Tämä välilehti sulkeutuu yhden sekunnin kuluttua."

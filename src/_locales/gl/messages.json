@@ -33,7 +33,7 @@
 		"message": "Preguntas Frecuentes (PF)"
 	},
 	"bypassCounter": {
-		"message": "FastForward saltou % sitios por ti."
+		"message": "FastForward saltou $1 sitios por ti."
 	},
 	"support": {
 		"message": "Axudar a FastForward"
@@ -48,7 +48,7 @@
 		"message": "Activar saltos nos sitios web."
 	},
 	"optionsNavigationDelay": {
-		"message": "Levarme ao destino despois de % segundo(s)."
+		"message": "Levarme ao destino despois de $1 segundo(s)."
 	},
 	"optionsTrackerBypass": {
 		"message": "Saltar rastreadores (como bit.ly e t.co) usando Apimon.de."
@@ -63,10 +63,10 @@
 		"message": "Crowd Bypass: Dar e tomar os destinos dos acurtadores que non se poden saltar."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Abrir os destinos que xa foron descubertos nunha nova lapela despois de % segundo(s)."
+		"message": "Abrir os destinos que xa foron descubertos nunha nova lapela despois de $1 segundo(s)."
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Pechar a lapela que contén o destino descuberto despois de % segundo(s) de visitalo."
+		"message": "Pechar a lapela que contén o destino descuberto despois de $1 segundo(s) de visitalo."
 	},
 	"privacyPolicy": {
 		"message": "Política de privacidade"
@@ -84,19 +84,19 @@
 		"message": "Xa casi estás!"
 	},
 	"beforeNavigateDestination": {
-		"message": "O teu destino é %s"
+		"message": "O teu destino é $1s"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "Non obstante, se navegas agora, detectarán FastForward."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "Xa non serás detectado dentro de % segundos."
+		"message": "Xa non serás detectado dentro de $1 segundos."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "Xa non serás detectado dentro de 1 segundo."
 	},
 	"beforeNavigateTimer": {
-		"message": "Serás enviado automáticamente en % segundos."
+		"message": "Serás enviado automáticamente en $1 segundos."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Serás enviado automáticamente en 1 segundo."
@@ -105,7 +105,7 @@
 		"message": "Queres ser redirixido inmediatamente ou en x segundos?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Estás sendo redirixido a %"
+		"message": "Estás sendo redirixido a $1"
 	},
 	"infoFileHoster": {
 		"message": "Desafortunadamente, o servidor de descarga asegurarase de que esperaches antes de deixarche descargar o ficheiro."
@@ -123,16 +123,16 @@
 		"message": "Pode que non teñas que esperar!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Outros usuarios de FastForward xa esperaron por ti e notificaron que dirixe a %"
+		"message": "Outros usuarios de FastForward xa esperaron por ti e notificaron que dirixe a $1"
 	},
 	"crowdBypassedTimer": {
-		"message": "Será aberto nunha nova pestaña en % segundos."
+		"message": "Será aberto nunha nova pestaña en $1 segundos."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Será aberto nunha nova pestaña en 1 segundo."
 	},
 	"crowdCloseTimer": {
-		"message": "Esta lapela pecharase en % segundos."
+		"message": "Esta lapela pecharase en $1 segundos."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "Esta lapela pecharase en 1 segundo."

@@ -33,7 +33,7 @@
 		"message": "Ofte Stilte Spørsmål (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "FastForward har allerede forbigått % nettsteder for deg."
+		"message": "FastForward har allerede forbigått $1 nettsteder for deg."
 	},
 	"support": {
 		"message": "Støtt FastForward."
@@ -48,7 +48,7 @@
 		"message": "Slå på nettside bypass."
 	},
 	"optionsNavigationDelay": {
-		"message": "Ta meg til destinasjoner etter % sekund(er). (Bruk 0 for å navigere øyeblikkelig.)"
+		"message": "Ta meg til destinasjoner etter $1 sekund(er). (Bruk 0 for å navigere øyeblikkelig.)"
 	},
 	"optionsTrackerBypass": {
 		"message": "Omgå for trackere (for eksempel bit.ly og t.co) ved å bruke Apimon.de."
@@ -63,7 +63,7 @@
 		"message": "Gi og ta ankomstpunktene til upasserbare forkortere."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Åpne publikumsdestinasjoner i en ny fane etter % sekund(er). (0 = øyeblikkelig.)"
+		"message": "Åpne publikumsdestinasjoner i en ny fane etter $1 sekund(er). (0 = øyeblikkelig.)"
 	},
 	"privacyPolicy": {
 		"message": "Privatlivsretningslinjer"
@@ -78,10 +78,10 @@
 		"message": "Du er nesten i destinasjonen din."
 	},
 	"beforeNavigateDestination": {
-		"message": "Destinasjonen din er %"
+		"message": "Destinasjonen din er $1"
 	},
 	"beforeNavigateTimer": {
-		"message": "Du blir omdirigert automatisk om % sekunder."
+		"message": "Du blir omdirigert automatisk om $1 sekunder."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Du blir omdirigert automatisk i løpet av 1 sekund."
@@ -99,10 +99,10 @@
 		"message": "Du vil kanskje ikke måtte vente!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Andre FastForward-brukere har allerede ventet på deg, og har meldt ifra om at dette fører til %"
+		"message": "Andre FastForward-brukere har allerede ventet på deg, og har meldt ifra om at dette fører til $1"
 	},
 	"crowdBypassedTimer": {
-		"message": "Dette åpnes i en ny fane om % sekunder."
+		"message": "Dette åpnes i en ny fane om $1 sekunder."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Dette åpnes i en ny fane om 1 sekund."

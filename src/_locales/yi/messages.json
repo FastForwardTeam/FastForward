@@ -33,7 +33,7 @@
 		"message": "אָפט געשטעלטע פֿראגן"
 	},
 	"bypassCounter": {
-		"message": "וניווערסאַל בייפּאַסס האט דיווערטיד% זייטלעך פֿאַר אי."
+		"message": "וניווערסאַל בייפּאַסס האט דיווערטיד$1 זייטלעך פֿאַר אי."
 	},
 	"support": {
 		"message": "הילף וניווערסאַל דייווערזשאַן."
@@ -60,10 +60,10 @@
 		"message": "gebn aun nemen di destaneyshanz fun anbaspasabal shorterz."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "\nעפֿענען מענטשן-סאָורסעד דעסטאַניישאַנז אין אַ נייַ קוויטל נאָך% סעקונדעס.\nefenen mentshn-soursed destaneyshanz in a nay kvitl nokh% sekundes."
+		"message": "\nעפֿענען מענטשן-סאָורסעד דעסטאַניישאַנז אין אַ נייַ קוויטל נאָך$1 סעקונדעס.\nefenen mentshn-soursed destaneyshanz in a nay kvitl nokh$1 sekundes."
 	},
 	"optionsCrowdAutoClose": {
-		"message": "\nנאָענט קוויטל מיט די מאַסע-סאָורסעד דעסטיניישאַן נאָך% סעקונדעס פון איר באזוכן.\nnoent kvitl mit di mase-soursed destineyshan nokh% sekundes fun ir bazukhn."
+		"message": "\nנאָענט קוויטל מיט די מאַסע-סאָורסעד דעסטיניישאַן נאָך$1 סעקונדעס פון איר באזוכן.\nnoent kvitl mit di mase-soursed destineyshan nokh$1 sekundes fun ir bazukhn."
 	},
 	"privacyPolicy": {
 		"message": "\nprivatkeyt politik"
@@ -81,19 +81,19 @@
 		"message": "איר'רע קימאַט בייַ דיין דעסטיניישאַן.\nir're kimat bay deyn destineyshan."
 	},
 	"beforeNavigateDestination": {
-		"message": "דיין דעסטיניישאַן איז%\ndeyn destineyshan iz%"
+		"message": "דיין דעסטיניישאַן איז$1\ndeyn destineyshan iz$1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "\nאויב איר נאַוויגירן איצט, זיי וועלן דעטעקט וניווערסאַל בייפּאַס.\naoyb ir navigirn itst, zey veln detekt universal beypas."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "ir vet nit mer zeyn ditektad in% sekundes.\n"
+		"message": "ir vet nit mer zeyn ditektad in$1 sekundes.\n"
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "\nאיר וועט ניט מער זיין דיטעקטאַד אין 1 סעקונדע.\nir vet nit mer zeyn ditektad in 1 sekunde."
 	},
 	"beforeNavigateTimer": {
-		"message": "איר וועט זיין רידערעקטיד אויטאָמאַטיש אין% סעקונדעס.\nir vet zeyn riderektid aoytomatish in% sekundes."
+		"message": "איר וועט זיין רידערעקטיד אויטאָמאַטיש אין$1 סעקונדעס.\nir vet zeyn riderektid aoytomatish in$1 sekundes."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "איר וועט זיין רידערעקטיד אויטאָמאַטיש אין 1 סעקונדע.\nir vet zeyn riderektid aoytomatish in 1 sekunde."
@@ -102,7 +102,7 @@
 		"message": "צי איר ווילן צו זיין רידערעקטיד טייקעף אָדער אין רענטגענ סעקונדעס?\ntsi ir viln tsu zeyn riderektid teykef oder in rentgen sekundes?"
 	},
 	"beforeNavigateInstant": {
-		"message": "מען ניווט צו%\nmen nivt tsu%"
+		"message": "מען ניווט צו$1\nmen nivt tsu$1"
 	},
 	"infoFileHoster": {
 		"message": "tsum badoyern, di arafkafye server vet enshur az ir hot gevart biz ir derloybt tsu oplodirn di teke."
@@ -111,16 +111,16 @@
 		"message": "איר קען נישט האָבן צו וואַרטן!\nir ken nisht hobn tsu vartn!"
 	},
 	"crowdBypassedInfo": {
-		"message": "אנדערע וניווערסאַל בייפּאַס ניצערס האָבן שוין געווארט פֿאַר איר און געמאלדן אַז דאָס פירט צו%\nandere universal beypas nitsers hobn shoyn gevart far ir aun gemaldn az dos firt tsu%"
+		"message": "אנדערע וניווערסאַל בייפּאַס ניצערס האָבן שוין געווארט פֿאַר איר און געמאלדן אַז דאָס פירט צו$1\nandere universal beypas nitsers hobn shoyn gevart far ir aun gemaldn az dos firt tsu$1"
 	},
 	"crowdBypassedTimer": {
-		"message": "דאָס וועט זיין געעפנט אין אַ נייַ קוויטל אין% סעקונדעס.\ndos vet zeyn geefnt in a nay kvitl in% sekundes."
+		"message": "דאָס וועט זיין געעפנט אין אַ נייַ קוויטל אין$1 סעקונדעס.\ndos vet zeyn geefnt in a nay kvitl in$1 sekundes."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "דאָס וועט זיין געעפנט אין אַ נייַ קוויטל אין 1 סעקונדע.\ndos vet zeyn geefnt in a nay kvitl in 1 sekunde."
 	},
 	"crowdCloseTimer": {
-		"message": "דער קוויטל וועט פאַרמאַכן אין% סעקונדעס\nder kvitl vet farmakhn in% sekundes"
+		"message": "דער קוויטל וועט פאַרמאַכן אין$1 סעקונדעס\nder kvitl vet farmakhn in$1 sekundes"
 	},
 	"crowdCloseTimerSingular": {
 		"message": "דער קוויטל וועט פאַרמאַכן אין 1 סעקונדע.\nder kvitl vet farmakhn in 1 sekunde."

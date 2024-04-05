@@ -45,16 +45,16 @@ foreach(scandir("_locales") as $locale)
 	{
 		if(in_array($key, ["bypassCounter", "optionsNavigationDelay", "optionsCrowdAutoOpen", "optionsCrowdAutoClose", "beforeNavigateDestination", "beforeNavigateTimer", "beforeNavigateUnsafeTimer", "beforeNavigateInstant", "crowdBypassedInfo", "crowdBypassedTimer", "crowdCloseTimer"]))
 		{
-			if(strpos($data["message"], "%") === false)
+			if(strpos($data["message"], "$1") === false)
 			{
-				echo "$key in $locale is missing %\n";
+				echo "$key in $locale is missing $1\n";
 			}
 		}
 		else
 		{
-			if(strpos($data["message"], "%") !== false)
+			if(strpos($data["message"], "$1") !== false)
 			{
-				echo "$key in $locale has a superfluous %\n";
+				echo "$key in $locale has a superfluous $1\n";
 			}
 		}
 		if(in_array($key, ["infoLinkvertise","infoFileHoster","infoOutdated","crowdWait","crowdDisabled"]))

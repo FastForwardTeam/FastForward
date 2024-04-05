@@ -33,7 +33,7 @@
 		"message": "ხშირად დასმული კითხვები"
 	},
 	"bypassCounter": {
-		"message": "FastForward-მა გამოტოვა % გვერდი თქვენთვის."
+		"message": "FastForward-მა გამოტოვა $1 გვერდი თქვენთვის."
 	},
 	"support": {
 		"message": "შეიტანეთ თქვენი წვლილი."
@@ -48,7 +48,7 @@
 		"message": "ok"
 	},
 	"optionsNavigationDelay": {
-		"message": "ავტომატური გადასვლა % წამში"
+		"message": "ავტომატური გადასვლა $1 წამში"
 	},
 	"optionsBlockIPLoggers": {
 		"message": "დაბლოკე იპ ლოგერები თუ  შემოვლა არ მუშაობს"
@@ -66,19 +66,19 @@
 		"message": "თითქმით მისული ხარტ თქვენ ვებსაიტზე"
 	},
 	"beforeNavigateDestination": {
-		"message": "დანიშნულების მისამართი %"
+		"message": "დანიშნულების მისამართი $1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "თუ ეხლა გადახვალთ საიტზე ისინი დააფიქსირებენ FastForward."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "თქვენ არ იქნებით დაფიქსირებული % წამში"
+		"message": "თქვენ არ იქნებით დაფიქსირებული $1 წამში"
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "თქვენ არ იქნებით დაფიქსირებული 1 წამში"
 	},
 	"beforeNavigateTimer": {
-		"message": "თქვენ გადამისამართდებით ავტომატურად % წამში"
+		"message": "თქვენ გადამისამართდებით ავტომატურად $1 წამში"
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "თქვენ გადამისამართდებით ავტომატურად 1 წამში"
@@ -87,7 +87,7 @@
 		"message": "გსურთ გადამისამართება მომენტალურად ან x წამში?"
 	},
 	"beforeNavigateInstant": {
-		"message": "FastForward-ერი ეხლა წაგიყვანთ %"
+		"message": "FastForward-ერი ეხლა წაგიყვანთ $1"
 	},
 	"infoFileHoster": {
 		"message": "სამწუხაროდ, გადმოწერის სერვერი ამოწმებს დაელოდეთ თუ არა შესაბამისი დრო ფაილის გადმოსაწერად."
@@ -102,16 +102,16 @@
 		"message": "თქვენ არ გჭირდებათ ლოდინი"
 	},
 	"crowdBypassedInfo": {
-		"message": "FastForward-ის სხვა მომხმარებლები დაელოდნენ თქვენს მაგივრად და შეგვატყობინეს რომ ეს მისამართი გადამისამართდება % -ზე."
+		"message": "FastForward-ის სხვა მომხმარებლები დაელოდნენ თქვენს მაგივრად და შეგვატყობინეს რომ ეს მისამართი გადამისამართდება $1 -ზე."
 	},
 	"crowdBypassedTimer": {
-		"message": "და ის გაიხსნება % წამში."
+		"message": "და ის გაიხსნება $1 წამში."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "და ის გაიხსნება 1 წამში."
 	},
 	"crowdCloseTimer": {
-		"message": "ეს ჩანართი დაიხურება % წამში."
+		"message": "ეს ჩანართი დაიხურება $1 წამში."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "ეს ჩანართი დაიხურება 1 წამში."

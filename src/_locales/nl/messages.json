@@ -33,7 +33,7 @@
 		"message": "Veelgestelde Vragen (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "FastForward heeft al % sites voor je omzeild."
+		"message": "FastForward heeft al $1 sites voor je omzeild."
 	},
 	"support": {
 		"message": "Ondersteun FastForward."
@@ -48,7 +48,7 @@
 		"message": "Website bypass inschakelen."
 	},
 	"optionsNavigationDelay": {
-		"message": "Stuur me door naar de bestemming na % seconde(n). (Gebruik 0 om gelijk doorgestuurd te worden.)"
+		"message": "Stuur me door naar de bestemming na $1 seconde(n). (Gebruik 0 om gelijk doorgestuurd te worden.)"
 	},
 	"optionsTrackerBypass": {
 		"message": "Omzeil trackers (zoals bit.ly en t.co) met behulp van Apimon.de."
@@ -63,10 +63,10 @@
 		"message": "Crowd Bypass: Geef en neem de bestemmingen van ondoorlaatbare verkorters."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Open crowd-sourced bestemmingen in een nieuw tabblad na % seconde(s). (0 = direct.)"
+		"message": "Open crowd-sourced bestemmingen in een nieuw tabblad na $1 seconde(s). (0 = direct.)"
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Sluit tabblad met crowd-bestemmingen na % seconde(n) na het bezoeken."
+		"message": "Sluit tabblad met crowd-bestemmingen na $1 seconde(n) na het bezoeken."
 	},
 	"privacyPolicy": {
 		"message": "Privacy Verklaring"
@@ -84,19 +84,19 @@
 		"message": "Je bent bijna op je bestemming."
 	},
 	"beforeNavigateDestination": {
-		"message": "Uw bestemming is %"
+		"message": "Uw bestemming is $1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "Echter, als je nu navigeert, detecteren ze FastForward."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "Je wordt niet langer gedetecteerd over % seconden."
+		"message": "Je wordt niet langer gedetecteerd over $1 seconden."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "Je wordt niet langer gedetecteerd over 1 seconde."
 	},
 	"beforeNavigateTimer": {
-		"message": "Je wordt automatisch doorgestuurd in % seconden."
+		"message": "Je wordt automatisch doorgestuurd in $1 seconden."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "U wordt over 1 seconde automatisch doorgestuurd."
@@ -105,7 +105,7 @@
 		"message": "Wil je gelijk worden doorgestuurd of na x seconden?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Je wordt doorgestuurd naar %"
+		"message": "Je wordt doorgestuurd naar $1"
 	},
 	"infoLinkvertise": {
 		"message": "We hebben geen toestemming om deze website te omzeilen, maar we hebben onderhandeld over het verwijderen van hun meest vervelende stappen. "
@@ -126,16 +126,16 @@
 		"message": "U hoeft misschien niet te wachten!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Andere FastForward-gebruikers hebben al aangegeven dat dit aan % ligt"
+		"message": "Andere FastForward-gebruikers hebben al aangegeven dat dit aan $1 ligt"
 	},
 	"crowdBypassedTimer": {
-		"message": "Dit zal in % seconden worden geopend in een nieuw tabblad."
+		"message": "Dit zal in $1 seconden worden geopend in een nieuw tabblad."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Dit zal in 1 seconde worden geopend in een nieuw tabblad."
 	},
 	"crowdCloseTimer": {
-		"message": "Dit tabblad wordt over % seconden gesloten."
+		"message": "Dit tabblad wordt over $1 seconden gesloten."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "Dit tabblad wordt over 1 seconde gesloten."

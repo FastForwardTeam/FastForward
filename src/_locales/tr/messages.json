@@ -33,7 +33,7 @@
 		"message": "Sıkça Sorulan Sorular (SSS)"
 	},
 	"bypassCounter": {
-		"message": "FastForward sizin için şimdiye kadar % siteyi baypas etti."
+		"message": "FastForward sizin için şimdiye kadar $1 siteyi baypas etti."
 	},
 	"support": {
 		"message": "FastForward'ı Destekleyin"
@@ -48,7 +48,7 @@
 		"message": "Web sayfalarını es geçmeyi etkinleştir."
 	},
 	"optionsNavigationDelay": {
-		"message": "Beni hedeflere % saniye sonra yönlendir. (Hemen yönlendirilmek için 0 yazın.)"
+		"message": "Beni hedeflere $1 saniye sonra yönlendir. (Hemen yönlendirilmek için 0 yazın.)"
 	},
 	"optionsTrackerBypass": {
 		"message": "Apimon.de kullanarak (bit.ly ve t.co) gibi izleyicileri  atla"
@@ -63,10 +63,10 @@
 		"message": "Baypas edilemeyen adres kısaltıcıların hedeflerini geliştiriciyle paylaş."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Kitle kaynaklı hedefleri % saniye sonra yeni bir sekmede aç. (0 = hemen.)"
+		"message": "Kitle kaynaklı hedefleri $1 saniye sonra yeni bir sekmede aç. (0 = hemen.)"
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Ziyaretin % saniyesinden sonra kitle kaynaklı hedefi içeren sekmeyi kapat."
+		"message": "Ziyaretin $1 saniyesinden sonra kitle kaynaklı hedefi içeren sekmeyi kapat."
 	},
 	"privacyPolicy": {
 		"message": "Gizlilik Politikası"
@@ -84,19 +84,19 @@
 		"message": "Neredeyse vardınız."
 	},
 	"beforeNavigateDestination": {
-		"message": "Hedefiniz: %"
+		"message": "Hedefiniz: $1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "Hemen geçerseniz, bu web sitesi FastForward'i algılayacaktır."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "% saniye sonra fark edilmeyeceksiniz."
+		"message": "$1 saniye sonra fark edilmeyeceksiniz."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "1 saniye içerisinde fark edilmeyeceksiniz."
 	},
 	"beforeNavigateTimer": {
-		"message": "% saniye içinde otomatik olarak yönlendirileceksiniz."
+		"message": "$1 saniye içinde otomatik olarak yönlendirileceksiniz."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "1 saniye içinde otomatik olarak yönlendirileceksiniz."
@@ -105,7 +105,7 @@
 		"message": "Hemen mi yoksa x saniye içinde mi yönlendirilmek istersiniz?"
 	},
 	"beforeNavigateInstant": {
-		"message": "% adresine yönlendiriliyorsunuz"
+		"message": "$1 adresine yönlendiriliyorsunuz"
 	},
 	"infoLinkvertise": {
 		"message": "Bu web sitesini atlamamıza izin verilmiyor, ancak en can sıkıcı adımlarının kaldırılması konusunda görüştük."
@@ -126,16 +126,16 @@
 		"message": "Beklemek zorunda değilsiniz!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Diğer FastForward kullanıcıları sizin yerinize zaten beklediler ve bunun şuraya yönlendiğini bildirdiler: %"
+		"message": "Diğer FastForward kullanıcıları sizin yerinize zaten beklediler ve bunun şuraya yönlendiğini bildirdiler: $1"
 	},
 	"crowdBypassedTimer": {
-		"message": "Bu, % saniye içinde yeni bir sekmede açılacaktır."
+		"message": "Bu, $1 saniye içinde yeni bir sekmede açılacaktır."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Bu, 1 saniye içinde yeni bir sekmede açılacaktır."
 	},
 	"crowdCloseTimer": {
-		"message": "Bu sekme % saniye içinde kapanacak."
+		"message": "Bu sekme $1 saniye içinde kapanacak."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "Bu sekme 1 saniye içinde kapanacak."

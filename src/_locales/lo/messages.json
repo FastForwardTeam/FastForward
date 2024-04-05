@@ -45,7 +45,7 @@
 		"message": "ເປີດ ນຳ ໃຊ້ເວັບໄຊທ໌ຂ້າມຜ່ານ."
 	},
 	"optionsNavigationDelay": {
-		"message": "ພາຂ້ອຍໄປທີ່ຈຸດ ໝາຍ ປາຍທາງຫຼັງຈາກ % ວິນາທີ."
+		"message": "ພາຂ້ອຍໄປທີ່ຈຸດ ໝາຍ ປາຍທາງຫຼັງຈາກ $1 ວິນາທີ."
 	},
 	"optionsTrackerBypass": {
 		"message": "ຜູ້ຕິດຕາມ Bypass (ເຊັ່ນ: bit.ly ແລະ t.co) ໂດຍໃຊ້ Apimon.de"

@@ -33,7 +33,7 @@
 		"message": "자주 묻는 질문"
 	},
 	"bypassCounter": {
-		"message": "FastForward는 당신을 위해 %개의 사이트를 우회했어요."
+		"message": "FastForward는 당신을 위해 $1개의 사이트를 우회했어요."
 	},
 	"support": {
 		"message": "FastForward 돕기"
@@ -48,7 +48,7 @@
 		"message": "웹사이트 우회 켜기"
 	},
 	"optionsNavigationDelay": {
-		"message": "목적지로 %초 뒤에 이동하기 (0을 쓰면 즉시 이동)"
+		"message": "목적지로 $1초 뒤에 이동하기 (0을 쓰면 즉시 이동)"
 	},
 	"optionsTrackerBypass": {
 		"message": "Apimon.de를 사용하여 트래커 (예 : bit.ly 및 t.co)를 무시하십시오."
@@ -63,10 +63,10 @@
 		"message": "우회할 수 없는 URL 단축 사이트 목적지 주고 받기."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "%초 후 새 탭에서 크라우드 소싱 대상 열기 (0 = 즉시)"
+		"message": "$1초 후 새 탭에서 크라우드 소싱 대상 열기 (0 = 즉시)"
 	},
 	"optionsCrowdAutoClose": {
-		"message": "크라우드소싱 대상 방문 %초 후 해당 탭 닫기."
+		"message": "크라우드소싱 대상 방문 $1초 후 해당 탭 닫기."
 	},
 	"privacyPolicy": {
 		"message": "개인정보 취급방침"
@@ -84,19 +84,19 @@
 		"message": "거의 다 왔습니다."
 	},
 	"beforeNavigateDestination": {
-		"message": "목적지는 % 입니다."
+		"message": "목적지는 $1 입니다."
 	},
 	"beforeNavigateUnsafe": {
 		"message": "잠깐!, 지금 바로 간다면 FastForward가 들통날 거에요."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "%초 후에 감지되지 않게 됩니다."
+		"message": "$1초 후에 감지되지 않게 됩니다."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "1초 후에 감지되지 않게 됩니다."
 	},
 	"beforeNavigateTimer": {
-		"message": "페이지로 %초 안에 이동합니다."
+		"message": "페이지로 $1초 안에 이동합니다."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "페이지로 1초 안에 이동합니다."
@@ -105,7 +105,7 @@
 		"message": "자동으로 리다이렉트하고 싶나요?"
 	},
 	"beforeNavigateInstant": {
-		"message": "% (으)로 이동 중입니다"
+		"message": "$1 (으)로 이동 중입니다"
 	},
 	"infoLinkvertise": {
 		"message": "우리는 이 웹 사이트를 우회 할 수는 없지만, 가장 귀찮은 단계를 제거하기로 협상했습니다."
@@ -126,16 +126,16 @@
 		"message": "이제 기다릴 필요 없어요!"
 	},
 	"crowdBypassedInfo": {
-		"message": "다른 FastForward 사용자가 이 페이지를 방문한 적이 있으며, % 로 이동하는걸로 알아냈습니다."
+		"message": "다른 FastForward 사용자가 이 페이지를 방문한 적이 있으며, $1 로 이동하는걸로 알아냈습니다."
 	},
 	"crowdBypassedTimer": {
-		"message": "페이지가 새 탭에 %초 안에 열립니다."
+		"message": "페이지가 새 탭에 $1초 안에 열립니다."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "페이지가 새 탭에 1초 안에 열립니다."
 	},
 	"crowdCloseTimer": {
-		"message": "이 탭은 %초 후 닫힙니다."
+		"message": "이 탭은 $1초 후 닫힙니다."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "이 탭은 1초 후 닫힙니다."

@@ -24,7 +24,7 @@
 		"message": "Cumasaigh seachbhóithre láithreán gréasáin."
 	},
 	"optionsNavigationDelay": {
-		"message": "Tuair me go cinn scríbe tar éis% an dara ceann. (Bain úsáid as 0 le nascleanúint a dhéanamh láithreach.)"
+		"message": "Tuair me go cinn scríbe tar éis$1 an dara ceann. (Bain úsáid as 0 le nascleanúint a dhéanamh láithreach.)"
 	},
 	"optionsInstantNavigationTrackers": {
 		"message": "Tóg mé chuig ceann scríbe na lorgairí láithreach."
@@ -48,10 +48,10 @@
 		"message": "Ta tú beagnach ansín"
 	},
 	"beforeNavigateDestination": {
-		"message": "Tá do ceann scríbe %"
+		"message": "Tá do ceann scríbe $1"
 	},
 	"beforeNavigateTimer": {
-		"message": "Déanfar tú a atreorú go huathoibríoch i% soicind."
+		"message": "Déanfar tú a atreorú go huathoibríoch i$1 soicind."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Déanfar tú a atreorú go huathoibríoch i 1 soicind."
@@ -63,7 +63,7 @@
 		"message": "B'fhéidir nach mbeidh ort fanacht!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Tá úsáideoirí eile Seachbhóthar Uilíoch tar éis fanacht leat cheana féin agus thuairiscigh siad go dtiocfaidh %"
+		"message": "Tá úsáideoirí eile Seachbhóthar Uilíoch tar éis fanacht leat cheana féin agus thuairiscigh siad go dtiocfaidh $1"
 	},
 	"crowdBypassedIgnore": {
 		"message": "Nach raibh sé séo i gceart?"

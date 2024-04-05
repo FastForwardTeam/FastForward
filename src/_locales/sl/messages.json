@@ -33,7 +33,7 @@
 		"message": "Pogosta vprašanja (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "FastForward je že zaobšel% spletnih mest za vas."
+		"message": "FastForward je že zaobšel$1 spletnih mest za vas."
 	},
 	"support": {
 		"message": "Prispevajte k Univerzalni obvoznici."
@@ -48,7 +48,7 @@
 		"message": "Omogoči obhode spletnih strani"
 	},
 	"optionsNavigationDelay": {
-		"message": "Odpeljite me do cilja po% sekundah."
+		"message": "Odpeljite me do cilja po$1 sekundah."
 	},
 	"optionsTrackerBypass": {
 		"message": "S storitvijo Apimon.de obiščite sledilnike (na primer bit.ly in t.co)."
@@ -63,10 +63,10 @@
 		"message": "Množični obvoz: Določite in izkoristite cilje neprimerljivih skrajševalcev."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Po% sekundah odprite nove cilje na novem zavihku na novem zavihku."
+		"message": "Po$1 sekundah odprite nove cilje na novem zavihku na novem zavihku."
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Zaprite zavihek, ki vsebuje destinacijo z množico ljudi po% sekunde obiska."
+		"message": "Zaprite zavihek, ki vsebuje destinacijo z množico ljudi po$1 sekunde obiska."
 	},
 	"privacyPolicy": {
 		"message": "Politika zasebnosti"
@@ -84,19 +84,19 @@
 		"message": "Skoraj že ste na svojem cilju."
 	},
 	"beforeNavigateDestination": {
-		"message": "Vaš cilj je%"
+		"message": "Vaš cilj je$1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "Če pa greste zdaj, bodo zaznali FastForward."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "V% sekundah ne boste več zaznani."
+		"message": "V$1 sekundah ne boste več zaznani."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "V 1 sekundi ne boste več zaznani."
 	},
 	"beforeNavigateTimer": {
-		"message": "Preusmerjeni boste samodejno v% sekundah."
+		"message": "Preusmerjeni boste samodejno v$1 sekundah."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "V 1 sekundi boste samodejno preusmerjeni."
@@ -105,7 +105,7 @@
 		"message": "Ali želite biti preusmerjeni takoj ali v x sekundah?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Navigirate do%"
+		"message": "Navigirate do$1"
 	},
 	"infoFileHoster": {
 		"message": "Na žalost bo strežnik za prenos poskrbel, da ste čakali, preden boste dovolili prenos datoteke."
@@ -123,16 +123,16 @@
 		"message": "Morda ne bo treba čakati!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Drugi uporabniki FastForward-a so vas že čakali in sporočili, da to vodi do%"
+		"message": "Drugi uporabniki FastForward-a so vas že čakali in sporočili, da to vodi do$1"
 	},
 	"crowdBypassedTimer": {
-		"message": "To se odpre v novem zavihku v% sekundah."
+		"message": "To se odpre v novem zavihku v$1 sekundah."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "To se odpre v novem zavihku v 1 sekundi."
 	},
 	"crowdCloseTimer": {
-		"message": "Ta zavihek se zapre v% sekundah."
+		"message": "Ta zavihek se zapre v$1 sekundah."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "Ta zavihek se zapre v 1 sekundi."

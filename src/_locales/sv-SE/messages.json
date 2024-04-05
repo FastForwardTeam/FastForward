@@ -33,7 +33,7 @@
 		"message": "Vanliga frågor (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "FastForward har redan förbikopplat % webbplatser för dig."
+		"message": "FastForward har redan förbikopplat $1 webbplatser för dig."
 	},
 	"support": {
 		"message": "Stöd FastForward."
@@ -48,7 +48,7 @@
 		"message": "Aktivera förbikopplingar av webbplats."
 	},
 	"optionsNavigationDelay": {
-		"message": "Ta mig till målet efter % sekund(er)."
+		"message": "Ta mig till målet efter $1 sekund(er)."
 	},
 	"optionsTrackerBypass": {
 		"message": "Gå förbi spårare (så som bit.ly och t.co) som använder sig av Apimon.de."
@@ -63,10 +63,10 @@
 		"message": "Crowd-bypass: Ge och ta målen för icke förbikopplade länkförkortare."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Öppna crowd-sourced mål i en ny flik efter % sekund(er)."
+		"message": "Öppna crowd-sourced mål i en ny flik efter $1 sekund(er)."
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Stäng fliken som innehåller crowdsourced-målet efter % sekund(er) efter du besökt den."
+		"message": "Stäng fliken som innehåller crowdsourced-målet efter $1 sekund(er) efter du besökt den."
 	},
 	"privacyPolicy": {
 		"message": "Integritetspolicy"
@@ -84,19 +84,19 @@
 		"message": "Du har nästan nått ditt mål."
 	},
 	"beforeNavigateDestination": {
-		"message": "Ditt mål är %"
+		"message": "Ditt mål är $1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "Om du navigerar nu kommer de att upptäcka FastForward."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "Du kommer inte längre att bli upptäckt om % sekunder."
+		"message": "Du kommer inte längre att bli upptäckt om $1 sekunder."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "Du kommer inte längre att bli upptäckt om 1 sekund."
 	},
 	"beforeNavigateTimer": {
-		"message": "Du kommer automatiskt att omdirigeras om % sekunder."
+		"message": "Du kommer automatiskt att omdirigeras om $1 sekunder."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Du kommer automatiskt att omdirigeras om 1 sekund."
@@ -105,7 +105,7 @@
 		"message": "Vill du omdirigeras direkt eller om x antal sekunder?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Du förflyttas nu till %"
+		"message": "Du förflyttas nu till $1"
 	},
 	"infoLinkvertise": {
 		"message": "Vi har inte möjlighet att koppla förbi denna webbplats men vi har förhandlat fram borttagning av deras mest irriterande steg."
@@ -126,16 +126,16 @@
 		"message": "Det är inte säkert du behöver vänta!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Andra användare av FastForward har redan väntat på dig och rapporterat att denna leder till %"
+		"message": "Andra användare av FastForward har redan väntat på dig och rapporterat att denna leder till $1"
 	},
 	"crowdBypassedTimer": {
-		"message": "Detta öppnas i en ny flik om % sekunder."
+		"message": "Detta öppnas i en ny flik om $1 sekunder."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Detta öppnas i en ny flik om 1 sekund."
 	},
 	"crowdCloseTimer": {
-		"message": "Den här fliken stängs om % sekunder."
+		"message": "Den här fliken stängs om $1 sekunder."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "Den här fliken stängs om 1 sekund."

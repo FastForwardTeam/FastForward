@@ -33,7 +33,7 @@
 		"message": "שאלות נפוצות (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "מעקף אוניברסלי כבר עקף % אתרים בשבילך."
+		"message": "מעקף אוניברסלי כבר עקף $1 אתרים בשבילך."
 	},
 	"support": {
 		"message": "תמוך ב-FastForward"
@@ -48,7 +48,7 @@
 		"message": "הפעל מעקף לאתר."
 	},
 	"optionsNavigationDelay": {
-		"message": "קח אותי ליעד אחרי % שני(ות). (השתמש ב0 על מנת לנווט במיידי)"
+		"message": "קח אותי ליעד אחרי $1 שני(ות). (השתמש ב0 על מנת לנווט במיידי)"
 	},
 	"optionsTrackerBypass": {
 		"message": "תעקוף טראקרים (כמו bit.ly ו - t.co) באמצעות Apimon.de."
@@ -60,7 +60,7 @@
 		"message": "חסום אוספי IP אם אי אפשר לעקוף אותם."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "תפתח מקורות שנוצרו בעזרת הקהל בכרטיסייה חדשה אחרי % שניות."
+		"message": "תפתח מקורות שנוצרו בעזרת הקהל בכרטיסייה חדשה אחרי $1 שניות."
 	},
 	"privacyPolicy": {
 		"message": "מדיניות פרטיות"
@@ -75,19 +75,19 @@
 		"message": "כמעט ביעד שלך."
 	},
 	"beforeNavigateDestination": {
-		"message": "כתובת היעד שלך היא %"
+		"message": "כתובת היעד שלך היא $1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "אם תנווט כעת, הם יזהו את תוספת זאת."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "אתה לא תהיה גלוי בעוד % שניות"
+		"message": "אתה לא תהיה גלוי בעוד $1 שניות"
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "אתה לא תהיה גלוי בעוד שנייה."
 	},
 	"beforeNavigateTimer": {
-		"message": "תועבר אוטומטית עוד % שניות."
+		"message": "תועבר אוטומטית עוד $1 שניות."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "תועבר אוטומטית בעוד שנייה."
@@ -96,7 +96,7 @@
 		"message": "האם ברצונך להיות מכוון מחדש מיידית או בעוד x שניות?"
 	},
 	"beforeNavigateInstant": {
-		"message": "מנווט ל %"
+		"message": "מנווט ל $1"
 	},
 	"infoOutdated": {
 		"message": "האתר הזה יכול להיעקף בעזרת גרסה חדשה יותר של FastForward."
@@ -111,16 +111,16 @@
 		"message": "יתכן ואתה לא צריך להמתין בכלל!"
 	},
 	"crowdBypassedInfo": {
-		"message": "משתמשים נוספים כבר המתינו, ודיווחו שהקישור מוביל ל- %"
+		"message": "משתמשים נוספים כבר המתינו, ודיווחו שהקישור מוביל ל- $1"
 	},
 	"crowdBypassedTimer": {
-		"message": "תוכן זה יפתח בחלון חדש בעוד % שניות."
+		"message": "תוכן זה יפתח בחלון חדש בעוד $1 שניות."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "תוכן זה יפתח בחלון חדש בעוד כשניה."
 	},
 	"crowdCloseTimer": {
-		"message": "חלון זה ייסגר בעוד % שניות."
+		"message": "חלון זה ייסגר בעוד $1 שניות."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "חלון זה ייסגר בעוד שניה."

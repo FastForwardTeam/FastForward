@@ -33,7 +33,7 @@
 		"message": "Mga Madalas Itanong"
 	},
 	"bypassCounter": {
-		"message": "Ang FastForward ay naka iwas ng % mga sites para lang sa iyo."
+		"message": "Ang FastForward ay naka iwas ng $1 mga sites para lang sa iyo."
 	},
 	"support": {
 		"message": "Suportahan ang FastForward"
@@ -48,7 +48,7 @@
 		"message": "Paganahin ang website bypasses."
 	},
 	"optionsNavigationDelay": {
-		"message": "Ipunta mo ako sa destinasyon pagkatapos ng % segundo(s)."
+		"message": "Ipunta mo ako sa destinasyon pagkatapos ng $1 segundo(s)."
 	},
 	"optionsTrackerBypass": {
 		"message": "hakbangan na mga mangangaso (gaya ng bit.ly and t.co) gamit ng Apimon.de."
@@ -63,10 +63,10 @@
 		"message": "Ibigay at kunin ang mga patutunguhan sa hindi ma iwasan na shorterners."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "bukas na crowd-sourced destination pakga bukas ng bagong tab pagkatapos ng % segundo."
+		"message": "bukas na crowd-sourced destination pakga bukas ng bagong tab pagkatapos ng $1 segundo."
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Isara ang tab na naglalaman ng crowd-sourced destination pagkatapos ng % segundo ng pagbisita ito."
+		"message": "Isara ang tab na naglalaman ng crowd-sourced destination pagkatapos ng $1 segundo ng pagbisita ito."
 	},
 	"privacyPolicy": {
 		"message": "Pribadong seguridad"
@@ -84,19 +84,19 @@
 		"message": "malapit ka na sa iyong patutunguhan."
 	},
 	"beforeNavigateDestination": {
-		"message": "ang iyong destinasyon ay %"
+		"message": "ang iyong destinasyon ay $1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "gayunpaman, kung maglayag ka na, ma tiktikan nila ang FastForward."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "Hindi na ka makikita sa % segundo."
+		"message": "Hindi na ka makikita sa $1 segundo."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "Hindi ka na makikita sa 1 segundo."
 	},
 	"beforeNavigateTimer": {
-		"message": "Ikaw ay ididirektang awtomatiko sa loob ng % segundo."
+		"message": "Ikaw ay ididirektang awtomatiko sa loob ng $1 segundo."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Ikaw ay ididirektang awtomatiko sa loob ng 1 segundo."
@@ -105,7 +105,7 @@
 		"message": "Nais mo bang mabuksan ito sa isang bagong tab kaagad o sa x segundo?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Naka-navigate ka sa %"
+		"message": "Naka-navigate ka sa $1"
 	},
 	"infoFileHoster": {
 		"message": "Sa kasamaang palad, masisiguro ng download server na naghintay ka bago ka payagan na mag-download ng file."
@@ -123,16 +123,16 @@
 		"message": "Maaaring hindi mo na kailangang maghintay!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Ang iba pang mga gumagamit ng FastForward ay naghintay na sa iyo at iniulat na ang link na ito ay hahantong sa %"
+		"message": "Ang iba pang mga gumagamit ng FastForward ay naghintay na sa iyo at iniulat na ang link na ito ay hahantong sa $1"
 	},
 	"crowdBypassedTimer": {
-		"message": "Ito ay bubuksan sa isang bagong tab sa % segundo."
+		"message": "Ito ay bubuksan sa isang bagong tab sa $1 segundo."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Ito ay bubuksan sa isang bagong tab sa 1 segundo."
 	},
 	"crowdCloseTimer": {
-		"message": "Ang tab na ito ay magsasara sa loob nang % segundo."
+		"message": "Ang tab na ito ay magsasara sa loob nang $1 segundo."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "Ang tab na ito ay magsasara sa loob nang 1 segundo."

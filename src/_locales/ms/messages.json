@@ -33,7 +33,7 @@
 		"message": "Soalan-soalan Lazim (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "Universal telah memintas % laman web untuk anda."
+		"message": "Universal telah memintas $1 laman web untuk anda."
 	},
 	"support": {
 		"message": "Menyumbang untuk FastForward."
@@ -48,7 +48,7 @@
 		"message": "Benarkan pemintasan laman web."
 	},
 	"optionsNavigationDelay": {
-		"message": "Bawa saya ke destinasi selepas % saat."
+		"message": "Bawa saya ke destinasi selepas $1 saat."
 	},
 	"optionsTrackerBypass": {
 		"message": "Pintas penjejak (seperti bit.ly dan t.co) mengunakan Apimon.de."
@@ -63,10 +63,10 @@
 		"message": "Beri dan ambil destinasi pemendek link yang tidak boleh dipintas."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Buka destinasi sumber-awam di tab baru selepas % saat."
+		"message": "Buka destinasi sumber-awam di tab baru selepas $1 saat."
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Tutup tab yang mengandungi destinasi sumber-awam selepas % saat lawatan."
+		"message": "Tutup tab yang mengandungi destinasi sumber-awam selepas $1 saat lawatan."
 	},
 	"privacyPolicy": {
 		"message": "Dasar privasi"
@@ -84,19 +84,19 @@
 		"message": "Anda hampir di destinasi anda."
 	},
 	"beforeNavigateDestination": {
-		"message": "Destinasi anda %"
+		"message": "Destinasi anda $1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "Akan tetapi, jika anda melayar sekarang, FastForward akan dikesan."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "Anda tidak lagi dikesan dalam % saat."
+		"message": "Anda tidak lagi dikesan dalam $1 saat."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "Anda tidak lagi dikesan dalam 1 saat."
 	},
 	"beforeNavigateTimer": {
-		"message": "Anda akan diarah secara automatik dalam % saat."
+		"message": "Anda akan diarah secara automatik dalam $1 saat."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Anda akan diarah secara automatik dalam 1 saat."
@@ -105,7 +105,7 @@
 		"message": "Adakah anda mahu diarahkan sekarang atau dalam x saat?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Anda sedang dinavigasi ke %"
+		"message": "Anda sedang dinavigasi ke $1"
 	},
 	"infoLinkvertise": {
 		"message": "Kami tidak dibenarkan untuk memintas laman web ini tetapi kami telah berbincang tentang penyisihan langkah-langkah mereka yang paling menjengkelkan. "
@@ -126,16 +126,16 @@
 		"message": "Anda mungkin tidak perlu menunggu!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Pengguna FastForward yang lain telah menunggu untuk anda dan melaporkan dan membawa ke %"
+		"message": "Pengguna FastForward yang lain telah menunggu untuk anda dan melaporkan dan membawa ke $1"
 	},
 	"crowdBypassedTimer": {
-		"message": "Ini akan dibuka di tab baru dalam % saat."
+		"message": "Ini akan dibuka di tab baru dalam $1 saat."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Ini akan dibuka di tab baru dalam 1 saat."
 	},
 	"crowdCloseTimer": {
-		"message": "Tab ini akan ditutup dalam % saat."
+		"message": "Tab ini akan ditutup dalam $1 saat."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "Tab ini akan ditutup dalam 1 saat."
