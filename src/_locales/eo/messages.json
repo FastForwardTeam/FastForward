@@ -15,13 +15,13 @@
 		"message": "Ofta demandoj"
 	},
 	"bypassCounter": {
-		"message": "FastForward preterpasinta % retpaĝojn. "
+		"message": "FastForward preterpasinta $1 retpaĝojn. "
 	},
 	"options": {
 		"message": "agordoj"
 	},
 	"beforeNavigateInstant": {
-		"message": "Vi estas navigita al %"
+		"message": "Vi estas navigita al $1"
 	},
 	"infoOutdated": {
 		"message": "Ĉi tio retpaĝo estas uzanta pli nova versio de FastForward"
@@ -33,7 +33,7 @@
 		"message": "Nova langeto estos malfermita en 1 sekundo."
 	},
 	"crowdCloseTimer": {
-		"message": "La langeto estos fermita en % sekundoj"
+		"message": "La langeto estos fermita en $1 sekundoj"
 	},
 	"crowdCloseTimerSingular": {
 		"message": "La langeto estos fermita en 1 sekundo"

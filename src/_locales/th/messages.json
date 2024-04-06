@@ -33,7 +33,7 @@
 		"message": "คำถามที่พบบ่อย (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "FastForward ได้ข้ามเว็บไซต์ % สำหรับคุณเรียบร้อยแล้ว"
+		"message": "FastForward ได้ข้ามเว็บไซต์ $1 สำหรับคุณเรียบร้อยแล้ว"
 	},
 	"support": {
 		"message": "สนับสนุน FastForward"
@@ -48,7 +48,7 @@
 		"message": "เปิดใช้งานการ bypasses"
 	},
 	"optionsNavigationDelay": {
-		"message": "พาไปยังจุดหมายปลายทางหลังจาก % วินาที (ใช้ 0 เพื่อข้ามทันที)"
+		"message": "พาไปยังจุดหมายปลายทางหลังจาก $1 วินาที (ใช้ 0 เพื่อข้ามทันที)"
 	},
 	"optionsTrackerBypass": {
 		"message": "บายพาสแทร็กเกอร์ (เช่น bit.ly และ t.co) โดยใช้ Apimon.de"
@@ -63,10 +63,10 @@
 		"message": "การรับและการส่งจุดหมายปลายทางของ shorteners ที่ไม่มีใครเทียบได้"
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "เปิดปลายทาง crowd-sourced ในแท็บใหม่หลังจาก % วินาที (0 = ทันที)"
+		"message": "เปิดปลายทาง crowd-sourced ในแท็บใหม่หลังจาก $1 วินาที (0 = ทันที)"
 	},
 	"optionsCrowdAutoClose": {
-		"message": "แท็บปิดที่มีปลายทางที่ crowd-sourced มาเยี่ยมชมหลังจาก % วินาที (s) ของการเยี่ยมชม"
+		"message": "แท็บปิดที่มีปลายทางที่ crowd-sourced มาเยี่ยมชมหลังจาก $1 วินาที (s) ของการเยี่ยมชม"
 	},
 	"privacyPolicy": {
 		"message": "นโยบายความเป็นส่วนตัว"
@@ -84,19 +84,19 @@
 		"message": "คุณใกล้ถึงจุดหมายปลายทางแล้ว"
 	},
 	"beforeNavigateDestination": {
-		"message": "ปลายทางของคุณคือ %"
+		"message": "ปลายทางของคุณคือ $1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "อย่างไรก็ตาม หากคุณหาเส้นทางในตอนนี้  FastForward จะถูกตรวจพบ"
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "คุณจะไม่ถูกตรวจพบในอีกต่อไปใน % วินาที"
+		"message": "คุณจะไม่ถูกตรวจพบในอีกต่อไปใน $1 วินาที"
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "คุณจะไม่ถูกตรวจพบในอีก 1 วินาที"
 	},
 	"beforeNavigateTimer": {
-		"message": "คุณจะถูกเปลี่ยนเส้นทางโดยอัตโนมัติใน % วินาที"
+		"message": "คุณจะถูกเปลี่ยนเส้นทางโดยอัตโนมัติใน $1 วินาที"
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "คุณจะถูกเปลี่ยนเส้นทางโดยอัตโนมัติใน 1 วินาที"
@@ -105,7 +105,7 @@
 		"message": "คุณต้องการที่จะเปลี่ยนเส้นทางทันทีหรือใน x วินาที?"
 	},
 	"beforeNavigateInstant": {
-		"message": "คุณกำลังเข้าไป %"
+		"message": "คุณกำลังเข้าไป $1"
 	},
 	"infoLinkvertise": {
 		"message": "พวกเราไม่อนุญาติbypassเว็บไซต์นี้แต่พวกได้ลบขั้นตอนที่รบกวนที่สุดแล้ว"
@@ -126,16 +126,16 @@
 		"message": "คุณอาจไม่ต้องรออีกต่อไป!"
 	},
 	"crowdBypassedInfo": {
-		"message": "ผู้ใช้ FastForward คนอื่น ๆ กำลังรอคุณอยู่และได้รายงานว่าสิ่งนี้นำไปสู่ %"
+		"message": "ผู้ใช้ FastForward คนอื่น ๆ กำลังรอคุณอยู่และได้รายงานว่าสิ่งนี้นำไปสู่ $1"
 	},
 	"crowdBypassedTimer": {
-		"message": "สิ่งนี้จะเปิดบนแท็บใหม่ใน % วินาที"
+		"message": "สิ่งนี้จะเปิดบนแท็บใหม่ใน $1 วินาที"
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "สิ่งนี้จะถูกเปิดในแท็บใหม่ใน 1 วินาที"
 	},
 	"crowdCloseTimer": {
-		"message": "แท็บนี้จะปิดใน % วินาที"
+		"message": "แท็บนี้จะปิดใน $1 วินาที"
 	},
 	"crowdCloseTimerSingular": {
 		"message": "แท็บนี้จะปิดใน 1 วินาที"

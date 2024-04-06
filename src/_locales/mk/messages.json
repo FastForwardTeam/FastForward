@@ -33,7 +33,7 @@
 		"message": "Често Поставени Прашања (ЧПП)"
 	},
 	"bypassCounter": {
-		"message": "FastForward веќе има заобиколено % страни за тебе"
+		"message": "FastForward веќе има заобиколено $1 страни за тебе"
 	},
 	"support": {
 		"message": "Помогни на FastForward"
@@ -48,7 +48,7 @@
 		"message": "Вклучи заобиколување на страни"
 	},
 	"optionsNavigationDelay": {
-		"message": "Однесиме на дестинацијата после % секунда(и)"
+		"message": "Однесиме на дестинацијата после $1 секунда(и)"
 	},
 	"optionsTrackerBypass": {
 		"message": "Заобиколи тракери (како bit.ly и t.co) со користење на Apimon.de"
@@ -63,10 +63,10 @@
 		"message": "Земи ги и дади ги дестинациите на скратувачите кои неможат да се заобиколат."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Отвори ја crowd-sourced дестинација во ново јазиче (Tab) после % секунда(и)"
+		"message": "Отвори ја crowd-sourced дестинација во ново јазиче (Tab) после $1 секунда(и)"
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Исклули го јазичето (Tab) кое ја содржи crowd-sourced дестинацијата после % секунда(и) од отварање"
+		"message": "Исклули го јазичето (Tab) кое ја содржи crowd-sourced дестинацијата после $1 секунда(и) од отварање"
 	},
 	"privacyPolicy": {
 		"message": "Правила и Условите"
@@ -84,19 +84,19 @@
 		"message": "Уште малку си до твојата дестинација"
 	},
 	"beforeNavigateDestination": {
-		"message": "Твојата дестинација е %"
+		"message": "Твојата дестинација е $1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "Но, ако сакаш да одиш сега, тие ќе го заприметат FastForward."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "Нема да го заприметат за % секунди"
+		"message": "Нема да го заприметат за $1 секунди"
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "Нема да биде заприметен за 1 секунда"
 	},
 	"beforeNavigateTimer": {
-		"message": "Автоматски ќе бидеш префрлен на дестинацијата за % секунди."
+		"message": "Автоматски ќе бидеш префрлен на дестинацијата за $1 секунди."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Автоматски ќе бидеш префрлен за 1 секунда"
@@ -105,7 +105,7 @@
 		"message": "Дали сакаш веднаш да бидеш префрлен или за x секунди?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Ти ќе бидеш префрлен на %"
+		"message": "Ти ќе бидеш префрлен на $1"
 	},
 	"infoFileHoster": {
 		"message": "За жал, серверот ќе се погрижи да почекаш пред да можеш да го спуштиш фајлот."
@@ -123,16 +123,16 @@
 		"message": "Можеби не ќе мораш да чекаш"
 	},
 	"crowdBypassedInfo": {
-		"message": "Други корисници веќе имаат чекано и кажаја дека носи на следниот линк %"
+		"message": "Други корисници веќе имаат чекано и кажаја дека носи на следниот линк $1"
 	},
 	"crowdBypassedTimer": {
-		"message": "Ова ќе биде отворено во ново јазиче (Tab) за % секунди"
+		"message": "Ова ќе биде отворено во ново јазиче (Tab) за $1 секунди"
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Ова ќе биде отворено во ново јазиче (Tab) за 1 секунда"
 	},
 	"crowdCloseTimer": {
-		"message": "Јазичето ќе се затвори за % секунди."
+		"message": "Јазичето ќе се затвори за $1 секунди."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "Јазичето ќе се затвори за 1 секунда."

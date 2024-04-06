@@ -33,7 +33,7 @@
 		"message": "Întrebări populare"
 	},
 	"bypassCounter": {
-		"message": "FastForward a evitat deja % site-uri pentru tine."
+		"message": "FastForward a evitat deja $1 site-uri pentru tine."
 	},
 	"support": {
 		"message": "Ajută FastForward."
@@ -48,7 +48,7 @@
 		"message": "Pornește evitarea de site-uri scurtate."
 	},
 	"optionsNavigationDelay": {
-		"message": "Du-mă la destinație după % secund(e)"
+		"message": "Du-mă la destinație după $1 secund(e)"
 	},
 	"optionsTrackerBypass": {
 		"message": "Ocoleste urmaritori (cum ar fi bit.ly si t.co) folosind Apimon.de."
@@ -63,10 +63,10 @@
 		"message": "Arată destinațiile scurtăturilor ce nu pot fi păcălite."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Deschide destinațile crowd-sourced intr-o altă pagina după % secund(e)"
+		"message": "Deschide destinațile crowd-sourced intr-o altă pagina după $1 secund(e)"
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Închide pagina care conține destinații crowd-sourced după % secund(e) după vizitare "
+		"message": "Închide pagina care conține destinații crowd-sourced după $1 secund(e) după vizitare "
 	},
 	"privacyPolicy": {
 		"message": "Politică de confidențialitate"
@@ -84,19 +84,19 @@
 		"message": "Sunteți aproape de destinație."
 	},
 	"beforeNavigateDestination": {
-		"message": "Mai sunt doar %"
+		"message": "Mai sunt doar $1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "Oricum, dacă navighezi acum, vor detecta FastForward.\n"
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "Nu vei mai fi detectat în % secunde"
+		"message": "Nu vei mai fi detectat în $1 secunde"
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "Nu vei mai fi detectat într-o secundă"
 	},
 	"beforeNavigateTimer": {
-		"message": "Vei fi redirectionat automat in % secunde."
+		"message": "Vei fi redirectionat automat in $1 secunde."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Vei fi redirectionat automat intr-o secunda.\n"
@@ -105,7 +105,7 @@
 		"message": "Vrei sa fi redirecționat instant sau in x secunde?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Sunteți navigat până la%"
+		"message": "Sunteți navigat până la$1"
 	},
 	"infoLinkvertise": {
 		"message": "Nu avem permisiunea de a trece peste acest site dar am negociat ștergerea celor mai enervante etape."
@@ -126,16 +126,16 @@
 		"message": "Sar putea sa nu aștepți!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Alți utilizatori FastForward au așteptat deja și a fost raportat că duce la %"
+		"message": "Alți utilizatori FastForward au așteptat deja și a fost raportat că duce la $1"
 	},
 	"crowdBypassedTimer": {
-		"message": "Aceasta va fi deschisă într-o nouă fila in % secunde."
+		"message": "Aceasta va fi deschisă într-o nouă fila in $1 secunde."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Aceasta va fi deschisă în altă pagina în o secundă."
 	},
 	"crowdCloseTimer": {
-		"message": "Această pagină va fi închisă în % secunde."
+		"message": "Această pagină va fi închisă în $1 secunde."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "Această pagină se va inchide într-o secundă."

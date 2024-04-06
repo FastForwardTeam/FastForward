@@ -33,7 +33,7 @@
 		"message": "Câu hỏi thường gặp (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "FastForward đã bỏ qua % trang cho bạn."
+		"message": "FastForward đã bỏ qua $1 trang cho bạn."
 	},
 	"support": {
 		"message": "Đóng góp cho FastForward."
@@ -48,7 +48,7 @@
 		"message": "Cho phép bỏ qua website."
 	},
 	"optionsNavigationDelay": {
-		"message": "Đưa tôi đến đích sau % giây. (Sử dụng 0 để được chuyển hướng ngay lập tức.)"
+		"message": "Đưa tôi đến đích sau $1 giây. (Sử dụng 0 để được chuyển hướng ngay lập tức.)"
 	},
 	"optionsTrackerBypass": {
 		"message": "Bỏ qua trình theo dõi (như bit.ly và t.co) bằng cách sử dụng Apimon.de."
@@ -63,10 +63,10 @@
 		"message": "Gửi và lấy đích đến của link rút gọn chưa thể bỏ qua."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Mở các điểm đến có cộng đồng đóng góp trong một tab mới sau % giây. (0 = lập tức.)"
+		"message": "Mở các điểm đến có cộng đồng đóng góp trong một tab mới sau $1 giây. (0 = lập tức.)"
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Đóng thẻ chứa địa điểm đã được cộng đồng đóng góp sau % giây truy cập."
+		"message": "Đóng thẻ chứa địa điểm đã được cộng đồng đóng góp sau $1 giây truy cập."
 	},
 	"privacyPolicy": {
 		"message": "Chính sách bảo mật"
@@ -84,19 +84,19 @@
 		"message": "Bạn sắp được đưa đến trang đích."
 	},
 	"beforeNavigateDestination": {
-		"message": "Trang đích của bạn là %"
+		"message": "Trang đích của bạn là $1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "Tuy nhiên, nếu bạn chọn chuyển hướng ngay bây giờ, trang web sẽ phát hiện được FastForward."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "Bạn sẽ không còn bị phát hiện sau % giây."
+		"message": "Bạn sẽ không còn bị phát hiện sau $1 giây."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "Bạn sẽ không còn bị phát hiện sau 1 giây."
 	},
 	"beforeNavigateTimer": {
-		"message": "Bạn sẽ được điều hướng tự động trong % giây."
+		"message": "Bạn sẽ được điều hướng tự động trong $1 giây."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Bạn sẽ được chuyển hướng tự động trong 1 giây."
@@ -105,7 +105,7 @@
 		"message": "Bạn có muốn chuyển hướng ngay hoặc trong x giây nữa?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Bạn đang được chuyển hướng đến %"
+		"message": "Bạn đang được chuyển hướng đến $1"
 	},
 	"infoLinkvertise": {
 		"message": "FastForward cần bạn hoàn thành captcha trước khi chúng ta có thể bỏ qua những bước khó chịu!"
@@ -126,16 +126,16 @@
 		"message": "Bạn có thể không cần phải đợi!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Người dùng FastForward đã từng chờ như bạn và phản hồi rằng liên liên kết này sẽ dẫn đến %"
+		"message": "Người dùng FastForward đã từng chờ như bạn và phản hồi rằng liên liên kết này sẽ dẫn đến $1"
 	},
 	"crowdBypassedTimer": {
-		"message": "Sẽ được mở trong tab mới sau % giây."
+		"message": "Sẽ được mở trong tab mới sau $1 giây."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Sẽ được mở trong tab mới sau 1 giây."
 	},
 	"crowdCloseTimer": {
-		"message": "Tab này sẽ đóng lại sau % giây."
+		"message": "Tab này sẽ đóng lại sau $1 giây."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "Thẻ này sẽ đóng lại sau 1 giây."

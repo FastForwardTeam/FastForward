@@ -33,7 +33,7 @@
 		"message": "Najczęściej zadawane pytania (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "FastForward ominął dla Ciebie % stron."
+		"message": "FastForward ominął dla Ciebie $1 stron."
 	},
 	"support": {
 		"message": "Wesprzyj Uniwersalne Obejście."
@@ -48,7 +48,7 @@
 		"message": "Włącz obejście stron."
 	},
 	"optionsNavigationDelay": {
-		"message": "Zabierz mnie do miejsc docelowych po % sekund(ach)."
+		"message": "Zabierz mnie do miejsc docelowych po $1 sekund(ach)."
 	},
 	"optionsTrackerBypass": {
 		"message": "Omiń trackery (takie jak bit.ly i t.co) za pomocą Apimon.de."
@@ -63,10 +63,10 @@
 		"message": "Podaj i wykorzystaj miejsca, których nie możesz ominąć."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Otwórz crowd-sourcing w nowej karcie po % sekundach. (0 = natychmiast.)"
+		"message": "Otwórz crowd-sourcing w nowej karcie po $1 sekundach. (0 = natychmiast.)"
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Zamknij zakładkę zawierająca crowd-sourcing miejsca docelowego po % sekundach jej wizyty."
+		"message": "Zamknij zakładkę zawierająca crowd-sourcing miejsca docelowego po $1 sekundach jej wizyty."
 	},
 	"privacyPolicy": {
 		"message": "Polityka Prywatności"
@@ -84,19 +84,19 @@
 		"message": "Jesteś prawie w miejscu docelowym."
 	},
 	"beforeNavigateDestination": {
-		"message": "Twoje miejsce docelowe jest %"
+		"message": "Twoje miejsce docelowe jest $1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "Jeżeli zostaniesz przekierowany od razu, strona wykryje, że używasz Uniwersalnego Obejścia."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "Nie będziesz wykrywany za % sekund."
+		"message": "Nie będziesz wykrywany za $1 sekund."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "Nie będziesz wykrywany za 1 sekundę."
 	},
 	"beforeNavigateTimer": {
-		"message": "Zostaniesz automatycznie przekierowany za % sekund."
+		"message": "Zostaniesz automatycznie przekierowany za $1 sekund."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Zostaniesz przekierowany automatycznie za 1 sekundę."
@@ -105,7 +105,7 @@
 		"message": "Chcesz być przekierowywany natychmiastowo, czy za x sekund?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Trwa nawigacja do %"
+		"message": "Trwa nawigacja do $1"
 	},
 	"infoLinkvertise": {
 		"message": "Nie możemy obejść tej strony, jednakże wynegocjowaliśmy usunięcie najbardziej irytujących kroków."
@@ -126,16 +126,16 @@
 		"message": "Nie musisz już czekać!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Inni użytkownicy Uniwersalnego obejścia czekali za ciebie i zgłosili, że prowadzi to do %"
+		"message": "Inni użytkownicy Uniwersalnego obejścia czekali za ciebie i zgłosili, że prowadzi to do $1"
 	},
 	"crowdBypassedTimer": {
-		"message": "To będzie otwarte w nowym oknie za % sekund."
+		"message": "To będzie otwarte w nowym oknie za $1 sekund."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "To będzie otwarte w nowym oknie za 1 sekundę."
 	},
 	"crowdCloseTimer": {
-		"message": "Ta karta zostanie zamknięta za % sekund."
+		"message": "Ta karta zostanie zamknięta za $1 sekund."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "Ta karta zostanie zamknięta za 1 sekundę."

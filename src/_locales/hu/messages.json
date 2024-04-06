@@ -33,7 +33,7 @@
 		"message": "Gyakran Ismételt Kérdések (GYIK)"
 	},
 	"bypassCounter": {
-		"message": "FastForward már megkerülte az Ön számára szánt % webhelyeket."
+		"message": "FastForward már megkerülte az Ön számára szánt $1 webhelyeket."
 	},
 	"support": {
 		"message": "Hozzájárulás FastForward számára."
@@ -48,7 +48,7 @@
 		"message": "Engedélyezze a weboldal megkerülését."
 	},
 	"optionsNavigationDelay": {
-		"message": "Tegyél a célhoz % másdoperc elteltével"
+		"message": "Tegyél a célhoz $1 másdoperc elteltével"
 	},
 	"optionsTrackerBypass": {
 		"message": "Nyomkövetők kikerülése (például a bit.ly és t.co) az Apimon.de használatával."
@@ -63,10 +63,10 @@
 		"message": "Tömeg kitéreő: Add és vedd el a kitérhetetlen rövidítő oldalak céljait."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Nyisd meg a tömegből származó célokat új ablakban % másodperc elteltével."
+		"message": "Nyisd meg a tömegből származó célokat új ablakban $1 másodperc elteltével."
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Zárja be a tömegből származő célokat % másodperccel miután meglátogattad"
+		"message": "Zárja be a tömegből származő célokat $1 másodperccel miután meglátogattad"
 	},
 	"privacyPolicy": {
 		"message": "Adatvédelmi irányelvek"
@@ -84,19 +84,19 @@
 		"message": "Már majdnem a célodon vagy"
 	},
 	"beforeNavigateDestination": {
-		"message": "A cél hely: %"
+		"message": "A cél hely: $1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "Mindenesetre, ha most lépsz át, fel fogják ismerni az FastForward-t."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "% másodperc múlva nem fogják észrevenni."
+		"message": "$1 másodperc múlva nem fogják észrevenni."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "Nem fogják észrevenni 1 másodperc múlva."
 	},
 	"beforeNavigateTimer": {
-		"message": "Automatikusan át leszel irányítva % másodperc múlva."
+		"message": "Automatikusan át leszel irányítva $1 másodperc múlva."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Automatikusan át leszel irányítva 1 másodperc múlva."
@@ -105,7 +105,7 @@
 		"message": "Egyből vagy x másodperc múlva legyél átirányítva?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Át leszel irányítva ide: %"
+		"message": "Át leszel irányítva ide: $1"
 	},
 	"infoLinkvertise": {
 		"message": "Mi nem térhetünk ki ez a website ellen, de letárgyaltuk a legidegesítőbb lépéseinek eltávolítását."
@@ -126,16 +126,16 @@
 		"message": "Talán nem kell várakoznod!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Más FastForward felhasználók már vártak helyetted, és szerintük ez a(z) % webhelyhez vezet"
+		"message": "Más FastForward felhasználók már vártak helyetted, és szerintük ez a(z) $1 webhelyhez vezet"
 	},
 	"crowdBypassedTimer": {
-		"message": "Az oldal egy új lapon lesz megnyitva % másodperc múlva."
+		"message": "Az oldal egy új lapon lesz megnyitva $1 másodperc múlva."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Az oldal egy új lapon lesz megnyitva 1 másodperc múlva."
 	},
 	"crowdCloseTimer": {
-		"message": "Az oldal bezárul % másodperc múlva."
+		"message": "Az oldal bezárul $1 másodperc múlva."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "Az oldal be fog zárulni 1 másodperc múlva."

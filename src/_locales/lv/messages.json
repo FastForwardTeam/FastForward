@@ -33,7 +33,7 @@
 		"message": "Visbiežāk prasītie jautājumi (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "\"FastForward\" jau ir apgājis % saites priekš tevīm."
+		"message": "\"FastForward\" jau ir apgājis $1 saites priekš tevīm."
 	},
 	"support": {
 		"message": "Ieguldiet \"FastForward\"."
@@ -48,7 +48,7 @@
 		"message": "Ieslēgt saišu apeju."
 	},
 	"optionsNavigationDelay": {
-		"message": "Piegādāt mani uz galapunkta saiti pēc % sekundi(ēm)."
+		"message": "Piegādāt mani uz galapunkta saiti pēc $1 sekundi(ēm)."
 	},
 	"optionsTrackerBypass": {
 		"message": "Apiet izsekotājus (piemēram, bit.ly un t.co) izmantojot Apimon.de."
@@ -63,10 +63,10 @@
 		"message": "Dot un ņemt galapunktus no neapejamajiem saīsinātājiem."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Atvērt pūļa izcelsmes galapunktus jaunā cilnē pēc % sekundes(ēm)."
+		"message": "Atvērt pūļa izcelsmes galapunktus jaunā cilnē pēc $1 sekundes(ēm)."
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Aizvērt cilni kas satur pūļa izcelsmes galapunktu pēc % sekundes(ēm) pēc tās apmeklēšanas."
+		"message": "Aizvērt cilni kas satur pūļa izcelsmes galapunktu pēc $1 sekundes(ēm) pēc tās apmeklēšanas."
 	},
 	"privacyPolicy": {
 		"message": "Privātuma Politika"
@@ -84,19 +84,19 @@
 		"message": "Jūs esat gandrīz savā galapunktā."
 	},
 	"beforeNavigateDestination": {
-		"message": "Jūsu galapunkts ir %"
+		"message": "Jūsu galapunkts ir $1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "Bet, ja jūs navigēsiet tagat, viņi atklās \"FastForward\"."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "Jūs vairāk nebūsiet atklāti pēc % sekundēm."
+		"message": "Jūs vairāk nebūsiet atklāti pēc $1 sekundēm."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "Jūs vairāk nebūsiet atklāti pēc 1 sekundes."
 	},
 	"beforeNavigateTimer": {
-		"message": "Jūs būsiet pāradresēts automātiski pēc % sekundēm."
+		"message": "Jūs būsiet pāradresēts automātiski pēc $1 sekundēm."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Jūs būsiet pāradresēts automātiski pēc 1 sekundes."
@@ -105,7 +105,7 @@
 		"message": "Vai jūs vēlaties būt pāradresēts uzreiz vai pēc x sekundēm?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Jūs tiekat navigēts uz %"
+		"message": "Jūs tiekat navigēts uz $1"
 	},
 	"infoFileHoster": {
 		"message": "Diemžēl, lejupielādes serveris pārliecināsies ka tu esi gaidījis pirms tas ļaus tev lādet failu."
@@ -123,16 +123,16 @@
 		"message": "Jums varbūt nevajag gaidīt!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Citi \"FastForward\" lietotāji jau ir gaidījuši tavā vietā un ziņoja, ka šis aiziet uz %"
+		"message": "Citi \"FastForward\" lietotāji jau ir gaidījuši tavā vietā un ziņoja, ka šis aiziet uz $1"
 	},
 	"crowdBypassedTimer": {
-		"message": "Šis būs atvērts jaunā cilnē pēc % sekundēm."
+		"message": "Šis būs atvērts jaunā cilnē pēc $1 sekundēm."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Šis būs atvērts jaunā cilnē pēc 1 sekundes."
 	},
 	"crowdCloseTimer": {
-		"message": "Šī cilne aizvērsies pēc % sekundēm."
+		"message": "Šī cilne aizvērsies pēc $1 sekundēm."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "Šī cilne aizvērsies pēc 1 sekundes."

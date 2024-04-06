@@ -33,7 +33,7 @@
 		"message": "Hüfig gstelti froge (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "FastForward hed för dech scho % omgange."
+		"message": "FastForward hed för dech scho $1 omgange."
 	},
 	"support": {
 		"message": "Onderstötz FastForward."
@@ -48,7 +48,7 @@
 		"message": "Website omgoh ischalte."
 	},
 	"optionsNavigationDelay": {
-		"message": "Breng mech zom ziel i % sekonde(ne)."
+		"message": "Breng mech zom ziel i $1 sekonde(ne)."
 	},
 	"optionsTrackerBypass": {
 		"message": "Verfolger omgoh (z.b. bit.ly ond t.co) met Apimon.de."
@@ -63,10 +63,10 @@
 		"message": "Geb ond nem s ziel vomene ned omgohbare link verkörzer."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Mach es crowd-sourced ziel uf i % sekonde(ne)"
+		"message": "Mach es crowd-sourced ziel uf i $1 sekonde(ne)"
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Mach es suechmaschene fenster zue vomene crowd-sourced ziel noch % sekonde(ne) nachem bsueche."
+		"message": "Mach es suechmaschene fenster zue vomene crowd-sourced ziel noch $1 sekonde(ne) nachem bsueche."
 	},
 	"privacyPolicy": {
 		"message": "Dateschotzrechtlinie"
@@ -84,19 +84,19 @@
 		"message": "Du besch fascht am ziel acho."
 	},
 	"beforeNavigateDestination": {
-		"message": "Dis ziel esch %"
+		"message": "Dis ziel esch $1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "Aber falls du jetzt scho witer gosch de werd FastForward endeckt."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "Du wersch i % sekondene nöme entdeckt."
+		"message": "Du wersch i $1 sekondene nöme entdeckt."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "Du wersch i 1 sekonde nöme entdeckt."
 	},
 	"beforeNavigateTimer": {
-		"message": "Du wersch i % sekondene automatisch witergleitet."
+		"message": "Du wersch i $1 sekondene automatisch witergleitet."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Du wersch i 1 sekonde automatisch witergleitet."
@@ -105,7 +105,7 @@
 		"message": "Wetsch du sofort witergleitet wärde oder i x sekonde(ne)?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Du wersch witergleitet zo %"
+		"message": "Du wersch witergleitet zo $1"
 	},
 	"infoLinkvertise": {
 		"message": "Wir dürfen diese Website nicht umgehen, aber wir haben die Beseitigung der nervigsten Schritte ausgehandelt."
@@ -126,16 +126,16 @@
 		"message": "Anschinend muesch du ned warte!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Anderi FastForward notzer händ vör dech scho gwarted ond die händ gseit das es do äne füert %"
+		"message": "Anderi FastForward notzer händ vör dech scho gwarted ond die händ gseit das es do äne füert $1"
 	},
 	"crowdBypassedTimer": {
-		"message": "Das werd i % sekondene imene neue fenster ufgmacht."
+		"message": "Das werd i $1 sekondene imene neue fenster ufgmacht."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Das werd i 1 sekonde imene neue fenster ufgmacht."
 	},
 	"crowdCloseTimer": {
-		"message": "Das fenster werd i % sekondene zue goh."
+		"message": "Das fenster werd i $1 sekondene zue goh."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "Das fenster werd i 1 sekonde zue goh."

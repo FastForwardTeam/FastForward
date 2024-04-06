@@ -33,7 +33,7 @@
 		"message": "Preguntes més freqüents (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "El bypass universal ja ha superat el% de llocs."
+		"message": "El bypass universal ja ha superat el$1 de llocs."
 	},
 	"support": {
 		"message": "Contribueix al bypass universal."
@@ -48,7 +48,7 @@
 		"message": "Habilita els bypasss del lloc web."
 	},
 	"optionsNavigationDelay": {
-		"message": "Emporteu-me a les destinacions després del% segon."
+		"message": "Emporteu-me a les destinacions després del$1 segon."
 	},
 	"optionsTrackerBypass": {
 		"message": "Rastrejar bypass (com bit.ly i t.co) utilitzant Apimon.de."
@@ -63,10 +63,10 @@
 		"message": "Crowd Bypass: proporciona i pren les destinacions d’acortitzadors inigualables."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Obre les destinacions amb origen multitudinari en una pestanya nova després de% segon."
+		"message": "Obre les destinacions amb origen multitudinari en una pestanya nova després de$1 segon."
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Tanca la pestanya que conté la destinació originada per la multitud després de% segon de la visita."
+		"message": "Tanca la pestanya que conté la destinació originada per la multitud després de$1 segon de la visita."
 	},
 	"privacyPolicy": {
 		"message": "Política de privacitat"
@@ -84,19 +84,19 @@
 		"message": "Gairebé estàs al vostre destí."
 	},
 	"beforeNavigateDestination": {
-		"message": "La vostra destinació és%"
+		"message": "La vostra destinació és$1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "Tanmateix, si navegueu ara, detectaran bypass universal."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "Ja no sereu detectats en% segons."
+		"message": "Ja no sereu detectats en$1 segons."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "Ja no se us detectarà en un segon."
 	},
 	"beforeNavigateTimer": {
-		"message": "Se us redirigirà automàticament en% segons."
+		"message": "Se us redirigirà automàticament en$1 segons."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Se us redireccionarà automàticament en 1 segon."
@@ -105,7 +105,7 @@
 		"message": "Voleu redirigir-vos a l'instant o en x segons?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Esteu navegant a%"
+		"message": "Esteu navegant a$1"
 	},
 	"infoLinkvertise": {
 		"message": "No se'ns permet passar aquesta web, però hem negociat l'eliminació dels seus passos més molestos."
@@ -126,16 +126,16 @@
 		"message": "Potser no haureu d’esperar!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Altres usuaris del bypass universal ja t’han esperat i han informat que això comporta un%"
+		"message": "Altres usuaris del bypass universal ja t’han esperat i han informat que això comporta un$1"
 	},
 	"crowdBypassedTimer": {
-		"message": "Aquesta opció s'obrirà en una pestanya nova en% segons."
+		"message": "Aquesta opció s'obrirà en una pestanya nova en$1 segons."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "S’obrirà en una nova pestanya en un segon."
 	},
 	"crowdCloseTimer": {
-		"message": "Aquesta pestanya es tancarà en% segons."
+		"message": "Aquesta pestanya es tancarà en$1 segons."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "Aquesta pestanya es tancarà d'aquí a un segon."

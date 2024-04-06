@@ -33,7 +33,7 @@
 		"message": "常见问题(FAQ)"
 	},
 	"bypassCounter": {
-		"message": "FastForward已经帮你跳过了%的网站"
+		"message": "FastForward已经帮你跳过了$1的网站"
 	},
 	"support": {
 		"message": "支持FastForward."
@@ -48,7 +48,7 @@
 		"message": "启用网站跳过功能"
 	},
 	"optionsNavigationDelay": {
-		"message": "在%秒后跳到目标网站.(0 为立刻跳转.)"
+		"message": "在$1秒后跳到目标网站.(0 为立刻跳转.)"
 	},
 	"optionsTrackerBypass": {
 		"message": "跳过使用Apimon.de的追踪器（比如bit.ly和t.co）。"
@@ -63,10 +63,10 @@
 		"message": "分享/获取无法跳过的短地址提供商的目的网址。"
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "%秒后在新标签页打开人们分享的目的网址。"
+		"message": "$1秒后在新标签页打开人们分享的目的网址。"
 	},
 	"optionsCrowdAutoClose": {
-		"message": "访问人们分享的目的网址%秒后将其标签页关闭。"
+		"message": "访问人们分享的目的网址$1秒后将其标签页关闭。"
 	},
 	"privacyPolicy": {
 		"message": "隐私政策"
@@ -84,19 +84,19 @@
 		"message": "您即将到达目的网址。"
 	},
 	"beforeNavigateDestination": {
-		"message": "您的目的网址为%"
+		"message": "您的目的网址为$1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "如果您马上跳转，他们将会检测到FastForward。"
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "%秒后，您将不再被检测到。"
+		"message": "$1秒后，您将不再被检测到。"
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "1秒后，您将在不再被检测到。"
 	},
 	"beforeNavigateTimer": {
-		"message": "%秒后，您将被自动导航到目的网站。"
+		"message": "$1秒后，您将被自动导航到目的网站。"
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "1秒后，您将被自动导航到目的网站。"
@@ -105,7 +105,7 @@
 		"message": "您想立刻导航到目的网站还是在x秒后？"
 	},
 	"beforeNavigateInstant": {
-		"message": "您正在导航到%"
+		"message": "您正在导航到$1"
 	},
 	"infoLinkvertise": {
 		"message": "我们不允许绕过这个网站，但我们已经通过谈判取消了他们最烦人的步骤。"
@@ -126,16 +126,16 @@
 		"message": "您或许不必等待！"
 	},
 	"crowdBypassedInfo": {
-		"message": "其他FastForward用户已经帮您导航，并报告该链接的目的网址为%"
+		"message": "其他FastForward用户已经帮您导航，并报告该链接的目的网址为$1"
 	},
 	"crowdBypassedTimer": {
-		"message": "%秒后将会在新标签页打开。"
+		"message": "$1秒后将会在新标签页打开。"
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "1秒后将会在新标签页打开。"
 	},
 	"crowdCloseTimer": {
-		"message": "此选项卡将在%秒后关闭。"
+		"message": "此选项卡将在$1秒后关闭。"
 	},
 	"crowdCloseTimerSingular": {
 		"message": "此选项卡将在1秒后关闭。"

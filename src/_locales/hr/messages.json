@@ -33,7 +33,7 @@
 		"message": "Često Postavljena Pitanja (ČPP)"
 	},
 	"bypassCounter": {
-		"message": "FastForward je već zaobišao % stranica za vas."
+		"message": "FastForward je već zaobišao $1 stranica za vas."
 	},
 	"support": {
 		"message": "Podržite FastForward"
@@ -48,7 +48,7 @@
 		"message": "Omogući zaobilaženje stranice."
 	},
 	"optionsNavigationDelay": {
-		"message": "Odvedi me do odredišta nakon % sekundi. (Koristi 0 za ptebacivanje odmah.)"
+		"message": "Odvedi me do odredišta nakon $1 sekundi. (Koristi 0 za ptebacivanje odmah.)"
 	},
 	"optionsTrackerBypass": {
 		"message": "Zaobiđite trackere (poput bit.ly i t.co) pomoću Apimon.de."
@@ -63,10 +63,10 @@
 		"message": "Give and take the destinations of unbypassable shorteners."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Otvori crowd-sourced odredište u novoj kartici nakon % sekund(a). (0 = odmah.)"
+		"message": "Otvori crowd-sourced odredište u novoj kartici nakon $1 sekund(a). (0 = odmah.)"
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Zatvorite karticu koja sadrži crowd-sourced odredišta nakon % sekunde posjeta."
+		"message": "Zatvorite karticu koja sadrži crowd-sourced odredišta nakon $1 sekunde posjeta."
 	},
 	"privacyPolicy": {
 		"message": "Pravila privatnosti"
@@ -84,19 +84,19 @@
 		"message": "Skoro ste na odredištu."
 	},
 	"beforeNavigateDestination": {
-		"message": "Vaše odredište je %"
+		"message": "Vaše odredište je $1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "Međutim, ako se sada krećete, otkrivat će FastForward."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "Više nećete biti otkriveni za % sekundi."
+		"message": "Više nećete biti otkriveni za $1 sekundi."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "Više nećete biti otkriveni za 1 sekundu."
 	},
 	"beforeNavigateTimer": {
-		"message": "Biti ćete automatski preusmjereni za % sekundi."
+		"message": "Biti ćete automatski preusmjereni za $1 sekundi."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Biti ćete automatski preusmjereni za 1 sekundu."
@@ -105,7 +105,7 @@
 		"message": "Dali želite biti preusmjereni odmah ili za x sekundi?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Navođenje do %"
+		"message": "Navođenje do $1"
 	},
 	"infoLinkvertise": {
 		"message": "Nije nam dopušteno zaobilaženje ove stranice ali smo dogovorili micanje najdosadnijih koraka"
@@ -126,16 +126,16 @@
 		"message": "Možda ne morate čekati!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Ostali FastForward korisnici su već prijavili da ovo vodi prema %"
+		"message": "Ostali FastForward korisnici su već prijavili da ovo vodi prema $1"
 	},
 	"crowdBypassedTimer": {
-		"message": "Ovo će biti otvoreno u novoj kartici za % sekundi."
+		"message": "Ovo će biti otvoreno u novoj kartici za $1 sekundi."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Ove će biti otvoreno u novoj kartici za 1 sekundu."
 	},
 	"crowdCloseTimer": {
-		"message": "Ova kartica će se zatvoriti za % sekundi."
+		"message": "Ova kartica će se zatvoriti za $1 sekundi."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "Ova kartica će se zatvoriti za 1. sekundu."

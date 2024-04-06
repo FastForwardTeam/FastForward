@@ -33,7 +33,7 @@
 		"message": "Cwestiynau cyffredin (CC)"
 	},
 	"bypassCounter": {
-		"message": "Mae FastForward wedi osgoi % gwefan yn barod i chi."
+		"message": "Mae FastForward wedi osgoi $1 gwefan yn barod i chi."
 	},
 	"support": {
 		"message": "Cyfrannu i FastForward"
@@ -48,7 +48,7 @@
 		"message": "Caniatáu osgoi gwefanau"
 	},
 	"optionsNavigationDelay": {
-		"message": "Ail-lywio i'r diwedd ar ôl % eiliad."
+		"message": "Ail-lywio i'r diwedd ar ôl $1 eiliad."
 	},
 	"optionsTrackerBypass": {
 		"message": "Osgoi tracwyr (megis bit.ly a t.co) trwy ddefnyddio Apimon.de."
@@ -63,10 +63,10 @@
 		"message": "Osgoi Torfol: Rhowch a derbyn cyrchfan linciau byr na ellir eu hosgoi."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Agor cyrchfannau o linciau torfol mewn tab newydd ar ôl % eiliad(au)."
+		"message": "Agor cyrchfannau o linciau torfol mewn tab newydd ar ôl $1 eiliad(au)."
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Cau tab sydd yn cynnwys y cyrchfan torfol ar ôl % eiliad o'i ymweld."
+		"message": "Cau tab sydd yn cynnwys y cyrchfan torfol ar ôl $1 eiliad o'i ymweld."
 	},
 	"privacyPolicy": {
 		"message": "Hysbysiad preifatrwydd"
@@ -84,19 +84,19 @@
 		"message": "Rydych bron ar eich cyrchfan."
 	},
 	"beforeNavigateDestination": {
-		"message": "Eich cyrchfan yw %"
+		"message": "Eich cyrchfan yw $1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "Fodd bynnag, os byddwch yn llywio nawr, byddant yn synhwyro FastForward."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "Ni fyddwch yn cael eich synhywro mwyach mewn % eiliad."
+		"message": "Ni fyddwch yn cael eich synhywro mwyach mewn $1 eiliad."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "Ni fyddwch yn cael eich synhwyro mewn 1 eiliad."
 	},
 	"beforeNavigateTimer": {
-		"message": "Cewch eich ailgyfeirio'n awtomatig mewn % eiliad."
+		"message": "Cewch eich ailgyfeirio'n awtomatig mewn $1 eiliad."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Cewch eich ailgyfeirio'n awtomatig mewn 1 eiliad."
@@ -105,7 +105,7 @@
 		"message": "Ydych chi am gael eich ailgyfeirio ar unwaith neu mewn x eiliad?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Rydych chi'n cael eich llywio i %"
+		"message": "Rydych chi'n cael eich llywio i $1"
 	},
 	"infoLinkvertise": {
 		"message": "Nid ydym yn cael osgoi'r wefan hon ond rydym wedi cytuno i osgoi y camau mwyaf diflas."
@@ -126,16 +126,16 @@
 		"message": "Efallai ni fydd yn rhaid i chi aros!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Mae defnyddwyr eraill FastForward eisoes wedi aros ac wedi dweud fod hwn yn arwain at %"
+		"message": "Mae defnyddwyr eraill FastForward eisoes wedi aros ac wedi dweud fod hwn yn arwain at $1"
 	},
 	"crowdBypassedTimer": {
-		"message": "Bydd hwn yn cael ei agor mewn tab newydd mewn % eiliad."
+		"message": "Bydd hwn yn cael ei agor mewn tab newydd mewn $1 eiliad."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Bydd hwn yn cael ei agor mewn tab newydd yn 1 eiliad."
 	},
 	"crowdCloseTimer": {
-		"message": "Bydd y tab hwn yn cau mewn % eiliad."
+		"message": "Bydd y tab hwn yn cau mewn $1 eiliad."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "Bydd y tab hwn yn cau mewn 1 eiliad."

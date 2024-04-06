@@ -33,7 +33,7 @@
 		"message": "Ofte stilte spørgsmål (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "FastForward har allerede omgået % websteder for dig."
+		"message": "FastForward har allerede omgået $1 websteder for dig."
 	},
 	"support": {
 		"message": "Støt FastForward"
@@ -48,7 +48,7 @@
 		"message": "Aktivér websteds-bypass."
 	},
 	"optionsNavigationDelay": {
-		"message": "Tag mig til destinationer efter % sekund(er)."
+		"message": "Tag mig til destinationer efter $1 sekund(er)."
 	},
 	"optionsTrackerBypass": {
 		"message": "Omgåelsessporere (såsom bit.ly og t.co), som benytter Apimon.de."
@@ -63,10 +63,10 @@
 		"message": "Masseomgåelse. Giv og tag destinationerne fra uomgåelige afkortere."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Åbn crowd-sourced destinationer i en ny fane efter % sekund(er)."
+		"message": "Åbn crowd-sourced destinationer i en ny fane efter $1 sekund(er)."
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Luk fanen med den crowd-sourced destination efter % sekund(er)s besøg."
+		"message": "Luk fanen med den crowd-sourced destination efter $1 sekund(er)s besøg."
 	},
 	"privacyPolicy": {
 		"message": "Fortrolighedspolitik"
@@ -84,19 +84,19 @@
 		"message": "Du er næsten på din destination."
 	},
 	"beforeNavigateDestination": {
-		"message": "Din destination er %"
+		"message": "Din destination er $1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "Navigerer du videre nu, registrerer de FastForward."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "Om % sekunder bliver du ikke længere opdaget."
+		"message": "Om $1 sekunder bliver du ikke længere opdaget."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "Om 1 sekund bliver du ikke længere opdaget."
 	},
 	"beforeNavigateTimer": {
-		"message": "Du omdirigeres automatisk om % sekunder."
+		"message": "Du omdirigeres automatisk om $1 sekunder."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Du omdirigeres automatisk om 1 sekund."
@@ -105,7 +105,7 @@
 		"message": "Vil du omdirigeres straks eller om x sekunder?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Du videreføres til %"
+		"message": "Du videreføres til $1"
 	},
 	"infoLinkvertise": {
 		"message": "Vi har ikke tilladelse til at omgå dette websted, men det er lykkedes at opnå fjernelse af dets mest irriterende trin."
@@ -126,16 +126,16 @@
 		"message": "Du behøver måske ikke at vente!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Andre FastForward-brugere har allerede ventet for dig og rapporteret, at dette fører til %"
+		"message": "Andre FastForward-brugere har allerede ventet for dig og rapporteret, at dette fører til $1"
 	},
 	"crowdBypassedTimer": {
-		"message": "Dette åbnes i en ny fane om % sekunder."
+		"message": "Dette åbnes i en ny fane om $1 sekunder."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Dette åbnes i en ny fane om 1 sekund."
 	},
 	"crowdCloseTimer": {
-		"message": "Denne fane lukkes om % sekunder."
+		"message": "Denne fane lukkes om $1 sekunder."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "Denne fane lukkes om 1 sekund."

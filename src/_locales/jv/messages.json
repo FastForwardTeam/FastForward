@@ -33,7 +33,7 @@
 		"message": "Pitakon Seng Umum (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "FastForward sampun ngebypass % situs kangge panjenengan."
+		"message": "FastForward sampun ngebypass $1 situs kangge panjenengan."
 	},
 	"support": {
 		"message": "Maringi kontribusi kangge FastForward."
@@ -48,7 +48,7 @@
 		"message": "Ngaktifne bypass situs web."
 	},
 	"optionsNavigationDelay": {
-		"message": "Arahne menyang tujuan sakwise % detik. "
+		"message": "Arahne menyang tujuan sakwise $1 detik. "
 	},
 	"optionsTrackerBypass": {
 		"message": "Bypass pelacak (kados'e bit.ly lan t.co) ngagem Apimon.de."
@@ -63,10 +63,10 @@
 		"message": "Crowd Bypass: Maringi lan angsal tujuan saking pemendek link ingkang mboten saged di bypass."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Mbukak tujuan crowd bypass ing tab anyar sakwise % detik. "
+		"message": "Mbukak tujuan crowd bypass ing tab anyar sakwise $1 detik. "
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Tutup tab ingkang isine tujuan saking crowd bypass ing % detik sakwise sampun ngunjungi."
+		"message": "Tutup tab ingkang isine tujuan saking crowd bypass ing $1 detik sakwise sampun ngunjungi."
 	},
 	"privacyPolicy": {
 		"message": "Kebijakan Privasi"
@@ -84,19 +84,19 @@
 		"message": "Panjenengan meh ngantos tekan tujuane panjenengan."
 	},
 	"beforeNavigateDestination": {
-		"message": "Tujuane panjenengan yaiku %"
+		"message": "Tujuane panjenengan yaiku $1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "Nanging, menawi panjenengan langsung nglewati sakniki, dekne kabeh bakal ndeteksi FastForward."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "Panjenengan mboten bakal maneh dideteksi ing % detik."
+		"message": "Panjenengan mboten bakal maneh dideteksi ing $1 detik."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "Panjenengan mboten bakal maneh dideteksi ing 1 detik."
 	},
 	"beforeNavigateTimer": {
-		"message": "Panjenengan bakal dialihne kanthi otomatis ing % detik."
+		"message": "Panjenengan bakal dialihne kanthi otomatis ing $1 detik."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Panjenengan bakal dialihne kanthi otomatis ing 1 detik."
@@ -105,7 +105,7 @@
 		"message": "Menopo panjenengan pingin dialihne langsung utawi ing x detik?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Panjenengan lagi diarahaken menyang %"
+		"message": "Panjenengan lagi diarahaken menyang $1"
 	},
 	"infoLinkvertise": {
 		"message": "Kita ora diidini ngliwati situs web iki nanging wis negosiasi langkah-langkah sing paling ngganggu."
@@ -126,16 +126,16 @@
 		"message": "Panjenengan mungkin mboten perlu ngenteni!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Pangguna FastForward liyane sampun ngliwati kangge panjenengan lan nglaporne yen link niki tujuane yaiku %"
+		"message": "Pangguna FastForward liyane sampun ngliwati kangge panjenengan lan nglaporne yen link niki tujuane yaiku $1"
 	},
 	"crowdBypassedTimer": {
-		"message": "Niki bakal di bukak teng tab anyar ing % detik."
+		"message": "Niki bakal di bukak teng tab anyar ing $1 detik."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Niki bakal di bukak teng tab anyar ing 1 detik."
 	},
 	"crowdCloseTimer": {
-		"message": "Tab niki bakal ditutup ing % detik."
+		"message": "Tab niki bakal ditutup ing $1 detik."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "Tab niki bakal ditutup ing 1 detik."

@@ -33,7 +33,7 @@
 		"message": "ተዘውትረው የሚጠየቁ ጥያቄዎች (ተዘውትረው)"
 	},
 	"bypassCounter": {
-		"message": "ሁለንተናዊ ማለፍ ቀድሞውንም ጣቢያዎችን% አል sitesል"
+		"message": "ሁለንተናዊ ማለፍ ቀድሞውንም ጣቢያዎችን$1 አል sitesል"
 	},
 	"support": {
 		"message": "ወደ ሁለንተናዊ ማቋረጫ ያበርክቱ።"
@@ -48,7 +48,7 @@
 		"message": "የድርጣቢያ ማለፍን ያንቁ።"
 	},
 	"optionsNavigationDelay": {
-		"message": "ከ% ሰከንድ (ሰ) በኋላ ወደ መድረሻዎች ውሰደኝ ፡፡"
+		"message": "ከ$1 ሰከንድ (ሰ) በኋላ ወደ መድረሻዎች ውሰደኝ ፡፡"
 	},
 	"optionsTrackerBypass": {
 		"message": "Apimon.de ን በመጠቀም ትራኮችን (ለምሳሌ bit.ly እና t.co ን) በመጠቀም ያቋርጣሉ ፡፡"
@@ -63,10 +63,10 @@
 		"message": "የተጨናነቀ አቋራጭ የማይተላለፍ አቋራጭ ያላቸውን መድረሻ ይስጡ እና ይውሰዱ ፡፡"
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "ከ% ሰከንድ (ቶች) በኋላ በህዝብ የተመረጡ መድረሻዎችን በአዲስ ትር ክፈት"
+		"message": "ከ$1 ሰከንድ (ቶች) በኋላ በህዝብ የተመረጡ መድረሻዎችን በአዲስ ትር ክፈት"
 	},
 	"optionsCrowdAutoClose": {
-		"message": "ከጎበኙ በኋላ ከ% ሰከንድ (ሰት) በኋላ በሕዝብ የተፈጠረ መድረሻን የያዘ ትር ይዝጉ"
+		"message": "ከጎበኙ በኋላ ከ$1 ሰከንድ (ሰት) በኋላ በሕዝብ የተፈጠረ መድረሻን የያዘ ትር ይዝጉ"
 	},
 	"privacyPolicy": {
 		"message": "የ ግል የሆነ"
@@ -84,19 +84,19 @@
 		"message": "መድረሻዎ ላይ ደርሰዋል።"
 	},
 	"beforeNavigateDestination": {
-		"message": "መድረሻዎ% ነው"
+		"message": "መድረሻዎ$1 ነው"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "ሆኖም ግን ፣ አሁን ከዳሰሱ ዩኒቨርሳል ኦንቨርንሌይትን ይገነዘባሉ።"
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "በ% ሰከንዶች ውስጥ ከእንግዲህ አይገኙም"
+		"message": "በ$1 ሰከንዶች ውስጥ ከእንግዲህ አይገኙም"
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "በ 1 ሰከንድ ውስጥ ከእንግዲህ ወዲህ አይገኙም።"
 	},
 	"beforeNavigateTimer": {
-		"message": "በ% ሰከንዶች ውስጥ በራስ-ሰር ይዛወራሉ።"
+		"message": "በ$1 ሰከንዶች ውስጥ በራስ-ሰር ይዛወራሉ።"
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "በ 1 ሴኮንድ ውስጥ በራስ-ሰር ይዛወራሉ።"
@@ -105,7 +105,7 @@
 		"message": "በቅጽበት ወይም በ x ሰከንዶች ውስጥ አቅጣጫዎን መለወጥ ይፈልጋሉ?"
 	},
 	"beforeNavigateInstant": {
-		"message": "ወደ% እየተጓዙ ነው"
+		"message": "ወደ$1 እየተጓዙ ነው"
 	},
 	"infoFileHoster": {
 		"message": "እንደ አለመታደል ሆኖ የወረደው አገልጋይ ፋይሉን ለማውረድ ከመፍቀድዎ በፊት መጠበቅዎን ያረጋግጣል።"
@@ -123,16 +123,16 @@
 		"message": "መጠበቅ የለብዎትም!"
 	},
 	"crowdBypassedInfo": {
-		"message": "ሌሎች ሁለንተናዊ አቋራጭ ተጠቃሚዎች እርስዎን ይጠባበቁ እና ይህ ወደ% እንደሚወስድ ዘግቧል።"
+		"message": "ሌሎች ሁለንተናዊ አቋራጭ ተጠቃሚዎች እርስዎን ይጠባበቁ እና ይህ ወደ$1 እንደሚወስድ ዘግቧል።"
 	},
 	"crowdBypassedTimer": {
-		"message": "ይህ በ% ሰከንዶች ውስጥ በአዲስ ትር ውስጥ ይከፈታል።"
+		"message": "ይህ በ$1 ሰከንዶች ውስጥ በአዲስ ትር ውስጥ ይከፈታል።"
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "ይህ በ 1 ሴኮንድ ውስጥ በአዲስ ትር ውስጥ ይከፈታል"
 	},
 	"crowdCloseTimer": {
-		"message": "ይህ ትር በ% ሰከንዶች ውስጥ ይዘጋል።"
+		"message": "ይህ ትር በ$1 ሰከንዶች ውስጥ ይዘጋል።"
 	},
 	"crowdCloseTimerSingular": {
 		"message": "ይህ ትር በ 1 ሴኮንድ ውስጥ ይዘጋል።"

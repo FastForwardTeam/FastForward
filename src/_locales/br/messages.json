@@ -15,7 +15,7 @@
 		"message": "Foar ar Goulennoù (FAG)"
 	},
 	"bypassCounter": {
-		"message": "Bet oc'h e-biou da %s lec'hienn a-drugarez da FastForward."
+		"message": "Bet oc'h e-biou da $1s lec'hienn a-drugarez da FastForward."
 	},
 	"support": {
 		"message": "Kenoberiañ da FastForward."
@@ -42,10 +42,10 @@
 		"message": "Tost erru oc'h da benn hoc'h hent."
 	},
 	"beforeNavigateDestination": {
-		"message": "% eo hoc'h arvoned"
+		"message": "$1 eo hoc'h arvoned"
 	},
 	"beforeNavigateTimer": {
-		"message": "Adheñchet e vezoc'h bet ent emgefreek a-benn % eilenn."
+		"message": "Adheñchet e vezoc'h bet ent emgefreek a-benn $1 eilenn."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Adheñchet e vezoc'h bet ent emgefreek a-benn 1 eilenn."

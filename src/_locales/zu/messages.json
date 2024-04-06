@@ -33,7 +33,7 @@
 		"message": "Eminye imibuzo ejwayelekile (EIE)"
 	},
 	"bypassCounter": {
-		"message": "I-FastForward isivele idlule kuwe amasayithi we-%."
+		"message": "I-FastForward isivele idlule kuwe amasayithi we-$1."
 	},
 	"support": {
 		"message": "Yenza umnikelo ku-Universal Diverter"
@@ -48,7 +48,7 @@
 		"message": "Nika amandla okudluliselwa kwewebhusayithi."
 	},
 	"optionsNavigationDelay": {
-		"message": "\nNgihambise ezindaweni ngemuva kwe (%) yesibili."
+		"message": "\nNgihambise ezindaweni ngemuva kwe ($1) yesibili."
 	},
 	"optionsTrackerBypass": {
 		"message": "\nAbakhandi be-Derive (njenge-bit.ly ne-t.co) ngokusebenzisa i-Apimon.de."
@@ -63,10 +63,10 @@
 		"message": "Nikeza futhi uthathe izindawo ezinqamulelayo ezingashintshiwe."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "\nVula izindawo okutholwe izixuku kuthebhu entsha ngemuva kwama-% wesibili."
+		"message": "\nVula izindawo okutholwe izixuku kuthebhu entsha ngemuva kwama-$1 wesibili."
 	},
 	"optionsCrowdAutoClose": {
-		"message": "\nVala ithebhu equkethe indawo okutholwe kuyo isixuku ngemuva kwe-% yesibili yokuyi vakashela."
+		"message": "\nVala ithebhu equkethe indawo okutholwe kuyo isixuku ngemuva kwe-$1 yesibili yokuyi vakashela."
 	},
 	"privacyPolicy": {
 		"message": "Inqubomgomo yobumfihlo"
@@ -84,19 +84,19 @@
 		"message": "Usondele lapho uya khona."
 	},
 	"beforeNavigateDestination": {
-		"message": "\nIndawo yakho ngu-%"
+		"message": "\nIndawo yakho ngu-$1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "\nKodwa-ke, uma uzulazula manje, bazobona i-FastForward."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "\nNgeke usatholakala emasekhondini angu-%."
+		"message": "\nNgeke usatholakala emasekhondini angu-$1."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "\nNgeke usatholakala kwisekhondi eli-1."
 	},
 	"beforeNavigateTimer": {
-		"message": "\nUzoqondiswa kabusha ngemizuzwana engu-%."
+		"message": "\nUzoqondiswa kabusha ngemizuzwana engu-$1."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Uzoqondiswa kabusha ngomzuzwana o-1."
@@ -105,7 +105,7 @@
 		"message": "\nUfuna ukuphinde uqondiswe kabusha noma ngemizuzwana eyi-x?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Uzulazelwa ku-%"
+		"message": "Uzulazelwa ku-$1"
 	},
 	"infoFileHoster": {
 		"message": "Ngeshwa, iseva yokulanda izoqinisekisa ukuthi ulindile ngaphambi kokukuvumela ukuthi ulande ifayela."
@@ -123,16 +123,16 @@
 		"message": "\nKungase kungadingeki ulinde!"
 	},
 	"crowdBypassedInfo": {
-		"message": "\nAbanye abasebenzisi be-FastForward sebevele bakulindile futhi babika ukuthi lokhu kuholela ku-%"
+		"message": "\nAbanye abasebenzisi be-FastForward sebevele bakulindile futhi babika ukuthi lokhu kuholela ku-$1"
 	},
 	"crowdBypassedTimer": {
-		"message": "Lokhu kuzovulwa kuthebhu entsha ngemizuzwana engu-%."
+		"message": "Lokhu kuzovulwa kuthebhu entsha ngemizuzwana engu-$1."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Lokhu kuzovulwa kuthebhu entsha kusekhondi eli-1."
 	},
 	"crowdCloseTimer": {
-		"message": "\nLe thebhu izovala ngemizuzwana engu-%."
+		"message": "\nLe thebhu izovala ngemizuzwana engu-$1."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "\nLe thebhu izovalwa ngomzuzwana eli-1"

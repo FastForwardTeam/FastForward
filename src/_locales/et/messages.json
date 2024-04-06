@@ -33,7 +33,7 @@
 		"message": "Korduma Kippuvad Küsimused"
 	},
 	"bypassCounter": {
-		"message": "FastForward-i välditud saidid: %."
+		"message": "FastForward-i välditud saidid: $1."
 	},
 	"support": {
 		"message": "Panustage FastForward-i."
@@ -48,7 +48,7 @@
 		"message": "Veebisaidi möödasõitude lubamine."
 	},
 	"optionsNavigationDelay": {
-		"message": "Minge sihtkohta % sek pärast."
+		"message": "Minge sihtkohta $1 sek pärast."
 	},
 	"optionsTrackerBypass": {
 		"message": "Bypass jälgijad (näiteks bit.ly ja t.co), kasutades Apimon.de."
@@ -63,10 +63,10 @@
 		"message": "Saate saata ja vastu võtta sihtkohti, millest ei saa mööda minna."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Pärast % sekundi möödumist avage uuel vahelehel rahvahulgaga sihtkohad."
+		"message": "Pärast $1 sekundi möödumist avage uuel vahelehel rahvahulgaga sihtkohad."
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Sulgege vahekaart, mis sisaldab rahvahulga päritolu sihtkohta pärast % sek möödumist selle külastamisest."
+		"message": "Sulgege vahekaart, mis sisaldab rahvahulga päritolu sihtkohta pärast $1 sek möödumist selle külastamisest."
 	},
 	"privacyPolicy": {
 		"message": "Privaatsusreeglid"
@@ -84,19 +84,19 @@
 		"message": "Olete peaaegu sihtkohta jõudnud."
 	},
 	"beforeNavigateDestination": {
-		"message": "Sinu sihtkoht on %"
+		"message": "Sinu sihtkoht on $1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "Kui aga nüüd lähete, avastavad nad FastForward-i."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "Teid ei tuvastata enam % sekundi jooksul."
+		"message": "Teid ei tuvastata enam $1 sekundi jooksul."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "Teid ei tuvastata enam ühe sekundi jooksul."
 	},
 	"beforeNavigateTimer": {
-		"message": "Teid suunatakse automaatselt ümber % sekundi jooksul."
+		"message": "Teid suunatakse automaatselt ümber $1 sekundi jooksul."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Teid suunatakse automaatselt ümber ühe sekundi jooksul."
@@ -105,7 +105,7 @@
 		"message": "Kas soovite, et teid suunataks kohe või mõne sekundi pärast?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Sind suunatakse %"
+		"message": "Sind suunatakse $1"
 	},
 	"infoLinkvertise": {
 		"message": "Me ei tohi sellest veebisaidist mööda hiilida, kuid oleme pidanud läbirääkimisi nende kõige tüütumate sammude eemaldamise üle."
@@ -126,16 +126,16 @@
 		"message": "Võimalik, et ei pea ootama!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Teised FastForwardi kasutajad on juba oodanud sinu järgi ning andnud teada et see viib %"
+		"message": "Teised FastForwardi kasutajad on juba oodanud sinu järgi ning andnud teada et see viib $1"
 	},
 	"crowdBypassedTimer": {
-		"message": "See avatakse uuel vahekaardil % sekundi pärast."
+		"message": "See avatakse uuel vahekaardil $1 sekundi pärast."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "See avatakse uuel vahekaardil 1 sekundi pärast."
 	},
 	"crowdCloseTimer": {
-		"message": "See vahekaart sulgub % sekundi pärast."
+		"message": "See vahekaart sulgub $1 sekundi pärast."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "See vahekaart suletakse ühe sekundiga."

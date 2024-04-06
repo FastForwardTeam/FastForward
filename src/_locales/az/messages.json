@@ -51,10 +51,10 @@
 		"message": "Demək olar ki, təyinat yerindəsiniz."
 	},
 	"beforeNavigateDestination": {
-		"message": "Təyinat yeri %"
+		"message": "Təyinat yeri $1"
 	},
 	"beforeNavigateTimer": {
-		"message": "% saniyə ərzində avtomatik yönləndiriləcəksiniz."
+		"message": "$1 saniyə ərzində avtomatik yönləndiriləcəksiniz."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "1 saniyə ərzində avtomatik yönləndiriləcəksiniz."
@@ -66,10 +66,10 @@
 		"message": "Gözləməyinizə ehtiyac yoxdur!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Digər FastForward istifadəçiləri artıq sizi gözlədilər və bunun % a çatdığı bildirildi"
+		"message": "Digər FastForward istifadəçiləri artıq sizi gözlədilər və bunun $1 a çatdığı bildirildi"
 	},
 	"crowdBypassedTimer": {
-		"message": "Bu, % saniyə ərzində yeni bir vərəqdə açılacaq."
+		"message": "Bu, $1 saniyə ərzində yeni bir vərəqdə açılacaq."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Bu, 1 saniyə ərzində yeni bir vərəq açılacaq."

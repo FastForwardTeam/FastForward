@@ -33,7 +33,7 @@
 		"message": "常見問答 (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "FastForward 已幫您繞過%個網站。"
+		"message": "FastForward 已幫您繞過$1個網站。"
 	},
 	"support": {
 		"message": "幫助 FastForward"
@@ -48,7 +48,7 @@
 		"message": "啟用網站繞過功能"
 	},
 	"optionsNavigationDelay": {
-		"message": "在%秒後轉移到目標連結。 (輸入0可以瞬間轉移)"
+		"message": "在$1秒後轉移到目標連結。 (輸入0可以瞬間轉移)"
 	},
 	"optionsTrackerBypass": {
 		"message": "繞過使用Apimon.de的追踪器（比如bit.ly和t.co）。"
@@ -63,10 +63,10 @@
 		"message": "對於無法繞過的短連結，直接帶我到短連結頁面。"
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "在%秒後轉移到用戶提供的連結。 (0=立刻轉移)"
+		"message": "在$1秒後轉移到用戶提供的連結。 (0=立刻轉移)"
 	},
 	"optionsCrowdAutoClose": {
-		"message": "訪問人們分享的目的網址%秒後將其標籤頁關閉。"
+		"message": "訪問人們分享的目的網址$1秒後將其標籤頁關閉。"
 	},
 	"privacyPolicy": {
 		"message": "隱私權政策"
@@ -84,19 +84,19 @@
 		"message": "您與目的地觸手可及。"
 	},
 	"beforeNavigateDestination": {
-		"message": "您的目的地是 %"
+		"message": "您的目的地是 $1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "但若您馬上跳轉，他們將會檢測到FastForward。"
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "%秒後，您將不再被檢測到。"
+		"message": "$1秒後，您將不再被檢測到。"
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "1秒後，您將不再被檢測到。"
 	},
 	"beforeNavigateTimer": {
-		"message": "您將在%秒後被重新導向。"
+		"message": "您將在$1秒後被重新導向。"
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "您將在1秒後被自動重新導向"
@@ -105,7 +105,7 @@
 		"message": "您希望立刻或是x秒後被重新導向嗎？"
 	},
 	"beforeNavigateInstant": {
-		"message": "您正在導航到%"
+		"message": "您正在導航到$1"
 	},
 	"infoLinkvertise": {
 		"message": "我們不受允許直接繞過這個網頁，不過我們已通過談判能夠移除這個網頁最麻煩的步驟了。"
@@ -126,16 +126,16 @@
 		"message": "或許您可以不用再等待了。"
 	},
 	"crowdBypassedInfo": {
-		"message": "其他的 FastForward 用戶已經替您省下寶貴的時間，並回報該短連結重導向 %"
+		"message": "其他的 FastForward 用戶已經替您省下寶貴的時間，並回報該短連結重導向 $1"
 	},
 	"crowdBypassedTimer": {
-		"message": "將在%秒後以新分頁開啟。"
+		"message": "將在$1秒後以新分頁開啟。"
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "將在1秒後以新分頁開啟。"
 	},
 	"crowdCloseTimer": {
-		"message": "此分頁會在%秒後關閉"
+		"message": "此分頁會在$1秒後關閉"
 	},
 	"crowdCloseTimerSingular": {
 		"message": "此分頁會在1秒後關閉"

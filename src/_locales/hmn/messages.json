@@ -33,7 +33,7 @@
 		"message": "常見問題解答 (FAQ)"
 	},
 	"bypassCounter": {
-		"message": "FastForward % 已經為您繞過了站點。"
+		"message": "FastForward $1 已經為您繞過了站點。"
 	},
 	"support": {
 		"message": "為通用旁路做貢獻。"
@@ -75,13 +75,13 @@
 		"message": "您快要到目的地了。"
 	},
 	"beforeNavigateDestination": {
-		"message": "您的目的地是 %"
+		"message": "您的目的地是 $1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "但是，如果您現在導航，他們將檢測到通用旁路。"
 	},
 	"beforeNavigateTimer": {
-		"message": "您將在幾秒鐘內自動重定向 %。"
+		"message": "您將在幾秒鐘內自動重定向 $1。"
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "您將在1秒內自動重定向。"
@@ -90,7 +90,7 @@
 		"message": "您要立即重定向還是在x秒內重定向？"
 	},
 	"beforeNavigateInstant": {
-		"message": "您正在導航到 %"
+		"message": "您正在導航到 $1"
 	},
 	"infoFileHoster": {
 		"message": "不幸的是，下載服務器將確保您等待之後才允許下載文件。"
@@ -108,16 +108,16 @@
 		"message": "您可能不必等待！"
 	},
 	"crowdBypassedInfo": {
-		"message": "其他通用繞過用戶已經在等您，並報告這導致 %"
+		"message": "其他通用繞過用戶已經在等您，並報告這導致 $1"
 	},
 	"crowdBypassedTimer": {
-		"message": "這將在幾秒鐘內在新標籤頁中打開 %。"
+		"message": "這將在幾秒鐘內在新標籤頁中打開 $1。"
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "這將在1秒鐘內在新標籤頁中打開。"
 	},
 	"crowdCloseTimer": {
-		"message": "此標籤將在幾秒鐘內關閉 %。"
+		"message": "此標籤將在幾秒鐘內關閉 $1。"
 	},
 	"crowdCloseTimerSingular": {
 		"message": "此標籤將在1秒鐘內關閉。"

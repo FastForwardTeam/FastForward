@@ -33,7 +33,7 @@
 		"message": "Preguntas frecuentes"
 	},
 	"bypassCounter": {
-		"message": "FastForward ya ha evadido % sitios para ti."
+		"message": "FastForward ya ha evadido $1 sitios para ti."
 	},
 	"support": {
 		"message": "Ayuda a FastForward"
@@ -48,7 +48,7 @@
 		"message": "Habilitar las evasiones del sitio web."
 	},
 	"optionsNavigationDelay": {
-		"message": "Llévame a mi página de destino después de % segundo(s)."
+		"message": "Llévame a mi página de destino después de $1 segundo(s)."
 	},
 	"optionsNavigationDelayDescription": {
 		"message": "Evadir automáticamente acortadores de enlaces, como Adf.ly, sub2unlock.com, etc.., después de cierta cantidad de segundos. Recomendación: Encendido, 0 segundos."
@@ -78,13 +78,13 @@
 		"message": "Utiliza la base de datos de FastForward para evadir enlaces que no se pueden evadir de forma automática cuyo destino ya ha sido descubierto por otro usuario. Recomendación: Encendido."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Abrir los destinos que ya fueron descubiertos en una pestaña nueva después de % segundo(s)."
+		"message": "Abrir los destinos que ya fueron descubiertos en una pestaña nueva después de $1 segundo(s)."
 	},
 	"optionsCrowdAutoOpenDescription": {
 		"message": "Abrir los destinos en una pestaña nueva para que no pierdas el lugar donde estabas. Recomendación: Apagado"
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Cerrar la pestaña que contiene el destino después de % segundo(s) de haberlo visitado."
+		"message": "Cerrar la pestaña que contiene el destino después de $1 segundo(s) de haberlo visitado."
 	},
 	"optionsCrowdAutoCloseDescription": {
 		"message": "Cerrar la pestaña que contiene el destino tras unos segudnos. Util si la mayoría de sitios que visitas de este tipo son enlaces de descarga directa. Recomendación: Encendido."
@@ -105,19 +105,19 @@
 		"message": "Ya casi estás en tu destino."
 	},
 	"beforeNavigateDestination": {
-		"message": "Tu dirección de destino es %"
+		"message": "Tu dirección de destino es $1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "Sin embargo, si navegas ahora, FastForward será detectado."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "No podrás ser detectado en % segundos."
+		"message": "No podrás ser detectado en $1 segundos."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "No podrás ser detectado en 1 segundo."
 	},
 	"beforeNavigateTimer": {
-		"message": "Serás redirigido automáticamente en % segundos."
+		"message": "Serás redirigido automáticamente en $1 segundos."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Serás redirigido automáticamente en 1 segundo."
@@ -126,7 +126,7 @@
 		"message": "¿Quieres ser redirigido al instante, o en x segundos?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Estás siendo redirigido a %"
+		"message": "Estás siendo redirigido a $1"
 	},
 	"infoLinkvertise": {
 		"message": "No se nos permite evadir este sitio web, pero hemos negociado la eliminación de sus pasos más molestos."
@@ -147,16 +147,16 @@
 		"message": "¡Puede que no tengas que esperar!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Otros usuarios de FastForward ya han esperado por ti y han informado que esto lleva a %"
+		"message": "Otros usuarios de FastForward ya han esperado por ti y han informado que esto lleva a $1"
 	},
 	"crowdBypassedTimer": {
-		"message": "Esto se abrirá en una pestaña nueva en % segundos."
+		"message": "Esto se abrirá en una pestaña nueva en $1 segundos."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Esto se abrirá en una pestaña nueva en 1 segundo."
 	},
 	"crowdCloseTimer": {
-		"message": "Esta pestaña se cerrará en % segundos."
+		"message": "Esta pestaña se cerrará en $1 segundos."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "Esta pestaña se cerrará en 1 segundo."

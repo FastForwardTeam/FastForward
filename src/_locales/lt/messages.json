@@ -33,7 +33,7 @@
 		"message": "Dažnai užduodami klausimai"
 	},
 	"bypassCounter": {
-		"message": "FastForward praleido % puslapių jums."
+		"message": "FastForward praleido $1 puslapių jums."
 	},
 	"support": {
 		"message": "Prisidėti prie Universalus apėjimo."
@@ -48,7 +48,7 @@
 		"message": "Įjungti nuorodų apėjimą."
 	},
 	"optionsNavigationDelay": {
-		"message": "Nuveskite mane į paskirtį po % sekundžių"
+		"message": "Nuveskite mane į paskirtį po $1 sekundžių"
 	},
 	"optionsTrackerBypass": {
 		"message": "Apeiti sekėjus (tokius kaip bit.ly ir t.co) naudojant Apimon.de"
@@ -63,10 +63,10 @@
 		"message": "Minios praleidimas: nurodykite ir pasiimkite neišvengiamų trumpiklių paskirties vietas."
 	},
 	"optionsCrowdAutoOpen": {
-		"message": "Atidarykite minios šaltinius naujame skirtuke po % sekundė(s)."
+		"message": "Atidarykite minios šaltinius naujame skirtuke po $1 sekundė(s)."
 	},
 	"optionsCrowdAutoClose": {
-		"message": "Uždaryti skirtuką, kuriame yra minios šaltinis, aplankius % s."
+		"message": "Uždaryti skirtuką, kuriame yra minios šaltinis, aplankius $1 s."
 	},
 	"privacyPolicy": {
 		"message": "Privatumo politika"
@@ -84,19 +84,19 @@
 		"message": "Jūs beveik pasiekėte savo tikslą."
 	},
 	"beforeNavigateDestination": {
-		"message": "Jūsų tikslas yra %"
+		"message": "Jūsų tikslas yra $1"
 	},
 	"beforeNavigateUnsafe": {
 		"message": "Jeigu dabar pereisite, \"FastForward\" bus aptiktas."
 	},
 	"beforeNavigateUnsafeTimer": {
-		"message": "Jūs nebebūsite aptinkamas už % sekundžių."
+		"message": "Jūs nebebūsite aptinkamas už $1 sekundžių."
 	},
 	"beforeNavigateUnsafeTimerSingular": {
 		"message": "Jūs nebebūsite aptinkamas už 1 sekundes."
 	},
 	"beforeNavigateTimer": {
-		"message": "Jūs busite automatiškai nukreiptas už % sekundžių."
+		"message": "Jūs busite automatiškai nukreiptas už $1 sekundžių."
 	},
 	"beforeNavigateTimerSingular": {
 		"message": "Jūs busite automatiškai nukreiptas už 1 sekundės."
@@ -105,7 +105,7 @@
 		"message": "Ar norite būti nukreipti akimirksniu ar per x sekundes?"
 	},
 	"beforeNavigateInstant": {
-		"message": "Jūs busite perkeltas į %"
+		"message": "Jūs busite perkeltas į $1"
 	},
 	"infoLinkvertise": {
 		"message": "Mes negalime apeiti šios svetainės, bet su jos kūrėjais yra susitarta, kad jie pašalins dauguma įkyrių žingsnių."
@@ -126,16 +126,16 @@
 		"message": "Jums turbūt nereikės laukti!"
 	},
 	"crowdBypassedInfo": {
-		"message": "Kiti \"FastForward\" vartotojai jau buvo laukę šiame saite ir pranešė, kad tai veda į %."
+		"message": "Kiti \"FastForward\" vartotojai jau buvo laukę šiame saite ir pranešė, kad tai veda į $1."
 	},
 	"crowdBypassedTimer": {
-		"message": "Šis turinys bus atidarytas naujoje kortelėje už % sekundžių."
+		"message": "Šis turinys bus atidarytas naujoje kortelėje už $1 sekundžių."
 	},
 	"crowdBypassedTimerSingular": {
 		"message": "Šis turinys bus atidarytas naujoje kortelėje už 1 sekundes."
 	},
 	"crowdCloseTimer": {
-		"message": "Ši kortelė užsidarys už % sekundžių."
+		"message": "Ši kortelė užsidarys už $1 sekundžių."
 	},
 	"crowdCloseTimerSingular": {
 		"message": "Ši kortelė užsidarys už 1 sekundės."
