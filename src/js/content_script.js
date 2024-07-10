@@ -14,6 +14,7 @@ function getExtBaseURL() {
 async function injectScript() {
   let options = await getOptions();
   if (
+    options &&
     options.whitelist &&
     matchDomains(window.location.hostname, options.whitelist)
   ) {
