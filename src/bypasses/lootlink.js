@@ -7,7 +7,7 @@ export default class LootLink extends BypassDefinition {
     }
 
     execute() {
-        if (/[\?&]r=/.test(window.location.href.toString())) {
+        if (/[?&]r=/.test(window.location.href.toString())) {
             const urlParams = new URLSearchParams(window.location.search)
             const r = urlParams.get('r')
             const finalURL = decodeURIComponent(escape(atob(r)));
