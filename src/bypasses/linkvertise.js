@@ -1,75 +1,84 @@
-import BypassDefinition from './BypassDefinition.js'
+import BypassDefinition from './BypassDefinition.js';
 
 export default class Linkvertise extends BypassDefinition {
-  constructor () {
-    super()
-    // custom bypass required bases can be set here
-  }
-
-  execute () {
-    if (/[\?&]r=/.test(window.location.href.toString())) {
-      const urlParams = new URLSearchParams(window.location.search)
-      const r = urlParams.get('r')
-      this.helpers.safelyNavigate(atob(decodeURIComponent(r)))
+    constructor() {
+        super()
     }
 
-    const lvt_this = this
-    this.helpers.bypassRequests(async data => {
-      if (data.currentTarget?.responseText?.includes('tokens')) {
-        const response = JSON.parse(data.currentTarget.responseText)
-
-        if (!response.data.valid)
-          return lvt_this.helpers.insertInfoBox(
-            'Please solve the captcha, afterwards we can immediately redirect you'
-          )
-
-        const target_token = response.data.tokens['TARGET']
-        const ut = localStorage.getItem('X-LINKVERTISE-UT')
-        const linkvertise_link = location.pathname.replace(/\/[0-9]$/, '')
-
-        let result = await fetch(
-          `https://publisher.linkvertise.com/api/v1/redirect/link/static${linkvertise_link}?X-Linkvertise-UT=${ut}`
-        )
-        let json = await result.json()
-
-        if (json?.data.link.target_type !== 'URL') {
-          return lvt_this.helpers.insertInfoBox(
-            'Due to copyright reasons we are not bypassing linkvertise stored content (paste, download etc)'
-          )
+    execute() {
+        if (/[?&]r=/.test(window.location.href.toString())) {
+            const urlParams = new URLSearchParams(window.location.search)
+            const r = urlParams.get('r')
+            this.helpers.safelyNavigate(atob(decodeURIComponent(r)))
         }
 
-        if (!json?.data.link.id) return
+        this.helpers.bypassRequests(async data => {
+            if (data.currentTarget?.responseText?.includes('getDetailPageContent')) {
+                const response = JSON.parse(data.currentTarget.responseText)
+                const access_token = response.data.getDetailPageContent.access_token;
+                const ut = localStorage.getItem('X-LINKVERTISE-UT')
+                const linkvertise_link = location.pathname.replace(/\/[0-9]$/, '')
+                const regexMatch = linkvertise_link.match(/^\/(\d+)\/([\w-]+)$/);
+                if (!regexMatch) return;
+                const user_id = regexMatch[1];
+                const link_vertise_url = regexMatch[2];
 
-        const json_body = {
-          serial: btoa(
-            JSON.stringify({
-              timestamp: new Date().getTime(),
-              random: '6548307',
-              link_id: json.data.link.id
-            })
-          ),
-          token: target_token
-        }
+                const completeDetailRequest = await fetch(
+                    `https://publisher.linkvertise.com/graphql?X-Linkvertise-UT=${ut}`, {
+                        method: 'POST',
+                        headers: {
+                            Accept: 'application/json',
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            'operationName': 'completeDetailPageContent',
+                            'variables': {
+                                'linkIdentificationInput': {
+                                    'userIdAndUrl': {
+                                        'user_id': user_id,
+                                        'url': link_vertise_url
+                                    }
+                                },
+                                'completeDetailPageContentInput': {
+                                    'access_token': access_token
+                                }
+                            },
+                            'query': 'mutation completeDetailPageContent($linkIdentificationInput: PublicLinkIdentificationInput!, $completeDetailPageContentInput: CompleteDetailPageContentInput!) {\n  completeDetailPageContent(\n    linkIdentificationInput: $linkIdentificationInput\n    completeDetailPageContentInput: $completeDetailPageContentInput\n  ) {\n    CUSTOM_AD_STEP\n    TARGET\n    additional_target_access_information {\n      remaining_waiting_time\n      can_not_access\n      should_show_ads\n      has_long_paywall_duration\n      __typename\n    }\n    __typename\n  }\n}'
+                        })
+                    });
+                if (completeDetailRequest.status !== 200) return;
+                const completeDetailResponse = await completeDetailRequest.json();
+                const TARGET = completeDetailResponse.data.completeDetailPageContent.TARGET;
+                if (!TARGET) return;
 
-        result = await fetch(
-          `https://publisher.linkvertise.com/api/v1/redirect/link${linkvertise_link}/target?X-Linkvertise-UT=${ut}`,
-          {
-            method: 'POST',
-            body: JSON.stringify(json_body),
-            headers: {
-              Accept: 'application/json',
-              'Content-Type': 'application/json'
+                const getTargetPageRequest = await fetch(
+                    `https://publisher.linkvertise.com/graphql?X-Linkvertise-UT=${ut}`, {
+                        method: 'POST',
+                        headers: {
+                            Accept: 'application/json',
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            'query': 'mutation getDetailPageTarget($linkIdentificationInput: PublicLinkIdentificationInput!, $token: String!) {\n  getDetailPageTarget(\n    linkIdentificationInput: $linkIdentificationInput\n    token: $token\n  ) {\n    type\n    url\n    paste\n    short_link_title\n    __typename\n  }\n}',
+                            'variables': {
+                                'linkIdentificationInput': {
+                                    'userIdAndUrl': {
+                                        'user_id': user_id,
+                                        'url': link_vertise_url
+                                    }
+                                },
+                                'token': TARGET
+                            }
+                        })
+                    }
+                )
+                if (getTargetPageRequest.status !== 200) return;
+                const targetPageResponse = await getTargetPageRequest.json();
+                const targetPageURL = targetPageResponse['data']['getDetailPageTarget']['url'];
+                this.helpers.safelyNavigate(targetPageURL);
             }
-          }
-        )
-        json = await result.json()
-
-        if (json?.data.target) {
-          lvt_this.helpers.safelyNavigate(json.data.target)
-        }
-      }
-    })
-  }
+        })
+    }
 }
 
 export const matches = ['linkvertise.com', 'linkvertise.net', 'link-to.net']
