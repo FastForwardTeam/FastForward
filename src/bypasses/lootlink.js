@@ -79,4 +79,4 @@ export default class LootLink extends BypassDefinition {
     }
 }
 
-export const matches = ['lootlinks.co', 'loot-links.com', 'loot-link.com']
+export const matches = ['lootlinks.co', 'loot-links.com', 'loot-link.com', "linksloot.net"]
