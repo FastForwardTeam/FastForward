@@ -3,7 +3,6 @@ import BypassDefinition from './BypassDefinition.js';
 export default class Bstlar extends BypassDefinition {
     constructor() {
         super();
-        this.ensure_dom = true;
     }
 
     execute() {
@@ -48,5 +47,3 @@ export default class Bstlar extends BypassDefinition {
 }
 
 export const matches = ['bstlar.com'];
-
-
