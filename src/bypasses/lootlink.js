@@ -30,6 +30,9 @@ export default class LootLink extends BypassDefinition {
 
     handleResponse(response) {
         return response.clone().json().then(data => {
+            this.helpers.insertInfoBox(
+                'Please wait a moment while we search for the destination link.'
+            );
             let urid = ""
             let action_pixel_url = ""
             data.forEach(item => {
