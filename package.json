@@ -1,7 +1,7 @@
 {
   "type": "module",
   "devDependencies": {
-    "ejs": "^3.1.9",
+    "ejs": "^3.1.10",
     "eslint": "^8.37.0",
     "eslint-config-prettier": "^8.8.0",
     "fs-extra": "^11.1.1",
