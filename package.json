@@ -6,7 +6,7 @@
     "eslint-config-prettier": "^8.8.0",
     "fs-extra": "^11.1.1",
     "prettier": "^2.8.7",
-    "web-ext": "^7.6.2"
+    "web-ext": "^7.12.0"
   },
   "scripts": {
     "lint": "eslint",
