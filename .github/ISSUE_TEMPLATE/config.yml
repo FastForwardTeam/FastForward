@@ -1,8 +1,8 @@
-blank_issues_enabled: true
+blank_issues_enabled: false
 contact_links:
   - name: Discord
     url: https://discord.gg/RSAf7b5njt
-    about: Please ask for help and support there.
-  - name: Issues
-    url: https://github.com/FastForwardTeam/FastForward/issues?q=label%3ANew-bypass
-    about: Please search before issues to check if a site is already submitted.
+    about: We arent maintaining the extension anymore, but you can still join our Discord to chat with us.
+  #- name: Issues
+    #url: https://github.com/FastForwardTeam/FastForward/issues?q=label%3ANew-bypass
+    #about: Please search before issues to check if a site is already submitted.
