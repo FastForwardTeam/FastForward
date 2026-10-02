@@ -116,7 +116,28 @@ brws.runtime.onStartup.addListener(() => {
   brws.storage.local.set({ version: brws.runtime.getManifest().version });
 });
 
-brws.runtime.onMessage.addListener((request, _, sendResponse) => {
+// Fields the crowd-contribute/query bridge accepts, matching the documented
+// signature of crowdQuery/crowdContribute in helpers/dom.js. Anything else in
+// request.detail is dropped rather than forwarded -- the content-script bridge
+// has no way to verify the message actually came from the extension's own
+// injected script rather than the hosting page itself (see security advisory
+// GHSA-vw3r-qv4c-vw79 / GHSA-5vfw-qqg5-35wj-style report), so background.js is
+// the last point that can still enforce a shape on what gets sent out.
+const CROWD_FIELDS = {
+  crowdQuery: ['domain', 'path'],
+  crowdContribute: ['domain', 'path', 'target'],
+  followAndContribute: ['domain', 'path', 'target'],
+};
+
+brws.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.type === 'getTabId') {
+    // sender.tab.id is populated by the browser itself from the real
+    // connection the message arrived on -- a page script cannot forge it,
+    // unlike anything carried in a CustomEvent's `detail`.
+    sendResponse(sender.tab ? sender.tab.id : null);
+    return false;
+  }
+
   (async () => {
     let options = await getOptions();
     if (options.optionCrowdBypass === false) {
@@ -127,14 +148,24 @@ brws.runtime.onMessage.addListener((request, _, sendResponse) => {
       ? (url = 'https://crowd.fastforward.team/crowd/query_v1')
       : (url = 'https://crowd.fastforward.team/crowd/contribute_v1');
 
+    const allowedFields = CROWD_FIELDS[request.type];
+    if (!allowedFields) {
+      return;
+    }
+
     let params = new URLSearchParams();
 
     if (request.type !== 'followAndContribute') {
-      for (let key in request.detail) {
-        params.append(key, request.detail[key]);
+      for (let key of allowedFields) {
+        if (Object.prototype.hasOwnProperty.call(request.detail, key)) {
+          params.append(key, request.detail[key]);
+        }
       }
     } else {
-      for (let key in request.detail) {
+      for (let key of allowedFields) {
+        if (!Object.prototype.hasOwnProperty.call(request.detail, key)) {
+          continue;
+        }
         if (key === 'target') {
           let dest = new URL(request.detail[key]);
           if (!fetchDomains.includes(dest.hostname)) {
