@@ -1,4 +1,16 @@
 const brws = typeof browser !== 'undefined' ? browser : chrome;
+
+// ffclipboard keys are namespaced by the real tab id, as reported by the
+// browser itself via background.js's sender.tab.id -- a page script cannot
+// forge this the way it can forge a CustomEvent's `detail`. This stops an
+// unrelated tab/page from reading or poisoning another tab's in-flight
+// ffclipboard state.
+const ffClipboardTabId = brws.runtime.sendMessage({ type: 'getTabId' });
+async function ffClipboardKey(key) {
+  const tabId = await ffClipboardTabId;
+  return `${tabId}:${key}`;
+}
+
 async function getOptions() {
   return new Promise((resolve) => {
     brws.storage.local.get('options').then((result) => {
@@ -71,19 +83,21 @@ document.addEventListener('ff53054c0e13_followAndContribute', (event) => {
   });
 });
 
-function onFFClipboardSet(event) {
+async function onFFClipboardSet(event) {
   const { key, value } = event.detail;
+  const scopedKey = await ffClipboardKey(key);
   chrome.storage.local.get('ffclipboard', (result) => {
     const ffclipboard = result.ffclipboard || {};
-    ffclipboard[key] = value;
+    ffclipboard[scopedKey] = value;
     chrome.storage.local.set({ ffclipboard });
   });
 }
 
-function onFFClipboardGet(event) {
+async function onFFClipboardGet(event) {
   const { key } = event.detail;
+  const scopedKey = await ffClipboardKey(key);
   chrome.storage.local.get('ffclipboard', (result) => {
-    const value = result.ffclipboard ? result.ffclipboard[key] : undefined;
+    const value = result.ffclipboard ? result.ffclipboard[scopedKey] : undefined;
     const responseEvent = new CustomEvent('ff53054c0e13_ffclipboardResponse', {
       detail: { key, value },
     });
@@ -91,11 +105,12 @@ function onFFClipboardGet(event) {
   });
 }
 
-function onFFClipboardClear(event) {
+async function onFFClipboardClear(event) {
   const { key } = event.detail;
+  const scopedKey = await ffClipboardKey(key);
   chrome.storage.local.get('ffclipboard', (result) => {
     if (result.ffclipboard) {
-      delete result.ffclipboard[key];
+      delete result.ffclipboard[scopedKey];
       chrome.storage.local.set({ ffclipboard: result.ffclipboard });
     }
   });
